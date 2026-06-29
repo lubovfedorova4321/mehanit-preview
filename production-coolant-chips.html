@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>СОЖ и системы удаления стружки — Механит</title>
+  <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Unbounded:wght@400;500;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root{--bm:#1A1A1A;--gold:#C9A227;--ce:#6B2D8B;--paper:#F3F4F3;--mid:#5B6166;--line:rgba(26,26,26,.1)}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);font-family:'Golos Text',Arial,sans-serif;color:var(--bm)}
+    a{text-decoration:none;color:inherit}
+    .wrap{width:min(1220px,calc(100% - 48px));margin:auto}
+    .top{position:sticky;top:0;z-index:10;background:rgba(246,246,244,.9);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+    .top-in{height:74px;display:flex;align-items:center;justify-content:space-between}
+    .brand img{height:44px}
+    .phone{text-align:right}
+    .phone b{font-family:'Unbounded';font-size:15px;letter-spacing:-.03em}
+    .phone span{display:block;color:#8a8f94;font-size:11px}
+    .crumbbar{background:rgba(246,246,244,.78);border-bottom:1px solid rgba(26,26,26,.055)}
+    .crumbs{min-height:44px;display:flex;gap:10px;align-items:center;font-family:'JetBrains Mono';font-size:10px;text-transform:uppercase;letter-spacing:1px;color:#b1b5b9}
+    .crumbs a,.crumbs b,.crumbs span{color:#b1b5b9}
+    .hero{position:relative;overflow:hidden;padding:58px 0 42px;background:linear-gradient(135deg,#f8f8f6,#e8eaeb 54%,#dfe2e4)}
+    .hero:before{content:"";position:absolute;inset:auto -12% -42% 46%;height:440px;background:radial-gradient(circle,rgba(201,162,39,.18),transparent 64%);pointer-events:none}
+    .hero-in{position:relative;display:grid;grid-template-columns:1fr .98fr;gap:34px;align-items:center}
+    .eyebrow{font-family:'JetBrains Mono';font-size:10px;font-weight:800;letter-spacing:1.8px;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+    .h1{font-family:'Unbounded';font-size:clamp(34px,4.7vw,58px);letter-spacing:-.055em;line-height:1.02;margin:0}
+    .h1 span{color:var(--ce);font-weight:400}
+    .lead{font-size:17px;line-height:1.65;color:var(--mid);max-width:760px;margin:20px 0 0}
+    .hero-media{position:relative;min-height:360px;overflow:hidden;border:1px solid rgba(26,26,26,.08);box-shadow:0 28px 90px rgba(26,26,26,.12);background:#d9dcde}
+    .hero-media img{width:100%;height:100%;min-height:360px;display:block;object-fit:cover;filter:saturate(1.06) contrast(1.06)}
+    .hero-media:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(243,244,243,.06),rgba(26,26,26,.12))}
+    .quick-nav{position:sticky;top:74px;z-index:8;background:rgba(243,244,243,.9);backdrop-filter:blur(18px);border-top:1px solid rgba(26,26,26,.05);border-bottom:1px solid rgba(26,26,26,.07)}
+    .quick-nav .wrap{display:flex;gap:10px;overflow:auto;padding:12px 0}
+    .quick-nav a{white-space:nowrap;border:1px solid rgba(26,26,26,.1);background:rgba(255,255,255,.5);padding:10px 13px;font-family:'JetBrains Mono';font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#737980;transition:.25s ease}
+    .quick-nav a:hover{color:var(--bm);border-color:rgba(201,162,39,.45);transform:translateY(-1px)}
+    section{padding:58px 0}
+    .sec-head{display:flex;justify-content:space-between;gap:28px;align-items:end;margin-bottom:24px}
+    .h2{font-family:'Unbounded';font-size:clamp(28px,3.6vw,46px);line-height:1.05;letter-spacing:-.055em;margin:0}
+    .sec-head p{max-width:540px;margin:0;color:var(--mid);font-size:15px;line-height:1.65}
+    .coolant-tabs{display:grid;grid-template-columns:repeat(7,1fr);gap:7px;margin:6px 0 18px;padding:8px;background:rgba(255,255,255,.5);border:1px solid rgba(26,26,26,.08);box-shadow:0 18px 54px rgba(26,26,26,.045)}
+    .coolant-tab{min-height:58px;border:1px solid rgba(26,26,26,.1);background:rgba(243,244,243,.72);color:#6d7378;font-family:'JetBrains Mono';font-size:9px;font-weight:800;letter-spacing:.7px;text-transform:uppercase;cursor:pointer;transition:.24s ease;padding:0 8px}
+    .coolant-tab:hover{color:var(--bm);border-color:rgba(201,162,39,.45);transform:translateY(-1px)}
+    .coolant-tab.is-active{background:var(--bm);border-color:var(--bm);color:#fff;box-shadow:0 12px 34px rgba(26,26,26,.18)}
+    .coolant-card{position:relative;display:none;min-height:440px;overflow:hidden;background:#e7e8ea;border:1px solid rgba(26,26,26,.09);box-shadow:0 24px 70px rgba(26,26,26,.075)}
+    .coolant-card.is-active{display:block}
+    .coolant-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.98) contrast(1.04);transition:.45s ease}
+    .coolant-card:hover img{transform:scale(1.035);filter:saturate(1.12) contrast(1.09)}
+    .coolant-card:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(246,246,244,.06),rgba(246,246,244,.68) 48%,rgba(246,246,244,.96));z-index:1}
+    .coolant-card.dark{color:#fff}
+    .coolant-card.dark:before{background:linear-gradient(180deg,rgba(26,26,26,.08),rgba(26,26,26,.56) 48%,rgba(26,26,26,.88))}
+    .coolant-card.dark .card-text,.coolant-card.dark .subitem,.coolant-card.dark .benefit{color:rgba(255,255,255,.78)}
+    .coolant-card.dark .subitem,.coolant-card.dark .benefit{border-color:rgba(255,255,255,.16);background:rgba(255,255,255,.08)}
+    .coolant-body{position:relative;z-index:2;min-height:inherit;display:flex;flex-direction:column;justify-content:flex-end;padding:28px}
+    .coolant-body small{font-family:'JetBrains Mono';font-size:9px;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold)}
+    .coolant-body h2{font-family:'Unbounded';font-size:clamp(24px,2.7vw,34px);line-height:1.05;letter-spacing:-.055em;margin:12px 0 10px}
+    .card-text{color:var(--mid);font-size:15px;line-height:1.58;max-width:760px;margin:0 0 18px}
+    .subgrid,.benefits{display:flex;flex-wrap:wrap;gap:8px}
+    .benefits{margin-top:14px}
+    .subitem,.benefit{display:inline-flex;align-items:center;min-height:34px;padding:8px 11px;border:1px solid rgba(26,26,26,.1);background:rgba(255,255,255,.6);color:#4f555a;font-size:13px;font-weight:600}
+    .benefit{font-family:'JetBrains Mono';font-size:10px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;color:var(--ce)}
+    .system-band{background:linear-gradient(135deg,#1A1A1A,#2f3237);color:#fff}
+    .system-band .sec-head p{color:rgba(255,255,255,.68)}
+    .system-band .h2 span{color:var(--gold);font-weight:400}
+    .system-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .system-card{position:relative;min-height:360px;overflow:hidden;border:1px solid rgba(255,255,255,.13);background:rgba(255,255,255,.07);box-shadow:0 24px 70px rgba(0,0,0,.22)}
+    .system-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.34;filter:saturate(.9) contrast(1.06);transition:.45s ease}
+    .system-card:hover img{opacity:.48;transform:scale(1.035)}
+    .system-card:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(26,26,26,.1),rgba(26,26,26,.88));z-index:1}
+    .system-body{position:relative;z-index:2;min-height:inherit;display:flex;flex-direction:column;justify-content:flex-end;padding:24px}
+    .system-body small{font-family:'JetBrains Mono';font-size:9px;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold)}
+    .system-body h3{font-family:'Unbounded';font-size:24px;line-height:1.08;letter-spacing:-.055em;margin:12px 0 12px}
+    .system-body p{margin:0;color:rgba(255,255,255,.72);line-height:1.55;font-size:14px}
+    .cta-panel{display:grid;grid-template-columns:1fr auto;gap:22px;align-items:center;padding:28px;background:#fff;border:1px solid var(--line);box-shadow:0 24px 70px rgba(26,26,26,.06)}
+    .cta-panel h2{font-family:'Unbounded';font-size:28px;line-height:1.1;letter-spacing:-.055em;margin:0 0 8px}
+    .cta-panel p{margin:0;color:var(--mid);line-height:1.6}
+    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 20px;background:var(--gold);border:0;color:var(--bm);font-family:'JetBrains Mono';font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1px;cursor:pointer;transition:.25s ease;white-space:nowrap}
+    .btn:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(201,162,39,.28)}
+    .request-modal{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:22px;background:rgba(26,26,26,.62);backdrop-filter:blur(10px)}
+    .request-modal.is-open{display:flex}
+    .request-dialog{width:min(620px,100%);background:#f6f6f3;border:1px solid rgba(201,162,39,.34);box-shadow:0 40px 110px rgba(0,0,0,.34);padding:28px;position:relative}
+    .request-x{position:absolute;right:15px;top:12px;border:0;background:transparent;font-size:28px;color:#5B6166;cursor:pointer}
+    .request-dialog h3{font-family:'Unbounded';font-size:28px;line-height:1.08;letter-spacing:-.045em;margin:0 0 10px}
+    .request-dialog h3 span{display:block;color:var(--ce);font-weight:400}
+    .request-dialog p{font-size:14px;line-height:1.6;color:#5B6166;margin:0 0 16px}
+    .request-form{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .request-form input,.request-form textarea{width:100%;border:1px solid rgba(26,26,26,.12);background:#fff;padding:13px;font:inherit;font-size:14px}
+    .request-form textarea{grid-column:1/-1;min-height:104px;resize:vertical}
+    .request-form .btn{grid-column:1/-1;margin-top:2px}
+    .request-note{font-family:'JetBrains Mono';font-size:9px;letter-spacing:1px;text-transform:uppercase;color:#8a8f94;margin-top:12px}
+    @media(max-width:1080px){.coolant-tabs{display:flex;overflow:auto}.coolant-tab{flex:0 0 190px}.hero-in,.cta-panel{grid-template-columns:1fr}.system-grid{grid-template-columns:1fr}}
+    @media(max-width:760px){.wrap{width:min(100% - 28px,1220px)}.hero{padding-top:40px}.hero-media,.hero-media img{min-height:270px}.coolant-card{min-height:410px}.coolant-body{padding:22px}.request-form{grid-template-columns:1fr}.request-dialog{padding:22px}.quick-nav{position:relative;top:auto}}
+  </style>
+</head>
+<body>
+  <header class="top">
+    <div class="wrap top-in">
+      <a class="brand" href="index.html"><img src="mehanit-logo-cropped.png" alt="Механит"/></a>
+      <a class="phone" href="tel:88005511206"><b>8 800 55 11 206</b><span>бесплатный звонок</span></a>
+    </div>
+  </header>
+
+  <div class="crumbbar">
+    <div class="wrap crumbs">
+      <a href="index.html">Главная</a><span>/</span>
+      <a href="production-equipment.html">Оснащение производства</a><span>/</span>
+      <b>СОЖ и стружка</b>
+    </div>
+  </div>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-in">
+        <div>
+          <div class="eyebrow">СОЖ и стружка</div>
+          <h1 class="h1">СОЖ и системы <span>удаления стружки</span></h1>
+          <p class="lead">Подбираем подачу и фильтрацию СОЖ, очистку эмульсии, конвейеры, централизованный сбор, переработку стружки и туманоуловители для стабильного цикла обработки.</p>
+        </div>
+        <div class="hero-media" aria-label="СОЖ и стружкоудаление на обрабатывающем центре">
+          <img src="coolant-assets/coolant-hero.jpeg" alt="Обрабатывающий центр с подачей СОЖ и удалением стружки"/>
+        </div>
+      </div>
+    </section>
+
+    <nav class="quick-nav" aria-label="Разделы СОЖ и стружки">
+      <div class="wrap">
+        <a href="#coolant-catalog">Каталог систем</a>
+        <a href="#process-system">Связанная система участка</a>
+        <a href="#coolant-request">Подбор под станок</a>
+      </div>
+    </nav>
+
+    <section id="coolant-catalog">
+      <div class="wrap">
+        <div class="sec-head">
+          <div>
+            <div class="eyebrow">Каталог систем</div>
+            <h2 class="h2">Среда обработки, чистота и ресурс инструмента</h2>
+          </div>
+          <p>Выберите направление. Внутри показан состав оборудования, которое влияет на стабильность резания, ресурс инструмента, безопасность и экономику участка.</p>
+        </div>
+
+        <div class="coolant-tabs" role="tablist" aria-label="Категории СОЖ и удаления стружки">
+          <button class="coolant-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="coolant-supply" data-coolant-tab="coolant-supply">Подача СОЖ</button>
+          <button class="coolant-tab" type="button" role="tab" aria-selected="false" aria-controls="coolant-filter" data-coolant-tab="coolant-filter">Фильтрация СОЖ</button>
+          <button class="coolant-tab" type="button" role="tab" aria-selected="false" aria-controls="coolant-clean" data-coolant-tab="coolant-clean">Очистка СОЖ</button>
+          <button class="coolant-tab" type="button" role="tab" aria-selected="false" aria-controls="chip-conveyors" data-coolant-tab="chip-conveyors">Конвейеры стружки</button>
+          <button class="coolant-tab" type="button" role="tab" aria-selected="false" aria-controls="chip-transport" data-coolant-tab="chip-transport">Транспортировка</button>
+          <button class="coolant-tab" type="button" role="tab" aria-selected="false" aria-controls="chip-recycle" data-coolant-tab="chip-recycle">Переработка</button>
+          <button class="coolant-tab" type="button" role="tab" aria-selected="false" aria-controls="mist-capture" data-coolant-tab="mist-capture">Туман и пыль</button>
+        </div>
+
+        <div class="coolant-panels">
+          <article class="coolant-card dark is-active" id="coolant-supply" role="tabpanel">
+            <img src="coolant-assets/coolant-supply.jpeg" alt="Подача СОЖ в зону резания"/>
+            <div class="coolant-body">
+              <small>Системы подачи СОЖ</small>
+              <h2>Охлаждение зоны резания и вынос стружки</h2>
+              <p class="card-text">Обеспечивают эффективное охлаждение зоны резания, стабильность обработки и удаление стружки из зоны контакта инструмента с материалом.</p>
+              <div class="subgrid">
+                <span class="subitem">Насосы высокого давления</span><span class="subitem">Станции подачи СОЖ</span><span class="subitem">Системы Through Coolant</span><span class="subitem">Баки и резервуары</span><span class="subitem">Трубопроводы и фитинги</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="coolant-card" id="coolant-filter" role="tabpanel">
+            <img src="coolant-assets/coolant-filtration.jpeg" alt="Фильтрация СОЖ"/>
+            <div class="coolant-body">
+              <small>Фильтрация СОЖ</small>
+              <h2>Поддержание качества эмульсии</h2>
+              <p class="card-text">Фильтрация удаляет частицы стружки и абразива, помогает удерживать качество эмульсии и увеличивает срок службы СОЖ.</p>
+              <div class="subgrid">
+                <span class="subitem">Ленточные фильтры</span><span class="subitem">Бумажные фильтры</span><span class="subitem">Барабанные фильтры</span><span class="subitem">Дисковые фильтры</span><span class="subitem">Вакуумные фильтры</span>
+              </div>
+              <div class="benefits">
+                <span class="benefit">Стабильная эмульсия</span><span class="benefit">Меньше износ узлов</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="coolant-card" id="coolant-clean" role="tabpanel">
+            <img src="coolant-assets/coolant-cleaning.jpeg" alt="Очистка СОЖ"/>
+            <div class="coolant-body">
+              <small>Очистка СОЖ</small>
+              <h2>Удаление загрязнений и посторонних масел</h2>
+              <p class="card-text">Очистка поддерживает рабочие свойства эмульсии, снижает запах, загрязнение станка и риск нестабильной обработки.</p>
+              <div class="subgrid">
+                <span class="subitem">Маслоскиммеры</span><span class="subitem">Коалесцентные сепараторы</span><span class="subitem">Магнитные сепараторы</span><span class="subitem">Центрифуги для очистки СОЖ</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="coolant-card dark" id="chip-conveyors" role="tabpanel">
+            <img src="coolant-assets/chip-conveyors.jpeg" alt="Конвейер удаления стружки"/>
+            <div class="coolant-body">
+              <small>Конвейеры стружки</small>
+              <h2>Автоматическое удаление стружки из рабочей зоны</h2>
+              <p class="card-text">Конвейеры снижают ручной труд, поддерживают чистоту станка и помогают стабилизировать работу при длительных циклах.</p>
+              <div class="subgrid">
+                <span class="subitem">Скребковые конвейеры</span><span class="subitem">Шарнирно-пластинчатые конвейеры</span><span class="subitem">Магнитные конвейеры</span><span class="subitem">Шнековые транспортеры</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="coolant-card dark" id="chip-transport" role="tabpanel">
+            <img src="coolant-assets/chip-transport.jpeg" alt="Централизованная транспортировка стружки"/>
+            <div class="coolant-body">
+              <small>Системы транспортировки стружки</small>
+              <h2>Централизованный сбор отходов производства</h2>
+              <p class="card-text">Подходят для участков с несколькими станками, где важно вывести стружку в единую точку сбора без перегрузки операторов.</p>
+              <div class="subgrid">
+                <span class="subitem">Транспортеры</span><span class="subitem">Системы вакуумного удаления</span><span class="subitem">Центральные системы сбора стружки</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="coolant-card dark" id="chip-recycle" role="tabpanel">
+            <img src="coolant-assets/chip-recycling.jpeg" alt="Переработка и брикетирование стружки"/>
+            <div class="coolant-body">
+              <small>Переработка стружки</small>
+              <h2>Снижение затрат на утилизацию и возврат СОЖ</h2>
+              <p class="card-text">Переработка уменьшает объем отходов, возвращает технологическую жидкость и повышает ценность металлической стружки.</p>
+              <div class="subgrid">
+                <span class="subitem">Дробилки стружки</span><span class="subitem">Брикетировочные прессы</span><span class="subitem">Центрифуги для отжима СОЖ</span><span class="subitem">Системы обезвоживания</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="coolant-card dark" id="mist-capture" role="tabpanel">
+            <img src="coolant-assets/mist-extraction.jpeg" alt="Промышленная аспирация и туманоуловители"/>
+            <div class="coolant-body">
+              <small>Промышленные пыле- и туманоуловители</small>
+              <h2>Контроль масляного тумана и воздуха в цехе</h2>
+              <p class="card-text">Особенно актуально для высокоскоростной обработки, интенсивной подачи СОЖ и участков с несколькими станками.</p>
+              <div class="subgrid">
+                <span class="subitem">Уловители масляного тумана</span><span class="subitem">Системы аспирации</span><span class="subitem">Промышленные фильтровентиляционные установки</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="system-band" id="process-system">
+      <div class="wrap">
+        <div class="sec-head">
+          <div>
+            <div class="eyebrow">Связанная система участка</div>
+            <h2 class="h2">СОЖ, стружка и воздух <span>как часть технологии</span></h2>
+          </div>
+          <p>Мы смотрим не только на станок, а на весь цикл: подача СОЖ, фильтрация, отвод стружки, переработка и безопасность рабочей зоны.</p>
+        </div>
+
+        <div class="system-grid">
+          <article class="system-card">
+            <img src="coolant-assets/coolant-process.jpeg" alt="Интенсивная подача СОЖ при обработке"/>
+            <div class="system-body">
+              <small>Стабильность резания</small>
+              <h3>Температура, ресурс инструмента и чистота поверхности</h3>
+              <p>Правильная подача и фильтрация СОЖ помогают удерживать качество детали и повторяемость цикла.</p>
+            </div>
+          </article>
+          <article class="system-card">
+            <img src="coolant-assets/briquetting-system.jpeg" alt="Брикетирование стружки"/>
+            <div class="system-body">
+              <small>Экономика отходов</small>
+              <h3>Меньше объём стружки, выше возврат материала</h3>
+              <p>Дробление, отжим и брикетирование сокращают затраты на хранение и утилизацию.</p>
+            </div>
+          </article>
+          <article class="system-card">
+            <img src="coolant-assets/mist-extraction.jpeg" alt="Фильтровентиляционная установка"/>
+            <div class="system-body">
+              <small>Безопасность участка</small>
+              <h3>Контроль масляного тумана и чистоты воздуха</h3>
+              <p>Аспирация и туманоуловители поддерживают рабочую среду при высокоскоростной обработке.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="coolant-request">
+      <div class="wrap">
+        <div class="cta-panel">
+          <div>
+            <div class="eyebrow">Инженерный подбор</div>
+            <h2>Опишите станок и процесс — подберем систему СОЖ и стружкоудаления</h2>
+            <p>Уточним материал, тип стружки, объем обработки, компоновку станка, требования к фильтрации и уровень автоматизации участка.</p>
+          </div>
+          <button class="btn" type="button" data-module-request="СОЖ и системы удаления стружки">Опишите деталь — получите решение</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="request-modal" id="moduleRequestModal" aria-hidden="true">
+    <div class="request-dialog" role="dialog" aria-modal="true" aria-labelledby="moduleRequestTitle">
+      <button class="request-x" type="button" aria-label="Закрыть" onclick="closeModuleRequest()">×</button>
+      <div class="eyebrow">Заявка на подбор</div>
+      <h3 id="moduleRequestTitle">Опишите деталь <span id="moduleRequestName">получите решение</span></h3>
+      <p>Оставьте контакты и кратко опишите задачу. Инженер Механит уточнит станок, материал, тип стружки, СОЖ, фильтрацию и требования к чистоте участка.</p>
+      <form class="request-form">
+        <input id="moduleRequestField" name="module" readonly value="СОЖ и системы удаления стружки"/>
+        <input name="name" placeholder="Ваше имя"/>
+        <input name="phone" placeholder="Телефон"/>
+        <input name="email" placeholder="Email"/>
+        <textarea name="task" placeholder="Что нужно подобрать: подача СОЖ, фильтрация, очистка, конвейер, транспортировка стружки, брикетирование, аспирация"></textarea>
+        <button class="btn" type="button">Опишите деталь — получите решение</button>
+      </form>
+      <div class="request-note">Форма демонстрационная. Подключение отправки выполняется на этапе разработки сайта.</div>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('[data-coolant-tab]').forEach(function(tab){
+      tab.addEventListener('click',function(){
+        var id=tab.dataset.coolantTab;
+        document.querySelectorAll('[data-coolant-tab]').forEach(function(item){
+          item.classList.toggle('is-active',item===tab);
+          item.setAttribute('aria-selected',item===tab?'true':'false');
+        });
+        document.querySelectorAll('.coolant-card').forEach(function(card){
+          card.classList.toggle('is-active',card.id===id);
+        });
+      });
+    });
+
+    function openModuleRequest(name){
+      var modal=document.getElementById('moduleRequestModal');
+      document.getElementById('moduleRequestName').textContent='получите решение';
+      document.getElementById('moduleRequestField').value=name||'СОЖ и системы удаления стружки';
+      modal.classList.add('is-open');
+      modal.setAttribute('aria-hidden','false');
+      document.body.style.overflow='hidden';
+    }
+    function closeModuleRequest(){
+      var modal=document.getElementById('moduleRequestModal');
+      modal.classList.remove('is-open');
+      modal.setAttribute('aria-hidden','true');
+      document.body.style.overflow='';
+    }
+    document.addEventListener('click',function(e){
+      var btn=e.target.closest('[data-module-request]');
+      if(btn){e.preventDefault();openModuleRequest(btn.dataset.moduleRequest);return;}
+      if(e.target&&e.target.id==='moduleRequestModal'){closeModuleRequest();}
+    });
+    document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModuleRequest();});
+  </script>
+</body>
+</html>

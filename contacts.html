@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Контакты — Механит</title>
+<meta name="description" content="Контакты и реквизиты компании Механит. Телефон, почта, адрес и география поставок по России."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&family=Unbounded:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+:root{--bm:#1A1A1A;--sg:#7A7D80;--tl:#EAEAE6;--gold:#C9A227;--ce:#6B2D8B;--line:rgba(26,26,26,.1);--paper:#F3F4F3;--mid:#50565B;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--bm);font-family:'Golos Text',Arial,sans-serif;-webkit-font-smoothing:antialiased}a{text-decoration:none;color:inherit}.wrap{width:min(1220px,calc(100% - 48px));margin:auto}
+.top{position:sticky;top:0;z-index:40;background:rgba(246,246,244,.88);backdrop-filter:blur(18px);border-bottom:1px solid rgba(26,26,26,.08)}.top-in{height:74px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center}.brand img{height:44px}.menu{display:flex;gap:18px;align-items:center;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:1.2px;text-transform:uppercase;color:var(--mid)}.menu a{padding:10px 0;border-bottom:1px solid transparent}.menu a:hover,.menu a.on{color:var(--bm);border-color:var(--gold)}.phone{margin-left:10px;padding-left:22px;border-left:1px solid rgba(26,26,26,.12);font-size:11px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:var(--bm);white-space:nowrap}.phone:hover{color:var(--ce)}
+.hero{position:relative;overflow:hidden;padding:86px 0 62px;background:linear-gradient(135deg,#f8f8f6 0%,#edeef0 58%,#e2e4e6 100%)}.hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(26,26,26,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(26,26,26,.035) 1px,transparent 1px);background-size:52px 52px}.hero-in{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,.86fr) minmax(420px,1.14fr);gap:42px;align-items:center}.eyebrow{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:800;letter-spacing:1.8px;text-transform:uppercase;color:var(--gold);margin-bottom:15px}.h1{font-family:'Unbounded',sans-serif;font-size:clamp(42px,6vw,76px);line-height:.98;letter-spacing:-.06em;margin:0 0 22px}.lead{max-width:620px;color:var(--mid);font-size:17px;line-height:1.72;margin:0}.contact-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:34px}.contact-card{min-height:122px;padding:22px;background:rgba(255,255,255,.76);border:1px solid rgba(26,26,26,.08);box-shadow:0 18px 52px rgba(26,26,26,.06)}.contact-card small{display:block;font-family:'JetBrains Mono',monospace;font-size:8px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:var(--gold);margin-bottom:10px}.contact-card b,.contact-card a{display:block;font-family:'Unbounded',sans-serif;font-size:20px;line-height:1.16;letter-spacing:-.045em}.contact-card span{display:block;margin-top:8px;color:var(--mid);font-size:13px;line-height:1.5}
+.map-card{position:relative;min-height:500px;border:1px solid rgba(26,26,26,.08);background:linear-gradient(145deg,rgba(255,255,255,.72),rgba(224,226,229,.7));box-shadow:0 34px 100px rgba(26,26,26,.11);overflow:hidden}.map-card::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 62% 42%,rgba(107,45,139,.12),transparent 42%),linear-gradient(rgba(26,26,26,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(26,26,26,.035) 1px,transparent 1px);background-size:auto,44px 44px,44px 44px}.russia-map{position:absolute;inset:32px;width:calc(100% - 64px);height:calc(100% - 64px);overflow:visible}.russia-shape{fill:#d7dadd;stroke:#c7cbd0;stroke-width:1.2}.city-dot{fill:var(--ce);filter:drop-shadow(0 0 7px rgba(107,45,139,.85));animation:spark 2.8s ease-in-out infinite;animation-delay:var(--d)}.city-dot.outer{fill:none;stroke:rgba(107,45,139,.28);stroke-width:1.6;animation:pulseDot 2.8s ease-in-out infinite;animation-delay:var(--d)}.map-label{font-family:'JetBrains Mono',monospace;font-size:8px;font-weight:800;letter-spacing:.7px;text-transform:uppercase;fill:#8f9499}.map-title{position:absolute;left:28px;bottom:26px;right:28px;display:flex;justify-content:space-between;gap:20px;align-items:end}.map-title b{font-family:'Unbounded',sans-serif;font-size:24px;letter-spacing:-.05em}.map-title span{max-width:280px;color:var(--mid);font-size:13px;line-height:1.55;text-align:right}
+@keyframes spark{0%,100%{opacity:.52;transform:scale(.92)}42%{opacity:1;transform:scale(1.16)}}@keyframes pulseDot{0%,100%{opacity:.15;transform:scale(.72)}50%{opacity:.6;transform:scale(1.55)}}
+section{padding:72px 0}.details{display:grid;grid-template-columns:.88fr 1.12fr;gap:22px}.panel{background:rgba(255,255,255,.72);border:1px solid rgba(26,26,26,.08);box-shadow:0 20px 60px rgba(26,26,26,.06);padding:30px}.panel h2{font-family:'Unbounded',sans-serif;font-size:30px;line-height:1.08;letter-spacing:-.05em;margin:0 0 20px}.req-grid{display:grid;gap:1px;background:rgba(26,26,26,.08);border:1px solid rgba(26,26,26,.06)}.req-row{display:grid;grid-template-columns:150px 1fr;gap:18px;background:rgba(255,255,255,.8);padding:14px 16px}.req-row small{font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:var(--gold)}.req-row b{font-size:15px}.address-text{font-size:16px;line-height:1.75;color:var(--mid)}.address-text strong{display:block;color:var(--bm);font-family:'Unbounded',sans-serif;font-size:22px;line-height:1.18;letter-spacing:-.045em;margin-bottom:12px}.btn-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 18px;border:1px solid rgba(26,26,26,.16);font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:800;letter-spacing:1.1px;text-transform:uppercase;background:#fff;color:var(--bm);transition:.18s}.btn-gold{background:linear-gradient(145deg,#e0bb5a,#C9A227 54%,#9c7c1e);border-color:transparent;color:#171717}.btn:hover{transform:translateY(-2px);box-shadow:0 18px 44px rgba(26,26,26,.12)}
+.footer{background:#111;color:rgba(234,234,230,.68);padding:34px 0;font-size:13px}.foot{display:flex;justify-content:space-between;gap:20px}.foot b{color:#fff}
+@media(max-width:1040px){.hero-in,.details{grid-template-columns:1fr}.map-card{min-height:430px}.contact-cards{grid-template-columns:1fr 1fr}}@media(max-width:760px){.wrap{width:min(100% - 30px,1220px)}.menu{display:none}.phone{display:none}.hero{padding:54px 0 40px}.contact-cards,.details{grid-template-columns:1fr}.map-card{min-height:360px}.map-title{display:block}.map-title span{text-align:left;display:block;margin-top:8px}.req-row{grid-template-columns:1fr;gap:5px}.foot{display:block}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap top-in"><a class="brand" href="index.html"><img src="mehanit-logo-cropped.png" alt="Механит"/></a><nav class="menu" aria-label="Главное меню"><a href="index.html#equipment">Оборудование</a><a href="index.html#solutions">Решения</a><a href="index.html#stock">Склад в РФ</a><a href="production-equipment.html">Оснащение производства</a><a href="index.html#press">Пресс-центр</a><a class="on" href="contacts.html">Контакты</a></nav><a class="phone" href="tel:88005511206">8 800 55 11 206</a></div></header>
+<main>
+<section class="hero">
+<div class="wrap hero-in">
+<div>
+<div class="eyebrow">Контакты</div>
+<h1 class="h1">Механит<br/>на связи</h1>
+<p class="lead">Передайте производственную задачу, запрос на оборудование или комплект документов. Команда Механит подключит технолога и подготовит следующий шаг по проекту.</p>
+<div class="contact-cards">
+<div class="contact-card"><small>Телефоны</small><a href="tel:88005511206">8 800 55 11 206</a><a href="tel:+78312820500">8 (831) 282 0500</a></div>
+<div class="contact-card"><small>Email</small><a href="mailto:info@mehanit.ru">info@mehanit.ru</a><span>Запросы, ТЗ, чертежи и КП</span></div>
+</div>
+</div>
+<div class="map-card" aria-label="География поставок по России">
+<svg class="russia-map" viewBox="0 0 900 420" role="img" aria-label="Карта России с городами присутствия">
+<path class="russia-shape" d="M38 190 L92 146 L174 158 L226 124 L310 142 L364 108 L452 126 L510 96 L584 124 L676 104 L764 132 L858 120 L878 168 L824 198 L850 242 L762 252 L718 286 L640 270 L570 308 L484 286 L408 314 L322 276 L246 298 L188 260 L116 268 L62 236 Z"/>
+<path class="russia-shape" d="M606 88 L656 62 L724 76 L700 108 L642 112 Z" opacity=".72"/>
+<path class="russia-shape" d="M768 88 L824 64 L872 80 L852 112 L792 114 Z" opacity=".64"/>
+<g>
+<circle class="city-dot outer" style="--d:.1s" cx="132" cy="220" r="10"/><circle class="city-dot" style="--d:.1s" cx="132" cy="220" r="4"/><text class="map-label" x="146" y="224">Москва</text>
+<circle class="city-dot outer" style="--d:.5s" cx="116" cy="184" r="10"/><circle class="city-dot" style="--d:.5s" cx="116" cy="184" r="4"/><text class="map-label" x="128" y="182">Санкт-Петербург</text>
+<circle class="city-dot outer" style="--d:.9s" cx="204" cy="236" r="10"/><circle class="city-dot" style="--d:.9s" cx="204" cy="236" r="4"/><text class="map-label" x="218" y="240">Нижний Новгород</text>
+<circle class="city-dot outer" style="--d:1.2s" cx="292" cy="236" r="10"/><circle class="city-dot" style="--d:1.2s" cx="292" cy="236" r="4"/><text class="map-label" x="306" y="239">Казань</text>
+<circle class="city-dot outer" style="--d:1.5s" cx="356" cy="236" r="10"/><circle class="city-dot" style="--d:1.5s" cx="356" cy="236" r="4"/><text class="map-label" x="370" y="239">Екатеринбург</text>
+<circle class="city-dot outer" style="--d:1.8s" cx="474" cy="242" r="10"/><circle class="city-dot" style="--d:1.8s" cx="474" cy="242" r="4"/><text class="map-label" x="488" y="245">Новосибирск</text>
+<circle class="city-dot outer" style="--d:2.1s" cx="560" cy="238" r="10"/><circle class="city-dot" style="--d:2.1s" cx="560" cy="238" r="4"/><text class="map-label" x="574" y="241">Красноярск</text>
+<circle class="city-dot outer" style="--d:2.4s" cx="646" cy="252" r="10"/><circle class="city-dot" style="--d:2.4s" cx="646" cy="252" r="4"/><text class="map-label" x="660" y="255">Иркутск</text>
+<circle class="city-dot outer" style="--d:2.7s" cx="786" cy="222" r="10"/><circle class="city-dot" style="--d:2.7s" cx="786" cy="222" r="4"/><text class="map-label" x="800" y="225">Хабаровск</text>
+<circle class="city-dot outer" style="--d:3s" cx="838" cy="248" r="10"/><circle class="city-dot" style="--d:3s" cx="838" cy="248" r="4"/><text class="map-label" x="786" y="274">Владивосток</text>
+<circle class="city-dot outer" style="--d:1.1s" cx="174" cy="286" r="10"/><circle class="city-dot" style="--d:1.1s" cx="174" cy="286" r="4"/><text class="map-label" x="188" y="290">Ростов-на-Дону</text>
+</g>
+</svg>
+<div class="map-title"><b>Поставки по России</b><span>Работаем с производственными площадками в крупных промышленных центрах.</span></div>
+</div>
+</div>
+</section>
+<section>
+<div class="wrap details">
+<div class="panel">
+<h2>Реквизиты</h2>
+<div class="req-grid">
+<div class="req-row"><small>Компания</small><b>ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ Группа компаний «Механит» (ООО ГК «Механит»)</b></div>
+<div class="req-row"><small>ИНН</small><b>5256089670</b></div>
+<div class="req-row"><small>КПП</small><b>525601001</b></div>
+<div class="req-row"><small>ОГРН / ОГРНИП</small><b>1095256004370</b></div>
+</div>
+</div>
+<div class="panel">
+<h2>Адрес</h2>
+<p class="address-text"><strong>603123, г. Нижний Новгород,<br/>Южное шоссе, д. 16 «В», оф. 131</strong>Юридический и почтовый адрес компании. Пришлите чертеж, описание детали, материал, партию и требования к точности. Мы свяжемся и подскажем, какие данные нужны для подбора оборудования или оснащения.</p>
+<div class="btn-row"><a class="btn btn-gold" href="mailto:info@mehanit.ru">Написать на почту</a><a class="btn" href="tel:88005511206">8 800 55 11 206</a><a class="btn" href="tel:+78312820500">8 (831) 282 0500</a><a class="btn" href="index.html#quiz">Передать задачу</a></div>
+</div>
+</div>
+</section>
+</main>
+<footer class="footer"><div class="wrap foot"><b>Механит · 2006–2026</b><span>© 2026 ГК «Механит». Все права защищены.</span></div></footer>
+</body>
+</html>
