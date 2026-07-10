@@ -1720,17 +1720,24 @@ body.premium-v4 .nav-icon.mail::before{content:'';position:absolute;left:1px;rig
 body.premium-v4 .nav-icon.mail::after{content:'';position:absolute;left:3px;right:3px;top:5px;height:9px;background:linear-gradient(32deg,transparent 47%,currentColor 49% 53%,transparent 55%),linear-gradient(148deg,transparent 47%,currentColor 49% 53%,transparent 55%)}
 body.premium-v4 .nav-phone-plain{padding:0 0 0 8px;font-size:16px;font-weight:800;letter-spacing:.45px;color:#1a1a1a;white-space:nowrap;transition:color .18s ease}
 body.premium-v4 .nav-phone-plain:hover{color:var(--ce)}
-/* Адаптивная шапка: белый текст+лого над тёмными секциями */
-body.premium-v4 .brand img{transition:filter .28s ease}
-body.premium-v4 .menu-trigger,body.premium-v4 .nav-icon-btn{transition:color .28s ease,background .18s ease,transform .18s ease}
-body.premium-v4.hdr--on-dark .menu-trigger{color:#eeeeec;text-shadow:0 1px 12px rgba(0,0,0,.45)}
-body.premium-v4.hdr--on-dark .menu-item:hover .menu-trigger,body.premium-v4.hdr--on-dark .menu-item.is-open .menu-trigger{color:#fff}
-body.premium-v4.hdr--on-dark .nav-icon-btn{color:#eeeeec}
-body.premium-v4.hdr--on-dark .nav-icon-btn:hover{color:#fff;background:rgba(255,255,255,.14)}
-body.premium-v4.hdr--on-dark .nav-phone-plain{color:#f2f2f0;text-shadow:0 1px 12px rgba(0,0,0,.45)}
-body.premium-v4.hdr--on-dark .nav-phone-plain:hover{color:#fff}
-body.premium-v4.hdr--on-dark .brand img{filter:brightness(0) invert(1)}
-body.premium-v4.hdr--on-dark .burger{color:#fff}
+/* Адаптивная шапка (реальная шапка главной строится site-shell.js = .site-header) */
+body.premium-v4 .site-header{background:transparent!important;border-bottom-color:transparent!important;box-shadow:none!important}
+body.premium-v4 .site-logo img{filter:none;transition:filter .28s ease}
+body.premium-v4 .site-menu a,body.premium-v4 .site-icon,body.premium-v4 .site-phone{transition:color .28s ease,filter .28s ease}
+body.premium-v4 .site-menu a{color:#2e3337;text-shadow:none}
+body.premium-v4 .site-menu a:hover{color:#1a1a1a}
+body.premium-v4 .site-icon{color:#3a3f44}
+body.premium-v4 .site-phone{color:#1a1a1a}
+/* над тёмной секцией или на hero — белый текст и белый логотип */
+body.premium-v4.hdr--on-dark .site-menu a{color:#f0f0ee;text-shadow:0 1px 10px rgba(0,0,0,.42)}
+body.premium-v4.hdr--on-dark .site-menu a:hover{color:#fff;background:rgba(255,255,255,.12)}
+body.premium-v4.hdr--on-dark .site-logo img{filter:brightness(0) invert(1)}
+body.premium-v4.hdr--on-dark .site-icon{color:#f0f0ee}
+body.premium-v4.hdr--on-dark .site-phone{color:#f0f0ee;text-shadow:0 1px 10px rgba(0,0,0,.42)}
+body.premium-v4.hdr--on-dark .site-cta{color:#fff}
+body.premium-v4.hdr--on-dark .site-burger{color:#fff}
+/* Кнопка «Обсудить задачу» — только на первой странице */
+body.premium-v4.hide-hdr-cta .site-cta{display:none}
 @media(max-width:1500px){
   body.premium-v4 .nav{gap:14px}
   body.premium-v4 .brand img{height:46px}
@@ -3145,7 +3152,6 @@ renderToolBrands('turning');
     var header=getHeader();
     if(header){header.style.opacity=String(navOpacity);}
     document.body.classList.toggle('hero-nav-hidden',navOpacity<0.05);
-    document.body.classList.toggle('home-hero-header',progress<t3+fade);
   }
   function onScroll(){
     if(!ticking){ticking=true;window.requestAnimationFrame(update);}
@@ -3264,9 +3270,13 @@ document.addEventListener('keydown', function(e){
   window.addEventListener('resize',upd,{passive:true});
   upd();
 })();
+/* Клик по кнопке «Обсудить задачу» (site-shell строит .site-cta) — открывает модалку */
+document.addEventListener('click',function(e){
+  var a=e.target.closest&&e.target.closest('.site-cta');
+  if(a&&window.openLeadModal){ e.preventDefault(); openLeadModal(); }
+});
 /* Адаптивная шапка: смотрим, какая секция сейчас под шапкой, и красим текст/лого под её фон */
 (function(){
-  var hdr=document.querySelector('.hdr');
   var defs=[['equipment',false],['system',true],['solutions',false],['clients',false]];
   var order=defs.map(function(x){return {el:document.getElementById(x[0]),dark:x[1]};});
   var closer=document.querySelector('.closer'); if(closer)order.push({el:closer,dark:false});
@@ -3276,13 +3286,15 @@ document.addEventListener('keydown', function(e){
   var ticking=false;
   function apply(){
     ticking=false;
-    var line=(hdr?hdr.getBoundingClientRect().height:72)*0.5;
-    var dark=false;
+    var h=document.querySelector('.site-header')||document.querySelector('.hdr');
+    var line=(h?h.getBoundingClientRect().height:76)*0.5;
+    var state='hero'; /* пока ни одна секция не под шапкой — мы на hero */
     for(var i=0;i<order.length;i++){
       var r=order[i].el.getBoundingClientRect();
-      if(r.top<=line && r.bottom>line){ dark=order[i].dark; break; }
+      if(r.top<=line && r.bottom>line){ state=order[i].dark?'dark':'light'; break; }
     }
-    document.body.classList.toggle('hdr--on-dark', dark);
+    document.body.classList.toggle('home-hero-header', state==='hero');
+    document.body.classList.toggle('hdr--on-dark', state==='dark');
   }
   function onScroll(){ if(!ticking){ticking=true;requestAnimationFrame(apply);} }
   window.addEventListener('scroll',onScroll,{passive:true});
