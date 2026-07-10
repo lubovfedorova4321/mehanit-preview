@@ -3264,17 +3264,31 @@ document.addEventListener('keydown', function(e){
   window.addEventListener('resize',upd,{passive:true});
   upd();
 })();
-/* Адаптивная шапка: над тёмными секциями (Этапы, футер) — белый текст и белый логотип */
+/* Адаптивная шапка: смотрим, какая секция сейчас под шапкой, и красим текст/лого под её фон */
 (function(){
-  if(!('IntersectionObserver' in window))return;
-  var dark=[document.getElementById('system'),document.querySelector('footer')].filter(Boolean);
-  if(!dark.length)return;
-  var set=new Set();
-  var io=new IntersectionObserver(function(es){
-    es.forEach(function(e){ if(e.isIntersecting){set.add(e.target);}else{set.delete(e.target);} });
-    document.body.classList.toggle('hdr--on-dark', set.size>0);
-  },{rootMargin:'0px 0px -86% 0px',threshold:0});
-  dark.forEach(function(el){io.observe(el);});
+  var hdr=document.querySelector('.hdr');
+  var defs=[['equipment',false],['system',true],['solutions',false],['clients',false]];
+  var order=defs.map(function(x){return {el:document.getElementById(x[0]),dark:x[1]};});
+  var closer=document.querySelector('.closer'); if(closer)order.push({el:closer,dark:false});
+  var footer=document.querySelector('footer'); if(footer)order.push({el:footer,dark:true});
+  order=order.filter(function(s){return s.el;});
+  if(!order.length)return;
+  var ticking=false;
+  function apply(){
+    ticking=false;
+    var line=(hdr?hdr.getBoundingClientRect().height:72)*0.5;
+    var dark=false;
+    for(var i=0;i<order.length;i++){
+      var r=order[i].el.getBoundingClientRect();
+      if(r.top<=line && r.bottom>line){ dark=order[i].dark; break; }
+    }
+    document.body.classList.toggle('hdr--on-dark', dark);
+  }
+  function onScroll(){ if(!ticking){ticking=true;requestAnimationFrame(apply);} }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',onScroll,{passive:true});
+  window.addEventListener('load',apply);
+  apply();
 })();
 </script>
 <script src="site-shell.js"></script>
