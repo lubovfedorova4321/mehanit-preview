@@ -3,45 +3,222 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Пресс-центр Механит — внедрения, выставки и проекты</title><link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<meta name="description" content="Новости компании Механит: внедрение металлообрабатывающего оборудования, выставки и инженерные проекты."/>
+<title>Пресс-центр Механит — внедрения, выставки и инженерные решения</title>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<meta name="description" content="Инженерная медиалента Механита: внедрения оборудования, выставки, инженерные решения и новости компании."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 
 <style>
 :root{--ink:#24272b;--mid:#6f7479;--line:rgba(36,39,43,.11);--purple:#6b2d8b;--gold:#c9a227;--paper:#f3f4f3}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:'Golos Text',sans-serif}a{color:inherit;text-decoration:none}button{font:inherit}
-.wrap{width:min(100% - 56px,1440px);margin:auto}.hdr{position:sticky;top:0;z-index:20;background:rgba(248,248,246,.82);border-bottom:1px solid rgba(255,255,255,.6);backdrop-filter:blur(22px)}.nav{min-height:82px;display:flex;align-items:center;gap:30px}.brand img{display:block;height:54px}.menu{display:flex;align-items:center;gap:24px;margin-left:auto}.menu a{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.65px}.menu a:hover,.menu a.active{color:var(--purple)}.phone{font-size:15px;font-weight:700;margin-left:12px}
-.hero{position:relative;overflow:hidden;padding:104px 0 72px;background:linear-gradient(130deg,#fbfbfa 0%,#f1f2f2 58%,#e4e6e7 100%)}.hero::after{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(107,45,139,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(107,45,139,.04) 1px,transparent 1px);background-size:72px 72px;mask-image:linear-gradient(90deg,#000,transparent 76%);pointer-events:none}.hero .wrap{position:relative;z-index:1}.eyebrow{font-family:'Golos Text',monospace;font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:22px}.hero h1{margin:0;max-width:950px;font-family:'Magistral',sans-serif;font-size:clamp(40px,5.2vw,76px);font-weight:400;line-height:1.02;letter-spacing:-.02em}.hero h1 span{display:block;color:#74797e;font-weight:300}.hero p{max-width:690px;margin:28px 0 0;font-size:18px;line-height:1.65;color:var(--mid)}
-.news{padding:72px 0 100px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.card{appearance:none;width:100%;padding:0;border:1px solid var(--line);background:rgba(255,255,255,.82);text-align:left;color:inherit;cursor:pointer;overflow:hidden;box-shadow:0 18px 48px rgba(31,34,37,.06);transition:.25s}.card:hover{transform:translateY(-5px);border-color:rgba(107,45,139,.24);box-shadow:0 28px 62px rgba(31,34,37,.11)}.media{height:230px;overflow:hidden;background:#dfe2e4}.media img,.media video{width:100%;height:100%;display:block;object-fit:cover;filter:saturate(.76) contrast(.96);transition:.35s}.card:hover .media img,.card:hover .media video{transform:scale(1.035);filter:saturate(.9) contrast(1.02)}.content{padding:25px 25px 27px}.content small{display:block;margin-bottom:13px;font-family:'Golos Text',monospace;font-size:9px;letter-spacing:1.45px;text-transform:uppercase;color:var(--purple)}.content h2{min-height:70px;margin:0 0 12px;font-family:'Magistral',sans-serif;font-size:18px;font-weight:500;line-height:1.28;letter-spacing:-.035em}.content p{min-height:66px;margin:0;color:var(--mid);font-size:13px;line-height:1.65}.open{display:inline-block;margin-top:19px;font-size:12px;font-weight:700;color:var(--purple)}
-.modal{position:fixed;inset:0;z-index:50;display:none;align-items:center;justify-content:center;padding:24px;background:rgba(22,24,27,.58);backdrop-filter:blur(12px)}.modal.open{display:flex}.dialog{position:relative;width:min(900px,100%);max-height:90vh;overflow:auto;background:#f8f8f6;box-shadow:0 35px 100px rgba(0,0,0,.3)}.close{position:absolute;right:16px;top:14px;z-index:2;width:42px;height:42px;border:0;background:rgba(255,255,255,.86);font-size:28px;cursor:pointer}.modal-media{height:360px;background:#ddd}.modal-media img,.modal-media video{width:100%;height:100%;display:block;object-fit:cover}.modal-copy{padding:34px 38px 42px}.modal-copy small{font-family:'Golos Text',monospace;font-size:10px;letter-spacing:1.5px;color:var(--purple);text-transform:uppercase}.modal-copy h2{margin:14px 0 24px;font-family:'Magistral',sans-serif;font-size:clamp(25px,3vw,38px);line-height:1.18;letter-spacing:-.018em}.modal-copy p{font-size:15px;line-height:1.75;color:#555b60}.footer{padding:32px 0;background:#26292d;color:rgba(255,255,255,.65);font-size:13px}.footer .wrap{display:flex;justify-content:space-between;gap:20px}.footer a{color:#fff}
-@media(max-width:1050px){.menu{display:none}.phone{margin-left:auto}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:680px){.wrap{width:min(100% - 30px,1440px)}.brand img{height:44px}.phone{font-size:12px}.hero{padding:72px 0 54px}.grid{grid-template-columns:1fr}.media{height:210px}.modal-copy{padding:28px 22px 34px}.modal-media{height:230px}.footer .wrap{display:block}.footer a{display:block;margin-top:10px}}
+*{box-sizing:border-box;min-width:0}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:'Golos Text',sans-serif;position:relative;overflow-x:hidden}a{color:inherit;text-decoration:none}button{font:inherit}img{max-width:100%}
+body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(rgba(107,45,139,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(107,45,139,.04) 1px,transparent 1px);background-size:72px 72px}
+main{position:relative;z-index:1}
+.wrap{width:min(100% - 48px,1440px);margin-left:clamp(24px,4.4vw,84px);margin-right:auto}
+
+/* COMPACT HERO */
+.hero{padding:44px 0 36px;border-bottom:1px solid var(--line)}
+.hero .eyebrow{font-family:'Golos Text',monospace;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.hero h1{margin:0;max-width:760px;font-family:'Magistral','Golos Text',sans-serif;font-size:clamp(26px,3vw,40px);font-weight:400;line-height:1.08;letter-spacing:-.02em;color:var(--ink)}
+.hero p{max-width:620px;margin:14px 0 0;font-size:14.5px;line-height:1.6;color:var(--mid)}
+
+/* TABS */
+.tabs-wrap{position:sticky;top:0;z-index:15;background:rgba(243,244,243,.86);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.tabs{display:flex;align-items:center;gap:4px;overflow-x:auto;padding:14px 0;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:0 0 auto;padding:9px 16px;font-size:12px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--mid);border:1px solid transparent;white-space:nowrap;transition:.18s}
+.tab:hover{color:var(--ink)}
+.tab.on{color:#fff;background:var(--purple)}
+
+/* FEATURED */
+.featured{padding:36px 0 8px}
+.featured-card{display:grid;grid-template-columns:1.05fr .95fr;gap:0;background:#fff;border:1px solid var(--line);box-shadow:0 22px 60px rgba(31,34,37,.08)}
+.featured-media{position:relative;min-height:340px;background:#dfe2e4;overflow:hidden}
+.featured-media img{width:100%;height:100%;display:block;object-fit:cover;filter:saturate(.8) contrast(1.02)}
+.featured-copy{padding:40px 44px;display:flex;flex-direction:column;justify-content:center}
+.pin-label{display:inline-flex;align-items:center;gap:8px;font-family:'Golos Text',monospace;font-size:10px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.pin-label::before{content:'';width:16px;height:1.5px;background:var(--gold)}
+.featured-copy .rubric{font-family:'Golos Text',monospace;font-size:10px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--purple);margin-bottom:12px}
+.featured-copy h2{margin:0 0 16px;font-family:'Magistral','Golos Text',sans-serif;font-size:clamp(22px,2.6vw,32px);font-weight:500;line-height:1.2;letter-spacing:-.03em}
+.featured-copy p{margin:0 0 22px;font-size:14.5px;line-height:1.7;color:var(--mid);max-width:480px}
+.featured-specs{font-family:'Golos Text',monospace;font-size:11.5px;letter-spacing:.3px;color:var(--ink);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0;margin-bottom:24px}
+.featured-actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;font-size:12px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;border:1px solid var(--ink);color:var(--ink);background:transparent;cursor:pointer;transition:.18s}
+.btn:hover{background:var(--ink);color:#fff}
+.btn.primary{background:var(--purple);border-color:var(--purple);color:#fff}
+.btn.primary:hover{background:#5a2574}
+
+/* FEED */
+.feed{padding:44px 0 90px}
+.feed-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:20px}
+.card{grid-column:span 4;appearance:none;padding:0;border:1px solid var(--line);background:#fff;text-align:left;color:inherit;cursor:pointer;overflow:hidden;box-shadow:0 14px 38px rgba(31,34,37,.05);transition:.25s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-4px);border-color:rgba(107,45,139,.26);box-shadow:0 24px 54px rgba(31,34,37,.1)}
+.card.span-8{grid-column:span 8}
+.card.span-6{grid-column:span 6}
+.card.span-12{grid-column:span 12;flex-direction:row}
+.card.span-12 .c-media{width:42%;flex:0 0 auto}
+.card.span-12 .c-content{flex:1}
+.c-media{height:220px;overflow:hidden;background:#dfe2e4}
+.card.span-8 .c-media{height:300px}
+.c-media img{width:100%;height:100%;display:block;object-fit:cover;filter:saturate(.78) contrast(.98);transition:.35s}
+.card:hover .c-media img{transform:scale(1.035);filter:saturate(.92) contrast(1.02)}
+.c-content{padding:22px 24px 24px;display:flex;flex-direction:column;flex:1}
+.c-top{display:flex;align-items:center;gap:10px;margin-bottom:12px;flex-wrap:wrap}
+.c-rubric{font-family:'Golos Text',monospace;font-size:9.5px;font-weight:700;letter-spacing:1.3px;text-transform:uppercase;color:var(--purple)}
+.c-meta{font-family:'Golos Text',monospace;font-size:9.5px;letter-spacing:.8px;text-transform:uppercase;color:var(--mid)}
+.c-meta::before{content:'·';margin-right:10px;color:var(--line)}
+.c-content h3{margin:0 0 10px;font-family:'Magistral','Golos Text',sans-serif;font-size:17px;font-weight:500;line-height:1.28;letter-spacing:-.03em}
+.card.span-8 .c-content h3{font-size:21px}
+.c-content p{margin:0;color:var(--mid);font-size:13px;line-height:1.6}
+.c-specs{margin-top:14px;padding-top:12px;border-top:1px solid var(--line);font-family:'Golos Text',monospace;font-size:10.5px;color:var(--ink);line-height:1.5}
+.c-action{display:inline-block;margin-top:auto;padding-top:16px;font-size:11.5px;font-weight:700;color:var(--purple)}
+
+/* PROMO INSERTS */
+.promo{grid-column:span 12;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;padding:26px 30px;background:#fff;border:1px solid rgba(201,162,39,.4);box-shadow:0 14px 38px rgba(31,34,37,.05)}
+.promo-label{font-family:'Golos Text',monospace;font-size:10px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;display:block}
+.promo-title{font-family:'Magistral','Golos Text',sans-serif;font-size:19px;font-weight:500;letter-spacing:-.02em;line-height:1.3;max-width:560px}
+.promo .btn{flex:0 0 auto}
+
+/* MODAL */
+.modal{position:fixed;inset:0;z-index:50;display:none;align-items:center;justify-content:center;padding:24px;background:rgba(22,24,27,.58);backdrop-filter:blur(12px)}
+.modal.open{display:flex}
+.dialog{position:relative;width:min(900px,100%);max-height:90vh;overflow:auto;background:#f8f8f6;box-shadow:0 35px 100px rgba(0,0,0,.3)}
+.close{position:absolute;right:16px;top:14px;z-index:2;width:42px;height:42px;border:0;background:rgba(255,255,255,.86);font-size:28px;cursor:pointer}
+.modal-media{height:360px;background:#ddd}
+.modal-media img{width:100%;height:100%;display:block;object-fit:cover}
+.modal-copy{padding:34px 38px 42px}
+.modal-copy small{font-family:'Golos Text',monospace;font-size:10px;letter-spacing:1.5px;color:var(--purple);text-transform:uppercase}
+.modal-copy h2{margin:14px 0 18px;font-family:'Magistral','Golos Text',sans-serif;font-size:clamp(25px,3vw,38px);line-height:1.18;letter-spacing:-.018em}
+.modal-specs{font-family:'Golos Text',monospace;font-size:12px;color:var(--ink);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:12px 0;margin-bottom:20px}
+.modal-copy p{font-size:15px;line-height:1.75;color:#555b60}
+
+@media(max-width:900px){
+  .featured-card{grid-template-columns:1fr}
+  .featured-media{min-height:240px}
+  .featured-copy{padding:28px 26px}
+  .feed-grid{grid-template-columns:1fr;align-items:start}
+  .card,.card.span-8,.card.span-6,.card.span-12{grid-column:span 1;width:100%}
+  .card.span-12{flex-direction:column}
+  .card.span-12 .c-media{width:100%}
+  .promo{flex-direction:column;align-items:flex-start}
+}
+@media(max-width:680px){
+  .wrap{width:min(100% - 30px,1440px)}
+  .hero{padding:32px 0 26px}
+  .modal-copy{padding:28px 22px 34px}
+  .modal-media{height:230px}
+}
 </style>
 <link rel="stylesheet" href="site-shell.css"/>
 </head>
 <body>
-<header class="hdr"><div class="wrap nav"><a class="brand" href="index.html"><img src="mehanit-logo-cropped.png" alt="Механит"/></a><nav class="menu"><a href="index.html#equipment">Оборудование</a><a href="index.html#solutions">Решения</a><a href="stock.html">Склад в РФ</a><a href="production-equipment.html">Комплексный подход</a><a class="active" href="press.html">Пресс-центр</a><a href="contacts.html">Контакты</a></nav><a class="phone" href="tel:88005511206">8 800 55 11 206</a></div></header>
+<header></header>
 <main>
-<section class="hero"><div class="wrap"><div class="eyebrow">Пресс-центр Механит</div><h1>Новости компании<span>внедрения, выставки, проекты</span></h1><p>Рассказываем о запусках оборудования, инженерных решениях и ключевых отраслевых событиях.</p></div></section>
-<section class="news"><div class="wrap"><div class="grid" id="newsGrid"></div></div></section>
+
+<section class="hero"><div class="wrap">
+<div class="eyebrow">Пресс-центр Механит</div>
+<h1>Новости, внедрения<br/>и инженерные решения</h1>
+<p>Рассказываем о запусках оборудования, проектах и ключевых событиях отрасли.</p>
+</div></section>
+
+<div class="tabs-wrap"><div class="wrap"><nav class="tabs" id="tabs">
+<button class="tab on" type="button" data-cat="all">Все</button>
+<button class="tab" type="button" data-cat="vnedreniya">Внедрения</button>
+<button class="tab" type="button" data-cat="vystavki">Выставки</button>
+<button class="tab" type="button" data-cat="oborudovanie">Оборудование</button>
+<button class="tab" type="button" data-cat="resheniya">Инженерные решения</button>
+<button class="tab" type="button" data-cat="kompaniya">Компания</button>
+<button class="tab" type="button" data-cat="video">Видео</button>
+</nav></div></div>
+
+<section class="featured"><div class="wrap">
+<div class="featured-card">
+<div class="featured-media"><img src="stock-warehouse-cnc.png" alt="Токарно-карусельный станок CK5116"/></div>
+<div class="featured-copy">
+<div class="pin-label">Закреплённая публикация · Главный материал</div>
+<div class="rubric">Внедрение · 26.02.2026</div>
+<h2>Токарно-карусельный станок CK5116 для локомотиворемонтного предприятия</h2>
+<p>Запуск решения для обработки бандажей колёсных пар: диаметр до 1600&nbsp;мм, заготовки до 5000&nbsp;кг.</p>
+<div class="featured-specs">Диаметр обработки — до 1600 мм · Масса заготовки — до 5000 кг · Локомотиворемонтное производство</div>
+<div class="featured-actions">
+<button class="btn primary" type="button" data-open="ck5116">Читать кейс</button>
+<button class="btn" type="button" data-open="ck5116">Смотреть фотографии</button>
+</div>
+</div>
+</div>
+</div></section>
+
+<section class="feed"><div class="wrap">
+<div class="feed-grid" id="feedGrid"></div>
+</div></section>
+
 </main>
-<footer class="footer"><div class="wrap"><span>© 2026 ООО ГК «Механит»</span><a href="mailto:info@mehanit.ru">info@mehanit.ru</a></div></footer>
-<div class="modal" id="articleModal" aria-hidden="true"><article class="dialog" role="dialog" aria-modal="true" aria-labelledby="articleTitle"><button class="close" type="button" aria-label="Закрыть">×</button><div class="modal-media" id="articleMedia"></div><div class="modal-copy"><small id="articleKicker"></small><h2 id="articleTitle"></h2><div id="articleBody"></div></div></article></div>
+<div class="modal" id="articleModal" aria-hidden="true"><article class="dialog" role="dialog" aria-modal="true" aria-labelledby="articleTitle"><button class="close" type="button" aria-label="Закрыть">×</button><div class="modal-media" id="articleMedia"></div><div class="modal-copy"><small id="articleKicker"></small><h2 id="articleTitle"></h2><div class="modal-specs" id="articleSpecs"></div><div id="articleBody"></div></div></article></div>
 <script>
 const articles=[
-{id:'ck5116',kicker:'Внедрение · 26.02.2026',title:'Токарно-карусельный станок CK5116 для локомотиворемонтного предприятия',image:'stock-warehouse-cnc.png',lead:'Запуск решения для обработки бандажей колесных пар: диаметр до 1600 мм, заготовки до 5000 кг.',body:['Механит подготовил решение для локомотиворемонтного предприятия, где ключевая задача связана с обработкой крупногабаритных деталей колесных пар.','В проекте сделан акцент на жесткость станка, стабильность геометрии и возможность работать с заготовками до 5000 кг.','Задача Механит в таких проектах — связать оборудование, технологию, оснастку, запуск и дальнейшее сервисное сопровождение.']},
-{id:'auto',kicker:'Внедрение · 24.11.2025',title:'Вертикально-фрезерное оборудование для предприятия автокомпонентов',image:'mehanit-milling-machine.jpg',lead:'Оборудование для корпусных деталей, фланцев, ступиц и элементов мостов.',body:['Проект сфокусирован на обработке корпусных деталей, фланцев, ступиц и элементов мостов.','Для таких задач критичны повторяемость, скорость переналадки, корректный подбор инструмента и стабильный техпроцесс.','Итоговый подход включает подбор конфигурации станка, инструментального комплекта, оснастки и сценария запуска под реальную серию деталей.']},
-{id:'grinding',kicker:'Внедрение · 10.12.2025',title:'Плоскошлифовальный комплекс для цветной металлургии',image:'task-grinding.jpg',lead:'Финишная обработка деталей с требованиями к шероховатости, плоскостности и стабильности цикла.',body:['Плоскошлифовальное оборудование используется там, где важны поверхность, плоскостность и повторяемость результата.','Для предприятий цветной металлургии особенно важны стабильность финишной обработки и контроль теплового влияния.','Механит помогает подобрать решение под материал, габариты, допуски и требования к серийному циклу.']},
-{id:'mashexpo',kicker:'Выставка · 20.01.2026',title:'Механит на МашЭкспо Сибирь 2026',image:'modal-machine-bg.png',lead:'Подбор станков под допуски и задачи, оптимизация технологии, решения под ключ.',body:['Механит представил инженерный подход к подбору металлообрабатывающего оборудования: от анализа детали до запуска производства.','На выставке обсуждались задачи по токарной, фрезерной, шлифовальной и электроэрозионной обработке.','Фокус коммуникации — подбор производственного решения под материал, допуск, партию и экономику проекта.']},
-{id:'mashexpo-results',kicker:'Итоги · 12.03.2026',title:'Итоги МашЭкспо Сибирь',image:'mehanit-hero-cnc-poster.jpg',lead:'Десятки встреч с промышленными предприятиями и новые проекты по внедрению оборудования.',body:['Выставка дала Механит несколько дней интенсивной работы с промышленными предприятиями и инженерными командами.','Ключевые запросы касались сроков поставки, складского оборудования, подбора технологии, лизинга и запуска первой детали.','Полученные задачи перешли в проектную работу: технологический анализ, подбор конфигураций и подготовку КП.']},
-{id:'metal2026',kicker:'Выставка · 12.05.2026',title:'Металлообработка-2026: первый день',image:'mehanit-hero-cnc-poster.jpg',lead:'Оборудование, инженерные решения, складские станки, Macro Tools и консультации по внедрению.',body:['Механит представил на отраслевой выставке оборудование, инженерные решения, складские станки и направление Macro Tools.','Главный акцент — комплексный подход: станок, технология, инструмент, оснастка, ПНР, обучение и сервис.','Команда разбирала производственные задачи и показывала, как подбор оборудования начинается с детали.']}
+{id:'auto',cat:'vnedreniya',rubric:'Внедрение',date:'24.11.2025',size:'span-8',title:'Вертикально-фрезерное оборудование для предприятия автокомпонентов',image:'mehanit-milling-machine.jpg',lead:'Оборудование для корпусных деталей, фланцев, ступиц и элементов мостов.',specs:'Вертикально-фрезерная группа · Серийное производство · Повторяемость и скорость переналадки',action:'Читать кейс →',body:['Проект сфокусирован на обработке корпусных деталей, фланцев, ступиц и элементов мостов.','Для таких задач критичны повторяемость, скорость переналадки, корректный подбор инструмента и стабильный техпроцесс.','Итоговый подход включает подбор конфигурации станка, инструментального комплекта, оснастки и сценария запуска под реальную серию деталей.']},
+{id:'grinding',cat:'vnedreniya',rubric:'Внедрение',date:'10.12.2025',size:'span-4',title:'Плоскошлифовальный комплекс для цветной металлургии',image:'task-grinding.jpg',lead:'Финишная обработка деталей с требованиями к шероховатости, плоскостности и стабильности цикла.',specs:'Плоскошлифовальный комплекс · Цветная металлургия',action:'Читать кейс →',body:['Плоскошлифовальное оборудование используется там, где важны поверхность, плоскостность и повторяемость результата.','Для предприятий цветной металлургии особенно важны стабильность финишной обработки и контроль теплового влияния.','Механит помогает подобрать решение под материал, габариты, допуски и требования к серийному циклу.']},
+{promo:'stock'},
+{id:'mashexpo',cat:'vystavki',rubric:'Выставка',date:'20.01.2026',size:'span-6',title:'Механит на МашЭкспо Сибирь 2026',image:'modal-machine-bg.png',lead:'Подбор станков под допуски и задачи, оптимизация технологии, решения под ключ.',specs:'МашЭкспо Сибирь 2026 · Токарная, фрезерная, шлифовальная, EDM-обработка',action:'Смотреть фотоотчёт →',body:['Механит представил инженерный подход к подбору металлообрабатывающего оборудования: от анализа детали до запуска производства.','На выставке обсуждались задачи по токарной, фрезерной, шлифовальной и электроэрозионной обработке.','Фокус коммуникации — подбор производственного решения под материал, допуск, партию и экономику проекта.']},
+{id:'mashexpo-results',cat:'vystavki',rubric:'Итоги',date:'12.03.2026',size:'span-6',title:'Итоги МашЭкспо Сибирь',image:'mehanit-hero-cnc-poster.jpg',lead:'Десятки встреч с промышленными предприятиями и новые проекты по внедрению оборудования.',specs:'Десятки встреч · Новые проекты внедрения',action:'Узнать итоги выставки →',body:['Выставка дала Механит несколько дней интенсивной работы с промышленными предприятиями и инженерными командами.','Ключевые запросы касались сроков поставки, складского оборудования, подбора технологии, лизинга и запуска первой детали.','Полученные задачи перешли в проектную работу: технологический анализ, подбор конфигураций и подготовку КП.']},
+{promo:'task'},
+{id:'metal2026',cat:'vystavki',rubric:'Выставка',date:'12.05.2026',size:'span-12',title:'Металлообработка-2026: первый день',image:'mehanit-hero-cnc-poster.jpg',lead:'Оборудование, инженерные решения, складские станки, Macro Tools и консультации по внедрению.',specs:'Металлообработка-2026 · Оборудование · Macro Tools · Сервис',action:'Смотреть фотоотчёт →',body:['Механит представил на отраслевой выставке оборудование, инженерные решения, складские станки и направление Macro Tools.','Главный акцент — комплексный подход: станок, технология, инструмент, оснастка, ПНР, обучение и сервис.','Команда разбирала производственные задачи и показывала, как подбор оборудования начинается с детали.']},
+{promo:'subscribe'}
 ];
-const grid=document.getElementById('newsGrid');
-grid.innerHTML=articles.map(a=>`<button class="card" type="button" data-id="${a.id}"><div class="media"><img src="${a.image}" alt="${a.title}"/></div><div class="content"><small>${a.kicker}</small><h2>${a.title}</h2><p>${a.lead}</p><span class="open">Открыть статью →</span></div></button>`).join('');
+const featured={id:'ck5116',rubric:'Внедрение',date:'26.02.2026',title:'Токарно-карусельный станок CK5116 для локомотиворемонтного предприятия',image:'stock-warehouse-cnc.png',specs:'Диаметр обработки — до 1600 мм · Масса заготовки — до 5000 кг · Локомотиворемонтное производство',body:['Механит подготовил решение для локомотиворемонтного предприятия, где ключевая задача связана с обработкой крупногабаритных деталей колёсных пар.','В проекте сделан акцент на жёсткость станка, стабильность геометрии и возможность работать с заготовками до 5000 кг.','Задача Механит в таких проектах — связать оборудование, технологию, оснастку, запуск и дальнейшее сервисное сопровождение.']};
+
+const promos={
+  stock:{label:'На складе',title:'Оборудование в наличии — станки, доступные для отгрузки и проведения тестовой обработки',cta:'Посмотреть склад →',href:'stock.html'},
+  task:{label:'Есть производственная задача?',title:'Подберём оборудование, технологию и оснастку под вашу деталь',cta:'Обсудить проект →',href:'index.html#quiz'},
+  subscribe:{label:'Подписка',title:'Новые внедрения и оборудование в Telegram-канале Механита',cta:'Подписаться →',href:'https://t.me/mehanit'}
+};
+
+function cardHtml(a){
+  const sizeClass=a.size?` ${a.size}`:'';
+  return `<button class="card${sizeClass}" type="button" data-id="${a.id}" data-cat="${a.cat}"><div class="c-media"><img src="${a.image}" alt="${a.title}" loading="lazy"/></div><div class="c-content"><div class="c-top"><span class="c-rubric">${a.rubric}</span><span class="c-meta">${a.date}</span></div><h3>${a.title}</h3><p>${a.lead}</p><div class="c-specs">${a.specs}</div><span class="c-action">${a.action}</span></div></button>`;
+}
+function promoHtml(key){
+  const p=promos[key];
+  return `<div class="promo"><div><span class="promo-label">${p.label}</span><div class="promo-title">${p.title}</div></div><a class="btn primary" href="${p.href}"${p.href.startsWith('http')?' target="_blank" rel="noopener"':''}>${p.cta}</a></div>`;
+}
+const grid=document.getElementById('feedGrid');
+grid.innerHTML=articles.map(a=>a.promo?promoHtml(a.promo):cardHtml(a)).join('');
+
+const tabs=document.getElementById('tabs');
+tabs.addEventListener('click',e=>{
+  const btn=e.target.closest('.tab');
+  if(!btn)return;
+  tabs.querySelectorAll('.tab').forEach(t=>t.classList.remove('on'));
+  btn.classList.add('on');
+  const cat=btn.dataset.cat;
+  grid.querySelectorAll('.card[data-cat]').forEach(card=>{
+    card.style.display=(cat==='all'||card.dataset.cat===cat)?'':'none';
+  });
+  grid.querySelectorAll('.promo').forEach(p=>{p.style.display=cat==='all'?'':'none';});
+});
+
 const modal=document.getElementById('articleModal');
+function openArticle(a){
+  document.getElementById('articleMedia').innerHTML=`<img src="${a.image}" alt="${a.title}"/>`;
+  document.getElementById('articleKicker').textContent=`${a.rubric} · ${a.date}`;
+  document.getElementById('articleTitle').textContent=a.title;
+  document.getElementById('articleSpecs').textContent=a.specs;
+  document.getElementById('articleBody').innerHTML=a.body.map(p=>`<p>${p}</p>`).join('');
+  modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';
+}
 function closeArticle(){modal.classList.remove('open');modal.setAttribute('aria-hidden','true');document.body.style.overflow=''}
-grid.addEventListener('click',e=>{const card=e.target.closest('.card');if(!card)return;const a=articles.find(x=>x.id===card.dataset.id);if(!a)return;document.getElementById('articleMedia').innerHTML=`<img src="${a.image}" alt="${a.title}"/>`;document.getElementById('articleKicker').textContent=a.kicker;document.getElementById('articleTitle').textContent=a.title;document.getElementById('articleBody').innerHTML=a.body.map(p=>`<p>${p}</p>`).join('');modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden'});
-modal.querySelector('.close').addEventListener('click',closeArticle);modal.addEventListener('click',e=>{if(e.target===modal)closeArticle()});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeArticle()});
+grid.addEventListener('click',e=>{
+  const card=e.target.closest('.card');
+  if(!card)return;
+  const a=articles.find(x=>x.id===card.dataset.id);
+  if(a)openArticle(a);
+});
+document.querySelectorAll('[data-open]').forEach(el=>{
+  el.addEventListener('click',()=>{if(el.dataset.open==='ck5116')openArticle(featured);});
+});
+modal.querySelector('.close').addEventListener('click',closeArticle);
+modal.addEventListener('click',e=>{if(e.target===modal)closeArticle()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeArticle()});
 </script>
 <script src="site-shell.js"></script>
 </body>

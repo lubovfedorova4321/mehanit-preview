@@ -24,7 +24,7 @@
 html{scroll-behavior:smooth}
 body{font-family:'Golos Text',sans-serif;background:var(--paper);color:var(--bm);-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
-.wrap{width:min(calc(100% - 64px),var(--max));margin:0 auto}
+.wrap{width:min(calc(100% - 48px),var(--max));margin-left:clamp(24px,4.4vw,84px);margin-right:auto}
 .mono{font-family:'Golos Text',monospace}.disp{font-family:'Magistral',sans-serif}
 .eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:'Golos Text',monospace;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--ce);margin-bottom:.85rem}
 .eyebrow::before{content:'';width:22px;height:1.5px;background:var(--ce)}
@@ -35,7 +35,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 .sec-link:hover{color:var(--ce)}.sec-link::after{content:'→'}
 
 /* buttons */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:1.5px solid transparent;min-height:48px;padding:0 26px;font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;font-family:'Golos Text',sans-serif;transition:.22s;border-radius:2px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:1.5px solid transparent;min-height:48px;padding:0 26px;font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;font-family:'Golos Text',sans-serif;transition:.22s;border-radius:10px}
 .btn-ce{background:var(--ce);color:#fff;box-shadow:0 10px 28px rgba(107,45,139,.2)}.btn-ce:hover{background:var(--ceHover);transform:translateY(-2px)}
 .btn-dark{background:var(--bm);color:var(--tl2);border-color:var(--bm)}.btn-dark:hover{background:var(--sg)}
 .btn-ghost{background:transparent;color:var(--bm);border-color:rgba(26,26,26,.2)}.btn-ghost:hover{border-color:var(--bm)}
@@ -214,8 +214,7 @@ section{padding:5.5rem 0}
 /* EQUIPMENT OVERVIEW */
 .equipment{background:linear-gradient(180deg,var(--tl2) 0%,var(--paper) 100%);border-bottom:1px solid var(--line)}
 .page-content{position:relative;z-index:2;background:var(--paper)}
-#equipment{position:relative;z-index:20;margin-top:0;box-shadow:0 -40px 90px rgba(0,0,0,.28)}
-@media(max-width:900px){#equipment{margin-top:0}}
+#equipment{position:relative}
 .equipment-panel{background:rgba(255,255,255,.62);border:1px solid var(--line);box-shadow:0 24px 70px rgba(26,26,26,.08);padding:34px}
 .equipment-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:32px}
 .equipment-card{min-height:220px;background:var(--paper);border:1px solid var(--line);padding:22px;position:relative;overflow:hidden;transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease,background .22s ease}
@@ -664,11 +663,11 @@ select.qfield{cursor:pointer}
 
 /* CLOSER CTA (финальный блок) */
 .closer{background:var(--paper);padding:clamp(30px,5vw,72px) 0 clamp(40px,6vw,86px)}
-.closer-band{position:relative;overflow:hidden;background:linear-gradient(150deg,#26262a 0%,#1b1b1d 62%);border:1px solid rgba(234,234,230,.08);border-radius:22px;padding:clamp(32px,4.4vw,58px) clamp(28px,4vw,60px);display:flex;align-items:center;justify-content:space-between;gap:clamp(26px,3vw,48px);flex-wrap:wrap;box-shadow:0 32px 80px rgba(0,0,0,.28)}
+.closer-band{position:relative;overflow:hidden;background:linear-gradient(150deg,#2b2e33 0%,#1c1e22 62%);border:1px solid rgba(234,234,230,.08);border-radius:22px;padding:clamp(32px,4.4vw,58px) clamp(28px,4vw,60px);display:flex;align-items:center;justify-content:space-between;gap:clamp(26px,3vw,48px);flex-wrap:wrap;box-shadow:0 32px 80px rgba(0,0,0,.28)}
 .closer-band::before{content:'';position:absolute;right:14%;bottom:-45%;width:540px;height:440px;background:radial-gradient(ellipse,rgba(107,45,139,.42),transparent 62%);pointer-events:none}
 .closer-band::after{content:'';position:absolute;left:0;top:0;width:66px;height:2px;background:var(--gold)}
 .closer-text{position:relative;z-index:1;max-width:660px}
-.closer-text h2{font-family:'Magistral',sans-serif;font-size:clamp(22px,2.9vw,38px);font-weight:800;line-height:1.08;letter-spacing:-.02em;text-transform:uppercase;color:var(--tl);margin-bottom:16px}
+.closer-text h2{font-family:'Magistral',sans-serif;font-size:clamp(22px,2.9vw,38px);font-weight:600;line-height:1.08;letter-spacing:-.02em;color:var(--tl);margin-bottom:16px}
 .closer-text p{font-size:clamp(14px,1.4vw,16px);line-height:1.62;color:rgba(234,234,230,.62);max-width:530px}
 .closer-btn{position:relative;z-index:1;flex:0 0 auto;display:inline-flex;align-items:center;gap:11px;padding:20px 36px;font-family:'Golos Text',sans-serif;font-size:14px;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:#fff;border:none;border-radius:11px;cursor:pointer;background:linear-gradient(135deg,#8a45b0 0%,#6B2D8B 52%,#4f2069 100%);box-shadow:0 20px 44px rgba(107,45,139,.5);transition:transform .22s ease,box-shadow .22s ease,filter .22s ease}
 .closer-btn:hover{transform:translateY(-3px);box-shadow:0 26px 58px rgba(107,45,139,.64);filter:brightness(1.08)}
@@ -676,9 +675,10 @@ select.qfield{cursor:pointer}
 .closer-btn:hover span{transform:translateX(5px)}
 @media(max-width:760px){.closer-band{flex-direction:column;align-items:flex-start}.closer-btn{width:100%;justify-content:center}}
 /* Финальный блок с формой */
-.closer-band-form{align-items:center;gap:clamp(30px,4vw,64px)}
-.closer-band-form .closer-text{flex:1 1 340px;max-width:580px}
-.closer-stats{display:flex;gap:clamp(32px,4vw,52px);flex-wrap:wrap;margin-top:28px;font-family:'Golos Text',sans-serif;font-size:12px;letter-spacing:1.2px;text-transform:uppercase;color:rgba(234,234,230,.55)}
+.closer-band-form{align-items:center;justify-content:center;gap:clamp(30px,4vw,64px);max-width:960px;margin:0 auto}
+.closer-band-form .closer-text{flex:1 1 340px;max-width:580px;text-align:center}
+.closer-band-form .closer-text p{margin-left:auto;margin-right:auto}
+.closer-stats{display:flex;justify-content:center;gap:clamp(32px,4vw,52px);flex-wrap:wrap;margin-top:28px;font-family:'Golos Text',sans-serif;font-size:12px;letter-spacing:1.2px;text-transform:uppercase;color:rgba(234,234,230,.55)}
 .closer-stats span{display:block;font-family:'Magistral',sans-serif;font-size:clamp(40px,4.4vw,60px);font-weight:800;color:var(--gold);line-height:.92;margin-bottom:8px;letter-spacing:-.02em}
 .closer-form{position:relative;z-index:1;flex:0 0 min(400px,100%);display:flex;flex-direction:column;gap:11px}
 .closer-form .qfield{width:100%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);padding:15px 16px;color:var(--tl);font-size:13.5px;font-family:'Golos Text',sans-serif;border-radius:8px}
@@ -1754,7 +1754,6 @@ body.premium-v4 .floating-messengers b{font-size:10px!important;letter-spacing:.
 body.premium-v4 .floating-messengers .msg-ic.max{min-width:56px!important;height:24px!important;font-size:14px!important}
 body.premium-v4 .floating-messengers .msg-ic.tg{width:24px!important;height:24px!important}
 .hero-stage{position:relative;height:100vh}
-.hero-stage .hero-premium{position:fixed;top:0;left:0;right:0;margin-top:0;z-index:0}
 .hero-stage-a{will-change:opacity,transform}
 .hero-stage-a.is-hidden{pointer-events:none}
 .hero-premium-media{will-change:transform;transform-origin:center center}
@@ -1781,6 +1780,10 @@ body.home-hero-header .site-burger{color:#fff}
 .hero-premium{position:relative;min-height:100vh;height:100vh;margin-top:-82px;padding-top:82px;display:flex;align-items:stretch;overflow:hidden;background:#f5f5f3;color:#232529}
 .hero-premium-media{position:absolute;inset:0;background:#f5f5f3}
 .hero-premium-media video,.hero-premium-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;mix-blend-mode:normal;filter:none}
+.hero-fallback-img{display:none}
+body.hero-video-fallback #heroVideo{display:none}
+body.hero-video-fallback .hero-fallback-img{display:block}
+@media(max-width:760px){#heroVideo{display:none!important}.hero-fallback-img{display:block!important}}
 .hero-premium::before{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(250,250,248,.98) 0%,rgba(250,250,248,.96) 24%,rgba(250,250,248,.84) 36%,rgba(250,250,248,.52) 44%,rgba(250,250,248,.16) 51%,rgba(250,250,248,0) 57%,rgba(250,250,248,0) 100%);-webkit-mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%20100%20100%27%20preserveAspectRatio%3D%27none%27%3E%3Cdefs%3E%3Cfilter%20id%3D%27b%27%20x%3D%27-30%25%27%20y%3D%27-30%25%27%20width%3D%27160%25%27%20height%3D%27160%25%27%3E%3CfeGaussianBlur%20stdDeviation%3D%274%27%2F%3E%3C%2Ffilter%3E%3C%2Fdefs%3E%3Cpolygon%20points%3D%270%2C0%2022%2C0%2057%2C45%2057%2C100%200%2C100%27%20fill%3D%27white%27%20filter%3D%27url%28%23b%29%27%2F%3E%3C%2Fsvg%3E");mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%20100%20100%27%20preserveAspectRatio%3D%27none%27%3E%3Cdefs%3E%3Cfilter%20id%3D%27b%27%20x%3D%27-30%25%27%20y%3D%27-30%25%27%20width%3D%27160%25%27%20height%3D%27160%25%27%3E%3CfeGaussianBlur%20stdDeviation%3D%274%27%2F%3E%3C%2Ffilter%3E%3C%2Fdefs%3E%3Cpolygon%20points%3D%270%2C0%2022%2C0%2057%2C45%2057%2C100%200%2C100%27%20fill%3D%27white%27%20filter%3D%27url%28%23b%29%27%2F%3E%3C%2Fsvg%3E");opacity:var(--hero-grad-op,1);transition:opacity .4s ease}
 .hero-premium::after{content:'';position:absolute;inset:0;z-index:2;background-image:linear-gradient(rgba(107,45,139,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(107,45,139,.055) 1px,transparent 1px);background-size:72px 72px;mask-image:linear-gradient(90deg,rgba(0,0,0,.72) 0%,rgba(0,0,0,.5) 34%,rgba(0,0,0,.12) 50%,transparent 60%);pointer-events:none}
 .hero-premium-inner{position:relative;z-index:3;width:min(calc(100% - 48px),1440px);margin-left:clamp(24px,4.4vw,84px);margin-right:auto;display:flex;align-items:center;justify-content:flex-start;padding:24px 0 30px}
@@ -1795,7 +1798,7 @@ body.home-hero-header .site-burger{color:#fff}
 .hero-premium-subline .accent{color:var(--ce)}
 .hero-premium-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:14px}
 .hero-premium-actions-lowered{margin-top:52px}
-.hero-premium .btn{border-radius:2px;min-width:245px;min-height:60px;padding-left:32px;padding-right:32px;font-size:16px;font-weight:600;letter-spacing:0;text-transform:none}
+.hero-premium .btn{border-radius:10px;min-width:245px;min-height:60px;padding-left:32px;padding-right:32px;font-size:16px;font-weight:600;letter-spacing:0;text-transform:none}
 .hero-premium .btn-light{background:linear-gradient(110deg,#4d1c66 0%,#773494 24%,#b35bce 48%,#71318e 72%,#4d1c66 100%);background-size:220% 100%;color:#fff;border-color:transparent;box-shadow:0 14px 34px rgba(107,45,139,.28);animation:heroButtonFlow 5.5s ease-in-out infinite}
 .hero-premium .btn-light:hover{box-shadow:0 18px 40px rgba(107,45,139,.4);filter:brightness(1.07)}
 .hero-premium .btn-ghost{border:1px solid rgba(255,255,255,.5);color:#34383c;background:linear-gradient(110deg,#747b82 0%,#aeb4b9 25%,#e4e6e8 50%,#aab0b5 75%,#747b82 100%);background-size:220% 100%;box-shadow:0 12px 30px rgba(35,37,41,.16);animation:heroButtonFlow 6.5s ease-in-out infinite reverse}
@@ -1871,6 +1874,71 @@ body.premium-v4 .equipment-actions{margin-top:24px}
 
 /* === V31 interactive equipment warehouse === */
 #equipment.equipment{padding:0!important;background:#e8eaeb!important;overflow:hidden;position:relative}
+.project-support{--ps-bg:#F4F5F7;--ps-bg2:#ECEFF2;--ps-graphite:#20242A;--ps-gray:#565D66;--ps-purple:#65217E;--ps-purple-dark:#48105F;--ps-purple-light:#8B4AA3;--ps-line:rgba(38,44,52,.14);--ps-title-light:#555C65;--ps-desc:#343A42;--ps-statement:#5F237A;--ps-icon:#333B46;--ps-caption:#3F4650;--ps-bottom-text:#292F38;position:relative;width:100%;overflow:hidden;background:var(--ps-bg)}
+.project-support__background{position:absolute;inset:0;z-index:0;background:linear-gradient(90deg,var(--ps-bg) 0%,var(--ps-bg) 46%,var(--ps-bg2) 62%,var(--ps-bg2) 100%)}
+.project-support__container{position:relative;z-index:2;display:flex;align-items:stretch;min-height:clamp(600px,34.8vw,713px)}
+.project-support__content{position:relative;z-index:3;flex:0 0 58%;max-width:58%;box-sizing:border-box;display:flex;flex-direction:column;justify-content:center;padding:clamp(48px,4vw,78px) clamp(40px,4.2vw,86px)}
+.project-support__header{margin:0}
+.project-support__title{font-family:'Magistral',sans-serif;margin:0 0 clamp(20px,2vw,28px);text-transform:uppercase}
+.project-support__title-bold{display:block;font-weight:700;font-size:clamp(44px,2.85vw,58px);line-height:1;letter-spacing:-.025em;color:var(--ps-graphite);white-space:nowrap}
+.project-support__title-regular{display:block;font-weight:400;font-size:clamp(40px,2.55vw,52px);line-height:1.02;letter-spacing:-.02em;color:var(--ps-title-light);margin-top:.1em}
+.project-support__desc{font-family:'Golos Text',sans-serif;font-weight:500;font-size:clamp(20px,1.25vw,25px);line-height:1.5;color:var(--ps-desc);max-width:800px;margin:0 0 clamp(24px,2.6vw,34px)}
+.project-support__desc strong{font-weight:600;color:inherit}
+.project-support__statement{font-family:'Golos Text',sans-serif;font-weight:600;font-size:clamp(22px,1.3vw,27px);line-height:1.25;letter-spacing:.025em;text-transform:uppercase;color:var(--ps-statement);margin:0 0 clamp(32px,3.2vw,42px)}
+.project-support__stages{display:flex;list-style:none;margin:0 0 clamp(28px,3vw,34px);padding:0;max-width:780px}
+.project-support__stage{flex:1 1 0;display:flex;flex-direction:column;align-items:flex-start;padding:0 18px;border-left:1px solid var(--ps-line);min-height:80px}
+.project-support__stage:first-child{padding-left:0;border-left:0}
+.project-support__stage svg{width:clamp(42px,3vw,50px);height:clamp(42px,3vw,50px);fill:none;stroke:var(--ps-icon);stroke-width:1.7;margin-bottom:14px}
+.project-support__stage svg .ps-accent{stroke:var(--ps-purple)}
+.project-support__stage span{font-family:'Golos Text',sans-serif;font-weight:600;font-size:14px;letter-spacing:.045em;text-transform:uppercase;color:var(--ps-caption);line-height:1.3}
+.project-support__stage--warranty span{display:flex;flex-direction:column;gap:2px}
+.project-support__stage--warranty .ps-years{color:var(--ps-purple)}
+.project-support__stage--warranty .ps-label{color:var(--ps-caption)}
+.project-support__rule{border:0;border-top:1px solid var(--ps-line);margin:0 0 clamp(28px,3vw,34px);max-width:780px}
+.project-support__bottom{display:flex;align-items:baseline;flex-wrap:wrap;gap:clamp(24px,3vw,44px)}
+.project-support__experience{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap}
+.project-support__experience b{font-family:'Magistral',sans-serif;font-weight:700;font-size:clamp(54px,3.6vw,74px);line-height:.9;letter-spacing:-.025em;background:linear-gradient(100deg,var(--ps-purple),var(--ps-graphite));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:var(--ps-purple)}
+.project-support__experience span{font-family:'Golos Text',sans-serif;font-weight:500;font-size:clamp(22px,1.5vw,31px);line-height:1.2;color:var(--ps-bottom-text)}
+.project-support__cta{display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;border:0;border-radius:10px;min-width:220px;height:56px;padding:0 32px;font-family:'Golos Text',sans-serif;font-weight:700;font-size:12px;letter-spacing:.8px;text-transform:uppercase;color:#fff;background:linear-gradient(135deg,#8a45b0 0%,#6B2D8B 52%,#4f2069 100%);box-shadow:0 10px 26px rgba(107,45,139,.42);transition:transform .18s ease,box-shadow .18s ease,filter .18s ease}
+.project-support__cta:hover{filter:brightness(1.09);transform:translateY(-2px);box-shadow:0 14px 34px rgba(107,45,139,.58)}
+.project-support__cta:focus-visible{outline:2px solid var(--ps-purple-light);outline-offset:3px}
+.project-support__visual{position:relative;z-index:1;flex:0 0 42%;max-width:42%;overflow:hidden}
+.project-support__visual img{width:100%;height:100%;object-fit:cover;object-position:right center;display:block;-webkit-mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.5) 14%,#000 30%);mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.5) 14%,#000 30%)}
+@media(min-width:900px) and (max-width:1279px){
+.project-support__container{min-height:0}
+.project-support__content{padding:clamp(40px,5vw,60px) clamp(28px,4vw,48px)}
+.project-support__title-bold{font-size:clamp(32px,4vw,46px)}
+.project-support__title-regular{font-size:clamp(28px,3.6vw,42px)}
+.project-support__stages{flex-wrap:wrap;max-width:none}
+.project-support__stage{flex:0 0 25%;max-width:25%;margin-bottom:20px;padding-right:14px}
+.project-support__stage:nth-child(4n+1){border-left:0;padding-left:0}
+.project-support__rule{max-width:none}
+.project-support__bottom{flex-direction:column;align-items:flex-start}
+}
+@media(max-width:900px){
+.project-support__container{flex-direction:column;min-height:0}
+.project-support__content{display:contents}
+.project-support__header{order:1;padding:40px 24px 0}
+.project-support__title-bold{white-space:normal;font-size:clamp(30px,6.4vw,42px)}
+.project-support__title-regular{font-size:clamp(26px,5.6vw,38px)}
+.project-support__visual{order:2;flex:1 1 auto;max-width:none;height:clamp(220px,52vw,360px)}
+.project-support__visual img{mask-image:none;-webkit-mask-image:none;object-position:center}
+.project-support__statement{order:3;padding:28px 24px 0;margin-bottom:24px}
+.project-support__stages{order:4;flex-wrap:wrap;max-width:none;padding:0 24px 0}
+.project-support__stage{flex:0 0 50%;max-width:50%;border-left:0;padding:0 0 18px;margin-bottom:10px}
+.project-support__rule{order:5;max-width:none;margin-left:24px;margin-right:24px}
+.project-support__bottom{order:6;flex-direction:column;align-items:flex-start;padding:0 24px 32px}
+.project-support__cta{width:100%;min-width:0}
+}
+@media(max-width:640px){
+.project-support__content{padding:32px 20px 28px}
+.project-support__title-bold{font-size:clamp(28px,9vw,38px)}
+.project-support__title-regular{font-size:clamp(24px,7.6vw,32px)}
+.project-support__desc{font-size:16px}
+.project-support__stage{flex:0 0 33.33%;max-width:33.33%}
+.project-support__experience b{font-size:clamp(40px,13vw,54px)}
+}
+@media(prefers-reduced-motion:reduce){.project-support *{transition:none!important}}
 .equipment-warehouse-intro{padding:72px 0 48px}
 .reveal-up{opacity:0;transform:translateY(56px);transition:opacity .8s cubic-bezier(.16,.8,.24,1),transform .8s cubic-bezier(.16,.8,.24,1)}
 .reveal-up.is-visible{opacity:1;transform:translateY(0)}
@@ -1947,7 +2015,8 @@ body.hide-hdr-cta .hdr .hdr-cta{display:none}
 <div class="hero-stage" id="heroStage">
 <section class="hero-premium">
 <div class="hero-premium-media">
-<video autoplay="" loop="" muted="" playsinline=""><source src="mehanit-main-banner.mp4" type="video/mp4"/></video>
+<video id="heroVideo" autoplay="" loop="" muted="" playsinline=""><source src="mehanit-main-banner.mp4" type="video/mp4"/></video>
+<img class="hero-fallback-img" src="hero-fallback.jpg" alt="Инженеры Механит у токарного станка с ЧПУ"/>
 </div>
 <div class="hero-premium-inner hero-stage-a">
 <div class="hero-premium-copy">
@@ -1960,6 +2029,35 @@ body.hide-hdr-cta .hdr .hdr-cta{display:none}
 <div class="page-content">
 <!-- EQUIPMENT OVERVIEW (warehouse) -->
 <section class="equipment" id="equipment">
+<section class="project-support">
+<div class="project-support__background" aria-hidden="true"></div>
+<div class="project-support__container">
+<div class="project-support__content">
+<header class="project-support__header">
+<h2 class="project-support__title"><span class="project-support__title-bold">Полное сопровождение проекта —</span><span class="project-support__title-regular">до стабильного запуска в производство.</span></h2>
+<p class="project-support__desc">Подбираем оборудование под вашу <strong>Деталь</strong>, <strong>Технологию</strong><br/>и <strong>Требования</strong> к <strong>Производительности</strong>.</p>
+</header>
+<p class="project-support__statement">Одна команда на всех этапах проекта!</p>
+<ul class="project-support__stages">
+<li class="project-support__stage"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="7"/><circle class="ps-accent" cx="12" cy="12" r="1.6" fill="currentColor" stroke="none"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg><span>Подбор</span></li>
+<li class="project-support__stage"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="9" width="12" height="8"/><path d="M14 12h4l4 3v2h-2"/><circle cx="7" cy="19" r="1.8"/><circle cx="17.5" cy="19" r="1.8"/></svg><span>Поставка</span></li>
+<li class="project-support__stage"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 4.5a3.5 3.5 0 0 0-4.79 4.03L4 15.24V20h4.76l6.71-6.71a3.5 3.5 0 0 0 4.03-4.79l-2.6 2.6-2.1-2.1 2.6-2.6Z"/></svg><span>ПНР</span></li>
+<li class="project-support__stage"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5 12 3l9 3.5-9 3.5-9-3.5Z"/><path d="M7 8.3V16c0 1 2.2 2.5 5 2.5s5-1.5 5-2.5V8.3M20 7v6.5"/></svg><span>Обучение</span></li>
+<li class="project-support__stage"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path class="ps-accent" d="M12 3v2.2M12 18.8V21M21 12h-2.2M5.2 12H3M18.4 5.6l-1.55 1.55M7.15 16.85l-1.55 1.55M18.4 18.4l-1.55-1.55M7.15 7.15 5.6 5.6"/></svg><span>Сервис</span></li>
+<li class="project-support__stage"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3v6M3 6h6"/><path d="m9 9 10.5 10.5c.6.6.6 1.5 0 2.1-.6.6-1.5.6-2.1 0L6.9 11.1"/><path d="M14 14 19 9"/></svg><span>Инструмент</span></li>
+<li class="project-support__stage project-support__stage--warranty"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 5.5V11c0 4.5 2.8 7.7 7 9 4.2-1.3 7-4.5 7-9V5.5L12 3Z"/><path class="ps-accent" d="m9 12 2 2 4-4"/></svg><span><span class="ps-years">2 года</span><span class="ps-label">гарантии</span></span></li>
+</ul>
+<hr class="project-support__rule"/>
+<div class="project-support__bottom">
+<div class="project-support__experience"><b>&gt;20 лет</b><span>оснащаем промышленные предприятия России</span></div>
+<a class="project-support__cta" href="#quiz" onclick="event.preventDefault();openLeadModal()">Оставить запрос</a>
+</div>
+</div>
+<div class="project-support__visual">
+<img src="project-support-machine.jpg" alt="5-осевой обрабатывающий центр с обработанной деталью-фланцем в цехе Механит" loading="lazy"/>
+</div>
+</div>
+</section>
 <div class="wrap equipment-warehouse-intro reveal-up"><div class="eyebrow">Оборудование</div><div class="h2">Станки для металлообработки<br/><span class="lt">Основные направления поставки</span></div></div>
 <div class="equipment-cats reveal-up">
 <div class="equipment-scene">
@@ -1979,86 +2077,6 @@ body.hide-hdr-cta .hdr .hdr-cta{display:none}
 </div>
 </div>
 </section>
-<!-- ENGINEERING SYSTEM (6 steps) -->
-<section class="system proc-section" id="system">
-<div class="wrap">
-<div class="proc-head-row">
-<div class="proc-intro reveal-up reveal-x">
-<div class="eyebrow">Как мы работаем</div>
-<h2 class="proc-title">Этапы сотрудничества</h2>
-<p class="proc-sub">Шесть шагов — от вашего чертежа до первой детали на площадке. Нажмите на этап, чтобы увидеть, что происходит внутри.</p>
-</div>
-<div class="proc-video reveal-up" aria-hidden="true">
-<video autoplay="" loop="" muted="" playsinline="" preload="metadata"><source src="stages-video.mp4" type="video/mp4"/></video>
-</div>
-</div>
-<div class="stage-grid">
-<button class="stage-card reveal-up" type="button" onclick="openProc(0)"><span class="stage-ghost">01</span><span class="stage-tag">Этап 01</span><h3>Чертёж и задача</h3><p>Принимаем чертёж, требования, материал и объём партии.</p><span class="stage-more">Подробнее →</span></button>
-<button class="stage-card reveal-up" type="button" onclick="openProc(1)"><span class="stage-ghost">02</span><span class="stage-tag">Этап 02</span><h3>Технология обработки</h3><p>Прорабатываем маршрут обработки под конкретную деталь.</p><span class="stage-more">Подробнее →</span></button>
-<button class="stage-card reveal-up" type="button" onclick="openProc(2)"><span class="stage-ghost">03</span><span class="stage-tag">Этап 03</span><h3>Подбор оборудования</h3><p>Сравниваем станки по способности выполнить именно вашу деталь.</p><span class="stage-more">Подробнее →</span></button>
-<button class="stage-card reveal-up" type="button" onclick="openProc(3)"><span class="stage-ghost">04</span><span class="stage-tag">Этап 04</span><h3>КП, лизинг и сроки</h3><p>Фиксируем комплектацию, цену, сроки и лизинг. Есть калькулятор.</p><span class="stage-more">Подробнее →</span></button>
-<button class="stage-card reveal-up" type="button" onclick="openProc(4)"><span class="stage-ghost">05</span><span class="stage-tag">Этап 05</span><h3>Поставка и пусконаладка</h3><p>Доставляем, монтируем и запускаем станок на площадке.</p><span class="stage-more">Подробнее →</span></button>
-<button class="stage-card reveal-up" type="button" onclick="openProc(5)"><span class="stage-ghost">06</span><span class="stage-tag">Этап 06</span><h3>Первая партия и сервис</h3><p>Доводим до серии и остаёмся на связи по гарантии.</p><span class="stage-more">Подробнее →</span></button>
-</div>
-</div>
-</section>
-<div class="lead-modal" id="procModal" aria-hidden="true">
-<div class="lead-dialog proc-dialog" role="dialog" aria-modal="true">
-<button class="lead-close" onclick="closeProc()" aria-label="Закрыть">×</button>
-<div class="lead-content" id="procBody"></div>
-</div></div>
-<script>
-(function(){
-var S=[
-{title:'Деталь и задача',cta:'Передать задачу технологу',lead:'Первый шаг инженерной системы Механит — точная постановка задачи. Мы разбираем деталь так, как её будет обрабатывать конкретный станок, а не как позицию в каталоге.',result:'Сформированное техническое задание, готовое к разработке маршрута обработки.',cols:[
-{h:'Что предоставляет клиент',items:['Чертёж детали в PDF, DWG или STEP','Материал и его состояние — прокат, поковка, отливка','Допуски, посадки и требуемая шероховатость','Размер партии — единично, мелкая или крупная серия']},
-{h:'Что уточняем',items:['Текущие ограничения производства и парк оборудования','Какие операции уже закрыты, а какие нужно добавить','Требуемые сроки и бюджет проекта','Есть ли аналогичная деталь или техпроцесс уже в работе']},
-{h:'Что делает Механит',items:['Принимает и разбирает техническое задание','Запрашивает у технолога уточнения при нехватке данных','Оценивает реализуемость и сложность обработки','Формирует основу для разработки технологии']}]},
-{title:'Технология обработки',cta:'Обсудить технологию',lead:'Технолог Механит прорабатывает маршрут обработки под конкретную деталь — прежде чем предлагать какой-либо станок.',result:'Технологическая карта — основа для подбора конкретной модели оборудования.',cols:[
-{h:'Маршрут обработки',items:['Число операций и переходов','Последовательность черновой и чистовой обработки','Контрольные точки и методы измерения','Требования к точности на каждом переходе']},
-{h:'Инструмент и оснастка',items:['Подбор режущего инструмента под материал','Патроны, тиски и специальные приспособления','Базирование заготовки и точки крепления','Расчёт режимов резания']},
-{h:'Требования к станку',items:['Необходимое число осей и тип обработки','Требуемая мощность и жёсткость','Рабочая зона и грузоподъёмность стола','Класс точности станка']}]},
-{title:'Подбор оборудования',cta:'Запросить конфигурации',lead:'Под сформированные технологические требования сравниваем конкретные модели станков — не по каталогу, а по способности выполнить именно эту деталь.',result:'2–3 согласованные конфигурации на выбор с инженерным обоснованием.',cols:[
-{h:'Оси и компоновка',items:['3, 4 или 5-осевая обработка','Токарная, фрезерная или комплексная группа','Расположение шпинделя и стола','Наличие противошпинделя и приводного инструмента']},
-{h:'Характеристики',items:['Обороты, момент и конус шпинделя','Система ЧПУ — Fanuc, Siemens, Fagor и другие','Достижимая точность и повторяемость','Производительность на партии']},
-{h:'Эксплуатация',items:['Размер и грузоподъёмность рабочего стола','Ресурс узлов и ремонтопригодность','Доступность сервиса и запчастей в РФ','Наличие на складе или срок изготовления']}]},
-{title:'КП, лизинг и сроки',cta:'Запросить точный расчёт',calc:true,lead:'Фиксируем итоговую комплектацию и коммерческие условия — прежде чем оборудование поедет к вам на площадку. Прикиньте ежемесячный платёж в калькуляторе ниже.',result:'Подписанное КП и утверждённый график поставки.',cols:[
-{h:'Коммерческое предложение',items:['Техническое обоснование выбранной конфигурации','Состав комплектации и дополнительных опций','Условия и сроки поставки','Состав работ до запуска — доставка, ПНР, обучение']},
-{h:'Лизинговая программа',items:['Расчёт ежемесячного платежа под ваш бюджет','Партнёры — Сбербанк Лизинг, ВТБ Лизинг, Альфа-Лизинг, ГТЛК','Гибкий аванс и срок от 12 до 36 месяцев','Итоговые условия согласуются с лизинговой компанией']},
-{h:'Фиксация сроков',items:['График производства или отгрузки со склада','Логистика и таможенное оформление при поставке','Дата монтажа и пусконаладки','Ответственный менеджер на весь проект']}]},
-{title:'Поставка и пусконаладка',cta:'Обсудить сроки поставки',lead:'Физическая поставка оборудования и запуск на площадке клиента — под контролем одного ответственного интегратора.',result:'Станок принят, показал контрольный результат по первой детали, персонал обучен.',cols:[
-{h:'Доставка',items:['Транспортировка и такелажные работы','Заезд в цех и позиционирование станка','Подключение к электропитанию и коммуникациям','Проверка комплектации при получении']},
-{h:'Пусконаладка',items:['Монтаж и геометрическая выверка станка','Настройка ЧПУ и параметров','Пробная обработка первой детали на месте','Контроль соответствия чертежу']},
-{h:'Обучение персонала',items:['Обучение операторов работе со станком','Обучение наладчиков базовым переналадкам','Передача документации и программ обработки','Рекомендации по обслуживанию']}]},
-{title:'Первая партия и сопровождение',cta:'Обсудить сервис и гарантию',lead:'Доводим решение до стабильного серийного результата и остаёмся на связи после запуска — гарантийно и постгарантийно.',result:'Повторяемое серийное производство детали на вашем производстве.',cols:[
-{h:'Первая партия',items:['Сопровождение обработки первой производственной партии','Устранение отклонений техпроцесса','Финальная приёмка по контрольным параметрам','Передача техпроцесса в серийную эксплуатацию']},
-{h:'Гарантия',items:['24 месяца на оборудование','Условия зафиксированы в договоре поставки','Диагностика и устранение неисправностей','Поставка гарантийных запчастей']},
-{h:'Постгарантийный сервис',items:['Диагностика и ремонт по заявке','Поставка запчастей и расходных материалов','Реакция сервисной службы — 24 часа','Плановое техническое обслуживание']}]}
-];
-var fmt=function(n){return Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g,' ');};
-function calcHTML(){return '<div class="proc-calc"><div class="proc-calc-grid"><div>'+
-'<div class="pc-row"><label>Стоимость оборудования: <b id="pcPriceV"></b></label><input id="pcPrice" type="range" min="1000000" max="40000000" step="500000" value="9000000"></div>'+
-'<div class="pc-row"><label>Аванс: <b id="pcAdvV"></b></label><input id="pcAdv" type="range" min="0" max="49" step="1" value="20"></div>'+
-'<div class="pc-row"><label>Срок лизинга: <b id="pcTermV"></b></label><input id="pcTerm" type="range" min="12" max="60" step="6" value="36"></div>'+
-'</div><div class="pc-out"><small>Ежемесячный платёж</small><div class="pc-pay" id="pcPay"></div><div class="pc-note" id="pcNote"></div></div></div>'+
-'<div class="pc-note" style="margin-top:16px">Расчёт ориентировочный. Точные условия зависят от банка-партнёра и финансового профиля предприятия.</div></div>';}
-function bindCalc(){var p=document.getElementById('pcPrice'),a=document.getElementById('pcAdv'),t=document.getElementById('pcTerm');if(!p)return;
-function upd(){var price=+p.value,adv=+a.value,term=+t.value,principal=price*(1-adv/100),r=0.16/12;var pay=principal*r/(1-Math.pow(1+r,-term));
-document.getElementById('pcPriceV').textContent=fmt(price)+' ₽';document.getElementById('pcAdvV').textContent=adv+'%';document.getElementById('pcTermV').textContent=term+' мес.';
-document.getElementById('pcPay').textContent=fmt(pay)+' ₽';document.getElementById('pcNote').textContent='при авансе '+fmt(price*adv/100)+' ₽ и сроке '+term+' мес.';}
-[p,a,t].forEach(function(el){el.addEventListener('input',upd);});upd();}
-window.openProc=function(i){var s=S[i];var h='<div class="proc-modal-tag">Этап 0'+(i+1)+' · Инженерная система</div>';
-h+='<div class="proc-modal-title">'+s.title+'</div><div class="proc-modal-lead">'+s.lead+'</div>';
-if(s.calc)h+=calcHTML();
-h+='<div class="proc-modal-cols">';s.cols.forEach(function(c){h+='<div class="proc-modal-col"><h4>'+c.h+'</h4><ul>'+c.items.map(function(x){return '<li>'+x+'</li>';}).join('')+'</ul></div>';});h+='</div>';
-h+='<div class="proc-modal-result"><div><span>Результат этапа</span><b>'+s.result+'</b></div><button class="btn btn-ce" type="button" onclick="closeProc();if(window.openLeadModal)openLeadModal();">'+s.cta+'</button></div>';
-document.getElementById('procBody').innerHTML=h;if(s.calc)bindCalc();
-var m=document.getElementById('procModal');m.classList.add('is-open');m.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';};
-window.closeProc=function(){var m=document.getElementById('procModal');m.classList.remove('is-open');m.setAttribute('aria-hidden','true');document.body.style.overflow='';};
-document.getElementById('procModal').addEventListener('click',function(e){if(e.target===this)closeProc();});
-document.addEventListener('keydown',function(e){if(e.key==='Escape')closeProc();});
-})();
-</script>
 <!-- SOLUTIONS BY INDUSTRY -->
 <section class="equipment solutions-block" id="solutions">
 <div class="wrap equipment-warehouse-intro reveal-up"><div class="eyebrow">Решения</div><div class="h2">Готовые технологические решения<br/><span class="lt">Каталог по отраслям производства</span></div></div>
@@ -2080,7 +2098,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')closeProc();
 </section>
 <!-- TRUST -->
 <section class="trust" id="clients">
-<div class="wrap"><div class="trust-inner" style="text-align:center;justify-items:center;gap:.7rem">
+<div class="wrap"><div class="trust-inner" style="gap:.7rem">
 <div class="eyebrow" style="color:var(--ce)">Клиенты</div>
 <div class="h2" style="letter-spacing:-.02em">НАМ доверяют наши клиенты</div>
 </div></div>
@@ -2107,8 +2125,8 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')closeProc();
 <h2>Нужен инженерный разбор или выезд специалиста?</h2>
 <p>Опишите деталь, оборудование или проблему — проект-менеджер подключит технолога или сервисного инженера.</p>
 <div class="closer-stats">
-<div><span>2ч</span>Ответ технолога</div>
-<div><span>0₽</span>Подбор и расчёт</div>
+<div><span>2 часа</span>Ответ технолога</div>
+<div><span>0 руб</span>Подбор и расчёт</div>
 </div>
 </div>
 <form class="closer-form" onsubmit="return false">
@@ -3092,73 +3110,23 @@ renderToolBrands('turning');
 (function(){
   var stage=document.getElementById('heroStage');
   if(!stage){return;}
-  var stageA=stage.querySelector('.hero-stage-a');
-  var stageB=stage.querySelector('.hero-stage-b');
-  var stageC=stage.querySelector('.hero-stage-c');
-  var stageBInner=stage.querySelector('.hero-stage-b-inner');
-  var stageCInner=stage.querySelector('.hero-stage-c-inner');
-  var media=stage.querySelector('.hero-premium-media');
-  function getHeader(){return document.querySelector('.hdr')||document.querySelector('.site-header');}
-  var reduceMotion=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var t1=0.22,t2=0.58,t3=0.72,fade=0.08,maxScale=1.16;
-  function clamp01(v){return Math.max(0,Math.min(1,v));}
-  function smoothstep(edge0,edge1,x){
-    var t=clamp01((x-edge0)/(edge1-edge0));
-    return t*t*(3-2*t);
+  stage.style.setProperty('--hero-grad-op','1');
+})();
+(function(){
+  var video=document.getElementById('heroVideo');
+  if(!video){return;}
+  var resolved=false;
+  function useFallback(){
+    if(resolved){return;}
+    resolved=true;
+    document.body.classList.add('hero-video-fallback');
   }
-  function lerp(a,b,t){return a+(b-a)*t;}
-  var ticking=false;
-  function update(){
-    ticking=false;
-    var rect=stage.getBoundingClientRect();
-    var scrollable=rect.height-window.innerHeight;
-    var progress=scrollable>0?(-rect.top)/scrollable:0;
-    progress=clamp01(progress);
-    if(reduceMotion){
-      var h0=getHeader();
-      if(h0){h0.style.opacity='';}
-      document.body.classList.remove('hero-nav-hidden');
-      return;
-    }
-    var aOut=smoothstep(0,t1,progress);
-    var opacityA=1-aOut;
-    if(stageA){
-      stageA.style.opacity=String(opacityA);
-      stageA.style.transform='translateY('+(-18*aOut)+'px)';
-      stageA.classList.toggle('is-hidden',opacityA<0.05);
-    }
-    stage.style.setProperty('--hero-grad-op',String(opacityA));
-    var bIn=smoothstep(t1,t1+fade,progress);
-    var bOut=smoothstep(t2-fade,t2,progress);
-    var opacityB=Math.max(0,bIn-bOut);
-    if(stageB){stageB.style.opacity=String(opacityB);}
-    if(stageBInner){
-      var scaleB=lerp(0.82,1,bIn);
-      stageBInner.style.transform='scale('+scaleB+')';
-    }
-    var cIn=smoothstep(t2,t2+fade,progress);
-    if(stageC){stageC.style.opacity=String(cIn);}
-    if(stageCInner){
-      var scaleC=lerp(0.82,1,cIn);
-      stageCInner.style.transform='scale('+scaleC+')';
-    }
-    if(media){
-      var scaleV=lerp(1,maxScale,smoothstep(0,t2,progress));
-      media.style.transform='scale('+scaleV+')';
-    }
-    var navOut=smoothstep(t1,t1+fade,progress);
-    var navIn=smoothstep(t3,t3+fade,progress);
-    var navOpacity=clamp01(1-navOut+navIn);
-    var header=getHeader();
-    if(header){header.style.opacity=String(navOpacity);}
-    document.body.classList.toggle('hero-nav-hidden',navOpacity<0.05);
-  }
-  function onScroll(){
-    if(!ticking){ticking=true;window.requestAnimationFrame(update);}
-  }
-  window.addEventListener('scroll',onScroll,{passive:true});
-  window.addEventListener('resize',onScroll);
-  update();
+  function videoReady(){resolved=true;}
+  video.addEventListener('playing',videoReady,{once:true});
+  video.addEventListener('error',useFallback);
+  setTimeout(function(){
+    if(!resolved&&video.readyState<3){useFallback();}
+  },4000);
 })();
 (function(){
   var items=document.querySelectorAll('.reveal-up');
