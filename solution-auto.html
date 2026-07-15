@@ -1589,7 +1589,25 @@ footer{background:var(--bm);color:rgba(234,234,230,.55);padding:3rem 0 2rem;bord
   line-height:1.5;
   max-width:760px;
 }
-\n/* === V21 shared subpage polish === */\n.crumbbar{background:rgba(245,245,243,.86)!important;border-bottom:1px solid rgba(26,26,26,.07)!important;box-shadow:0 10px 24px rgba(26,26,26,.045)!important}.crumbbar::before{opacity:.28!important}.crumbs{color:#9aa0a6!important;font-weight:500!important}.crumbs .current{color:#7f858b!important}.equipment-page-hero{padding-bottom:24px!important}.equipment-subsection{padding-top:24px!important}.equipment-subcard-page{padding-top:22px!important}.equipment-subcard-page::before{display:none!important}.equipment-subcard-page small{display:none!important}.floating-cta-rail{display:none!important}.floating-action-panel{position:fixed;right:22px;bottom:104px;z-index:121;display:grid;gap:8px;width:250px}.floating-action-panel .btn{width:100%;justify-content:center;min-height:44px;font-size:10px;padding:0 16px;box-shadow:0 16px 42px rgba(26,26,26,.12)}.floating-messengers{position:fixed;right:22px;bottom:22px;z-index:121;display:flex;align-items:center;gap:10px;padding:12px 14px;background:rgba(255,255,255,.88);border:1px solid rgba(26,26,26,.08);box-shadow:0 22px 58px rgba(26,26,26,.14);backdrop-filter:blur(18px);clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,12px 100%,0 calc(100% - 12px))}.floating-messengers small{font-family:'Golos Text',monospace;font-size:8px;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted)}.floating-messengers b{font-family:'Magistral',sans-serif;font-size:12px;color:var(--bm);white-space:nowrap}@media(max-width:680px){.floating-action-panel,.floating-messengers{left:16px;right:16px;width:auto}.floating-action-panel{bottom:96px}}\n\n/* === V22 breadcrumb color lock === */\n.crumbbar{background:rgba(246,246,244,.78)!important;border-bottom:1px solid rgba(26,26,26,.055)!important;box-shadow:none!important}.crumbbar::before{opacity:.18!important}.crumbs,.crumbs a,.crumbs span,.crumbs .current,.crumb-sep,.crumb-action,.crumb-top{color:#b1b5b9!important}.crumbs a:hover,.crumb-action:hover,.crumb-top:hover{color:#8f969c!important}.crumb-action{border-color:rgba(177,181,185,.34)!important;background:rgba(255,255,255,.58)!important;box-shadow:none!important}.crumb-action:hover{background:rgba(255,255,255,.72)!important;transform:translateX(-2px)!important}\n</style>
+\n/* === V21 shared subpage polish === */\n.crumbbar{background:rgba(245,245,243,.86)!important;border-bottom:1px solid rgba(26,26,26,.07)!important;box-shadow:0 10px 24px rgba(26,26,26,.045)!important}.crumbbar::before{opacity:.28!important}.crumbs{color:#9aa0a6!important;font-weight:500!important}.crumbs .current{color:#7f858b!important}.equipment-page-hero{padding-bottom:24px!important}.equipment-subsection{padding-top:24px!important}.equipment-subcard-page{padding-top:22px!important}.equipment-subcard-page::before{display:none!important}.equipment-subcard-page small{display:none!important}.floating-cta-rail{display:none!important}.floating-action-panel{position:fixed;right:22px;bottom:104px;z-index:121;display:grid;gap:8px;width:250px}.floating-action-panel .btn{width:100%;justify-content:center;min-height:44px;font-size:10px;padding:0 16px;box-shadow:0 16px 42px rgba(26,26,26,.12)}.floating-messengers{position:fixed;right:22px;bottom:22px;z-index:121;display:flex;align-items:center;gap:10px;padding:12px 14px;background:rgba(255,255,255,.88);border:1px solid rgba(26,26,26,.08);box-shadow:0 22px 58px rgba(26,26,26,.14);backdrop-filter:blur(18px);clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,12px 100%,0 calc(100% - 12px))}.floating-messengers small{font-family:'Golos Text',monospace;font-size:8px;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted)}.floating-messengers b{font-family:'Magistral',sans-serif;font-size:12px;color:var(--bm);white-space:nowrap}@media(max-width:680px){.floating-action-panel,.floating-messengers{left:16px;right:16px;width:auto}.floating-action-panel{bottom:96px}}\n\n/* === V22 breadcrumb color lock === */\n.crumbbar{background:rgba(246,246,244,.78)!important;border-bottom:1px solid rgba(26,26,26,.055)!important;box-shadow:none!important}.crumbbar::before{opacity:.18!important}.crumbs,.crumbs a,.crumbs span,.crumbs .current,.crumb-sep,.crumb-action,.crumb-top{color:#b1b5b9!important}.crumbs a:hover,.crumb-action:hover,.crumb-top:hover{color:#8f969c!important}.crumb-action{border-color:rgba(177,181,185,.34)!important;background:rgba(255,255,255,.58)!important;box-shadow:none!important}.crumb-action:hover{background:rgba(255,255,255,.72)!important;transform:translateX(-2px)!important}
+.sol-part-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(26px,2.6vw,40px);margin-top:26px}
+.sol-part{display:flex;flex-direction:column}
+.sol-part-media{position:relative;z-index:2;height:clamp(140px,12vw,192px);display:flex;align-items:flex-end;justify-content:center;margin-bottom:-34px;pointer-events:none}
+.sol-part-media img{max-width:80%;max-height:100%;width:auto;height:auto;object-fit:contain;filter:drop-shadow(0 16px 18px rgba(26,26,26,.22));transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+.sol-part:hover .sol-part-media img{transform:scale(1.06)}
+.sol-part-info{position:relative;z-index:1;flex:1;display:flex;flex-direction:column;gap:13px;background:radial-gradient(ellipse 92% 72% at 12% 130%,rgba(122,60,160,.15),transparent 60%),rgba(255,255,255,.62);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.7);border-radius:18px;padding:46px 22px 22px;box-shadow:0 22px 50px rgba(26,26,26,.09)}
+.sol-part-head{display:flex;align-items:baseline;gap:11px}
+.sol-part-num{font-family:'Magistral',sans-serif;font-weight:800;font-size:19px;color:var(--ce);letter-spacing:-.02em}
+.sol-part-info h3{font-family:'Magistral',sans-serif;font-size:19px;font-weight:600;line-height:1.1;letter-spacing:-.01em;color:#1a1a1a;margin:0}
+.sol-ops{font-size:12.5px;line-height:1.55;color:var(--mid)}
+.sol-ops b{display:block;font-family:'Golos Text',sans-serif;font-size:9.5px;font-weight:700;letter-spacing:1.3px;text-transform:uppercase;color:var(--gold);margin-bottom:5px}
+.sol-machines-label{font-family:'Golos Text',sans-serif;font-size:9.5px;font-weight:700;letter-spacing:1.3px;text-transform:uppercase;color:var(--ce);display:block;margin-bottom:8px}
+.sol-chips{display:flex;flex-wrap:wrap;gap:7px}
+.sol-chip{font-family:'Golos Text',sans-serif;font-size:11px;line-height:1.2;padding:7px 11px;border-radius:8px;border:1px solid rgba(107,45,139,.26);color:#5b246f;background:rgba(107,45,139,.05);text-decoration:none;transition:background .16s,color .16s,border-color .16s,transform .16s}
+.sol-chip:hover{background:linear-gradient(135deg,#8a45b0,#6B2D8B);color:#fff;border-color:transparent;transform:translateY(-1px)}
+@media(max-width:1080px){.sol-part-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:640px){.sol-part-grid{grid-template-columns:1fr}}
+</style>
 <link rel="stylesheet" href="site-shell.css"/>
 </head>
 <body class="premium-v3">
@@ -1600,108 +1618,80 @@ footer{background:var(--bm);color:rgba(234,234,230,.55);padding:3rem 0 2rem;bord
 <div class="wrap">
 <div class="sec-head">
 <div>
-<div class="eyebrow">Решение по Автопромышленности</div>
-
+<div class="eyebrow">Решение по отрасли</div>
+<h1 class="product-title" style="font-size:clamp(30px,4.4vw,56px);letter-spacing:-.018em;margin:10px 0 14px">Автомобильная промышленность</h1>
+<p class="product-lead" style="max-width:760px;margin-bottom:8px">Ступицы, тормозные узлы, корпуса КПП и элементы подвески. Подбираем оборудование под серийность и допуски автокомпонентов.</p>
 </div>
 
 </div>
-<div class="auto-part-grid">
-<article class="auto-part-card">
-<div class="auto-part-img"><img alt="Ступица колеса" src="auto_hub.jpg"/></div>
-<div class="auto-part-body">
-<small>Токарно-фрезерная обработка</small>
-<h3>Ступица колеса</h3>
-<p>Черновое и чистовое точение посадочных диаметров, сверление отверстий по окружности, фаски и контроль биения.</p>
-<div class="auto-part-meta">
-<span>Сталь 45 / 40Х</span>
-<span>Токарный центр + VMC</span>
-</div>
+<div class="sol-part-grid">
+<article class="sol-part">
+<span class="sol-part-media"><img src="auto-01.png" alt="Ступица колеса" loading="lazy"/></span>
+<div class="sol-part-info">
+<div class="sol-part-head"><span class="sol-part-num">01</span><h3>Ступица колеса</h3></div>
+<p class="sol-ops"><b>Основные операции</b>черновое и чистовое точение посадочных диаметров, сверление отверстий по окружности, обработка фасок, контроль биения.</p>
+<div class="sol-machines"><span class="sol-machines-label">Подходящие станки</span><div class="sol-chips"><a class="sol-chip" href="equipment-turning.html">Токарный ЧПУ</a><a class="sol-chip" href="equipment-milling-frezernye-obrabatyvayuschie-centry.html">Вертикальный ОЦ</a><a class="sol-chip" href="equipment-drilling-radialno-sverlilnye-stanki.html">Радиально-сверлильный</a><a class="sol-chip" href="equipment-grinding-krugloshlifovalnye-stanki.html">Круглошлифовальный</a></div></div>
 </div>
 </article>
-<article class="auto-part-card">
-<div class="auto-part-img"><img alt="Тормозной диск" src="auto_brake_disc.jpg"/></div>
-<div class="auto-part-body">
-<small>Токарная обработка</small>
-<h3>Тормозной диск</h3>
-<p>Обработка двух плоскостей, наружного диаметра, посадки, сверление крепежных отверстий и финишный контроль.</p>
-<div class="auto-part-meta">
-<span>СЧ20 / СЧ25</span>
-<span>Токарный центр</span>
-</div>
+<article class="sol-part">
+<span class="sol-part-media"><img src="auto-02.png" alt="Тормозной диск" loading="lazy"/></span>
+<div class="sol-part-info">
+<div class="sol-part-head"><span class="sol-part-num">02</span><h3>Тормозной диск</h3></div>
+<p class="sol-ops"><b>Основные операции</b>обработка двух плоскостей, точение наружного диаметра, точение посадки, сверление крепёжных отверстий, финишный контроль.</p>
+<div class="sol-machines"><span class="sol-machines-label">Подходящие станки</span><div class="sol-chips"><a class="sol-chip" href="equipment-turning.html">Токарный ЧПУ</a><a class="sol-chip" href="equipment-turning.html">Токарно-фрезерный</a><a class="sol-chip" href="equipment-drilling-radialno-sverlilnye-stanki.html">Радиально-сверлильный</a><a class="sol-chip" href="equipment-grinding-ploskoshlifovalnye-stanki.html">Плоскошлифовальный</a></div></div>
 </div>
 </article>
-<article class="auto-part-card">
-<div class="auto-part-img"><img alt="Тормозной суппорт" src="auto_caliper.jpg"/></div>
-<div class="auto-part-body">
-<small>Фрезерование и расточка</small>
-<h3>Тормозной суппорт</h3>
-<p>Базирование литой заготовки, обработка карманов, плоскостей, отверстий, резьб и посадочных поверхностей.</p>
-<div class="auto-part-meta">
-<span>Алюминий / чугун</span>
-<span>Macro zVMC320 / zVMC500</span>
-</div>
+<article class="sol-part">
+<span class="sol-part-media"><img src="auto-03.png" alt="Тормозной суппорт" loading="lazy"/></span>
+<div class="sol-part-info">
+<div class="sol-part-head"><span class="sol-part-num">03</span><h3>Тормозной суппорт</h3></div>
+<p class="sol-ops"><b>Основные операции</b>базирование литой заготовки, обработка карманов, обработка плоскостей, сверление отверстий, нарезание резьб.</p>
+<div class="sol-machines"><span class="sol-machines-label">Подходящие станки</span><div class="sol-chips"><a class="sol-chip" href="equipment-milling-frezernye-obrabatyvayuschie-centry.html">Вертикальный ОЦ</a><a class="sol-chip" href="equipment-boring.html">Горизонтально-расточной</a><a class="sol-chip" href="equipment-drilling.html">Сверлильный станок</a><a class="sol-chip" href="equipment-milling.html">Фрезерный ОЦ</a></div></div>
 </div>
 </article>
-<article class="auto-part-card">
-<div class="auto-part-img"><img alt="Рулевая тяга" src="auto_tie_rod.jpg"/></div>
-<div class="auto-part-body">
-<small>Точение и резьбы</small>
-<h3>Рулевая тяга</h3>
-<p>Токарная обработка тела детали, нарезание резьбы, подготовка шарового узла и контроль геометрии.</p>
-<div class="auto-part-meta">
-<span>Легированная сталь</span>
-<span>Токарный центр с ЧПУ</span>
-</div>
+<article class="sol-part">
+<span class="sol-part-media"><img src="auto-04.png" alt="Рулевая тяга" loading="lazy"/></span>
+<div class="sol-part-info">
+<div class="sol-part-head"><span class="sol-part-num">04</span><h3>Рулевая тяга</h3></div>
+<p class="sol-ops"><b>Основные операции</b>токарная обработка тела детали, нарезание резьбы, подготовка шарового узла, контроль геометрии.</p>
+<div class="sol-machines"><span class="sol-machines-label">Подходящие станки</span><div class="sol-chips"><a class="sol-chip" href="equipment-turning.html">Токарный ЧПУ</a><a class="sol-chip" href="equipment-turning-tokarno-vintoreznye-stanki.html">Токарно-винторезный</a><a class="sol-chip" href="equipment-turning.html">Токарно-фрезерный</a><a class="sol-chip" href="equipment-grinding-krugloshlifovalnye-stanki.html">Круглошлифовальный</a></div></div>
 </div>
 </article>
-<article class="auto-part-card">
-<div class="auto-part-img"><img alt="Поворотный кулак" src="auto_suspension.jpg"/></div>
-<div class="auto-part-body">
-<small>Корпусная обработка</small>
-<h3>Поворотный кулак</h3>
-<p>Фрезерование баз, расточка посадок под ступицу, сверление крепежных отверстий и контроль соосности.</p>
-<div class="auto-part-meta">
-<span>Сталь / алюминий</span>
-<span>VMC / горизонтальный ОЦ</span>
-</div>
+<article class="sol-part">
+<span class="sol-part-media"><img src="auto-05.png" alt="Поворотный кулак" loading="lazy"/></span>
+<div class="sol-part-info">
+<div class="sol-part-head"><span class="sol-part-num">05</span><h3>Поворотный кулак</h3></div>
+<p class="sol-ops"><b>Основные операции</b>фрезерование баз, растачивание посадок под ступицу, сверление крепёжных отверстий, контроль соосности.</p>
+<div class="sol-machines"><span class="sol-machines-label">Подходящие станки</span><div class="sol-chips"><a class="sol-chip" href="equipment-milling-frezernye-obrabatyvayuschie-centry.html">Вертикальный ОЦ</a><a class="sol-chip" href="equipment-boring.html">Горизонтально-расточной</a><a class="sol-chip" href="equipment-milling-gorizontalnye-obrabatyvayuschie-centry.html">Горизонтальный ОЦ</a><a class="sol-chip" href="equipment-drilling.html">Сверлильный станок</a></div></div>
 </div>
 </article>
-<article class="auto-part-card">
-<div class="auto-part-img"><img alt="Корпус КПП" src="auto_suspension.jpg"/></div>
-<div class="auto-part-body">
-<small>Многосторонняя обработка</small>
-<h3>Корпус КПП</h3>
-<p>Фрезерование плоскостей, обработка картеров, расточка отверстий под подшипники и нарезание резьб.</p>
-<div class="auto-part-meta">
-<span>Алюминиевый сплав</span>
-<span>Горизонтальный ОЦ / VMC</span>
-</div>
+<article class="sol-part">
+<span class="sol-part-media"><img src="auto-06.png" alt="Корпус КПП" loading="lazy"/></span>
+<div class="sol-part-info">
+<div class="sol-part-head"><span class="sol-part-num">06</span><h3>Корпус КПП</h3></div>
+<p class="sol-ops"><b>Основные операции</b>фрезерование плоскостей, обработка картеров, растачивание отверстий под подшипники, нарезание резьб.</p>
+<div class="sol-machines"><span class="sol-machines-label">Подходящие станки</span><div class="sol-chips"><a class="sol-chip" href="equipment-milling-gorizontalnye-obrabatyvayuschie-centry.html">Горизонтальный ОЦ</a><a class="sol-chip" href="equipment-boring.html">Горизонтально-расточной</a><a class="sol-chip" href="equipment-milling-frezernye-obrabatyvayuschie-centry.html">Вертикальный ОЦ</a><a class="sol-chip" href="equipment-boring-gorizontalno-rastochnye-stanki-s-chpu.html">Горизонтально-расточной с ЧПУ</a></div></div>
 </div>
 </article>
-<article class="auto-part-card">
-<div class="auto-part-img"><img alt="Кронштейн подвески" src="auto_suspension.jpg"/></div>
-<div class="auto-part-body">
-<small>Фрезерная обработка</small>
-<h3>Кронштейн подвески</h3>
-<p>Обработка плоскостей, карманов, пазов, отверстий и подготовка посадочных поверхностей под сборку.</p>
-<div class="auto-part-meta">
-<span>Сталь / алюминий</span>
-<span>Macro zVMC500</span>
-</div>
+<article class="sol-part">
+<span class="sol-part-media"><img src="auto-07.png" alt="Кронштейн подвески" loading="lazy"/></span>
+<div class="sol-part-info">
+<div class="sol-part-head"><span class="sol-part-num">07</span><h3>Кронштейн подвески</h3></div>
+<p class="sol-ops"><b>Основные операции</b>обработка плоскостей, обработка карманов, обработка пазов, обработка отверстий под сборку.</p>
+<div class="sol-machines"><span class="sol-machines-label">Подходящие станки</span><div class="sol-chips"><a class="sol-chip" href="equipment-milling-frezernye-obrabatyvayuschie-centry.html">Вертикальный ОЦ</a><a class="sol-chip" href="equipment-milling.html">Фрезерный ОЦ</a><a class="sol-chip" href="equipment-drilling.html">Сверлильный станок</a><a class="sol-chip" href="equipment-milling-universalnye-frezernye-stanki.html">Универсальный фрезерный</a></div></div>
 </div>
 </article>
-<article class="auto-part-card">
-<div class="auto-part-img"><img alt="Корпус насоса" src="auto_hub.jpg"/></div>
-<div class="auto-part-body">
-<small>Фрезерование и расточка</small>
-<h3>Корпус насоса</h3>
-<p>Обработка фланцев, каналов, посадочных диаметров, сверление и контроль герметичных поверхностей.</p>
-<div class="auto-part-meta">
-<span>Алюминий / чугун</span>
-<span>Macro zVMC840</span>
-</div>
+<article class="sol-part">
+<span class="sol-part-media"><img src="auto-08.png" alt="Корпус насоса" loading="lazy"/></span>
+<div class="sol-part-info">
+<div class="sol-part-head"><span class="sol-part-num">08</span><h3>Корпус насоса</h3></div>
+<p class="sol-ops"><b>Основные операции</b>обработка фланцев, обработка каналов, обработка посадочных диаметров, сверление, контроль герметичных поверхностей.</p>
+<div class="sol-machines"><span class="sol-machines-label">Подходящие станки</span><div class="sol-chips"><a class="sol-chip" href="equipment-milling-frezernye-obrabatyvayuschie-centry.html">Вертикальный ОЦ</a><a class="sol-chip" href="equipment-boring.html">Горизонтально-расточной</a><a class="sol-chip" href="equipment-drilling.html">Сверлильный станок</a><a class="sol-chip" href="equipment-turning.html">Токарный ЧПУ</a></div></div>
 </div>
 </article>
+</div>
+<div style="margin-top:44px;display:flex;gap:12px;flex-wrap:wrap">
+<a class="btn btn-ghost" href="index.html#quiz">Передать задачу технологу</a>
 </div>
 </div>
 </section>
