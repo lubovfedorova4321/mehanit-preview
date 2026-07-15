@@ -180,3 +180,41 @@ body{background-image:linear-gradient(rgba(107,45,139,.05) 1px,transparent 1px),
   .site-menu-mobile-messengers svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8}
 }
 @media(prefers-reduced-motion:reduce){.header-contacts-panel,.header-search-overlay,.header-search-panel,.header-modal,.header-modal-dialog,.site-phone-chevron{transition:none}}
+
+/* ===== Футер: ссылки на юридические документы ===== */
+.site-footer-legal{display:flex;flex-wrap:wrap;gap:6px 24px;padding-top:20px;margin-top:24px;border-top:1px solid rgba(234,234,230,.11)}
+.site-footer-legal a{display:inline;text-decoration:none;transition:color .16s ease}
+.site-footer-legal a:hover{color:#fff}
+.site-footer-legal a:focus-visible{outline:2px solid #6B2D8B;outline-offset:2px}
+
+/* ===== Cookie-баннер ===== */
+.cookie-banner{position:fixed;left:16px;right:16px;bottom:-160px;z-index:1200;display:flex;align-items:center;gap:20px;flex-wrap:wrap;max-width:720px;margin:0 auto;padding:18px 22px;background:#fff;border:1px solid rgba(26,26,26,.10);border-radius:16px;box-shadow:0 24px 60px rgba(26,26,26,.18);transition:bottom .4s cubic-bezier(.2,.8,.2,1)}
+.cookie-banner.is-visible{bottom:16px}
+.cookie-banner-text{flex:1 1 320px;font-family:'Golos Text',sans-serif;font-size:13.5px;line-height:1.5;color:#3d3d3d}
+.cookie-banner-text a{color:#6B2D8B;text-decoration:underline;text-underline-offset:2px}
+.cookie-banner-accept{flex:0 0 auto;min-height:44px}
+@media(max-width:480px){.cookie-banner{left:10px;right:10px;padding:16px}.cookie-banner-accept{width:100%}}
+@media(prefers-reduced-motion:reduce){.cookie-banner{transition:none}}
+
+/* ===== Всплывающее окно юридических текстов (переиспользует принципы .header-modal) ===== */
+.legal-modal{position:fixed;inset:0;z-index:1500;display:grid;place-items:center;padding:24px;background:rgba(26,26,26,.55);opacity:0;visibility:hidden;transition:opacity .2s ease,visibility .2s ease}
+.legal-modal.is-open{opacity:1;visibility:visible}
+.legal-modal-dialog{position:relative;width:min(720px,100%);max-height:min(84vh,780px);overflow:auto;background:#fff;border-radius:18px;box-shadow:0 34px 90px rgba(26,26,26,.3);padding:clamp(28px,3.6vw,44px)}
+.legal-modal-close{position:absolute;top:14px;right:14px;width:36px;height:36px;display:grid;place-items:center;border:0;background:rgba(26,26,26,.05);border-radius:50%;font-size:20px;color:#3d3d3d;cursor:pointer;transition:background .16s ease,color .16s ease}
+.legal-modal-close:hover{background:rgba(26,26,26,.1);color:#1a1a1a}
+.legal-modal-close:focus-visible{outline:2px solid #6B2D8B;outline-offset:2px}
+.legal-modal-title{font-family:'Magistral',sans-serif;font-weight:600;font-size:clamp(21px,2.2vw,27px);letter-spacing:-.02em;color:#1a1a1a;margin:0 0 18px;padding-right:28px}
+.legal-modal-body{font-family:'Golos Text',sans-serif;font-size:14px;line-height:1.65;color:#3d3d3d}
+.legal-modal-body h3{font-family:'Magistral',sans-serif;font-weight:600;font-size:16px;color:#1a1a1a;margin:22px 0 10px;letter-spacing:-.01em}
+.legal-modal-body h3:first-child{margin-top:0}
+.legal-modal-body p,.legal-modal-body li{margin-bottom:10px}
+.legal-modal-body ul{padding-left:20px}
+.legal-modal-body a{color:#6B2D8B;text-decoration:underline;text-underline-offset:2px}
+.legal-modal-body b{color:#1a1a1a}
+.legal-table-wrap{overflow-x:auto;margin:12px 0 16px;border:1px solid rgba(26,26,26,.1);border-radius:10px}
+.legal-table{width:100%;border-collapse:collapse;font-size:12.5px}
+.legal-table th,.legal-table td{padding:10px 12px;text-align:left;border-bottom:1px solid rgba(26,26,26,.1);vertical-align:top}
+.legal-table th{font-family:'PT Root UI',sans-serif;font-weight:600;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:#8a9096;background:rgba(26,26,26,.03)}
+.legal-table tr:last-child td{border-bottom:0}
+@media(max-width:620px){.legal-modal-dialog{padding:24px 20px}}
+@media(prefers-reduced-motion:reduce){.legal-modal{transition:none}}
