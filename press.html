@@ -17,10 +17,12 @@ main{position:relative;z-index:1}
 .wrap{width:min(100% - 48px,1440px);margin-left:clamp(24px,4.4vw,84px);margin-right:auto}
 
 /* COMPACT HERO */
-.hero{padding:44px 0 36px;border-bottom:1px solid var(--line)}
-.hero .eyebrow{font-family:'Golos Text',monospace;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
-.hero h1{margin:0;max-width:760px;font-family:'Magistral','Golos Text',sans-serif;font-size:clamp(26px,3vw,40px);font-weight:400;line-height:1.08;letter-spacing:-.02em;color:var(--ink)}
-.hero p{max-width:620px;margin:14px 0 0;font-size:14.5px;line-height:1.6;color:var(--mid)}
+.hero{padding:clamp(4px,1vw,14px) 0 clamp(26px,3vw,38px);border-bottom:1px solid var(--line)}
+.hero h1{margin:2px 0 18px;max-width:760px;font-family:'Magistral','Golos Text',sans-serif;font-weight:700;font-size:clamp(34px,4.4vw,58px);line-height:1.02;letter-spacing:-.015em;color:var(--ink)}
+.title-row{display:flex;align-items:center;gap:16px}
+.title-dash{flex:0 0 auto;width:40px;height:3px;background:linear-gradient(90deg,var(--gold),#6B2D8B)}
+.hero h1::after{content:'';display:block;width:72px;height:3px;margin-top:22px;background:var(--gold)}
+.hero p{max-width:760px;margin:0;font-family:'Golos Text',sans-serif;font-weight:400;font-size:16px;line-height:1.65;color:var(--mid)}
 
 /* TABS */
 .tabs-wrap{position:sticky;top:0;z-index:15;background:rgba(243,244,243,.86);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
@@ -104,20 +106,24 @@ main{position:relative;z-index:1}
 }
 @media(max-width:680px){
   .wrap{width:min(100% - 30px,1440px)}
-  .hero{padding:32px 0 26px}
+  .hero{padding:10px 0 26px}
   .modal-copy{padding:28px 22px 34px}
   .modal-media{height:230px}
 }
 </style>
 <link rel="stylesheet" href="site-shell.css"/>
+<link rel="stylesheet" href="industry-solutions.css"/>
 </head>
 <body>
 <header></header>
 <main>
+<nav class="ind-crumbs" aria-label="Хлебные крошки"><div class="wrap"><ol>
+  <li><a href="index.html">Главная</a></li>
+  <li aria-current="page">Пресс-центр</li>
+</ol></div></nav>
 
 <section class="hero"><div class="wrap">
-<div class="eyebrow">Пресс-центр Механит</div>
-<h1>Новости, внедрения<br/>и инженерные решения</h1>
+<h1><span class="title-row"><span class="title-dash"></span>Новости, внедрения<br/>и инженерные решения</span></h1>
 <p>Рассказываем о запусках оборудования, проектах и ключевых событиях отрасли.</p>
 </div></section>
 

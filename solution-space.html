@@ -15,12 +15,12 @@
   --gold:#C9A227;
   --tl:#EAEAE6;--tl2:#F5F5F3;--paper:#EDEEF0;--paper2:#E4E5E8;--white:#fff;
   --line:rgba(26,26,26,.10);--line2:rgba(234,234,230,.08);
-  --max:1400px;--shadow:0 24px 70px rgba(26,26,26,.10);
+  --max:1600px;--shadow:0 24px 70px rgba(26,26,26,.10);
 }
 html{scroll-behavior:smooth}
 body{font-family:'Golos Text',sans-serif;background:var(--paper);color:var(--bm);-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
-.wrap{width:min(calc(100% - 48px),var(--max));margin-left:clamp(24px,4.4vw,84px);margin-right:auto}
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding-inline:clamp(24px,4.4vw,84px)}
 .mono{font-family:'Golos Text',monospace}.disp{font-family:'Magistral',sans-serif}
 .eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:'Golos Text',monospace;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--ce);margin-bottom:.85rem}
 .eyebrow::before{content:'';width:22px;height:1.5px;background:var(--ce)}
@@ -1609,80 +1609,30 @@ footer{background:var(--bm);color:rgba(234,234,230,.55);padding:3rem 0 2rem;bord
 @media(max-width:640px){.sol-part-grid{grid-template-columns:1fr}}
 </style>
 <link rel="stylesheet" href="site-shell.css"/>
+<link rel="stylesheet" href="industry-solutions.css"/>
 </head>
 <body class="premium-v3">
 <header></header>
 <main>
 
-<section class="auto-parts-section">
-<div class="wrap">
-<div class="sec-head" style="align-items:flex-start">
-<div>
-<div class="eyebrow">Решение по отрасли</div>
-<h1 class="product-title" style="font-size:clamp(30px,4.4vw,56px);letter-spacing:-.018em;margin:10px 0 14px">Космическая промышленность</h1>
-<p class="product-lead" style="max-width:760px;margin-bottom:8px">Силовые шпангоуты, элементы ТНА и ответственные компоненты из лёгких и жаропрочных сплавов. Оборудование — под сложную геометрию и высшую точность.</p>
-</div>
-</div>
-<div class="sol-part-grid">
-<article class="sol-part">
-<span class="sol-part-media"><img src="space-01.png" alt="Силовой шпангоут" loading="lazy"/></span>
-<div class="sol-part-info">
-<div class="sol-part-head"><span class="sol-part-num">01</span><h3>Силовой шпангоут</h3></div>
-<p class="sol-ops"><b>Основные операции</b>5-осевая обработка кольцевой силовой детали по 3D-модели, обработка за минимальное число установов, чистовая обработка контуров.</p>
-<div class="sol-machines"><span class="sol-machines-label">Подходящие станки</span><div class="sol-chips"><a class="sol-chip" href="equipment-milling-5-osevye-obrabatyvayuschie-centry.html">5-осевой ОЦ</a><a class="sol-chip" href="equipment-milling-portalnye-frezernye-centry.html">Портальный ОЦ</a><a class="sol-chip" href="equipment-milling-frezernye-obrabatyvayuschie-centry.html">Вертикальный ОЦ</a><a class="sol-chip" href="equipment-edm.html">Электроэрозионный</a></div></div>
-</div>
-</article>
-<article class="sol-part">
-<span class="sol-part-media"><img src="space-02.png" alt="Крыльчатка ТНА" loading="lazy"/></span>
-<div class="sol-part-info">
-<div class="sol-part-head"><span class="sol-part-num">02</span><h3>Крыльчатка ТНА</h3></div>
-<p class="sol-ops"><b>Основные операции</b>5-осевое фрезерование лопаток по 3D-модели, обработка ступицы, обработка балансировочных поверхностей, балансировка.</p>
-<div class="sol-machines"><span class="sol-machines-label">Подходящие станки</span><div class="sol-chips"><a class="sol-chip" href="equipment-milling-5-osevye-obrabatyvayuschie-centry.html">5-осевой ОЦ</a><a class="sol-chip" href="equipment-turning.html">Токарно-фрезерный</a><a class="sol-chip" href="equipment-grinding.html">Шлифовальный станок</a><a class="sol-chip" href="index.html#equipment">Балансировка</a></div></div>
-</div>
-</article>
-<article class="sol-part">
-<span class="sol-part-media"><img src="space-03.png" alt="Сопловой вкладыш" loading="lazy"/></span>
-<div class="sol-part-info">
-<div class="sol-part-head"><span class="sol-part-num">03</span><h3>Сопловой вкладыш</h3></div>
-<p class="sol-ops"><b>Основные операции</b>точение проточной части, прошивка точных охлаждающих каналов, финишная доводка.</p>
-<div class="sol-machines"><span class="sol-machines-label">Подходящие станки</span><div class="sol-chips"><a class="sol-chip" href="equipment-turning.html">Токарный ЧПУ</a><a class="sol-chip" href="equipment-edm-kopirovalno-proshivnye-stanki.html">Копировально-прошивной</a><a class="sol-chip" href="equipment-edm.html">Электроэрозионный</a><a class="sol-chip" href="equipment-turning-tokarno-vintoreznye-stanki.html">Токарно-винторезный</a></div></div>
-</div>
-</article>
-<article class="sol-part">
-<span class="sol-part-media"><img src="space-04.png" alt="Приборный кронштейн" loading="lazy"/></span>
-<div class="sol-part-info">
-<div class="sol-part-head"><span class="sol-part-num">04</span><h3>Приборный кронштейн</h3></div>
-<p class="sol-ops"><b>Основные операции</b>фрезерование облегчённой конструкции с тонкими рёбрами, обработка точных отверстий.</p>
-<div class="sol-machines"><span class="sol-machines-label">Подходящие станки</span><div class="sol-chips"><a class="sol-chip" href="equipment-milling-5-osevye-obrabatyvayuschie-centry.html">5-осевой ОЦ</a><a class="sol-chip" href="equipment-milling-frezernye-obrabatyvayuschie-centry.html">Вертикальный ОЦ</a><a class="sol-chip" href="equipment-drilling-vertikalno-sverlilnye-stanki.html">Вертикально-сверлильный</a><a class="sol-chip" href="equipment-milling.html">Фрезерный ОЦ</a></div></div>
-</div>
-</article>
-<article class="sol-part">
-<span class="sol-part-media"><img src="space-05.png" alt="Фланец бака" loading="lazy"/></span>
-<div class="sol-part-info">
-<div class="sol-part-head"><span class="sol-part-num">05</span><h3>Фланец бака</h3></div>
-<p class="sol-ops"><b>Основные операции</b>точение уплотнительных поверхностей, обработка присоединительных элементов тонкостенной детали.</p>
-<div class="sol-machines"><span class="sol-machines-label">Подходящие станки</span><div class="sol-chips"><a class="sol-chip" href="equipment-turning.html">Токарный ЧПУ</a><a class="sol-chip" href="equipment-turning-tokarno-vintoreznye-stanki.html">Токарно-винторезный</a><a class="sol-chip" href="equipment-turning.html">Токарно-фрезерный</a><a class="sol-chip" href="equipment-grinding.html">Шлифовальный станок</a></div></div>
-</div>
-</article>
-<article class="sol-part">
-<span class="sol-part-media"><img src="space-06.png" alt="Прецизионный корпус" loading="lazy"/></span>
-<div class="sol-part-info">
-<div class="sol-part-head"><span class="sol-part-num">06</span><h3>Прецизионный корпус</h3></div>
-<p class="sol-ops"><b>Основные операции</b>5-осевая обработка сложной геометрии из титана, обработка с высоким классом точности, чистовая доводка.</p>
-<div class="sol-machines"><span class="sol-machines-label">Подходящие станки</span><div class="sol-chips"><a class="sol-chip" href="equipment-milling-5-osevye-obrabatyvayuschie-centry.html">5-осевой ОЦ</a><a class="sol-chip" href="equipment-edm.html">Электроэрозионный</a><a class="sol-chip" href="equipment-milling-frezernye-obrabatyvayuschie-centry.html">Вертикальный ОЦ</a><a class="sol-chip" href="equipment-grinding.html">Шлифовальный станок</a></div></div>
-</div>
-</article>
-</div>
-<div style="margin-top:44px;display:flex;gap:12px;flex-wrap:wrap">
-<a class="btn btn-ghost" href="index.html#quiz">Передать задачу технологу</a>
-</div>
-</div>
-</section>
-<section class="photo-source-note" id="photo-source-note">
-<div class="wrap">
-<p>Фото деталей используются как демонстрационные изображения для макета сайта. Перед публикацией можно заменить на ваши собственные производственные фото.</p>
-</div>
-</section>
+<div id="industryRoot"></div>
+<script src="industry-template.js"></script>
+<script>
+renderIndustryPage({
+  slug:"space",
+  eyebrow:"Решение по отрасли",
+  title:"Космическая промышленность",
+  intro:"Силовые шпангоуты, элементы ТНА и ответственные компоненты из лёгких и жаропрочных сплавов. Оборудование — под сложную геометрию и высшую точность.",
+  parts:[
+    {id:"silovoy-shpangout",title:"Силовой шпангоут",image:"space-01.png",task:"5-осевая обработка кольцевой силовой детали по 3D-модели, обработка за минимальное число установов, чистовая обработка контуров.",operations:[{name:"Фрезерование",slug:"milling"}],equipmentClassesLabel:"4 категории оборудования",solutionUrl:null,equipmentUrl:"equipment-milling-5-osevye-obrabatyvayuschie-centry.html"},
+    {id:"krylchatka-tna",title:"Крыльчатка ТНА",image:"space-02.png",task:"5-осевое фрезерование лопаток по 3D-модели, обработка ступицы, обработка балансировочных поверхностей, балансировка.",operations:[{name:"Фрезерование",slug:"milling"},{name:"Контроль",slug:"quality-control"}],equipmentClassesLabel:"4 категории оборудования",solutionUrl:null,equipmentUrl:"equipment-milling-5-osevye-obrabatyvayuschie-centry.html"},
+    {id:"soplovoy-vkladysh",title:"Сопловой вкладыш",image:"space-03.png",task:"Точение проточной части, прошивка точных охлаждающих каналов, финишная доводка.",operations:[{name:"Точение",slug:"turning"}],equipmentClassesLabel:"4 категории оборудования",solutionUrl:null,equipmentUrl:"equipment-turning.html"},
+    {id:"pribornyy-kronshteyn",title:"Приборный кронштейн",image:"space-04.png",task:"Фрезерование облегчённой конструкции с тонкими рёбрами, обработка точных отверстий.",operations:[{name:"Фрезерование",slug:"milling"}],equipmentClassesLabel:"4 категории оборудования",solutionUrl:null,equipmentUrl:"equipment-milling-5-osevye-obrabatyvayuschie-centry.html"},
+    {id:"flanec-baka",title:"Фланец бака",image:"space-05.png",task:"Точение уплотнительных поверхностей, обработка присоединительных элементов тонкостенной детали.",operations:[{name:"Точение",slug:"turning"}],equipmentClassesLabel:"3 категории оборудования",solutionUrl:null,equipmentUrl:"equipment-turning.html"},
+    {id:"precizionnyy-korpus",title:"Прецизионный корпус",image:"space-06.png",task:"5-осевая обработка сложной геометрии из титана, обработка с высоким классом точности, чистовая доводка.",operations:[{name:"Фрезерование",slug:"milling"},{name:"Шлифование",slug:"grinding"}],equipmentClassesLabel:"4 категории оборудования",solutionUrl:null,equipmentUrl:"equipment-milling-5-osevye-obrabatyvayuschie-centry.html"}
+  ]
+});
+</script>
 </main>
 <footer>
   <div class="wrap">

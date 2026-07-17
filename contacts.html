@@ -62,14 +62,21 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 .btn-dark{background:var(--bm);color:var(--tl2);border-color:var(--bm)}.btn-dark:hover{background:var(--sg)}
 .btn:focus-visible{outline:2px solid var(--ce);outline-offset:3px}
 
-.contacts-page{background:linear-gradient(180deg,#f9f9f8,#eef0f1 70%);padding:clamp(12px,1.4vw,18px) 0}
+.contacts-page{padding:clamp(12px,1.4vw,18px) 0}
+.contacts-hero{padding:clamp(4px,1vw,14px) 0 clamp(18px,2.2vw,28px)}
+.sol-title{font-family:'Magistral',sans-serif;font-weight:700;font-size:clamp(34px,4.4vw,58px);line-height:1.02;letter-spacing:-.015em;color:var(--bm);margin:2px 0 0}
+.title-row{display:flex;align-items:center;gap:16px}
+.title-dash{flex:0 0 auto;width:40px;height:3px;background:linear-gradient(90deg,var(--gold),var(--ce))}
+.sol-title::after{content:'';display:block;width:72px;height:3px;margin-top:22px;background:var(--gold)}
 .contacts-page .wrap{width:100%;max-width:1260px;margin:0 auto;padding-inline:clamp(24px,2vw,32px)}
 .contacts-page::before{content:'';display:none}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 
-.contacts-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(14px,1.3vw,18px)}
+.contacts-grid{display:flex;flex-direction:column;gap:clamp(14px,1.3vw,18px)}
+.contacts-row{display:grid;gap:clamp(14px,1.3vw,18px)}
+.contacts-row--3col{grid-template-columns:repeat(3,1fr)}
+.contacts-row--2col{grid-template-columns:1fr 1fr}
 .contact-card{position:relative;background:#fff;border:1px solid rgba(26,26,26,.08);border-radius:24px;box-shadow:0 14px 36px rgba(26,26,26,.05);padding:clamp(18px,1.7vw,24px);display:flex;flex-direction:column;align-items:flex-start}
-.contact-card--wide{grid-column:1 / -1}
 .contact-card h2{font-family:'Magistral',sans-serif;font-weight:600;font-size:clamp(17px,1.15vw,20px);letter-spacing:-.02em;line-height:1.15;color:var(--bm)}
 
 /* иконка-плашка (переиспользуется во всех карточках) */
@@ -86,9 +93,6 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 
 /* Карточка «Связаться с нами» (широкая, ряд 1) */
 .cc-wide-title{font-family:'Magistral',sans-serif;font-weight:600;font-size:clamp(21px,1.7vw,27px);letter-spacing:-.02em;color:var(--bm);margin-bottom:18px}
-.cc-wide-body{width:100%;display:grid;grid-template-columns:1.2fr auto 1fr;align-items:center;gap:clamp(22px,2.6vw,40px)}
-.cc-wide-divider{width:1px;align-self:stretch;background:var(--line)}
-.cc-wide-col-right .cc-card-head{margin-bottom:8px}
 .cc-phone-main{display:block;font-family:'Golos Text',sans-serif;font-weight:600;font-size:clamp(19px,1.3vw,22px);line-height:1.2;color:var(--bm);transition:color .18s}
 .cc-phone-main:hover{color:var(--ce)}
 .cc-phone-main:focus-visible{outline:2px solid var(--ce);outline-offset:3px;border-radius:4px}
@@ -98,6 +102,10 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 .cc-mail{display:block;font-family:'Golos Text',sans-serif;font-weight:600;font-size:clamp(17px,1.15vw,19px);color:var(--bm);transition:color .18s}
 .cc-mail:hover{color:var(--ce)}
 .cc-mail:focus-visible{outline:2px solid var(--ce);outline-offset:3px;border-radius:4px}
+.cc-mail-list{display:flex;flex-direction:column;gap:11px}
+.cc-mail-item{display:block}
+.cc-mail-dept{display:block;font-family:'PT Root UI',sans-serif;font-weight:500;font-size:11.5px;color:var(--muted);margin-bottom:2px}
+.cc-mail-list .cc-mail{font-size:clamp(14.5px,1vw,15.5px)}
 
 /* Карточка «Главный офис» */
 .cc-address{font-family:'Golos Text',sans-serif;font-style:normal;font-weight:500;font-size:clamp(14px,.9vw,15.5px);line-height:1.5;color:var(--sg);transition:color .18s}
@@ -140,7 +148,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 .cc-form-status.fail{background:rgba(179,38,30,.08);color:#b3261e}
 
 /* Карта */
-.contacts-map{display:flex;flex-direction:column;background:#fff;border:1px solid rgba(26,26,26,.08);border-radius:24px;box-shadow:0 14px 36px rgba(26,26,26,.05);padding:14px}
+.contacts-map{grid-column:1 / -1;display:flex;flex-direction:column;background:#fff;border:1px solid rgba(26,26,26,.08);border-radius:24px;box-shadow:0 14px 36px rgba(26,26,26,.05);padding:14px}
 .contacts-map-frame{position:relative;width:100%;height:clamp(180px,15vw,216px);border-radius:14px;overflow:hidden;background:var(--paper2)}
 .contacts-map-frame ymaps,.contacts-map-frame [class*="ymaps"]{border-radius:14px}
 .contacts-map-placeholder{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;color:var(--muted);font-family:'PT Root UI',sans-serif;font-size:12px;text-align:center;padding:16px}
@@ -154,47 +162,70 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 .contacts-map-link svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:2}
 
 @media(max-width:900px){
-  .contacts-grid{grid-template-columns:1fr}
-  .contact-card--wide{grid-column:1}
-  .cc-wide-body{grid-template-columns:1fr;gap:16px}
-  .cc-wide-divider{display:none}
+  .contacts-row--3col,.contacts-row--2col{grid-template-columns:1fr}
   .cc-form-row{grid-template-columns:1fr}
 }
 
 </style>
 <link rel="stylesheet" href="site-shell.css"/>
+<link rel="stylesheet" href="industry-solutions.css"/>
 </head>
 <body>
 <header></header>
 <main class="contacts-page">
+<nav class="ind-crumbs" aria-label="Хлебные крошки"><div class="wrap"><ol>
+  <li><a href="index.html">Главная</a></li>
+  <li aria-current="page">Контакты</li>
+</ol></div></nav>
 <div class="wrap">
-<h1 class="sr-only">Контакты ГК «Механит»</h1>
+<section class="contacts-hero">
+  <h1 class="sol-title"><span class="title-row"><span class="title-dash"></span>Контакты ГК «Механит»</span></h1>
+</section>
 
 <section class="contacts-page__cards" aria-label="Контактная информация">
 <div class="contacts-grid">
 
-<article class="contact-card contact-card--wide" aria-labelledby="cc-h-communication">
+<div class="contacts-row contacts-row--3col">
+
+<article class="contact-card" aria-labelledby="cc-h-communication">
 <div class="cc-card-head">
 <span class="cc-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2.5"></rect><path d="M11 18h2"></path></svg></span>
 <span class="cc-label">Связаться с нами</span>
 </div>
 <h2 class="cc-wide-title" id="cc-h-communication">ООО ГК «Механит»</h2>
-<div class="cc-wide-body">
-<div class="cc-wide-col-left">
 <a class="cc-phone-main" href="tel:88005511206">8 800 55 11 206</a>
 <span class="cc-note">многоканальный</span>
 <a class="cc-phone-second" href="tel:+78312820500">8 (831) 282 05 00</a>
-</div>
-<div class="cc-wide-divider" role="presentation"></div>
-<div class="cc-wide-col-right">
+</article>
+
+<article class="contact-card" aria-labelledby="cc-h-email">
 <div class="cc-card-head">
-<span class="cc-icon cc-icon--sm" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m4 7 8 6 8-6"></path></svg></span>
-<span class="cc-label">Электронная почта</span>
+<span class="cc-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m4 7 8 6 8-6"></path></svg></span>
+<span class="cc-label" id="cc-h-email">Электронная почта</span>
 </div>
-<a class="cc-mail" href="mailto:info@mehanit.ru">info@mehanit.ru</a>
-</div>
+<div class="cc-mail-list">
+<div class="cc-mail-item"><span class="cc-mail-dept">Общая</span><a class="cc-mail" href="mailto:info@mehanit.ru">info@mehanit.ru</a></div>
+<div class="cc-mail-item"><span class="cc-mail-dept">Отдел продаж</span><a class="cc-mail" href="mailto:mehanit.direct@yandex.ru">mehanit.direct@yandex.ru</a></div>
+<div class="cc-mail-item"><span class="cc-mail-dept">Отдел персонала</span><a class="cc-mail" href="mailto:lk@mehanit.ru">lk@mehanit.ru</a></div>
+<div class="cc-mail-item"><span class="cc-mail-dept">Бухгалтерия</span><a class="cc-mail" href="mailto:buh@mehanit.ru">buh@mehanit.ru</a></div>
 </div>
 </article>
+
+<article class="contact-card contact-card--details" aria-labelledby="cc-h-details">
+<div class="cc-subhead">
+<span class="cc-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 3h7l4 4v14a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"></path><path d="M14 3v4h4"></path><path d="M9 13h6M9 16h6"></path></svg></span>
+<h2 id="cc-h-details">Реквизиты</h2>
+</div>
+<dl class="cc-dl">
+<div><dt>ИНН</dt><dd>5256089670</dd></div>
+<div><dt>КПП</dt><dd>525601001</dd></div>
+<div><dt>ОГРН</dt><dd>1095256004370</dd></div>
+</dl>
+</article>
+
+</div>
+
+<div class="contacts-row contacts-row--2col">
 
 <article class="contact-card contact-card--office" aria-labelledby="cc-h-office">
 <div class="cc-subhead">
@@ -209,18 +240,6 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 <div class="cc-hours">Пн. – Пт.: 8:30 – 17:30</div>
 <span class="cc-note">по МСК времени</span>
-</article>
-
-<article class="contact-card contact-card--details" aria-labelledby="cc-h-details">
-<div class="cc-subhead">
-<span class="cc-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 3h7l4 4v14a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"></path><path d="M14 3v4h4"></path><path d="M9 13h6M9 16h6"></path></svg></span>
-<h2 id="cc-h-details">Реквизиты</h2>
-</div>
-<dl class="cc-dl">
-<div><dt>ИНН</dt><dd>5256089670</dd></div>
-<div><dt>КПП</dt><dd>525601001</dd></div>
-<div><dt>ОГРН</dt><dd>1095256004370</dd></div>
-</dl>
 </article>
 
 <article class="contact-card contact-card--form" aria-labelledby="cc-h-form">
@@ -244,7 +263,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <div class="cc-form-bottom">
 <label class="cc-consent" for="ccConsent">
 <input id="ccConsent" name="consent" required="" type="checkbox"/>
-<span>Принимаю условия <a href="privacy.html" rel="noopener" target="_blank">Политики конфиденциальности</a> и даю согласие на обработку персональных данных</span>
+<span>Принимаю условия <a href="privacy.html" data-legal="privacy">Политики конфиденциальности</a> и даю согласие на обработку персональных данных</span>
 </label>
 <div class="cc-err" data-err-for="ccConsent" id="ccConsentErr" role="alert"></div>
 <button class="btn btn-dark" type="submit">Отправить<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
@@ -252,6 +271,8 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </form>
 </article>
+
+</div>
 
 <div class="contacts-map" id="contacts-map" role="region" aria-label="Расположение офиса на карте">
 <div class="contacts-map-frame" id="ccMapFrame">

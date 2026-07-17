@@ -15,12 +15,12 @@
   --gold:#C9A227;
   --tl:#EAEAE6;--tl2:#F5F5F3;--paper:#EDEEF0;--paper2:#E4E5E8;--white:#fff;
   --line:rgba(26,26,26,.10);--line2:rgba(234,234,230,.08);
-  --max:1400px;--shadow:0 24px 70px rgba(26,26,26,.10);
+  --max:1600px;--shadow:0 24px 70px rgba(26,26,26,.10);
 }
 html{scroll-behavior:smooth}
 body{font-family:'Golos Text',sans-serif;background:var(--paper);color:var(--bm);-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
-.wrap{width:min(calc(100% - 48px),var(--max));margin-left:clamp(24px,4.4vw,84px);margin-right:auto}
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding-inline:clamp(24px,4.4vw,84px)}
 .mono{font-family:'Golos Text',monospace}.disp{font-family:'Magistral',sans-serif}
 .eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:'Golos Text',monospace;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--ce);margin-bottom:.85rem}
 .eyebrow::before{content:'';width:22px;height:1.5px;background:var(--ce)}
@@ -1609,80 +1609,30 @@ footer{background:var(--bm);color:rgba(234,234,230,.55);padding:3rem 0 2rem;bord
 @media(max-width:640px){.sol-part-grid{grid-template-columns:1fr}}
 </style>
 <link rel="stylesheet" href="site-shell.css"/>
+<link rel="stylesheet" href="industry-solutions.css"/>
 </head>
 <body class="premium-v3">
 <header></header>
 <main>
 
-<section class="auto-parts-section">
-<div class="wrap">
-<div class="sec-head" style="align-items:flex-start">
-<div>
-<div class="eyebrow">Решение по отрасли</div>
-<h1 class="product-title" style="font-size:clamp(30px,4.4vw,56px);letter-spacing:-.018em;margin:10px 0 14px">Железнодорожное машиностроение</h1>
-<p class="product-lead" style="max-width:760px;margin-bottom:8px">Колёсные пары, корпуса букс, редукторы тележек и элементы тяговых систем. Оборудование — под серию и класс точности.</p>
-</div>
-</div>
-<div class="sol-part-grid">
-<article class="sol-part">
-<span class="sol-part-media"><img src="rail-01.png" alt="Ось колёсной пары" loading="lazy"/></span>
-<div class="sol-part-info">
-<div class="sol-part-head"><span class="sol-part-num">01</span><h3>Ось колёсной пары</h3></div>
-<p class="sol-ops"><b>Основные операции</b>точение шеек под подшипники, обработка подступичных частей, обработка галтелей, контроль геометрии, финишное шлифование.</p>
-<div class="sol-machines"><span class="sol-machines-label">Подходящие станки</span><div class="sol-chips"><a class="sol-chip" href="equipment-turning-tokarno-vintoreznye-stanki.html">Токарно-винторезный</a><a class="sol-chip" href="equipment-turning.html">Токарный ЧПУ</a><a class="sol-chip" href="equipment-grinding-krugloshlifovalnye-stanki.html">Круглошлифовальный</a><a class="sol-chip" href="equipment-turning.html">Токарно-фрезерный</a></div></div>
-</div>
-</article>
-<article class="sol-part">
-<span class="sol-part-media"><img src="rail-02.png" alt="Колесо" loading="lazy"/></span>
-<div class="sol-part-info">
-<div class="sol-part-head"><span class="sol-part-num">02</span><h3>Колесо</h3></div>
-<p class="sol-ops"><b>Основные операции</b>точение профиля катания, обработка ступицы, растачивание посадочного отверстия, контроль биения.</p>
-<div class="sol-machines"><span class="sol-machines-label">Подходящие станки</span><div class="sol-chips"><a class="sol-chip" href="equipment-turning-tokarno-karuselnye-stanki.html">Токарно-карусельный</a><a class="sol-chip" href="equipment-turning.html">Токарный ЧПУ</a><a class="sol-chip" href="equipment-boring.html">Горизонтально-расточной</a><a class="sol-chip" href="equipment-grinding-krugloshlifovalnye-stanki.html">Круглошлифовальный</a></div></div>
-</div>
-</article>
-<article class="sol-part">
-<span class="sol-part-media"><img src="rail-03.png" alt="Корпус буксы" loading="lazy"/></span>
-<div class="sol-part-info">
-<div class="sol-part-head"><span class="sol-part-num">03</span><h3>Корпус буксы</h3></div>
-<p class="sol-ops"><b>Основные операции</b>растачивание посадочных мест подшипников, обработка плоскостей, сверление крепёжных отверстий.</p>
-<div class="sol-machines"><span class="sol-machines-label">Подходящие станки</span><div class="sol-chips"><a class="sol-chip" href="equipment-boring.html">Горизонтально-расточной</a><a class="sol-chip" href="equipment-boring-gorizontalno-rastochnye-stanki-s-chpu.html">Горизонтально-расточной с ЧПУ</a><a class="sol-chip" href="equipment-milling-frezernye-obrabatyvayuschie-centry.html">Вертикальный ОЦ</a><a class="sol-chip" href="equipment-drilling.html">Сверлильный станок</a></div></div>
-</div>
-</article>
-<article class="sol-part">
-<span class="sol-part-media"><img src="rail-04.png" alt="Корпус редуктора тележки" loading="lazy"/></span>
-<div class="sol-part-info">
-<div class="sol-part-head"><span class="sol-part-num">04</span><h3>Корпус редуктора тележки</h3></div>
-<p class="sol-ops"><b>Основные операции</b>растачивание отверстий под валы, обработка стыковых поверхностей, фрезерование плоскостей.</p>
-<div class="sol-machines"><span class="sol-machines-label">Подходящие станки</span><div class="sol-chips"><a class="sol-chip" href="equipment-boring.html">Горизонтально-расточной</a><a class="sol-chip" href="equipment-boring-gorizontalno-rastochnye-stanki-s-uci.html">Расточной с УЦИ</a><a class="sol-chip" href="equipment-milling-gorizontalnye-obrabatyvayuschie-centry.html">Горизонтальный ОЦ</a><a class="sol-chip" href="equipment-milling-frezernye-obrabatyvayuschie-centry.html">Вертикальный ОЦ</a></div></div>
-</div>
-</article>
-<article class="sol-part">
-<span class="sol-part-media"><img src="rail-05.png" alt="Тормозной диск" loading="lazy"/></span>
-<div class="sol-part-info">
-<div class="sol-part-head"><span class="sol-part-num">05</span><h3>Тормозной диск</h3></div>
-<p class="sol-ops"><b>Основные операции</b>обработка фрикционных плоскостей, точение посадки, сверление крепёжных отверстий, контроль плоскостности.</p>
-<div class="sol-machines"><span class="sol-machines-label">Подходящие станки</span><div class="sol-chips"><a class="sol-chip" href="equipment-turning.html">Токарный ЧПУ</a><a class="sol-chip" href="equipment-turning.html">Токарно-фрезерный</a><a class="sol-chip" href="equipment-drilling-radialno-sverlilnye-stanki.html">Радиально-сверлильный</a><a class="sol-chip" href="equipment-grinding-ploskoshlifovalnye-stanki.html">Плоскошлифовальный</a></div></div>
-</div>
-</article>
-<article class="sol-part">
-<span class="sol-part-media"><img src="rail-06.png" alt="Рама тележки — узел" loading="lazy"/></span>
-<div class="sol-part-info">
-<div class="sol-part-head"><span class="sol-part-num">06</span><h3>Рама тележки — узел</h3></div>
-<p class="sol-ops"><b>Основные операции</b>фрезерование опорных плоскостей, обработка стыковочных отверстий крупного узла, сверление.</p>
-<div class="sol-machines"><span class="sol-machines-label">Подходящие станки</span><div class="sol-chips"><a class="sol-chip" href="equipment-milling-portalnye-frezernye-centry.html">Портальный ОЦ</a><a class="sol-chip" href="equipment-drilling.html">Сверлильный станок</a><a class="sol-chip" href="equipment-milling.html">Фрезерный ОЦ</a><a class="sol-chip" href="equipment-boring.html">Горизонтально-расточной</a></div></div>
-</div>
-</article>
-</div>
-<div style="margin-top:44px;display:flex;gap:12px;flex-wrap:wrap">
-<a class="btn btn-ghost" href="index.html#quiz">Передать задачу технологу</a>
-</div>
-</div>
-</section>
-<section class="photo-source-note" id="photo-source-note">
-<div class="wrap">
-<p>Фото деталей используются как демонстрационные изображения для макета сайта. Перед публикацией можно заменить на ваши собственные производственные фото.</p>
-</div>
-</section>
+<div id="industryRoot"></div>
+<script src="industry-template.js"></script>
+<script>
+renderIndustryPage({
+  slug:"rail",
+  eyebrow:"Решение по отрасли",
+  title:"Железнодорожное машиностроение",
+  intro:"Колёсные пары, корпуса букс, редукторы тележек и элементы тяговых систем. Оборудование — под серию и класс точности.",
+  parts:[
+    {id:"os-kolesnoy-pary",title:"Ось колёсной пары",image:"rail-01.png",task:"Точение шеек под подшипники, обработка подступичных частей, обработка галтелей, контроль геометрии, финишное шлифование.",operations:[{name:"Точение",slug:"turning"},{name:"Контроль",slug:"quality-control"},{name:"Шлифование",slug:"grinding"}],equipmentClassesLabel:"3 категории оборудования",solutionUrl:null,equipmentUrl:"equipment-turning-tokarno-vintoreznye-stanki.html"},
+    {id:"koleso",title:"Колесо",image:"rail-02.png",task:"Точение профиля катания, обработка ступицы, растачивание посадочного отверстия, контроль биения.",operations:[{name:"Точение",slug:"turning"},{name:"Растачивание",slug:"boring"},{name:"Контроль",slug:"quality-control"}],equipmentClassesLabel:"4 категории оборудования",solutionUrl:null,equipmentUrl:"equipment-turning-tokarno-karuselnye-stanki.html"},
+    {id:"korpus-buksy",title:"Корпус буксы",image:"rail-03.png",task:"Растачивание посадочных мест подшипников, обработка плоскостей, сверление крепёжных отверстий.",operations:[{name:"Растачивание",slug:"boring"},{name:"Сверление",slug:"drilling"}],equipmentClassesLabel:"4 категории оборудования",solutionUrl:null,equipmentUrl:"equipment-boring.html"},
+    {id:"korpus-reduktora-telezhki",title:"Корпус редуктора тележки",image:"rail-04.png",task:"Растачивание отверстий под валы, обработка стыковых поверхностей, фрезерование плоскостей.",operations:[{name:"Растачивание",slug:"boring"},{name:"Фрезерование",slug:"milling"}],equipmentClassesLabel:"4 категории оборудования",solutionUrl:null,equipmentUrl:"equipment-boring.html"},
+    {id:"tormoznoy-disk",title:"Тормозной диск",image:"rail-05.png",task:"Обработка фрикционных плоскостей, точение посадки, сверление крепёжных отверстий, контроль плоскостности.",operations:[{name:"Точение",slug:"turning"},{name:"Сверление",slug:"drilling"},{name:"Контроль",slug:"quality-control"}],equipmentClassesLabel:"3 категории оборудования",solutionUrl:null,equipmentUrl:"equipment-turning.html"},
+    {id:"rama-telezhki-uzel",title:"Рама тележки — узел",image:"rail-06.png",task:"Фрезерование опорных плоскостей, обработка стыковочных отверстий крупного узла, сверление.",operations:[{name:"Фрезерование",slug:"milling"},{name:"Сверление",slug:"drilling"}],equipmentClassesLabel:"4 категории оборудования",solutionUrl:null,equipmentUrl:"equipment-milling-portalnye-frezernye-centry.html"}
+  ]
+});
+</script>
 </main>
 <footer>
   <div class="wrap">

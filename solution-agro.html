@@ -15,12 +15,12 @@
   --gold:#C9A227;
   --tl:#EAEAE6;--tl2:#F5F5F3;--paper:#EDEEF0;--paper2:#E4E5E8;--white:#fff;
   --line:rgba(26,26,26,.10);--line2:rgba(234,234,230,.08);
-  --max:1400px;--shadow:0 24px 70px rgba(26,26,26,.10);
+  --max:1600px;--shadow:0 24px 70px rgba(26,26,26,.10);
 }
 html{scroll-behavior:smooth}
 body{font-family:'Golos Text',sans-serif;background:var(--paper);color:var(--bm);-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
-.wrap{width:min(calc(100% - 48px),var(--max));margin-left:clamp(24px,4.4vw,84px);margin-right:auto}
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding-inline:clamp(24px,4.4vw,84px)}
 .mono{font-family:'Golos Text',monospace}.disp{font-family:'Magistral',sans-serif}
 .eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:'Golos Text',monospace;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--ce);margin-bottom:.85rem}
 .eyebrow::before{content:'';width:22px;height:1.5px;background:var(--ce)}
@@ -1609,80 +1609,30 @@ footer{background:var(--bm);color:rgba(234,234,230,.55);padding:3rem 0 2rem;bord
 @media(max-width:640px){.sol-part-grid{grid-template-columns:1fr}}
 </style>
 <link rel="stylesheet" href="site-shell.css"/>
+<link rel="stylesheet" href="industry-solutions.css"/>
 </head>
 <body class="premium-v3">
 <header></header>
 <main>
 
-<section class="auto-parts-section">
-<div class="wrap">
-<div class="sec-head" style="align-items:flex-start">
-<div>
-<div class="eyebrow">Решение по отрасли</div>
-<h1 class="product-title" style="font-size:clamp(30px,4.4vw,56px);letter-spacing:-.018em;margin:10px 0 14px">Сельскохозяйственное и дорожно-строительное машиностроение</h1>
-<p class="product-lead" style="max-width:760px;margin-bottom:8px">Гидроузлы, валы, корпуса редукторов и элементы навесного и ходового оборудования. Подбираем станки под мелкую и крупную серию.</p>
-</div>
-</div>
-<div class="sol-part-grid">
-<article class="sol-part">
-<span class="sol-part-media"><img src="agro-01.png" alt="Корпус гидроцилиндра" loading="lazy"/></span>
-<div class="sol-part-info">
-<div class="sol-part-head"><span class="sol-part-num">01</span><h3>Корпус гидроцилиндра</h3></div>
-<p class="sol-ops"><b>Основные операции</b>растачивание внутреннего диаметра под хонингование, обработка торцов, нарезание присоединительных резьб.</p>
-<div class="sol-machines"><span class="sol-machines-label">Подходящие станки</span><div class="sol-chips"><a class="sol-chip" href="equipment-turning-tokarno-vintoreznye-stanki.html">Токарно-винторезный</a><a class="sol-chip" href="equipment-boring.html">Горизонтально-расточной</a><a class="sol-chip" href="equipment-turning.html">Токарный ЧПУ</a><a class="sol-chip" href="equipment-drilling.html">Сверлильный станок</a></div></div>
-</div>
-</article>
-<article class="sol-part">
-<span class="sol-part-media"><img src="agro-02.png" alt="Вал отбора мощности" loading="lazy"/></span>
-<div class="sol-part-info">
-<div class="sol-part-head"><span class="sol-part-num">02</span><h3>Вал отбора мощности</h3></div>
-<p class="sol-ops"><b>Основные операции</b>точение шеек, нарезание шлицев, финишное шлифование под подшипники.</p>
-<div class="sol-machines"><span class="sol-machines-label">Подходящие станки</span><div class="sol-chips"><a class="sol-chip" href="equipment-turning.html">Токарный ЧПУ</a><a class="sol-chip" href="equipment-milling-universalnye-frezernye-stanki.html">Универсальный фрезерный</a><a class="sol-chip" href="equipment-grinding-krugloshlifovalnye-stanki.html">Круглошлифовальный</a><a class="sol-chip" href="equipment-turning.html">Токарно-фрезерный</a></div></div>
-</div>
-</article>
-<article class="sol-part">
-<span class="sol-part-media"><img src="agro-03.png" alt="Втулка / ось шарнира" loading="lazy"/></span>
-<div class="sol-part-info">
-<div class="sol-part-head"><span class="sol-part-num">03</span><h3>Втулка / ось шарнира</h3></div>
-<p class="sol-ops"><b>Основные операции</b>точение наружных поверхностей, точение внутренних поверхностей, обработка канавок, обработка фасок.</p>
-<div class="sol-machines"><span class="sol-machines-label">Подходящие станки</span><div class="sol-chips"><a class="sol-chip" href="equipment-turning.html">Токарный ЧПУ</a><a class="sol-chip" href="equipment-turning-tokarno-vintoreznye-stanki.html">Токарно-винторезный</a><a class="sol-chip" href="equipment-grinding-krugloshlifovalnye-stanki.html">Круглошлифовальный</a><a class="sol-chip" href="equipment-turning.html">Токарно-фрезерный</a></div></div>
-</div>
-</article>
-<article class="sol-part">
-<span class="sol-part-media"><img src="agro-04.png" alt="Корпус редуктора" loading="lazy"/></span>
-<div class="sol-part-info">
-<div class="sol-part-head"><span class="sol-part-num">04</span><h3>Корпус редуктора</h3></div>
-<p class="sol-ops"><b>Основные операции</b>растачивание посадочных отверстий, обработка плоскостей разъёма, сверление крепёжных отверстий.</p>
-<div class="sol-machines"><span class="sol-machines-label">Подходящие станки</span><div class="sol-chips"><a class="sol-chip" href="equipment-boring.html">Горизонтально-расточной</a><a class="sol-chip" href="equipment-boring-gorizontalno-rastochnye-stanki-s-chpu.html">Горизонтально-расточной с ЧПУ</a><a class="sol-chip" href="equipment-milling-frezernye-obrabatyvayuschie-centry.html">Вертикальный ОЦ</a><a class="sol-chip" href="equipment-drilling.html">Сверлильный станок</a></div></div>
-</div>
-</article>
-<article class="sol-part">
-<span class="sol-part-media"><img src="agro-05.png" alt="Звёздочка / шестерня-заготовка" loading="lazy"/></span>
-<div class="sol-part-info">
-<div class="sol-part-head"><span class="sol-part-num">05</span><h3>Звёздочка / шестерня-заготовка</h3></div>
-<p class="sol-ops"><b>Основные операции</b>фрезерование ступицы, обработка посадочного отверстия, фрезерование шпоночного паза.</p>
-<div class="sol-machines"><span class="sol-machines-label">Подходящие станки</span><div class="sol-chips"><a class="sol-chip" href="equipment-milling-frezernye-obrabatyvayuschie-centry.html">Вертикальный ОЦ</a><a class="sol-chip" href="equipment-milling.html">Фрезерный ОЦ</a><a class="sol-chip" href="equipment-boring.html">Горизонтально-расточной</a><a class="sol-chip" href="equipment-drilling.html">Сверлильный станок</a></div></div>
-</div>
-</article>
-<article class="sol-part">
-<span class="sol-part-media"><img src="agro-06.png" alt="Режущая кромка ковша" loading="lazy"/></span>
-<div class="sol-part-info">
-<div class="sol-part-head"><span class="sol-part-num">06</span><h3>Режущая кромка ковша</h3></div>
-<p class="sol-ops"><b>Основные операции</b>раскрой износостойкого листа, фрезерование профиля режущей кромки, сверление крепёжных отверстий.</p>
-<div class="sol-machines"><span class="sol-machines-label">Подходящие станки</span><div class="sol-chips"><a class="sol-chip" href="equipment-saw.html">Ленточнопильный станок</a><a class="sol-chip" href="equipment-saw-avtomaticheskie-dvuhstoechnye-lentochnye-pily.html">Автоматическая ленточная пила</a><a class="sol-chip" href="equipment-milling-frezernye-obrabatyvayuschie-centry.html">Вертикальный ОЦ</a><a class="sol-chip" href="equipment-waterjet.html">Гидроабразивная резка</a></div></div>
-</div>
-</article>
-</div>
-<div style="margin-top:44px;display:flex;gap:12px;flex-wrap:wrap">
-<a class="btn btn-ghost" href="index.html#quiz">Передать задачу технологу</a>
-</div>
-</div>
-</section>
-<section class="photo-source-note" id="photo-source-note">
-<div class="wrap">
-<p>Фото деталей используются как демонстрационные изображения для макета сайта. Перед публикацией можно заменить на ваши собственные производственные фото.</p>
-</div>
-</section>
+<div id="industryRoot"></div>
+<script src="industry-template.js"></script>
+<script>
+renderIndustryPage({
+  slug:"agro",
+  eyebrow:"Решение по отрасли",
+  title:"Сельскохозяйственное и дорожно-строительное машиностроение",
+  intro:"Гидроузлы, валы, корпуса редукторов и элементы навесного и ходового оборудования. Подбираем станки под мелкую и крупную серию.",
+  parts:[
+    {id:"korpus-gidrocilindra",title:"Корпус гидроцилиндра",image:"agro-01.png",task:"Растачивание внутреннего диаметра под хонингование, обработка торцов, нарезание присоединительных резьб.",operations:[{name:"Растачивание",slug:"boring"},{name:"Нарезание резьбы",slug:"threading"}],equipmentClassesLabel:"4 категории оборудования",solutionUrl:null,equipmentUrl:"equipment-turning-tokarno-vintoreznye-stanki.html"},
+    {id:"val-otbora-moschnosti",title:"Вал отбора мощности",image:"agro-02.png",task:"Точение шеек, нарезание шлицев, финишное шлифование под подшипники.",operations:[{name:"Точение",slug:"turning"},{name:"Шлифование",slug:"grinding"}],equipmentClassesLabel:"3 категории оборудования",solutionUrl:null,equipmentUrl:"equipment-turning.html"},
+    {id:"vtulka-os-sharnira",title:"Втулка / ось шарнира",image:"agro-03.png",task:"Точение наружных поверхностей, точение внутренних поверхностей, обработка канавок, обработка фасок.",operations:[{name:"Точение",slug:"turning"}],equipmentClassesLabel:"3 категории оборудования",solutionUrl:null,equipmentUrl:"equipment-turning.html"},
+    {id:"korpus-reduktora",title:"Корпус редуктора",image:"agro-04.png",task:"Растачивание посадочных отверстий, обработка плоскостей разъёма, сверление крепёжных отверстий.",operations:[{name:"Растачивание",slug:"boring"},{name:"Сверление",slug:"drilling"}],equipmentClassesLabel:"4 категории оборудования",solutionUrl:null,equipmentUrl:"equipment-boring.html"},
+    {id:"zvezdochka-shesternya-zagotovka",title:"Звёздочка / шестерня-заготовка",image:"agro-05.png",task:"Фрезерование ступицы, обработка посадочного отверстия, фрезерование шпоночного паза.",operations:[{name:"Фрезерование",slug:"milling"}],equipmentClassesLabel:"4 категории оборудования",solutionUrl:null,equipmentUrl:"equipment-milling-frezernye-obrabatyvayuschie-centry.html"},
+    {id:"rezhuschaya-kromka-kovsha",title:"Режущая кромка ковша",image:"agro-06.png",task:"Раскрой износостойкого листа, фрезерование профиля режущей кромки, сверление крепёжных отверстий.",operations:[{name:"Фрезерование",slug:"milling"},{name:"Сверление",slug:"drilling"}],equipmentClassesLabel:"4 категории оборудования",solutionUrl:null,equipmentUrl:"equipment-saw.html"}
+  ]
+});
+</script>
 </main>
 <footer>
   <div class="wrap">

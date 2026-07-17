@@ -1,0 +1,91 @@
+/* ===== Шаблон отраслевой страницы решений (переиспользуется для всех 9 отраслей) ===== */
+
+.ind-crumbs{padding:14px 0 4px}
+.ind-crumbs ol{display:flex;flex-wrap:wrap;align-items:center;gap:8px;list-style:none;font-family:'PT Root UI',sans-serif;font-size:12.5px;color:var(--muted)}
+.ind-crumbs li{display:flex;align-items:center;gap:8px}
+.ind-crumbs li:not(:last-child)::after{content:'→';color:rgba(26,26,26,.25);font-size:11px}
+.ind-crumbs a{color:var(--muted);text-decoration:none;transition:color .16s ease}
+.ind-crumbs a:hover{color:var(--ce)}
+.ind-crumbs li[aria-current="page"]{color:var(--sg);font-weight:600}
+
+/* ===== Шапка страницы (как в solution-aero.html и др.) ===== */
+.ind-hero{padding:clamp(4px,1vw,14px) 0 clamp(26px,3vw,38px)}
+.ind-eyebrow{display:flex;align-items:center;gap:16px;font-family:'Magistral',sans-serif;font-weight:600;font-size:clamp(24px,2.6vw,34px);letter-spacing:-.01em;color:var(--bm);margin-bottom:8px}
+.ind-eyebrow::before{content:'';width:40px;height:3px;flex:0 0 auto;background:linear-gradient(90deg,var(--gold),var(--ce))}
+.ind-title{font-family:'Magistral',sans-serif;font-weight:700;font-size:clamp(34px,4.4vw,58px);line-height:1.02;letter-spacing:-.015em;color:var(--bm);margin:2px 0 18px}
+.ind-title::after{content:'';display:block;width:72px;height:3px;margin-top:22px;background:var(--gold)}
+.ind-intro{font-family:'Golos Text',sans-serif;font-weight:400;font-size:16px;line-height:1.65;color:var(--mid);max-width:760px;margin:0}
+
+/* ===== Сетка деталей ===== */
+.ind-grid-section{padding:clamp(30px,3.6vw,48px) 0}
+.ind-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px 20px}
+
+.ind-card{position:relative;display:flex;flex-direction:column;height:100%;transition:transform .2s ease}
+.ind-card:hover{transform:translateY(-3px)}
+.ind-card-media2{position:relative;z-index:2;height:clamp(200px,18vw,260px);display:flex;align-items:flex-end;justify-content:center;margin-bottom:-56px;pointer-events:none}
+.ind-card-media2 img{max-width:92%;max-height:100%;width:auto;height:auto;object-fit:contain;filter:drop-shadow(0 18px 20px rgba(26,26,26,.22));transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+.ind-card:hover .ind-card-media2 img{transform:scale(1.03)}
+.ind-card-panel{position:relative;z-index:1;flex:1;display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:0 10px 30px rgba(26,26,26,.05);padding:60px 20px 20px}
+.ind-card-title2{margin:0 0 18px;text-align:left;font-family:'Magistral',sans-serif;font-weight:700;font-size:clamp(23px,1.9vw,28px);line-height:1.15;color:var(--bm)}
+.ind-card-title2,.ind-card-title2 a{-webkit-text-stroke:.55px currentColor}
+.ind-card-title-link{color:inherit;text-decoration:none}
+.ind-card-title-link:hover{color:var(--ce)}
+.ind-card-title-link:focus-visible{outline:2px solid var(--ce);outline-offset:2px;border-radius:4px}
+
+.ind-card-label{display:block;font-family:'PT Root UI',sans-serif;font-weight:600;font-size:13px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
+.ind-card-label--task{color:var(--gold)}
+.ind-card-label--route{color:var(--ce)}
+.ind-card-task{margin-bottom:24px}
+.ind-card-task p{margin:0;font-family:'Golos Text',sans-serif;font-weight:400;font-size:16.5px;line-height:1.5;color:var(--sg)}
+
+.ind-card-route{margin-bottom:30px}
+.ind-ops{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.ind-op{position:relative;display:inline-flex;align-items:center;justify-content:center;justify-self:stretch;gap:6px;padding:9px 11px;border:1px solid rgba(107,45,139,.22);border-radius:7px;background:rgba(107,45,139,.03);font-family:'PT Root UI',sans-serif;font-weight:500;font-size:13px;color:var(--sg);text-align:center;cursor:default;transition:background .22s ease,border-color .22s ease,color .22s ease}
+.ind-op:hover,.ind-op:focus-visible{background:linear-gradient(120deg,#7a3c9c 0%,#6B2D8B 50%,#63297e 100%);border-color:transparent;color:#fff}
+.ind-op svg{width:15px;height:15px;flex:0 0 auto;fill:none;stroke:var(--ce);stroke-width:1.7;transition:stroke .22s ease}
+.ind-op:hover svg,.ind-op:focus-visible svg{stroke:#fff}
+.ind-op-tooltip{position:absolute;left:50%;bottom:calc(100% + 8px);transform:translateX(-50%) translateY(4px);width:max-content;max-width:220px;padding:9px 11px;background:#1a1a1a;color:#f0f0ee;font-family:'PT Root UI',sans-serif;font-size:11.5px;line-height:1.4;border-radius:8px;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .16s ease,transform .16s ease;z-index:5}
+.ind-op-tooltip::after{content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);border:5px solid transparent;border-top-color:#1a1a1a}
+.ind-op:hover .ind-op-tooltip,.ind-op:focus-visible .ind-op-tooltip{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+
+.ind-card-actions{margin-top:auto;display:flex;gap:10px}
+.ind-card-actions .btn{flex:1 1 0;min-width:0;min-height:44px;height:auto;padding:10px 12px;font-size:11px;line-height:1.3;border-radius:8px;white-space:normal;text-align:center}
+.ind-btn-solution{background:linear-gradient(120deg,#7a3c9c 0%,#6B2D8B 50%,#63297e 100%);color:#fff;border-color:transparent;box-shadow:0 10px 26px rgba(107,45,139,.24),inset 0 1px 0 rgba(255,255,255,.14);transition:filter .2s ease,box-shadow .2s ease}
+.ind-btn-solution:hover{filter:brightness(1.15);background:linear-gradient(120deg,#7a3c9c 0%,#6B2D8B 50%,#63297e 100%);border-color:transparent}
+.ind-btn-solution[disabled]{background:var(--tl2);color:var(--muted);border-color:rgba(26,26,26,.14);box-shadow:none;cursor:not-allowed}
+.ind-btn-solution[disabled]:hover{filter:none;background:var(--tl2);border-color:rgba(26,26,26,.14)}
+.ind-btn-equipment{background:linear-gradient(120deg,#8f9397 0%,#787d81 50%,#61656a 100%);color:#fff;border-color:transparent;box-shadow:0 10px 26px rgba(26,26,26,.18),inset 0 1px 0 rgba(255,255,255,.16);transition:filter .2s ease,box-shadow .2s ease}
+.ind-btn-equipment:hover{filter:brightness(1.15);background:linear-gradient(120deg,#8f9397 0%,#787d81 50%,#61656a 100%);border-color:transparent}
+
+/* ===== Блок преимуществ (во всю ширину страницы) ===== */
+.ind-advantages{padding:clamp(34px,4vw,52px) 0;border-top:1px solid var(--line)}
+.ind-adv-grid{width:100%;padding-inline:clamp(24px,4.4vw,84px);display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0}
+.ind-adv-item{position:relative;padding:0 32px}
+.ind-adv-item:first-child{padding-left:0}
+.ind-adv-item:not(:first-child){border-left:1px solid var(--line)}
+.ind-adv-icon{width:44px;height:44px;margin-bottom:16px;color:var(--ce)}
+.ind-adv-icon svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.4}
+.ind-adv-item h4{font-family:'Golos Text',sans-serif;font-weight:600;font-size:18px;color:var(--bm);margin:0 0 10px}
+.ind-adv-item p{font-family:'Golos Text',sans-serif;font-weight:400;font-size:14.5px;line-height:1.55;color:var(--mid);margin:0}
+
+@media(max-width:1279px){
+  .ind-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ind-adv-grid{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:28px}
+  .ind-adv-item:nth-child(2){border-left:1px solid var(--line)}
+  .ind-adv-item:nth-child(3){border-left:0;padding-left:0;padding-top:24px;border-top:1px solid var(--line)}
+  .ind-adv-item:nth-child(4){padding-top:24px;border-top:1px solid var(--line)}
+}
+@media(max-width:900px){
+  .ind-ops{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .ind-card-media2{margin-bottom:-28px}
+}
+@media(max-width:767px){
+  .ind-grid{grid-template-columns:1fr}
+  .ind-title{font-size:clamp(32px,9vw,44px)}
+  .ind-card-actions{flex-direction:column}
+  .ind-ops{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ind-adv-grid{grid-template-columns:1fr;row-gap:24px}
+  .ind-adv-item{border-left:0!important;padding:0!important}
+  .ind-adv-item:not(:first-child){padding-top:24px!important;border-top:1px solid var(--line)!important}
+}
+@media(prefers-reduced-motion:reduce){.ind-card,.ind-card-media2 img,.ind-op-tooltip{transition:none}}

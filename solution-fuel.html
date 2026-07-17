@@ -15,12 +15,12 @@
   --gold:#C9A227;
   --tl:#EAEAE6;--tl2:#F5F5F3;--paper:#EDEEF0;--paper2:#E4E5E8;--white:#fff;
   --line:rgba(26,26,26,.10);--line2:rgba(234,234,230,.08);
-  --max:1400px;--shadow:0 24px 70px rgba(26,26,26,.10);
+  --max:1600px;--shadow:0 24px 70px rgba(26,26,26,.10);
 }
 html{scroll-behavior:smooth}
 body{font-family:'Golos Text',sans-serif;background:var(--paper);color:var(--bm);-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
-.wrap{width:min(calc(100% - 48px),var(--max));margin-left:clamp(24px,4.4vw,84px);margin-right:auto}
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding-inline:clamp(24px,4.4vw,84px)}
 .mono{font-family:'Golos Text',monospace}.disp{font-family:'Magistral',sans-serif}
 .eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:'Golos Text',monospace;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--ce);margin-bottom:.85rem}
 .eyebrow::before{content:'';width:22px;height:1.5px;background:var(--ce)}
@@ -1609,80 +1609,30 @@ footer{background:var(--bm);color:rgba(234,234,230,.55);padding:3rem 0 2rem;bord
 @media(max-width:640px){.sol-part-grid{grid-template-columns:1fr}}
 </style>
 <link rel="stylesheet" href="site-shell.css"/>
+<link rel="stylesheet" href="industry-solutions.css"/>
 </head>
 <body class="premium-v3">
 <header></header>
 <main>
 
-<section class="auto-parts-section">
-<div class="wrap">
-<div class="sec-head" style="align-items:flex-start">
-<div>
-<div class="eyebrow">Решение по отрасли</div>
-<h1 class="product-title" style="font-size:clamp(30px,4.4vw,56px);letter-spacing:-.018em;margin:10px 0 14px">Топливно-энергетический сектор</h1>
-<p class="product-lead" style="max-width:760px;margin-bottom:8px">Трубопроводная арматура, насосные корпуса и детали технологических линий. Подбираем оборудование под давление, коррозионную стойкость и точность.</p>
-</div>
-</div>
-<div class="sol-part-grid">
-<article class="sol-part">
-<span class="sol-part-media"><img src="fuel-01.png" alt="Корпус задвижки" loading="lazy"/></span>
-<div class="sol-part-info">
-<div class="sol-part-head"><span class="sol-part-num">01</span><h3>Корпус задвижки</h3></div>
-<p class="sol-ops"><b>Основные операции</b>обработка проходного канала, обработка уплотнительных поверхностей, обработка присоединительных фланцев.</p>
-<div class="sol-machines"><span class="sol-machines-label">Подходящие станки</span><div class="sol-chips"><a class="sol-chip" href="equipment-milling-frezernye-obrabatyvayuschie-centry.html">Вертикальный ОЦ</a><a class="sol-chip" href="equipment-boring.html">Горизонтально-расточной</a><a class="sol-chip" href="equipment-boring-gorizontalno-rastochnye-stanki-s-chpu.html">Горизонтально-расточной с ЧПУ</a><a class="sol-chip" href="equipment-drilling.html">Сверлильный станок</a></div></div>
-</div>
-</article>
-<article class="sol-part">
-<span class="sol-part-media"><img src="fuel-02.png" alt="Шаровая пробка крана" loading="lazy"/></span>
-<div class="sol-part-info">
-<div class="sol-part-head"><span class="sol-part-num">02</span><h3>Шаровая пробка крана</h3></div>
-<p class="sol-ops"><b>Основные операции</b>точение сферы, финишное шлифование, полировка уплотнительной поверхности.</p>
-<div class="sol-machines"><span class="sol-machines-label">Подходящие станки</span><div class="sol-chips"><a class="sol-chip" href="equipment-turning.html">Токарный ЧПУ</a><a class="sol-chip" href="equipment-grinding-krugloshlifovalnye-stanki.html">Круглошлифовальный</a><a class="sol-chip" href="equipment-turning.html">Токарно-фрезерный</a><a class="sol-chip" href="equipment-grinding.html">Шлифовальный станок</a></div></div>
-</div>
-</article>
-<article class="sol-part">
-<span class="sol-part-media"><img src="fuel-03.png" alt="Трубный фланец" loading="lazy"/></span>
-<div class="sol-part-info">
-<div class="sol-part-head"><span class="sol-part-num">03</span><h3>Трубный фланец</h3></div>
-<p class="sol-ops"><b>Основные операции</b>точение уплотнительной поверхности, сверление отверстий под шпильки, обработка торцов.</p>
-<div class="sol-machines"><span class="sol-machines-label">Подходящие станки</span><div class="sol-chips"><a class="sol-chip" href="equipment-turning.html">Токарный ЧПУ</a><a class="sol-chip" href="equipment-drilling-radialno-sverlilnye-stanki.html">Радиально-сверлильный</a><a class="sol-chip" href="equipment-turning-tokarno-vintoreznye-stanki.html">Токарно-винторезный</a><a class="sol-chip" href="equipment-drilling.html">Сверлильный станок</a></div></div>
-</div>
-</article>
-<article class="sol-part">
-<span class="sol-part-media"><img src="fuel-04.png" alt="Корпус насоса" loading="lazy"/></span>
-<div class="sol-part-info">
-<div class="sol-part-head"><span class="sol-part-num">04</span><h3>Корпус насоса</h3></div>
-<p class="sol-ops"><b>Основные операции</b>растачивание посадок под рабочее колесо, растачивание посадок под подшипники, обработка плоскости разъёма.</p>
-<div class="sol-machines"><span class="sol-machines-label">Подходящие станки</span><div class="sol-chips"><a class="sol-chip" href="equipment-boring.html">Горизонтально-расточной</a><a class="sol-chip" href="equipment-boring-gorizontalno-rastochnye-stanki-s-chpu.html">Горизонтально-расточной с ЧПУ</a><a class="sol-chip" href="equipment-milling-frezernye-obrabatyvayuschie-centry.html">Вертикальный ОЦ</a><a class="sol-chip" href="equipment-boring-gorizontalno-rastochnye-stanki-s-uci.html">Расточной с УЦИ</a></div></div>
-</div>
-</article>
-<article class="sol-part">
-<span class="sol-part-media"><img src="fuel-05.png" alt="Шпиндель арматуры" loading="lazy"/></span>
-<div class="sol-part-info">
-<div class="sol-part-head"><span class="sol-part-num">05</span><h3>Шпиндель арматуры</h3></div>
-<p class="sol-ops"><b>Основные операции</b>точение тела, нарезание ходовой резьбы, обработка уплотнений, финишное шлифование.</p>
-<div class="sol-machines"><span class="sol-machines-label">Подходящие станки</span><div class="sol-chips"><a class="sol-chip" href="equipment-turning.html">Токарный ЧПУ</a><a class="sol-chip" href="equipment-turning-tokarno-vintoreznye-stanki.html">Токарно-винторезный</a><a class="sol-chip" href="equipment-grinding-krugloshlifovalnye-stanki.html">Круглошлифовальный</a><a class="sol-chip" href="equipment-turning.html">Токарно-фрезерный</a></div></div>
-</div>
-</article>
-<article class="sol-part">
-<span class="sol-part-media"><img src="fuel-06.png" alt="Трубная решётка" loading="lazy"/></span>
-<div class="sol-part-info">
-<div class="sol-part-head"><span class="sol-part-num">06</span><h3>Трубная решётка</h3></div>
-<p class="sol-ops"><b>Основные операции</b>сверление массива отверстий по шаблону, фрезерование плоскостей, контроль геометрии.</p>
-<div class="sol-machines"><span class="sol-machines-label">Подходящие станки</span><div class="sol-chips"><a class="sol-chip" href="equipment-drilling-radialno-sverlilnye-stanki.html">Радиально-сверлильный</a><a class="sol-chip" href="equipment-drilling.html">Сверлильный станок</a><a class="sol-chip" href="equipment-milling-frezernye-obrabatyvayuschie-centry.html">Вертикальный ОЦ</a><a class="sol-chip" href="equipment-milling.html">Фрезерный ОЦ</a></div></div>
-</div>
-</article>
-</div>
-<div style="margin-top:44px;display:flex;gap:12px;flex-wrap:wrap">
-<a class="btn btn-ghost" href="index.html#quiz">Передать задачу технологу</a>
-</div>
-</div>
-</section>
-<section class="photo-source-note" id="photo-source-note">
-<div class="wrap">
-<p>Фото деталей используются как демонстрационные изображения для макета сайта. Перед публикацией можно заменить на ваши собственные производственные фото.</p>
-</div>
-</section>
+<div id="industryRoot"></div>
+<script src="industry-template.js"></script>
+<script>
+renderIndustryPage({
+  slug:"fuel",
+  eyebrow:"Решение по отрасли",
+  title:"Топливно-энергетический сектор",
+  intro:"Трубопроводная арматура, насосные корпуса и детали технологических линий. Подбираем оборудование под давление, коррозионную стойкость и точность.",
+  parts:[
+    {id:"korpus-zadvizhki",title:"Корпус задвижки",image:"fuel-01.png",task:"Обработка проходного канала, обработка уплотнительных поверхностей, обработка присоединительных фланцев.",operations:[{name:"Фрезерование",slug:"milling"},{name:"Растачивание",slug:"boring"},{name:"Сверление",slug:"drilling"}],equipmentClassesLabel:"4 категории оборудования",solutionUrl:null,equipmentUrl:"equipment-milling-frezernye-obrabatyvayuschie-centry.html"},
+    {id:"sharovaya-probka-krana",title:"Шаровая пробка крана",image:"fuel-02.png",task:"Точение сферы, финишное шлифование, полировка уплотнительной поверхности.",operations:[{name:"Точение",slug:"turning"},{name:"Шлифование",slug:"grinding"}],equipmentClassesLabel:"3 категории оборудования",solutionUrl:null,equipmentUrl:"equipment-turning.html"},
+    {id:"trubnyy-flanec",title:"Трубный фланец",image:"fuel-03.png",task:"Точение уплотнительной поверхности, сверление отверстий под шпильки, обработка торцов.",operations:[{name:"Точение",slug:"turning"},{name:"Сверление",slug:"drilling"}],equipmentClassesLabel:"4 категории оборудования",solutionUrl:null,equipmentUrl:"equipment-turning.html"},
+    {id:"korpus-nasosa",title:"Корпус насоса",image:"fuel-04.png",task:"Растачивание посадок под рабочее колесо, растачивание посадок под подшипники, обработка плоскости разъёма.",operations:[{name:"Растачивание",slug:"boring"}],equipmentClassesLabel:"4 категории оборудования",solutionUrl:null,equipmentUrl:"equipment-boring.html"},
+    {id:"shpindel-armatury",title:"Шпиндель арматуры",image:"fuel-05.png",task:"Точение тела, нарезание ходовой резьбы, обработка уплотнений, финишное шлифование.",operations:[{name:"Точение",slug:"turning"},{name:"Нарезание резьбы",slug:"threading"},{name:"Шлифование",slug:"grinding"}],equipmentClassesLabel:"3 категории оборудования",solutionUrl:null,equipmentUrl:"equipment-turning.html"},
+    {id:"trubnaya-reshetka",title:"Трубная решётка",image:"fuel-06.png",task:"Сверление массива отверстий по шаблону, фрезерование плоскостей, контроль геометрии.",operations:[{name:"Сверление",slug:"drilling"},{name:"Фрезерование",slug:"milling"},{name:"Контроль",slug:"quality-control"}],equipmentClassesLabel:"4 категории оборудования",solutionUrl:null,equipmentUrl:"equipment-drilling-radialno-sverlilnye-stanki.html"}
+  ]
+});
+</script>
 </main>
 <footer>
   <div class="wrap">

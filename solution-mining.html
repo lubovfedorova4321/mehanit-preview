@@ -15,12 +15,12 @@
   --gold:#C9A227;
   --tl:#EAEAE6;--tl2:#F5F5F3;--paper:#EDEEF0;--paper2:#E4E5E8;--white:#fff;
   --line:rgba(26,26,26,.10);--line2:rgba(234,234,230,.08);
-  --max:1400px;--shadow:0 24px 70px rgba(26,26,26,.10);
+  --max:1600px;--shadow:0 24px 70px rgba(26,26,26,.10);
 }
 html{scroll-behavior:smooth}
 body{font-family:'Golos Text',sans-serif;background:var(--paper);color:var(--bm);-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
-.wrap{width:min(calc(100% - 48px),var(--max));margin-left:clamp(24px,4.4vw,84px);margin-right:auto}
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding-inline:clamp(24px,4.4vw,84px)}
 .mono{font-family:'Golos Text',monospace}.disp{font-family:'Magistral',sans-serif}
 .eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:'Golos Text',monospace;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--ce);margin-bottom:.85rem}
 .eyebrow::before{content:'';width:22px;height:1.5px;background:var(--ce)}
@@ -1609,80 +1609,30 @@ footer{background:var(--bm);color:rgba(234,234,230,.55);padding:3rem 0 2rem;bord
 @media(max-width:640px){.sol-part-grid{grid-template-columns:1fr}}
 </style>
 <link rel="stylesheet" href="site-shell.css"/>
+<link rel="stylesheet" href="industry-solutions.css"/>
 </head>
 <body class="premium-v3">
 <header></header>
 <main>
 
-<section class="auto-parts-section">
-<div class="wrap">
-<div class="sec-head" style="align-items:flex-start">
-<div>
-<div class="eyebrow">Решение по отрасли</div>
-<h1 class="product-title" style="font-size:clamp(30px,4.4vw,56px);letter-spacing:-.018em;margin:10px 0 14px">Горнорудная промышленность</h1>
-<p class="product-lead" style="max-width:760px;margin-bottom:8px">Крупные валы, корпусные детали и износостойкие узлы горного оборудования. Станки — под большие габариты и тяжёлые режимы.</p>
-</div>
-</div>
-<div class="sol-part-grid">
-<article class="sol-part">
-<span class="sol-part-media"><img src="mining-01.png" alt="Приводной вал" loading="lazy"/></span>
-<div class="sol-part-info">
-<div class="sol-part-head"><span class="sol-part-num">01</span><h3>Приводной вал</h3></div>
-<p class="sol-ops"><b>Основные операции</b>точение длинного вала, обработка шеек, фрезерование шпоночных пазов, обработка посадочных конусов.</p>
-<div class="sol-machines"><span class="sol-machines-label">Подходящие станки</span><div class="sol-chips"><a class="sol-chip" href="equipment-turning-tokarno-vintoreznye-stanki.html">Токарно-винторезный</a><a class="sol-chip" href="equipment-turning.html">Токарный ЧПУ</a><a class="sol-chip" href="equipment-milling-universalnye-frezernye-stanki.html">Универсальный фрезерный</a><a class="sol-chip" href="equipment-grinding-krugloshlifovalnye-stanki.html">Круглошлифовальный</a></div></div>
-</div>
-</article>
-<article class="sol-part">
-<span class="sol-part-media"><img src="mining-02.png" alt="Корпус подшипникового узла" loading="lazy"/></span>
-<div class="sol-part-info">
-<div class="sol-part-head"><span class="sol-part-num">02</span><h3>Корпус подшипникового узла</h3></div>
-<p class="sol-ops"><b>Основные операции</b>растачивание посадок под подшипники, обработка опорных плоскостей, сверление крепёжных отверстий.</p>
-<div class="sol-machines"><span class="sol-machines-label">Подходящие станки</span><div class="sol-chips"><a class="sol-chip" href="equipment-boring.html">Горизонтально-расточной</a><a class="sol-chip" href="equipment-boring-gorizontalno-rastochnye-stanki-s-chpu.html">Горизонтально-расточной с ЧПУ</a><a class="sol-chip" href="equipment-milling-frezernye-obrabatyvayuschie-centry.html">Вертикальный ОЦ</a><a class="sol-chip" href="equipment-drilling.html">Сверлильный станок</a></div></div>
-</div>
-</article>
-<article class="sol-part">
-<span class="sol-part-media"><img src="mining-03.png" alt="Зуб ковша / коронка" loading="lazy"/></span>
-<div class="sol-part-info">
-<div class="sol-part-head"><span class="sol-part-num">03</span><h3>Зуб ковша / коронка</h3></div>
-<p class="sol-ops"><b>Основные операции</b>раскрой износостойкой заготовки, фрезерование посадочного профиля, термообработка кромки.</p>
-<div class="sol-machines"><span class="sol-machines-label">Подходящие станки</span><div class="sol-chips"><a class="sol-chip" href="equipment-saw.html">Ленточнопильный станок</a><a class="sol-chip" href="equipment-saw-avtomaticheskie-dvuhstoechnye-lentochnye-pily.html">Автоматическая ленточная пила</a><a class="sol-chip" href="equipment-milling-frezernye-obrabatyvayuschie-centry.html">Вертикальный ОЦ</a><a class="sol-chip" href="equipment-waterjet.html">Гидроабразивная резка</a></div></div>
-</div>
-</article>
-<article class="sol-part">
-<span class="sol-part-media"><img src="mining-04.png" alt="Барабан лебёдки" loading="lazy"/></span>
-<div class="sol-part-info">
-<div class="sol-part-head"><span class="sol-part-num">04</span><h3>Барабан лебёдки</h3></div>
-<p class="sol-ops"><b>Основные операции</b>точение обечайки, обработка канавок под канат, обработка посадочных мест.</p>
-<div class="sol-machines"><span class="sol-machines-label">Подходящие станки</span><div class="sol-chips"><a class="sol-chip" href="equipment-turning-tokarno-karuselnye-stanki.html">Токарно-карусельный</a><a class="sol-chip" href="equipment-turning.html">Токарный ЧПУ</a><a class="sol-chip" href="equipment-turning-tokarno-vintoreznye-stanki.html">Токарно-винторезный</a><a class="sol-chip" href="equipment-boring.html">Горизонтально-расточной</a></div></div>
-</div>
-</article>
-<article class="sol-part">
-<span class="sol-part-media"><img src="mining-05.png" alt="Шестерня-заготовка" loading="lazy"/></span>
-<div class="sol-part-info">
-<div class="sol-part-head"><span class="sol-part-num">05</span><h3>Шестерня-заготовка</h3></div>
-<p class="sol-ops"><b>Основные операции</b>фрезерование ступицы, обработка посадочного отверстия под нарезание зубьев, сверление.</p>
-<div class="sol-machines"><span class="sol-machines-label">Подходящие станки</span><div class="sol-chips"><a class="sol-chip" href="equipment-milling-frezernye-obrabatyvayuschie-centry.html">Вертикальный ОЦ</a><a class="sol-chip" href="equipment-boring.html">Горизонтально-расточной</a><a class="sol-chip" href="equipment-milling.html">Фрезерный ОЦ</a><a class="sol-chip" href="equipment-drilling.html">Сверлильный станок</a></div></div>
-</div>
-</article>
-<article class="sol-part">
-<span class="sol-part-media"><img src="mining-06.png" alt="Футеровочная плита" loading="lazy"/></span>
-<div class="sol-part-info">
-<div class="sol-part-head"><span class="sol-part-num">06</span><h3>Футеровочная плита</h3></div>
-<p class="sol-ops"><b>Основные операции</b>фрезерование опорных поверхностей, обработка крепёжных отверстий износостойкой плиты, раскрой заготовки.</p>
-<div class="sol-machines"><span class="sol-machines-label">Подходящие станки</span><div class="sol-chips"><a class="sol-chip" href="equipment-milling-portalnye-frezernye-centry.html">Портальный ОЦ</a><a class="sol-chip" href="equipment-drilling.html">Сверлильный станок</a><a class="sol-chip" href="equipment-milling.html">Фрезерный ОЦ</a><a class="sol-chip" href="equipment-saw.html">Ленточнопильный станок</a></div></div>
-</div>
-</article>
-</div>
-<div style="margin-top:44px;display:flex;gap:12px;flex-wrap:wrap">
-<a class="btn btn-ghost" href="index.html#quiz">Передать задачу технологу</a>
-</div>
-</div>
-</section>
-<section class="photo-source-note" id="photo-source-note">
-<div class="wrap">
-<p>Фото деталей используются как демонстрационные изображения для макета сайта. Перед публикацией можно заменить на ваши собственные производственные фото.</p>
-</div>
-</section>
+<div id="industryRoot"></div>
+<script src="industry-template.js"></script>
+<script>
+renderIndustryPage({
+  slug:"mining",
+  eyebrow:"Решение по отрасли",
+  title:"Горнорудная промышленность",
+  intro:"Крупные валы, корпусные детали и износостойкие узлы горного оборудования. Станки — под большие габариты и тяжёлые режимы.",
+  parts:[
+    {id:"privodnoy-val",title:"Приводной вал",image:"mining-01.png",task:"Точение длинного вала, обработка шеек, фрезерование шпоночных пазов, обработка посадочных конусов.",operations:[{name:"Точение",slug:"turning"},{name:"Фрезерование",slug:"milling"}],equipmentClassesLabel:"4 категории оборудования",solutionUrl:null,equipmentUrl:"equipment-turning-tokarno-vintoreznye-stanki.html"},
+    {id:"korpus-podshipnikovogo-uzla",title:"Корпус подшипникового узла",image:"mining-02.png",task:"Растачивание посадок под подшипники, обработка опорных плоскостей, сверление крепёжных отверстий.",operations:[{name:"Растачивание",slug:"boring"},{name:"Сверление",slug:"drilling"}],equipmentClassesLabel:"4 категории оборудования",solutionUrl:null,equipmentUrl:"equipment-boring.html"},
+    {id:"zub-kovsha-koronka",title:"Зуб ковша / коронка",image:"mining-03.png",task:"Раскрой износостойкой заготовки, фрезерование посадочного профиля, термообработка кромки.",operations:[{name:"Фрезерование",slug:"milling"}],equipmentClassesLabel:"4 категории оборудования",solutionUrl:null,equipmentUrl:"equipment-saw.html"},
+    {id:"baraban-lebedki",title:"Барабан лебёдки",image:"mining-04.png",task:"Точение обечайки, обработка канавок под канат, обработка посадочных мест.",operations:[{name:"Точение",slug:"turning"}],equipmentClassesLabel:"4 категории оборудования",solutionUrl:null,equipmentUrl:"equipment-turning-tokarno-karuselnye-stanki.html"},
+    {id:"shesternya-zagotovka",title:"Шестерня-заготовка",image:"mining-05.png",task:"Фрезерование ступицы, обработка посадочного отверстия под нарезание зубьев, сверление.",operations:[{name:"Фрезерование",slug:"milling"},{name:"Сверление",slug:"drilling"}],equipmentClassesLabel:"4 категории оборудования",solutionUrl:null,equipmentUrl:"equipment-milling-frezernye-obrabatyvayuschie-centry.html"},
+    {id:"futerovochnaya-plita",title:"Футеровочная плита",image:"mining-06.png",task:"Фрезерование опорных поверхностей, обработка крепёжных отверстий износостойкой плиты, раскрой заготовки.",operations:[{name:"Фрезерование",slug:"milling"}],equipmentClassesLabel:"4 категории оборудования",solutionUrl:null,equipmentUrl:"equipment-milling-portalnye-frezernye-centry.html"}
+  ]
+});
+</script>
 </main>
 <footer>
   <div class="wrap">

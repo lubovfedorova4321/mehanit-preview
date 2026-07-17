@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Отраслевые решения — каталог по отраслям производства | Механит</title>
+<meta name="description" content="Готовые технологические решения ГК «Механит» по отраслям производства: автомобильная, авиационная, судостроение, железнодорожное машиностроение и другие."/>
+<link rel="canonical" href="https://mehanit.ru/solutions.html"/>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Главная","item":"https://mehanit.ru/"},
+    {"@type":"ListItem","position":2,"name":"Отраслевые решения","item":"https://mehanit.ru/solutions.html"}
+  ]
+}
+</script>
+<style>
+@font-face{font-family:'Magistral';src:url('fonts/Magistral-Regular.otf') format('opentype');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Magistral';src:url('fonts/Magistral-Bold.otf') format('opentype');font-weight:600 700;font-style:normal;font-display:swap}
+@font-face{font-family:'PT Root UI';src:url('fonts/PT-Root-UI_Regular.ttf') format('truetype');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'PT Root UI';src:url('fonts/PT-Root-UI_Medium.ttf') format('truetype');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:'PT Root UI';src:url('fonts/PT-Root-UI_Bold.ttf') format('truetype');font-weight:600 700;font-style:normal;font-display:swap}
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bm:#1A1A1A;--sg:#3D3D3D;--sg2:#2B2E31;--mid:#696D71;--muted:#8A9096;
+  --ce:#6B2D8B;--ce2:rgba(107,45,139,.10);--ce3:rgba(107,45,139,.20);--ceHover:#7d3aa0;
+  --gold:#C9A227;
+  --tl:#EAEAE6;--tl2:#F5F5F3;--paper:#EDEEF0;--paper2:#E4E5E8;--white:#fff;
+  --line:rgba(26,26,26,.10);--line2:rgba(234,234,230,.08);
+  --max:1600px;--shadow:0 24px 70px rgba(26,26,26,.10);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Golos Text',sans-serif;background:var(--paper);color:var(--bm);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding-inline:clamp(24px,4.4vw,84px)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1.5px solid transparent;min-height:48px;padding:0 22px;font-size:11px;font-weight:600;letter-spacing:.04em;font-family:'PT Root UI',sans-serif;transition:.18s;border-radius:8px;cursor:pointer}
+main{padding-bottom:clamp(20px,3vw,32px)}
+
+.sol-hero{padding:clamp(4px,1vw,14px) 0 clamp(26px,3vw,38px)}
+.sol-title{font-family:'Magistral',sans-serif;font-weight:700;font-size:clamp(34px,4.4vw,58px);line-height:1.02;letter-spacing:-.015em;color:var(--bm);margin:2px 0 18px}
+.title-row{display:flex;align-items:center;gap:16px}
+.title-dash{flex:0 0 auto;width:40px;height:3px;background:linear-gradient(90deg,var(--gold),var(--ce))}
+.sol-title::after{content:'';display:block;width:72px;height:3px;margin-top:22px;background:var(--gold)}
+.sol-intro{font-family:'Golos Text',sans-serif;font-weight:400;font-size:16px;line-height:1.65;color:var(--mid);max-width:760px;margin:0}
+
+.sol-grid-section{padding:clamp(20px,3vw,36px) 0 clamp(50px,6vw,84px)}
+.sol-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(28px,3vw,44px) clamp(20px,2.4vw,32px)}
+.sol-tile{display:flex;flex-direction:column;transition:transform .2s ease}
+.sol-tile:hover{transform:translateY(-3px)}
+.sol-tile-media{position:relative;z-index:2;height:clamp(150px,13vw,196px);display:flex;align-items:flex-end;justify-content:center;margin-bottom:-40px;pointer-events:none}
+.sol-tile-media img{max-width:82%;max-height:100%;width:auto;height:auto;object-fit:contain;filter:drop-shadow(0 18px 20px rgba(26,26,26,.22));transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+.sol-tile:hover .sol-tile-media img{transform:scale(1.05)}
+.sol-tile-panel{position:relative;z-index:1;flex:1;display:flex;align-items:center;min-height:118px;background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:0 10px 30px rgba(26,26,26,.05);padding:52px 24px 22px;transition:box-shadow .2s ease,border-color .2s ease}
+.sol-tile:hover .sol-tile-panel{box-shadow:0 18px 42px rgba(26,26,26,.09);border-color:rgba(26,26,26,.16)}
+.sol-tile-panel h3{margin:0;font-family:'Golos Text',sans-serif;font-weight:700;font-size:16.5px;line-height:1.3;color:var(--bm);text-transform:uppercase;letter-spacing:.01em}
+.sol-tile-arrow{margin-left:auto;flex:0 0 auto;font-size:19px;color:var(--ce);transition:transform .2s ease}
+.sol-tile:hover .sol-tile-arrow{transform:translateX(5px)}
+
+@media(max-width:1279px){
+  .sol-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:640px){
+  .sol-grid{grid-template-columns:1fr}
+  .sol-title{font-size:clamp(32px,9vw,44px)}
+}
+@media(prefers-reduced-motion:reduce){.sol-tile,.sol-tile-media img,.sol-tile-panel{transition:none}}
+</style>
+<link rel="stylesheet" href="site-shell.css"/>
+<link rel="stylesheet" href="industry-solutions.css"/>
+</head>
+<body>
+<header></header>
+<main>
+<nav class="ind-crumbs" aria-label="Хлебные крошки"><div class="wrap"><ol>
+  <li><a href="index.html">Главная</a></li>
+  <li aria-current="page">Отраслевые решения</li>
+</ol></div></nav>
+
+<section class="sol-hero">
+<div class="wrap">
+  <h1 class="sol-title"><span class="title-row"><span class="title-dash"></span>От детали — к технологии и оборудованию</span></h1>
+  <p class="sol-intro">Выберите отрасль и деталь, близкую к вашей задаче. Посмотрите маршрут обработки, ключевые операции и оборудование для каждого этапа — чтобы быстрее сформировать решение под своё производство.</p>
+</div>
+</section>
+
+<section class="sol-grid-section">
+<div class="wrap">
+<div class="sol-grid">
+<a class="sol-tile" href="solution-auto.html"><span class="sol-tile-media"><img src="icon-auto.png" alt="Автомобильная промышленность" loading="lazy"/></span><span class="sol-tile-panel"><h3>Автомобильная промышленность</h3><span class="sol-tile-arrow">→</span></span></a>
+<a class="sol-tile" href="solution-aero.html"><span class="sol-tile-media"><img src="icon-aero.png" alt="Авиационная промышленность" loading="lazy"/></span><span class="sol-tile-panel"><h3>Авиационная промышленность</h3><span class="sol-tile-arrow">→</span></span></a>
+<a class="sol-tile" href="solution-ship.html"><span class="sol-tile-media"><img src="icon-ship.png" alt="Судостроение" loading="lazy"/></span><span class="sol-tile-panel"><h3>Судостроение</h3><span class="sol-tile-arrow">→</span></span></a>
+<a class="sol-tile" href="solution-rail.html"><span class="sol-tile-media"><img src="icon-rail.png" alt="Железнодорожное машиностроение" loading="lazy"/></span><span class="sol-tile-panel"><h3>Железнодорожное машиностроение</h3><span class="sol-tile-arrow">→</span></span></a>
+<a class="sol-tile" href="solution-agro.html"><span class="sol-tile-media"><img src="icon-agro.png" alt="Сельскохозяйственное и дорожно-строительное машиностроение" loading="lazy"/></span><span class="sol-tile-panel"><h3>Сельскохозяйственное и дорожно-строительное машиностроение</h3><span class="sol-tile-arrow">→</span></span></a>
+<a class="sol-tile" href="solution-instr.html"><span class="sol-tile-media"><img src="icon-instr.png" alt="Приборостроение" loading="lazy"/></span><span class="sol-tile-panel"><h3>Приборостроение</h3><span class="sol-tile-arrow">→</span></span></a>
+<a class="sol-tile" href="solution-fuel.html"><span class="sol-tile-media"><img src="icon-fuel.png" alt="Топливно-энергетический сектор" loading="lazy"/></span><span class="sol-tile-panel"><h3>Топливно-энергетический сектор</h3><span class="sol-tile-arrow">→</span></span></a>
+<a class="sol-tile" href="solution-mining.html"><span class="sol-tile-media"><img src="icon-mining.png" alt="Горнорудная промышленность" loading="lazy"/></span><span class="sol-tile-panel"><h3>Горнорудная промышленность</h3><span class="sol-tile-arrow">→</span></span></a>
+<a class="sol-tile" href="solution-space.html"><span class="sol-tile-media"><img src="icon-space.png" alt="Космическая промышленность" loading="lazy"/></span><span class="sol-tile-panel"><h3>Космическая промышленность</h3><span class="sol-tile-arrow">→</span></span></a>
+</div>
+</div>
+</section>
+
+</main>
+<footer></footer>
+<script src="site-shell.js"></script>
+</body>
+</html>

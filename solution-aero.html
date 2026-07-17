@@ -15,12 +15,12 @@
   --gold:#C9A227;
   --tl:#EAEAE6;--tl2:#F5F5F3;--paper:#EDEEF0;--paper2:#E4E5E8;--white:#fff;
   --line:rgba(26,26,26,.10);--line2:rgba(234,234,230,.08);
-  --max:1400px;--shadow:0 24px 70px rgba(26,26,26,.10);
+  --max:1600px;--shadow:0 24px 70px rgba(26,26,26,.10);
 }
 html{scroll-behavior:smooth}
 body{font-family:'Golos Text',sans-serif;background:var(--paper);color:var(--bm);-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
-.wrap{width:min(calc(100% - 48px),var(--max));margin-left:clamp(24px,4.4vw,84px);margin-right:auto}
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding-inline:clamp(24px,4.4vw,84px)}
 .mono{font-family:'Golos Text',monospace}.disp{font-family:'Magistral',sans-serif}
 .eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:'Golos Text',monospace;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--ce);margin-bottom:.85rem}
 .eyebrow::before{content:'';width:22px;height:1.5px;background:var(--ce)}
@@ -1609,80 +1609,30 @@ footer{background:var(--bm);color:rgba(234,234,230,.55);padding:3rem 0 2rem;bord
 @media(max-width:640px){.sol-part-grid{grid-template-columns:1fr}}
 </style>
 <link rel="stylesheet" href="site-shell.css"/>
+<link rel="stylesheet" href="industry-solutions.css"/>
 </head>
 <body class="premium-v3">
 <header></header>
 <main>
 
-<section class="auto-parts-section">
-<div class="wrap">
-<div class="sec-head" style="align-items:flex-start">
-<div>
-<div class="eyebrow">Решение по отрасли</div>
-<h1 class="product-title" style="font-size:clamp(30px,4.4vw,56px);letter-spacing:-.018em;margin:10px 0 14px">Авиационная промышленность</h1>
-<p class="product-lead" style="max-width:760px;margin-bottom:8px">Корпуса, крыльчатки, силовые элементы и высокоточные узлы из титана и жаропрочных сплавов. Подбираем оборудование под каждую деталь — из нашего каталога.</p>
-</div>
-</div>
-<div class="sol-part-grid">
-<article class="sol-part">
-<span class="sol-part-media"><img src="aero-01.png" alt="Корпус компрессора" loading="lazy"/></span>
-<div class="sol-part-info">
-<div class="sol-part-head"><span class="sol-part-num">01</span><h3>Корпус компрессора</h3></div>
-<p class="sol-ops"><b>Основные операции</b>фрезерование сложного профиля, расточка посадок, обработка фланцев, сверление отверстий, чистовая обработка уплотнительных поверхностей.</p>
-<div class="sol-machines"><span class="sol-machines-label">Подходящие станки</span><div class="sol-chips"><a class="sol-chip" href="equipment-milling-5-osevye-obrabatyvayuschie-centry.html">5-осевой ОЦ</a><a class="sol-chip" href="equipment-milling-frezernye-obrabatyvayuschie-centry.html">Вертикальный ОЦ</a><a class="sol-chip" href="equipment-boring.html">Горизонтально-расточной</a><a class="sol-chip" href="equipment-milling-portalnye-frezernye-centry.html">Портальный ОЦ</a><a class="sol-chip" href="equipment-boring.html">Высокоточный расточной</a></div></div>
-</div>
-</article>
-<article class="sol-part">
-<span class="sol-part-media"><img src="aero-02.png" alt="Крыльчатка / блиск" loading="lazy"/></span>
-<div class="sol-part-info">
-<div class="sol-part-head"><span class="sol-part-num">02</span><h3>Крыльчатка / блиск</h3></div>
-<p class="sol-ops"><b>Основные операции</b>5-осевое фрезерование лопаток, обработка ступицы, чистовая обработка профиля, сверление и расточка, балансировка.</p>
-<div class="sol-machines"><span class="sol-machines-label">Подходящие станки</span><div class="sol-chips"><a class="sol-chip" href="equipment-milling-5-osevye-obrabatyvayuschie-centry.html">5-осевой ОЦ</a><a class="sol-chip" href="equipment-milling-5-osevye-obrabatyvayuschie-centry.html">Высокоскоростной 5-осевой</a><a class="sol-chip" href="equipment-turning.html">Токарно-фрезерный</a><a class="sol-chip" href="equipment-grinding.html">Координатно-шлифовальный</a><a class="sol-chip" href="index.html#equipment">Балансировка</a></div></div>
-</div>
-</article>
-<article class="sol-part">
-<span class="sol-part-media"><img src="aero-03.png" alt="Силовой кронштейн" loading="lazy"/></span>
-<div class="sol-part-info">
-<div class="sol-part-head"><span class="sol-part-num">03</span><h3>Силовой кронштейн</h3></div>
-<p class="sol-ops"><b>Основные операции</b>фрезерование карманов, рёбер жёсткости, отверстий, плоскостей, контурная обработка, снятие лишнего материала из алюминиевой заготовки.</p>
-<div class="sol-machines"><span class="sol-machines-label">Подходящие станки</span><div class="sol-chips"><a class="sol-chip" href="equipment-milling-5-osevye-obrabatyvayuschie-centry.html">5-осевой ОЦ</a><a class="sol-chip" href="equipment-milling-frezernye-obrabatyvayuschie-centry.html">Вертикальный ОЦ</a><a class="sol-chip" href="equipment-milling-gorizontalnye-obrabatyvayuschie-centry.html">Горизонтальный ОЦ</a><a class="sol-chip" href="equipment-milling-portalnye-frezernye-centry.html">Портальный ОЦ</a><a class="sol-chip" href="equipment-edm.html">Электроэрозионный</a></div></div>
-</div>
-</article>
-<article class="sol-part">
-<span class="sol-part-media"><img src="aero-04.png" alt="Вал турбины" loading="lazy"/></span>
-<div class="sol-part-info">
-<div class="sol-part-head"><span class="sol-part-num">04</span><h3>Вал турбины</h3></div>
-<p class="sol-ops"><b>Основные операции</b>черновое и чистовое точение, обработка шеек, нарезание шлицев, канавки, резьбы, финишное шлифование под подшипники.</p>
-<div class="sol-machines"><span class="sol-machines-label">Подходящие станки</span><div class="sol-chips"><a class="sol-chip" href="equipment-turning.html">Токарный ЧПУ</a><a class="sol-chip" href="equipment-turning.html">Токарно-фрезерный</a><a class="sol-chip" href="equipment-grinding-krugloshlifovalnye-stanki.html">Круглошлифовальный</a><a class="sol-chip" href="equipment-milling.html">Шлице-/зубофрезерный</a><a class="sol-chip" href="equipment-edm.html">Электроэрозионный</a></div></div>
-</div>
-</article>
-<article class="sol-part">
-<span class="sol-part-media"><img src="aero-05.png" alt="Фитинг гидросистемы" loading="lazy"/></span>
-<div class="sol-part-info">
-<div class="sol-part-head"><span class="sol-part-num">05</span><h3>Фитинг гидросистемы</h3></div>
-<p class="sol-ops"><b>Основные операции</b>точение тела, сверление каналов, нарезание резьбы, обработка конусов и уплотнительных поверхностей, фрезерование граней.</p>
-<div class="sol-machines"><span class="sol-machines-label">Подходящие станки</span><div class="sol-chips"><a class="sol-chip" href="equipment-turning.html">Токарный ЧПУ</a><a class="sol-chip" href="equipment-turning.html">Токарно-фрезерный</a><a class="sol-chip" href="equipment-milling-frezernye-obrabatyvayuschie-centry.html">Вертикальный ОЦ</a><a class="sol-chip" href="equipment-turning-avtomaty-prodolnogo-tocheniya.html">Автомат прод. точения</a><a class="sol-chip" href="equipment-grinding.html">Резьба / шлифование</a></div></div>
-</div>
-</article>
-<article class="sol-part">
-<span class="sol-part-media"><img src="aero-06.png" alt="Нервюра / шпангоут" loading="lazy"/></span>
-<div class="sol-part-info">
-<div class="sol-part-head"><span class="sol-part-num">06</span><h3>Нервюра / шпангоут</h3></div>
-<p class="sol-ops"><b>Основные операции</b>фрезерование крупной панели, выборка облегчающих карманов, обработка рёбер, сверление стыковочных отверстий, чистовая обработка контуров.</p>
-<div class="sol-machines"><span class="sol-machines-label">Подходящие станки</span><div class="sol-chips"><a class="sol-chip" href="equipment-milling-portalnye-frezernye-centry.html">Портальный ОЦ</a><a class="sol-chip" href="equipment-milling-5-osevye-obrabatyvayuschie-centry.html">5-осевой ОЦ</a><a class="sol-chip" href="equipment-milling-frezernye-obrabatyvayuschie-centry.html">Вертикальный ОЦ</a><a class="sol-chip" href="equipment-milling-frezernye-obrabatyvayuschie-centry.html">Фрезерный ОЦ</a><a class="sol-chip" href="equipment-drilling.html">Координатно-сверлильный</a></div></div>
-</div>
-</article>
-</div>
-<div style="margin-top:44px;display:flex;gap:12px;flex-wrap:wrap">
-<a class="btn btn-ghost" href="index.html#quiz">Передать задачу технологу</a>
-</div>
-</div>
-</section>
-<section class="photo-source-note" id="photo-source-note">
-<div class="wrap">
-<p>Фото деталей используются как демонстрационные изображения для макета сайта. Перед публикацией можно заменить на ваши собственные производственные фото.</p>
-</div>
-</section>
+<div id="industryRoot"></div>
+<script src="industry-template.js"></script>
+<script>
+renderIndustryPage({
+  slug:"aerospace",
+  eyebrow:"Решение по отрасли",
+  title:"Авиационная промышленность",
+  intro:"Корпуса, крыльчатки, силовые элементы и высокоточные узлы из титана и жаропрочных сплавов. Подбираем оборудование под каждую деталь — из нашего каталога.",
+  parts:[
+    {id:"korpus-kompressora",title:"Корпус компрессора",image:"aero-01.png",task:"Фрезерование сложного профиля, расточка посадок, обработка фланцев, сверление отверстий, чистовая обработка уплотнительных поверхностей.",operations:[{name:"Фрезерование",slug:"milling"},{name:"Растачивание",slug:"boring"},{name:"Сверление",slug:"drilling"}],equipmentClassesLabel:"4 категории оборудования",solutionUrl:null,equipmentUrl:"equipment-milling-5-osevye-obrabatyvayuschie-centry.html"},
+    {id:"krylchatka-blisk",title:"Крыльчатка / блиск",image:"aero-02.png",task:"5-осевое фрезерование лопаток, обработка ступицы, чистовая обработка профиля, сверление и расточка, балансировка.",operations:[{name:"Фрезерование",slug:"milling"},{name:"Сверление",slug:"drilling"},{name:"Растачивание",slug:"boring"},{name:"Контроль",slug:"quality-control"}],equipmentClassesLabel:"4 категории оборудования",solutionUrl:null,equipmentUrl:"equipment-milling-5-osevye-obrabatyvayuschie-centry.html"},
+    {id:"silovoy-kronshteyn",title:"Силовой кронштейн",image:"aero-03.png",task:"Фрезерование карманов, рёбер жёсткости, отверстий, плоскостей, контурная обработка, снятие лишнего материала из алюминиевой заготовки.",operations:[{name:"Фрезерование",slug:"milling"}],equipmentClassesLabel:"5 категорий оборудования",solutionUrl:null,equipmentUrl:"equipment-milling-5-osevye-obrabatyvayuschie-centry.html"},
+    {id:"val-turbiny",title:"Вал турбины",image:"aero-04.png",task:"Черновое и чистовое точение, обработка шеек, нарезание шлицев, канавки, резьбы, финишное шлифование под подшипники.",operations:[{name:"Точение",slug:"turning"},{name:"Нарезание резьбы",slug:"threading"},{name:"Шлифование",slug:"grinding"}],equipmentClassesLabel:"4 категории оборудования",solutionUrl:null,equipmentUrl:"equipment-turning.html"},
+    {id:"fiting-gidrosistemy",title:"Фитинг гидросистемы",image:"aero-05.png",task:"Точение тела, сверление каналов, нарезание резьбы, обработка конусов и уплотнительных поверхностей, фрезерование граней.",operations:[{name:"Точение",slug:"turning"},{name:"Сверление",slug:"drilling"},{name:"Нарезание резьбы",slug:"threading"},{name:"Фрезерование",slug:"milling"}],equipmentClassesLabel:"4 категории оборудования",solutionUrl:null,equipmentUrl:"equipment-turning.html"},
+    {id:"nervyura-shpangout",title:"Нервюра / шпангоут",image:"aero-06.png",task:"Фрезерование крупной панели, выборка облегчающих карманов, обработка рёбер, сверление стыковочных отверстий, чистовая обработка контуров.",operations:[{name:"Фрезерование",slug:"milling"},{name:"Сверление",slug:"drilling"}],equipmentClassesLabel:"4 категории оборудования",solutionUrl:null,equipmentUrl:"equipment-milling-portalnye-frezernye-centry.html"}
+  ]
+});
+</script>
 </main>
 <footer>
   <div class="wrap">
