@@ -17,6 +17,20 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"Можно ли использовать готовое решение для другой похожей детали?","acceptedAnswer":{"@type":"Answer","text":"Да, типовое решение — хорошая отправная точка. Маршрут обработки и состав оборудования уточняются под конкретную деталь: материал, допуски и объём выпуска могут отличаться."}},
+    {"@type":"Question","name":"Какие данные нужны для разработки технологии?","acceptedAnswer":{"@type":"Answer","text":"Чертёж детали, материал заготовки, требования к точности и шероховатости, количество установов и производственная программа."}},
+    {"@type":"Question","name":"Можно ли подобрать один станок для нескольких операций?","acceptedAnswer":{"@type":"Answer","text":"Да, если позволяет геометрия детали и объём выпуска — например, обрабатывающий центр с несколькими осями способен заменить несколько последовательных операций."}},
+    {"@type":"Question","name":"Как определяется основное и дополнительное оборудование?","acceptedAnswer":{"@type":"Answer","text":"Основное оборудование выполняет ключевые операции по чертежу, дополнительное — вспомогательные: заготовительные, финишные или контрольные."}},
+    {"@type":"Question","name":"Проводится ли тестовая обработка?","acceptedAnswer":{"@type":"Answer","text":"Возможность тестовой обработки определяется для конкретной модели оборудования и производственной задачи."}},
+    {"@type":"Question","name":"Можно ли подобрать оборудование из наличия?","acceptedAnswer":{"@type":"Answer","text":"Да, часть моделей доступна на складе — актуальные позиции представлены в разделе «Станки в наличии»."}}
+  ]
+}
+</script>
 <style>
 @font-face{font-family:'Magistral';src:url('fonts/Magistral-Regular.otf') format('opentype');font-weight:400;font-style:normal;font-display:swap}
 @font-face{font-family:'Magistral';src:url('fonts/Magistral-Bold.otf') format('opentype');font-weight:600 700;font-style:normal;font-display:swap}
@@ -67,6 +81,133 @@ main{padding-bottom:clamp(20px,3vw,32px)}
   .sol-title{font-size:clamp(32px,9vw,44px)}
 }
 @media(prefers-reduced-motion:reduce){.sol-tile,.sol-tile-media img,.sol-tile-panel{transition:none}}
+
+.sol-tile-body{display:flex;flex-direction:column;gap:6px}
+.sol-tile-desc{font-family:'Golos Text',sans-serif;font-weight:400;font-size:12.5px;line-height:1.4;color:var(--mid);text-transform:none;letter-spacing:0}
+.sol-hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:24px}
+.btn-gray{background:var(--paper2);color:var(--bm);border-color:transparent}
+.btn-gray:hover{background:#d8d9dc}
+
+/* ===== SEO-контент: блоки после каталога отраслей ===== */
+.eq-section{padding:clamp(36px,4.6vw,64px) 0}
+.eq-h2{font-family:'Magistral',sans-serif;font-weight:700;font-size:clamp(26px,3vw,40px);line-height:1.1;letter-spacing:-.015em;color:var(--bm);margin:0}
+.eq-h2::after{content:'';display:block;width:56px;height:3px;margin-top:16px;background:var(--gold)}
+.eq-lede{font-family:'Golos Text',sans-serif;font-size:15.5px;line-height:1.6;color:var(--mid);max-width:640px;margin-top:16px}
+
+.btn-ce{background:linear-gradient(120deg,#7a3c9c 0%,#6B2D8B 50%,#63297e 100%);color:#fff;border-color:transparent}
+.btn-ce:hover{filter:brightness(1.12)}
+
+.eq-crit-list{display:flex;flex-direction:column}
+.eq-crit{display:flex;align-items:flex-start;gap:16px;padding:16px 0;border-top:1px solid var(--line)}
+.eq-crit:first-child{border-top:0;padding-top:0}
+.eq-crit:last-child{padding-bottom:0}
+.eq-crit-icon{flex:0 0 auto;width:42px;height:42px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:var(--ce2);color:var(--ce)}
+.eq-crit-icon svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.7}
+.eq-crit-body b{display:block;font-family:'Golos Text',sans-serif;font-size:14.5px;font-weight:700;color:var(--bm);margin-bottom:3px}
+.eq-crit-body span{display:block;font-family:'Golos Text',sans-serif;font-size:13px;line-height:1.45;color:var(--mid)}
+
+/* Блок 3 — как пользоваться разделом: горизонтальный маршрут 01–04 */
+.route-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:clamp(28px,3vw,40px)}
+.route-step{position:relative;padding-right:24px}
+.route-step:last-child{padding-right:0}
+.route-step-num{font-family:'Magistral',sans-serif;font-weight:700;font-size:15px;color:var(--ce);width:40px;height:40px;border-radius:50%;border:1.5px solid var(--ce3);display:flex;align-items:center;justify-content:center;margin-bottom:16px;background:#fff}
+.route-step h3{font-family:'Golos Text',sans-serif;font-size:16px;font-weight:700;color:var(--bm);margin:0 0 8px;line-height:1.3}
+.route-step p{font-family:'Golos Text',sans-serif;font-size:13.5px;line-height:1.5;color:var(--mid);margin:0}
+.route-step::after{content:'';position:absolute;top:19px;right:0;width:20px;height:1px;background:repeating-linear-gradient(90deg,var(--ce3) 0 6px,transparent 6px 10px)}
+.route-step:last-child::after{display:none}
+
+/* Блок 4 — что содержит решение */
+.route-solution{background:#fff;border:1px solid var(--line);border-radius:24px;box-shadow:0 20px 56px rgba(26,26,26,.06);padding:clamp(28px,3.4vw,52px);display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(32px,4vw,56px);align-items:center}
+.route-solution-media{border-radius:16px;overflow:hidden;aspect-ratio:4/3}
+.route-solution-media img{width:100%;height:100%;object-fit:cover;display:block}
+.route-solution-text .eq-crit-list{margin:20px 0 26px}
+
+/* Блок 5 — как формируется решение: вертикальный маршрут */
+.route-flow-wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(32px,4vw,56px);align-items:start;margin-top:clamp(28px,3vw,40px)}
+.route-flow-step{position:relative;padding:0 0 30px 54px;min-height:40px}
+.route-flow-step:last-child{padding-bottom:0}
+.route-flow-step::before{content:'';position:absolute;left:19px;top:40px;bottom:0;width:1.5px;background:repeating-linear-gradient(180deg,var(--ce3) 0 6px,transparent 6px 10px)}
+.route-flow-step:last-child::before{display:none}
+.route-flow-num{position:absolute;left:0;top:0;width:40px;height:40px;border-radius:50%;border:1.5px solid var(--ce);color:var(--ce);background:#fff;display:flex;align-items:center;justify-content:center;font-family:'Magistral',sans-serif;font-weight:700;font-size:15px}
+.route-flow-label{display:block;font-family:'Golos Text',sans-serif;font-size:15px;font-weight:600;color:var(--bm);line-height:1.4;padding-top:9px}
+.route-flow-text p{font-family:'Golos Text',sans-serif;font-size:15.5px;line-height:1.75;color:var(--mid);margin:0}
+
+/* Блок 6 — три сценария */
+.eq-scenarios{display:flex;flex-direction:column;gap:16px;margin-top:clamp(28px,3vw,40px)}
+.eq-scenario{display:grid;grid-template-columns:280px 1fr;align-items:stretch;background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 14px 40px rgba(26,26,26,.05);transition:box-shadow .2s ease,transform .2s ease}
+.eq-scenario:hover{transform:translateY(-2px);box-shadow:0 22px 56px rgba(26,26,26,.1)}
+.eq-scenario-media{position:relative;min-height:170px}
+.eq-scenario-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.eq-scenario-body{padding:clamp(20px,2.4vw,32px);display:flex;flex-direction:column;justify-content:center;gap:8px}
+.eq-scenario-body h3{font-family:'Magistral',sans-serif;font-size:clamp(19px,1.6vw,23px);font-weight:700;color:var(--bm);letter-spacing:-.01em;margin:0}
+.eq-scenario-body p{font-family:'Golos Text',sans-serif;font-size:14px;line-height:1.6;color:var(--mid);max-width:520px;margin:0}
+.eq-scenario-link{margin-top:4px;font-family:'PT Root UI',sans-serif;font-size:12px;font-weight:700;letter-spacing:.03em;color:var(--ce);display:inline-flex;align-items:center;gap:6px}
+.eq-scenario:hover .eq-scenario-link{color:var(--ceHover)}
+button.eq-scenario{border:1px solid var(--line);text-align:left;width:100%;font:inherit;color:inherit}
+
+/* Блок 7 — что получает заказчик */
+.route-trust-strip{display:grid;grid-template-columns:repeat(7,1fr);gap:12px;margin-top:clamp(28px,3vw,40px)}
+.route-trust-item{text-align:center;padding:18px 8px;background:#fff;border:1px solid var(--line);border-radius:16px}
+.route-trust-item svg{width:26px;height:26px;fill:none;stroke:var(--ce);stroke-width:1.7;margin-bottom:10px}
+.route-trust-item span{display:block;font-family:'Golos Text',sans-serif;font-size:11.5px;line-height:1.4;font-weight:600;color:var(--bm)}
+
+/* Блок 8 — FAQ (визуал как на faq.html / equipment.html) */
+.faq-list{max-width:860px;margin:clamp(24px,2.6vw,36px) 0 0}
+.faqi{background:#fff;border:1px solid var(--line);border-radius:14px;margin-bottom:10px;overflow:hidden}
+.faqq{width:100%;text-align:left;padding:20px 24px;font-family:'Golos Text',sans-serif;font-size:15px;font-weight:700;color:var(--bm);background:none;border:none;display:flex;align-items:center;justify-content:space-between;gap:16px;transition:color .2s}
+.faqq .ic{flex:0 0 auto;font-size:20px;color:var(--ce);transition:transform .2s}
+.faqi.open .faqq .ic{transform:rotate(45deg)}
+.faqa{max-height:0;overflow:hidden;transition:max-height .3s ease;padding:0 24px}
+.faqi.open .faqa{max-height:320px;padding-bottom:20px}
+.faqa p{font-family:'Golos Text',sans-serif;font-size:14px;line-height:1.65;color:var(--mid);margin:0}
+.faqa a{color:var(--ce);text-decoration:underline;text-underline-offset:2px}
+
+/* Финальный CTA */
+.eq-final-cta{background:linear-gradient(135deg,#1c1e22,#2c2e33);border-radius:24px;padding:clamp(32px,4vw,56px);display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap}
+.eq-final-cta h2{font-family:'Magistral',sans-serif;font-weight:700;font-size:clamp(24px,2.6vw,34px);color:#fff;letter-spacing:-.01em;max-width:560px;line-height:1.15;margin:0}
+.eq-final-cta p{font-family:'Golos Text',sans-serif;font-size:14.5px;color:rgba(234,234,230,.6);margin:10px 0 0;max-width:520px}
+.eq-final-cta small{display:block;font-family:'Golos Text',sans-serif;font-size:12.5px;color:rgba(234,234,230,.4);margin-top:10px}
+.eq-final-cta-btn{flex:0 0 auto}
+
+@media(max-width:1100px){
+  .route-solution{grid-template-columns:1fr}
+  .route-solution-media{aspect-ratio:16/9}
+  .route-steps{grid-template-columns:repeat(2,1fr);row-gap:28px}
+  .route-step::after{display:none}
+  .route-flow-wrap{grid-template-columns:1fr}
+  .route-trust-strip{grid-template-columns:repeat(4,1fr)}
+}
+@media(max-width:760px){
+  .eq-scenario{grid-template-columns:1fr}
+  .eq-scenario-media{min-height:150px}
+  .route-steps{grid-template-columns:1fr}
+  .route-trust-strip{grid-template-columns:repeat(2,1fr)}
+  .eq-final-cta{flex-direction:column;align-items:flex-start}
+}
+
+/* Всплывающее окно "Передать чертёж технологу" — общее для всех CTA на странице */
+.eq-modal{position:fixed;inset:0;z-index:400;display:grid;place-items:center;padding:24px;background:rgba(26,26,26,.55);backdrop-filter:blur(6px);opacity:0;pointer-events:none;transition:opacity .2s ease}
+.eq-modal.is-open{opacity:1;pointer-events:auto}
+.eq-modal-dialog{width:min(560px,100%);max-height:min(90vh,720px);overflow:auto;background:#fff;border-radius:20px;border:1px solid var(--line);box-shadow:0 40px 100px rgba(0,0,0,.3);padding:clamp(28px,3.4vw,44px);position:relative;transform:translateY(10px);transition:transform .2s ease}
+.eq-modal.is-open .eq-modal-dialog{transform:translateY(0)}
+.eq-modal-close{position:absolute;top:14px;right:14px;width:38px;height:38px;border:1px solid var(--line);background:#fff;border-radius:50%;font-size:20px;line-height:1;color:var(--bm);display:grid;place-items:center;cursor:pointer}
+.eq-modal-eyebrow{font-family:'Golos Text',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--ce);margin-bottom:10px}
+.eq-modal-dialog h3{font-family:'Magistral',sans-serif;font-weight:700;font-size:clamp(21px,2vw,27px);color:var(--bm);letter-spacing:-.01em;margin:0 0 10px}
+.eq-modal-lead{font-family:'Golos Text',sans-serif;font-size:14px;line-height:1.6;color:var(--mid);margin:0 0 22px}
+.eq-modal-form{display:flex;flex-direction:column;gap:11px}
+.eq-modal-upload{position:relative;display:flex;align-items:center;gap:12px;min-height:64px;padding:12px 16px;border:1px dashed rgba(26,26,26,.22);border-radius:12px;cursor:pointer;font-family:'Golos Text',sans-serif;font-size:13px;color:var(--mid);transition:border-color .18s ease,background .18s ease}
+.eq-modal-upload:hover{border-color:rgba(107,45,139,.4);background:rgba(107,45,139,.03)}
+.eq-modal-upload svg{flex:0 0 auto;width:20px;height:20px;fill:none;stroke:var(--ce);stroke-width:1.8}
+.eq-modal-upload small{display:block;font-size:11px;color:var(--muted);margin-top:2px}
+.eq-modal-input{width:100%;min-height:48px;border:1px solid var(--line);border-radius:10px;padding:0 15px;font-family:'Golos Text',sans-serif;font-size:14px;color:var(--bm)}
+.eq-modal-input:focus{outline:2px solid var(--ce);outline-offset:1px}
+.eq-modal-form .btn{width:100%;margin-top:4px}
+.lead-consent{display:flex;align-items:flex-start;gap:9px;margin:2px 0;cursor:pointer;font-family:'PT Root UI',sans-serif;font-weight:400;font-size:12px;line-height:1.4;color:var(--sg)}
+.lead-consent input{accent-color:var(--ce);width:16px;height:16px;min-width:16px;margin-top:1px;cursor:pointer}
+.lead-consent a{color:var(--ce);text-decoration:underline;text-underline-offset:2px}
+.lead-consent a:hover{color:var(--ceHover)}
+.lead-err{display:none;color:#b3261e;font-family:'PT Root UI',sans-serif;font-size:11.5px;margin:-2px 0 0}
+.lead-err.is-shown{display:block}
 </style>
 <link rel="stylesheet" href="site-shell.css"/>
 <link rel="stylesheet" href="industry-solutions.css"/>
@@ -83,27 +224,187 @@ main{padding-bottom:clamp(20px,3vw,32px)}
 <div class="wrap">
   <h1 class="sol-title"><span class="title-row"><span class="title-dash"></span>От детали — к технологии и оборудованию</span></h1>
   <p class="sol-intro">Выберите отрасль и деталь, близкую к вашей задаче. Посмотрите маршрут обработки, ключевые операции и оборудование для каждого этапа — чтобы быстрее сформировать решение под своё производство.</p>
+  <div class="sol-hero-actions">
+  <a class="btn btn-ce" href="#catalog">Выбрать отрасль ↓</a>
+  <a class="btn btn-gray" href="#how-to-use">Как пользоваться разделом? ↓</a>
+  </div>
 </div>
 </section>
 
-<section class="sol-grid-section">
+<section class="sol-grid-section" id="catalog">
 <div class="wrap">
 <div class="sol-grid">
-<a class="sol-tile" href="solution-auto.html"><span class="sol-tile-media"><img src="icon-auto.png" alt="Автомобильная промышленность" loading="lazy"/></span><span class="sol-tile-panel"><h3>Автомобильная промышленность</h3><span class="sol-tile-arrow">→</span></span></a>
-<a class="sol-tile" href="solution-aero.html"><span class="sol-tile-media"><img src="icon-aero.png" alt="Авиационная промышленность" loading="lazy"/></span><span class="sol-tile-panel"><h3>Авиационная промышленность</h3><span class="sol-tile-arrow">→</span></span></a>
-<a class="sol-tile" href="solution-ship.html"><span class="sol-tile-media"><img src="icon-ship.png" alt="Судостроение" loading="lazy"/></span><span class="sol-tile-panel"><h3>Судостроение</h3><span class="sol-tile-arrow">→</span></span></a>
-<a class="sol-tile" href="solution-rail.html"><span class="sol-tile-media"><img src="icon-rail.png" alt="Железнодорожное машиностроение" loading="lazy"/></span><span class="sol-tile-panel"><h3>Железнодорожное машиностроение</h3><span class="sol-tile-arrow">→</span></span></a>
-<a class="sol-tile" href="solution-agro.html"><span class="sol-tile-media"><img src="icon-agro.png" alt="Сельскохозяйственное и дорожно-строительное машиностроение" loading="lazy"/></span><span class="sol-tile-panel"><h3>Сельскохозяйственное и дорожно-строительное машиностроение</h3><span class="sol-tile-arrow">→</span></span></a>
-<a class="sol-tile" href="solution-instr.html"><span class="sol-tile-media"><img src="icon-instr.png" alt="Приборостроение" loading="lazy"/></span><span class="sol-tile-panel"><h3>Приборостроение</h3><span class="sol-tile-arrow">→</span></span></a>
-<a class="sol-tile" href="solution-fuel.html"><span class="sol-tile-media"><img src="icon-fuel.png" alt="Топливно-энергетический сектор" loading="lazy"/></span><span class="sol-tile-panel"><h3>Топливно-энергетический сектор</h3><span class="sol-tile-arrow">→</span></span></a>
-<a class="sol-tile" href="solution-mining.html"><span class="sol-tile-media"><img src="icon-mining.png" alt="Горнорудная промышленность" loading="lazy"/></span><span class="sol-tile-panel"><h3>Горнорудная промышленность</h3><span class="sol-tile-arrow">→</span></span></a>
-<a class="sol-tile" href="solution-space.html"><span class="sol-tile-media"><img src="icon-space.png" alt="Космическая промышленность" loading="lazy"/></span><span class="sol-tile-panel"><h3>Космическая промышленность</h3><span class="sol-tile-arrow">→</span></span></a>
+<a class="sol-tile" href="solution-auto.html"><span class="sol-tile-media"><img src="icon-auto.png" alt="Автомобильная промышленность" loading="lazy"/></span><span class="sol-tile-panel"><span class="sol-tile-body"><h3>Автомобильная промышленность</h3><span class="sol-tile-desc">Ступицы, суппорта, рычаги подвески</span></span><span class="sol-tile-arrow">→</span></span></a>
+<a class="sol-tile" href="solution-aero.html"><span class="sol-tile-media"><img src="icon-aero.png" alt="Авиационная промышленность" loading="lazy"/></span><span class="sol-tile-panel"><span class="sol-tile-body"><h3>Авиационная промышленность</h3><span class="sol-tile-desc">Корпусные детали и кронштейны агрегатов</span></span><span class="sol-tile-arrow">→</span></span></a>
+<a class="sol-tile" href="solution-ship.html"><span class="sol-tile-media"><img src="icon-ship.png" alt="Судостроение" loading="lazy"/></span><span class="sol-tile-panel"><span class="sol-tile-body"><h3>Судостроение</h3><span class="sol-tile-desc">Гребные валы, фланцы, корпусные узлы</span></span><span class="sol-tile-arrow">→</span></span></a>
+<a class="sol-tile" href="solution-rail.html"><span class="sol-tile-media"><img src="icon-rail.png" alt="Железнодорожное машиностроение" loading="lazy"/></span><span class="sol-tile-panel"><span class="sol-tile-body"><h3>Железнодорожное машиностроение</h3><span class="sol-tile-desc">Буксы, корпуса редукторов, крепёжные узлы</span></span><span class="sol-tile-arrow">→</span></span></a>
+<a class="sol-tile" href="solution-agro.html"><span class="sol-tile-media"><img src="icon-agro.png" alt="Сельскохозяйственное и дорожно-строительное машиностроение" loading="lazy"/></span><span class="sol-tile-panel"><span class="sol-tile-body"><h3>Сельскохозяйственное и дорожно-строительное машиностроение</h3><span class="sol-tile-desc">Корпуса редукторов и валы навесного оборудования</span></span><span class="sol-tile-arrow">→</span></span></a>
+<a class="sol-tile" href="solution-instr.html"><span class="sol-tile-media"><img src="icon-instr.png" alt="Приборостроение" loading="lazy"/></span><span class="sol-tile-panel"><span class="sol-tile-body"><h3>Приборостроение</h3><span class="sol-tile-desc">Точные корпуса приборов малыми сериями</span></span><span class="sol-tile-arrow">→</span></span></a>
+<a class="sol-tile" href="solution-fuel.html"><span class="sol-tile-media"><img src="icon-fuel.png" alt="Топливно-энергетический сектор" loading="lazy"/></span><span class="sol-tile-panel"><span class="sol-tile-body"><h3>Топливно-энергетический сектор</h3><span class="sol-tile-desc">Фланцы, корпуса арматуры, детали насосов</span></span><span class="sol-tile-arrow">→</span></span></a>
+<a class="sol-tile" href="solution-mining.html"><span class="sol-tile-media"><img src="icon-mining.png" alt="Горнорудная промышленность" loading="lazy"/></span><span class="sol-tile-panel"><span class="sol-tile-body"><h3>Горнорудная промышленность</h3><span class="sol-tile-desc">Износостойкие детали и корпуса редукторов</span></span><span class="sol-tile-arrow">→</span></span></a>
+<a class="sol-tile" href="solution-space.html"><span class="sol-tile-media"><img src="icon-space.png" alt="Космическая промышленность" loading="lazy"/></span><span class="sol-tile-panel"><span class="sol-tile-body"><h3>Космическая промышленность</h3><span class="sol-tile-desc">Точные корпусные детали из лёгких сплавов</span></span><span class="sol-tile-arrow">→</span></span></a>
+</div>
+</div>
+</section>
+
+<!-- Блок 3: как пользоваться разделом -->
+<section class="eq-section" id="how-to-use">
+<div class="wrap">
+<h2 class="eq-h2">Как пользоваться разделом</h2>
+<p class="eq-lede">Найдите задачу, близкую к вашей.</p>
+<div class="route-steps">
+<div class="route-step"><span class="route-step-num">01</span><h3>Выберите отрасль</h3><p>Откройте направление, соответствующее вашему производству.</p></div>
+<div class="route-step"><span class="route-step-num">02</span><h3>Найдите аналогичную деталь</h3><p>Используйте типовой пример как отправную точку для своей задачи.</p></div>
+<div class="route-step"><span class="route-step-num">03</span><h3>Изучите маршрут обработки</h3><p>Посмотрите последовательность операций и требования к каждому этапу.</p></div>
+<div class="route-step"><span class="route-step-num">04</span><h3>Подберите оборудование</h3><p>Перейдите к категориям и моделям станков, подходящим для технологии.</p></div>
+</div>
+</div>
+</section>
+
+<!-- Блок 4: что содержит технологическое решение -->
+<section class="eq-section" id="what-inside">
+<div class="wrap">
+<div class="route-solution">
+<div class="route-solution-media"><img src="auto_hub.jpg" alt="Ступица колеса — пример обработанной детали" loading="lazy"/></div>
+<div class="route-solution-text">
+<h2 class="eq-h2">Не просто перечень станков — готовая логика производства</h2>
+<div class="eq-crit-list">
+<div class="eq-crit"><span class="eq-crit-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3v18"/><path d="M5 4h11l-2 4 2 4H5"/></svg></span><span class="eq-crit-body"><b>Производственная задача</b><span>Какой результат обработки необходимо обеспечить</span></span></div>
+<div class="eq-crit"><span class="eq-crit-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="6" r="2"/><circle cx="19" cy="18" r="2"/><path d="M5 8v3a4 4 0 0 0 4 4h6"/></svg></span><span class="eq-crit-body"><b>Технологический маршрут</b><span>Последовательность операций от заготовки до готовой детали</span></span></div>
+<div class="eq-crit"><span class="eq-crit-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 13 9 5 9-5"/></svg></span><span class="eq-crit-body"><b>Конфигурация оборудования</b><span>Основное, дополнительное и финишное оборудование</span></span></div>
+<div class="eq-crit"><span class="eq-crit-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v2.2M12 18.8V21M21 12h-2.2M5.2 12H3M18.4 5.6l-1.55 1.55M7.15 16.85l-1.55 1.55M18.4 18.4l-1.55-1.55M7.15 7.15 5.6 5.6"/></svg></span><span class="eq-crit-body"><b>Подходящие станки</b><span>Реальные категории и модели из каталога Механита</span></span></div>
+</div>
+<a class="btn btn-ce" href="solution-auto-wheel-hub.html">Посмотреть пример решения →</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Блок 5: как Механит разрабатывает решение -->
+<section class="eq-section" id="how-we-build">
+<div class="wrap">
+<h2 class="eq-h2">Как формируется решение под вашу деталь</h2>
+<div class="route-flow-wrap">
+<div class="route-flow">
+<div class="route-flow-step"><span class="route-flow-num">1</span><span class="route-flow-label">Чертёж и программа выпуска</span></div>
+<div class="route-flow-step"><span class="route-flow-num">2</span><span class="route-flow-label">Анализ материала, допусков и операций</span></div>
+<div class="route-flow-step"><span class="route-flow-num">3</span><span class="route-flow-label">Разработка технологического маршрута</span></div>
+<div class="route-flow-step"><span class="route-flow-num">4</span><span class="route-flow-label">Подбор станков, инструмента и оснастки</span></div>
+<div class="route-flow-step"><span class="route-flow-num">5</span><span class="route-flow-label">Проверка производительности и стоимости цикла</span></div>
+</div>
+<div class="route-flow-text">
+<p>При подборе оборудования инженеры учитывают геометрию детали, материал заготовки, допуски, шероховатость, количество установов, производственную программу и требования к длительности цикла. На основании этих данных формируется конфигурация оборудования и состав проекта.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Блок 6: три сценария -->
+<section class="eq-section" id="scenarios">
+<div class="wrap">
+<h2 class="eq-h2">Три сценария для вашей задачи</h2>
+<div class="eq-scenarios">
+<a class="eq-scenario" href="#catalog"><span class="eq-scenario-media"><img src="scenario-similar-part.png" alt="Похожая деталь и маршрут обработки" loading="lazy"/></span><span class="eq-scenario-body"><h3>Есть похожая деталь</h3><p>Посмотрите готовые отраслевые решения и используйте их как основу для своего проекта.</p><span class="eq-scenario-link">Выбрать отрасль →</span></span></a>
+<a class="eq-scenario" href="equipment.html"><span class="eq-scenario-media"><img src="scenario-pick-machine.png" alt="Каталог металлообрабатывающего оборудования" loading="lazy"/></span><span class="eq-scenario-body"><h3>Нужно сразу подобрать станок</h3><p>Перейдите в каталог металлообрабатывающего оборудования.</p><span class="eq-scenario-link">Смотреть оборудование →</span></span></a>
+<button type="button" class="eq-scenario" onclick="openSolLeadModal()"><span class="eq-scenario-media"><img src="scenario-nonstandard.png" alt="Нестандартная задача — передать чертёж технологу" loading="lazy"/></span><span class="eq-scenario-body"><h3>Задача нестандартная</h3><p>Передайте чертёж, требования к точности и производственную программу технологу.</p><span class="eq-scenario-link">Передать чертёж →</span></span></button>
+</div>
+</div>
+</section>
+
+<!-- Блок 7: что получает заказчик -->
+<section class="eq-section" id="trust">
+<div class="wrap">
+<h2 class="eq-h2">Что получает заказчик</h2>
+<div class="route-trust-strip">
+<div class="route-trust-item"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="6" r="2"/><circle cx="19" cy="18" r="2"/><path d="M5 8v3a4 4 0 0 0 4 4h6"/></svg><span>Обоснованный маршрут обработки</span></div>
+<div class="route-trust-item"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg><span>Перечень необходимых операций</span></div>
+<div class="route-trust-item"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="1"/><path d="M3 7l9-4 9 4"/></svg><span>Подходящие классы оборудования</span></div>
+<div class="route-trust-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3v6M3 6h6"/><path d="m9 9 10.5 10.5c.6.6.6 1.5 0 2.1-.6.6-1.5.6-2.1 0L6.9 11.1"/><path d="M14 14 19 9"/></svg><span>Рекомендации по инструменту и оснастке</span></div>
+<div class="route-trust-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M12 20V4M20 20v-7"/></svg><span>Расчёт производительности</span></div>
+<div class="route-trust-item"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r=".9" fill="currentColor" stroke="none"/></svg><span>Подбор реальных моделей станков</span></div>
+<div class="route-trust-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 5.5V11c0 4.5 2.8 7.7 7 9 4.2-1.3 7-4.5 7-9V5.5L12 3Z"/><path d="m9 12 2 2 4-4"/></svg><span>Сопровождение поставки и запуска</span></div>
+</div>
+</div>
+</section>
+
+<!-- Блок 8: частые вопросы -->
+<section class="eq-section" id="faq">
+<div class="wrap">
+<h2 class="eq-h2">Частые вопросы</h2>
+<div class="faq-list">
+<div class="faqi"><button class="faqq" onclick="toggleFaq(this)">Можно ли использовать готовое решение для другой похожей детали?<span class="ic">+</span></button><div class="faqa"><p>Да, типовое решение — хорошая отправная точка. Маршрут обработки и состав оборудования уточняются под конкретную деталь: материал, допуски и объём выпуска могут отличаться.</p></div></div>
+<div class="faqi"><button class="faqq" onclick="toggleFaq(this)">Какие данные нужны для разработки технологии?<span class="ic">+</span></button><div class="faqa"><p>Чертёж детали, материал заготовки, требования к точности и шероховатости, количество установов и производственная программа.</p></div></div>
+<div class="faqi"><button class="faqq" onclick="toggleFaq(this)">Можно ли подобрать один станок для нескольких операций?<span class="ic">+</span></button><div class="faqa"><p>Да, если позволяет геометрия детали и объём выпуска — например, обрабатывающий центр с несколькими осями способен заменить несколько последовательных операций.</p></div></div>
+<div class="faqi"><button class="faqq" onclick="toggleFaq(this)">Как определяется основное и дополнительное оборудование?<span class="ic">+</span></button><div class="faqa"><p>Основное оборудование выполняет ключевые операции по чертежу, дополнительное — вспомогательные: заготовительные, финишные или контрольные.</p></div></div>
+<div class="faqi"><button class="faqq" onclick="toggleFaq(this)">Проводится ли тестовая обработка?<span class="ic">+</span></button><div class="faqa"><p>Возможность тестовой обработки определяется для конкретной модели оборудования и производственной задачи.</p></div></div>
+<div class="faqi"><button class="faqq" onclick="toggleFaq(this)">Можно ли подобрать оборудование из наличия?<span class="ic">+</span></button><div class="faqa"><p>Да, часть моделей доступна на складе — актуальные позиции представлены в разделе <a href="stock.html">«Станки в наличии»</a>.</p></div></div>
+</div>
+</div>
+</section>
+
+<!-- Финальный CTA -->
+<section class="eq-section" id="final-cta">
+<div class="wrap">
+<div class="eq-final-cta">
+<div><h2>Не нашли подходящую деталь?</h2><p>Передайте чертёж и требования к производительности. Технолог Механита разработает маршрут обработки и подберёт оборудование под вашу задачу.</p><small>Предварительный анализ — без оплаты.</small></div>
+<button type="button" class="btn btn-ce eq-final-cta-btn" onclick="openSolLeadModal()">Передать чертёж технологу →</button>
 </div>
 </div>
 </section>
 
 </main>
+
+<div class="eq-modal" id="solLeadModal" aria-hidden="true">
+<div class="eq-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="solLeadModalTitle">
+<button class="eq-modal-close" type="button" onclick="closeSolLeadModal()" aria-label="Закрыть окно">×</button>
+<div class="eq-modal-eyebrow">Технологическое решение</div>
+<h3 id="solLeadModalTitle">Передать чертёж технологу</h3>
+<p class="eq-modal-lead">Опишите деталь и производственную задачу — технолог разработает маршрут обработки и подберёт оборудование.</p>
+<form class="eq-modal-form" onsubmit="return false">
+<label class="eq-modal-upload"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 12.5 15 5.5a3 3 0 0 1 4.24 4.24L11 18a2 2 0 0 1-2.83-2.83l6.36-6.36"></path></svg><span>Прикрепить чертёж или ТЗ<small>(не обязательно) · PDF · DWG · STEP</small></span><input type="file" style="position:absolute;width:1px;height:1px;overflow:hidden;opacity:0"/></label>
+<input class="eq-modal-input" id="solLeadContact" placeholder="Телефон или email для ответа"/>
+<label class="lead-consent"><input type="checkbox" id="solLeadConsent" required/><span>Принимаю условия <a href="privacy.html" data-legal="privacy">Политики конфиденциальности</a> и даю согласие на обработку персональных данных</span></label>
+<div class="lead-err" id="solLeadConsentErr" role="alert"></div>
+<button class="btn btn-ce" type="button" onclick="submitSolLeadForm()">Передать задачу технологу</button>
+</form>
+</div>
+</div>
+
 <footer></footer>
 <script src="site-shell.js"></script>
+<script>
+function toggleFaq(b){b.parentElement.classList.toggle('open')}
+function openSolLeadModal(){
+  var m=document.getElementById('solLeadModal');
+  m.classList.add('is-open');
+  m.setAttribute('aria-hidden','false');
+  document.body.style.overflow='hidden';
+}
+function closeSolLeadModal(){
+  var m=document.getElementById('solLeadModal');
+  m.classList.remove('is-open');
+  m.setAttribute('aria-hidden','true');
+  document.body.style.overflow='';
+}
+function submitSolLeadForm(){
+  var consent=document.getElementById('solLeadConsent');
+  var err=document.getElementById('solLeadConsentErr');
+  if(!consent.checked){
+    err.textContent='Нужно принять условия обработки данных';
+    err.classList.add('is-shown');
+    consent.focus();
+    return;
+  }
+  err.textContent='';
+  err.classList.remove('is-shown');
+  closeSolLeadModal();
+}
+document.getElementById('solLeadModal').addEventListener('click',function(e){
+  if(e.target.id==='solLeadModal'){closeSolLeadModal();}
+});
+document.addEventListener('keydown',function(e){
+  if(e.key==='Escape'){closeSolLeadModal();}
+});
+</script>
 </body>
 </html>

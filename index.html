@@ -1872,40 +1872,38 @@ body.premium-v4 .equipment-actions{margin-top:24px}
 /* === V31 interactive equipment warehouse === */
 #equipment.equipment{padding:0!important;background:#e8eaeb!important;overflow:hidden;position:relative}
 .project-support{--ps-bg:#F4F5F7;--ps-bg2:#ECEFF2;--ps-graphite:#20242A;--ps-gray:#565D66;--ps-purple:#65217E;--ps-purple-dark:#48105F;--ps-purple-light:#8B4AA3;--ps-line:rgba(38,44,52,.14);--ps-title-light:#555C65;--ps-desc:#343A42;--ps-statement:#5F237A;--ps-icon:#333B46;--ps-caption:#3F4650;--ps-bottom-text:#292F38;position:relative;width:100%;overflow:hidden;background:var(--ps-bg)}
-.project-support__background{position:absolute;inset:0;z-index:0;background:linear-gradient(90deg,var(--ps-bg) 0%,var(--ps-bg) 46%,var(--ps-bg2) 62%,var(--ps-bg2) 100%)}
-.project-support__container{position:relative;z-index:2;display:flex;align-items:stretch;min-height:clamp(380px,21vw,460px)}
-.project-support__content{position:relative;z-index:3;flex:0 0 55%;max-width:55%;box-sizing:border-box;display:flex;flex-direction:column;justify-content:center;padding:clamp(30px,2.4vw,44px) clamp(36px,3.8vw,76px)}
+.project-support__background{position:absolute;inset:0;z-index:0;background:linear-gradient(90deg,var(--ps-bg2) 0%,var(--ps-bg2) 42%,var(--ps-bg) 58%,var(--ps-bg) 100%)}
+.project-support__container{position:relative;z-index:2;display:flex;align-items:stretch}
+.project-support__content{position:relative;z-index:3;flex:0 0 50%;max-width:50%;box-sizing:border-box;display:flex;flex-direction:column;justify-content:center;padding:clamp(14px,1.1vw,20px) clamp(30px,3vw,60px)}
 .project-support__header{margin:0}
-.project-support__title{font-family:'Magistral',sans-serif;margin:0 0 clamp(14px,1.4vw,20px);text-transform:uppercase}
-.project-support__title-bold{display:block;font-weight:700;font-size:clamp(38px,2.4vw,50px);line-height:1;letter-spacing:-.025em;color:var(--ps-graphite);white-space:nowrap}
-.project-support__title-regular{display:block;font-weight:400;font-size:clamp(34px,2.2vw,44px);line-height:1.02;letter-spacing:-.02em;color:var(--ps-title-light);margin-top:.1em}
-.project-support__desc{font-family:'Golos Text',sans-serif;font-weight:500;font-size:clamp(18px,1.1vw,22px);line-height:1.5;color:var(--ps-desc);max-width:800px;margin:0 0 clamp(18px,2vw,26px)}
+.project-support__title{font-family:'Magistral',sans-serif;margin:0 0 clamp(6px,.6vw,9px);text-transform:uppercase}
+.project-support__title-bold{display:block;font-weight:700;font-size:clamp(26px,3.4vw,46px);line-height:1.08;letter-spacing:-.045em;color:var(--ps-graphite);white-space:nowrap}
+.project-support__title-regular{display:block;font-weight:400;font-size:clamp(23px,3.05vw,41px);line-height:1.05;letter-spacing:-.035em;color:var(--ps-title-light);margin-top:.08em}
+.project-support__desc{font-family:'Golos Text',sans-serif;font-weight:500;font-size:clamp(17px,1.15vw,21px);line-height:1.45;color:var(--ps-desc);max-width:800px;margin:0 0 clamp(8px,.9vw,11px)}
 .project-support__desc strong{font-weight:600;color:inherit}
-.project-support__statement{font-family:'Golos Text',sans-serif;font-weight:600;font-size:clamp(20px,1.2vw,25px);line-height:1.25;letter-spacing:.025em;text-transform:uppercase;color:var(--ps-statement);margin:0 0 clamp(22px,2.4vw,32px)}
-.project-support__stages{display:flex;list-style:none;margin:0 0 clamp(20px,2.2vw,28px);padding:0;max-width:780px}
-.project-support__stage{flex:1 1 0;display:flex;flex-direction:column;align-items:flex-start;padding:0 18px;border-left:1px solid var(--ps-line);min-height:64px}
+.project-support__statement{font-family:'Golos Text',sans-serif;font-weight:600;font-size:clamp(17px,1.15vw,24px);line-height:1.2;letter-spacing:.025em;text-transform:uppercase;color:var(--ps-statement);margin:0 0 clamp(9px,1vw,13px)}
+.project-support__stages{display:flex;list-style:none;margin:0 0 clamp(9px,1vw,13px);padding:0;max-width:780px}
+.project-support__stage{flex:1 1 0;display:flex;flex-direction:column;align-items:flex-start;padding:0 14px;border-left:1px solid var(--ps-line);min-height:50px}
 .project-support__stage:first-child{padding-left:0;border-left:0}
-.project-support__stage svg{width:clamp(42px,3vw,50px);height:clamp(42px,3vw,50px);fill:none;stroke:var(--ps-icon);stroke-width:1.7;margin-bottom:14px}
+.project-support__stage svg{width:clamp(36px,2.6vw,45px);height:clamp(36px,2.6vw,45px);fill:none;stroke:var(--ps-icon);stroke-width:1.6;margin-bottom:7px}
 .project-support__stage svg .ps-accent{stroke:var(--ps-purple)}
-.project-support__stage span{font-family:'Golos Text',sans-serif;font-weight:600;font-size:14px;letter-spacing:.045em;text-transform:uppercase;color:var(--ps-caption);line-height:1.3}
+.project-support__stage span{font-family:'Golos Text',sans-serif;font-weight:600;font-size:15px;letter-spacing:.045em;text-transform:uppercase;color:var(--ps-caption);line-height:1.3}
 .project-support__stage--warranty span{display:flex;flex-direction:column;gap:2px}
 .project-support__stage--warranty .ps-years{color:var(--ps-purple)}
 .project-support__stage--warranty .ps-label{color:var(--ps-caption)}
-.project-support__rule{border:0;border-top:1px solid var(--ps-line);margin:0 0 clamp(20px,2.2vw,28px);max-width:780px}
-.project-support__bottom{display:flex;align-items:baseline;flex-wrap:wrap;gap:clamp(24px,3vw,44px)}
-.project-support__experience{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap}
-.project-support__experience b{font-family:'Magistral',sans-serif;font-weight:700;font-size:clamp(44px,2.9vw,60px);line-height:.9;letter-spacing:-.025em;background:linear-gradient(100deg,var(--ps-purple),var(--ps-graphite));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:var(--ps-purple)}
-.project-support__experience span{font-family:'Golos Text',sans-serif;font-weight:500;font-size:clamp(22px,1.5vw,31px);line-height:1.2;color:var(--ps-bottom-text)}
-.project-support__cta{display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;border:0;border-radius:10px;min-width:220px;height:56px;padding:0 32px;font-family:'Golos Text',sans-serif;font-weight:700;font-size:12px;letter-spacing:.8px;text-transform:uppercase;color:#fff;background:linear-gradient(135deg,#8a45b0 0%,#6B2D8B 52%,#4f2069 100%);box-shadow:0 10px 26px rgba(107,45,139,.42);transition:transform .18s ease,box-shadow .18s ease,filter .18s ease}
+.project-support__rule{border:0;border-top:1px solid var(--ps-line);margin:0 0 clamp(9px,1vw,13px);max-width:780px}
+.project-support__bottom{display:flex;align-items:baseline;flex-wrap:wrap;gap:clamp(18px,2.2vw,32px)}
+.project-support__experience{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.project-support__experience b{font-family:'Magistral',sans-serif;font-weight:700;font-size:clamp(39px,2.6vw,53px);line-height:.9;letter-spacing:-.025em;background:linear-gradient(100deg,var(--ps-purple),var(--ps-graphite));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:var(--ps-purple)}
+.project-support__experience span{font-family:'Golos Text',sans-serif;font-weight:500;font-size:clamp(20px,1.4vw,26px);line-height:1.2;color:var(--ps-bottom-text)}
+.project-support__cta{display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;border:0;border-radius:10px;min-width:250px;height:60px;padding:0 34px;font-family:'Golos Text',sans-serif;font-weight:700;font-size:14.5px;letter-spacing:.8px;text-transform:uppercase;color:#fff;background:linear-gradient(135deg,#8a45b0 0%,#6B2D8B 52%,#4f2069 100%);box-shadow:0 10px 26px rgba(107,45,139,.42);transition:transform .18s ease,box-shadow .18s ease,filter .18s ease}
 .project-support__cta:hover{filter:brightness(1.09);transform:translateY(-2px);box-shadow:0 14px 34px rgba(107,45,139,.58)}
 .project-support__cta:focus-visible{outline:2px solid var(--ps-purple-light);outline-offset:3px}
-.project-support__visual{position:relative;z-index:1;flex:0 0 45%;max-width:45%;overflow:hidden;display:flex;align-items:center;justify-content:center}
-.project-support__visual img{width:100%;height:100%;object-fit:contain;object-position:right center;display:block}
+.project-support__visual{position:absolute;z-index:1;top:0;right:0;bottom:0;width:50%;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.project-support__visual img{width:100%;height:100%;object-fit:contain;object-position:center;display:block;filter:brightness(.92) saturate(.7);opacity:.7}
 @media(min-width:900px) and (max-width:1279px){
 .project-support__container{min-height:0}
-.project-support__content{padding:clamp(40px,5vw,60px) clamp(28px,4vw,48px)}
-.project-support__title-bold{font-size:clamp(32px,4vw,46px)}
-.project-support__title-regular{font-size:clamp(28px,3.6vw,42px)}
+.project-support__content{padding:clamp(18px,2.2vw,26px) clamp(22px,2.8vw,34px)}
 .project-support__stages{flex-wrap:wrap;max-width:none}
 .project-support__stage{flex:0 0 25%;max-width:25%;margin-bottom:20px;padding-right:14px}
 .project-support__stage:nth-child(4n+1){border-left:0;padding-left:0}
@@ -1918,7 +1916,7 @@ body.premium-v4 .equipment-actions{margin-top:24px}
 .project-support__header{order:1;padding:40px 24px 0}
 .project-support__title-bold{white-space:normal;font-size:clamp(30px,6.4vw,42px)}
 .project-support__title-regular{font-size:clamp(26px,5.6vw,38px)}
-.project-support__visual{order:2;flex:1 1 auto;max-width:none;height:clamp(220px,52vw,360px)}
+.project-support__visual{position:relative;top:auto;right:auto;bottom:auto;order:2;flex:1 1 auto;width:auto;max-width:none;height:clamp(220px,52vw,360px)}
 .project-support__visual img{object-position:center}
 .project-support__statement{order:3;padding:28px 24px 0;margin-bottom:24px}
 .project-support__stages{order:4;flex-wrap:wrap;max-width:none;padding:0 24px 0}
@@ -2044,7 +2042,7 @@ body.hide-hdr-cta .hdr .hdr-cta{display:none}
 </div>
 </div>
 <div class="project-support__visual">
-<img src="project-support-machine.jpg" alt="5-осевой обрабатывающий центр с обработанной деталью-фланцем в цехе Механит" loading="lazy"/>
+<img src="project-support-visual-2.png" alt="Чертёж детали, обработанный корпус и инструмент для металлообработки" loading="lazy"/>
 </div>
 </div>
 </section>
