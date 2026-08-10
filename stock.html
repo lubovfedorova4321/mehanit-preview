@@ -102,6 +102,93 @@ main{padding-bottom:clamp(20px,3vw,32px)}
 .stk-lease-link{font-family:'PT Root UI',sans-serif;font-size:11.5px;font-weight:700;color:var(--ce);text-align:center;background:none;border:0;cursor:pointer;padding:4px}
 .stk-lease-link:hover{color:var(--ceHover)}
 
+/* ===== Redesign: hero + subnav + catalog matched to equipment-category architecture ===== */
+.stk-g2 .eqcat-hero{padding:40px 0 34px;background-image:linear-gradient(rgba(107,45,139,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(107,45,139,.055) 1px,transparent 1px);background-size:38px 38px;background-position:center top}
+.stk-g2 .eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:'Golos Text',monospace;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--ce);margin-bottom:.85rem}
+.stk-g2 .eyebrow::before{content:'';width:22px;height:1.5px;background:var(--ce)}
+.stk-g2 .h2{font-family:'Magistral',sans-serif;font-size:clamp(26px,3.4vw,46px);font-weight:600;letter-spacing:-.018em;line-height:1.08;text-transform:uppercase}
+.stk-g2 .g2-subnav-title{margin-top:6px;text-transform:none;font-size:clamp(24px,2.8vw,34px)}
+.stk-g2 .g2-hero-top{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:48px;align-items:start}
+.stk-g2 .g2-hero-left{display:flex;flex-direction:column}
+.stk-g2 .g2-hero-right{display:flex;flex-direction:column;gap:14px}
+.stk-g2 .eqcat-title{margin:0;max-width:640px;font-family:'Magistral',sans-serif;font-weight:700;font-size:clamp(32px,4.4vw,58px);line-height:1.05;letter-spacing:-.015em}
+.stk-g2 .eqcat-lead{margin:0;max-width:480px;color:var(--mid);font-size:16px;line-height:1.6}
+.stk-perk-row{display:flex;flex-wrap:wrap;align-items:center;gap:10px 24px;margin-top:22px}
+.stk-perk{display:inline-flex;align-items:center;gap:7px;font-family:'Golos Text',sans-serif;font-size:12.5px;font-weight:600;color:var(--sg);white-space:nowrap}
+.stk-perk svg{width:15px;height:15px;flex:0 0 auto;stroke:var(--ce);fill:none;stroke-width:1.8}
+.stk-hero-actions{margin-top:24px}
+@media(min-width:900px){.stk-perk-row{flex-wrap:nowrap;gap:22px}.stk-perk{font-size:12px}}
+
+.stk-g2 .eqcat-subnav-wrap{padding:34px 0 10px;background:linear-gradient(180deg,#f7f8fb 0%,#fff 100%)}
+.stk-g2 #catalog{background:radial-gradient(ellipse at 72% 6%,rgba(143,98,200,.12),transparent 30%),linear-gradient(180deg,#f4f5f8 0%,#ffffff 56%,#f1f2f5 100%)}
+.stk-g2 .eqcat-subnav-head{margin-bottom:16px}
+.stk-g2 .eqcat-subcards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.stk-g2 .eqcat-subcard{position:relative;display:flex;align-items:center;gap:16px;text-align:left;background:#fff;border:1px solid rgba(26,26,26,.09);border-radius:14px;padding:16px 18px;cursor:pointer;font:inherit;color:inherit;width:100%;transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease,background .2s ease;overflow:hidden}
+.stk-g2 .eqcat-subcard:hover{transform:translateY(-2px);border-color:rgba(107,45,139,.35);box-shadow:0 16px 34px rgba(26,26,26,.08)}
+.stk-g2 .eqcat-subcard::before{content:'';position:absolute;left:0;top:0;bottom:0;width:0;background:var(--ce);transition:width .2s ease}
+.stk-g2 .eqcat-subcard.is-active{border-color:rgba(107,45,139,.45);background:linear-gradient(120deg,rgba(107,45,139,.06),rgba(107,45,139,.02));box-shadow:0 16px 34px rgba(107,45,139,.12)}
+.stk-g2 .eqcat-subcard.is-active::before{width:4px}
+.stk-g2 .eqcat-subcard-badge{position:absolute;left:14px;top:14px;width:22px;height:22px;border-radius:50%;background:var(--ce);color:#fff;display:none;align-items:center;justify-content:center;font-size:11px;font-weight:900;box-shadow:0 6px 14px rgba(107,45,139,.35)}
+.stk-g2 .eqcat-subcard.is-active .eqcat-subcard-badge{display:flex}
+.stk-g2 .eqcat-subcard-media{flex:0 0 auto;width:104px;height:88px;display:flex;align-items:center;justify-content:center;background:var(--tl2);border-radius:10px;overflow:hidden}
+.stk-g2 .eqcat-subcard-media img{max-width:86%;max-height:86%;width:auto;height:auto;object-fit:contain}
+.stk-g2 .eqcat-subcard-body{flex:1;min-width:0}
+.stk-g2 .eqcat-subcard-body h3{font-family:'Golos Text',sans-serif;font-size:15.5px;font-weight:800;letter-spacing:-.01em;color:var(--bm);margin:0 0 4px;line-height:1.25}
+.stk-g2 .eqcat-subcard-count{display:block;font-family:'Golos Text',monospace;font-size:10.5px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;color:var(--ce)}
+.stk-g2 .eqcat-subcard.is-active .eqcat-subcard-count{color:var(--ceHover)}
+.stk-g2 .eqcat-subcard-arrow{flex:0 0 auto;width:30px;height:30px;border-radius:50%;border:1px solid rgba(26,26,26,.12);display:flex;align-items:center;justify-content:center;color:var(--mid);font-size:14px;transition:.2s}
+.stk-g2 .eqcat-subcard:hover .eqcat-subcard-arrow,.stk-g2 .eqcat-subcard.is-active .eqcat-subcard-arrow{border-color:var(--ce);color:var(--ce);background:rgba(107,45,139,.06)}
+
+.stk-g2 .eqcat-catalog-title{font-family:'Magistral',sans-serif;font-size:clamp(20px,2.2vw,28px);font-weight:700;letter-spacing:-.01em;color:var(--bm);margin:0}
+
+.stk-g2 .vmc-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.stk-g2 .vmc-card{position:relative;display:flex;flex-direction:column;background:#fff;border:1px solid rgba(26,26,26,.09);border-radius:14px;box-shadow:0 12px 30px rgba(26,26,26,.06);overflow:hidden;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.stk-g2 .vmc-card:hover{transform:translateY(-4px);border-color:rgba(143,98,200,.3);box-shadow:0 22px 48px rgba(143,98,200,.15),0 14px 34px rgba(26,26,26,.08)}
+.stk-g2 .vmc-card::before{content:'';position:absolute;top:0;left:50%;z-index:3;width:52px;height:2px;transform:translateX(-50%);background:linear-gradient(90deg,var(--ce),var(--gold))}
+.vmc-card-link{position:absolute;inset:0;z-index:3}
+.stk-g2 .vmc-photo{height:196px;display:flex;align-items:center;justify-content:center;background:var(--paper2);border-bottom:1px solid rgba(26,26,26,.06);position:relative;overflow:hidden}
+.stk-g2 .vmc-photo img{max-width:84%;max-height:82%;width:auto;height:auto;object-fit:contain;filter:drop-shadow(0 8px 14px rgba(26,26,26,.14));transition:transform .3s ease}
+.stk-g2 .vmc-card:hover .vmc-photo img{transform:scale(1.05)}
+.vmc-photo-cta{position:absolute;inset:0;z-index:2;display:flex;align-items:center;justify-content:center;background:rgba(20,18,26,.36);opacity:0;transition:opacity .2s ease;pointer-events:none}
+.stk-g2 .vmc-card:hover .vmc-photo-cta{opacity:1}
+.vmc-photo-cta span{display:inline-flex;align-items:center;gap:6px;padding:9px 20px;background:#fff;color:var(--bm);border-radius:999px;font-family:'Golos Text',monospace;font-size:10px;font-weight:800;letter-spacing:1.1px;text-transform:uppercase;box-shadow:0 12px 26px rgba(26,26,26,.28);transform:translateY(6px);transition:transform .2s ease}
+.stk-g2 .vmc-card:hover .vmc-photo-cta span{transform:translateY(0)}
+.stk-g2 .vmc-body{display:flex;flex-direction:column;flex:1;padding:14px 16px 16px}
+.stk-g2 .vmc-body small{display:block;margin-bottom:6px;color:var(--ce);font-family:'Golos Text',monospace;font-size:8.5px;font-weight:900;letter-spacing:1.4px;text-transform:uppercase}
+.stk-g2 .vmc-body h3{margin:0 0 10px;color:var(--bm);font-size:15.5px;line-height:1.22;letter-spacing:-.012em;font-weight:800}
+.stk-g2 .vmc-specs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;margin-top:0;margin-bottom:12px;background:rgba(26,26,26,.06);border:1px solid rgba(26,26,26,.06)}
+.stk-g2 .vmc-specs div{display:flex;flex-direction:column;justify-content:center;background:#fff;padding:7px 9px}
+.stk-g2 .vmc-specs span{margin-bottom:2px;color:rgba(82,86,90,.48);font-family:'Golos Text',monospace;font-size:7.5px;font-weight:800;letter-spacing:.9px;text-transform:uppercase}
+.stk-g2 .vmc-specs b{font-family:'Magistral',sans-serif;font-size:12.5px;color:var(--bm);letter-spacing:-.02em}
+.stk-vmc-price{display:flex;align-items:baseline;justify-content:space-between;gap:8px;flex-wrap:wrap;padding:10px 0 6px;border-top:1px solid rgba(26,26,26,.08)}
+.stk-vmc-price b{font-family:'Magistral',sans-serif;font-size:16px;color:var(--gold);letter-spacing:-.02em;background:rgba(201,162,39,.12);padding:2px 8px;border-radius:4px}
+.stk-vmc-price span{font-family:'Golos Text',monospace;font-size:9.5px;color:var(--muted);letter-spacing:.3px}
+.stk-vmc-price.is-sold b{color:var(--muted);background:none;padding:0}
+.stk-price-note{font-family:'Golos Text',sans-serif;font-size:10.5px;color:var(--muted);line-height:1.4;margin-bottom:10px}
+.vmc-offer-btn{position:relative;z-index:4;margin-top:auto;width:100%;min-height:42px;border:1.5px solid var(--ce);background:transparent;color:var(--ce);font-family:'Golos Text',monospace;font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:background .18s ease,color .18s ease}
+.vmc-offer-btn:hover{background:var(--ce);color:#fff}
+.vmc-stock-badge{position:absolute;top:10px;left:10px;z-index:5;pointer-events:none;display:inline-flex;align-items:center;gap:5px;background:#1c8a4c;color:#fff;font-family:'Golos Text',monospace;font-size:9.5px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;padding:5px 10px 5px 8px;border-radius:20px;box-shadow:0 4px 10px rgba(28,138,76,.35)}
+.vmc-stock-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:#fff}
+.vmc-stock-badge.is-sold{background:#5B6166;box-shadow:0 4px 10px rgba(26,26,26,.25)}
+
+@media(min-width:1181px){.stk-g2 .vmc-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:1279px){.stk-catalog-layout{grid-template-columns:240px minmax(0,1fr)}}
+@media(max-width:1180px){
+  .stk-catalog-layout{grid-template-columns:1fr}
+  .stk-g2 .vmc-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .vmc-filter-panel{position:fixed;left:0;right:0;bottom:0;top:auto;max-height:82vh;width:auto;border-radius:16px 16px 0 0;box-shadow:0 -20px 60px rgba(26,26,26,.28);transform:translateY(105%);transition:transform .28s ease;z-index:150}
+  .vmc-filter-panel.is-open{transform:translateY(0)}
+  .eqcat-filter-toggle{display:inline-flex}
+  .eqcat-filter-close{display:block}
+  .eqcat-filter-backdrop{display:block;position:fixed;inset:0;background:rgba(26,26,26,.5);z-index:149;opacity:0;pointer-events:none;transition:opacity .28s ease}
+  .eqcat-filter-backdrop.is-open{opacity:1;pointer-events:auto}
+  .stk-g2 .g2-hero-top{grid-template-columns:1fr;gap:20px}
+  .stk-g2 .eqcat-subcards{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:720px){.stk-g2 .vmc-grid{grid-template-columns:1fr}.vmc-filter-panel{padding:16px}}
+@media(max-width:640px){.stk-g2 .eqcat-subcards{grid-template-columns:1fr}.stk-perk-row{gap:8px 18px}}
+
+
 /* Панель фильтров — та же архитектура, что на страницах категорий оборудования */
 .stk-catalog-layout{display:grid;grid-template-columns:286px minmax(0,1fr);gap:24px;align-items:start}
 .stk-toolbar-head{display:flex;flex-direction:column;gap:6px}
@@ -285,44 +372,87 @@ button.stk-alt-item{text-align:left;width:100%;font:inherit;color:inherit;border
   <li aria-current="page">Станки в наличии</li>
 </ol></div></nav>
 
-<section class="sol-hero">
-<div class="wrap">
-  <h1 class="sol-title"><span class="title-row"><span class="title-dash"></span>Металлообрабатывающие станки в наличии</span></h1>
-  <p class="sol-intro">Оборудование на складе в Нижнем Новгороде, доступное для осмотра, демонстрации и быстрой отгрузки. Поможем проверить станок под вашу деталь, организуем поставку, пусконаладку, обучение и гарантийное сопровождение.</p>
-  <div class="sol-hero-actions">
-  <a class="btn btn-ce" href="#catalog">Посмотреть оборудование ↓</a>
-  <button type="button" class="btn btn-gray" onclick="openModal('stockLeadModal')">Записаться на демонстрацию</button>
-  </div>
-  <p class="stk-adv-strip"><span>В наличии в России</span> · <span>Демонстрация оборудования</span> · <span>Доставка от 3 дней</span> · <span>Тестовая обработка</span> · <span>ПНР</span> · <span>Гарантия 2 года</span></p>
+<div class="stk-g2">
+<section class="eqcat-hero"><div class="wrap">
+<div class="g2-hero-top">
+<div class="g2-hero-left">
+<h1 class="eqcat-title">Металлообрабатывающие станки в наличии</h1>
+<div class="stk-perk-row"><span class="stk-perk"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5 11 15.5 16 9"/></svg>В наличии в России</span><span class="stk-perk"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="1"/><path d="M3 7l9-4 9 4"/><path d="m8 12 3 3 5-6"/></svg>Демонстрация оборудования</span><span class="stk-perk"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="9" width="12" height="8"/><path d="M14 12h4l4 3v2h-2"/><circle cx="7" cy="19" r="1.8"/><circle cx="17.5" cy="19" r="1.8"/></svg>Доставка от 3 дней</span><span class="stk-perk"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h11l3 3v13H4z"/><path d="M15 4v3h3"/><path d="M8 13h6M8 17h4"/></svg>Тестовая обработка</span><span class="stk-perk"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 4.5a3.5 3.5 0 0 0-4.79 4.03L4 15.24V20h4.76l6.71-6.71a3.5 3.5 0 0 0 4.03-4.79l-2.6 2.6-2.1-2.1 2.6-2.6Z"/></svg>ПНР</span><span class="stk-perk"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 5.5V11c0 4.5 2.8 7.7 7 9 4.2-1.3 7-4.5 7-9V5.5L12 3Z"/><path d="m9 12 2 2 4-4"/></svg>Гарантия 2 года</span></div>
+<div class="stk-hero-actions"><button type="button" class="btn btn-ce" onclick="openModal('stockLeadModal')">Записаться на демонстрацию</button></div>
 </div>
-</section>
+<div class="g2-hero-right">
+<p class="eqcat-lead">Оборудование на складе в Нижнем Новгороде, доступное для осмотра, демонстрации и быстрой отгрузки. Поможем проверить станок под вашу деталь, организуем поставку, пусконаладку, обучение и гарантийное сопровождение.</p>
+</div>
+</div>
+</div></section>
 
-<!-- Блок 1: каталог складских станков -->
-<section class="eq-section" id="catalog" style="padding-top:0">
+<section class="eqcat-subnav-wrap"><div class="wrap">
+<div class="eqcat-subnav-head"><div class="eyebrow">Подкатегории</div><h2 class="h2 g2-subnav-title">Выберите тип оборудования</h2></div>
+<nav class="eqcat-subcards" id="stkCatPicker">
+<button type="button" class="eqcat-subcard" data-stk-cat="turning" aria-current="false">
+<span class="eqcat-subcard-badge" aria-hidden="true">✓</span>
+<span class="eqcat-subcard-media"><img src="stock-assets/cutout/turning-tn500.png" alt="Токарное оборудование" loading="lazy"/></span>
+<span class="eqcat-subcard-body">
+<h3>Токарное оборудование</h3>
+<span class="eqcat-subcard-count">9 позиций</span>
+</span>
+<span class="eqcat-subcard-arrow" aria-hidden="true">→</span>
+</button>
+<button type="button" class="eqcat-subcard" data-stk-cat="milling" aria-current="false">
+<span class="eqcat-subcard-badge" aria-hidden="true">✓</span>
+<span class="eqcat-subcard-media"><img src="stock-assets/cutout/vmc-3-axis.png" alt="Фрезерное оборудование" loading="lazy"/></span>
+<span class="eqcat-subcard-body">
+<h3>Фрезерное оборудование</h3>
+<span class="eqcat-subcard-count">2 позиции</span>
+</span>
+<span class="eqcat-subcard-arrow" aria-hidden="true">→</span>
+</button>
+<button type="button" class="eqcat-subcard" data-stk-cat="grinding" aria-current="false">
+<span class="eqcat-subcard-badge" aria-hidden="true">✓</span>
+<span class="eqcat-subcard-media"><img src="stock-assets/cutout/grinding-gs-ahd4080.jpg" alt="Шлифовальное оборудование" loading="lazy"/></span>
+<span class="eqcat-subcard-body">
+<h3>Шлифовальное оборудование</h3>
+<span class="eqcat-subcard-count">1 позиция</span>
+</span>
+<span class="eqcat-subcard-arrow" aria-hidden="true">→</span>
+</button>
+<button type="button" class="eqcat-subcard" data-stk-cat="automation" aria-current="false">
+<span class="eqcat-subcard-badge" aria-hidden="true">✓</span>
+<span class="eqcat-subcard-media"><img src="stock-assets/cutout/barfeeder-fedek-dh65.png" alt="Автоматизация" loading="lazy"/></span>
+<span class="eqcat-subcard-body">
+<h3>Автоматизация</h3>
+<span class="eqcat-subcard-count">1 позиция</span>
+</span>
+<span class="eqcat-subcard-arrow" aria-hidden="true">→</span>
+</button>
+</nav>
+</div></section>
+
+<section class="eq-section" id="catalog" style="padding-top:20px">
 <div class="wrap">
 <div class="stk-catalog-layout" data-stk-scope>
 <aside class="vmc-filter-panel" id="stkFilterPanel">
 <div class="eqcat-filter-backdrop" data-role="filter-backdrop"></div>
 <div class="vmc-filter-head"><span>Фильтр</span><button type="button" class="vmc-reset" data-role="reset">Сбросить всё</button><button type="button" class="eqcat-filter-close" data-role="filter-close" aria-label="Закрыть фильтр">×</button></div>
 <label class="vmc-search"><span>Поиск</span><input type="search" data-role="search" placeholder="Название или модель"/></label>
+<div class="vmc-filter-group" style="display:none">
+<label><input type="checkbox" name="category" value="turning"/> turning</label>
+<label><input type="checkbox" name="category" value="milling"/> milling</label>
+<label><input type="checkbox" name="category" value="grinding"/> grinding</label>
+<label><input type="checkbox" name="category" value="automation"/> automation</label>
+</div>
 <div class="vmc-filter-group">
-<strong>Тип оборудования</strong>
-<label><input type="checkbox" name="category" value="turning"/> Токарное оборудование</label>
-<label><input type="checkbox" name="category" value="milling"/> Фрезерное оборудование</label>
-<label><input type="checkbox" name="category" value="grinding"/> Шлифовальное оборудование</label>
-<label><input type="checkbox" name="category" value="automation"/> Автоматизация</label>
+<strong>Технические характеристики</strong>
+<div class="vmc-range-row"><input type="number" placeholder="От" data-range="size" data-bound="min"/><input type="number" placeholder="До" data-range="size" data-bound="max"/></div>
+<span style="font-family:'Golos Text',monospace;font-size:9.5px;color:var(--muted);letter-spacing:.4px">Диаметр / размер стола, мм</span>
+</div>
+<div class="vmc-filter-group">
+<div class="vmc-range-row"><input type="number" placeholder="От" data-range="length" data-bound="min"/><input type="number" placeholder="До" data-range="length" data-bound="max"/></div>
+<span style="font-family:'Golos Text',monospace;font-size:9.5px;color:var(--muted);letter-spacing:.4px">Длина обработки / ход, мм</span>
 </div>
 <div class="vmc-filter-group">
 <strong>Готовность</strong>
-<label><input type="checkbox" name="ready" value="1"/> Только готовые к отгрузке</label>
 <label><input type="checkbox" name="demo" value="1"/> Доступна демонстрация</label>
-</div>
-<div class="vmc-filter-group">
-<strong>Цена, ₽</strong>
-<div class="vmc-range-row">
-<input type="number" placeholder="От" data-range="price" data-bound="min"/>
-<input type="number" placeholder="До" data-range="price" data-bound="max"/>
-</div>
 </div>
 <div class="vmc-filter-apply">
 <button type="button" class="btn btn-ce" data-role="apply">Показать <span data-role="preview">13</span> <span data-role="preview-word">позиций</span></button>
@@ -332,240 +462,189 @@ button.stk-alt-item{text-align:left;width:100%;font:inherit;color:inherit;border
 <div>
 <div class="stk-toolbar">
 <div class="stk-toolbar-head">
-<div class="stk-toolbar-title-row"><h2 class="stk-catalog-title">Каталог оборудования в наличии</h2><span class="eqcat-catalog-count" id="stkCount">13 позиций в наличии</span></div>
+<div class="stk-toolbar-title-row"><h2 class="eqcat-catalog-title">Каталог оборудования в наличии</h2><span class="eqcat-catalog-count" id="stkCount">13 позиций</span></div>
 </div>
 <div class="stk-toolbar-tools">
 <button type="button" class="eqcat-filter-toggle" data-role="filter-toggle">Все фильтры</button>
 </div>
 </div>
-<div class="stk-grid" id="stkGrid">
+<div class="vmc-grid" id="stkGrid">
 
-<div class="stk-card" data-ready="1" data-demo="1" data-category="turning" data-name="токарный станок с чпу ø450×500 мм токарное оборудование" data-price="5333000">
-<a href="stock-turning-450-500.html"><div class="stk-card-media"><img src="stock-assets/cutout/turning-450-500.png" alt="Токарный станок с ЧПУ Ø450×500 мм" loading="lazy"/></div></a>
-<div class="stk-card-body">
-<div class="stk-card-cat">Токарное оборудование</div>
-<h3><a href="stock-turning-450-500.html">Токарный станок с ЧПУ Ø450×500 мм</a></h3>
-<div class="stk-card-meta"><span><b>ЧПУ:</b> Fanuc 0i TF Plus</span><span><b>Назначение:</b> точная серийная обработка деталей до Ø450×500 мм</span></div>
-<div class="stk-card-demo">✓ Демонстрация возможна</div><div class="stk-card-status">В наличии — готов к отгрузке</div>
-<div class="stk-card-foot">
-<div class="stk-card-price"><span>5 333 000 ₽ без НДС</span><b>с доставкой и ПНР</b></div>
-<div class="stk-card-actions">
-<a class="btn btn-ce" href="stock-turning-450-500.html">Посмотреть станок →</a>
-<button type="button" class="stk-lease-link" onclick="document.getElementById('leasing').scrollIntoView({behavior:'smooth'})">Рассчитать в лизинг →</button>
+<article class="vmc-card" data-name="токарный станок с чпу ø450×500 мм токарные с чпу" data-title="Токарный станок с ЧПУ Ø450×500 мм" data-sortkey="450" data-category="turning" data-ready="1" data-demo="1" data-size="450" data-length="500">
+<a class="vmc-card-link" href="stock-turning-450-500.html" aria-label="Токарный станок с ЧПУ Ø450×500 мм — подробнее"></a>
+<span class="vmc-stock-badge">В наличии</span>
+<div class="vmc-photo"><img src="stock-assets/cutout/turning-450-500.png" alt="Токарный станок с ЧПУ Ø450×500 мм" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Токарные с ЧПУ</small>
+<h3>Токарный станок с ЧПУ Ø450×500 мм</h3>
+<div class="vmc-specs"><div><span>Пруток</span><b>Ø52 мм</b></div><div><span>Патрон</span><b>Ø200 мм</b></div><div><span>Перемещение X/Z</span><b>170/500 мм</b></div><div><span>Масса</span><b>3900 кг</b></div></div>
+<div class="stk-vmc-price"><b>5 333 000 ₽</b><span>без НДС · доставка и ПНР</span></div><div class="stk-price-note">Цена ориентировочная — зависит от текущего курса юаня на дату сделки</div>
+<button type="button" class="vmc-offer-btn" onclick="openModal('stockLeadModal')">Получить предложение</button>
 </div>
-</div>
-</div>
-</div>
+</article>
 
-<div class="stk-card" data-ready="1" data-demo="1" data-category="turning" data-name="токарный станок с чпу ø600×1100 мм токарное оборудование" data-price="6556000">
-<a href="stock-turning-600-1100.html"><div class="stk-card-media"><img src="stock-assets/cutout/turning-600-1100.png" alt="Токарный станок с ЧПУ Ø600×1100 мм" loading="lazy"/></div></a>
-<div class="stk-card-body">
-<div class="stk-card-cat">Токарное оборудование</div>
-<h3><a href="stock-turning-600-1100.html">Токарный станок с ЧПУ Ø600×1100 мм</a></h3>
-<div class="stk-card-meta"><span><b>ЧПУ:</b> есть, модель уточняется</span><span><b>Назначение:</b> серийное и ремонтное производство деталей до Ø600×1100 мм</span></div>
-<div class="stk-card-demo">✓ Демонстрация возможна</div><div class="stk-card-status">В наличии — готов к отгрузке</div>
-<div class="stk-card-foot">
-<div class="stk-card-price"><span>6 556 000 ₽ без НДС</span><b>с доставкой и ПНР</b></div>
-<div class="stk-card-actions">
-<a class="btn btn-ce" href="stock-turning-600-1100.html">Посмотреть станок →</a>
-<button type="button" class="stk-lease-link" onclick="document.getElementById('leasing').scrollIntoView({behavior:'smooth'})">Рассчитать в лизинг →</button>
+<article class="vmc-card" data-name="токарный станок с чпу ø600×1100 мм токарные с чпу" data-title="Токарный станок с ЧПУ Ø600×1100 мм" data-sortkey="600" data-category="turning" data-ready="1" data-demo="1" data-size="600" data-length="1100">
+<a class="vmc-card-link" href="stock-turning-600-1100.html" aria-label="Токарный станок с ЧПУ Ø600×1100 мм — подробнее"></a>
+<span class="vmc-stock-badge">В наличии</span>
+<div class="vmc-photo"><img src="stock-assets/cutout/turning-600-1100.png" alt="Токарный станок с ЧПУ Ø600×1100 мм" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Токарные с ЧПУ</small>
+<h3>Токарный станок с ЧПУ Ø600×1100 мм</h3>
+<div class="vmc-specs"><div><span>Длина обработки</span><b>1100 мм</b></div><div><span>Патрон</span><b>Ø250 мм</b></div><div><span>Перемещение X/Z</span><b>250/1100 мм</b></div><div><span>Масса</span><b>6200 кг</b></div></div>
+<div class="stk-vmc-price"><b>6 556 000 ₽</b><span>без НДС · доставка и ПНР</span></div><div class="stk-price-note">Цена ориентировочная — зависит от текущего курса юаня на дату сделки</div>
+<button type="button" class="vmc-offer-btn" onclick="openModal('stockLeadModal')">Получить предложение</button>
 </div>
-</div>
-</div>
-</div>
+</article>
 
-<div class="stk-card" data-ready="1" data-demo="1" data-category="turning" data-name="токарный обрабатывающий центр ø680×950 мм токарное оборудование" data-price="7093000">
-<a href="stock-turning-680-950.html"><div class="stk-card-media"><img src="stock-assets/cutout/turning-680-950.png" alt="Токарный обрабатывающий центр Ø680×950 мм" loading="lazy"/></div></a>
-<div class="stk-card-body">
-<div class="stk-card-cat">Токарное оборудование</div>
-<h3><a href="stock-turning-680-950.html">Токарный обрабатывающий центр Ø680×950 мм</a></h3>
-<div class="stk-card-meta"><span><b>ЧПУ:</b> Fanuc</span><span><b>Назначение:</b> сложные детали за один установ, точение и фрезерование</span></div>
-<div class="stk-card-demo">✓ Демонстрация возможна</div><div class="stk-card-status">В наличии — готов к отгрузке</div>
-<div class="stk-card-foot">
-<div class="stk-card-price"><span>7 093 000 ₽ без НДС</span><b>с доставкой и ПНР</b></div>
-<div class="stk-card-actions">
-<a class="btn btn-ce" href="stock-turning-680-950.html">Посмотреть станок →</a>
-<button type="button" class="stk-lease-link" onclick="document.getElementById('leasing').scrollIntoView({behavior:'smooth'})">Рассчитать в лизинг →</button>
+<article class="vmc-card" data-name="токарный обрабатывающий центр ø680×950 мм с приводным инструментом" data-title="Токарный обрабатывающий центр Ø680×950 мм" data-sortkey="680" data-category="turning" data-ready="1" data-demo="1" data-size="680" data-length="950">
+<a class="vmc-card-link" href="stock-turning-680-950.html" aria-label="Токарный обрабатывающий центр Ø680×950 мм — подробнее"></a>
+<span class="vmc-stock-badge">В наличии</span>
+<div class="vmc-photo"><img src="stock-assets/cutout/turning-680-950.png" alt="Токарный обрабатывающий центр Ø680×950 мм" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>С приводным инструментом</small>
+<h3>Токарный обрабатывающий центр Ø680×950 мм</h3>
+<div class="vmc-specs"><div><span>Диаметр над станиной</span><b>680 мм</b></div><div><span>Длина обработки</span><b>950 мм</b></div><div><span>Патрон</span><b>Ø250 мм</b></div><div><span>Масса</span><b>4600 кг</b></div></div>
+<div class="stk-vmc-price"><b>7 093 000 ₽</b><span>без НДС · доставка и ПНР</span></div><div class="stk-price-note">Цена ориентировочная — зависит от текущего курса юаня на дату сделки</div>
+<button type="button" class="vmc-offer-btn" onclick="openModal('stockLeadModal')">Получить предложение</button>
 </div>
-</div>
-</div>
-</div>
+</article>
 
-<div class="stk-card" data-ready="1" data-demo="1" data-category="turning" data-name="токарный центр с приводным инструментом токарное оборудование" data-price="12245000">
-<a href="stock-turning-live-tooling.html"><div class="stk-card-media"><img src="stock-assets/cutout/turning-live-tooling-large.png" alt="Токарный центр с приводным инструментом" loading="lazy"/></div></a>
-<div class="stk-card-body">
-<div class="stk-card-cat">Токарное оборудование</div>
-<h3><a href="stock-turning-live-tooling.html">Токарный центр с приводным инструментом</a></h3>
-<div class="stk-card-meta"><span><b>ЧПУ:</b> есть, модель уточняется</span><span><b>Назначение:</b> точение, сверление и фрезерование деталей большого диаметра за один установ</span></div>
-<div class="stk-card-demo">✓ Демонстрация возможна</div><div class="stk-card-status">В наличии — готов к отгрузке</div>
-<div class="stk-card-foot">
-<div class="stk-card-price"><span>12 245 000 ₽ без НДС</span><b>с доставкой и ПНР</b></div>
-<div class="stk-card-actions">
-<a class="btn btn-ce" href="stock-turning-live-tooling.html">Посмотреть станок →</a>
-<button type="button" class="stk-lease-link" onclick="document.getElementById('leasing').scrollIntoView({behavior:'smooth'})">Рассчитать в лизинг →</button>
+<article class="vmc-card" data-name="токарный центр с приводным инструментом с приводным инструментом" data-title="Токарный центр с приводным инструментом" data-sortkey="800" data-category="turning" data-ready="1" data-demo="1" data-size="800" data-length="650">
+<a class="vmc-card-link" href="stock-turning-live-tooling.html" aria-label="Токарный центр с приводным инструментом — подробнее"></a>
+<span class="vmc-stock-badge">В наличии</span>
+<div class="vmc-photo"><img src="stock-assets/cutout/turning-live-tooling-large.png" alt="Токарный центр с приводным инструментом" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>С приводным инструментом</small>
+<h3>Токарный центр с приводным инструментом</h3>
+<div class="vmc-specs"><div><span>Диаметр над станиной</span><b>800 мм</b></div><div><span>Макс. обработка</span><b>650 мм</b></div><div><span>Шпиндель</span><b>A2-11 · 1500 об/мин</b></div><div><span>Масса</span><b>9500 кг</b></div></div>
+<div class="stk-vmc-price"><b>12 245 000 ₽</b><span>без НДС · доставка и ПНР</span></div><div class="stk-price-note">Цена ориентировочная — зависит от текущего курса юаня на дату сделки</div>
+<button type="button" class="vmc-offer-btn" onclick="openModal('stockLeadModal')">Получить предложение</button>
 </div>
-</div>
-</div>
-</div>
+</article>
 
-<div class="stk-card" data-ready="1" data-demo="1" data-category="turning" data-name="токарный обрабатывающий центр tn500 токарное оборудование" data-price="8682000">
-<a href="stock-turning-tn500.html"><div class="stk-card-media"><img src="stock-assets/cutout/turning-tn500.png" alt="Токарный центр TN500" loading="lazy"/></div></a>
-<div class="stk-card-body">
-<div class="stk-card-cat">Токарное оборудование</div>
-<h3><a href="stock-turning-tn500.html">Токарный обрабатывающий центр TN500</a></h3>
-<div class="stk-card-meta"><span><b>ЧПУ:</b> Fanuc</span><span><b>Назначение:</b> стабильная серийная обработка деталей до Ø500 мм</span></div>
-<div class="stk-card-demo">✓ Демонстрация возможна</div><div class="stk-card-status">В наличии — готов к отгрузке</div>
-<div class="stk-card-foot">
-<div class="stk-card-price"><span>8 682 000 ₽ без НДС</span><b>с доставкой и ПНР</b></div>
-<div class="stk-card-actions">
-<a class="btn btn-ce" href="stock-turning-tn500.html">Посмотреть станок →</a>
-<button type="button" class="stk-lease-link" onclick="document.getElementById('leasing').scrollIntoView({behavior:'smooth'})">Рассчитать в лизинг →</button>
+<article class="vmc-card" data-name="токарный обрабатывающий центр tn500 с приводным инструментом" data-title="Токарный обрабатывающий центр TN500" data-sortkey="500" data-category="turning" data-ready="1" data-demo="1" data-size="500" data-length="450">
+<a class="vmc-card-link" href="stock-turning-tn500.html" aria-label="Токарный обрабатывающий центр TN500 — подробнее"></a>
+<span class="vmc-stock-badge">В наличии</span>
+<div class="vmc-photo"><img src="stock-assets/cutout/turning-tn500.png" alt="Токарный обрабатывающий центр TN500" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>С приводным инструментом</small>
+<h3>Токарный обрабатывающий центр TN500</h3>
+<div class="vmc-specs"><div><span>Макс. длина</span><b>450 мм</b></div><div><span>Пруток</span><b>Ø51 мм</b></div><div><span>Шпиндель</span><b>A2-6 · 4000 об/мин</b></div><div><span>Точность</span><b>±0,005 мм</b></div></div>
+<div class="stk-vmc-price"><b>8 682 000 ₽</b><span>без НДС · доставка и ПНР</span></div><div class="stk-price-note">Цена ориентировочная — зависит от текущего курса юаня на дату сделки</div>
+<button type="button" class="vmc-offer-btn" onclick="openModal('stockLeadModal')">Получить предложение</button>
 </div>
-</div>
-</div>
-</div>
+</article>
 
-<div class="stk-card" data-ready="1" data-demo="1" data-category="milling" data-name="вертикально-фрезерный центр, 3 оси фрезерное оборудование" data-price="8300000">
-<a href="stock-vmc-3-axis.html"><div class="stk-card-media"><img src="stock-assets/cutout/vmc-3-axis.png" alt="Вертикально-фрезерный обрабатывающий центр 3 оси" loading="lazy"/></div></a>
-<div class="stk-card-body">
-<div class="stk-card-cat">Фрезерное оборудование</div>
-<h3><a href="stock-vmc-3-axis.html">Вертикально-фрезерный центр, 3 оси</a></h3>
-<div class="stk-card-meta"><span><b>ЧПУ:</b> Fanuc 0i-MF Plus</span><span><b>Назначение:</b> корпусные и призматические детали, серийное производство</span></div>
-<div class="stk-card-demo">✓ Демонстрация возможна</div><div class="stk-card-status">В наличии — готов к отгрузке</div>
-<div class="stk-card-foot">
-<div class="stk-card-price"><span>8 300 000 ₽ без НДС</span><b>с доставкой и ПНР</b></div>
-<div class="stk-card-actions">
-<a class="btn btn-ce" href="stock-vmc-3-axis.html">Посмотреть станок →</a>
-<button type="button" class="stk-lease-link" onclick="document.getElementById('leasing').scrollIntoView({behavior:'smooth'})">Рассчитать в лизинг →</button>
+<article class="vmc-card" data-name="универсальный токарный станок macro line lb-b500x1500 токарно-винторезные" data-title="Универсальный токарный станок Macro Line LB-B500x1500" data-sortkey="500" data-category="turning" data-ready="1" data-demo="1" data-size="500" data-length="1500">
+<a class="vmc-card-link" href="stock-turning-macroline-lb-b500x1500.html" aria-label="Универсальный токарный станок Macro Line LB-B500x1500 — подробнее"></a>
+<span class="vmc-stock-badge">В наличии</span>
+<div class="vmc-photo"><img src="stock-assets/cutout/turning-macroline-lb-b500x1500.png" alt="Универсальный токарный станок Macro Line LB-B500x1500" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Токарно-винторезные</small>
+<h3>Универсальный токарный станок Macro Line LB-B500x1500</h3>
+<div class="vmc-specs"><div><span>Диаметр над станиной</span><b>500 мм</b></div><div><span>Длина обработки</span><b>1500 мм</b></div><div><span>Конус шпинделя</span><b>ISO 702/II NO.8</b></div><div><span>Скорость шпинделя</span><b>9-1600 об/мин</b></div></div>
+<div class="stk-vmc-price"><b>1 716 000 ₽</b><span>без НДС · доставка и ПНР</span></div><div class="stk-price-note">Цена ориентировочная — зависит от текущего курса юаня на дату сделки</div>
+<button type="button" class="vmc-offer-btn" onclick="openModal('stockLeadModal')">Получить предложение</button>
 </div>
-</div>
-</div>
-</div>
+</article>
 
-<div class="stk-card" data-ready="1" data-demo="1" data-category="milling" data-name="вертикально-фрезерный центр, 3+1 оси фрезерное оборудование" data-price="6484000">
-<a href="stock-vmc-3-plus-1.html"><div class="stk-card-media"><img src="stock-assets/cutout/vmc-3-plus-1.png" alt="Вертикально-фрезерный обрабатывающий центр 3+1 оси" loading="lazy"/></div></a>
-<div class="stk-card-body">
-<div class="stk-card-cat">Фрезерное оборудование</div>
-<h3><a href="stock-vmc-3-plus-1.html">Вертикально-фрезерный центр, 3+1 оси</a></h3>
-<div class="stk-card-meta"><span><b>ЧПУ:</b> есть, модель уточняется</span><span><b>Назначение:</b> корпусные детали, сверление, растачивание и резьба за одну установку</span></div>
-<div class="stk-card-demo">✓ Демонстрация возможна</div><div class="stk-card-status">В наличии — готов к отгрузке</div>
-<div class="stk-card-foot">
-<div class="stk-card-price"><span>6 484 000 ₽ без НДС</span><b>с доставкой и ПНР</b></div>
-<div class="stk-card-actions">
-<a class="btn btn-ce" href="stock-vmc-3-plus-1.html">Посмотреть станок →</a>
-<button type="button" class="stk-lease-link" onclick="document.getElementById('leasing').scrollIntoView({behavior:'smooth'})">Рассчитать в лизинг →</button>
+<article class="vmc-card" data-name="универсальный токарный станок cs6250bx1500 токарно-винторезные" data-title="Универсальный токарный станок CS6250Bx1500" data-sortkey="500" data-category="turning" data-ready="1" data-demo="1" data-size="500" data-length="1500">
+<a class="vmc-card-link" href="stock-turning-cs6250b-1500.html" aria-label="Универсальный токарный станок CS6250Bx1500 — подробнее"></a>
+<span class="vmc-stock-badge">В наличии</span>
+<div class="vmc-photo"><img src="stock-assets/cutout/turning-cs6250b-1500.png" alt="Универсальный токарный станок CS6250Bx1500" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Токарно-винторезные</small>
+<h3>Универсальный токарный станок CS6250Bx1500</h3>
+<div class="vmc-specs"><div><span>Диаметр над станиной</span><b>500 мм</b></div><div><span>Диаметр над Гапом</span><b>710 мм</b></div><div><span>Длина обработки</span><b>1500 мм</b></div><div><span>Скорость шпинделя</span><b>9-1600 об/мин</b></div></div>
+<div class="stk-vmc-price"><b>1 730 000 ₽</b><span>без НДС · доставка и ПНР</span></div><div class="stk-price-note">Цена ориентировочная — зависит от текущего курса юаня на дату сделки</div>
+<button type="button" class="vmc-offer-btn" onclick="openModal('stockLeadModal')">Получить предложение</button>
 </div>
-</div>
-</div>
-</div>
+</article>
 
-<div class="stk-card" data-ready="0" data-demo="0" data-category="automation" data-name="барфидер fedek dh65 s2 автоматизация">
-<a href="stock-barfeeder-fedek-dh65.html"><div class="stk-card-media"><img src="stock-assets/cutout/barfeeder-fedek-dh65.png" alt="Барфидер Fedek DH65 S2" loading="lazy"/></div></a>
-<div class="stk-card-body">
-<div class="stk-card-cat">Автоматизация</div>
-<h3><a href="stock-barfeeder-fedek-dh65.html">Барфидер Fedek DH65 S2</a></h3>
-<div class="stk-card-meta"><span><b>Совместимость:</b> токарные станки с ЧПУ</span><span><b>Назначение:</b> автоматическая подача прутка для серийной обработки</span></div>
-<div class="stk-card-status is-sold">Продано</div>
-<div class="stk-card-foot">
-<div class="stk-card-price"><span>Статус</span><b>Продано</b></div>
-<div class="stk-card-actions">
-<a class="btn btn-ce" href="stock-barfeeder-fedek-dh65.html">Посмотреть станок →</a>
-<button type="button" class="stk-lease-link" onclick="document.getElementById('leasing').scrollIntoView({behavior:'smooth'})">Рассчитать в лизинг →</button>
+<article class="vmc-card" data-name="универсальный токарный станок macro line lb-b500x1500 (второй станок) токарно-винторезные" data-title="Универсальный токарный станок Macro Line LB-B500x1500 (второй станок)" data-sortkey="500" data-category="turning" data-ready="1" data-demo="1" data-size="500" data-length="1500">
+<a class="vmc-card-link" href="stock-turning-macroline-lb-b500x1500-2.html" aria-label="Универсальный токарный станок Macro Line LB-B500x1500 (второй станок) — подробнее"></a>
+<span class="vmc-stock-badge">В наличии</span>
+<div class="vmc-photo"><img src="stock-assets/cutout/turning-macroline-lb-b500x1500-2.png" alt="Универсальный токарный станок Macro Line LB-B500x1500 (второй станок)" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Токарно-винторезные</small>
+<h3>Универсальный токарный станок Macro Line LB-B500x1500 (второй станок)</h3>
+<div class="vmc-specs"><div><span>Диаметр над станиной</span><b>500 мм</b></div><div><span>Длина обработки</span><b>1500 мм</b></div><div><span>Диаметр над Гапом</span><b>710 мм</b></div><div><span>Скорость шпинделя</span><b>9-1600 об/мин</b></div></div>
+<div class="stk-vmc-price"><b>1 756 000 ₽</b><span>без НДС · доставка и ПНР</span></div><div class="stk-price-note">Цена ориентировочная — зависит от текущего курса юаня на дату сделки</div>
+<button type="button" class="vmc-offer-btn" onclick="openModal('stockLeadModal')">Получить предложение</button>
 </div>
-</div>
-</div>
-</div>
+</article>
 
-<div class="stk-card" data-ready="1" data-demo="1" data-category="turning" data-name="универсальный токарный станок macro line lb-b500x1500 токарное оборудование" data-price="1716000">
-<a href="stock-turning-macroline-lb-b500x1500.html"><div class="stk-card-media"><img src="stock-assets/cutout/turning-macroline-lb-b500x1500.png" alt="Универсальный токарный станок Macro Line LB-B500x1500" loading="lazy"/></div></a>
-<div class="stk-card-body">
-<div class="stk-card-cat">Токарное оборудование</div>
-<h3><a href="stock-turning-macroline-lb-b500x1500.html">Универсальный токарный станок Macro Line LB-B500x1500</a></h3>
-<div class="stk-card-meta"><span><b>Управление:</b> УЦИ</span><span><b>Назначение:</b> точение, сверление, растачивание и нарезание резьбы, детали до Ø500 мм</span></div>
-<div class="stk-card-demo">✓ Демонстрация возможна</div><div class="stk-card-status">В наличии — готов к отгрузке</div>
-<div class="stk-card-foot">
-<div class="stk-card-price"><span>1 716 000 ₽ без НДС</span><b>с доставкой и ПНР</b></div>
-<div class="stk-card-actions">
-<a class="btn btn-ce" href="stock-turning-macroline-lb-b500x1500.html">Посмотреть станок →</a>
-<button type="button" class="stk-lease-link" onclick="document.getElementById('leasing').scrollIntoView({behavior:'smooth'})">Рассчитать в лизинг →</button>
+<article class="vmc-card" data-name="универсальный токарный станок macro line lb-c660x2000 токарно-винторезные" data-title="Универсальный токарный станок Macro Line LB-C660x2000" data-sortkey="660" data-category="turning" data-ready="1" data-demo="1" data-size="660" data-length="2000">
+<a class="vmc-card-link" href="stock-turning-macroline-lb-c660x2000.html" aria-label="Универсальный токарный станок Macro Line LB-C660x2000 — подробнее"></a>
+<span class="vmc-stock-badge">В наличии</span>
+<div class="vmc-photo"><img src="stock-assets/cutout/turning-macroline-lb-c660x2000.png" alt="Универсальный токарный станок Macro Line LB-C660x2000" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Токарно-винторезные</small>
+<h3>Универсальный токарный станок Macro Line LB-C660x2000</h3>
+<div class="vmc-specs"><div><span>Диаметр над станиной</span><b>660 мм</b></div><div><span>Диаметр над Гапом</span><b>870 мм</b></div><div><span>Длина обработки</span><b>2000 мм</b></div><div><span>Скорость шпинделя</span><b>9-1600 об/мин</b></div></div>
+<div class="stk-vmc-price"><b>2 017 000 ₽</b><span>без НДС · доставка и ПНР</span></div><div class="stk-price-note">Цена ориентировочная — зависит от текущего курса юаня на дату сделки</div>
+<button type="button" class="vmc-offer-btn" onclick="openModal('stockLeadModal')">Получить предложение</button>
 </div>
-</div>
-</div>
-</div>
+</article>
 
-<div class="stk-card" data-ready="1" data-demo="1" data-category="turning" data-name="универсальный токарный станок cs6250bx1500 токарное оборудование" data-price="1730000">
-<a href="stock-turning-cs6250b-1500.html"><div class="stk-card-media"><img src="stock-assets/cutout/turning-cs6250b-1500.png" alt="Универсальный токарный станок CS6250Bx1500" loading="lazy"/></div></a>
-<div class="stk-card-body">
-<div class="stk-card-cat">Токарное оборудование</div>
-<h3><a href="stock-turning-cs6250b-1500.html">Универсальный токарный станок CS6250Bx1500</a></h3>
-<div class="stk-card-meta"><span><b>Управление:</b> УЦИ</span><span><b>Назначение:</b> точение деталей с увеличенным диаметром над гапом до 710 мм</span></div>
-<div class="stk-card-demo">✓ Демонстрация возможна</div><div class="stk-card-status">В наличии — готов к отгрузке</div>
-<div class="stk-card-foot">
-<div class="stk-card-price"><span>1 730 000 ₽ без НДС</span><b>с доставкой и ПНР</b></div>
-<div class="stk-card-actions">
-<a class="btn btn-ce" href="stock-turning-cs6250b-1500.html">Посмотреть станок →</a>
-<button type="button" class="stk-lease-link" onclick="document.getElementById('leasing').scrollIntoView({behavior:'smooth'})">Рассчитать в лизинг →</button>
+<article class="vmc-card" data-name="вертикально-фрезерный центр, 3 оси вертикально-фрезерные" data-title="Вертикально-фрезерный центр, 3 оси" data-sortkey="800" data-category="milling" data-ready="1" data-demo="1" data-size="800" data-length="450">
+<a class="vmc-card-link" href="stock-vmc-3-axis.html" aria-label="Вертикально-фрезерный центр, 3 оси — подробнее"></a>
+<span class="vmc-stock-badge">В наличии</span>
+<div class="vmc-photo"><img src="stock-assets/cutout/vmc-3-axis.png" alt="Вертикально-фрезерный центр, 3 оси" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Вертикально-фрезерные</small>
+<h3>Вертикально-фрезерный центр, 3 оси</h3>
+<div class="vmc-specs"><div><span>Оси X/Y/Z</span><b>800х450х510 мм</b></div><div><span>Стол</span><b>1000х450 мм</b></div><div><span>Шпиндель</span><b>BT-40 · 8000 об/мин</b></div><div><span>Магазин</span><b>24 позиции</b></div></div>
+<div class="stk-vmc-price"><b>8 300 000 ₽</b><span>без НДС · доставка и ПНР</span></div><div class="stk-price-note">Цена ориентировочная — зависит от текущего курса юаня на дату сделки</div>
+<button type="button" class="vmc-offer-btn" onclick="openModal('stockLeadModal')">Получить предложение</button>
 </div>
-</div>
-</div>
-</div>
+</article>
 
-<div class="stk-card" data-ready="1" data-demo="1" data-category="turning" data-name="универсальный токарный станок macro line lb-b500x1500 (второй станок) токарное оборудование" data-price="1756000">
-<a href="stock-turning-macroline-lb-b500x1500-2.html"><div class="stk-card-media"><img src="stock-assets/cutout/turning-macroline-lb-b500x1500-2.png" alt="Универсальный токарный станок Macro Line LB-B500x1500 (второй станок)" loading="lazy"/></div></a>
-<div class="stk-card-body">
-<div class="stk-card-cat">Токарное оборудование</div>
-<h3><a href="stock-turning-macroline-lb-b500x1500-2.html">Универсальный токарный станок Macro Line LB-B500x1500 (второй станок)</a></h3>
-<div class="stk-card-meta"><span><b>Управление:</b> УЦИ</span><span><b>Назначение:</b> точение, сверление, растачивание и нарезание резьбы, детали до Ø500 мм</span></div>
-<div class="stk-card-demo">✓ Демонстрация возможна</div><div class="stk-card-status">В наличии — готов к отгрузке</div>
-<div class="stk-card-foot">
-<div class="stk-card-price"><span>1 756 000 ₽ без НДС</span><b>с доставкой и ПНР</b></div>
-<div class="stk-card-actions">
-<a class="btn btn-ce" href="stock-turning-macroline-lb-b500x1500-2.html">Посмотреть станок →</a>
-<button type="button" class="stk-lease-link" onclick="document.getElementById('leasing').scrollIntoView({behavior:'smooth'})">Рассчитать в лизинг →</button>
+<article class="vmc-card" data-name="вертикально-фрезерный центр, 3+1 оси вертикально-фрезерные" data-title="Вертикально-фрезерный центр, 3+1 оси" data-sortkey="850" data-category="milling" data-ready="1" data-demo="1" data-size="850" data-length="500">
+<a class="vmc-card-link" href="stock-vmc-3-plus-1.html" aria-label="Вертикально-фрезерный центр, 3+1 оси — подробнее"></a>
+<span class="vmc-stock-badge">В наличии</span>
+<div class="vmc-photo"><img src="stock-assets/cutout/vmc-3-plus-1.png" alt="Вертикально-фрезерный центр, 3+1 оси" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Вертикально-фрезерные</small>
+<h3>Вертикально-фрезерный центр, 3+1 оси</h3>
+<div class="vmc-specs"><div><span>Оси X/Y/Z</span><b>850/500/570 мм</b></div><div><span>Стол</span><b>1200/520 мм</b></div><div><span>Шпиндель</span><b>BT-40 · 8000 об/мин</b></div><div><span>Нагрузка</span><b>750 кг</b></div></div>
+<div class="stk-vmc-price"><b>6 484 000 ₽</b><span>без НДС · доставка и ПНР</span></div><div class="stk-price-note">Цена ориентировочная — зависит от текущего курса юаня на дату сделки</div>
+<button type="button" class="vmc-offer-btn" onclick="openModal('stockLeadModal')">Получить предложение</button>
 </div>
-</div>
-</div>
-</div>
+</article>
 
-<div class="stk-card" data-ready="1" data-demo="1" data-category="turning" data-name="универсальный токарный станок macro line lb-c660x2000 токарное оборудование" data-price="2017000">
-<a href="stock-turning-macroline-lb-c660x2000.html"><div class="stk-card-media"><img src="stock-assets/cutout/turning-macroline-lb-c660x2000.png" alt="Универсальный токарный станок Macro Line LB-C660x2000" loading="lazy"/></div></a>
-<div class="stk-card-body">
-<div class="stk-card-cat">Токарное оборудование</div>
-<h3><a href="stock-turning-macroline-lb-c660x2000.html">Универсальный токарный станок Macro Line LB-C660x2000</a></h3>
-<div class="stk-card-meta"><span><b>Управление:</b> УЦИ</span><span><b>Назначение:</b> крупногабаритные детали до Ø870 мм над гапом, длина обработки 2000 мм</span></div>
-<div class="stk-card-demo">✓ Демонстрация возможна</div><div class="stk-card-status">В наличии — готов к отгрузке</div>
-<div class="stk-card-foot">
-<div class="stk-card-price"><span>2 017 000 ₽ без НДС</span><b>с доставкой и ПНР</b></div>
-<div class="stk-card-actions">
-<a class="btn btn-ce" href="stock-turning-macroline-lb-c660x2000.html">Посмотреть станок →</a>
-<button type="button" class="stk-lease-link" onclick="document.getElementById('leasing').scrollIntoView({behavior:'smooth'})">Рассчитать в лизинг →</button>
+<article class="vmc-card" data-name="плоскошлифовальный станок macro line gs-ahd4080 плоскошлифовальные" data-title="Плоскошлифовальный станок Macro Line GS-AHD4080" data-sortkey="406" data-category="grinding" data-ready="1" data-demo="1" data-size="406" data-length="813">
+<a class="vmc-card-link" href="stock-grinding-gs-ahd4080.html" aria-label="Плоскошлифовальный станок Macro Line GS-AHD4080 — подробнее"></a>
+<span class="vmc-stock-badge">В наличии</span>
+<div class="vmc-photo"><img src="stock-assets/cutout/grinding-gs-ahd4080.jpg" alt="Плоскошлифовальный станок Macro Line GS-AHD4080" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Плоскошлифовальные</small>
+<h3>Плоскошлифовальный станок Macro Line GS-AHD4080</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>813х406 мм</b></div><div><span>Макс. вес заготовки</span><b>500 кг</b></div><div><span>Круг</span><b>350х40х127 мм</b></div><div><span>Масса станка</span><b>3400 кг</b></div></div>
+<div class="stk-vmc-price"><b>2 690 000 ₽</b><span>без НДС · доставка и ПНР</span></div><div class="stk-price-note">Цена ориентировочная — зависит от текущего курса юаня на дату сделки</div>
+<button type="button" class="vmc-offer-btn" onclick="openModal('stockLeadModal')">Получить предложение</button>
 </div>
-</div>
-</div>
-</div>
+</article>
 
-<div class="stk-card" data-ready="1" data-demo="1" data-category="grinding" data-name="плоскошлифовальный станок macro line gs-ahd4080 шлифовальное оборудование" data-price="2690000">
-<a href="stock-grinding-gs-ahd4080.html"><div class="stk-card-media"><img src="stock-assets/cutout/grinding-gs-ahd4080.jpg" alt="Плоскошлифовальный станок Macro Line GS-AHD4080" loading="lazy"/></div></a>
-<div class="stk-card-body">
-<div class="stk-card-cat">Шлифовальное оборудование</div>
-<h3><a href="stock-grinding-gs-ahd4080.html">Плоскошлифовальный станок Macro Line GS-AHD4080</a></h3>
-<div class="stk-card-meta"><span><b>Управление:</b> SIEMENS, сенсорный экран 7"</span><span><b>Назначение:</b> финишное шлифование плоских поверхностей</span></div>
-<div class="stk-card-demo">✓ Демонстрация возможна</div><div class="stk-card-status">В наличии — готов к отгрузке</div>
-<div class="stk-card-foot">
-<div class="stk-card-price"><span>2 690 000 ₽ без НДС</span><b>с доставкой и ПНР</b></div>
-<div class="stk-card-actions">
-<a class="btn btn-ce" href="stock-grinding-gs-ahd4080.html">Посмотреть станок →</a>
-<button type="button" class="stk-lease-link" onclick="document.getElementById('leasing').scrollIntoView({behavior:'smooth'})">Рассчитать в лизинг →</button>
+<article class="vmc-card" data-name="барфидер fedek dh65 s2 автоматизация" data-title="Барфидер Fedek DH65 S2" data-sortkey="65" data-category="automation" data-ready="0" data-demo="0" data-size="65" data-length="0">
+<a class="vmc-card-link" href="stock-barfeeder-fedek-dh65.html" aria-label="Барфидер Fedek DH65 S2 — подробнее"></a>
+<span class="vmc-stock-badge is-sold">Продано</span>
+<div class="vmc-photo"><img src="stock-assets/cutout/barfeeder-fedek-dh65.png" alt="Барфидер Fedek DH65 S2" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Автоматизация</small>
+<h3>Барфидер Fedek DH65 S2</h3>
+<div class="vmc-specs"><div><span>Диаметр прутка</span><b>5-65 мм</b></div><div><span>Вес</span><b>280 кг</b></div><div><span>Высота шпинделя</span><b>850-1250 мм</b></div><div><span>Подача воздуха</span><b>6 кг/см2</b></div></div>
+<div class="stk-vmc-price is-sold"><b>Продано</b><span>уточним похожий вариант</span></div>
+<button type="button" class="vmc-offer-btn" onclick="openModal('stockLeadModal')">Получить предложение</button>
 </div>
-</div>
-</div>
-</div>
+</article>
 
 </div>
 </div>
 </div>
 </div>
 </section>
+</div>
 
 <!-- Блок 2: почему покупают со склада -->
 <section class="eq-section" id="why-stock">
@@ -794,9 +873,9 @@ function submitStockLeadForm(){
   }
   function ruWord(n,forms){var n2=n%100;if(n2>=11&&n2<=14)return forms[2];var n1=n%10;if(n1===1)return forms[0];if(n1>=2&&n1<=4)return forms[1];return forms[2];}
   document.querySelectorAll('[data-stk-scope]').forEach(function(scope){
-    var grid=scope.querySelector('.stk-grid');
+    var grid=scope.querySelector('.vmc-grid');
     if(!grid)return;
-    var cards=Array.prototype.slice.call(grid.querySelectorAll('.stk-card'));
+    var cards=Array.prototype.slice.call(grid.querySelectorAll('.vmc-card'));
     var panel=scope.querySelector('.vmc-filter-panel');
     if(!panel)return;
     var search=panel.querySelector('[data-role="search"]');
@@ -879,9 +958,31 @@ function submitStockLeadForm(){
     if(resetBtn)resetBtn.addEventListener('click',function(){
       panel.querySelectorAll('input[type="checkbox"]').forEach(function(inp){inp.checked=false;});
       panel.querySelectorAll('input[type="number"],input[type="search"]').forEach(function(inp){inp.value='';});
+      document.querySelectorAll('#stkCatPicker .eqcat-subcard').forEach(function(b){b.classList.remove('is-active');b.setAttribute('aria-current','false');});
       renderMatches();
     });
     updatePreview();
+
+    /* Пикер категорий вверху страницы управляет тем же скрытым чекбоксом "category" */
+    var catPicker=document.getElementById('stkCatPicker');
+    if(catPicker){
+      catPicker.querySelectorAll('[data-stk-cat]').forEach(function(btn){
+        btn.addEventListener('click',function(){
+          var cat=btn.getAttribute('data-stk-cat');
+          var cb=panel.querySelector('input[name="category"][value="'+cat+'"]');
+          if(!cb)return;
+          var willActivate=!btn.classList.contains('is-active');
+          panel.querySelectorAll('input[name="category"]').forEach(function(i){i.checked=false;});
+          catPicker.querySelectorAll('.eqcat-subcard').forEach(function(b){b.classList.remove('is-active');b.setAttribute('aria-current','false');});
+          if(willActivate){
+            cb.checked=true;
+            btn.classList.add('is-active');
+            btn.setAttribute('aria-current','true');
+          }
+          renderMatches();
+        });
+      });
+    }
   });
 })();
 

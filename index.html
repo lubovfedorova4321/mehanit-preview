@@ -1007,9 +1007,9 @@ footer{background:var(--bm);color:rgba(234,234,230,.55);padding:3rem 0 2rem;bord
 }
 
 /* SOLUTIONS — стиль каталога оборудования (светлый фон-склад, 3×3) */
-#solutions.solutions-block{padding:0!important;background:#e8eaeb!important;overflow:hidden;position:relative}
+#solutions.solutions-block{padding:0!important;background:#fff!important;overflow:hidden;position:relative}
 .solutions-block .equipment-warehouse-intro{padding:clamp(56px,7vw,92px) 0 clamp(28px,3.6vw,44px)}
-.solutions-block .equipment-scene::after{background:rgba(244,245,247,.5)}
+.solutions-block .equipment-scene::after{background:transparent}
 .solutions-grid{grid-template-columns:repeat(3,1fr)!important;gap:clamp(40px,4.2vw,72px) clamp(24px,2.8vw,48px)!important;width:min(calc(100% - 64px),var(--max))!important;margin:0 auto!important}
 .scell{display:flex;flex-direction:column;align-items:stretch;gap:0;text-decoration:none}
 .scell-media{position:relative;z-index:2;width:100%;height:clamp(176px,14.8vw,246px);display:flex;align-items:flex-end;justify-content:center;background:transparent;margin-bottom:-40px;pointer-events:none}
@@ -1870,7 +1870,7 @@ body.premium-v4 .equipment-actions{margin-top:24px}
 @media(max-width:680px){#equipment.equipment{padding:46px 0 58px!important}#equipment .equipment-hero-copy{padding:34px 22px 26px}#equipment .equipment-hero-actions{margin-top:28px}#equipment .equipment-hero-image{height:230px}#equipment .equipment-grid{grid-template-columns:1fr!important}#equipment .equipment-card{height:232px!important}}
 
 /* === V31 interactive equipment warehouse === */
-#equipment.equipment{padding:0!important;background:#e8eaeb!important;overflow:hidden;position:relative}
+#equipment.equipment{padding:0!important;background:#fff!important;overflow:hidden;position:relative}
 .project-support{--ps-bg:#F4F5F7;--ps-bg2:#ECEFF2;--ps-graphite:#20242A;--ps-gray:#565D66;--ps-purple:#65217E;--ps-purple-dark:#48105F;--ps-purple-light:#8B4AA3;--ps-line:rgba(38,44,52,.14);--ps-title-light:#555C65;--ps-desc:#343A42;--ps-statement:#5F237A;--ps-icon:#333B46;--ps-caption:#3F4650;--ps-bottom-text:#292F38;position:relative;width:100%;overflow:hidden;background:var(--ps-bg)}
 .project-support__background{position:absolute;inset:0;z-index:0;background:linear-gradient(90deg,var(--ps-bg2) 0%,var(--ps-bg2) 42%,var(--ps-bg) 58%,var(--ps-bg) 100%)}
 .project-support__container{position:relative;z-index:2;display:flex;align-items:stretch}
@@ -1946,8 +1946,8 @@ body.premium-v4 .equipment-actions{margin-top:24px}
 body.hide-hdr-cta .hdr .hdr-cta{display:none}
 .equipment-cats{position:relative;z-index:2;padding:0}
 .equipment-scene{position:relative;width:100%;overflow:hidden;padding:clamp(30px,4vw,58px) 0 clamp(40px,4.5vw,66px)}
-.equipment-scene::before{content:'';position:absolute;inset:-30px;z-index:0;background:url('equipment-warehouse-bg.jpg') center/cover no-repeat;filter:blur(11px) brightness(1.16) saturate(.92);transform:scale(1.06)}
-.equipment-scene::after{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;background:rgba(244,245,247,.6)}
+.equipment-scene::before{content:'';position:absolute;inset:-30px;z-index:0;background-color:var(--paper);background-image:linear-gradient(rgba(107,45,139,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(107,45,139,.055) 1px,transparent 1px);background-size:72px 72px}
+.equipment-scene::after{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;background:transparent}
 .equipment-grid{position:relative;z-index:2;display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(52px,5vw,84px) clamp(16px,1.9vw,30px);width:min(calc(100% - 56px),1780px);margin:0 auto}
 .equipment-grid-center{position:relative;z-index:2;display:flex;justify-content:center;width:min(calc(100% - 56px),1780px);margin:clamp(24px,2.6vw,46px) auto 0}
 .ecell{position:relative;display:flex;flex-direction:column;align-items:stretch;gap:0;text-decoration:none}
