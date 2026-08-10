@@ -4,6 +4,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <meta name="description" content="Радиально- и вертикально-сверлильные станки для сверления, зенкерования, развёртывания и нарезания резьбы — от единичного ремонтного производства до серийн"/>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "В чём разница между радиально- и вертикально-сверлильным станком?", "acceptedAnswer": {"@type": "Answer", "text": "Радиально-сверлильный станок подходит для тяжёлых и крупногабаритных деталей — поворотная рука перемещает шпиндель к детали, а не наоборот. Вертикально-сверлильный станок — для более компактных заготовок, устанавливаемых на стол."}}, {"@type": "Question", "name": "Какой диаметр сверления по умолчанию доступен?", "acceptedAnswer": {"@type": "Answer", "text": "Диапазон зависит от модели — от небольших настольных станков до тяжёлых радиально-сверлильных с вылетом до 2 метров. Точные параметры — в карточке каждой модели."}}, {"@type": "Question", "name": "Возможна ли поставка станка в наличии?", "acceptedAnswer": {"@type": "Answer", "text": "Часть моделей есть на складе в России — уточните у технолога по вашей задаче."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://mehanit.ru/"}, {"@type": "ListItem", "position": 2, "name": "Оборудование", "item": "https://mehanit.ru/equipment.html"}, {"@type": "ListItem", "position": 3, "name": "Сверлильные станки"}]}</script>
 <style>*{margin:0;padding:0;box-sizing:border-box}
 :root{
   --bm:#1A1A1A;--sg:#3D3D3D;--sg2:#2B2E31;--mid:#696D71;--muted:#8A9096;
@@ -34,13 +35,14 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 .hdr{position:sticky;top:0;z-index:100;background:rgba(237,238,240,.9);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
 .nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}
 .brand img{height:52px;width:auto;display:block}
-.crumbbar{position:sticky;top:72px;z-index:98;background:linear-gradient(120deg,rgba(255,255,255,.94),rgba(237,238,240,.88));border-bottom:1px solid rgba(107,45,139,.18);backdrop-filter:blur(18px);box-shadow:0 18px 42px rgba(26,26,26,.08),inset 0 -1px 0 rgba(255,255,255,.72)}
-.crumbbar::before{content:'';position:absolute;left:0;right:0;top:0;height:2px;background:linear-gradient(90deg,var(--gold),rgba(201,162,39,0) 38%,rgba(107,45,139,.34) 100%);pointer-events:none}
-.crumbs{display:flex;align-items:center;gap:10px;min-width:0;font-family:'Golos Text',monospace;font-size:10px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.crumbs a,.crumbs span{flex:0 0 auto}
-.crumbs a{color:var(--sg);transition:color .18s ease}
-.crumbs a:hover{color:var(--ce)}
-.crumbs .current{color:var(--bm);font-weight:800;overflow:hidden;text-overflow:ellipsis}
+.crumbbar{border-bottom:1px solid rgba(26,26,26,.06);background:rgba(255,255,255,.55)}
+.crumbs{min-height:44px;display:flex;align-items:center;gap:8px;font-family:'Golos Text',sans-serif;font-size:13px;font-weight:500;letter-spacing:.04em;line-height:1.45;color:var(--muted);flex-wrap:wrap}
+.crumbs a{color:var(--muted);transition:color .15s ease}
+.crumbs a:hover,.crumbs a:focus-visible{color:var(--ce);text-decoration:underline;text-underline-offset:3px}
+.crumbs a:focus-visible{outline:2px solid var(--ce);outline-offset:2px;border-radius:2px}
+.crumbs .crumb-sep{color:rgba(138,141,150,.55);font-size:12px}
+.crumbs .current{color:var(--mid);font-weight:500}
+@media(max-width:640px){.crumbs{font-size:12px;gap:6px}}
 .hero-cta .btn{width:100%;padding-left:16px;padding-right:16px;text-align:center;min-height:44px}
 .tools .wrap{position:relative;z-index:1}
 .tools .h2,.tools .eyebrow{color:var(--tl)}
@@ -96,7 +98,6 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 .mill-links-row{display:flex;flex-wrap:wrap;gap:1px;background:var(--line);border:1px solid var(--line)}
 .btn,.menu-trigger,.mega a,.nav-tile,.equipment-card,.taskc,.tax-card,.stock-card,.tool-card,.svcc,.casec,.indc,.final-h,.proof-item{transition-duration:.18s!important;transition-timing-function:cubic-bezier(.2,.7,.2,1)!important}
 .btn:hover{transform:translateY(-1px)!important}
-.crumbbar{box-shadow:0 12px 34px rgba(26,26,26,.07),inset 0 -1px 0 rgba(255,255,255,.72)}
 .hero-cta-two .btn{min-height:50px}
 .hero-cta .btn{
   min-height:52px!important;
@@ -127,13 +128,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 }
 .product-section.dark .h2,.product-section.dark .eyebrow{color:var(--tl)}
 .product-section.dark .h2 .lt{color:rgba(234,234,230,.5)}
-.crumbbar::before{opacity:.28!important}
-.crumbs{color:#9aa0a6!important;font-weight:500!important}
-.crumbs .current{color:#7f858b!important}
 .floating-action-panel .btn{width:100%;justify-content:center;min-height:44px;font-size:10px;padding:0 16px;box-shadow:0 16px 42px rgba(26,26,26,.12)}
-.crumbbar::before{opacity:.18!important}
-.crumbs,.crumbs a,.crumbs span,.crumbs .current,.crumb-sep,.crumb-action,.crumb-top{color:#b1b5b9!important}
-.crumbs a:hover,.crumb-action:hover,.crumb-top:hover{color:#8f969c!important}
 .eqcat-hero {
   padding: 40px 0 32px;
   background-image:
@@ -538,8 +533,6 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
   .proofline-in{grid-template-columns:repeat(2,1fr)}
   .proof-item.dark{grid-column:1/-1}
   .tool-photo{width:150px;height:104px}.tool-photo-track{gap:24px;padding:16px 24px}
-  .crumbbar-in{gap:10px}
-  .crumbs{font-size:8.5px}
   .nav-tile{padding:7px 9px}.nav-tile b{font-size:11.5px}.nav-tile.chat b{font-size:9px}.msg-ic{width:19px;height:19px;font-size:6px}.msg-ic.max{width:auto;min-width:58px;height:23px;font-size:15px}.msg-ic.max::before{width:22px;height:19px;flex-basis:22px}.msg-ic.max::after{left:7px;bottom:4px;width:8px;height:7px}.msg-ic.tg svg{width:11px;height:11px}
   .pm-widget{right:14px;bottom:14px;padding:10px 11px 10px 12px;gap:10px}.pm-widget b{font-size:11px}.pm-widget small{font-size:6.8px}.pm-widget .msg-ic{width:20px;height:20px}.pm-widget .msg-ic.max{width:auto;min-width:56px;height:23px;font-size:15px}.pm-widget .msg-ic.tg svg{width:11px;height:11px}
   .hero{grid-template-columns:1fr}.hero-l{width:100%;padding:1.6rem 0 2.3rem}.hero-r{min-height:380px}.hero-r::after{background:linear-gradient(90deg,rgba(237,238,240,.98) 0%,rgba(237,238,240,.82) 62%,rgba(237,238,240,.22) 100%)}
@@ -567,10 +560,6 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
   .proof-item{min-height:auto;padding:16px}
   .tool-photo-strip{margin:-1rem 0 1.6rem}
   .tool-photo{width:126px;height:88px}.tool-photo-track{gap:18px;padding:14px 18px;animation-duration:36s}
-  .crumbbar-in{min-height:34px;gap:8px}
-  .crumb-action,.crumb-top{font-size:8px}
-  .crumbs{font-size:8px;gap:6px}
-  .crumbs a:first-child,.crumbs .crumb-sep:first-of-type{display:none}
   .catalog-backline{display:block}.catalog-backline span{display:block;margin-top:8px}
   .nav-contact{display:none}
   .pm-widget{left:16px;right:16px;bottom:14px;justify-content:space-between}.pm-widget b{white-space:normal;line-height:1.15}
@@ -686,30 +675,80 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 .call-card a{font-family:'Magistral',sans-serif;font-size:clamp(26px,4vw,42px);font-weight:700;letter-spacing:-.04em;color:var(--bm)}
 .call-card p{margin-top:10px!important;margin-bottom:0!important}
 @media(max-width:640px){.mini-grid{grid-template-columns:1fr}}
+
+.g2-page .eqcat-hero{padding-bottom:34px}
+.g2-hero-top{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:48px;align-items:start}
+.g2-hero-left{display:flex;flex-direction:column}
+.g2-hero-right{display:flex;flex-direction:column;gap:14px}
+.g2-feature-row{display:flex;flex-wrap:nowrap;gap:16px;margin-top:24px}
+.g2-feature{display:flex;align-items:center;gap:9px;min-width:0;flex:1 1 0}
+.g2-feature-ic{flex:0 0 auto;width:32px;height:32px;border-radius:50%;background:linear-gradient(150deg,rgba(107,45,139,.1),rgba(201,162,39,.08));display:flex;align-items:center;justify-content:center;color:var(--ce)}
+.g2-feature-ic svg{width:18px;height:18px}
+.g2-feature-body{min-width:0}
+.g2-feature b{display:block;font-size:12px;font-weight:800;color:var(--bm);line-height:1.3;margin-bottom:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.g2-feature small{display:block;font-size:11px;color:var(--mid);line-height:1.3}
+.g2-subnav-title{margin-top:6px;text-transform:none;font-size:clamp(24px,2.8vw,34px)}
+.g2-toolbar-head{display:flex;flex-direction:column;gap:6px}
+.g2-toolbar-title-row{display:flex;align-items:baseline;gap:8px 18px;flex-wrap:wrap}
+.g2-catalog-desc{flex:1 1 260px;min-width:220px;color:var(--mid);font-size:13.5px;line-height:1.5;font-weight:400}
+.g2-toolbar-tools{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.g2-fallback-note{margin:-8px 0 18px;padding:10px 14px;background:rgba(201,162,39,.08);border:1px dashed rgba(201,162,39,.4);color:#8a6d10;font-size:12.5px;line-height:1.5;border-radius:6px}
+.g2-filter-panel{padding:20px}
+.g2-filter-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:16px;padding-bottom:14px;border-bottom:1px solid rgba(26,26,26,.08)}
+.g2-filter-head>span{font-family:'Golos Text',monospace;font-size:10px;font-weight:800;letter-spacing:1.15px;text-transform:uppercase;color:rgba(58,62,68,.72)}
+.g2-reset{display:inline-flex;align-items:center;gap:6px;appearance:none;border:0;background:transparent;color:var(--ce);font-family:'Golos Text',monospace;font-size:9px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;cursor:pointer;padding:0}
+.g2-search{position:relative;display:block;margin-bottom:18px}
+.g2-search-ic{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:rgba(82,86,90,.5)}
+.g2-search input{width:100%;border:1px solid rgba(26,26,26,.10);background:rgba(255,255,255,.68);color:var(--bm);font-family:inherit;font-size:13px;padding:11px 12px 11px 34px;outline:none;transition:.18s}
+.g2-search input:focus{border-color:rgba(107,45,139,.38);box-shadow:0 0 0 3px rgba(107,45,139,.08)}
+.g2-direct{display:grid;gap:14px;padding-top:14px;border-top:1px solid rgba(26,26,26,.07)}
+.g2-field strong{display:block;margin-bottom:8px;font-family:'Golos Text',monospace;font-size:10px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;color:rgba(42,45,50,.72)}
+.g2-group{margin-top:14px;padding-top:14px;border-top:1px solid rgba(26,26,26,.07)}
+.g2-group summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;font-family:'Golos Text',monospace;font-size:10.5px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;color:rgba(42,45,50,.8);padding:2px 0}
+.g2-group summary::-webkit-details-marker{display:none}
+.g2-group summary::after{content:'+';font-size:15px;color:var(--ce)}
+.g2-group[open] summary::after{content:'–'}
+.g2-group-body{display:grid;gap:14px;margin-top:14px}
+.g2-apply-wrap{margin-top:18px;padding-top:16px;border-top:1px solid rgba(26,26,26,.07)}
+.g2-apply{width:100%;justify-content:center;min-height:46px}
+@media(min-width:1181px){
+  .g2-page .vmc-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+}
+@media(max-width:980px){
+  .g2-hero-top{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .g2-page .eqcat-subcards{display:grid!important;grid-template-columns:1fr!important;overflow:visible!important}
+  .g2-page .eqcat-subcards .eqcat-subcard{flex:1 1 auto!important}
+  .g2-toolbar-tools{width:100%}
+}
 </style>
 <link rel="stylesheet" href="site-shell.css"/>
 </head>
-<body class="premium-v3 milling-tabs-page">
+<body class="premium-v3 milling-tabs-page g2-page">
 <header></header>
-<div class="crumbbar"><div class="wrap crumbs"><a href="index.html">Главная</a><span>/</span><a href="equipment.html">Оборудование</a><span>/</span><span class="current">Сверлильные станки</span></div></div>
+<nav class="crumbbar" aria-label="Хлебные крошки"><div class="wrap crumbs"><a href="index.html">Главная</a><span class="crumb-sep" aria-hidden="true">/</span><a href="equipment.html">Оборудование</a><span class="crumb-sep" aria-hidden="true">/</span><span class="current" aria-current="page">Сверлильные станки</span></div></nav>
 <main class="eqcat-page">
-<section class="eqcat-hero"><div class="wrap"><div class="eqcat-head">
+<section class="eqcat-hero"><div class="wrap">
+<div class="g2-hero-top">
+<div class="g2-hero-left">
 <h1 class="eqcat-title">Сверлильные станки</h1>
-<div>
-<p class="eqcat-lead">Радиально- и вертикально-сверлильные станки для сверления, зенкерования, развёртывания и нарезания резьбы — от единичного ремонтного производства до серийной обработки.</p>
-<p class="mill-types-line">Радиально-сверлильные · Вертикально-сверлильные</p>
+<div class="g2-feature-row"><div class="g2-feature"><span class="g2-feature-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.2"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3"/></svg></span><div class="g2-feature-body"><b>Точное позиционирование</b><small>Стабильный диаметр отверстия</small></div></div><div class="g2-feature"><span class="g2-feature-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l7 3v5c0 4.5-3 7.8-7 9-4-1.2-7-4.5-7-9V6l7-3z"/><path d="M8.8 12.2l2.1 2.1 4.3-4.3"/></svg></span><div class="g2-feature-body"><b>Надёжный привод</b><small>Работа с чёрным и цветным металлом</small></div></div><div class="g2-feature"><span class="g2-feature-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 15c2-3 4-3 6 0s4 3 6 0 4-3 6 0"/><path d="M3 9c2-3 4-3 6 0s4 3 6 0 4-3 6 0"/></svg></span><div class="g2-feature-body"><b>От ремонта до серии</b><small>Радиальные и вертикальные схемы</small></div></div></div>
 </div>
-</div></div></section>
+<div class="g2-hero-right">
+<p class="eqcat-lead">Радиально- и вертикально-сверлильные станки для сверления, зенкерования, развёртывания и нарезания резьбы — от единичного ремонтного производства до серийной обработки.</p>
+</div>
+</div>
+</div></section>
 
 <section class="eqcat-subnav-wrap" id="subcats"><div class="wrap">
-<div class="eqcat-subnav-head"><div class="eyebrow">Подкатегории</div></div>
+<div class="eqcat-subnav-head"><div class="eyebrow">Подкатегории</div><h2 class="h2 g2-subnav-title">Выберите тип оборудования</h2></div>
 <nav class="eqcat-subcards">
 <button type="button" class="eqcat-subcard is-active" data-milling-tab="radial" aria-current="true">
 <span class="eqcat-subcard-badge" aria-hidden="true">✓</span>
 <span class="eqcat-subcard-media"><img src="drilling-assets/rd3210-rd4010-rd5016-rd5020-rd6320-rd8025-f.png" alt="Радиально-сверлильные станки" loading="lazy"/></span>
 <span class="eqcat-subcard-body">
 <h3>Радиально-сверлильные станки</h3>
-<p>Поворотная рука подводит шпиндель к детали — для тяжёлых и крупногабаритных заготовок.</p>
 <span class="eqcat-subcard-count">14 моделей</span>
 </span>
 <span class="eqcat-subcard-arrow" aria-hidden="true">→</span>
@@ -718,7 +757,6 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <span class="eqcat-subcard-media"><img src="drilling-assets/d320-f.png" alt="Вертикально-сверлильные станки" loading="lazy"/></span>
 <span class="eqcat-subcard-body">
 <h3>Вертикально-сверлильные станки</h3>
-<p>Компактная схема с перемещением стола — для деталей среднего размера.</p>
 <span class="eqcat-subcard-count">25 моделей</span>
 </span>
 <span class="eqcat-subcard-arrow" aria-hidden="true">→</span>
@@ -729,54 +767,61 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <section class="milling-tab-panel is-active" data-milling-panel="radial">
 <section class="vmc-model-section"><div class="wrap">
 <div class="vmc-catalog-layout" data-vmc-scope>
+<aside class="vmc-filter-panel g2-filter-panel">
 <div class="eqcat-filter-backdrop" data-role="filter-backdrop"></div>
-<aside class="vmc-filter-panel">
-<div class="vmc-filter-head"><span>Фильтр</span><button type="button" class="vmc-reset" data-role="reset">Сбросить</button><button type="button" class="eqcat-filter-close" data-role="filter-close" aria-label="Закрыть фильтр">×</button></div>
-<label class="vmc-search"><span>Поиск по модели</span><input type="search" data-role="search" placeholder="Например, RD3210 / RD4010 / RD5016 / RD5020 / RD6320 / RD8025 F"/></label>
-<div class="vmc-tier-label">Параметры станка</div>
-<div class="vmc-filter-group"><strong>Макс. диаметр сверления (мм)</strong>
+<div class="g2-filter-head"><span>Фильтр</span><button type="button" class="g2-reset" data-role="reset"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg>Сбросить всё</button><button type="button" class="eqcat-filter-close" data-role="filter-close" aria-label="Закрыть фильтр">×</button></div>
+<label class="g2-search"><span class="g2-search-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span><input type="search" data-role="search" placeholder="Поиск по модели"/></label>
+<div class="g2-direct"><div class="g2-field"><strong>Макс. диаметр сверления (мм)</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="drilling-diam-max" data-bound="min"/>
 <input type="number" placeholder="До" data-range="drilling-diam-max" data-bound="max"/>
-</div></div><div class="vmc-filter-group"><strong>Вылет (радиус) (мм)</strong>
+</div></div><div class="g2-field"><strong>Вылет (радиус) (мм)</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="arm-reach" data-bound="min"/>
 <input type="number" placeholder="До" data-range="arm-reach" data-bound="max"/>
-</div></div><div class="vmc-filter-group"><strong>Конус шпинделя</strong>
+</div></div></div>
+<details class="g2-group" open><summary>Дополнительные параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Конус шпинделя</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="spindle-taper" data-bound="min"/>
 <input type="number" placeholder="До" data-range="spindle-taper" data-bound="max"/>
-</div></div><div class="vmc-filter-group"><strong>Частота вращения шпинделя (об/мин)</strong>
+</div></div><div class="g2-field"><strong>Частота вращения шпинделя (об/мин)</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="spindle-speed-max" data-bound="min"/>
 <input type="number" placeholder="До" data-range="spindle-speed-max" data-bound="max"/>
-</div></div><div class="vmc-filter-group"><strong>Мощность привода (кВт)</strong>
+</div></div><div class="g2-field"><strong>Мощность привода (кВт)</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="spindle-power" data-bound="min"/>
 <input type="number" placeholder="До" data-range="spindle-power" data-bound="max"/>
-</div></div><div class="vmc-filter-group"><strong>Масса станка (кг)</strong>
+</div></div><div class="g2-field"><strong>Масса станка (кг)</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="machine-weight" data-bound="min"/>
 <input type="number" placeholder="До" data-range="machine-weight" data-bound="max"/>
-</div></div>
-<details class="vmc-advanced"><summary>Все параметры</summary><div class="vmc-filter-group"><strong>Диаметр колонны (мм)</strong>
+</div></div></div></details>
+<details class="g2-group"><summary>Все параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Диаметр колонны (мм)</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="column-diam" data-bound="min"/>
 <input type="number" placeholder="До" data-range="column-diam" data-bound="max"/>
-</div></div><div class="vmc-filter-group"><strong>Макс. диаметр резьбы (мм)</strong>
+</div></div><div class="g2-field"><strong>Макс. диаметр резьбы (мм)</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="tapping-diam-max" data-bound="min"/>
 <input type="number" placeholder="До" data-range="tapping-diam-max" data-bound="max"/>
-</div></div></details>
-<div class="vmc-filter-apply"><button type="button" class="btn btn-ce" data-role="apply">Применить</button><span class="vmc-filter-preview"><b data-role="preview">14</b> моделей найдено</span></div>
+</div></div></div></details>
+<div class="g2-apply-wrap">
+<button type="button" class="btn btn-ce g2-apply" data-role="apply">Показать <span data-role="preview">14</span> <span data-role="preview-word">моделей</span></button>
+</div>
 <p class="vmc-filter-note">Не нашли нужный параметр в фильтре — характеристики каждой модели указаны в карточке и на странице станка.</p>
 </aside>
 <div>
-<div class="vmc-toolbar">
-<div class="vmc-toolbar-head"><h2 class="h2 eqcat-catalog-title">Радиально-сверлильные станки</h2><span class="eqcat-catalog-count">14 моделей</span></div>
-<button type="button" class="eqcat-filter-toggle" data-role="filter-toggle">Фильтры</button>
-<label class="eqcat-sort"><span>Сортировать:</span><select data-role="sort"><option value="default">По умолчанию</option><option value="name">По названию</option></select></label>
+<div class="vmc-toolbar g2-toolbar">
+<div class="vmc-toolbar-head g2-toolbar-head">
+<div class="eyebrow">Модельный ряд</div>
+<div class="g2-toolbar-title-row"><h2 class="h2 eqcat-catalog-title">Радиально-сверлильные станки</h2><span class="eqcat-catalog-count">14 моделей</span><span class="g2-catalog-desc">Поворотная рука подводит шпиндель к детали — для тяжёлых и крупногабаритных заготовок.</span></div>
 </div>
+<div class="g2-toolbar-tools">
+<button type="button" class="eqcat-filter-toggle" data-role="filter-toggle">Все фильтры</button>
+</div>
+</div>
+<div class="g2-fallback-note" data-role="fallback-note" hidden>Точных совпадений не нашлось — показаны ближайшие по параметрам модели.</div>
 <div class="vmc-grid">
 <article class="vmc-card" data-name="rd3210 / rd4010 / rd5016 / rd5020 / rd6320 / rd8025 f радиально-сверлильные станки" data-title="RD3210 / RD4010 / RD5016 / RD5020 / RD6320 / RD8025 F" data-sortkey="32.0" data-drilling-diam-max="32" data-arm-reach="300–1000" data-spindle-taper="МТ4" data-spindle-speed-max="32–2500" data-spindle-power="2,2" data-machine-weight="1600">
 <a class="vmc-card-link" href="equipment-drilling-rd3210-rd4010-rd5016-rd5020-rd6320-rd8025-f.html" aria-label="RD3210 / RD4010 / RD5016 / RD5020 / RD6320 / RD8025 F — подробнее"></a>
@@ -925,58 +970,65 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </section><section class="milling-tab-panel" data-milling-panel="vertical">
 <section class="vmc-model-section"><div class="wrap">
 <div class="vmc-catalog-layout" data-vmc-scope>
+<aside class="vmc-filter-panel g2-filter-panel">
 <div class="eqcat-filter-backdrop" data-role="filter-backdrop"></div>
-<aside class="vmc-filter-panel">
-<div class="vmc-filter-head"><span>Фильтр</span><button type="button" class="vmc-reset" data-role="reset">Сбросить</button><button type="button" class="eqcat-filter-close" data-role="filter-close" aria-label="Закрыть фильтр">×</button></div>
-<label class="vmc-search"><span>Поиск по модели</span><input type="search" data-role="search" placeholder="Например, D320 F"/></label>
-<div class="vmc-tier-label">Параметры станка</div>
-<div class="vmc-filter-group"><strong>Макс. диаметр сверления (мм)</strong>
+<div class="g2-filter-head"><span>Фильтр</span><button type="button" class="g2-reset" data-role="reset"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg>Сбросить всё</button><button type="button" class="eqcat-filter-close" data-role="filter-close" aria-label="Закрыть фильтр">×</button></div>
+<label class="g2-search"><span class="g2-search-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span><input type="search" data-role="search" placeholder="Поиск по модели"/></label>
+<div class="g2-direct"><div class="g2-field"><strong>Макс. диаметр сверления (мм)</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="drilling-diam-max" data-bound="min"/>
 <input type="number" placeholder="До" data-range="drilling-diam-max" data-bound="max"/>
-</div></div><div class="vmc-filter-group"><strong>Ход шпинделя (мм)</strong>
+</div></div><div class="g2-field"><strong>Ход шпинделя (мм)</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="spindle-travel" data-bound="min"/>
 <input type="number" placeholder="До" data-range="spindle-travel" data-bound="max"/>
-</div></div><div class="vmc-filter-group"><strong>Конус шпинделя</strong>
+</div></div></div>
+<details class="g2-group" open><summary>Дополнительные параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Конус шпинделя</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="spindle-taper" data-bound="min"/>
 <input type="number" placeholder="До" data-range="spindle-taper" data-bound="max"/>
-</div></div><div class="vmc-filter-group"><strong>Частота вращения шпинделя (об/мин)</strong>
+</div></div><div class="g2-field"><strong>Частота вращения шпинделя (об/мин)</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="spindle-speed-max" data-bound="min"/>
 <input type="number" placeholder="До" data-range="spindle-speed-max" data-bound="max"/>
-</div></div><div class="vmc-filter-group"><strong>Мощность привода (кВт)</strong>
+</div></div><div class="g2-field"><strong>Мощность привода (кВт)</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="spindle-power" data-bound="min"/>
 <input type="number" placeholder="До" data-range="spindle-power" data-bound="max"/>
-</div></div><div class="vmc-filter-group"><strong>Масса станка (кг)</strong>
+</div></div><div class="g2-field"><strong>Масса станка (кг)</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="machine-weight" data-bound="min"/>
 <input type="number" placeholder="До" data-range="machine-weight" data-bound="max"/>
-</div></div>
-<details class="vmc-advanced"><summary>Все параметры</summary><div class="vmc-filter-group"><strong>Размер стола</strong>
+</div></div></div></details>
+<details class="g2-group"><summary>Все параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Размер стола</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="table-size" data-bound="min"/>
 <input type="number" placeholder="До" data-range="table-size" data-bound="max"/>
-</div></div><div class="vmc-filter-group"><strong>Шпиндель — стол (мм)</strong>
+</div></div><div class="g2-field"><strong>Шпиндель — стол (мм)</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="spindle-to-table" data-bound="min"/>
 <input type="number" placeholder="До" data-range="spindle-to-table" data-bound="max"/>
-</div></div><div class="vmc-filter-group"><strong>Макс. диаметр резьбы (мм)</strong>
+</div></div><div class="g2-field"><strong>Макс. диаметр резьбы (мм)</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="tapping-diam-max" data-bound="min"/>
 <input type="number" placeholder="До" data-range="tapping-diam-max" data-bound="max"/>
-</div></div></details>
-<div class="vmc-filter-apply"><button type="button" class="btn btn-ce" data-role="apply">Применить</button><span class="vmc-filter-preview"><b data-role="preview">25</b> моделей найдено</span></div>
+</div></div></div></details>
+<div class="g2-apply-wrap">
+<button type="button" class="btn btn-ce g2-apply" data-role="apply">Показать <span data-role="preview">25</span> <span data-role="preview-word">моделей</span></button>
+</div>
 <p class="vmc-filter-note">Не нашли нужный параметр в фильтре — характеристики каждой модели указаны в карточке и на странице станка.</p>
 </aside>
 <div>
-<div class="vmc-toolbar">
-<div class="vmc-toolbar-head"><h2 class="h2 eqcat-catalog-title">Вертикально-сверлильные станки</h2><span class="eqcat-catalog-count">25 моделей</span></div>
-<button type="button" class="eqcat-filter-toggle" data-role="filter-toggle">Фильтры</button>
-<label class="eqcat-sort"><span>Сортировать:</span><select data-role="sort"><option value="default">По умолчанию</option><option value="name">По названию</option></select></label>
+<div class="vmc-toolbar g2-toolbar">
+<div class="vmc-toolbar-head g2-toolbar-head">
+<div class="eyebrow">Модельный ряд</div>
+<div class="g2-toolbar-title-row"><h2 class="h2 eqcat-catalog-title">Вертикально-сверлильные станки</h2><span class="eqcat-catalog-count">25 моделей</span><span class="g2-catalog-desc">Компактная схема с перемещением стола — для деталей среднего размера.</span></div>
 </div>
+<div class="g2-toolbar-tools">
+<button type="button" class="eqcat-filter-toggle" data-role="filter-toggle">Все фильтры</button>
+</div>
+</div>
+<div class="g2-fallback-note" data-role="fallback-note" hidden>Точных совпадений не нашлось — показаны ближайшие по параметрам модели.</div>
 <div class="vmc-grid">
 <article class="vmc-card" data-name="d320 f вертикально-сверлильные станки" data-title="D320 F" data-sortkey="25.0" data-drilling-diam-max="25 мм" data-spindle-travel="110 мм" data-spindle-taper="МТ3" data-spindle-speed-max="80–1600 об/мин" data-spindle-power="0,70/1,3 кВт" data-machine-weight="245/280 кг">
 <a class="vmc-card-link" href="equipment-drilling-d320-f.html" aria-label="D320 F — подробнее"></a>
@@ -998,13 +1050,13 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('drillingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="d5140 / d5150 / d5163 / d5180 f вертикально-сверлильные станки" data-title="D5140 / D5150 / D5163 / D5180 F" data-sortkey="40.0" data-drilling-diam-max="40" data-spindle-travel="250" data-spindle-taper="МТ4" data-spindle-speed-max="31,5–1400 (12) 31,5–1400 (12) 40–570 (9) 40–570 (9)" data-spindle-power="3" data-machine-weight="1250/1890">
+<article class="vmc-card" data-name="d5140 / d5150 / d5163 / d5180 f вертикально-сверлильные станки" data-title="D5140 / D5150 / D5163 / D5180 F" data-sortkey="40.0" data-drilling-diam-max="40" data-spindle-travel="250" data-spindle-taper="МТ4" data-spindle-speed-max="31,5–1400 (12)  31,5–1400 (12)  40–570 (9)      40–570 (9)" data-spindle-power="3" data-machine-weight="1250/1890">
 <a class="vmc-card-link" href="equipment-drilling-d5140-d5150-d5163-d5180-f.html" aria-label="D5140 / D5150 / D5163 / D5180 F — подробнее"></a>
 <div class="vmc-photo"><img src="drilling-assets/d5140-d5150-d5163-d5180-f.png" alt="D5140 / D5150 / D5163 / D5180 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Вертикально-сверлильные</small>
 <h3>D5140 / D5150 / D5163 / D5180 F</h3>
-<div class="vmc-specs"><div><span>Макс. диаметр сверления</span><b>40 мм</b></div><div><span>Ход шпинделя</span><b>250 мм</b></div><div><span>Конус шпинделя</span><b>МТ4</b></div><div><span>Частота вращения шпинделя</span><b>31,5–1400 (12) 31,5–1400 (12) 40–570 (9) 40–570 (9) об/мин</b></div></div>
+<div class="vmc-specs"><div><span>Макс. диаметр сверления</span><b>40 мм</b></div><div><span>Ход шпинделя</span><b>250 мм</b></div><div><span>Конус шпинделя</span><b>МТ4</b></div><div><span>Частота вращения шпинделя</span><b>31,5–1400 (12)  31,5–1400 (12)  40–570 (9)      40–570 (9) об/мин</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('drillingLeadModal')">Получить предложение</button>
 </div>
 </article>
@@ -1048,13 +1100,13 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('drillingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="dn5030a / dn5035a / dn5040a / dn5050a f вертикально-сверлильные станки" data-title="DN5030A / DN5035A / DN5040A / DN5050A F" data-sortkey="30.0" data-drilling-diam-max="Ø30 / М20" data-spindle-travel="125" data-spindle-taper="МТ3" data-spindle-speed-max="70–249, 249–3500 65–460, 465–3250 60–400, 396–2600 50–316, 316–2200" data-spindle-power="1,1" data-machine-weight="320/400">
+<article class="vmc-card" data-name="dn5030a / dn5035a / dn5040a / dn5050a f вертикально-сверлильные станки" data-title="DN5030A / DN5035A / DN5040A / DN5050A F" data-sortkey="30.0" data-drilling-diam-max="Ø30 / М20" data-spindle-travel="125" data-spindle-taper="МТ3" data-spindle-speed-max="70–249, 249–3500  65–460, 465–3250  60–400, 396–2600  50–316, 316–2200" data-spindle-power="1,1" data-machine-weight="320/400">
 <a class="vmc-card-link" href="equipment-drilling-dn5030a-dn5035a-dn5040a-dn5050a-f.html" aria-label="DN5030A / DN5035A / DN5040A / DN5050A F — подробнее"></a>
 <div class="vmc-photo"><img src="drilling-assets/dn5030a-dn5035a-dn5040a-dn5050a-f.png" alt="DN5030A / DN5035A / DN5040A / DN5050A F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Вертикально-сверлильные</small>
 <h3>DN5030A / DN5035A / DN5040A / DN5050A F</h3>
-<div class="vmc-specs"><div><span>Макс. диаметр сверления</span><b>Ø30 / М20 мм</b></div><div><span>Ход шпинделя</span><b>125 мм</b></div><div><span>Конус шпинделя</span><b>МТ3</b></div><div><span>Частота вращения шпинделя</span><b>70–249, 249–3500 65–460, 465–3250 60–400, 396–2600 50–316, 316–2200 об/мин</b></div></div>
+<div class="vmc-specs"><div><span>Макс. диаметр сверления</span><b>Ø30 / М20 мм</b></div><div><span>Ход шпинделя</span><b>125 мм</b></div><div><span>Конус шпинделя</span><b>МТ3</b></div><div><span>Частота вращения шпинделя</span><b>70–249, 249–3500  65–460, 465–3250  60–400, 396–2600  50–316, 316–2200 об/мин</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('drillingLeadModal')">Получить предложение</button>
 </div>
 </article>
@@ -1078,13 +1130,13 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('drillingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="dwb5030a / dwb5035a / dwb5040a / dwb5050a f вертикально-сверлильные станки" data-title="DWB5030A / DWB5035A / DWB5040A / DWB5050A F" data-sortkey="30.0" data-drilling-diam-max="30" data-spindle-travel="125" data-spindle-taper="МТ3" data-spindle-speed-max="70–249, 249–3500 65–460, 465–3250 60–400, 396–2600 50–316, 316–2200" data-spindle-power="1,1" data-machine-weight="320/400">
+<article class="vmc-card" data-name="dwb5030a / dwb5035a / dwb5040a / dwb5050a f вертикально-сверлильные станки" data-title="DWB5030A / DWB5035A / DWB5040A / DWB5050A F" data-sortkey="30.0" data-drilling-diam-max="30" data-spindle-travel="125" data-spindle-taper="МТ3" data-spindle-speed-max="70–249, 249–3500  65–460, 465–3250  60–400, 396–2600  50–316, 316–2200" data-spindle-power="1,1" data-machine-weight="320/400">
 <a class="vmc-card-link" href="equipment-drilling-dwb5030a-dwb5035a-dwb5040a-dwb5050a-f.html" aria-label="DWB5030A / DWB5035A / DWB5040A / DWB5050A F — подробнее"></a>
 <div class="vmc-photo"><img src="drilling-assets/dwb5030a-dwb5035a-dwb5040a-dwb5050a-f.png" alt="DWB5030A / DWB5035A / DWB5040A / DWB5050A F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Вертикально-сверлильные</small>
 <h3>DWB5030A / DWB5035A / DWB5040A / DWB5050A F</h3>
-<div class="vmc-specs"><div><span>Макс. диаметр сверления</span><b>30 мм</b></div><div><span>Ход шпинделя</span><b>125 мм</b></div><div><span>Конус шпинделя</span><b>МТ3</b></div><div><span>Частота вращения шпинделя</span><b>70–249, 249–3500 65–460, 465–3250 60–400, 396–2600 50–316, 316–2200 об/мин</b></div></div>
+<div class="vmc-specs"><div><span>Макс. диаметр сверления</span><b>30 мм</b></div><div><span>Ход шпинделя</span><b>125 мм</b></div><div><span>Конус шпинделя</span><b>МТ3</b></div><div><span>Частота вращения шпинделя</span><b>70–249, 249–3500  65–460, 465–3250  60–400, 396–2600  50–316, 316–2200 об/мин</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('drillingLeadModal')">Получить предложение</button>
 </div>
 </article>
@@ -1462,5 +1514,67 @@ function submitLeadForm(modalId, consentId, errId){
   err.classList.remove('is-shown');
   closeModal(modalId);
 }</script>
+<script>
+(function(){
+  function ruWord(n, forms){var n2=n%100;if(n2>=11&&n2<=14)return forms[2];var n1=n%10;if(n1===1)return forms[0];if(n1>=2&&n1<=4)return forms[1];return forms[2];}
+  document.querySelectorAll('[data-role="preview"]').forEach(function(numEl){
+    var wordEl = numEl.parentElement.querySelector('[data-role="preview-word"]');
+    if(!wordEl) return;
+    function sync(){var n=parseInt(numEl.textContent,10)||0;wordEl.textContent=ruWord(n,['модель','модели','моделей']);}
+    sync();
+    new MutationObserver(sync).observe(numEl,{childList:true,characterData:true,subtree:true});
+  });
+  // never show an empty grid: if the exact filters (already applied by the shared
+  // filter script) leave zero visible cards, fall back to the closest models by
+  // numeric distance from the requested ranges, so the customer always sees options.
+  document.querySelectorAll('[data-vmc-scope]').forEach(function(scope){
+    var grid = scope.querySelector('.vmc-grid');
+    if(!grid) return;
+    var cards = Array.prototype.slice.call(grid.querySelectorAll('.vmc-card'));
+    var panel = scope.querySelector('.vmc-filter-panel');
+    if(!panel) return;
+    var applyBtn = panel.querySelector('[data-role="apply"]');
+    var resetBtn = panel.querySelector('[data-role="reset"]');
+    var note = scope.querySelector('[data-role="fallback-note"]');
+    var rangeNames = [];
+    Array.prototype.slice.call(panel.querySelectorAll('[data-range]')).forEach(function(inp){
+      var n = inp.getAttribute('data-range');
+      if(rangeNames.indexOf(n) < 0){rangeNames.push(n);}
+    });
+    function num(v){var n=parseFloat(v);return isNaN(n)?null:n;}
+    function rangeVals(name){
+      var minEl = panel.querySelector('[data-range="'+name+'"][data-bound="min"]');
+      var maxEl = panel.querySelector('[data-range="'+name+'"][data-bound="max"]');
+      return [minEl && minEl.value, maxEl && maxEl.value];
+    }
+    function applyFallback(){
+      var visible = cards.filter(function(c){return !c.classList.contains('is-hidden');});
+      if(visible.length){ if(note){note.hidden = true;} return; }
+      var activeRanges = rangeNames.filter(function(name){var mm = rangeVals(name); return mm[0] || mm[1];});
+      if(!activeRanges.length){ return; }
+      var scored = cards.map(function(card){
+        var score = 0;
+        activeRanges.forEach(function(name){
+          var key = name.replace(/-([a-z])/g, function(m,c){return c.toUpperCase();});
+          var n = card.dataset[key] ? num(card.dataset[key]) : null;
+          if(n === null){ score += 1e5; return; }
+          var mm = rangeVals(name);
+          var min = mm[0] ? num(mm[0]) : null;
+          var max = mm[1] ? num(mm[1]) : null;
+          if(min !== null && n < min){ score += (min - n); }
+          if(max !== null && n > max){ score += (n - max); }
+        });
+        return {card: card, score: score};
+      });
+      scored.sort(function(a,b){return a.score - b.score;});
+      var showN = Math.min(4, scored.length);
+      scored.forEach(function(s, i){ s.card.classList.toggle('is-hidden', i >= showN); });
+      if(note){ note.hidden = false; }
+    }
+    if(applyBtn){ applyBtn.addEventListener('click', applyFallback); }
+    if(resetBtn){ resetBtn.addEventListener('click', function(){ if(note){note.hidden = true;} }); }
+  });
+})();
+</script>
 <script src="site-shell.js"></script>
 </body></html>

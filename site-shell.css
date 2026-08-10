@@ -222,3 +222,21 @@ body{background-image:linear-gradient(rgba(107,45,139,.05) 1px,transparent 1px),
 .legal-modal-close-btn:focus-visible{outline:2px solid #6B2D8B;outline-offset:2px}
 @media(max-width:620px){.legal-modal-dialog{padding:24px 20px}.legal-modal-footer{justify-content:stretch}.legal-modal-close-btn{width:100%}}
 @media(prefers-reduced-motion:reduce){.legal-modal{transition:none}}
+
+/* ===== Unified breadcrumbs (single system for every internal page — see index.html exclusion) ===== */
+.crumbbar{border-bottom:1px solid rgba(26,26,26,.06);background:rgba(255,255,255,.55)}
+.crumbbar-in{min-height:44px;display:flex;align-items:center;gap:8px}
+.crumbs{min-height:44px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-family:'Golos Text',sans-serif;font-size:13px;font-weight:500;letter-spacing:.04em;line-height:1.45;color:#8A9096;white-space:normal;text-transform:none}
+.crumbs a{color:#8A9096;transition:color .15s ease}
+.crumbs a:hover,.crumbs a:focus-visible{color:#6B2D8B;text-decoration:underline;text-underline-offset:3px}
+.crumbs a:focus-visible{outline:2px solid #6B2D8B;outline-offset:2px;border-radius:2px}
+.crumbs .crumb-sep{color:rgba(138,141,150,.55);font-size:12px;font-weight:400}
+.crumbs .current,.crumbs b{color:#696D71;font-weight:500}
+.ind-crumbs{padding:14px 0 4px}
+.ind-crumbs ol{display:flex;flex-wrap:wrap;align-items:center;gap:8px;list-style:none;font-family:'Golos Text',sans-serif;font-size:13px;font-weight:500;letter-spacing:.04em;color:#8A9096}
+.ind-crumbs li{display:flex;align-items:center;gap:8px}
+.ind-crumbs li:not(:last-child)::after{content:'/';color:rgba(138,141,150,.55);font-size:12px}
+.ind-crumbs a{color:#8A9096;text-decoration:none;transition:color .15s ease}
+.ind-crumbs a:hover,.ind-crumbs a:focus-visible{color:#6B2D8B;text-decoration:underline;text-underline-offset:3px}
+.ind-crumbs li[aria-current="page"]{color:#696D71;font-weight:500}
+@media(max-width:640px){.crumbs,.ind-crumbs ol{font-size:12px;gap:6px}}

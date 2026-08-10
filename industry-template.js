@@ -90,6 +90,21 @@
     );
   }
 
+  function injectBreadcrumbJsonLd(industry){
+    var data={
+      "@context":"https://schema.org","@type":"BreadcrumbList",
+      "itemListElement":[
+        {"@type":"ListItem","position":1,"name":"Главная","item":"https://mehanit.ru/"},
+        {"@type":"ListItem","position":2,"name":"Отраслевые решения","item":"https://mehanit.ru/solutions.html"},
+        {"@type":"ListItem","position":3,"name":industry.title}
+      ]
+    };
+    var script=document.createElement('script');
+    script.type='application/ld+json';
+    script.textContent=JSON.stringify(data);
+    document.head.appendChild(script);
+  }
+
   function renderHero(industry){
     return (
       '<section class="ind-hero">'+
@@ -105,6 +120,7 @@
   function renderIndustryPage(industry){
     var root=document.getElementById('industryRoot');
     if(!root)return;
+    injectBreadcrumbJsonLd(industry);
     var advantages=industry.advantages||DEFAULT_ADVANTAGES;
     root.innerHTML=
       renderCrumbs(industry)+

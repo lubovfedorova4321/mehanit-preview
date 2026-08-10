@@ -4,6 +4,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <meta name="description" content="Автоматические и полуавтоматические двухстоечные станки, а также ручные ленточные пилы для заготовительной резки металлопроката — круга, квадрата и профиля"/>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Чем автоматический ленточнопильный станок отличается от полуавтоматического?", "acceptedAnswer": {"@type": "Answer", "text": "Автоматический станок сам зажимает заготовку, выполняет рез и подаёт материал на следующий цикл без участия оператора — подходит для серийной заготовительной резки. Полуавтоматический требует ручного или моторизованного запуска каждого цикла."}}, {"@type": "Question", "name": "Какой станок выбрать для единичной резки в цеху?", "acceptedAnswer": {"@type": "Answer", "text": "Для нечастой резки некрупного проката подойдёт ручной ленточнопильный станок — он компактнее и дешевле двухстоечных моделей."}}, {"@type": "Question", "name": "Можно ли резать профиль и трубу, а не только круг?", "acceptedAnswer": {"@type": "Answer", "text": "Да, большинство ленточнопильных станков режут круг, квадрат и профиль — точные допустимые размеры указаны в характеристиках каждой модели."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://mehanit.ru/"}, {"@type": "ListItem", "position": 2, "name": "Оборудование", "item": "https://mehanit.ru/equipment.html"}, {"@type": "ListItem", "position": 3, "name": "Ленточнопильные станки"}]}</script>
 <style>*{margin:0;padding:0;box-sizing:border-box}
 :root{
   --bm:#1A1A1A;--sg:#3D3D3D;--sg2:#2B2E31;--mid:#696D71;--muted:#8A9096;
@@ -34,13 +35,14 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 .hdr{position:sticky;top:0;z-index:100;background:rgba(237,238,240,.9);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
 .nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}
 .brand img{height:52px;width:auto;display:block}
-.crumbbar{position:sticky;top:72px;z-index:98;background:linear-gradient(120deg,rgba(255,255,255,.94),rgba(237,238,240,.88));border-bottom:1px solid rgba(107,45,139,.18);backdrop-filter:blur(18px);box-shadow:0 18px 42px rgba(26,26,26,.08),inset 0 -1px 0 rgba(255,255,255,.72)}
-.crumbbar::before{content:'';position:absolute;left:0;right:0;top:0;height:2px;background:linear-gradient(90deg,var(--gold),rgba(201,162,39,0) 38%,rgba(107,45,139,.34) 100%);pointer-events:none}
-.crumbs{display:flex;align-items:center;gap:10px;min-width:0;font-family:'Golos Text',monospace;font-size:10px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.crumbs a,.crumbs span{flex:0 0 auto}
-.crumbs a{color:var(--sg);transition:color .18s ease}
-.crumbs a:hover{color:var(--ce)}
-.crumbs .current{color:var(--bm);font-weight:800;overflow:hidden;text-overflow:ellipsis}
+.crumbbar{border-bottom:1px solid rgba(26,26,26,.06);background:rgba(255,255,255,.55)}
+.crumbs{min-height:44px;display:flex;align-items:center;gap:8px;font-family:'Golos Text',sans-serif;font-size:13px;font-weight:500;letter-spacing:.04em;line-height:1.45;color:var(--muted);flex-wrap:wrap}
+.crumbs a{color:var(--muted);transition:color .15s ease}
+.crumbs a:hover,.crumbs a:focus-visible{color:var(--ce);text-decoration:underline;text-underline-offset:3px}
+.crumbs a:focus-visible{outline:2px solid var(--ce);outline-offset:2px;border-radius:2px}
+.crumbs .crumb-sep{color:rgba(138,141,150,.55);font-size:12px}
+.crumbs .current{color:var(--mid);font-weight:500}
+@media(max-width:640px){.crumbs{font-size:12px;gap:6px}}
 .hero-cta .btn{width:100%;padding-left:16px;padding-right:16px;text-align:center;min-height:44px}
 .tools .wrap{position:relative;z-index:1}
 .tools .h2,.tools .eyebrow{color:var(--tl)}
@@ -96,7 +98,6 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 .mill-links-row{display:flex;flex-wrap:wrap;gap:1px;background:var(--line);border:1px solid var(--line)}
 .btn,.menu-trigger,.mega a,.nav-tile,.equipment-card,.taskc,.tax-card,.stock-card,.tool-card,.svcc,.casec,.indc,.final-h,.proof-item{transition-duration:.18s!important;transition-timing-function:cubic-bezier(.2,.7,.2,1)!important}
 .btn:hover{transform:translateY(-1px)!important}
-.crumbbar{box-shadow:0 12px 34px rgba(26,26,26,.07),inset 0 -1px 0 rgba(255,255,255,.72)}
 .hero-cta-two .btn{min-height:50px}
 .hero-cta .btn{
   min-height:52px!important;
@@ -127,13 +128,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 }
 .product-section.dark .h2,.product-section.dark .eyebrow{color:var(--tl)}
 .product-section.dark .h2 .lt{color:rgba(234,234,230,.5)}
-.crumbbar::before{opacity:.28!important}
-.crumbs{color:#9aa0a6!important;font-weight:500!important}
-.crumbs .current{color:#7f858b!important}
 .floating-action-panel .btn{width:100%;justify-content:center;min-height:44px;font-size:10px;padding:0 16px;box-shadow:0 16px 42px rgba(26,26,26,.12)}
-.crumbbar::before{opacity:.18!important}
-.crumbs,.crumbs a,.crumbs span,.crumbs .current,.crumb-sep,.crumb-action,.crumb-top{color:#b1b5b9!important}
-.crumbs a:hover,.crumb-action:hover,.crumb-top:hover{color:#8f969c!important}
 .eqcat-hero {
   padding: 40px 0 32px;
   background-image:
@@ -538,8 +533,6 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
   .proofline-in{grid-template-columns:repeat(2,1fr)}
   .proof-item.dark{grid-column:1/-1}
   .tool-photo{width:150px;height:104px}.tool-photo-track{gap:24px;padding:16px 24px}
-  .crumbbar-in{gap:10px}
-  .crumbs{font-size:8.5px}
   .nav-tile{padding:7px 9px}.nav-tile b{font-size:11.5px}.nav-tile.chat b{font-size:9px}.msg-ic{width:19px;height:19px;font-size:6px}.msg-ic.max{width:auto;min-width:58px;height:23px;font-size:15px}.msg-ic.max::before{width:22px;height:19px;flex-basis:22px}.msg-ic.max::after{left:7px;bottom:4px;width:8px;height:7px}.msg-ic.tg svg{width:11px;height:11px}
   .pm-widget{right:14px;bottom:14px;padding:10px 11px 10px 12px;gap:10px}.pm-widget b{font-size:11px}.pm-widget small{font-size:6.8px}.pm-widget .msg-ic{width:20px;height:20px}.pm-widget .msg-ic.max{width:auto;min-width:56px;height:23px;font-size:15px}.pm-widget .msg-ic.tg svg{width:11px;height:11px}
   .hero{grid-template-columns:1fr}.hero-l{width:100%;padding:1.6rem 0 2.3rem}.hero-r{min-height:380px}.hero-r::after{background:linear-gradient(90deg,rgba(237,238,240,.98) 0%,rgba(237,238,240,.82) 62%,rgba(237,238,240,.22) 100%)}
@@ -567,10 +560,6 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
   .proof-item{min-height:auto;padding:16px}
   .tool-photo-strip{margin:-1rem 0 1.6rem}
   .tool-photo{width:126px;height:88px}.tool-photo-track{gap:18px;padding:14px 18px;animation-duration:36s}
-  .crumbbar-in{min-height:34px;gap:8px}
-  .crumb-action,.crumb-top{font-size:8px}
-  .crumbs{font-size:8px;gap:6px}
-  .crumbs a:first-child,.crumbs .crumb-sep:first-of-type{display:none}
   .catalog-backline{display:block}.catalog-backline span{display:block;margin-top:8px}
   .nav-contact{display:none}
   .pm-widget{left:16px;right:16px;bottom:14px;justify-content:space-between}.pm-widget b{white-space:normal;line-height:1.15}
@@ -686,30 +675,80 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 .call-card a{font-family:'Magistral',sans-serif;font-size:clamp(26px,4vw,42px);font-weight:700;letter-spacing:-.04em;color:var(--bm)}
 .call-card p{margin-top:10px!important;margin-bottom:0!important}
 @media(max-width:640px){.mini-grid{grid-template-columns:1fr}}
+
+.g2-page .eqcat-hero{padding-bottom:34px}
+.g2-hero-top{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:48px;align-items:start}
+.g2-hero-left{display:flex;flex-direction:column}
+.g2-hero-right{display:flex;flex-direction:column;gap:14px}
+.g2-feature-row{display:flex;flex-wrap:nowrap;gap:16px;margin-top:24px}
+.g2-feature{display:flex;align-items:center;gap:9px;min-width:0;flex:1 1 0}
+.g2-feature-ic{flex:0 0 auto;width:32px;height:32px;border-radius:50%;background:linear-gradient(150deg,rgba(107,45,139,.1),rgba(201,162,39,.08));display:flex;align-items:center;justify-content:center;color:var(--ce)}
+.g2-feature-ic svg{width:18px;height:18px}
+.g2-feature-body{min-width:0}
+.g2-feature b{display:block;font-size:12px;font-weight:800;color:var(--bm);line-height:1.3;margin-bottom:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.g2-feature small{display:block;font-size:11px;color:var(--mid);line-height:1.3}
+.g2-subnav-title{margin-top:6px;text-transform:none;font-size:clamp(24px,2.8vw,34px)}
+.g2-toolbar-head{display:flex;flex-direction:column;gap:6px}
+.g2-toolbar-title-row{display:flex;align-items:baseline;gap:8px 18px;flex-wrap:wrap}
+.g2-catalog-desc{flex:1 1 260px;min-width:220px;color:var(--mid);font-size:13.5px;line-height:1.5;font-weight:400}
+.g2-toolbar-tools{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.g2-fallback-note{margin:-8px 0 18px;padding:10px 14px;background:rgba(201,162,39,.08);border:1px dashed rgba(201,162,39,.4);color:#8a6d10;font-size:12.5px;line-height:1.5;border-radius:6px}
+.g2-filter-panel{padding:20px}
+.g2-filter-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:16px;padding-bottom:14px;border-bottom:1px solid rgba(26,26,26,.08)}
+.g2-filter-head>span{font-family:'Golos Text',monospace;font-size:10px;font-weight:800;letter-spacing:1.15px;text-transform:uppercase;color:rgba(58,62,68,.72)}
+.g2-reset{display:inline-flex;align-items:center;gap:6px;appearance:none;border:0;background:transparent;color:var(--ce);font-family:'Golos Text',monospace;font-size:9px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;cursor:pointer;padding:0}
+.g2-search{position:relative;display:block;margin-bottom:18px}
+.g2-search-ic{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:rgba(82,86,90,.5)}
+.g2-search input{width:100%;border:1px solid rgba(26,26,26,.10);background:rgba(255,255,255,.68);color:var(--bm);font-family:inherit;font-size:13px;padding:11px 12px 11px 34px;outline:none;transition:.18s}
+.g2-search input:focus{border-color:rgba(107,45,139,.38);box-shadow:0 0 0 3px rgba(107,45,139,.08)}
+.g2-direct{display:grid;gap:14px;padding-top:14px;border-top:1px solid rgba(26,26,26,.07)}
+.g2-field strong{display:block;margin-bottom:8px;font-family:'Golos Text',monospace;font-size:10px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;color:rgba(42,45,50,.72)}
+.g2-group{margin-top:14px;padding-top:14px;border-top:1px solid rgba(26,26,26,.07)}
+.g2-group summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;font-family:'Golos Text',monospace;font-size:10.5px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;color:rgba(42,45,50,.8);padding:2px 0}
+.g2-group summary::-webkit-details-marker{display:none}
+.g2-group summary::after{content:'+';font-size:15px;color:var(--ce)}
+.g2-group[open] summary::after{content:'–'}
+.g2-group-body{display:grid;gap:14px;margin-top:14px}
+.g2-apply-wrap{margin-top:18px;padding-top:16px;border-top:1px solid rgba(26,26,26,.07)}
+.g2-apply{width:100%;justify-content:center;min-height:46px}
+@media(min-width:1181px){
+  .g2-page .vmc-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+}
+@media(max-width:980px){
+  .g2-hero-top{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .g2-page .eqcat-subcards{display:grid!important;grid-template-columns:1fr!important;overflow:visible!important}
+  .g2-page .eqcat-subcards .eqcat-subcard{flex:1 1 auto!important}
+  .g2-toolbar-tools{width:100%}
+}
 </style>
 <link rel="stylesheet" href="site-shell.css"/>
 </head>
-<body class="premium-v3 milling-tabs-page">
+<body class="premium-v3 milling-tabs-page g2-page">
 <header></header>
-<div class="crumbbar"><div class="wrap crumbs"><a href="index.html">Главная</a><span>/</span><a href="equipment.html">Оборудование</a><span>/</span><span class="current">Ленточнопильные станки</span></div></div>
+<nav class="crumbbar" aria-label="Хлебные крошки"><div class="wrap crumbs"><a href="index.html">Главная</a><span class="crumb-sep" aria-hidden="true">/</span><a href="equipment.html">Оборудование</a><span class="crumb-sep" aria-hidden="true">/</span><span class="current" aria-current="page">Ленточнопильные станки</span></div></nav>
 <main class="eqcat-page">
-<section class="eqcat-hero"><div class="wrap"><div class="eqcat-head">
+<section class="eqcat-hero"><div class="wrap">
+<div class="g2-hero-top">
+<div class="g2-hero-left">
 <h1 class="eqcat-title">Ленточнопильные станки</h1>
-<div>
-<p class="eqcat-lead">Автоматические и полуавтоматические двухстоечные станки, а также ручные ленточные пилы для заготовительной резки металлопроката — круга, квадрата и профиля.</p>
-<p class="mill-types-line">Автоматические · Полуавтоматические · Ручные</p>
+<div class="g2-feature-row"><div class="g2-feature"><span class="g2-feature-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.2"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3"/></svg></span><div class="g2-feature-body"><b>Точный прямой рез</b><small>Круг, квадрат, профиль</small></div></div><div class="g2-feature"><span class="g2-feature-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l7 3v5c0 4.5-3 7.8-7 9-4-1.2-7-4.5-7-9V6l7-3z"/><path d="M8.8 12.2l2.1 2.1 4.3-4.3"/></svg></span><div class="g2-feature-body"><b>Экономия металла</b><small>Минимальная ширина пропила</small></div></div><div class="g2-feature"><span class="g2-feature-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 15c2-3 4-3 6 0s4 3 6 0 4-3 6 0"/><path d="M3 9c2-3 4-3 6 0s4 3 6 0 4-3 6 0"/></svg></span><div class="g2-feature-body"><b>Надёжность в серии</b><small>Для заготовительных участков</small></div></div></div>
 </div>
-</div></div></section>
+<div class="g2-hero-right">
+<p class="eqcat-lead">Автоматические и полуавтоматические двухстоечные станки, а также ручные ленточные пилы для заготовительной резки металлопроката — круга, квадрата и профиля.</p>
+</div>
+</div>
+</div></section>
 
 <section class="eqcat-subnav-wrap" id="subcats"><div class="wrap">
-<div class="eqcat-subnav-head"><div class="eyebrow">Подкатегории</div></div>
+<div class="eqcat-subnav-head"><div class="eyebrow">Подкатегории</div><h2 class="h2 g2-subnav-title">Выберите тип оборудования</h2></div>
 <nav class="eqcat-subcards">
 <button type="button" class="eqcat-subcard is-active" data-milling-tab="auto" aria-current="true">
 <span class="eqcat-subcard-badge" aria-hidden="true">✓</span>
 <span class="eqcat-subcard-media"><img src="saw-assets/bs4228s-f.png" alt="Автоматические двухстоечные ленточнопильные станки" loading="lazy"/></span>
 <span class="eqcat-subcard-body">
 <h3>Автоматические двухстоечные ленточнопильные станки</h3>
-<p>Автоматическая гидравлическая подача и зажим — для серийной резки проката без оператора.</p>
 <span class="eqcat-subcard-count">16 моделей</span>
 </span>
 <span class="eqcat-subcard-arrow" aria-hidden="true">→</span>
@@ -718,7 +757,6 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <span class="eqcat-subcard-media"><img src="saw-assets/bs280z-f.png" alt="Полуавтоматические двухстоечные ленточнопильные станки" loading="lazy"/></span>
 <span class="eqcat-subcard-body">
 <h3>Полуавтоматические двухстоечные ленточнопильные станки</h3>
-<p>Ручной или моторизованный зажим с полуавтоматическим циклом реза — для мелкосерийного производства.</p>
 <span class="eqcat-subcard-count">25 моделей</span>
 </span>
 <span class="eqcat-subcard-arrow" aria-hidden="true">→</span>
@@ -727,7 +765,6 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <span class="eqcat-subcard-media"><img src="saw-assets/bs-1018b-f.png" alt="Ручные ленточнопильные станки" loading="lazy"/></span>
 <span class="eqcat-subcard-body">
 <h3>Ручные ленточнопильные станки</h3>
-<p>Компактные станки с ручной подачей — для единичной резки и небольших мастерских.</p>
 <span class="eqcat-subcard-count">10 моделей</span>
 </span>
 <span class="eqcat-subcard-arrow" aria-hidden="true">→</span>
@@ -738,46 +775,53 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <section class="milling-tab-panel is-active" data-milling-panel="auto">
 <section class="vmc-model-section"><div class="wrap">
 <div class="vmc-catalog-layout" data-vmc-scope>
+<aside class="vmc-filter-panel g2-filter-panel">
 <div class="eqcat-filter-backdrop" data-role="filter-backdrop"></div>
-<aside class="vmc-filter-panel">
-<div class="vmc-filter-head"><span>Фильтр</span><button type="button" class="vmc-reset" data-role="reset">Сбросить</button><button type="button" class="eqcat-filter-close" data-role="filter-close" aria-label="Закрыть фильтр">×</button></div>
-<label class="vmc-search"><span>Поиск по модели</span><input type="search" data-role="search" placeholder="Например, BS4228S F"/></label>
-<div class="vmc-tier-label">Параметры станка</div>
-<div class="vmc-filter-group"><strong>Рез по кругу</strong>
+<div class="g2-filter-head"><span>Фильтр</span><button type="button" class="g2-reset" data-role="reset"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg>Сбросить всё</button><button type="button" class="eqcat-filter-close" data-role="filter-close" aria-label="Закрыть фильтр">×</button></div>
+<label class="g2-search"><span class="g2-search-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span><input type="search" data-role="search" placeholder="Поиск по модели"/></label>
+<div class="g2-direct"><div class="g2-field"><strong>Рез по кругу</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="cut-round-max" data-bound="min"/>
 <input type="number" placeholder="До" data-range="cut-round-max" data-bound="max"/>
-</div></div><div class="vmc-filter-group"><strong>Рез: квадрат / профиль</strong>
+</div></div><div class="g2-field"><strong>Рез: квадрат / профиль</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="cut-square-max" data-bound="min"/>
 <input type="number" placeholder="До" data-range="cut-square-max" data-bound="max"/>
-</div></div><div class="vmc-filter-group"><strong>Мощность привода</strong>
+</div></div></div>
+<details class="g2-group" open><summary>Дополнительные параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Мощность привода</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="motor-power" data-bound="min"/>
 <input type="number" placeholder="До" data-range="motor-power" data-bound="max"/>
-</div></div><div class="vmc-filter-group"><strong>Скорость ленты</strong>
+</div></div><div class="g2-field"><strong>Скорость ленты</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="feed-speed" data-bound="min"/>
 <input type="number" placeholder="До" data-range="feed-speed" data-bound="max"/>
-</div></div><div class="vmc-filter-group"><strong>Размер полотна</strong>
+</div></div><div class="g2-field"><strong>Размер полотна</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="blade-size" data-bound="min"/>
 <input type="number" placeholder="До" data-range="blade-size" data-bound="max"/>
-</div></div>
-<details class="vmc-advanced"><summary>Все параметры</summary><div class="vmc-filter-group"><strong>Масса станка (кг)</strong>
+</div></div></div></details>
+<details class="g2-group"><summary>Все параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Масса станка (кг)</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="machine-weight" data-bound="min"/>
 <input type="number" placeholder="До" data-range="machine-weight" data-bound="max"/>
-</div></div></details>
-<div class="vmc-filter-apply"><button type="button" class="btn btn-ce" data-role="apply">Применить</button><span class="vmc-filter-preview"><b data-role="preview">16</b> моделей найдено</span></div>
+</div></div></div></details>
+<div class="g2-apply-wrap">
+<button type="button" class="btn btn-ce g2-apply" data-role="apply">Показать <span data-role="preview">16</span> <span data-role="preview-word">моделей</span></button>
+</div>
 <p class="vmc-filter-note">Не нашли нужный параметр в фильтре — характеристики каждой модели указаны в карточке и на странице станка.</p>
 </aside>
 <div>
-<div class="vmc-toolbar">
-<div class="vmc-toolbar-head"><h2 class="h2 eqcat-catalog-title">Автоматические двухстоечные ленточнопильные станки</h2><span class="eqcat-catalog-count">16 моделей</span></div>
-<button type="button" class="eqcat-filter-toggle" data-role="filter-toggle">Фильтры</button>
-<label class="eqcat-sort"><span>Сортировать:</span><select data-role="sort"><option value="default">По умолчанию</option><option value="name">По названию</option></select></label>
+<div class="vmc-toolbar g2-toolbar">
+<div class="vmc-toolbar-head g2-toolbar-head">
+<div class="eyebrow">Модельный ряд</div>
+<div class="g2-toolbar-title-row"><h2 class="h2 eqcat-catalog-title">Автоматические двухстоечные ленточнопильные станки</h2><span class="eqcat-catalog-count">16 моделей</span><span class="g2-catalog-desc">Автоматическая гидравлическая подача и зажим — для серийной резки проката без оператора.</span></div>
 </div>
+<div class="g2-toolbar-tools">
+<button type="button" class="eqcat-filter-toggle" data-role="filter-toggle">Все фильтры</button>
+</div>
+</div>
+<div class="g2-fallback-note" data-role="fallback-note" hidden>Точных совпадений не нашлось — показаны ближайшие по параметрам модели.</div>
 <div class="vmc-grid">
 <article class="vmc-card" data-name="bs4228s f автоматические двухстоечные ленточнопильные станки" data-title="BS4228S F" data-sortkey="280.0" data-cut-round-max="Ø280 мм" data-cut-square-max="280×280 мм" data-motor-power="2.2 кВт" data-feed-speed="27/45/69 м/мин" data-blade-size="3505×27×0.9 мм">
 <a class="vmc-card-link" href="equipment-saw-bs4228s-f.html" aria-label="BS4228S F — подробнее"></a>
@@ -946,46 +990,53 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </section><section class="milling-tab-panel" data-milling-panel="semi">
 <section class="vmc-model-section"><div class="wrap">
 <div class="vmc-catalog-layout" data-vmc-scope>
+<aside class="vmc-filter-panel g2-filter-panel">
 <div class="eqcat-filter-backdrop" data-role="filter-backdrop"></div>
-<aside class="vmc-filter-panel">
-<div class="vmc-filter-head"><span>Фильтр</span><button type="button" class="vmc-reset" data-role="reset">Сбросить</button><button type="button" class="eqcat-filter-close" data-role="filter-close" aria-label="Закрыть фильтр">×</button></div>
-<label class="vmc-search"><span>Поиск по модели</span><input type="search" data-role="search" placeholder="Например, BS280Z F"/></label>
-<div class="vmc-tier-label">Параметры станка</div>
-<div class="vmc-filter-group"><strong>Рез по кругу</strong>
+<div class="g2-filter-head"><span>Фильтр</span><button type="button" class="g2-reset" data-role="reset"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg>Сбросить всё</button><button type="button" class="eqcat-filter-close" data-role="filter-close" aria-label="Закрыть фильтр">×</button></div>
+<label class="g2-search"><span class="g2-search-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span><input type="search" data-role="search" placeholder="Поиск по модели"/></label>
+<div class="g2-direct"><div class="g2-field"><strong>Рез по кругу</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="cut-round-max" data-bound="min"/>
 <input type="number" placeholder="До" data-range="cut-round-max" data-bound="max"/>
-</div></div><div class="vmc-filter-group"><strong>Рез: квадрат / профиль</strong>
+</div></div><div class="g2-field"><strong>Рез: квадрат / профиль</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="cut-square-max" data-bound="min"/>
 <input type="number" placeholder="До" data-range="cut-square-max" data-bound="max"/>
-</div></div><div class="vmc-filter-group"><strong>Мощность привода</strong>
+</div></div></div>
+<details class="g2-group" open><summary>Дополнительные параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Мощность привода</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="motor-power" data-bound="min"/>
 <input type="number" placeholder="До" data-range="motor-power" data-bound="max"/>
-</div></div><div class="vmc-filter-group"><strong>Скорость ленты</strong>
+</div></div><div class="g2-field"><strong>Скорость ленты</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="feed-speed" data-bound="min"/>
 <input type="number" placeholder="До" data-range="feed-speed" data-bound="max"/>
-</div></div><div class="vmc-filter-group"><strong>Размер полотна</strong>
+</div></div><div class="g2-field"><strong>Размер полотна</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="blade-size" data-bound="min"/>
 <input type="number" placeholder="До" data-range="blade-size" data-bound="max"/>
-</div></div>
-<details class="vmc-advanced"><summary>Все параметры</summary><div class="vmc-filter-group"><strong>Масса станка (кг)</strong>
+</div></div></div></details>
+<details class="g2-group"><summary>Все параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Масса станка (кг)</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="machine-weight" data-bound="min"/>
 <input type="number" placeholder="До" data-range="machine-weight" data-bound="max"/>
-</div></div></details>
-<div class="vmc-filter-apply"><button type="button" class="btn btn-ce" data-role="apply">Применить</button><span class="vmc-filter-preview"><b data-role="preview">25</b> моделей найдено</span></div>
+</div></div></div></details>
+<div class="g2-apply-wrap">
+<button type="button" class="btn btn-ce g2-apply" data-role="apply">Показать <span data-role="preview">25</span> <span data-role="preview-word">моделей</span></button>
+</div>
 <p class="vmc-filter-note">Не нашли нужный параметр в фильтре — характеристики каждой модели указаны в карточке и на странице станка.</p>
 </aside>
 <div>
-<div class="vmc-toolbar">
-<div class="vmc-toolbar-head"><h2 class="h2 eqcat-catalog-title">Полуавтоматические двухстоечные ленточнопильные станки</h2><span class="eqcat-catalog-count">25 моделей</span></div>
-<button type="button" class="eqcat-filter-toggle" data-role="filter-toggle">Фильтры</button>
-<label class="eqcat-sort"><span>Сортировать:</span><select data-role="sort"><option value="default">По умолчанию</option><option value="name">По названию</option></select></label>
+<div class="vmc-toolbar g2-toolbar">
+<div class="vmc-toolbar-head g2-toolbar-head">
+<div class="eyebrow">Модельный ряд</div>
+<div class="g2-toolbar-title-row"><h2 class="h2 eqcat-catalog-title">Полуавтоматические двухстоечные ленточнопильные станки</h2><span class="eqcat-catalog-count">25 моделей</span><span class="g2-catalog-desc">Ручной или моторизованный зажим с полуавтоматическим циклом реза — для мелкосерийного производства.</span></div>
 </div>
+<div class="g2-toolbar-tools">
+<button type="button" class="eqcat-filter-toggle" data-role="filter-toggle">Все фильтры</button>
+</div>
+</div>
+<div class="g2-fallback-note" data-role="fallback-note" hidden>Точных совпадений не нашлось — показаны ближайшие по параметрам модели.</div>
 <div class="vmc-grid">
 <article class="vmc-card" data-name="bs280z f полуавтоматические двухстоечные ленточнопильные станки" data-title="BS280Z F" data-sortkey="280.0" data-cut-round-max="Ø280 мм" data-cut-square-max="280×280 мм" data-motor-power="2.2 кВт" data-feed-speed="27/45/69 м/мин" data-blade-size="3505×27×0.9 мм">
 <a class="vmc-card-link" href="equipment-saw-bs280z-f.html" aria-label="BS280Z F — подробнее"></a>
@@ -1244,46 +1295,53 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </section><section class="milling-tab-panel" data-milling-panel="manual">
 <section class="vmc-model-section"><div class="wrap">
 <div class="vmc-catalog-layout" data-vmc-scope>
+<aside class="vmc-filter-panel g2-filter-panel">
 <div class="eqcat-filter-backdrop" data-role="filter-backdrop"></div>
-<aside class="vmc-filter-panel">
-<div class="vmc-filter-head"><span>Фильтр</span><button type="button" class="vmc-reset" data-role="reset">Сбросить</button><button type="button" class="eqcat-filter-close" data-role="filter-close" aria-label="Закрыть фильтр">×</button></div>
-<label class="vmc-search"><span>Поиск по модели</span><input type="search" data-role="search" placeholder="Например, BS-1018B F"/></label>
-<div class="vmc-tier-label">Параметры станка</div>
-<div class="vmc-filter-group"><strong>Рез по кругу</strong>
+<div class="g2-filter-head"><span>Фильтр</span><button type="button" class="g2-reset" data-role="reset"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg>Сбросить всё</button><button type="button" class="eqcat-filter-close" data-role="filter-close" aria-label="Закрыть фильтр">×</button></div>
+<label class="g2-search"><span class="g2-search-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span><input type="search" data-role="search" placeholder="Поиск по модели"/></label>
+<div class="g2-direct"><div class="g2-field"><strong>Рез по кругу</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="cut-round-max" data-bound="min"/>
 <input type="number" placeholder="До" data-range="cut-round-max" data-bound="max"/>
-</div></div><div class="vmc-filter-group"><strong>Рез: квадрат / профиль</strong>
+</div></div><div class="g2-field"><strong>Рез: квадрат / профиль</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="cut-square-max" data-bound="min"/>
 <input type="number" placeholder="До" data-range="cut-square-max" data-bound="max"/>
-</div></div><div class="vmc-filter-group"><strong>Мощность привода</strong>
+</div></div></div>
+<details class="g2-group" open><summary>Дополнительные параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Мощность привода</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="motor-power" data-bound="min"/>
 <input type="number" placeholder="До" data-range="motor-power" data-bound="max"/>
-</div></div><div class="vmc-filter-group"><strong>Скорость ленты</strong>
+</div></div><div class="g2-field"><strong>Скорость ленты</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="feed-speed" data-bound="min"/>
 <input type="number" placeholder="До" data-range="feed-speed" data-bound="max"/>
-</div></div><div class="vmc-filter-group"><strong>Размер полотна</strong>
+</div></div><div class="g2-field"><strong>Размер полотна</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="blade-size" data-bound="min"/>
 <input type="number" placeholder="До" data-range="blade-size" data-bound="max"/>
-</div></div>
-<details class="vmc-advanced"><summary>Все параметры</summary><div class="vmc-filter-group"><strong>Масса станка (кг)</strong>
+</div></div></div></details>
+<details class="g2-group"><summary>Все параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Масса станка (кг)</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="machine-weight" data-bound="min"/>
 <input type="number" placeholder="До" data-range="machine-weight" data-bound="max"/>
-</div></div></details>
-<div class="vmc-filter-apply"><button type="button" class="btn btn-ce" data-role="apply">Применить</button><span class="vmc-filter-preview"><b data-role="preview">10</b> моделей найдено</span></div>
+</div></div></div></details>
+<div class="g2-apply-wrap">
+<button type="button" class="btn btn-ce g2-apply" data-role="apply">Показать <span data-role="preview">10</span> <span data-role="preview-word">моделей</span></button>
+</div>
 <p class="vmc-filter-note">Не нашли нужный параметр в фильтре — характеристики каждой модели указаны в карточке и на странице станка.</p>
 </aside>
 <div>
-<div class="vmc-toolbar">
-<div class="vmc-toolbar-head"><h2 class="h2 eqcat-catalog-title">Ручные ленточнопильные станки</h2><span class="eqcat-catalog-count">10 моделей</span></div>
-<button type="button" class="eqcat-filter-toggle" data-role="filter-toggle">Фильтры</button>
-<label class="eqcat-sort"><span>Сортировать:</span><select data-role="sort"><option value="default">По умолчанию</option><option value="name">По названию</option></select></label>
+<div class="vmc-toolbar g2-toolbar">
+<div class="vmc-toolbar-head g2-toolbar-head">
+<div class="eyebrow">Модельный ряд</div>
+<div class="g2-toolbar-title-row"><h2 class="h2 eqcat-catalog-title">Ручные ленточнопильные станки</h2><span class="eqcat-catalog-count">10 моделей</span><span class="g2-catalog-desc">Компактные станки с ручной подачей — для единичной резки и небольших мастерских.</span></div>
 </div>
+<div class="g2-toolbar-tools">
+<button type="button" class="eqcat-filter-toggle" data-role="filter-toggle">Все фильтры</button>
+</div>
+</div>
+<div class="g2-fallback-note" data-role="fallback-note" hidden>Точных совпадений не нашлось — показаны ближайшие по параметрам модели.</div>
 <div class="vmc-grid">
 <article class="vmc-card" data-name="bs-1018b f ручные ленточнопильные станки" data-title="BS-1018B F" data-sortkey="254.0" data-cut-round-max="Ø254 мм" data-cut-square-max="127×457 мм" data-motor-power="1.5 (2 л.с., 3 фазы) кВт" data-feed-speed="35/60/88/115 м/мин" data-blade-size="3280×27×0.9 мм">
 <a class="vmc-card-link" href="equipment-saw-bs-1018b-f.html" aria-label="BS-1018B F — подробнее"></a>
@@ -1619,5 +1677,67 @@ function submitLeadForm(modalId, consentId, errId){
   err.classList.remove('is-shown');
   closeModal(modalId);
 }</script>
+<script>
+(function(){
+  function ruWord(n, forms){var n2=n%100;if(n2>=11&&n2<=14)return forms[2];var n1=n%10;if(n1===1)return forms[0];if(n1>=2&&n1<=4)return forms[1];return forms[2];}
+  document.querySelectorAll('[data-role="preview"]').forEach(function(numEl){
+    var wordEl = numEl.parentElement.querySelector('[data-role="preview-word"]');
+    if(!wordEl) return;
+    function sync(){var n=parseInt(numEl.textContent,10)||0;wordEl.textContent=ruWord(n,['модель','модели','моделей']);}
+    sync();
+    new MutationObserver(sync).observe(numEl,{childList:true,characterData:true,subtree:true});
+  });
+  // never show an empty grid: if the exact filters (already applied by the shared
+  // filter script) leave zero visible cards, fall back to the closest models by
+  // numeric distance from the requested ranges, so the customer always sees options.
+  document.querySelectorAll('[data-vmc-scope]').forEach(function(scope){
+    var grid = scope.querySelector('.vmc-grid');
+    if(!grid) return;
+    var cards = Array.prototype.slice.call(grid.querySelectorAll('.vmc-card'));
+    var panel = scope.querySelector('.vmc-filter-panel');
+    if(!panel) return;
+    var applyBtn = panel.querySelector('[data-role="apply"]');
+    var resetBtn = panel.querySelector('[data-role="reset"]');
+    var note = scope.querySelector('[data-role="fallback-note"]');
+    var rangeNames = [];
+    Array.prototype.slice.call(panel.querySelectorAll('[data-range]')).forEach(function(inp){
+      var n = inp.getAttribute('data-range');
+      if(rangeNames.indexOf(n) < 0){rangeNames.push(n);}
+    });
+    function num(v){var n=parseFloat(v);return isNaN(n)?null:n;}
+    function rangeVals(name){
+      var minEl = panel.querySelector('[data-range="'+name+'"][data-bound="min"]');
+      var maxEl = panel.querySelector('[data-range="'+name+'"][data-bound="max"]');
+      return [minEl && minEl.value, maxEl && maxEl.value];
+    }
+    function applyFallback(){
+      var visible = cards.filter(function(c){return !c.classList.contains('is-hidden');});
+      if(visible.length){ if(note){note.hidden = true;} return; }
+      var activeRanges = rangeNames.filter(function(name){var mm = rangeVals(name); return mm[0] || mm[1];});
+      if(!activeRanges.length){ return; }
+      var scored = cards.map(function(card){
+        var score = 0;
+        activeRanges.forEach(function(name){
+          var key = name.replace(/-([a-z])/g, function(m,c){return c.toUpperCase();});
+          var n = card.dataset[key] ? num(card.dataset[key]) : null;
+          if(n === null){ score += 1e5; return; }
+          var mm = rangeVals(name);
+          var min = mm[0] ? num(mm[0]) : null;
+          var max = mm[1] ? num(mm[1]) : null;
+          if(min !== null && n < min){ score += (min - n); }
+          if(max !== null && n > max){ score += (n - max); }
+        });
+        return {card: card, score: score};
+      });
+      scored.sort(function(a,b){return a.score - b.score;});
+      var showN = Math.min(4, scored.length);
+      scored.forEach(function(s, i){ s.card.classList.toggle('is-hidden', i >= showN); });
+      if(note){ note.hidden = false; }
+    }
+    if(applyBtn){ applyBtn.addEventListener('click', applyFallback); }
+    if(resetBtn){ resetBtn.addEventListener('click', function(){ if(note){note.hidden = true;} }); }
+  });
+})();
+</script>
 <script src="site-shell.js"></script>
 </body></html>
