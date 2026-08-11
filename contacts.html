@@ -354,11 +354,22 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
     ymaps.ready(function(){
       if(placeholder){placeholder.remove();}
       var map=new ymaps.Map(frame,{center:OFFICE_COORDS,zoom:16,controls:['zoomControl','geolocationControl']},{suppressMapOpenBlock:true});
+      var pinSvg='<svg xmlns="http://www.w3.org/2000/svg" width="40" height="54" viewBox="0 0 40 54">'+
+        '<ellipse cx="20" cy="48" rx="7" ry="2.5" fill="#000" opacity="0.16"/>'+
+        '<path d="M20 2C11.16 2 4 9.16 4 18c0 12 16 30 16 30s16-18 16-30C36 9.16 28.84 2 20 2Z" fill="#6B2D8B"/>'+
+        '<circle cx="20" cy="18" r="9" fill="#fff"/>'+
+        '<circle cx="20" cy="18" r="5.5" fill="#C9A227"/>'+
+        '</svg>';
       var placemark=new ymaps.Placemark(OFFICE_COORDS,{
         balloonContentHeader:'ГК «Механит»',
         balloonContentBody:'603123, Россия, г. Нижний Новгород, Южное шоссе, д. 16 «В»',
         hintContent:'ГК «Механит»'
-      },{preset:'islands#violetDotIcon'});
+      },{
+        iconLayout:'default#image',
+        iconImageHref:'data:image/svg+xml;charset=UTF-8,'+encodeURIComponent(pinSvg),
+        iconImageSize:[40,54],
+        iconImageOffset:[-20,-48]
+      });
       map.geoObjects.add(placemark);
     });
   }

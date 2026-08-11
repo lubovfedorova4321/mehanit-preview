@@ -24,10 +24,10 @@
     'quality-control':'Контроль геометрии на КИМ и измерительном оборудовании.'
   };
   var ADV_ICONS=[
-    '<path d="M12 3v18M4.8 6l14.4 12M19.2 6 4.8 18"></path>',
+    '<path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h13M21 18h.01"></path><circle cx="16" cy="6" r="2"></circle><circle cx="8" cy="12" r="2"></circle><circle cx="17" cy="18" r="2"></circle>',
     '<circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="5"></circle><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"></circle>',
-    '<circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3.5 2"></path>',
-    '<path d="M12 3l2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4-3.9-3.8 5.4-.8Z"></path>'
+    '<path d="M4 12a8 8 0 0 1 14-5.3M20 4v4h-4"></path><path d="M20 12a8 8 0 0 1-14 5.3M4 20v-4h4"></path>',
+    '<path d="M4 17l5-5 4 4 7-8"></path><path d="M14 8h6v6"></path>'
   ];
   var DEFAULT_ADVANTAGES=[
     {title:'Технологии под задачу',text:'Разрабатываем маршрут обработки и подбираем оборудование под требования детали.'},
