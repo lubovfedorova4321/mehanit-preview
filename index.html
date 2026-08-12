@@ -660,22 +660,31 @@ select.qfield{cursor:pointer}
 
 /* CLOSER CTA (финальный блок — инженерная панель связи с технологом) */
 .closer{background:var(--paper);padding:clamp(24px,4vw,54px) 0 clamp(30px,4.6vw,64px)}
-.closer-band{--engineering-panel-bg:linear-gradient(150deg,#2c2e33 0%,#1c1e22 68%);--engineering-panel-surface:rgba(255,255,255,.05);--engineering-panel-border:rgba(234,234,230,.14);--engineering-panel-text:var(--tl);--engineering-panel-muted:rgba(234,234,230,.56);--engineering-panel-accent:var(--gold);--engineering-panel-highlight:var(--ce);position:relative;overflow:hidden;background:var(--engineering-panel-bg);border:1px solid var(--engineering-panel-border);border-radius:20px;box-shadow:0 28px 68px rgba(0,0,0,.26);padding:clamp(22px,2.2vw,36px) clamp(24px,3vw,44px);min-height:clamp(300px,17vw,364px);display:flex;align-items:center}
-.closer-band::before{content:'';position:absolute;inset:0;opacity:.1;pointer-events:none;background-image:repeating-linear-gradient(90deg,rgba(234,234,230,.9) 0 1px,transparent 1px 72px),repeating-linear-gradient(0deg,rgba(234,234,230,.9) 0 1px,transparent 1px 72px)}
-.closer-band::after{content:'';position:absolute;right:8%;bottom:-42%;width:440px;height:360px;background:radial-gradient(ellipse,rgba(107,45,139,.3),transparent 65%);pointer-events:none}
-.closer-band-grid{position:relative;z-index:1;width:100%;display:grid;grid-template-columns:1.08fr .92fr;gap:clamp(32px,3.6vw,56px);align-items:center}
+.closer-band{--engineering-panel-bg:linear-gradient(155deg,#3a3546 0%,#242130 74%);--engineering-panel-surface:rgba(255,255,255,.05);--engineering-panel-border:rgba(234,234,230,.14);--engineering-panel-text:var(--tl);--engineering-panel-muted:rgba(234,234,230,.56);--engineering-panel-accent:var(--gold);--engineering-panel-highlight:var(--ce);position:relative;overflow:hidden;background:var(--engineering-panel-bg);border:1px solid var(--engineering-panel-border);border-radius:20px;box-shadow:0 28px 68px rgba(26,20,36,.28);padding:clamp(26px,2.6vw,42px) clamp(26px,3.2vw,46px);display:flex;align-items:center}
+.closer-band::before{content:'';position:absolute;inset:0;opacity:.12;pointer-events:none;background-image:repeating-linear-gradient(90deg,rgba(234,234,230,.9) 0 1px,transparent 1px 72px),repeating-linear-gradient(0deg,rgba(234,234,230,.9) 0 1px,transparent 1px 72px)}
+.closer-band::after{content:'';position:absolute;right:6%;bottom:-46%;width:460px;height:380px;background:radial-gradient(ellipse,rgba(107,45,139,.38),transparent 65%);pointer-events:none}
+.closer-band-grid{position:relative;z-index:1;width:100%;display:grid;grid-template-columns:1.08fr .92fr;gap:clamp(32px,3.6vw,56px);align-items:start}
 .closer-text{max-width:620px}
-.closer-text h2{font-family:'Magistral',sans-serif;font-size:clamp(24px,2.1vw,34px);font-weight:600;line-height:1.14;letter-spacing:-.02em;color:var(--engineering-panel-text);max-width:580px;margin-bottom:12px}
+.closer-eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:'Golos Text',monospace;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--engineering-panel-accent);margin-bottom:14px}
+.closer-eyebrow i{width:18px;height:2px;background:var(--engineering-panel-accent);display:block;font-style:normal}
+.closer-text h2{font-family:'Magistral',sans-serif;font-size:clamp(26px,2.3vw,38px);font-weight:600;line-height:1.14;letter-spacing:-.02em;color:var(--engineering-panel-text);max-width:580px;margin-bottom:12px}
 .closer-text p{font-family:'Golos Text',sans-serif;font-size:clamp(13.5px,1vw,15.5px);font-weight:400;line-height:1.55;color:var(--engineering-panel-muted);max-width:540px}
-.closer-usp{display:flex;flex-direction:column;gap:9px;margin-top:18px}
-.closer-usp-item{display:flex;align-items:center;gap:10px;font-family:'Golos Text',sans-serif;font-size:13px;font-weight:600;color:rgba(234,234,230,.9)}
-.closer-usp-item svg{flex:0 0 auto;width:16px;height:16px;color:var(--engineering-panel-accent);fill:none;stroke:currentColor;stroke-width:2}
-.closer-contacts{display:flex;flex-wrap:wrap;gap:11px 22px;margin-top:20px;padding-top:17px;border-top:1px solid var(--engineering-panel-border)}
-.closer-contact-item{display:inline-flex;align-items:center;gap:9px;font-family:'Golos Text',sans-serif;font-size:13.5px;font-weight:600;color:rgba(255,255,255,.92);text-decoration:none;transition:color .18s ease}
-.closer-contact-item:hover{color:#fff}
-.closer-cic{width:24px;height:24px;border-radius:50%;flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#8a45b0,#6B2D8B);color:#fff;box-shadow:0 8px 18px rgba(0,0,0,.18)}
-.closer-cic svg{width:12px;height:12px;fill:none;stroke:currentColor;stroke-width:2}
-.closer-contact-item .msg-ic{box-shadow:none}
+.closer-usp{display:flex;flex-wrap:wrap;gap:20px 24px;margin-top:24px}
+.closer-usp-item{display:flex;align-items:center;gap:12px;flex:1 1 200px}
+.closer-usp-ic{flex:0 0 auto;width:40px;height:40px;border-radius:11px;background:rgba(255,255,255,.06);border:1px solid var(--engineering-panel-border);display:flex;align-items:center;justify-content:center;color:var(--engineering-panel-accent)}
+.closer-usp-ic svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.7}
+.closer-usp-text{display:flex;flex-direction:column;gap:2px;font-family:'Golos Text',sans-serif;font-size:12.5px;line-height:1.4;color:var(--engineering-panel-muted)}
+.closer-usp-text b{font-size:14px;font-weight:700;color:var(--engineering-panel-text)}
+.closer-contacts{display:flex;flex-wrap:wrap;margin-top:26px;border-radius:14px;background:rgba(255,255,255,.035);border:1px solid var(--engineering-panel-border)}
+.closer-contact-item{display:flex;align-items:center;gap:11px;flex:1 1 auto;padding:16px 18px;text-decoration:none;border-right:1px solid var(--engineering-panel-border)}
+.closer-contact-item:last-child{border-right:0}
+.closer-cic{width:36px;height:36px;border-radius:10px;flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#8a45b0,#6B2D8B);color:#fff;box-shadow:none}
+.closer-cic svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:2}
+.closer-contact-item .msg-ic{box-shadow:none;width:36px;height:36px}
+.closer-contact-item .msg-ic.max{width:36px;min-width:36px;font-size:14px;letter-spacing:-.08em}
+.closer-contact-text{display:flex;flex-direction:column;gap:2px;font-family:'Golos Text',sans-serif;font-size:11px;line-height:1.35;color:rgba(234,234,230,.5)}
+.closer-contact-text b{font-size:13px;font-weight:700;color:#fff;transition:color .18s ease}
+.closer-contact-item:hover .closer-contact-text b{color:var(--engineering-panel-accent)}
 .closer-form{position:relative;background:var(--engineering-panel-surface);border:1px solid var(--engineering-panel-border);border-radius:16px;padding:clamp(17px,1.5vw,24px);display:flex;flex-direction:column;gap:11px}
 .closer-form .qfield{margin-bottom:0}
 .closer-form .qfield.upload{position:relative;display:flex;align-items:center;justify-content:flex-start;gap:12px;min-height:72px;padding:12px 16px;text-align:left;background:rgba(255,255,255,.04);border:1px dashed rgba(234,234,230,.24);border-radius:12px;cursor:pointer;transition:border-color .18s ease,background .18s ease}
@@ -689,14 +698,17 @@ select.qfield{cursor:pointer}
 .closer-form .qfield:not(.upload){height:46px;padding:0 16px;border-radius:12px;background:rgba(255,255,255,.05);border:1px solid rgba(234,234,230,.18);color:var(--engineering-panel-text);font-family:'Golos Text',sans-serif;font-weight:400;font-size:14.5px}
 .closer-form .qfield:not(.upload)::placeholder{color:var(--engineering-panel-muted)}
 .closer-form .qfield:not(.upload):focus{outline:none;border-color:var(--engineering-panel-highlight);background:rgba(255,255,255,.08)}
+.closer-form .qfield.closer-textarea{height:auto;min-height:78px;padding:12px 16px;resize:none;line-height:1.5;font-family:'Golos Text',sans-serif}
 .closer-sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .closer-btn{position:relative;z-index:1;width:100%;display:inline-flex;align-items:center;justify-content:center;gap:10px;height:46px;padding:0 24px;font-family:'Golos Text',sans-serif;font-size:12px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:#fff;border:0;border-radius:10px;cursor:pointer;background:linear-gradient(135deg,#8a45b0 0%,#6B2D8B 52%,#4f2069 100%);box-shadow:0 10px 26px rgba(107,45,139,.42);transition:transform .18s ease,box-shadow .18s ease,filter .18s ease}
 .closer-btn:hover{filter:brightness(1.09);transform:translateY(-2px);box-shadow:0 14px 34px rgba(107,45,139,.58)}
 .closer-btn span{transition:transform .18s ease}
 .closer-btn:hover span{transform:translateX(4px)}
+.closer-secure{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:2px;font-family:'Golos Text',sans-serif;font-size:11.5px;color:rgba(234,234,230,.42)}
+.closer-secure svg{width:14px;height:14px;flex:0 0 auto;fill:none;stroke:currentColor;stroke-width:1.6}
 @media(max-width:1279px){.closer-band-grid{gap:clamp(28px,3.2vw,42px)}.closer-text h2{font-size:clamp(24px,3vw,30px)}}
-@media(max-width:860px){.closer-band{min-height:0}.closer-band-grid{grid-template-columns:1fr}.closer-text{max-width:none}.closer-text p{max-width:none}}
-@media(max-width:760px){.closer-band{padding:22px 18px}.closer-text h2{font-size:clamp(23px,7vw,28px)}}
+@media(max-width:860px){.closer-band-grid{grid-template-columns:1fr}.closer-text{max-width:none}.closer-text p{max-width:none}}
+@media(max-width:640px){.closer-band{padding:22px 18px}.closer-text h2{font-size:clamp(23px,7vw,28px)}.closer-contacts{flex-direction:column}.closer-contact-item{border-right:0;border-bottom:1px solid var(--engineering-panel-border)}.closer-contact-item:last-child{border-bottom:0}}
 
 /* FOOTER */
 footer{background:var(--bm);color:rgba(234,234,230,.55);padding:3rem 0 2rem;border-top:2px solid var(--gold)}
@@ -1840,20 +1852,21 @@ body.hide-hdr-cta .hdr .hdr-cta{display:none}
 .sol-link:hover i{transform:translateX(5px)}
 .sol-link-secondary{margin-top:26px;color:var(--mid);font-weight:600}
 .sol-link-secondary:hover{color:var(--ce)}
-.sol-icon-grid{position:relative;z-index:1;display:grid;grid-template-columns:repeat(3,1fr);gap:4px 6px}
-.sol-icon-item{position:relative;display:flex;flex-direction:column;background:transparent;border:0;border-radius:10px;overflow:visible;text-decoration:none;padding:14px 8px 12px;transition:transform .22s ease}
+.sol-icon-rows{position:relative;z-index:1;display:flex;flex-direction:column;gap:4px}
+.sol-icon-row{display:flex;gap:6px}
+.sol-icon-item{position:relative;display:flex;flex-direction:column;flex:0 0 calc((100% - 18px)/4);width:calc((100% - 18px)/4);background:transparent;border:0;border-radius:10px;overflow:visible;text-decoration:none;padding:14px 8px 12px;transition:transform .22s ease}
 .sol-icon-media{display:flex;align-items:center;justify-content:center;padding:0 6px}
 .sol-icon-media img{max-width:88%;max-height:194px;object-fit:contain;filter:drop-shadow(0 14px 18px rgba(26,26,26,.16));transition:transform .3s ease}
 .sol-icon-foot{display:flex;align-items:center;justify-content:center;gap:8px;padding:10px 6px 0;margin-top:2px}
-.sol-icon-label{font-size:13.5px;font-weight:500;line-height:1.3;color:var(--mid);text-align:center;transition:color .22s ease}
+.sol-icon-label{font-size:16px;font-weight:700;line-height:1.28;letter-spacing:-.01em;color:var(--bm);text-align:center;transition:color .22s ease}
 .sol-icon-arrow{flex:0 0 auto;font-style:normal;font-size:16px;color:var(--ce);opacity:0;transform:translateX(-4px);transition:opacity .22s ease,transform .22s ease}
 .sol-icon-item:hover,.sol-icon-item:focus-visible{transform:translateY(-3px)}
-.sol-icon-item:hover .sol-icon-media img,.sol-icon-item:focus-visible .sol-icon-media img{transform:scale(1.06)}
+.sol-icon-item:hover .sol-icon-media img,.sol-icon-item:focus-visible .sol-icon-media img{transform:scale(1.14)}
 .sol-icon-item:hover .sol-icon-label,.sol-icon-item:focus-visible .sol-icon-label{color:var(--ce)}
 .sol-icon-item:hover .sol-icon-arrow,.sol-icon-item:focus-visible .sol-icon-arrow{opacity:1;transform:translateX(0)}
 @media(max-width:1180px){.sol-split{grid-template-columns:1fr}.sol-icon-media img{max-height:214px}}
-@media(max-width:760px){.sol-icon-grid{grid-template-columns:repeat(2,1fr);gap:4px 8px}.sol-icon-media img{max-height:184px}}
-@media(max-width:480px){.sol-icon-grid{grid-template-columns:1fr}.sol-icon-media img{max-height:230px}}
+@media(max-width:760px){.sol-icon-row{flex-wrap:wrap;row-gap:8px}.sol-icon-item{flex:0 0 calc(50% - 4px);width:calc(50% - 4px)}.sol-icon-media img{max-height:184px}}
+@media(max-width:480px){.sol-icon-item{flex:0 0 100%;width:100%}.sol-icon-media img{max-height:230px}}
 
 /* РЕАЛИЗОВАННЫЙ ПРОЕКТ — лента реальных внедрений */
 .case-realized{padding-top:4.6rem;padding-bottom:4.6rem;background:#fff;border-top:1px solid var(--line)}
@@ -2240,21 +2253,27 @@ body.hide-hdr-cta .hdr .hdr-cta{display:none}
 <div class="wrap sol-split reveal-up">
 <div class="sol-intro">
 <div class="eyebrow">Решения</div>
-<div class="h2 eq-split-title">Готовые отраслевые решения</div>
+<div class="h2 eq-split-title">Готовые отраслевые<br/>решения</div>
 <p class="eq-split-desc">От детали и требований к обработке — к технологическому маршруту и подбору оборудования.</p>
 <a class="sol-link" href="solutions.html">Смотреть все решения <i aria-hidden="true">→</i></a>
 <a class="sol-link sol-link-secondary" href="#quiz" onclick="event.preventDefault();openLeadModal()">Передать свой чертёж <i aria-hidden="true">→</i></a>
 </div>
-<div class="sol-icon-grid">
+<div class="sol-icon-rows">
+<div class="sol-icon-row">
 <a class="sol-icon-item" href="solution-auto.html"><span class="sol-icon-media"><img src="icon-auto.png" alt="Автомобильная промышленность" loading="lazy"/></span><span class="sol-icon-foot"><span class="sol-icon-label">Автомобильная промышленность</span><i class="sol-icon-arrow" aria-hidden="true">→</i></span></a>
 <a class="sol-icon-item" href="solution-aero.html"><span class="sol-icon-media"><img src="icon-aero.png" alt="Авиационная промышленность" loading="lazy"/></span><span class="sol-icon-foot"><span class="sol-icon-label">Авиационная промышленность</span><i class="sol-icon-arrow" aria-hidden="true">→</i></span></a>
+</div>
+<div class="sol-icon-row">
 <a class="sol-icon-item" href="solution-ship.html"><span class="sol-icon-media"><img src="icon-ship.png" alt="Судостроение" loading="lazy"/></span><span class="sol-icon-foot"><span class="sol-icon-label">Судостроение</span><i class="sol-icon-arrow" aria-hidden="true">→</i></span></a>
 <a class="sol-icon-item" href="solution-rail.html"><span class="sol-icon-media"><img src="icon-rail.png" alt="Железнодорожное машиностроение" loading="lazy"/></span><span class="sol-icon-foot"><span class="sol-icon-label">Железнодорожное машиностроение</span><i class="sol-icon-arrow" aria-hidden="true">→</i></span></a>
 <a class="sol-icon-item" href="solution-agro.html"><span class="sol-icon-media"><img src="icon-agro.png" alt="Сельскохозяйственное и дорожно-строительное машиностроение" loading="lazy"/></span><span class="sol-icon-foot"><span class="sol-icon-label">Сельхоз и дорожно-строительное</span><i class="sol-icon-arrow" aria-hidden="true">→</i></span></a>
+</div>
+<div class="sol-icon-row">
 <a class="sol-icon-item" href="solution-instr.html"><span class="sol-icon-media"><img src="icon-instr.png" alt="Приборостроение" loading="lazy"/></span><span class="sol-icon-foot"><span class="sol-icon-label">Приборостроение</span><i class="sol-icon-arrow" aria-hidden="true">→</i></span></a>
 <a class="sol-icon-item" href="solution-fuel.html"><span class="sol-icon-media"><img src="icon-fuel.png" alt="Топливно-энергетический сектор" loading="lazy"/></span><span class="sol-icon-foot"><span class="sol-icon-label">Топливно-энергетический сектор</span><i class="sol-icon-arrow" aria-hidden="true">→</i></span></a>
 <a class="sol-icon-item" href="solution-mining.html"><span class="sol-icon-media"><img src="icon-mining.png" alt="Горнорудная промышленность" loading="lazy"/></span><span class="sol-icon-foot"><span class="sol-icon-label">Горнорудная промышленность</span><i class="sol-icon-arrow" aria-hidden="true">→</i></span></a>
 <a class="sol-icon-item" href="solution-space.html"><span class="sol-icon-media"><img src="icon-space.png" alt="Космическая промышленность" loading="lazy"/></span><span class="sol-icon-foot"><span class="sol-icon-label">Космическая промышленность</span><i class="sol-icon-arrow" aria-hidden="true">→</i></span></a>
+</div>
 </div>
 </div>
 </section>
@@ -2454,26 +2473,30 @@ body.hide-hdr-cta .hdr .hdr-cta{display:none}
 <div class="closer-band reveal-up">
 <div class="closer-band-grid">
 <div class="closer-text">
+<div class="closer-eyebrow"><i></i>Инженерный подход</div>
 <h2>Есть производственная задача?</h2>
-<p>Передайте чертёж или описание задачи.<br/>Инженеры Механита помогут определить технологию, оборудование и конфигурацию проекта.</p>
+<p>Передайте чертёж или описание задачи — подберём технологию, оборудование и конфигурацию проекта.</p>
 <div class="closer-usp">
-<span class="closer-usp-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7v5l3.2 2M21 12a9 9 0 1 1-9-9 9 9 0 0 1 9 9Z"/></svg>Ответ технолога — в течение 2 часов</span>
-<span class="closer-usp-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 12.5l2.5 2.5L16 9M21 12a9 9 0 1 1-9-9 9 9 0 0 1 9 9Z"/></svg>Бесплатный подбор оборудования под задачу</span>
+<div class="closer-usp-item"><span class="closer-usp-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 7v5l3.2 2M21 12a9 9 0 1 1-9-9 9 9 0 0 1 9 9Z"/></svg></span><span class="closer-usp-text"><b>Ответ технолога</b>в течение 2 часов</span></div>
+<div class="closer-usp-item"><span class="closer-usp-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/><path d="M19.4 13a7.4 7.4 0 0 0 0-2l2-1.6-2-3.4-2.4 1a7.3 7.3 0 0 0-1.7-1L15 3h-4l-.3 2.6a7.3 7.3 0 0 0-1.7 1l-2.4-1-2 3.4L6.6 11a7.4 7.4 0 0 0 0 2l-2 1.6 2 3.4 2.4-1c.5.4 1.1.75 1.7 1L11 21h4l.3-2.6c.6-.25 1.2-.6 1.7-1l2.4 1 2-3.4Z"/></svg></span><span class="closer-usp-text"><b>Бесплатный подбор</b>оборудования под задачу</span></div>
 </div>
 <div class="closer-contacts">
-<a class="closer-contact-item" href="tel:88005511206"><span class="closer-cic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.2c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1Z"/></svg></span>8 800 55 11 206</a>
-<a class="closer-contact-item" href="mailto:info@mehanit.ru"><span class="closer-cic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6h16v12H4Z"/><path d="m4 7 8 6 8-6"/></svg></span>info@mehanit.ru</a>
-<a class="closer-contact-item" href="https://t.me/mehanit" target="_blank" rel="noopener"><span class="msg-ic tg" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21.7 3.4 18.5 20c-.2 1-.8 1.2-1.6.8l-4.5-3.3-2.2 2.1c-.2.2-.4.4-.9.4l.3-4.6 8.4-7.6c.4-.3-.1-.5-.5-.2L7.2 14.1 2.8 12.7c-1-.3-1-1 0-1.4L20.5 2.6c.8-.3 1.5.2 1.2.8Z"/></svg></span>Telegram</a>
-<a class="closer-contact-item" href="https://max.ru/id5256089670_biz" target="_blank" rel="noopener"><span class="msg-ic max" aria-hidden="true">max</span>MAX</a>
+<a class="closer-contact-item" href="tel:88005511206"><span class="closer-cic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.2c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1Z"/></svg></span><span class="closer-contact-text"><b>8 800 55 11 206</b>Бесплатно по России</span></a>
+<a class="closer-contact-item" href="mailto:info@mehanit.ru"><span class="closer-cic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6h16v12H4Z"/><path d="m4 7 8 6 8-6"/></svg></span><span class="closer-contact-text"><b>info@mehanit.ru</b>Ответим в течение 1 часа</span></a>
+<a class="closer-contact-item" href="https://t.me/mehanit" target="_blank" rel="noopener"><span class="msg-ic tg" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21.7 3.4 18.5 20c-.2 1-.8 1.2-1.6.8l-4.5-3.3-2.2 2.1c-.2.2-.4.4-.9.4l.3-4.6 8.4-7.6c.4-.3-.1-.5-.5-.2L7.2 14.1 2.8 12.7c-1-.3-1-1 0-1.4L20.5 2.6c.8-.3 1.5.2 1.2.8Z"/></svg></span><span class="closer-contact-text"><b>Telegram</b>Написать в Telegram</span></a>
+<a class="closer-contact-item" href="https://max.ru/id5256089670_biz" target="_blank" rel="noopener"><span class="msg-ic max" aria-hidden="true">max</span><span class="closer-contact-text"><b>MAX</b>Написать в MAX</span></a>
 </div>
 </div>
 <form class="closer-form" onsubmit="return false">
 <label class="qfield upload"><span aria-hidden="true" class="qfield-upload-icon"><svg viewBox="0 0 24 24"><path d="M8 12.5 15 5.5a3 3 0 0 1 4.24 4.24L11 18a2 2 0 0 1-2.83-2.83l6.36-6.36"></path></svg></span><span class="qfield-upload-text">Прикрепить чертёж или ТЗ<small>(не обязательно) · PDF · DWG · STEP</small></span><input style="position:absolute;width:1px;height:1px;overflow:hidden;opacity:0" type="file"/></label>
 <label class="closer-sr-only" for="closerContact">Телефон или email для ответа</label>
 <input class="qfield" id="closerContact" placeholder="Телефон или email для ответа"/>
+<label class="closer-sr-only" for="closerTask">Кратко опишите задачу или требования к оборудованию</label>
+<textarea class="qfield closer-textarea" id="closerTask" rows="3" placeholder="Кратко опишите задачу или требования к оборудованию"></textarea>
 <label class="lead-consent"><input type="checkbox" id="closerConsent" required/><span>Принимаю условия <a href="privacy.html" data-legal="privacy">Политики конфиденциальности</a> и даю согласие на обработку персональных данных</span></label>
 <div class="lead-err" id="closerConsentErr" role="alert"></div>
-<div class="closer-actions-row"><button class="closer-btn" type="button" style="flex:1">Передать чертёж <span>→</span></button><button class="closer-btn btn-quiet" type="button" onclick="openLeadModal()" style="flex:1">Получить консультацию</button></div>
+<div class="closer-actions-row"><button class="closer-btn" type="button" style="flex:1">Передать задачу <span>→</span></button><button class="closer-btn btn-quiet" type="button" onclick="openLeadModal()" style="flex:1">Получить консультацию</button></div>
+<div class="closer-secure"><svg aria-hidden="true" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Ваши данные защищены</div>
 </form>
 </div>
 </div>
