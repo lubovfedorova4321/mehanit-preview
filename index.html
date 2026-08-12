@@ -1827,38 +1827,57 @@ body.hide-hdr-cta .hdr .hdr-cta{display:none}
 /* Generic section CTA row (reused: equipment / stock) */
 .section-cta-row{display:flex;justify-content:center;margin-top:44px}
 .section-cta-row .btn{min-width:280px}
-
-/* SOLUTIONS: интро слева / 3×3 иконки-отрасли справа */
-.sol-head{margin-bottom:22px}
-.sol-title-full{width:100%;white-space:nowrap}
-@media(max-width:760px){.sol-title-full{white-space:normal}}
-.sol-pick-industry{display:inline-flex;align-items:center;gap:10px;margin:20px 0 30px;padding:11px 20px;background:rgba(201,162,39,.13);border:1px solid rgba(201,162,39,.4);border-radius:999px;font-family:'Golos Text',sans-serif;font-size:16px;font-weight:800;letter-spacing:.1px;color:var(--gold)}
-.sol-pick-industry i{font-style:normal;font-size:18px;display:inline-block;animation:solPickNudge 1.6s ease-in-out infinite}
-@keyframes solPickNudge{0%,100%{transform:translateX(0)}50%{transform:translateX(6px)}}
-@media(prefers-reduced-motion:reduce){.sol-pick-industry i{animation:none}}
-.sol-split{position:relative;display:grid;grid-template-columns:minmax(360px,28%) 1fr;gap:40px;align-items:start}
-.sol-split::before{content:'';position:absolute;inset:-40px -20px;z-index:0;pointer-events:none;opacity:.035;background-repeat:no-repeat;background-position:right 6% top 4%;background-size:min(30%,420px) auto;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='420' height='420'%3E%3Cg stroke='%236B2D8B' stroke-width='1' fill='none'%3E%3Cline x1='60' y1='0' x2='60' y2='420'/%3E%3Cline x1='0' y1='150' x2='420' y2='150'/%3E%3Ccircle cx='340' cy='320' r='34'/%3E%3Ccircle cx='340' cy='320' r='2' fill='%236B2D8B'/%3E%3Cline x1='300' y1='320' x2='320' y2='320'/%3E%3Cline x1='360' y1='320' x2='380' y2='320'/%3E%3Ctext x='300' y='70' font-family='monospace' font-size='26'%3E%C3%98%3C/text%3E%3Ctext x='40' y='400' font-family='monospace' font-size='24'%3ER18%3C/text%3E%3C/g%3E%3C/svg%3E")}
-.sol-intro{position:relative;z-index:1;display:flex;flex-direction:column;align-items:flex-start;min-width:0}
+/* Generic text-link (reused: stock CTA, внедрения CTA, экспертиза card links) */
 .sol-link{display:inline-flex;align-items:center;gap:8px;margin-top:22px;font-size:12.5px;font-weight:700;letter-spacing:.3px;text-transform:uppercase;color:var(--ce);text-decoration:none}
 .sol-link i{font-style:normal;transition:transform .2s ease}
 .sol-link:hover i{transform:translateX(5px)}
-.sol-link-secondary{margin-top:26px;color:var(--mid);font-weight:600}
-.sol-link-secondary:hover{color:var(--ce)}
-.sol-icon-rows{position:relative;z-index:1;display:flex;flex-direction:column;gap:4px}
-.sol-icon-row{display:flex;gap:6px;justify-content:space-between}
-.sol-icon-item{position:relative;display:flex;flex-direction:column;flex:0 0 calc((100% - 24px)/5);width:calc((100% - 24px)/5);background:transparent;border:0;border-radius:10px;overflow:visible;text-decoration:none;padding:14px 8px 12px;transition:transform .22s ease}
-.sol-icon-media{display:flex;align-items:center;justify-content:center;padding:0 6px}
-.sol-icon-media img{max-width:88%;max-height:194px;object-fit:contain;filter:drop-shadow(0 14px 18px rgba(26,26,26,.16));transition:transform .3s ease}
-.sol-icon-foot{display:flex;align-items:center;justify-content:center;gap:8px;padding:10px 6px 0;margin-top:2px}
-.sol-icon-label{font-size:16px;font-weight:700;line-height:1.28;letter-spacing:-.01em;color:var(--bm);text-align:center;transition:color .22s ease}
-.sol-icon-arrow{flex:0 0 auto;font-style:normal;font-size:16px;color:var(--ce);opacity:0;transform:translateX(-4px);transition:opacity .22s ease,transform .22s ease}
-.sol-icon-item:hover,.sol-icon-item:focus-visible{transform:translateY(-3px)}
-.sol-icon-item:hover .sol-icon-media img,.sol-icon-item:focus-visible .sol-icon-media img{transform:scale(1.14)}
-.sol-icon-item:hover .sol-icon-label,.sol-icon-item:focus-visible .sol-icon-label{color:var(--ce)}
-.sol-icon-item:hover .sol-icon-arrow,.sol-icon-item:focus-visible .sol-icon-arrow{opacity:1;transform:translateX(0)}
-@media(max-width:1180px){.sol-split{grid-template-columns:1fr}.sol-icon-media img{max-height:214px}}
-@media(max-width:760px){.sol-icon-row{flex-wrap:wrap;row-gap:8px}.sol-icon-item{flex:0 0 calc(50% - 4px);width:calc(50% - 4px)}.sol-icon-media img{max-height:184px}}
-@media(max-width:480px){.sol-icon-item{flex:0 0 100%;width:100%}.sol-icon-media img{max-height:230px}}
+
+/* SOLUTIONS: интро слева / 3×3 иконки-отрасли справа */
+/* SOLUTIONS BY INDUSTRY — editorial column + strict 3x3 grid, objects free-standing on the section background */
+.sol-split{position:relative;display:grid;grid-template-columns:minmax(320px,29%) 1fr;gap:56px;align-items:start}
+.sol-split::before{content:'';position:absolute;left:-34px;top:6%;width:170px;height:280px;z-index:0;pointer-events:none;opacity:.03;background-repeat:no-repeat;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='170' height='280'%3E%3Cg stroke='%236B2D8B' stroke-width='1' fill='none'%3E%3Cline x1='18' y1='0' x2='18' y2='280'/%3E%3Cline x1='0' y1='46' x2='140' y2='46'/%3E%3Ccircle cx='18' cy='46' r='5'/%3E%3Ctext x='30' y='130' font-family='monospace' font-size='19'%3E%C3%98%3C/text%3E%3C/g%3E%3C/svg%3E")}
+.sol-split::after{content:'';position:absolute;right:-30px;bottom:-40px;width:360px;height:360px;z-index:0;pointer-events:none;opacity:.025;background-repeat:no-repeat;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='360' height='360'%3E%3Cg stroke='%236B2D8B' stroke-width='1' fill='none'%3E%3Ccircle cx='180' cy='180' r='148'/%3E%3Ccircle cx='180' cy='180' r='2' fill='%236B2D8B'/%3E%3Cline x1='180' y1='14' x2='180' y2='346'/%3E%3Cline x1='14' y1='180' x2='346' y2='180'/%3E%3Ctext x='196' y='42' font-family='monospace' font-size='20'%3ER148%3C/text%3E%3C/g%3E%3C/svg%3E")}
+.sol-intro{position:relative;z-index:1;display:flex;flex-direction:column;align-items:flex-start;min-width:0}
+.sol-intro .eyebrow{margin-bottom:0}
+.sol-intro .sol-h2{width:100%;margin:34px 0 0}
+.sol-intro .eq-split-desc{margin:26px 0 0;max-width:420px}
+.sol-pick-industry{display:inline-flex;align-items:center;gap:8px;margin:34px 0 0;padding-bottom:9px;border-bottom:1px solid rgba(201,162,39,.55);font-family:'Golos Text',sans-serif;font-size:12.5px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--gold)}
+.sol-pick-industry i{font-style:normal;font-size:14px;display:inline-block;animation:solPickNudge 1.8s ease-in-out infinite}
+@keyframes solPickNudge{0%,100%{transform:translateY(0)}50%{transform:translateY(4px)}}
+@media(prefers-reduced-motion:reduce){.sol-pick-industry i{animation:none}}
+.sol-cta-row{display:flex;align-items:center;gap:28px;flex-wrap:wrap;margin:42px 0 0}
+.sol-cta-primary,.sol-cta-secondary{display:inline-flex;align-items:center;gap:8px;font-family:'Golos Text',sans-serif;font-size:12.5px;font-weight:700;letter-spacing:.3px;text-transform:uppercase;text-decoration:none;transition:color .18s ease}
+.sol-cta-primary i,.sol-cta-secondary i{font-style:normal;transition:transform .2s ease}
+.sol-cta-primary{color:var(--ce)}
+.sol-cta-primary:hover{color:var(--ceHover)}
+.sol-cta-primary:hover i{transform:translateX(5px)}
+.sol-cta-secondary{color:var(--mid)}
+.sol-cta-secondary:hover{color:var(--bm)}
+.sol-cta-secondary:hover i{transform:translateX(5px)}
+.sol-grid{position:relative;z-index:1;display:grid;grid-template-columns:repeat(3,1fr);column-gap:8px;row-gap:14px}
+.sol-item{position:relative;display:flex;flex-direction:column;align-items:center;text-decoration:none;padding:26px 12px 18px;border-radius:8px}
+.sol-item::before{content:'';position:absolute;top:42%;left:50%;width:64%;aspect-ratio:1/1;max-width:180px;transform:translate(-50%,-50%);border:1px solid var(--ce);border-radius:50%;opacity:0;transition:opacity .35s ease;pointer-events:none;z-index:-1}
+.sol-item:hover::before,.sol-item:focus-visible::before{opacity:.055}
+.sol-item:focus-visible{outline:2px solid var(--ce);outline-offset:4px}
+.sol-item-media{display:flex;align-items:center;justify-content:center;height:236px}
+.sol-item-media img{--isc:1;--hsc:1;max-width:88%;max-height:100%;object-fit:contain;filter:drop-shadow(0 14px 18px rgba(26,26,26,.16));transition:transform .35s cubic-bezier(.2,.7,.2,1);transform:scale(calc(var(--isc) * var(--hsc)))}
+.sol-item-foot{display:flex;align-items:center;justify-content:center;gap:8px;padding-top:20px}
+.sol-item-label{font-size:15.5px;font-weight:700;line-height:1.28;letter-spacing:-.01em;color:var(--bm);text-align:center;transition:color .22s ease}
+.sol-item-arrow{flex:0 0 auto;font-style:normal;font-size:15px;color:var(--ce);opacity:0;transform:translateX(-4px);transition:opacity .22s ease,transform .22s ease}
+.sol-item:hover .sol-item-media img,.sol-item:focus-visible .sol-item-media img{--hsc:1.03}
+.sol-item:hover .sol-item-label,.sol-item:focus-visible .sol-item-label{color:var(--ce)}
+.sol-item:hover .sol-item-arrow,.sol-item:focus-visible .sol-item-arrow{opacity:1;transform:translateX(0)}
+.sol-item-rail .sol-item-media img{--isc:1.16}
+.sol-item-mining .sol-item-media img{--isc:1.15}
+.sol-item-aero .sol-item-media img{--isc:1.10}
+.sol-item-auto .sol-item-media img{--isc:1.08}
+.sol-item-ship .sol-item-media img{--isc:1.07}
+.sol-item-instr .sol-item-media img{--isc:1.06}
+.sol-item-agro .sol-item-media img{--isc:1.05}
+.sol-item-space .sol-item-media img{--isc:1.03}
+@media(max-width:1180px){.sol-split{grid-template-columns:1fr;gap:52px}.sol-intro .eq-split-desc{max-width:560px}.sol-item-media{height:258px}}
+@media(max-width:900px){.sol-grid{grid-template-columns:repeat(2,1fr)}.sol-item-media{height:238px}}
+@media(max-width:620px){.sol-grid{grid-template-columns:1fr}.sol-item{padding:20px 16px}.sol-item-media{height:260px}}
 
 /* РЕАЛИЗОВАННЫЙ ПРОЕКТ — лента реальных внедрений */
 .case-realized{padding-top:4.6rem;padding-bottom:4.6rem;background:#fff;border-top:1px solid var(--line)}
@@ -2232,31 +2251,27 @@ body.hide-hdr-cta .hdr .hdr-cta{display:none}
 </section>
 <!-- SOLUTIONS BY INDUSTRY -->
 <section class="equipment solutions-block" id="solutions">
-<div class="wrap sol-head reveal-up">
-<div class="eyebrow">Решения</div>
-<div class="h2 eq-split-title sol-title-full">Инженерные решения по отраслям</div>
-</div>
 <div class="wrap sol-split reveal-up">
 <div class="sol-intro">
+<div class="eyebrow">Решения</div>
+<div class="h2 eq-split-title sol-h2">Инженерные решения по отраслям</div>
 <p class="eq-split-desc">От детали и требований к обработке — к технологическому маршруту и подбору оборудования.</p>
-<p class="sol-pick-industry">Выберите свою отрасль <i aria-hidden="true">→</i></p>
-<a class="sol-link" href="solutions.html">Смотреть все решения <i aria-hidden="true">→</i></a>
-<a class="sol-link sol-link-secondary" href="#quiz" onclick="event.preventDefault();openLeadModal()">Передать свой чертёж <i aria-hidden="true">→</i></a>
+<p class="sol-pick-industry">Выберите свою отрасль <i aria-hidden="true">↓</i></p>
+<div class="sol-cta-row">
+<a class="sol-cta-primary" href="solutions.html">Смотреть все решения <i aria-hidden="true">→</i></a>
+<a class="sol-cta-secondary" href="#quiz" onclick="event.preventDefault();openLeadModal()">Передать чертёж <i aria-hidden="true">→</i></a>
 </div>
-<div class="sol-icon-rows">
-<div class="sol-icon-row">
-<a class="sol-icon-item" href="solution-rail.html"><span class="sol-icon-media"><img src="icon-rail.png" alt="Железнодорожное машиностроение" loading="lazy"/></span><span class="sol-icon-foot"><span class="sol-icon-label">Железнодорожное машиностроение</span><i class="sol-icon-arrow" aria-hidden="true">→</i></span></a>
-<a class="sol-icon-item" href="solution-instr.html"><span class="sol-icon-media"><img src="icon-instr.png" alt="Приборостроение" loading="lazy"/></span><span class="sol-icon-foot"><span class="sol-icon-label">Приборостроение</span><i class="sol-icon-arrow" aria-hidden="true">→</i></span></a>
-<a class="sol-icon-item" href="solution-agro.html"><span class="sol-icon-media"><img src="icon-agro.png" alt="Сельскохозяйственное и дорожно-строительное машиностроение" loading="lazy"/></span><span class="sol-icon-foot"><span class="sol-icon-label">Сельхоз и дорожно-строительное</span><i class="sol-icon-arrow" aria-hidden="true">→</i></span></a>
-<a class="sol-icon-item" href="solution-fuel.html"><span class="sol-icon-media"><img src="icon-fuel.png" alt="Топливно-энергетический сектор" loading="lazy"/></span><span class="sol-icon-foot"><span class="sol-icon-label">Топливно-энергетический сектор</span><i class="sol-icon-arrow" aria-hidden="true">→</i></span></a>
 </div>
-<div class="sol-icon-row">
-<a class="sol-icon-item" href="solution-auto.html"><span class="sol-icon-media"><img src="icon-auto.png" alt="Автомобильная промышленность" loading="lazy"/></span><span class="sol-icon-foot"><span class="sol-icon-label">Автомобильная промышленность</span><i class="sol-icon-arrow" aria-hidden="true">→</i></span></a>
-<a class="sol-icon-item" href="solution-aero.html"><span class="sol-icon-media"><img src="icon-aero.png" alt="Авиационная промышленность" loading="lazy"/></span><span class="sol-icon-foot"><span class="sol-icon-label">Авиационная промышленность</span><i class="sol-icon-arrow" aria-hidden="true">→</i></span></a>
-<a class="sol-icon-item" href="solution-ship.html"><span class="sol-icon-media"><img src="icon-ship.png" alt="Судостроение" loading="lazy"/></span><span class="sol-icon-foot"><span class="sol-icon-label">Судостроение</span><i class="sol-icon-arrow" aria-hidden="true">→</i></span></a>
-<a class="sol-icon-item" href="solution-mining.html"><span class="sol-icon-media"><img src="icon-mining.png" alt="Горнорудная промышленность" loading="lazy"/></span><span class="sol-icon-foot"><span class="sol-icon-label">Горнорудная промышленность</span><i class="sol-icon-arrow" aria-hidden="true">→</i></span></a>
-<a class="sol-icon-item" href="solution-space.html"><span class="sol-icon-media"><img src="icon-space.png" alt="Космическая промышленность" loading="lazy"/></span><span class="sol-icon-foot"><span class="sol-icon-label">Космическая промышленность</span><i class="sol-icon-arrow" aria-hidden="true">→</i></span></a>
-</div>
+<div class="sol-grid">
+<a class="sol-item sol-item-rail" href="solution-rail.html"><span class="sol-item-media"><img src="icon-rail.png" alt="Железнодорожное машиностроение" loading="lazy"/></span><span class="sol-item-foot"><span class="sol-item-label">Железнодорожное машиностроение</span><i class="sol-item-arrow" aria-hidden="true">→</i></span></a>
+<a class="sol-item sol-item-instr" href="solution-instr.html"><span class="sol-item-media"><img src="icon-instr.png" alt="Приборостроение" loading="lazy"/></span><span class="sol-item-foot"><span class="sol-item-label">Приборостроение</span><i class="sol-item-arrow" aria-hidden="true">→</i></span></a>
+<a class="sol-item sol-item-agro" href="solution-agro.html"><span class="sol-item-media"><img src="icon-agro.png" alt="Сельскохозяйственное и дорожно-строительное машиностроение" loading="lazy"/></span><span class="sol-item-foot"><span class="sol-item-label">Сельхоз и дорожно-строительное</span><i class="sol-item-arrow" aria-hidden="true">→</i></span></a>
+<a class="sol-item sol-item-fuel" href="solution-fuel.html"><span class="sol-item-media"><img src="icon-fuel.png" alt="Топливно-энергетический сектор" loading="lazy"/></span><span class="sol-item-foot"><span class="sol-item-label">Топливно-энергетический сектор</span><i class="sol-item-arrow" aria-hidden="true">→</i></span></a>
+<a class="sol-item sol-item-auto" href="solution-auto.html"><span class="sol-item-media"><img src="icon-auto.png" alt="Автомобильная промышленность" loading="lazy"/></span><span class="sol-item-foot"><span class="sol-item-label">Автомобильная промышленность</span><i class="sol-item-arrow" aria-hidden="true">→</i></span></a>
+<a class="sol-item sol-item-aero" href="solution-aero.html"><span class="sol-item-media"><img src="icon-aero.png" alt="Авиационная промышленность" loading="lazy"/></span><span class="sol-item-foot"><span class="sol-item-label">Авиационная промышленность</span><i class="sol-item-arrow" aria-hidden="true">→</i></span></a>
+<a class="sol-item sol-item-ship" href="solution-ship.html"><span class="sol-item-media"><img src="icon-ship.png" alt="Судостроение" loading="lazy"/></span><span class="sol-item-foot"><span class="sol-item-label">Судостроение</span><i class="sol-item-arrow" aria-hidden="true">→</i></span></a>
+<a class="sol-item sol-item-mining" href="solution-mining.html"><span class="sol-item-media"><img src="icon-mining.png" alt="Горнорудная промышленность" loading="lazy"/></span><span class="sol-item-foot"><span class="sol-item-label">Горнорудная промышленность</span><i class="sol-item-arrow" aria-hidden="true">→</i></span></a>
+<a class="sol-item sol-item-space" href="solution-space.html"><span class="sol-item-media"><img src="icon-space.png" alt="Космическая промышленность" loading="lazy"/></span><span class="sol-item-foot"><span class="sol-item-label">Космическая промышленность</span><i class="sol-item-arrow" aria-hidden="true">→</i></span></a>
 </div>
 </div>
 </section>
