@@ -19,12 +19,16 @@
   --gold:#C9A227;
   --tl:#EAEAE6;--tl2:#F5F5F3;--paper:#EDEEF0;--paper2:#E4E5E8;--white:#fff;
   --line:rgba(26,26,26,.10);--line2:rgba(234,234,230,.08);
-  --max:1400px;--shadow:0 24px 70px rgba(26,26,26,.10);
+  --max:1760px;--shadow:0 24px 70px rgba(26,26,26,.10);
 }
 html{scroll-behavior:smooth}
 body{font-family:'Golos Text',sans-serif;background:var(--paper);color:var(--bm);-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
-.wrap{width:min(calc(100% - 48px),var(--max));margin-left:clamp(24px,4.4vw,84px);margin-right:auto}
+/* Левый край выровнен по букве «М» в логотипе, правый — по внутреннему краю шапки (.site-nav) */
+.wrap{width:100%;padding-left:72.78px;padding-right:20px}
+@media(min-width:1600px){.wrap{padding-left:calc(28px + 3.636vw);padding-right:28px}}
+@media(min-width:1817px){.wrap{padding-left:calc(53.636vw - 880px);padding-right:calc((100vw - 1760px)/2)}}
+@media(min-width:1936px){.wrap{padding-left:calc(50vw - 809.63px)}}
 .mono{font-family:'Golos Text',monospace}.disp{font-family:'Magistral',sans-serif}
 .eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:'Golos Text',monospace;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--ce);margin-bottom:.85rem}
 .eyebrow::before{content:'';width:22px;height:1.5px;background:var(--ce)}
@@ -189,24 +193,6 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
   .hero-video-fallback{z-index:0}
 }
 
-/* TOOL VISUAL STRIP */
-.tool-photo-strip{margin:-1.4rem 0 2.2rem;position:relative;overflow:hidden;border:1px solid rgba(26,26,26,.08);background:linear-gradient(135deg,#f7f7f4 0%,#e7e8ea 48%,#fbfbf8 100%);box-shadow:0 24px 68px rgba(26,26,26,.08),inset 0 0 0 1px rgba(255,255,255,.72)}
-.tool-photo-strip::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(247,247,244,.96) 0%,rgba(247,247,244,.18) 14%,rgba(247,247,244,.18) 86%,rgba(247,247,244,.96) 100%),linear-gradient(var(--gold),var(--gold)) top left/72px 2px no-repeat,linear-gradient(var(--gold),var(--gold)) bottom right/72px 1px no-repeat,linear-gradient(90deg,rgba(26,26,26,.07) 0 1px,transparent 1px 100%) 0 50%/100% 1px no-repeat;z-index:2;pointer-events:none}
-.tool-photo-strip::after{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(26,26,26,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(26,26,26,.035) 1px,transparent 1px);background-size:42px 42px;opacity:.75;z-index:1;pointer-events:none}
-.tool-photo-track{position:relative;z-index:0;display:flex;align-items:center;gap:34px;width:max-content;padding:18px 34px;animation:toolstrip 42s linear infinite}
-.tool-photo-strip:hover .tool-photo-track{animation-play-state:paused}
-.tool-photo{width:170px;height:118px;object-fit:contain;object-position:center;filter:drop-shadow(0 18px 22px rgba(26,26,26,.24)) contrast(1.06) saturate(1.02);opacity:.96;transition:transform .22s ease,filter .22s ease,opacity .22s ease}
-.tool-photo:hover{transform:translateY(-4px) scale(1.045);filter:drop-shadow(0 22px 28px rgba(201,162,39,.18)) contrast(1.11) saturate(1.06);opacity:1}
-@keyframes toolstrip{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-
-.proofline{background:rgba(255,255,255,.72);border-bottom:1px solid var(--line);position:relative;z-index:2}
-.proofline-in{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line)}
-.proof-item{background:rgba(255,255,255,.78);padding:18px 18px 17px;min-height:106px;position:relative;overflow:hidden}
-.proof-item::before{content:'';position:absolute;left:18px;top:0;width:34px;height:2px;background:var(--gold)}
-.proof-item b{display:block;font-family:'Magistral',sans-serif;font-size:18px;line-height:1.1;color:var(--bm);letter-spacing:-.03em;margin-bottom:8px}
-.proof-item span{display:block;font-family:'Golos Text',monospace;font-size:9px;letter-spacing:1.15px;line-height:1.45;text-transform:uppercase;color:var(--mid)}
-.proof-item.dark{background:var(--bm);color:var(--tl)}
-.proof-item.dark b{color:var(--tl)}.proof-item.dark span{color:rgba(234,234,230,.62)}
 
 /* SECTIONS */
 section{padding:5.5rem 0}
@@ -723,7 +709,7 @@ footer{background:var(--bm);color:rgba(234,234,230,.55);padding:3rem 0 2rem;bord
 .foot-contact{font-family:'Golos Text',monospace;color:rgba(234,234,230,.7);letter-spacing:.5px}
 
 /* PREMIUM POLISH */
-.btn,.menu-trigger,.mega a,.nav-tile,.equipment-card,.taskc,.tax-card,.stock-card,.tool-card,.svcc,.casec,.indc,.final-h,.proof-item{transition-duration:.18s!important;transition-timing-function:cubic-bezier(.2,.7,.2,1)!important}
+.btn,.menu-trigger,.mega a,.nav-tile,.equipment-card,.taskc,.tax-card,.stock-card,.tool-card,.svcc,.casec,.indc,.final-h{transition-duration:.18s!important;transition-timing-function:cubic-bezier(.2,.7,.2,1)!important}
 .btn:hover{transform:translateY(-1px)!important}
 .nav-tile:hover{transform:translateY(-2px) scale(1.025);box-shadow:0 18px 42px rgba(26,26,26,.10),inset 0 0 0 1px rgba(201,162,39,.18)}
 .nav-tile:hover::after{opacity:.34;transform:skewX(-6deg) translate3d(1px,-1px,0) scale(1.02);filter:none}
@@ -734,17 +720,11 @@ footer{background:var(--bm);color:rgba(234,234,230,.55);padding:3rem 0 2rem;bord
 .tool-card:hover,.tool-card.is-active{box-shadow:0 20px 46px rgba(0,0,0,.22);border-color:rgba(201,162,39,.58)}
 .svcc:hover,.casec:hover,.indc:hover,.final-h:hover{transform:translateY(-2px)}
 
-.tech-card:hover{transform:translateY(-3px) scale(1.018)}
-.proof-item:hover{background:#fff;box-shadow:inset 0 -2px 0 rgba(201,162,39,.42)}
-.proof-item.dark:hover{background:#202020}
 .quiz-panel,.equipment-panel,.stock-copy,.catalog-detail,.stock-card,.trust-logos{box-shadow:0 22px 58px rgba(26,26,26,.075)}
 
 @media(max-width:1080px){
   .menu{display:none}.burger{display:flex;align-items:center;justify-content:center}
-  .proofline-in{grid-template-columns:repeat(2,1fr)}
-  .proof-item.dark{grid-column:1/-1}
-  .tool-photo{width:150px;height:104px}.tool-photo-track{gap:24px;padding:16px 24px}
-  
+
   
   .nav-tile{padding:7px 9px}.nav-tile b{font-size:11.5px}.nav-tile.chat b{font-size:9px}.msg-ic{width:19px;height:19px;font-size:6px}.msg-ic.max{width:auto;min-width:58px;height:23px;font-size:15px}.msg-ic.max::before{width:22px;height:19px;flex-basis:22px}.msg-ic.max::after{left:7px;bottom:4px;width:8px;height:7px}.msg-ic.tg svg{width:11px;height:11px}
   .pm-widget{right:14px;bottom:14px;padding:10px 11px 10px 12px;gap:10px}.pm-widget b{font-size:11px}.pm-widget small{font-size:6.8px}.pm-widget .msg-ic{width:20px;height:20px}.pm-widget .msg-ic.max{width:auto;min-width:56px;height:23px;font-size:15px}.pm-widget .msg-ic.tg svg{width:11px;height:11px}
@@ -767,15 +747,7 @@ footer{background:var(--bm);color:rgba(234,234,230,.55);padding:3rem 0 2rem;bord
   .foot-top{grid-template-columns:1fr 1fr}
 }
 @media(max-width:680px){
-  .wrap{width:min(calc(100% - 32px),var(--max))}
-  .proofline-in{grid-template-columns:1fr}
-  .proof-item{min-height:auto;padding:16px}
-  .tool-photo-strip{margin:-1rem 0 1.6rem}
-  .tool-photo{width:126px;height:88px}.tool-photo-track{gap:18px;padding:14px 18px;animation-duration:36s}
-  
-  
-  
-  .crumbs a:first-child,.crumbs 
+  .crumbs a:first-child,.crumbs
   .catalog-backline{display:block}.catalog-backline span{display:block;margin-top:8px}
   .nav-contact{display:none}
   .pm-widget{left:16px;right:16px;bottom:14px;justify-content:space-between}.pm-widget b{white-space:normal;line-height:1.15}
@@ -980,9 +952,6 @@ footer{background:var(--bm);color:rgba(234,234,230,.55);padding:3rem 0 2rem;bord
     radial-gradient(ellipse at 82% 15%,rgba(107,45,139,.12),transparent 38%),
     linear-gradient(180deg,var(--paper2),var(--paper))!important;
 }
-.solutions-block .h2{
-  font-size:clamp(30px,3.8vw,54px)!important;
-}
 .solutions-grid .equipment-card{
   min-height:270px!important;
 }
@@ -1007,31 +976,9 @@ footer{background:var(--bm);color:rgba(234,234,230,.55);padding:3rem 0 2rem;bord
 }
 
 /* SOLUTIONS — стиль каталога оборудования (светлый фон-склад, 3×3) */
-#solutions.solutions-block{padding:0!important;background:#fff!important;overflow:hidden;position:relative}
-.solutions-block .equipment-warehouse-intro{padding:clamp(56px,7vw,92px) 0 clamp(28px,3.6vw,44px)}
-.solutions-block .equipment-scene::after{background:transparent}
-.solutions-grid{grid-template-columns:repeat(3,1fr)!important;gap:clamp(40px,4.2vw,72px) clamp(24px,2.8vw,48px)!important;width:min(calc(100% - 64px),var(--max))!important;margin:0 auto!important}
-.scell{display:flex;flex-direction:column;align-items:stretch;gap:0;text-decoration:none}
-.scell-media{position:relative;z-index:2;width:100%;height:clamp(176px,14.8vw,246px);display:flex;align-items:flex-end;justify-content:center;background:transparent;margin-bottom:-40px;pointer-events:none}
-.scell-media img{max-width:85%;max-height:100%;width:auto;height:auto;object-fit:contain;display:block;filter:drop-shadow(0 18px 20px rgba(26,26,26,.24));transition:transform .38s cubic-bezier(.2,.7,.2,1)}
-.scell:hover .scell-media img{transform:scale(1.07)}
-.scell .ecat-btn{position:relative;z-index:1;min-height:clamp(92px,6vw,110px);padding:46px 20px 18px;font-size:13.5px}
-@media(max-width:900px){.solutions-grid{grid-template-columns:repeat(2,1fr)!important}}
-@media(max-width:560px){.solutions-grid{grid-template-columns:1fr!important}}
+#solutions.solutions-block{padding:5rem 0!important;background:#F7F7F9!important;overflow:hidden;position:relative}
+@media(max-width:680px){#solutions.solutions-block{padding:3rem 0!important}}
 
-/* proofline more solid */
-.proofline-in{
-  box-shadow:0 22px 58px rgba(26,26,26,.075);
-}
-.proof-item{
-  min-height:116px!important;
-}
-.proof-item b{
-  font-size:20px!important;
-}
-.proof-item span{
-  font-size:9.5px!important;
-}
 
 /* stock visual stronger */
 .stock-feature-photo{
@@ -1726,7 +1673,7 @@ body.premium-v4 .trust-logos{margin-top:clamp(26px,3.4vw,46px);box-shadow:none!i
 body.premium-v4{background:#f4f5f4}
 body.premium-v4 .hdr{background:transparent;backdrop-filter:none}
 body.premium-v4 .hdr::after{content:none}
-body.premium-v4 .nav{height:82px;width:calc(100vw - clamp(24px,4.4vw,84px) - 24px);max-width:none;margin-left:clamp(24px,4.4vw,84px);margin-right:24px}
+body.premium-v4 .nav{height:82px}
 body.premium-v4 .brand img{height:58px}
 body.premium-v4 .menu{gap:18px;margin-left:clamp(20px,2vw,38px);margin-right:auto}
 body.premium-v4 .menu-trigger{font-size:14.5px;font-weight:700;color:#2e3337;letter-spacing:.72px}
@@ -1783,7 +1730,10 @@ body.hero-video-fallback .hero-fallback-img{display:block}
 @media(max-width:760px){#heroVideo{display:none!important}.hero-fallback-img{display:block!important}}
 .hero-premium::before{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(250,250,248,.98) 0%,rgba(250,250,248,.96) 24%,rgba(250,250,248,.84) 36%,rgba(250,250,248,.52) 44%,rgba(250,250,248,.16) 51%,rgba(250,250,248,0) 57%,rgba(250,250,248,0) 100%);-webkit-mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%20100%20100%27%20preserveAspectRatio%3D%27none%27%3E%3Cdefs%3E%3Cfilter%20id%3D%27b%27%20x%3D%27-30%25%27%20y%3D%27-30%25%27%20width%3D%27160%25%27%20height%3D%27160%25%27%3E%3CfeGaussianBlur%20stdDeviation%3D%274%27%2F%3E%3C%2Ffilter%3E%3C%2Fdefs%3E%3Cpolygon%20points%3D%270%2C0%2022%2C0%2057%2C45%2057%2C100%200%2C100%27%20fill%3D%27white%27%20filter%3D%27url%28%23b%29%27%2F%3E%3C%2Fsvg%3E");mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%20100%20100%27%20preserveAspectRatio%3D%27none%27%3E%3Cdefs%3E%3Cfilter%20id%3D%27b%27%20x%3D%27-30%25%27%20y%3D%27-30%25%27%20width%3D%27160%25%27%20height%3D%27160%25%27%3E%3CfeGaussianBlur%20stdDeviation%3D%274%27%2F%3E%3C%2Ffilter%3E%3C%2Fdefs%3E%3Cpolygon%20points%3D%270%2C0%2022%2C0%2057%2C45%2057%2C100%200%2C100%27%20fill%3D%27white%27%20filter%3D%27url%28%23b%29%27%2F%3E%3C%2Fsvg%3E");opacity:var(--hero-grad-op,1);transition:opacity .4s ease}
 .hero-premium::after{content:'';position:absolute;inset:0;z-index:2;background-image:linear-gradient(rgba(107,45,139,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(107,45,139,.055) 1px,transparent 1px);background-size:72px 72px;mask-image:linear-gradient(90deg,rgba(0,0,0,.72) 0%,rgba(0,0,0,.5) 34%,rgba(0,0,0,.12) 50%,transparent 60%);pointer-events:none}
-.hero-premium-inner{position:relative;z-index:3;width:min(calc(100% - 48px),1440px);margin-left:clamp(24px,4.4vw,84px);margin-right:auto;display:flex;align-items:center;justify-content:flex-start;padding:24px 0 30px}
+.hero-premium-inner{position:relative;z-index:3;width:100%;display:flex;align-items:center;justify-content:flex-start;padding:24px 20px 30px 72.78px}
+@media(min-width:1600px){.hero-premium-inner{padding-left:calc(28px + 3.636vw);padding-right:28px}}
+@media(min-width:1817px){.hero-premium-inner{padding-left:calc(53.636vw - 880px);padding-right:calc((100vw - 1760px)/2)}}
+@media(min-width:1936px){.hero-premium-inner{padding-left:calc(50vw - 809.63px)}}
 .hero-premium-copy{position:relative;z-index:5;max-width:820px;padding:4px 0}
 .hero-premium-copy::before{content:none}
 .hero-premium-kicker{position:absolute;left:0;top:18px;display:block;font-family:'Golos Text',monospace;font-size:13.5px;font-weight:700;letter-spacing:2.15px;text-transform:uppercase;color:var(--gold)}
@@ -1804,18 +1754,6 @@ body.hero-video-fallback .hero-fallback-img{display:block}
 @media(prefers-reduced-motion:reduce){.hero-premium .btn-light,.hero-premium .btn-ghost{animation:none}}
 .hero-premium .btn-ce{background:linear-gradient(145deg,#8141a4,#6B2D8B 54%,#4f2069);color:#fff;border-color:transparent;box-shadow:0 18px 44px rgba(107,45,139,.34)}
 .hero-premium .btn-ce:hover{background:linear-gradient(145deg,#8f4bb1,#74409a 54%,#552570)}
-body.premium-v4 .proofline{background:#f4f5f4;border-bottom:0;padding:22px 0}
-body.premium-v4 .proofline-in{grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;background:transparent!important}
-body.premium-v4 .proof-item{background:#fff;border:1px solid rgba(26,26,26,.07);box-shadow:0 14px 40px rgba(26,26,26,.045);min-height:94px}
-body.premium-v4 .proof-item.dark{background:#191b1f;color:#fff}
-body.premium-v4 .proof-item b{font-family:'Magistral',sans-serif;font-size:17px;letter-spacing:-.04em}
-body.premium-v4 .proof-item span{font-size:11px;line-height:1.38}
-body.premium-v4 .hero-premium .proofline{align-self:end;width:calc(100vw - 96px);max-width:none;background:transparent!important;border:0!important;padding:0!important;margin-top:clamp(104px,16vh,190px);box-shadow:none!important;transform:translateX(calc(48px - clamp(24px,4.4vw,84px)))}
-body.premium-v4 .hero-premium .proofline-in{width:100%;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));align-items:stretch;gap:12px;background:transparent!important}
-body.premium-v4 .hero-premium .proof-item,body.premium-v4 .hero-premium .proof-item.dark{display:flex;align-items:center;justify-content:center;text-align:center;min-width:0;min-height:58px;padding:12px 10px;background:rgba(255,255,255,.045)!important;border:1px solid rgba(255,255,255,.18)!important;box-shadow:0 14px 30px rgba(0,0,0,.08),inset 0 1px 0 rgba(255,255,255,.1)!important;backdrop-filter:blur(18px);color:rgba(218,222,226,.78)!important}
-body.premium-v4 .hero-premium .proof-item::before{left:50%;top:0;width:32px;height:1px;transform:translateX(-50%);background:linear-gradient(90deg,rgba(107,45,139,.85),rgba(201,162,39,.65))}
-body.premium-v4 .hero-premium .proof-item b,body.premium-v4 .hero-premium .proof-item.dark b{font-family:'Magistral',sans-serif;font-size:clamp(11px,1vw,14px);line-height:1.12;color:rgba(218,222,226,.82)!important;letter-spacing:-.025em;margin:0;text-shadow:none;white-space:nowrap}
-body.premium-v4 .hero-premium .proof-item span,body.premium-v4 .hero-premium .proof-item.dark span{display:none}
 body.premium-v4 .equipment-panel{background:transparent!important;border:0!important;box-shadow:none!important;padding:0!important}
 body.premium-v4 .equipment-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
 body.premium-v4 .equipment-card{min-height:300px;background:#fff!important;border:1px solid rgba(26,26,26,.075)!important;color:var(--bm);padding:24px;box-shadow:0 18px 52px rgba(26,26,26,.075)}
@@ -1826,7 +1764,6 @@ body.premium-v4 .equipment-type{color:var(--gold)}
 body.premium-v4 .equipment-card h3{color:var(--bm);font-size:22px;max-width:330px}
 body.premium-v4 .equipment-card p{color:var(--mid);max-width:360px}
 body.premium-v4 .equipment-actions{margin-top:24px}
-#equipment .equipment-grid{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:12px!important;margin-top:28px}
 #equipment .equipment-card{display:flex!important;align-items:center!important;justify-content:center!important;text-align:center!important;min-height:82px!important;padding:16px 14px!important;background:rgba(255,255,255,.16)!important;border:1px solid rgba(255,255,255,.34)!important;box-shadow:0 12px 30px rgba(26,26,26,.045),inset 0 1px 0 rgba(255,255,255,.34)!important;backdrop-filter:blur(16px);overflow:hidden}
 #equipment .equipment-card::before{content:'';position:absolute;left:50%;top:0;width:38px;height:1px;transform:translateX(-50%);background:linear-gradient(90deg,rgba(107,45,139,.66),rgba(201,162,39,.45));opacity:.72}
 #equipment .equipment-card::after{display:none!important}
@@ -1834,10 +1771,8 @@ body.premium-v4 .equipment-actions{margin-top:24px}
 #equipment .equipment-card[data-full-link]:hover{transform:translateY(-2px)!important;background:rgba(255,255,255,.25)!important;border-color:rgba(107,45,139,.24)!important;box-shadow:0 18px 44px rgba(107,45,139,.10),0 10px 26px rgba(26,26,26,.065)!important}
 #equipment .equipment-card h3{margin:0!important;max-width:none!important;font-family:'Magistral',sans-serif;font-size:clamp(13px,1vw,16px)!important;font-weight:500;line-height:1.18;color:rgba(82,86,90,.88)!important;letter-spacing:-.04em}
 #equipment .equipment-type,#equipment .equipment-card p,#equipment .equipment-mark,#equipment .equipment-card .equipment-actions{display:none!important}
-@media(max-width:1080px){body.premium-v4 .proofline-in{grid-template-columns:repeat(2,minmax(0,1fr))}body.premium-v4 .equipment-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero-premium-inner{padding-top:54px}}
-@media(max-width:760px){body.premium-v4 .nav-contact{display:flex;margin-left:0;padding-left:0;border-left:0}.nav-phone-plain{display:none}.hero-premium{min-height:auto}.hero-premium-inner{width:min(100% - 30px,1400px);padding:48px 0 26px}.hero-premium-copy{transform:none}.hero-premium h1{font-size:clamp(38px,12vw,58px)}.hero-premium h1 span{white-space:normal}body.premium-v4 .proofline-in,body.premium-v4 .equipment-grid{grid-template-columns:1fr}.hero-premium-subline{font-size:22px}.hero-premium-actions{display:grid;grid-template-columns:1fr}}
-@media(max-width:1080px){#equipment .equipment-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
-@media(max-width:640px){#equipment .equipment-grid{grid-template-columns:1fr!important}#equipment .equipment-card{min-height:74px!important}}
+@media(max-width:1080px){body.premium-v4 .equipment-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero-premium-inner{padding-top:54px}}
+@media(max-width:760px){body.premium-v4 .nav-contact{display:flex;margin-left:0;padding-left:0;border-left:0}.nav-phone-plain{display:none}.hero-premium{min-height:auto}.hero-premium-inner{padding-top:48px;padding-bottom:26px}.hero-premium-copy{transform:none}.hero-premium h1{font-size:clamp(38px,12vw,58px)}.hero-premium h1 span,.hero-premium h1 .hero-title-main,.hero-premium h1 .hero-title-sub{white-space:normal}body.premium-v4 .equipment-grid{grid-template-columns:1fr}.hero-premium-subline{font-size:22px}.hero-premium-actions{display:grid;grid-template-columns:1fr}}
 
 
 /* === V23 darker equipment modules === */
@@ -1845,131 +1780,191 @@ body.premium-v4 .equipment-actions{margin-top:24px}
 #equipment .equipment-card:hover{background:rgba(78,83,92,.46)!important;border-color:rgba(107,45,139,.34)!important;box-shadow:0 22px 54px rgba(107,45,139,.14),0 14px 32px rgba(26,26,26,.11)!important}
 #equipment .equipment-card h3{color:rgba(45,49,54,.94)!important;font-weight:600!important}
 
-/* === V26 equipment page premium visual === */
-#equipment.equipment{padding:64px 0 78px!important;background:linear-gradient(180deg,#fbfbfa 0%,#f0f1f2 100%)!important}
-#equipment .equipment-panel{background:transparent!important;border:0!important;box-shadow:none!important;padding:0!important}
-#equipment .equipment-hero-card{position:relative;overflow:hidden;display:block;width:100vw;min-height:500px;margin-left:calc(50% - 50vw);background:linear-gradient(90deg,#fff 0%,rgba(255,255,255,.97) 37%,rgba(255,255,255,.28) 57%,rgba(255,255,255,0) 100%);box-shadow:none;border:0}
-#equipment .equipment-hero-copy{position:relative;z-index:2;width:min(48vw,700px);padding:82px 36px 60px clamp(24px,4.4vw,84px);background:linear-gradient(90deg,rgba(255,255,255,.99),rgba(255,255,255,.94) 76%,rgba(255,255,255,0))}
-#equipment .equipment-hero-copy .h2{font-size:clamp(34px,4.1vw,62px)!important;font-weight:700!important;line-height:1!important;letter-spacing:-.065em!important}
-#equipment .equipment-hero-copy .h2 .lt{display:block;margin-top:20px;font-size:clamp(18px,1.75vw,27px)!important;line-height:1.08!important;letter-spacing:-.03em!important;color:rgba(82,86,90,.72)!important;font-weight:300!important}
-#equipment .equipment-hero-actions{display:flex;flex-wrap:nowrap;align-items:center;gap:14px;margin-top:42px}
-#equipment .equipment-hero-actions .btn{min-width:0;width:320px;min-height:50px;padding-left:16px;padding-right:16px;white-space:normal;text-align:center;font-size:10px;line-height:1.22}
-#equipment .equipment-hero-actions .btn-ghost{border-color:rgba(107,45,139,.44)!important;color:var(--ce)!important;background:rgba(255,255,255,.52)!important}
-#equipment .equipment-hero-actions .btn-ghost:hover{background:#fff!important;border-color:var(--ce)!important;color:var(--bm)!important}
-#equipment .equipment-hero-image{position:absolute;inset:0 0 0 45%;z-index:1;background:linear-gradient(90deg,rgba(255,255,255,.92) 0%,rgba(255,255,255,.28) 18%,rgba(255,255,255,0) 36%),url('equipment-page-banner.jpg') center right/cover no-repeat;filter:brightness(1) saturate(.86) contrast(.94)}
-#equipment .equipment-grid{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:16px!important;margin-top:34px!important}
-#equipment .equipment-card,#equipment .equipment-card[data-full-link]{display:flex!important;flex-direction:column!important;align-items:stretch!important;justify-content:flex-start!important;text-align:center!important;min-height:0!important;height:236px!important;padding:0!important;background:rgba(255,255,255,.86)!important;border:1px solid rgba(26,26,26,.065)!important;box-shadow:0 16px 42px rgba(26,26,26,.07)!important;backdrop-filter:blur(10px);overflow:hidden;border-radius:8px;clip-path:none!important}
-#equipment .equipment-card::before{display:none!important}
-#equipment .equipment-card::after{content:''!important;display:block!important;position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.02) 0%,rgba(255,255,255,.08) 60%,rgba(255,255,255,.88) 100%)!important;z-index:1;pointer-events:none}
-#equipment .equipment-card:hover,#equipment .equipment-card[data-full-link]:hover{transform:translateY(-5px)!important;background:#fff!important;border-color:rgba(107,45,139,.24)!important;box-shadow:0 24px 62px rgba(107,45,139,.12),0 16px 38px rgba(26,26,26,.11)!important}
-#equipment .equipment-card .equipment-mark{position:relative!important;inset:auto!important;display:block!important;width:100%!important;height:166px!important;object-fit:contain!important;object-position:center!important;opacity:1!important;padding:8px 10px 0;background:#fff!important;filter:brightness(.96) saturate(.74) contrast(.95)!important;z-index:0!important;transition:transform .28s ease,filter .28s ease!important}
-#equipment .equipment-card:hover .equipment-mark{transform:scale(1.025)!important;filter:brightness(.97) saturate(.8) contrast(.98)!important}
-#equipment .equipment-card h3{position:relative!important;z-index:2!important;display:flex!important;align-items:center!important;justify-content:center!important;min-height:70px!important;margin:0!important;padding:12px 14px!important;max-width:none!important;font-family:'Golos Text',sans-serif!important;font-size:16px!important;font-weight:700!important;line-height:1.18!important;letter-spacing:-.015em!important;color:rgba(32,35,39,.92)!important;background:rgba(255,255,255,.94)!important}
-@media(max-width:1180px){#equipment .equipment-hero-card{min-height:auto}#equipment .equipment-hero-image{position:relative;inset:auto;height:340px;background:linear-gradient(180deg,rgba(255,255,255,.24),rgba(255,255,255,0)),url('equipment-page-banner.jpg') center/cover no-repeat}#equipment .equipment-hero-copy{width:auto;padding:48px 34px 34px}#equipment .equipment-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
-@media(max-width:760px){#equipment .equipment-hero-actions{display:grid;grid-template-columns:1fr}#equipment .equipment-hero-actions .btn{width:100%}}
-@media(max-width:680px){#equipment.equipment{padding:46px 0 58px!important}#equipment .equipment-hero-copy{padding:34px 22px 26px}#equipment .equipment-hero-actions{margin-top:28px}#equipment .equipment-hero-image{height:230px}#equipment .equipment-grid{grid-template-columns:1fr!important}#equipment .equipment-card{height:232px!important}}
-
-/* === V31 interactive equipment warehouse === */
-#equipment.equipment{padding:0!important;background:#fff!important;overflow:hidden;position:relative}
-.project-support{--ps-bg:#F4F5F7;--ps-bg2:#ECEFF2;--ps-graphite:#20242A;--ps-gray:#565D66;--ps-purple:#65217E;--ps-purple-dark:#48105F;--ps-purple-light:#8B4AA3;--ps-line:rgba(38,44,52,.14);--ps-title-light:#555C65;--ps-desc:#343A42;--ps-statement:#5F237A;--ps-icon:#333B46;--ps-caption:#3F4650;--ps-bottom-text:#292F38;position:relative;width:100%;overflow:hidden;background:var(--ps-bg)}
-.project-support__background{position:absolute;inset:0;z-index:0;background:linear-gradient(90deg,var(--ps-bg2) 0%,var(--ps-bg2) 42%,var(--ps-bg) 58%,var(--ps-bg) 100%)}
-.project-support__container{position:relative;z-index:2;display:flex;align-items:stretch}
-.project-support__content{position:relative;z-index:3;flex:0 0 50%;max-width:50%;box-sizing:border-box;display:flex;flex-direction:column;justify-content:center;padding:clamp(14px,1.1vw,20px) clamp(30px,3vw,60px)}
-.project-support__header{margin:0}
-.project-support__title{font-family:'Magistral',sans-serif;margin:0 0 clamp(6px,.6vw,9px);text-transform:uppercase}
-.project-support__title-bold{display:block;font-weight:700;font-size:clamp(26px,3.4vw,46px);line-height:1.08;letter-spacing:-.045em;color:var(--ps-graphite);white-space:nowrap}
-.project-support__title-regular{display:block;font-weight:400;font-size:clamp(23px,3.05vw,41px);line-height:1.05;letter-spacing:-.035em;color:var(--ps-title-light);margin-top:.08em}
-.project-support__desc{font-family:'Golos Text',sans-serif;font-weight:500;font-size:clamp(17px,1.15vw,21px);line-height:1.45;color:var(--ps-desc);max-width:800px;margin:0 0 clamp(8px,.9vw,11px)}
-.project-support__desc strong{font-weight:600;color:inherit}
-.project-support__statement{font-family:'Golos Text',sans-serif;font-weight:600;font-size:clamp(17px,1.15vw,24px);line-height:1.2;letter-spacing:.025em;text-transform:uppercase;color:var(--ps-statement);margin:0 0 clamp(9px,1vw,13px)}
-.project-support__stages{display:flex;list-style:none;margin:0 0 clamp(9px,1vw,13px);padding:0;max-width:780px}
-.project-support__stage{flex:1 1 0;display:flex;flex-direction:column;align-items:flex-start;padding:0 14px;border-left:1px solid var(--ps-line);min-height:50px}
-.project-support__stage:first-child{padding-left:0;border-left:0}
-.project-support__stage svg{width:clamp(36px,2.6vw,45px);height:clamp(36px,2.6vw,45px);fill:none;stroke:var(--ps-icon);stroke-width:1.6;margin-bottom:7px}
-.project-support__stage svg .ps-accent{stroke:var(--ps-purple)}
-.project-support__stage span{font-family:'Golos Text',sans-serif;font-weight:600;font-size:15px;letter-spacing:.045em;text-transform:uppercase;color:var(--ps-caption);line-height:1.3}
-.project-support__stage--warranty span{display:flex;flex-direction:column;gap:2px}
-.project-support__stage--warranty .ps-years{color:var(--ps-purple)}
-.project-support__stage--warranty .ps-label{color:var(--ps-caption)}
-.project-support__rule{border:0;border-top:1px solid var(--ps-line);margin:0 0 clamp(9px,1vw,13px);max-width:780px}
-.project-support__bottom{display:flex;align-items:baseline;flex-wrap:wrap;gap:clamp(18px,2.2vw,32px)}
-.project-support__experience{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
-.project-support__experience b{font-family:'Magistral',sans-serif;font-weight:700;font-size:clamp(39px,2.6vw,53px);line-height:.9;letter-spacing:-.025em;background:linear-gradient(100deg,var(--ps-purple),var(--ps-graphite));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:var(--ps-purple)}
-.project-support__experience span{font-family:'Golos Text',sans-serif;font-weight:500;font-size:clamp(20px,1.4vw,26px);line-height:1.2;color:var(--ps-bottom-text)}
-.project-support__cta{display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;border:0;border-radius:10px;min-width:250px;height:60px;padding:0 34px;font-family:'Golos Text',sans-serif;font-weight:700;font-size:14.5px;letter-spacing:.8px;text-transform:uppercase;color:#fff;background:linear-gradient(135deg,#8a45b0 0%,#6B2D8B 52%,#4f2069 100%);box-shadow:0 10px 26px rgba(107,45,139,.42);transition:transform .18s ease,box-shadow .18s ease,filter .18s ease}
-.project-support__cta:hover{filter:brightness(1.09);transform:translateY(-2px);box-shadow:0 14px 34px rgba(107,45,139,.58)}
-.project-support__cta:focus-visible{outline:2px solid var(--ps-purple-light);outline-offset:3px}
-.project-support__visual{position:absolute;z-index:1;top:0;right:0;bottom:0;width:50%;overflow:hidden;display:flex;align-items:center;justify-content:center}
-.project-support__visual img{width:100%;height:100%;object-fit:contain;object-position:center;display:block;filter:brightness(1.02) saturate(1.12);opacity:1}
-@media(min-width:900px) and (max-width:1279px){
-.project-support__container{min-height:0}
-.project-support__content{padding:clamp(18px,2.2vw,26px) clamp(22px,2.8vw,34px)}
-.project-support__stages{flex-wrap:wrap;max-width:none}
-.project-support__stage{flex:0 0 25%;max-width:25%;margin-bottom:20px;padding-right:14px}
-.project-support__stage:nth-child(4n+1){border-left:0;padding-left:0}
-.project-support__rule{max-width:none}
-.project-support__bottom{flex-direction:column;align-items:flex-start}
-}
-@media(max-width:900px){
-.project-support__container{flex-direction:column;min-height:0}
-.project-support__content{display:contents}
-.project-support__header{order:1;padding:40px 24px 0}
-.project-support__title-bold{white-space:normal;font-size:clamp(30px,6.4vw,42px)}
-.project-support__title-regular{font-size:clamp(26px,5.6vw,38px)}
-.project-support__visual{position:relative;top:auto;right:auto;bottom:auto;order:2;flex:1 1 auto;width:auto;max-width:none;height:clamp(220px,52vw,360px)}
-.project-support__visual img{object-position:center}
-.project-support__statement{order:3;padding:28px 24px 0;margin-bottom:24px}
-.project-support__stages{order:4;flex-wrap:wrap;max-width:none;padding:0 24px 0}
-.project-support__stage{flex:0 0 50%;max-width:50%;border-left:0;padding:0 0 18px;margin-bottom:10px}
-.project-support__rule{order:5;max-width:none;margin-left:24px;margin-right:24px}
-.project-support__bottom{order:6;flex-direction:column;align-items:flex-start;padding:0 24px 32px}
-.project-support__cta{width:100%;min-width:0}
-}
-@media(max-width:640px){
-.project-support__content{padding:32px 20px 28px}
-.project-support__title-bold{font-size:clamp(28px,9vw,38px)}
-.project-support__title-regular{font-size:clamp(24px,7.6vw,32px)}
-.project-support__desc{font-size:16px}
-.project-support__stage{flex:0 0 33.33%;max-width:33.33%}
-.project-support__experience b{font-size:clamp(40px,13vw,54px)}
-}
-@media(prefers-reduced-motion:reduce){.project-support *{transition:none!important}}
-.equipment-warehouse-intro{padding:72px 0 48px}
+#equipment.equipment{padding:5rem 0;background:#fff!important;overflow:hidden;position:relative}
+@media(max-width:680px){#equipment.equipment{padding:3rem 0}}
 .reveal-up{opacity:0;transform:translateY(56px);transition:opacity .8s cubic-bezier(.16,.8,.24,1),transform .8s cubic-bezier(.16,.8,.24,1)}
 .reveal-up.is-visible{opacity:1;transform:translateY(0)}
 @media(prefers-reduced-motion:reduce){.reveal-up{opacity:1;transform:none;transition:none}}
-.equipment-warehouse-intro .h2{color:#171717}
-.equipment-warehouse-intro .h2 .lt{color:#4a4d52;font-weight:400}
-.equipment-warehouse-intro .eyebrow{color:var(--ce)}
-/* === Категории оборудования: сетка станков === */
-.equipment-warehouse-intro{position:relative;z-index:2}
 body.hide-hdr-cta .hdr .hdr-cta{display:none}
-.equipment-cats{position:relative;z-index:2;padding:0}
-.equipment-scene{position:relative;width:100%;overflow:hidden;padding:clamp(30px,4vw,58px) 0 clamp(40px,4.5vw,66px)}
-.equipment-scene::before{content:'';position:absolute;inset:-30px;z-index:0;background-color:var(--paper);background-image:linear-gradient(rgba(107,45,139,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(107,45,139,.055) 1px,transparent 1px);background-size:72px 72px}
-.equipment-scene::after{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;background:transparent}
-.equipment-grid{position:relative;z-index:2;display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(52px,5vw,84px) clamp(16px,1.9vw,30px);width:min(calc(100% - 56px),1780px);margin:0 auto}
-.equipment-grid-center{position:relative;z-index:2;display:flex;justify-content:center;width:min(calc(100% - 56px),1780px);margin:clamp(24px,2.6vw,46px) auto 0}
-.ecell{position:relative;display:flex;flex-direction:column;align-items:stretch;gap:0;text-decoration:none}
-.ecell-media{position:relative;z-index:2;width:100%;height:clamp(176px,14.8vw,246px);display:flex;align-items:flex-end;justify-content:center;margin-bottom:-40px;pointer-events:none}
-.ecell-media img{max-width:85%;max-height:100%;width:auto;height:auto;object-fit:contain;filter:drop-shadow(0 18px 20px rgba(26,26,26,.24));transition:transform .38s cubic-bezier(.2,.7,.2,1)}
-.ecell-wide{width:min(600px,66%)}
-.ecell-wide .ecell-media{height:clamp(176px,14.8vw,246px)}
-.ecell-wide .ecell-media img{width:auto;max-width:96%;max-height:100%;height:auto;transform:none}
-.ecat-btn{position:relative;z-index:1;display:flex;align-items:center;gap:12px;text-align:left;width:100%;min-height:clamp(94px,7.2vw,122px);padding:22px 24px;font-family:'Golos Text',sans-serif;font-size:14px;font-weight:700;letter-spacing:.3px;line-height:1.24;text-transform:uppercase;color:#20232a;border:1px solid rgba(255,255,255,.55);border-radius:18px;background:radial-gradient(ellipse 84% 138% at 6% 100%,rgba(122,60,160,.32),rgba(122,60,160,0) 60%),rgba(232,230,242,.44);backdrop-filter:blur(12px);box-shadow:0 22px 50px rgba(26,26,26,.13);transition:box-shadow .25s ease}
-.ecell .ecat-btn{position:relative;z-index:1;min-height:clamp(92px,6vw,110px);padding:46px 20px 18px;font-size:13.5px}
-.ecat-btn::after{content:'\2192';margin-left:auto;font-size:20px;font-weight:400;line-height:1;flex:0 0 auto;color:#20232a;transition:transform .25s ease}
-.ecell:hover .ecat-btn,.ecell:focus-visible .ecat-btn{box-shadow:0 26px 58px rgba(107,45,139,.22)}
-.ecell:hover .ecat-btn::after,.ecell:focus-visible .ecat-btn::after{transform:translateX(5px)}
-.ecell:hover .ecell-media img,.ecell:focus-visible .ecell-media img{transform:scale(1.1)}
-.ecell-wide:hover .ecell-media img,.ecell-wide:focus-visible .ecell-media img{transform:scaleX(1.08) scale(1.07)}
-@media(prefers-reduced-motion:reduce){.ecell-media img{transition:none}.ecell:hover .ecell-media img{transform:none}}
-@media(max-width:900px){.equipment-grid{grid-template-columns:repeat(2,1fr)}.ecell-wide{width:min(460px,88%)}}
-@media(max-width:460px){.equipment-grid{grid-template-columns:1fr}.ecell-wide{width:100%}.ecat-btn{font-size:11px}}
 /* Коррекция трекинга под метрику Magistral (шире Unbounded) */
 .h2,.proc-title,.proc-modal-title,.proc-step h3,.closer-text h2,.tools-hero h3,.call-card a,.trust .h2{letter-spacing:-.012em}
 .hero-h1,.hero-premium h1,.hero-stage-b h2,.hero-stage-c h2,.hero-builder .build-sub,.product-title{letter-spacing:-.02em}
-.stage-card h3,#equipment .equipment-card h3,.solutions-grid .equipment-card h3,.site-search-item b,.proof-item b{letter-spacing:-.008em}
+.stage-card h3,.site-search-item b{letter-spacing:-.008em}
+
+/* ===== HOMEPAGE REBUILD: trust-strip / scenarios / solutions-cta / case / stock / process / expertise ===== */
+
+/* TRUST STRIP */
+.trust-strip{padding:22px 0;background:rgba(255,255,255,.6);border-bottom:1px solid var(--line)}
+.ts-in{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px 32px}
+.ts-item{display:flex;align-items:center;gap:12px;font-family:'Golos Text',sans-serif;font-size:12.5px;color:var(--mid);line-height:1.35}
+.ts-item svg{flex:0 0 auto;width:22px;height:22px;stroke:var(--ce);fill:none;stroke-width:1.6}
+.ts-item b{display:block;font-family:'Magistral',sans-serif;font-size:14.5px;font-weight:600;letter-spacing:-.015em;color:var(--bm)}
+
+/* SCENARIOS */
+.scenarios{padding-top:2.6rem;padding-bottom:3.4rem}
+.scenarios-intro{text-align:center}
+.scenarios-intro .eyebrow{justify-content:center}
+.scenarios-intro .h2{text-align:center}
+.scenarios-lead{max-width:560px;margin:14px auto 0;font-size:15px;line-height:1.6;color:var(--mid);text-align:center}
+.scenario-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:16px}
+.scenario-card{position:relative;display:block;min-height:clamp(320px,24vw,380px);background:#fff;border:1px solid var(--line);text-decoration:none;outline:none;overflow:hidden}
+.scenario-media{position:absolute;inset:0;z-index:0}
+.scenario-media img{width:100%;height:100%;object-fit:cover;object-position:68% center;display:block;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.scenario-media::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#fff 0%,#fff 38%,rgba(255,255,255,.95) 47%,rgba(255,255,255,.5) 60%,rgba(255,255,255,0) 80%)}
+.scenario-body{position:relative;z-index:1;display:flex;flex-direction:column;height:100%;width:60%;padding:34px 20px 34px 30px;box-sizing:border-box}
+.scenario-h3{font-family:'Magistral',sans-serif;font-size:23px;font-weight:700;letter-spacing:-.02em;line-height:1.2;color:var(--bm);margin-bottom:12px}
+.scenario-desc{font-size:14px;line-height:1.6;color:#4b4f54;flex:1}
+.scenario-cta{display:flex;align-items:center;gap:8px;margin-top:20px;font-size:12px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--bm)}
+.scenario-cta i{font-style:normal;transition:transform .22s ease}
+.scenario-card:hover,.scenario-card:focus-visible{box-shadow:inset 0 0 0 1.5px var(--ce)}
+.scenario-card:hover .scenario-cta,.scenario-card:focus-visible .scenario-cta{color:var(--ce)}
+.scenario-card:hover .scenario-cta i,.scenario-card:focus-visible .scenario-cta i{transform:translateX(6px)}
+.scenario-card:hover .scenario-media img,.scenario-card:focus-visible .scenario-media img{transform:scale(1.05)}
+@media(max-width:900px){.scenario-body{width:66%}}
+@media(max-width:640px){.scenario-card{min-height:0}.scenario-media{position:relative;display:block;aspect-ratio:16/10}.scenario-media::after{background:linear-gradient(180deg,rgba(255,255,255,0) 60%,#fff 100%)}.scenario-body{width:100%;height:auto;padding:22px 24px 28px}}
+@media(max-width:1080px){.scenario-grid{grid-template-columns:repeat(2,1fr)}.scenario-card:last-child{grid-column:1/-1}.scenario-card:last-child .scenario-media{aspect-ratio:4/1}}
+@media(max-width:640px){.scenario-grid{grid-template-columns:1fr}.scenario-card:last-child{grid-column:auto}.scenario-card:last-child .scenario-media{aspect-ratio:2/1}}
+@media(prefers-reduced-motion:reduce){.scenario-media img,.scenario-cta i{transition:none}}
+
+/* Generic section CTA row (reused: equipment / stock) */
+.section-cta-row{display:flex;justify-content:center;margin-top:44px}
+.section-cta-row .btn{min-width:280px}
+
+/* SOLUTIONS: интро слева / 3×3 иконки-отрасли справа */
+.sol-split{position:relative;display:grid;grid-template-columns:minmax(360px,28%) 1fr;gap:40px;align-items:start}
+.sol-split::before{content:'';position:absolute;inset:-40px -20px;z-index:0;pointer-events:none;opacity:.035;background-repeat:no-repeat;background-position:right 6% top 4%;background-size:min(30%,420px) auto;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='420' height='420'%3E%3Cg stroke='%236B2D8B' stroke-width='1' fill='none'%3E%3Cline x1='60' y1='0' x2='60' y2='420'/%3E%3Cline x1='0' y1='150' x2='420' y2='150'/%3E%3Ccircle cx='340' cy='320' r='34'/%3E%3Ccircle cx='340' cy='320' r='2' fill='%236B2D8B'/%3E%3Cline x1='300' y1='320' x2='320' y2='320'/%3E%3Cline x1='360' y1='320' x2='380' y2='320'/%3E%3Ctext x='300' y='70' font-family='monospace' font-size='26'%3E%C3%98%3C/text%3E%3Ctext x='40' y='400' font-family='monospace' font-size='24'%3ER18%3C/text%3E%3C/g%3E%3C/svg%3E")}
+.sol-intro{position:relative;z-index:1;display:flex;flex-direction:column;align-items:flex-start;min-width:0}
+.sol-link{display:inline-flex;align-items:center;gap:8px;margin-top:22px;font-size:12.5px;font-weight:700;letter-spacing:.3px;text-transform:uppercase;color:var(--ce);text-decoration:none}
+.sol-link i{font-style:normal;transition:transform .2s ease}
+.sol-link:hover i{transform:translateX(5px)}
+.sol-link-secondary{margin-top:12px;color:var(--mid);font-weight:600}
+.sol-link-secondary:hover{color:var(--ce)}
+.sol-icon-grid{position:relative;z-index:1;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.sol-icon-item{position:relative;display:flex;flex-direction:column;min-height:400px;background:#fff;border:1px solid rgba(36,39,43,.09);border-radius:14px;overflow:hidden;text-decoration:none;transition:border-color .22s ease,box-shadow .22s ease,transform .22s ease}
+.sol-icon-media{flex:1;display:flex;align-items:center;justify-content:center;padding:32px 26px 10px}
+.sol-icon-media img{max-width:76%;max-height:230px;object-fit:contain;filter:drop-shadow(0 14px 18px rgba(26,26,26,.16));transition:transform .3s ease}
+.sol-icon-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:0 26px 26px}
+.sol-icon-label{font-size:14.5px;font-weight:500;line-height:1.32;color:var(--bm);text-align:left}
+.sol-icon-arrow{flex:0 0 auto;font-style:normal;font-size:17px;color:var(--ce);transition:transform .22s ease}
+.sol-icon-item:hover,.sol-icon-item:focus-visible{border-color:rgba(107,45,139,.45);box-shadow:0 0 0 1px rgba(107,45,139,.16),0 26px 52px rgba(107,45,139,.22),0 8px 22px rgba(26,26,26,.1);transform:translateY(-4px)}
+.sol-icon-item:hover .sol-icon-media img,.sol-icon-item:focus-visible .sol-icon-media img{transform:scale(1.05)}
+.sol-icon-item:hover .sol-icon-arrow,.sol-icon-item:focus-visible .sol-icon-arrow{transform:translateX(4px)}
+@media(max-width:1180px){.sol-split{grid-template-columns:1fr}}
+@media(max-width:760px){.sol-icon-grid{grid-template-columns:repeat(2,1fr);gap:14px}.sol-icon-item{min-height:320px}.sol-icon-media img{max-height:170px}}
+@media(max-width:480px){.sol-icon-grid{grid-template-columns:1fr}}
+
+/* РЕАЛИЗОВАННЫЙ ПРОЕКТ — лента реальных внедрений */
+.case-realized{padding-top:4.6rem;padding-bottom:4.6rem;background:#fff;border-top:1px solid var(--line)}
+.impl-card{position:relative;flex:0 0 auto;width:340px;display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 10px 26px rgba(26,26,26,.05);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.impl-card:hover{transform:translateY(-4px);box-shadow:0 22px 46px rgba(26,26,26,.1);border-color:rgba(107,45,139,.3)}
+.impl-link{position:absolute;inset:0;z-index:2}
+.impl-media{position:relative;aspect-ratio:16/10;overflow:hidden;background:var(--paper)}
+.impl-media img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s ease}
+.impl-card:hover .impl-media img{transform:scale(1.05)}
+.impl-body{padding:20px 22px 22px;display:flex;flex-direction:column;flex:1}
+.impl-eyebrow{font-family:'Golos Text',monospace;font-size:9.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--ce);margin-bottom:10px}
+.impl-title{margin:0 0 10px;font-family:'Magistral','Golos Text',sans-serif;font-size:16.5px;font-weight:600;line-height:1.28;letter-spacing:-.02em;color:var(--bm)}
+.impl-teaser{margin:0;font-size:12.8px;line-height:1.6;color:var(--mid);flex:1}
+.impl-cta{position:relative;z-index:1;display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:11.5px;font-weight:700;letter-spacing:.3px;text-transform:uppercase;color:var(--ce)}
+.impl-cta i{font-style:normal;transition:transform .2s ease}
+.impl-card:hover .impl-cta i{transform:translateX(4px)}
+@media(max-width:640px){.impl-card{width:280px}}
+
+/* СТАНКИ В НАЛИЧИИ (homepage) — полная лента, карточки в стиле stock.html */
+.stock-home{padding-top:4.6rem;padding-bottom:4.6rem;background:#fff;border-top:1px solid var(--line)}
+.eq-carousel-auto-wrap{overflow:hidden;margin-top:28px}
+.eq-carousel.eq-carousel-auto{overflow:visible;scroll-snap-type:none;will-change:transform;animation:carouselAutoScroll 44s linear infinite}
+.eq-carousel-auto-wrap:hover .eq-carousel.eq-carousel-auto,.eq-carousel-auto-wrap:focus-within .eq-carousel.eq-carousel-auto{animation-play-state:paused}
+@keyframes carouselAutoScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.eq-carousel.eq-carousel-auto{animation:none}}
+.split-head{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:24px 48px;align-items:center;margin-bottom:36px}
+.split-head-title{display:flex;flex-direction:column;align-items:flex-start}
+.split-head-title .eq-split-title{margin-bottom:0}
+.split-head-desc{max-width:520px;margin:0;font-size:15px;line-height:1.6;color:var(--mid)}
+@media(max-width:760px){.split-head{grid-template-columns:1fr}}
+/* Ручная перемотка ленты поверх непрерывной CSS-анимации: JS двигает вложенный .ribbon-nudge, сама лента продолжает бежать независимо */
+.ribbon-nudge{transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.stk-home-item{position:relative;flex:0 0 auto;width:250px;scroll-snap-align:start;display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 10px 26px rgba(26,26,26,.05);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.stk-home-item:hover{transform:translateY(-3px);box-shadow:0 20px 42px rgba(26,26,26,.1);border-color:rgba(107,45,139,.25)}
+.stk-home-link{position:absolute;inset:0;z-index:2}
+.stk-home-media{position:relative;height:150px;display:flex;align-items:center;justify-content:center;padding:16px;background:linear-gradient(145deg,#fafafa,#e8eaeb)}
+.stk-home-media img{max-width:100%;max-height:100%;object-fit:contain;filter:drop-shadow(0 12px 16px rgba(26,26,26,.14));transition:transform .3s ease}
+.stk-home-item:hover .stk-home-media img{transform:scale(1.04)}
+.stk-home-badge{position:absolute;top:10px;left:10px;z-index:1;padding:4px 9px;font-family:'Golos Text',monospace;font-size:9px;font-weight:700;letter-spacing:.7px;text-transform:uppercase;background:#fff;color:var(--ce);border:1px solid var(--ce3);border-radius:20px}
+.stk-home-body{position:relative;padding:16px 18px 18px;display:flex;flex-direction:column;flex:1}
+.stk-home-cat{font-family:'Golos Text',monospace;font-size:9px;letter-spacing:1.1px;text-transform:uppercase;color:var(--ce);font-weight:700;margin-bottom:6px}
+.stk-home-title{font-family:'Golos Text',sans-serif;font-size:13.5px;font-weight:700;line-height:1.28;color:var(--bm);margin-bottom:10px;min-height:35px}
+.stk-home-specs{list-style:none;display:flex;flex-direction:column;gap:3px;font-size:11px;color:var(--mid);margin-bottom:12px}
+.stk-home-specs b{color:var(--sg);font-weight:600}
+.stk-home-price{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 8px;padding-top:10px;border-top:1px solid var(--line);margin-top:auto}
+.stk-home-price b{font-family:'Magistral',sans-serif;font-size:15px;font-weight:700;letter-spacing:-.02em;color:var(--gold);background:rgba(201,162,39,.12);padding:2px 8px;border-radius:4px}
+.stk-home-price span{display:block;width:100%;font-family:'Golos Text',sans-serif;font-size:10px;font-weight:400;letter-spacing:.2px;color:var(--mid);margin-top:2px}
+.stk-home-cta{position:relative;z-index:3;display:block;width:100%;margin-top:12px;padding:11px;text-align:center;font-family:'Golos Text',sans-serif;font-size:10.5px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:#fff;background:var(--ce);border:0;border-radius:8px;cursor:pointer;transition:background .18s ease}
+.stk-home-cta:hover{background:var(--ceHover)}
+@media(max-width:640px){.split-head-desc{max-width:none}.stk-home-item{width:216px}}
+
+/* КОМПЛЕКСНЫЙ ПОДХОД: интро + лента из 6 реальных направлений оснащения */
+.complex-approach{padding-top:4.8rem;padding-bottom:4.8rem}
+.complex-approach-lead{max-width:600px;margin:14px 0 0;font-size:15px;line-height:1.6;color:var(--mid)}
+
+/* ЭКСПЕРТИЗА — компактная лента-карточка */
+.expertise{padding-top:4.8rem;padding-bottom:4.8rem}
+.article-feature{display:grid;grid-template-columns:220px 1fr;gap:0;margin-top:24px;border:1px solid var(--line);background:#fff;align-items:stretch}
+.article-feature-media{position:relative;aspect-ratio:4/3;overflow:hidden}
+.article-feature-media img{width:100%;height:100%;object-fit:cover;display:block}
+.article-feature-body{padding:22px 26px;display:flex;flex-direction:column;justify-content:center}
+.article-feature-meta{display:flex;align-items:center;gap:10px;font-family:'Golos Text',monospace;font-size:10px;letter-spacing:.8px;text-transform:uppercase;color:var(--ce);font-weight:700;margin-bottom:10px}
+.article-feature-body h3{font-family:'Magistral',sans-serif;font-size:18px;font-weight:600;letter-spacing:-.02em;line-height:1.24;margin-bottom:8px}
+.article-feature-body p{font-size:13px;line-height:1.55;color:var(--mid);margin-bottom:14px}
+.expertise-foot{display:flex;justify-content:flex-end;margin-top:20px}
+@media(max-width:680px){.article-feature{grid-template-columns:1fr}.article-feature-media{aspect-ratio:16/9}}
+
+/* FINAL CTA — вторая кнопка + контакты */
+.closer-actions-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:6px}
+.closer-actions-row .btn-quiet{background:transparent;border:1.5px solid rgba(255,255,255,.28);color:inherit}
+.closer-contacts{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:22px;font-size:13px;color:rgba(234,234,230,.62)}
+.closer-contacts a{color:inherit;border-bottom:1px solid rgba(234,234,230,.28)}
+.closer-contacts a:hover{color:#fff;border-color:#fff}
+@media(max-width:640px){.closer-actions-row{flex-direction:column}.closer-actions-row .btn{width:100%}}
+
+/* EQUIPMENT — левая интро-колонка + горизонтальная карусель категорий */
+.btn-solid{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:6px;min-height:50px;padding:0 30px;font-family:'Golos Text',sans-serif;font-weight:700;font-size:12px;letter-spacing:.8px;text-transform:uppercase;color:#fff;background:linear-gradient(135deg,#8a45b0 0%,#6B2D8B 52%,#4f2069 100%);box-shadow:0 10px 26px rgba(107,45,139,.3);transition:transform .18s ease,box-shadow .18s ease,filter .18s ease;text-decoration:none}
+.btn-solid:hover{filter:brightness(1.08);transform:translateY(-2px);box-shadow:0 14px 32px rgba(107,45,139,.4)}
+.btn-grey{display:inline-flex;align-items:center;justify-content:center;border:1px solid rgba(26,26,26,.16);border-radius:6px;min-height:50px;padding:0 30px;font-family:'Golos Text',sans-serif;font-weight:700;font-size:12px;letter-spacing:.8px;text-transform:uppercase;color:#34383c;background:linear-gradient(110deg,#747b82 0%,#aeb4b9 25%,#e4e6e8 50%,#aab0b5 75%,#747b82 100%);background-size:220% 100%;box-shadow:0 10px 24px rgba(35,37,41,.14);transition:transform .18s ease,box-shadow .18s ease,filter .18s ease;text-decoration:none;animation:heroButtonFlow 6.5s ease-in-out infinite reverse}
+.btn-grey:hover{filter:brightness(1.04);transform:translateY(-2px);box-shadow:0 14px 30px rgba(35,37,41,.2)}
+@media(prefers-reduced-motion:reduce){.btn-grey{animation:none}}
+.eq-split{display:grid;grid-template-columns:clamp(320px,40vw,540px) 1fr;gap:40px;align-items:start}
+.eq-split-intro{display:flex;flex-direction:column;align-items:flex-start;min-width:0}
+.eq-split-title{width:100%;margin:14px 0 16px;text-align:left;font-size:clamp(26px,3.4vw,46px);font-weight:600;letter-spacing:-.012em;overflow-wrap:break-word;word-break:normal;hyphens:none;color:var(--bm)}
+.eq-split-desc{font-size:14.5px;line-height:1.65;color:var(--mid);margin-bottom:28px;max-width:440px}
+.eq-carousel-wrap{position:relative;display:flex;align-items:center;gap:14px;min-width:0}
+.eq-carousel{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-ms-overflow-style:none;padding:4px 2px;min-width:0}
+.eq-carousel::-webkit-scrollbar{display:none}
+.eq-car-item{flex:0 0 auto;width:200px;scroll-snap-align:start;display:flex;flex-direction:column;text-decoration:none;background:#fff;border:1px solid var(--line);padding:18px 18px 20px;transition:border-color .2s ease,box-shadow .2s ease,transform .2s ease}
+.eq-car-title{font-family:'Golos Text',sans-serif;font-size:13.5px;font-weight:700;line-height:1.3;color:var(--bm);margin-bottom:16px;min-height:52px}
+.eq-car-media{display:flex;align-items:center;justify-content:center;aspect-ratio:1/1}
+.eq-car-media img{max-width:92%;max-height:92%;object-fit:contain;transition:transform .3s ease}
+.eq-car-item:hover,.eq-car-item:focus-visible{border-color:var(--ce);box-shadow:0 14px 32px rgba(107,45,139,.1)}
+.eq-car-item:hover .eq-car-media img,.eq-car-item:focus-visible .eq-car-media img{transform:scale(1.05)}
+.eq-car-nav{flex:0 0 auto;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--bm);transition:border-color .2s ease,color .2s ease}
+.eq-car-nav:hover{border-color:var(--ce);color:var(--ce)}
+.eq-car-nav svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.8}
+.eq-grid-static{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.eq-grid-static .eq-car-item{position:relative;width:auto;display:flex;flex-direction:column;justify-content:flex-end;height:278px;padding:22px 20px 20px;background:radial-gradient(ellipse 90% 65% at 50% 30%,rgba(107,45,139,.09),rgba(107,45,139,0) 68%),linear-gradient(165deg,#f8f8f7 0%,#e7e7e5 100%);border:1px solid rgba(36,39,43,.13);border-radius:14px;box-shadow:0 14px 30px rgba(26,26,26,.09)}
+.eq-grid-static .eq-car-media{position:absolute;top:16px;left:8px;right:8px;bottom:64px}
+.eq-grid-static .eq-car-media img{max-width:90%;max-height:90%;filter:drop-shadow(0 16px 18px rgba(26,26,26,.18));transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+.eq-grid-static .eq-car-title{position:relative;z-index:1;min-height:0;margin-bottom:0;font-size:14px}
+.eq-grid-static .eq-car-item:hover,.eq-grid-static .eq-car-item:focus-visible{border-color:rgba(107,45,139,.45);box-shadow:0 0 0 1px rgba(107,45,139,.16),0 26px 52px rgba(107,45,139,.24),0 8px 22px rgba(26,26,26,.12);transform:translateY(-4px)}
+.eq-grid-static .eq-car-item:hover .eq-car-media img,.eq-grid-static .eq-car-item:focus-visible .eq-car-media img{transform:translateY(-3px) scale(1.04)}
+@media(max-width:1080px){.eq-split{grid-template-columns:1fr;gap:32px}.eq-split-desc{max-width:520px}.eq-grid-static{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:860px){.eq-grid-static{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.eq-car-nav{display:none}.eq-car-item{width:168px}.eq-car-title{font-size:12.5px;min-height:44px}.eq-grid-static{grid-template-columns:repeat(2,1fr);gap:10px}.eq-grid-static .eq-car-item{height:224px;padding:18px 14px 14px}.eq-grid-static .eq-car-media{bottom:54px}}
+
+/* Ленты «Станки в наличии» и «Комплексный подход» — компактный вариант carousel */
+.eq-carousel-wrap-tight{margin-top:28px}
+.eq-carousel-photo .eq-car-media{aspect-ratio:4/3}
+.eq-carousel-photo .eq-car-media img{max-width:100%;max-height:100%;width:100%;height:100%;object-fit:cover}
+.eq-carousel-photo .eq-car-item{width:220px}
 </style>
 <link rel="stylesheet" href="site-shell.css"/>
 </head>
@@ -2009,79 +2004,395 @@ body.hide-hdr-cta .hdr .hdr-cta{display:none}
 <div class="hero-premium-inner hero-stage-a">
 <div class="hero-premium-copy">
 <h1><span class="hero-title-main">Комплексные решения</span><span class="hero-title-sub">в металлообработке</span></h1>
-<div class="hero-premium-actions hero-premium-actions-lowered"><a class="btn btn-ghost" href="solutions.html">Каталог решений</a><a class="btn btn-light" href="equipment.html">Каталог оборудования</a></div>
+<p class="hero-premium-subline">Механит подбирает, поставляет и запускает оборудование под вашу производственную задачу.</p>
+<div class="hero-premium-actions hero-premium-actions-lowered"><a class="btn btn-light" href="solutions.html">Каталог решений</a><a class="btn btn-ghost" href="equipment.html">Каталог оборудования</a></div>
 </div>
 </div>
 </section>
 </div>
 <div class="page-content">
-<!-- EQUIPMENT OVERVIEW (warehouse) -->
-<section class="equipment" id="equipment">
-<section class="project-support">
-<div class="project-support__background" aria-hidden="true"></div>
-<div class="project-support__container">
-<div class="project-support__content">
-<header class="project-support__header">
-<h2 class="project-support__title"><span class="project-support__title-bold">Полное сопровождение проекта —</span><span class="project-support__title-regular">до стабильного запуска в производство.</span></h2>
-<p class="project-support__desc">Подбираем оборудование под вашу <strong>Деталь</strong>, <strong>Технологию</strong><br/>и <strong>Требования</strong> к <strong>Производительности</strong>.</p>
-</header>
-<p class="project-support__statement">Одна команда на всех этапах проекта!</p>
-<ul class="project-support__stages">
-<li class="project-support__stage"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="7"/><circle class="ps-accent" cx="12" cy="12" r="1.6" fill="currentColor" stroke="none"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg><span>Подбор</span></li>
-<li class="project-support__stage"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="9" width="12" height="8"/><path d="M14 12h4l4 3v2h-2"/><circle cx="7" cy="19" r="1.8"/><circle cx="17.5" cy="19" r="1.8"/></svg><span>Поставка</span></li>
-<li class="project-support__stage"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 4.5a3.5 3.5 0 0 0-4.79 4.03L4 15.24V20h4.76l6.71-6.71a3.5 3.5 0 0 0 4.03-4.79l-2.6 2.6-2.1-2.1 2.6-2.6Z"/></svg><span>ПНР</span></li>
-<li class="project-support__stage"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5 12 3l9 3.5-9 3.5-9-3.5Z"/><path d="M7 8.3V16c0 1 2.2 2.5 5 2.5s5-1.5 5-2.5V8.3M20 7v6.5"/></svg><span>Обучение</span></li>
-<li class="project-support__stage"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path class="ps-accent" d="M12 3v2.2M12 18.8V21M21 12h-2.2M5.2 12H3M18.4 5.6l-1.55 1.55M7.15 16.85l-1.55 1.55M18.4 18.4l-1.55-1.55M7.15 7.15 5.6 5.6"/></svg><span>Сервис</span></li>
-<li class="project-support__stage"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3v6M3 6h6"/><path d="m9 9 10.5 10.5c.6.6.6 1.5 0 2.1-.6.6-1.5.6-2.1 0L6.9 11.1"/><path d="M14 14 19 9"/></svg><span>Инструмент</span></li>
-<li class="project-support__stage project-support__stage--warranty"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 5.5V11c0 4.5 2.8 7.7 7 9 4.2-1.3 7-4.5 7-9V5.5L12 3Z"/><path class="ps-accent" d="m9 12 2 2 4-4"/></svg><span><span class="ps-years">2 года</span><span class="ps-label">гарантии</span></span></li>
-</ul>
-<hr class="project-support__rule"/>
-<div class="project-support__bottom">
-<div class="project-support__experience"><b>&gt;20 лет</b><span>оснащаем промышленные предприятия России</span></div>
-<a class="project-support__cta" href="#quiz" onclick="event.preventDefault();openLeadModal()">Оставить запрос</a>
+<!-- TRUST STRIP -->
+<section class="trust-strip reveal-up" aria-label="Проверенные факты о компании">
+<div class="wrap ts-in">
+<div class="ts-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 5.5V11c0 4.5 2.8 7.7 7 9 4.2-1.3 7-4.5 7-9V5.5L12 3Z"/></svg><span><b>&gt;20 лет</b>оснащаем предприятия России</span></div>
+<div class="ts-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 4.5a3.5 3.5 0 0 0-4.79 4.03L4 15.24V20h4.76l6.71-6.71a3.5 3.5 0 0 0 4.03-4.79l-2.6 2.6-2.1-2.1 2.6-2.6Z"/></svg><span><b>ПНР и обучение</b>запуск станка и подготовка персонала</span></div>
+<div class="ts-item"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m9 12 2 2 4-4"/></svg><span><b>Гарантия 2 года</b>сервисные обязательства</span></div>
+<div class="ts-item"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="1"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg><span><b>Склад в России</b>Нижний Новгород</span></div>
 </div>
+</section>
+<!-- SCENARIOS: НАЧНИТЕ С ВАШЕЙ ЗАДАЧИ -->
+<section class="scenarios reveal-up" id="scenarios">
+<div class="wrap scenarios-intro">
+<div class="eyebrow">Ваша задача</div>
+<div class="h2">С чего начнём?</div>
+<p class="scenarios-lead">Выберите точку входа: от характеристик оборудования, от вашей детали или от требуемого срока запуска.</p>
 </div>
-<div class="project-support__visual">
-<img src="project-support-visual-2.png" alt="Чертёж детали, обработанный корпус и инструмент для металлообработки" loading="lazy"/>
+<div class="wrap">
+<div class="scenario-grid">
+<a class="scenario-card" href="equipment.html" data-analytics="homepage_scenario_equipment">
+<span class="scenario-media"><img src="scenario-equipment.jpg" alt="Вертикальный обрабатывающий центр с ЧПУ обрабатывает корпусную деталь" loading="lazy"/></span>
+<span class="scenario-body">
+<span class="scenario-h3">Нужен конкретный тип станка</span>
+<span class="scenario-desc">Сравните оборудование по рабочей зоне, шпинделю, ЧПУ, мощности и оснащению.</span>
+<span class="scenario-cta">Перейти в каталог <i aria-hidden="true">→</i></span>
+</span>
+</a>
+<a class="scenario-card" href="solutions.html" data-analytics="homepage_scenario_solution">
+<span class="scenario-media"><img src="scenario-solution.jpg" alt="Обработанная деталь, чертёж на экране и штангенциркуль на столе инженера" loading="lazy"/></span>
+<span class="scenario-body">
+<span class="scenario-h3">Есть деталь или чертёж</span>
+<span class="scenario-desc">Разберём деталь и маршрут обработки, определим оборудование, оснастку и инструмент.</span>
+<span class="scenario-cta">Смотреть решения <i aria-hidden="true">→</i></span>
+</span>
+</a>
+<a class="scenario-card" href="stock.html" data-analytics="homepage_scenario_stock">
+<span class="scenario-media"><img src="scenario-stock.jpg" alt="Ряд станков с ЧПУ в цехе Механита в Нижнем Новгороде" loading="lazy"/></span>
+<span class="scenario-body">
+<span class="scenario-h3">Нужно сократить срок запуска</span>
+<span class="scenario-desc">Оборудование в России для осмотра, демонстрации, поставки и дальнейшего запуска.</span>
+<span class="scenario-cta">Смотреть в наличии <i aria-hidden="true">→</i></span>
+</span>
+</a>
 </div>
 </div>
 </section>
-<div class="wrap equipment-warehouse-intro reveal-up"><div class="eyebrow">Оборудование</div><div class="h2">Станки для металлообработки<br/><span class="lt">Основные направления поставки</span></div></div>
-<div class="equipment-cats reveal-up">
-<div class="equipment-scene">
-<div class="equipment-grid">
-<a class="ecell" href="equipment-turning.html"><span class="ecell-media"><img src="cat-turning.png" alt="Токарные станки" loading="lazy"/></span><span class="ecat-btn">Токарные станки</span></a>
-<a class="ecell" href="equipment-milling.html"><span class="ecell-media"><img src="cat-milling.png" alt="Фрезерные станки" loading="lazy"/></span><span class="ecat-btn">Фрезерные станки</span></a>
-<a class="ecell" href="equipment-boring.html"><span class="ecell-media"><img src="cat-boring.png" alt="Горизонтально-расточные станки" loading="lazy"/></span><span class="ecat-btn">Горизонтально-расточные станки</span></a>
-<a class="ecell" href="equipment-drilling.html"><span class="ecell-media"><img src="cat-drilling.png" alt="Сверлильные станки" loading="lazy"/></span><span class="ecat-btn">Сверлильные станки</span></a>
-<a class="ecell" href="equipment-grinding.html"><span class="ecell-media"><img src="cat-grinding.png" alt="Шлифовальные станки" loading="lazy"/></span><span class="ecat-btn">Шлифовальные станки</span></a>
-<a class="ecell" href="equipment-saw.html"><span class="ecell-media"><img src="cat-saw.png" alt="Ленточнопильные станки" loading="lazy"/></span><span class="ecat-btn">Ленточнопильные станки</span></a>
-<a class="ecell" href="equipment-edm.html"><span class="ecell-media"><img src="cat-edm.png" alt="Электроэрозионные станки" loading="lazy"/></span><span class="ecat-btn">Электроэрозионные станки</span></a>
-<a class="ecell" href="equipment-laser.html"><span class="ecell-media"><img src="cat-sheet.png" alt="Листообработка" loading="lazy"/></span><span class="ecat-btn">Листообработка</span></a>
+<!-- EQUIPMENT OVERVIEW (warehouse) -->
+<section class="equipment" id="equipment">
+<div class="wrap eq-split reveal-up">
+<div class="eq-split-intro">
+<div class="eyebrow">Оборудование</div>
+<div class="h2 eq-split-title">Станки для металлообработки</div>
+<p class="eq-split-desc">Современные станки для всех видов металлообработки от ведущих мировых производителей.</p>
+<a class="btn-solid" href="equipment.html">Смотреть каталог</a>
 </div>
-<div class="equipment-grid-center">
-<a class="ecell ecell-wide" href="stock.html"><span class="ecell-media"><img src="cat-stock.png" alt="Станки в наличии на складе" loading="lazy"/></span><span class="ecat-btn">Станки в наличии на складе</span></a>
+<div class="eq-grid-static">
+<a class="eq-car-item" href="equipment-turning.html"><span class="eq-car-title">Токарные станки</span><span class="eq-car-media"><img src="cat-turning.png" alt="Токарные станки" loading="lazy"/></span></a>
+<a class="eq-car-item" href="equipment-milling.html"><span class="eq-car-title">Фрезерные станки</span><span class="eq-car-media"><img src="cat-milling.png" alt="Фрезерные станки" loading="lazy"/></span></a>
+<a class="eq-car-item" href="equipment-boring.html"><span class="eq-car-title">Горизонтально-расточные станки</span><span class="eq-car-media"><img src="cat-boring.png" alt="Горизонтально-расточные станки" loading="lazy"/></span></a>
+<a class="eq-car-item" href="equipment-drilling.html"><span class="eq-car-title">Сверлильные станки</span><span class="eq-car-media"><img src="cat-drilling.png" alt="Сверлильные станки" loading="lazy"/></span></a>
+<a class="eq-car-item" href="equipment-grinding.html"><span class="eq-car-title">Шлифовальные станки</span><span class="eq-car-media"><img src="cat-grinding.png" alt="Шлифовальные станки" loading="lazy"/></span></a>
+<a class="eq-car-item" href="equipment-saw.html"><span class="eq-car-title">Ленточнопильные станки</span><span class="eq-car-media"><img src="cat-saw.png" alt="Ленточнопильные станки" loading="lazy"/></span></a>
+<a class="eq-car-item" href="equipment-edm.html"><span class="eq-car-title">Электроэрозионные станки</span><span class="eq-car-media"><img src="cat-edm.png" alt="Электроэрозионные станки" loading="lazy"/></span></a>
+<a class="eq-car-item" href="equipment-laser.html"><span class="eq-car-title">Листообработка</span><span class="eq-car-media"><img src="cat-sheet.png" alt="Листообработка" loading="lazy"/></span></a>
 </div>
 </div>
+</section>
+<!-- СКЛАД В РОССИИ -->
+<section class="stock-home reveal-up" id="stock-home">
+<div class="wrap">
+<div class="split-head">
+<div class="split-head-title">
+<div class="eyebrow">Склад в России</div>
+<div class="h2 eq-split-title">Станки в наличии</div>
+</div>
+<p class="split-head-desc">Оборудование в России, готовое к осмотру, демонстрации и отгрузке от 3 рабочих дней.</p>
+</div>
+<div class="eq-carousel-wrap">
+<button class="eq-car-nav eq-car-prev" type="button" aria-label="Предыдущие станки" onclick="nudgeRibbon('stockCarousel',-1)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5 8 12l7 7"/></svg></button>
+<div class="eq-carousel-auto-wrap">
+<div class="ribbon-nudge" id="stockCarouselNudge">
+<div class="eq-carousel eq-carousel-auto" id="stockCarousel">
+<div class="stk-home-item">
+<a class="stk-home-link" href="stock-turning-450-500.html" aria-label="Токарный станок с ЧПУ Ø450×500 мм — подробнее"></a>
+<div class="stk-home-media"><span class="stk-home-badge">В наличии</span><img src="stock-assets/cutout/turning-450-500.png" alt="Токарный станок с ЧПУ Ø450×500 мм" loading="lazy"/></div>
+<div class="stk-home-body">
+<div class="stk-home-cat">Токарные с ЧПУ</div>
+<span class="stk-home-title">Токарный станок с ЧПУ Ø450×500 мм</span>
+<div class="stk-home-specs"><span>Пруток <b>Ø52 мм</b></span><span>Патрон <b>Ø200 мм</b></span></div>
+<div class="stk-home-price"><b>5 333 000 ₽</b><span>без НДС · доставка и ПНР</span></div>
+<button type="button" class="stk-home-cta" onclick="openLeadModal()">Получить предложение</button>
+</div>
+</div>
+<div class="stk-home-item">
+<a class="stk-home-link" href="stock-turning-600-1100.html" aria-label="Токарный станок с ЧПУ Ø600×1100 мм — подробнее"></a>
+<div class="stk-home-media"><span class="stk-home-badge">В наличии</span><img src="stock-assets/cutout/turning-600-1100.png" alt="Токарный станок с ЧПУ Ø600×1100 мм" loading="lazy"/></div>
+<div class="stk-home-body">
+<div class="stk-home-cat">Токарные с ЧПУ</div>
+<span class="stk-home-title">Токарный станок с ЧПУ Ø600×1100 мм</span>
+<div class="stk-home-specs"><span>Длина обработки <b>1100 мм</b></span><span>Патрон <b>Ø250 мм</b></span></div>
+<div class="stk-home-price"><b>6 556 000 ₽</b><span>без НДС · доставка и ПНР</span></div>
+<button type="button" class="stk-home-cta" onclick="openLeadModal()">Получить предложение</button>
+</div>
+</div>
+<div class="stk-home-item">
+<a class="stk-home-link" href="stock-turning-680-950.html" aria-label="Токарный обрабатывающий центр Ø680×950 мм — подробнее"></a>
+<div class="stk-home-media"><span class="stk-home-badge">В наличии</span><img src="stock-assets/cutout/turning-680-950.png" alt="Токарный обрабатывающий центр Ø680×950 мм" loading="lazy"/></div>
+<div class="stk-home-body">
+<div class="stk-home-cat">С приводным инструментом</div>
+<span class="stk-home-title">Токарный обрабатывающий центр Ø680×950 мм</span>
+<div class="stk-home-specs"><span>Диаметр над станиной <b>680 мм</b></span><span>Длина обработки <b>950 мм</b></span></div>
+<div class="stk-home-price"><b>7 093 000 ₽</b><span>без НДС · доставка и ПНР</span></div>
+<button type="button" class="stk-home-cta" onclick="openLeadModal()">Получить предложение</button>
+</div>
+</div>
+<div class="stk-home-item">
+<a class="stk-home-link" href="stock-turning-live-tooling.html" aria-label="Токарный центр с приводным инструментом — подробнее"></a>
+<div class="stk-home-media"><span class="stk-home-badge">В наличии</span><img src="stock-assets/cutout/turning-live-tooling-large.png" alt="Токарный центр с приводным инструментом" loading="lazy"/></div>
+<div class="stk-home-body">
+<div class="stk-home-cat">С приводным инструментом</div>
+<span class="stk-home-title">Токарный центр с приводным инструментом</span>
+<div class="stk-home-specs"><span>Диаметр над станиной <b>800 мм</b></span><span>Макс. обработка <b>650 мм</b></span></div>
+<div class="stk-home-price"><b>12 245 000 ₽</b><span>без НДС · доставка и ПНР</span></div>
+<button type="button" class="stk-home-cta" onclick="openLeadModal()">Получить предложение</button>
+</div>
+</div>
+<div class="stk-home-item">
+<a class="stk-home-link" href="stock-turning-tn500.html" aria-label="Токарный обрабатывающий центр TN500 — подробнее"></a>
+<div class="stk-home-media"><span class="stk-home-badge">В наличии</span><img src="stock-assets/cutout/turning-tn500.png" alt="Токарный обрабатывающий центр TN500" loading="lazy"/></div>
+<div class="stk-home-body">
+<div class="stk-home-cat">С приводным инструментом</div>
+<span class="stk-home-title">Токарный обрабатывающий центр TN500</span>
+<div class="stk-home-specs"><span>Макс. длина <b>450 мм</b></span><span>Пруток <b>Ø51 мм</b></span></div>
+<div class="stk-home-price"><b>8 682 000 ₽</b><span>без НДС · доставка и ПНР</span></div>
+<button type="button" class="stk-home-cta" onclick="openLeadModal()">Получить предложение</button>
+</div>
+</div>
+<div class="stk-home-item">
+<a class="stk-home-link" href="stock-turning-macroline-lb-b500x1500.html" aria-label="Универсальный токарный станок Macro Line LB-B500x1500 — подробнее"></a>
+<div class="stk-home-media"><span class="stk-home-badge">В наличии</span><img src="stock-assets/cutout/turning-macroline-lb-b500x1500.png" alt="Универсальный токарный станок Macro Line LB-B500x1500" loading="lazy"/></div>
+<div class="stk-home-body">
+<div class="stk-home-cat">Токарно-винторезные</div>
+<span class="stk-home-title">Токарный станок Macro Line LB-B500x1500</span>
+<div class="stk-home-specs"><span>Диаметр над станиной <b>500 мм</b></span><span>Длина обработки <b>1500 мм</b></span></div>
+<div class="stk-home-price"><b>1 716 000 ₽</b><span>без НДС · доставка и ПНР</span></div>
+<button type="button" class="stk-home-cta" onclick="openLeadModal()">Получить предложение</button>
+</div>
+</div>
+<div class="stk-home-item">
+<a class="stk-home-link" href="stock-turning-cs6250b-1500.html" aria-label="Универсальный токарный станок CS6250Bx1500 — подробнее"></a>
+<div class="stk-home-media"><span class="stk-home-badge">В наличии</span><img src="stock-assets/cutout/turning-cs6250b-1500.png" alt="Универсальный токарный станок CS6250Bx1500" loading="lazy"/></div>
+<div class="stk-home-body">
+<div class="stk-home-cat">Токарно-винторезные</div>
+<span class="stk-home-title">Токарный станок CS6250Bx1500</span>
+<div class="stk-home-specs"><span>Диаметр над станиной <b>500 мм</b></span><span>Диаметр над Гапом <b>710 мм</b></span></div>
+<div class="stk-home-price"><b>1 730 000 ₽</b><span>без НДС · доставка и ПНР</span></div>
+<button type="button" class="stk-home-cta" onclick="openLeadModal()">Получить предложение</button>
+</div>
+</div>
+<div class="stk-home-item">
+<a class="stk-home-link" href="stock-turning-macroline-lb-b500x1500-2.html" aria-label="Универсальный токарный станок Macro Line LB-B500x1500 (второй станок) — подробнее"></a>
+<div class="stk-home-media"><span class="stk-home-badge">В наличии</span><img src="stock-assets/cutout/turning-macroline-lb-b500x1500-2.png" alt="Универсальный токарный станок Macro Line LB-B500x1500 (второй станок)" loading="lazy"/></div>
+<div class="stk-home-body">
+<div class="stk-home-cat">Токарно-винторезные</div>
+<span class="stk-home-title">Токарный станок Macro Line LB-B500x1500 (2-й)</span>
+<div class="stk-home-specs"><span>Диаметр над станиной <b>500 мм</b></span><span>Длина обработки <b>1500 мм</b></span></div>
+<div class="stk-home-price"><b>1 756 000 ₽</b><span>без НДС · доставка и ПНР</span></div>
+<button type="button" class="stk-home-cta" onclick="openLeadModal()">Получить предложение</button>
+</div>
+</div>
+<div class="stk-home-item">
+<a class="stk-home-link" href="stock-turning-macroline-lb-c660x2000.html" aria-label="Универсальный токарный станок Macro Line LB-C660x2000 — подробнее"></a>
+<div class="stk-home-media"><span class="stk-home-badge">В наличии</span><img src="stock-assets/cutout/turning-macroline-lb-c660x2000.png" alt="Универсальный токарный станок Macro Line LB-C660x2000" loading="lazy"/></div>
+<div class="stk-home-body">
+<div class="stk-home-cat">Токарно-винторезные</div>
+<span class="stk-home-title">Токарный станок Macro Line LB-C660x2000</span>
+<div class="stk-home-specs"><span>Диаметр над станиной <b>660 мм</b></span><span>Диаметр над Гапом <b>870 мм</b></span></div>
+<div class="stk-home-price"><b>2 017 000 ₽</b><span>без НДС · доставка и ПНР</span></div>
+<button type="button" class="stk-home-cta" onclick="openLeadModal()">Получить предложение</button>
+</div>
+</div>
+<div class="stk-home-item">
+<a class="stk-home-link" href="stock-vmc-3-axis.html" aria-label="Вертикально-фрезерный центр, 3 оси — подробнее"></a>
+<div class="stk-home-media"><span class="stk-home-badge">В наличии</span><img src="stock-assets/cutout/vmc-3-axis.png" alt="Вертикально-фрезерный центр, 3 оси" loading="lazy"/></div>
+<div class="stk-home-body">
+<div class="stk-home-cat">Вертикально-фрезерные</div>
+<span class="stk-home-title">Вертикально-фрезерный центр, 3 оси</span>
+<div class="stk-home-specs"><span>Оси X/Y/Z <b>800х450х510 мм</b></span><span>Стол <b>1000х450 мм</b></span></div>
+<div class="stk-home-price"><b>8 300 000 ₽</b><span>без НДС · доставка и ПНР</span></div>
+<button type="button" class="stk-home-cta" onclick="openLeadModal()">Получить предложение</button>
+</div>
+</div>
+<div class="stk-home-item">
+<a class="stk-home-link" href="stock-vmc-3-plus-1.html" aria-label="Вертикально-фрезерный центр, 3+1 оси — подробнее"></a>
+<div class="stk-home-media"><span class="stk-home-badge">В наличии</span><img src="stock-assets/cutout/vmc-3-plus-1.png" alt="Вертикально-фрезерный центр, 3+1 оси" loading="lazy"/></div>
+<div class="stk-home-body">
+<div class="stk-home-cat">Вертикально-фрезерные</div>
+<span class="stk-home-title">Вертикально-фрезерный центр, 3+1 оси</span>
+<div class="stk-home-specs"><span>Оси X/Y/Z <b>850/500/570 мм</b></span><span>Стол <b>1200/520 мм</b></span></div>
+<div class="stk-home-price"><b>6 484 000 ₽</b><span>без НДС · доставка и ПНР</span></div>
+<button type="button" class="stk-home-cta" onclick="openLeadModal()">Получить предложение</button>
+</div>
+</div>
+<div class="stk-home-item">
+<a class="stk-home-link" href="stock-grinding-gs-ahd4080.html" aria-label="Плоскошлифовальный станок Macro Line GS-AHD4080 — подробнее"></a>
+<div class="stk-home-media"><span class="stk-home-badge">В наличии</span><img src="stock-assets/cutout/grinding-gs-ahd4080.png" alt="Плоскошлифовальный станок Macro Line GS-AHD4080" loading="lazy"/></div>
+<div class="stk-home-body">
+<div class="stk-home-cat">Плоскошлифовальные</div>
+<span class="stk-home-title">Плоскошлифовальный станок Macro Line GS-AHD4080</span>
+<div class="stk-home-specs"><span>Размер стола <b>813х406 мм</b></span><span>Макс. вес заготовки <b>500 кг</b></span></div>
+<div class="stk-home-price"><b>2 690 000 ₽</b><span>без НДС · доставка и ПНР</span></div>
+<button type="button" class="stk-home-cta" onclick="openLeadModal()">Получить предложение</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<button class="eq-car-nav eq-car-next" type="button" aria-label="Следующие станки" onclick="nudgeRibbon('stockCarousel',1)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button>
+</div>
+<div class="section-cta-row"><a class="sol-link" href="stock.html">Смотреть станки в наличии <i aria-hidden="true">→</i></a></div>
 </div>
 </section>
 <!-- SOLUTIONS BY INDUSTRY -->
 <section class="equipment solutions-block" id="solutions">
-<div class="wrap equipment-warehouse-intro reveal-up"><div class="eyebrow">Решения</div><div class="h2">Готовые технологические решения<br/><span class="lt">Каталог по отраслям производства</span></div></div>
-<div class="equipment-cats reveal-up">
-<div class="equipment-scene">
-<div class="equipment-grid solutions-grid">
-<a class="scell" href="solution-auto.html"><span class="scell-media"><img src="icon-auto.png" alt="Автомобильная промышленность" loading="lazy"/></span><span class="ecat-btn">Автомобильная промышленность</span></a>
-<a class="scell" href="solution-aero.html"><span class="scell-media"><img src="icon-aero.png" alt="Авиационная промышленность" loading="lazy"/></span><span class="ecat-btn">Авиационная промышленность</span></a>
-<a class="scell" href="solution-ship.html"><span class="scell-media"><img src="icon-ship.png" alt="Судостроение" loading="lazy"/></span><span class="ecat-btn">Судостроение</span></a>
-<a class="scell" href="solution-rail.html"><span class="scell-media"><img src="icon-rail.png" alt="Железнодорожное машиностроение" loading="lazy"/></span><span class="ecat-btn">Железнодорожное машиностроение</span></a>
-<a class="scell" href="solution-agro.html"><span class="scell-media"><img src="icon-agro.png" alt="Сельскохозяйственное и дорожно-строительное машиностроение" loading="lazy"/></span><span class="ecat-btn">Сельскохозяйственное и дорожно-строительное машиностроение</span></a>
-<a class="scell" href="solution-instr.html"><span class="scell-media"><img src="icon-instr.png" alt="Приборостроение" loading="lazy"/></span><span class="ecat-btn">Приборостроение</span></a>
-<a class="scell" href="solution-fuel.html"><span class="scell-media"><img src="icon-fuel.png" alt="Топливно-энергетический сектор" loading="lazy"/></span><span class="ecat-btn">Топливно-энергетический сектор</span></a>
-<a class="scell" href="solution-mining.html"><span class="scell-media"><img src="icon-mining.png" alt="Горнорудная промышленность" loading="lazy"/></span><span class="ecat-btn">Горнорудная промышленность</span></a>
-<a class="scell" href="solution-space.html"><span class="scell-media"><img src="icon-space.png" alt="Космическая промышленность" loading="lazy"/></span><span class="ecat-btn">Космическая промышленность</span></a>
+<div class="wrap sol-split reveal-up">
+<div class="sol-intro">
+<div class="eyebrow">Решения</div>
+<div class="h2 eq-split-title">Готовые отраслевые решения</div>
+<p class="eq-split-desc">От детали и требований к обработке — к технологическому маршруту и подбору оборудования.</p>
+<a class="sol-link" href="solutions.html">Смотреть все решения <i aria-hidden="true">→</i></a>
+<a class="sol-link sol-link-secondary" href="#quiz" onclick="event.preventDefault();openLeadModal()">Передать свой чертёж <i aria-hidden="true">→</i></a>
+</div>
+<div class="sol-icon-grid">
+<a class="sol-icon-item" href="solution-auto.html"><span class="sol-icon-media"><img src="icon-auto.png" alt="Автомобильная промышленность" loading="lazy"/></span><span class="sol-icon-foot"><span class="sol-icon-label">Автомобильная промышленность</span><i class="sol-icon-arrow" aria-hidden="true">→</i></span></a>
+<a class="sol-icon-item" href="solution-aero.html"><span class="sol-icon-media"><img src="icon-aero.png" alt="Авиационная промышленность" loading="lazy"/></span><span class="sol-icon-foot"><span class="sol-icon-label">Авиационная промышленность</span><i class="sol-icon-arrow" aria-hidden="true">→</i></span></a>
+<a class="sol-icon-item" href="solution-ship.html"><span class="sol-icon-media"><img src="icon-ship.png" alt="Судостроение" loading="lazy"/></span><span class="sol-icon-foot"><span class="sol-icon-label">Судостроение</span><i class="sol-icon-arrow" aria-hidden="true">→</i></span></a>
+<a class="sol-icon-item" href="solution-rail.html"><span class="sol-icon-media"><img src="icon-rail.png" alt="Железнодорожное машиностроение" loading="lazy"/></span><span class="sol-icon-foot"><span class="sol-icon-label">Железнодорожное машиностроение</span><i class="sol-icon-arrow" aria-hidden="true">→</i></span></a>
+<a class="sol-icon-item" href="solution-agro.html"><span class="sol-icon-media"><img src="icon-agro.png" alt="Сельскохозяйственное и дорожно-строительное машиностроение" loading="lazy"/></span><span class="sol-icon-foot"><span class="sol-icon-label">Сельхоз и дорожно-строительное</span><i class="sol-icon-arrow" aria-hidden="true">→</i></span></a>
+<a class="sol-icon-item" href="solution-instr.html"><span class="sol-icon-media"><img src="icon-instr.png" alt="Приборостроение" loading="lazy"/></span><span class="sol-icon-foot"><span class="sol-icon-label">Приборостроение</span><i class="sol-icon-arrow" aria-hidden="true">→</i></span></a>
+<a class="sol-icon-item" href="solution-fuel.html"><span class="sol-icon-media"><img src="icon-fuel.png" alt="Топливно-энергетический сектор" loading="lazy"/></span><span class="sol-icon-foot"><span class="sol-icon-label">Топливно-энергетический сектор</span><i class="sol-icon-arrow" aria-hidden="true">→</i></span></a>
+<a class="sol-icon-item" href="solution-mining.html"><span class="sol-icon-media"><img src="icon-mining.png" alt="Горнорудная промышленность" loading="lazy"/></span><span class="sol-icon-foot"><span class="sol-icon-label">Горнорудная промышленность</span><i class="sol-icon-arrow" aria-hidden="true">→</i></span></a>
+<a class="sol-icon-item" href="solution-space.html"><span class="sol-icon-media"><img src="icon-space.png" alt="Космическая промышленность" loading="lazy"/></span><span class="sol-icon-foot"><span class="sol-icon-label">Космическая промышленность</span><i class="sol-icon-arrow" aria-hidden="true">→</i></span></a>
 </div>
 </div>
+</section>
+<!-- РЕАЛИЗОВАННЫЙ ПРОЕКТ -->
+<section class="case-realized reveal-up" id="case-realized">
+<div class="wrap">
+<div class="split-head">
+<div class="split-head-title">
+<div class="eyebrow">Реализованный проект</div>
+<div class="h2 eq-split-title">Реальные проекты Механита</div>
+</div>
+<p class="split-head-desc">Оборудование, которое мы подобрали, поставили и запустили на действующих производствах — от локомотиворемонта до энергетического машиностроения.</p>
+</div>
+<div class="eq-carousel-wrap">
+<button class="eq-car-nav eq-car-prev" type="button" aria-label="Предыдущие проекты" onclick="nudgeRibbon('implRibbonHome',-1)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5 8 12l7 7"/></svg></button>
+<div class="eq-carousel-auto-wrap">
+<div class="ribbon-nudge" id="implRibbonHomeNudge">
+<div class="eq-carousel eq-carousel-auto" id="implRibbonHome">
+<div class="impl-card">
+<a class="impl-link" href="press-zapusk-tokarno-karuselnogo-stanka-ck5116.html" aria-label="Запуск токарно-карусельного станка CK5116 для обработки деталей железнодорожного транспорта — подробнее"></a>
+<div class="impl-media"><img src="press-assets/vnedreniya/ck5116-lokomotiv.jpg" alt="Токарно-карусельный станок CK5116 обрабатывает крупногабаритную деталь на локомотиворемонтном предприятии" loading="lazy"/></div>
+<div class="impl-body">
+<div class="impl-eyebrow">Внедрение · Железнодорожное машиностроение</div>
+<h3 class="impl-title">Запуск токарно-карусельного станка CK5116</h3>
+<p class="impl-teaser">Токарно-карусельный станок введён в эксплуатацию на крупном локомотиворемонтном предприятии для обработки деталей диаметром до 1600 мм и массой до 5 тонн.</p>
+<span class="impl-cta">Смотреть проект <i aria-hidden="true">→</i></span>
+</div>
+</div>
+<div class="impl-card">
+<a class="impl-link" href="press-ploskoshlifovalnoe-oborudovanie-cvetnaya-metallurgiya.html" aria-label="Высокоточное плоское шлифование для предприятия цветной металлургии — подробнее"></a>
+<div class="impl-media"><img src="press-assets/vnedreniya/shlifovanie-cvetmet.jpg" alt="Плоскошлифовальный станок обрабатывает крупную стальную плиту на предприятии цветной металлургии" loading="lazy"/></div>
+<div class="impl-body">
+<div class="impl-eyebrow">Внедрение · Цветная металлургия</div>
+<h3 class="impl-title">Плоское шлифование для предприятия цветной металлургии</h3>
+<p class="impl-teaser">На предприятии цветной металлургии запущено плоскошлифовальное оборудование для высокоточной обработки деталей массой до 270 кг с шероховатостью до 0,16 мкм.</p>
+<span class="impl-cta">Смотреть проект <i aria-hidden="true">→</i></span>
+</div>
+</div>
+<div class="impl-card">
+<a class="impl-link" href="press-vertikalno-frezernoe-oborudovanie-avtokomponenty.html" aria-label="Запуск вертикально-фрезерного оборудования для производства автомобильных компонентов — подробнее"></a>
+<div class="impl-media"><img src="press-assets/vnedreniya/frezerovka-avtokomponenty.jpg" alt="Инженеры контролируют обработку корпусной детали автокомпонента на вертикальном обрабатывающем центре" loading="lazy"/></div>
+<div class="impl-body">
+<div class="impl-eyebrow">Внедрение · Автомобильная промышленность</div>
+<h3 class="impl-title">Вертикально-фрезерное оборудование для автокомпонентов</h3>
+<p class="impl-teaser">Вертикально-фрезерное оборудование запущено на предприятии по производству узлов ходовой части и тормозных систем — для обработки корпусов, фланцев, ступиц и деталей мостов.</p>
+<span class="impl-cta">Смотреть проект <i aria-hidden="true">→</i></span>
+</div>
+</div>
+<div class="impl-card">
+<a class="impl-link" href="press-tokarno-vintoreznoy-stanok-lb-b500x1500-gornodobycha.html" aria-label="LB-B500×1500 для ремонта и изготовления деталей горнодобывающего оборудования — подробнее"></a>
+<div class="impl-media"><img src="press-assets/vnedreniya/lb-b500-gornodobycha.jpg" alt="Токарь обрабатывает крупную стальную деталь на токарно-винторезном станке для горнодобывающего оборудования" loading="lazy"/></div>
+<div class="impl-body">
+<div class="impl-eyebrow">Внедрение · Горнодобывающая промышленность</div>
+<h3 class="impl-title">LB-B500×1500 для горнодобывающего предприятия</h3>
+<p class="impl-teaser">Универсальный токарно-винторезный станок LB-B500×1500 введён в эксплуатацию для изготовления и восстановления запасных частей горнодобывающего оборудования.</p>
+<span class="impl-cta">Смотреть проект <i aria-hidden="true">→</i></span>
+</div>
+</div>
+<div class="impl-card">
+<a class="impl-link" href="press-tokarnyy-stanok-remont-zheleznodorozhnogo-sostava-yaroslavl.html" aria-label="Токарная обработка крупногабаритных деталей железнодорожного транспорта в Ярославле — подробнее"></a>
+<div class="impl-media"><img src="press-assets/vnedreniya/tokarnyy-yaroslavl-zhd.jpg" alt="Токарь обрабатывает длинную ступенчатую ось на фоне трамвайных вагонов в цехе в Ярославле" loading="lazy"/></div>
+<div class="impl-body">
+<div class="impl-eyebrow">Внедрение · Железнодорожное машиностроение</div>
+<h3 class="impl-title">Токарная обработка деталей ж/д транспорта в Ярославле</h3>
+<p class="impl-teaser">В Ярославле запущен токарно-винторезный станок для обработки валов, осей и других крупногабаритных деталей железнодорожного транспорта длиной до 3000 мм.</p>
+<span class="impl-cta">Смотреть проект <i aria-hidden="true">→</i></span>
+</div>
+</div>
+<div class="impl-card">
+<a class="impl-link" href="press-ploskoshlifovalnyy-stanok-precizionnaya-obrabotka.html" aria-label="Плоскошлифовальный станок для обработки деталей с высокой точностью — подробнее"></a>
+<div class="impl-media"><img src="press-assets/vnedreniya/shlifovanie-precizionnaya.jpg" alt="Инженер контролирует размер детали микрометром рядом с прецизионным плоскошлифовальным станком" loading="lazy"/></div>
+<div class="impl-body">
+<div class="impl-eyebrow">Внедрение · Точное машиностроение</div>
+<h3 class="impl-title">Плоскошлифовальный станок для прецизионной обработки</h3>
+<p class="impl-teaser">Плоскошлифовальный станок для заготовок массой до 500 кг введён в эксплуатацию: плоскостность до 0,01 мм, радиальное биение шпинделя — 0,004 мм.</p>
+<span class="impl-cta">Смотреть проект <i aria-hidden="true">→</i></span>
+</div>
+</div>
+<div class="impl-card">
+<a class="impl-link" href="press-universalnyy-frezernyy-stanok-turbogeneratory-gidrogeneratory.html" aria-label="Фрезерный станок для производства деталей турбогенераторов и гидрогенераторов — подробнее"></a>
+<div class="impl-media"><img src="press-assets/vnedreniya/frezerovka-turbogeneratory.jpg" alt="Инженеры контролируют обработку крупногабаритного корпуса на тяжёлом фрезерном станке для энергетического машиностроения" loading="lazy"/></div>
+<div class="impl-body">
+<div class="impl-eyebrow">Внедрение · Энергетическое машиностроение</div>
+<h3 class="impl-title">Фрезерный станок для турбогенераторов и гидрогенераторов</h3>
+<p class="impl-teaser">Универсальный фрезерный станок тяжёлого класса запущен для обработки деталей турбогенераторов, гидрогенераторов и высоковольтных электродвигателей массой до 5 тонн.</p>
+<span class="impl-cta">Смотреть проект <i aria-hidden="true">→</i></span>
+</div>
+</div>
+<div class="impl-card">
+<a class="impl-link" href="press-tokarno-vintoreznoy-stanok-modernizaciya-zheleznodorozhnoy-tehniki.html" aria-label="Токарно-винторезный станок для обработки крупногабаритных деталей локомотивов и вагонов — подробнее"></a>
+<div class="impl-media"><img src="press-assets/vnedreniya/tokarnyy-modernizaciya-zhd.jpg" alt="Токарь работает у крупногабаритного токарно-винторезного станка с длинным валом на предприятии железнодорожной отрасли" loading="lazy"/></div>
+<div class="impl-body">
+<div class="impl-eyebrow">Внедрение · Железнодорожное машиностроение</div>
+<h3 class="impl-title">Токарно-винторезный станок для модернизации ж/д техники</h3>
+<p class="impl-teaser">Токарно-винторезный станок для деталей диаметром до 1250 мм и массой до 6 тонн введён в эксплуатацию для обработки осей, втулок, редукторов и элементов тележек.</p>
+<span class="impl-cta">Смотреть проект <i aria-hidden="true">→</i></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<button class="eq-car-nav eq-car-next" type="button" aria-label="Следующие проекты" onclick="nudgeRibbon('implRibbonHome',1)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button>
+</div>
+<div class="section-cta-row"><a class="sol-link" href="press.html#vnedreniya">Все внедрения <i aria-hidden="true">→</i></a></div>
+</div>
+</section>
+<!-- КОМПЛЕКСНЫЙ ПОДХОД -->
+<section class="complex-approach reveal-up" id="complex-approach">
+<div class="wrap">
+<div class="eyebrow">Комплексный подход</div>
+<div class="h2">Комплексный подход</div>
+<p class="complex-approach-lead">Берём на себя весь путь проекта — от анализа задачи до запуска и дальнейшего сопровождения.</p>
+<div class="eq-carousel-wrap eq-carousel-wrap-tight">
+<button class="eq-car-nav eq-car-prev" type="button" aria-label="Предыдущие направления" onclick="scrollApproachCarousel(-1)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5 8 12l7 7"/></svg></button>
+<div class="eq-carousel eq-carousel-photo" id="approachCarousel">
+<a class="eq-car-item" href="production-cutting-tools.html"><span class="eq-car-title">Режущий инструмент</span><span class="eq-car-media"><img src="module-banners/cutting-tools.jpeg" alt="Режущий инструмент" loading="lazy"/></span></a>
+<a class="eq-car-item" href="production-tooling.html"><span class="eq-car-title">Оснастка</span><span class="eq-car-media"><img src="module-banners/tooling.jpeg" alt="Оснастка" loading="lazy"/></span></a>
+<a class="eq-car-item" href="production-measurement.html"><span class="eq-car-title">Измерение</span><span class="eq-car-media"><img src="module-banners/measurement.jpeg" alt="Измерение" loading="lazy"/></span></a>
+<a class="eq-car-item" href="production-automation.html"><span class="eq-car-title">Автоматизация</span><span class="eq-car-media"><img src="module-banners/automation.jpeg" alt="Автоматизация" loading="lazy"/></span></a>
+<a class="eq-car-item" href="production-coolant-chips.html"><span class="eq-car-title">СОЖ и стружка</span><span class="eq-car-media"><img src="module-banners/coolant-chips.jpeg" alt="СОЖ и стружка" loading="lazy"/></span></a>
+<a class="eq-car-item" href="production-complex.html"><span class="eq-car-title">Комплексное оснащение</span><span class="eq-car-media"><img src="module-banners/complex.jpeg" alt="Комплексное оснащение" loading="lazy"/></span></a>
+</div>
+<button class="eq-car-nav eq-car-next" type="button" aria-label="Следующие направления" onclick="scrollApproachCarousel(1)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button>
+</div>
+</div>
+</section>
+<!-- ЭКСПЕРТИЗА -->
+<section class="expertise reveal-up" id="expertise">
+<div class="wrap">
+<div class="eyebrow">Экспертиза</div>
+<div class="h2">Инженерная экспертиза</div>
+<a class="article-feature" href="press-kak-vybrat-vertikalnyy-obrabatyvayushchiy-centr.html">
+<span class="article-feature-media"><img src="mehanit-milling-machine.jpg" alt="Вертикальный обрабатывающий центр" loading="lazy"/></span>
+<span class="article-feature-body">
+<span class="article-feature-meta"><span>Оборудование</span></span>
+<h3>Как выбрать вертикальный обрабатывающий центр: 10 параметров, которые определяют возможности станка</h3>
+<p>Практический алгоритм выбора VMC от детали: рабочая зона, стол, шпиндель, магазин инструмента, точность и автоматизация.</p>
+<span class="sol-link">Читать материал <i aria-hidden="true">→</i></span>
+</span>
+</a>
+<div class="expertise-foot"><a class="btn btn-ghost" href="press.html">Все материалы →</a></div>
 </div>
 </section>
 <!-- TRUST -->
@@ -2111,12 +2422,9 @@ body.hide-hdr-cta .hdr .hdr-cta{display:none}
 <div class="closer-band reveal-up">
 <div class="closer-band-grid">
 <div class="closer-text">
-<h2>Нужен инженерный разбор или выезд специалиста?</h2>
-<p>Опишите деталь, оборудование или проблему —<br/>проект-менеджер подключит технолога или сервисного инженера.</p>
-<div class="closer-stats">
-<div class="closer-stat"><div class="closer-stat-value"><span class="closer-stat-num">24</span><span class="closer-stat-unit">часа</span></div><div class="closer-stat-label">Ответ технолога</div></div>
-<div class="closer-stat"><div class="closer-stat-value"><span class="closer-stat-num">0</span><span class="closer-stat-unit">руб</span></div><div class="closer-stat-label">Подбор и расчёт</div></div>
-</div>
+<h2>Есть производственная задача?</h2>
+<p>Передайте чертёж или описание задачи.<br/>Инженеры Механита помогут определить технологию, оборудование и конфигурацию проекта.</p>
+<div class="closer-contacts"><a href="tel:88005511206">8 800 55 11 206</a><a href="mailto:info@mehanit.ru">info@mehanit.ru</a><a href="https://t.me/mehanit" target="_blank" rel="noopener">Telegram</a></div>
 </div>
 <form class="closer-form" onsubmit="return false">
 <label class="qfield upload"><span aria-hidden="true" class="qfield-upload-icon"><svg viewBox="0 0 24 24"><path d="M8 12.5 15 5.5a3 3 0 0 1 4.24 4.24L11 18a2 2 0 0 1-2.83-2.83l6.36-6.36"></path></svg></span><span class="qfield-upload-text">Прикрепить чертёж или ТЗ<small>(не обязательно) · PDF · DWG · STEP</small></span><input style="position:absolute;width:1px;height:1px;overflow:hidden;opacity:0" type="file"/></label>
@@ -2124,7 +2432,7 @@ body.hide-hdr-cta .hdr .hdr-cta{display:none}
 <input class="qfield" id="closerContact" placeholder="Телефон или email для ответа"/>
 <label class="lead-consent"><input type="checkbox" id="closerConsent" required/><span>Принимаю условия <a href="privacy.html" data-legal="privacy">Политики конфиденциальности</a> и даю согласие на обработку персональных данных</span></label>
 <div class="lead-err" id="closerConsentErr" role="alert"></div>
-<button class="closer-btn" type="button">Оставить запрос <span>→</span></button>
+<div class="closer-actions-row"><button class="closer-btn" type="button" style="flex:1">Передать чертёж <span>→</span></button><button class="closer-btn btn-quiet" type="button" onclick="openLeadModal()" style="flex:1">Получить консультацию</button></div>
 </form>
 </div>
 </div>
@@ -2812,6 +3120,41 @@ function closeStockModal(){
   modal.setAttribute('aria-hidden','true');
   document.body.style.overflow='';
   updateBreadcrumbFromHash();
+}
+function scrollCarouselById(id,dir){
+  var el=document.getElementById(id);
+  if(!el)return;
+  var item=el.querySelector('.eq-car-item')||el.querySelector('.stk-home-item');
+  var step=item?item.getBoundingClientRect().width+16:220;
+  el.scrollBy({left:dir*step*2,behavior:'smooth'});
+}
+function scrollApproachCarousel(dir){scrollCarouselById('approachCarousel',dir)}
+/* Бесшовный автоскролл (CSS-анимация translateX -50%): дублируем карточки один раз, чтобы вторая копия продолжала первую */
+function duplicateCarouselForLoop(id){
+  var track=document.getElementById(id);
+  if(!track)return;
+  Array.prototype.slice.call(track.children).forEach(function(node){
+    track.appendChild(node.cloneNode(true));
+  });
+}
+duplicateCarouselForLoop('stockCarousel');
+duplicateCarouselForLoop('implRibbonHome');
+/* Ручная перемотка авто-ленты: сдвигаем вложенный .ribbon-nudge поверх непрерывной CSS-анимации трека, не мешая ей */
+var ribbonNudgeOffsets={};
+function nudgeRibbon(trackId,dir){
+  var track=document.getElementById(trackId);
+  var nudgeEl=document.getElementById(trackId+'Nudge');
+  if(!track||!nudgeEl)return;
+  var item=track.children[0];
+  var step=item?item.getBoundingClientRect().width+16:300;
+  var setWidth=track.scrollWidth/2;
+  var cur=ribbonNudgeOffsets[trackId]||0;
+  cur-=dir*step*2;
+  var bound=setWidth*0.85;
+  if(cur>bound)cur=bound;
+  if(cur<-bound)cur=-bound;
+  ribbonNudgeOffsets[trackId]=cur;
+  nudgeEl.style.transform='translateX('+cur+'px)';
 }
 function initLeadConsentGuards(){
   document.querySelectorAll('.lead-form, .closer-form').forEach(function(form){

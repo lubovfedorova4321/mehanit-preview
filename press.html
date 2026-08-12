@@ -57,6 +57,29 @@ main{position:relative;z-index:1}
 .btn.primary{background:var(--purple);border-color:var(--purple);color:#fff}
 .btn.primary:hover{background:#5a2574}
 
+/* ВНЕДРЕНИЯ — бесшовная автолента реальных проектов */
+.impl-section{padding:36px 0 8px}
+.impl-lede{max-width:640px;margin:-8px 0 0;font-size:14.5px;line-height:1.65;color:var(--mid)}
+.impl-ribbon-wrap{overflow:hidden;margin-top:26px}
+.impl-ribbon{display:flex;gap:20px;animation:implAutoScroll 52s linear infinite;will-change:transform}
+.impl-ribbon-wrap:hover .impl-ribbon,.impl-ribbon-wrap:focus-within .impl-ribbon{animation-play-state:paused}
+@keyframes implAutoScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.impl-ribbon{animation:none}}
+.impl-card{position:relative;flex:0 0 auto;width:340px;display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 10px 26px rgba(26,26,26,.05);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.impl-card:hover{transform:translateY(-4px);box-shadow:0 22px 46px rgba(26,26,26,.1);border-color:rgba(107,45,139,.3)}
+.impl-link{position:absolute;inset:0;z-index:2}
+.impl-media{position:relative;aspect-ratio:16/10;overflow:hidden;background:#dfe2e4}
+.impl-media img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s ease}
+.impl-card:hover .impl-media img{transform:scale(1.05)}
+.impl-body{padding:20px 22px 22px;display:flex;flex-direction:column;flex:1}
+.impl-eyebrow{font-family:'Golos Text',monospace;font-size:9.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--purple);margin-bottom:10px}
+.impl-title{margin:0 0 10px;font-family:'Magistral','Golos Text',sans-serif;font-size:16.5px;font-weight:600;line-height:1.28;letter-spacing:-.02em;color:var(--ink)}
+.impl-teaser{margin:0;font-size:12.8px;line-height:1.6;color:var(--mid);flex:1}
+.impl-cta{position:relative;z-index:1;display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:11.5px;font-weight:700;letter-spacing:.3px;text-transform:uppercase;color:var(--purple)}
+.impl-cta i{font-style:normal;transition:transform .2s ease}
+.impl-card:hover .impl-cta i{transform:translateX(4px)}
+@media(max-width:640px){.impl-card{width:280px}}
+
 /* FEED */
 .feed{padding:44px 0 10px}
 .feed-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:20px}
@@ -162,6 +185,96 @@ main{position:relative;z-index:1}
 </div>
 </div></section>
 
+<section class="impl-section"><div class="wrap">
+<div class="section-eyebrow">Внедрения</div>
+<h2 class="section-h2">Реальные проекты Механита</h2>
+<p class="impl-lede">Оборудование, которое мы подобрали, поставили и запустили на действующих производствах — от локомотиворемонта до энергетического машиностроения.</p>
+<div class="impl-ribbon-wrap">
+<div class="impl-ribbon" id="implRibbon">
+<div class="impl-card">
+<a class="impl-link" href="press-zapusk-tokarno-karuselnogo-stanka-ck5116.html" aria-label="Запуск токарно-карусельного станка CK5116 для обработки деталей железнодорожного транспорта — подробнее"></a>
+<div class="impl-media"><img src="press-assets/vnedreniya/ck5116-lokomotiv.jpg" alt="Токарно-карусельный станок CK5116 обрабатывает крупногабаритную деталь на локомотиворемонтном предприятии" loading="lazy"/></div>
+<div class="impl-body">
+<div class="impl-eyebrow">Внедрение · Железнодорожное машиностроение</div>
+<h3 class="impl-title">Запуск токарно-карусельного станка CK5116</h3>
+<p class="impl-teaser">Токарно-карусельный станок введён в эксплуатацию на крупном локомотиворемонтном предприятии для обработки деталей диаметром до 1600 мм и массой до 5 тонн.</p>
+<span class="impl-cta">Смотреть проект <i aria-hidden="true">→</i></span>
+</div>
+</div>
+<div class="impl-card">
+<a class="impl-link" href="press-ploskoshlifovalnoe-oborudovanie-cvetnaya-metallurgiya.html" aria-label="Высокоточное плоское шлифование для предприятия цветной металлургии — подробнее"></a>
+<div class="impl-media"><img src="press-assets/vnedreniya/shlifovanie-cvetmet.jpg" alt="Плоскошлифовальный станок обрабатывает крупную стальную плиту на предприятии цветной металлургии" loading="lazy"/></div>
+<div class="impl-body">
+<div class="impl-eyebrow">Внедрение · Цветная металлургия</div>
+<h3 class="impl-title">Плоское шлифование для предприятия цветной металлургии</h3>
+<p class="impl-teaser">На предприятии цветной металлургии запущено плоскошлифовальное оборудование для высокоточной обработки деталей массой до 270 кг с шероховатостью до 0,16 мкм.</p>
+<span class="impl-cta">Смотреть проект <i aria-hidden="true">→</i></span>
+</div>
+</div>
+<div class="impl-card">
+<a class="impl-link" href="press-vertikalno-frezernoe-oborudovanie-avtokomponenty.html" aria-label="Запуск вертикально-фрезерного оборудования для производства автомобильных компонентов — подробнее"></a>
+<div class="impl-media"><img src="press-assets/vnedreniya/frezerovka-avtokomponenty.jpg" alt="Инженеры контролируют обработку корпусной детали автокомпонента на вертикальном обрабатывающем центре" loading="lazy"/></div>
+<div class="impl-body">
+<div class="impl-eyebrow">Внедрение · Автомобильная промышленность</div>
+<h3 class="impl-title">Вертикально-фрезерное оборудование для автокомпонентов</h3>
+<p class="impl-teaser">Вертикально-фрезерное оборудование запущено на предприятии по производству узлов ходовой части и тормозных систем — для обработки корпусов, фланцев, ступиц и деталей мостов.</p>
+<span class="impl-cta">Смотреть проект <i aria-hidden="true">→</i></span>
+</div>
+</div>
+<div class="impl-card">
+<a class="impl-link" href="press-tokarno-vintoreznoy-stanok-lb-b500x1500-gornodobycha.html" aria-label="LB-B500×1500 для ремонта и изготовления деталей горнодобывающего оборудования — подробнее"></a>
+<div class="impl-media"><img src="press-assets/vnedreniya/lb-b500-gornodobycha.jpg" alt="Токарь обрабатывает крупную стальную деталь на токарно-винторезном станке для горнодобывающего оборудования" loading="lazy"/></div>
+<div class="impl-body">
+<div class="impl-eyebrow">Внедрение · Горнодобывающая промышленность</div>
+<h3 class="impl-title">LB-B500×1500 для горнодобывающего предприятия</h3>
+<p class="impl-teaser">Универсальный токарно-винторезный станок LB-B500×1500 введён в эксплуатацию для изготовления и восстановления запасных частей горнодобывающего оборудования.</p>
+<span class="impl-cta">Смотреть проект <i aria-hidden="true">→</i></span>
+</div>
+</div>
+<div class="impl-card">
+<a class="impl-link" href="press-tokarnyy-stanok-remont-zheleznodorozhnogo-sostava-yaroslavl.html" aria-label="Токарная обработка крупногабаритных деталей железнодорожного транспорта в Ярославле — подробнее"></a>
+<div class="impl-media"><img src="press-assets/vnedreniya/tokarnyy-yaroslavl-zhd.jpg" alt="Токарь обрабатывает длинную ступенчатую ось на фоне трамвайных вагонов в цехе в Ярославле" loading="lazy"/></div>
+<div class="impl-body">
+<div class="impl-eyebrow">Внедрение · Железнодорожное машиностроение</div>
+<h3 class="impl-title">Токарная обработка деталей ж/д транспорта в Ярославле</h3>
+<p class="impl-teaser">В Ярославле запущен токарно-винторезный станок для обработки валов, осей и других крупногабаритных деталей железнодорожного транспорта длиной до 3000 мм.</p>
+<span class="impl-cta">Смотреть проект <i aria-hidden="true">→</i></span>
+</div>
+</div>
+<div class="impl-card">
+<a class="impl-link" href="press-ploskoshlifovalnyy-stanok-precizionnaya-obrabotka.html" aria-label="Плоскошлифовальный станок для обработки деталей с высокой точностью — подробнее"></a>
+<div class="impl-media"><img src="press-assets/vnedreniya/shlifovanie-precizionnaya.jpg" alt="Инженер контролирует размер детали микрометром рядом с прецизионным плоскошлифовальным станком" loading="lazy"/></div>
+<div class="impl-body">
+<div class="impl-eyebrow">Внедрение · Точное машиностроение</div>
+<h3 class="impl-title">Плоскошлифовальный станок для прецизионной обработки</h3>
+<p class="impl-teaser">Плоскошлифовальный станок для заготовок массой до 500 кг введён в эксплуатацию: плоскостность до 0,01 мм, радиальное биение шпинделя — 0,004 мм.</p>
+<span class="impl-cta">Смотреть проект <i aria-hidden="true">→</i></span>
+</div>
+</div>
+<div class="impl-card">
+<a class="impl-link" href="press-universalnyy-frezernyy-stanok-turbogeneratory-gidrogeneratory.html" aria-label="Фрезерный станок для производства деталей турбогенераторов и гидрогенераторов — подробнее"></a>
+<div class="impl-media"><img src="press-assets/vnedreniya/frezerovka-turbogeneratory.jpg" alt="Инженеры контролируют обработку крупногабаритного корпуса на тяжёлом фрезерном станке для энергетического машиностроения" loading="lazy"/></div>
+<div class="impl-body">
+<div class="impl-eyebrow">Внедрение · Энергетическое машиностроение</div>
+<h3 class="impl-title">Фрезерный станок для турбогенераторов и гидрогенераторов</h3>
+<p class="impl-teaser">Универсальный фрезерный станок тяжёлого класса запущен для обработки деталей турбогенераторов, гидрогенераторов и высоковольтных электродвигателей массой до 5 тонн.</p>
+<span class="impl-cta">Смотреть проект <i aria-hidden="true">→</i></span>
+</div>
+</div>
+<div class="impl-card">
+<a class="impl-link" href="press-tokarno-vintoreznoy-stanok-modernizaciya-zheleznodorozhnoy-tehniki.html" aria-label="Токарно-винторезный станок для обработки крупногабаритных деталей локомотивов и вагонов — подробнее"></a>
+<div class="impl-media"><img src="press-assets/vnedreniya/tokarnyy-modernizaciya-zhd.jpg" alt="Токарь работает у крупногабаритного токарно-винторезного станка с длинным валом на предприятии железнодорожной отрасли" loading="lazy"/></div>
+<div class="impl-body">
+<div class="impl-eyebrow">Внедрение · Железнодорожное машиностроение</div>
+<h3 class="impl-title">Токарно-винторезный станок для модернизации ж/д техники</h3>
+<p class="impl-teaser">Токарно-винторезный станок для деталей диаметром до 1250 мм и массой до 6 тонн введён в эксплуатацию для обработки осей, втулок, редукторов и элементов тележек.</p>
+<span class="impl-cta">Смотреть проект <i aria-hidden="true">→</i></span>
+</div>
+</div>
+</div>
+</div>
+</div></section>
+
 <section class="feed"><div class="wrap">
 <div class="section-eyebrow">Лента</div>
 <h2 class="section-h2">Последние материалы</h2>
@@ -203,6 +316,14 @@ main{position:relative;z-index:1}
 </main>
 <script src="press-data.js"></script>
 <script>
+(function(){
+  var track=document.getElementById('implRibbon');
+  if(track){
+    Array.prototype.slice.call(track.children).forEach(function(node){
+      track.appendChild(node.cloneNode(true));
+    });
+  }
+})();
 (function(){
   var nav=document.getElementById('rubricNav');
   var grid=document.getElementById('feedGrid');
