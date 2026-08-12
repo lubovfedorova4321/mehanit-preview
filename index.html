@@ -658,57 +658,57 @@ select.qfield{cursor:pointer}
 .final-tags span{font-family:'Golos Text',monospace;font-size:9px;letter-spacing:.8px;text-transform:uppercase;padding:6px 8px;border:1px solid rgba(26,26,26,.14);color:rgba(26,26,26,.58)}
 .final-h.b .final-tags span,.final-h.c .final-tags span{border-color:rgba(234,234,230,.16);color:rgba(234,234,230,.58)}
 
-/* CLOSER CTA (финальный блок — инженерная панель связи с технологом) */
-.closer{background:var(--paper);padding:clamp(24px,4vw,54px) 0 clamp(30px,4.6vw,64px)}
-.closer-band{--engineering-panel-bg:linear-gradient(155deg,#3a3546 0%,#242130 74%);--engineering-panel-surface:rgba(255,255,255,.05);--engineering-panel-border:rgba(234,234,230,.14);--engineering-panel-text:var(--tl);--engineering-panel-muted:rgba(234,234,230,.56);--engineering-panel-accent:var(--gold);--engineering-panel-highlight:var(--ce);position:relative;overflow:hidden;background:var(--engineering-panel-bg);border:1px solid var(--engineering-panel-border);border-radius:20px;box-shadow:0 28px 68px rgba(26,20,36,.28);padding:clamp(26px,2.6vw,42px) clamp(26px,3.2vw,46px);display:flex;align-items:center}
-.closer-band::before{content:'';position:absolute;inset:0;opacity:.12;pointer-events:none;background-image:repeating-linear-gradient(90deg,rgba(234,234,230,.9) 0 1px,transparent 1px 72px),repeating-linear-gradient(0deg,rgba(234,234,230,.9) 0 1px,transparent 1px 72px)}
-.closer-band::after{content:'';position:absolute;right:6%;bottom:-46%;width:460px;height:380px;background:radial-gradient(ellipse,rgba(107,45,139,.38),transparent 65%);pointer-events:none}
-.closer-band-grid{position:relative;z-index:1;width:100%;display:grid;grid-template-columns:1.08fr .92fr;gap:clamp(32px,3.6vw,56px);align-items:start}
+/* CLOSER CTA (финальный блок — плавно переходит в футер, не отдельная плашка) */
+.closer{padding:0}
+.closer-band{--engineering-panel-bg:linear-gradient(102deg,#ffffff 0%,#ffffff 44%,#eef0f1 62%,#e5e7e9 100%);--engineering-panel-surface:#ffffff;--engineering-panel-border:rgba(26,26,26,.1);--engineering-panel-text:var(--bm);--engineering-panel-muted:var(--mid);--engineering-panel-accent:var(--ce);--engineering-panel-highlight:var(--ce);position:relative;overflow:hidden;background:var(--engineering-panel-bg)}
+.closer-band::after{content:'';position:absolute;right:4%;bottom:-50%;width:460px;height:380px;background:radial-gradient(ellipse,rgba(107,45,139,.08),transparent 65%);pointer-events:none}
+.closer-band-grid{position:relative;z-index:1;width:100%;display:grid;grid-template-columns:1.08fr .92fr;gap:clamp(32px,3.6vw,56px);align-items:start;padding:clamp(44px,5.6vw,78px) 0}
 .closer-text{max-width:620px}
-.closer-eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:'Golos Text',monospace;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--engineering-panel-accent);margin-bottom:14px}
-.closer-eyebrow i{width:18px;height:2px;background:var(--engineering-panel-accent);display:block;font-style:normal}
 .closer-text h2{font-family:'Magistral',sans-serif;font-size:clamp(26px,2.3vw,38px);font-weight:600;line-height:1.14;letter-spacing:-.02em;color:var(--engineering-panel-text);max-width:580px;margin-bottom:12px}
 .closer-text p{font-family:'Golos Text',sans-serif;font-size:clamp(13.5px,1vw,15.5px);font-weight:400;line-height:1.55;color:var(--engineering-panel-muted);max-width:540px}
-.closer-usp{display:flex;flex-wrap:wrap;gap:20px 24px;margin-top:24px}
-.closer-usp-item{display:flex;align-items:center;gap:12px;flex:1 1 200px}
-.closer-usp-ic{flex:0 0 auto;width:40px;height:40px;border-radius:11px;background:rgba(255,255,255,.06);border:1px solid var(--engineering-panel-border);display:flex;align-items:center;justify-content:center;color:var(--engineering-panel-accent)}
-.closer-usp-ic svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.7}
-.closer-usp-text{display:flex;flex-direction:column;gap:2px;font-family:'Golos Text',sans-serif;font-size:12.5px;line-height:1.4;color:var(--engineering-panel-muted)}
-.closer-usp-text b{font-size:14px;font-weight:700;color:var(--engineering-panel-text)}
-.closer-contacts{display:flex;flex-wrap:wrap;margin-top:26px;border-radius:14px;background:rgba(255,255,255,.035);border:1px solid var(--engineering-panel-border)}
-.closer-contact-item{display:flex;align-items:center;gap:11px;flex:1 1 auto;padding:16px 18px;text-decoration:none;border-right:1px solid var(--engineering-panel-border)}
+.closer-usp{display:flex;flex-wrap:wrap;gap:16px;margin-top:28px}
+.closer-usp-item{display:flex;align-items:center;gap:14px;flex:1 1 220px;padding:14px 16px;background:rgba(107,45,139,.045);border:1px solid rgba(107,45,139,.12);border-radius:14px}
+.closer-usp-ic{flex:0 0 auto;width:52px;height:52px;border-radius:13px;background:#fff;border:1px solid rgba(107,45,139,.18);box-shadow:0 8px 18px rgba(107,45,139,.1);display:flex;align-items:center;justify-content:center;color:var(--engineering-panel-accent)}
+.closer-usp-ic svg{width:25px;height:25px;fill:none;stroke:currentColor;stroke-width:1.6}
+.closer-usp-text{display:flex;flex-direction:column;gap:3px;font-family:'Golos Text',sans-serif;font-size:13px;line-height:1.35;color:var(--engineering-panel-muted)}
+.closer-usp-text b{font-size:16px;font-weight:700;color:var(--engineering-panel-text)}
+.closer-contacts{display:flex;flex-wrap:nowrap;gap:4px;margin-top:22px;padding-top:20px;border-top:1px solid var(--engineering-panel-border)}
+.closer-contact-item{display:flex;align-items:center;gap:9px;flex:1 1 0;min-width:0;padding:6px 10px;text-decoration:none;border-right:1px solid var(--engineering-panel-border)}
 .closer-contact-item:last-child{border-right:0}
-.closer-cic{width:36px;height:36px;border-radius:10px;flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#8a45b0,#6B2D8B);color:#fff;box-shadow:none}
-.closer-cic svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:2}
-.closer-contact-item .msg-ic{box-shadow:none;width:36px;height:36px}
-.closer-contact-item .msg-ic.max{width:36px;min-width:36px;font-size:14px;letter-spacing:-.08em}
-.closer-contact-text{display:flex;flex-direction:column;gap:2px;font-family:'Golos Text',sans-serif;font-size:11px;line-height:1.35;color:rgba(234,234,230,.5)}
-.closer-contact-text b{font-size:13px;font-weight:700;color:#fff;transition:color .18s ease}
+.closer-cic{width:32px;height:32px;border-radius:9px;flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#8a45b0,#6B2D8B);color:#fff;box-shadow:none}
+.closer-cic svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2}
+.closer-contact-item .msg-ic{box-shadow:none;width:32px;height:32px}
+.closer-contact-item .msg-ic.max{width:32px;min-width:32px;font-size:13px;letter-spacing:-.08em}
+.closer-contact-text{display:flex;flex-direction:column;gap:1px;min-width:0;font-family:'Golos Text',sans-serif;font-size:10.5px;line-height:1.3;color:var(--engineering-panel-muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.closer-contact-text b{font-size:12.5px;font-weight:700;color:var(--engineering-panel-text);transition:color .18s ease;overflow:hidden;text-overflow:ellipsis}
 .closer-contact-item:hover .closer-contact-text b{color:var(--engineering-panel-accent)}
-.closer-form{position:relative;background:var(--engineering-panel-surface);border:1px solid var(--engineering-panel-border);border-radius:16px;padding:clamp(17px,1.5vw,24px);display:flex;flex-direction:column;gap:11px}
+.closer-form{position:relative;background:var(--engineering-panel-surface);border:1px solid var(--engineering-panel-border);border-radius:16px;box-shadow:0 20px 46px rgba(26,26,26,.08);padding:clamp(17px,1.5vw,24px);display:flex;flex-direction:column;gap:11px}
 .closer-form .qfield{margin-bottom:0}
-.closer-form .qfield.upload{position:relative;display:flex;align-items:center;justify-content:flex-start;gap:12px;min-height:72px;padding:12px 16px;text-align:left;background:rgba(255,255,255,.04);border:1px dashed rgba(234,234,230,.24);border-radius:12px;cursor:pointer;transition:border-color .18s ease,background .18s ease}
-.closer-form .qfield.upload:hover{border-color:rgba(234,234,230,.42)}
+.closer-form .qfield.upload{position:relative;display:flex;align-items:center;justify-content:flex-start;gap:12px;min-height:72px;padding:12px 16px;text-align:left;background:var(--paper);border:1px dashed rgba(26,26,26,.2);border-radius:12px;cursor:pointer;transition:border-color .18s ease,background .18s ease}
+.closer-form .qfield.upload:hover{border-color:rgba(26,26,26,.36)}
 .closer-form .qfield.upload:focus-within{outline:2px solid var(--engineering-panel-highlight);outline-offset:2px;border-color:var(--engineering-panel-highlight)}
-.closer-form .qfield.upload.dragover{border-color:var(--engineering-panel-highlight);background:rgba(107,45,139,.1)}
-.qfield-upload-icon{flex:0 0 auto;width:32px;height:32px;border-radius:9px;background:rgba(255,255,255,.06);display:grid;place-items:center;color:var(--engineering-panel-muted)}
-.qfield-upload-icon svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.6}
-.qfield-upload-text{font-family:'Golos Text',sans-serif;font-weight:500;font-size:14.5px;color:var(--engineering-panel-text);line-height:1.3}
-.qfield-upload-text small{display:block;margin-top:3px;font-family:'Golos Text',sans-serif;font-weight:500;font-size:11.5px;letter-spacing:.06em;color:var(--engineering-panel-muted);text-transform:uppercase}
-.closer-form .qfield:not(.upload){height:46px;padding:0 16px;border-radius:12px;background:rgba(255,255,255,.05);border:1px solid rgba(234,234,230,.18);color:var(--engineering-panel-text);font-family:'Golos Text',sans-serif;font-weight:400;font-size:14.5px}
+.closer-form .qfield.upload.dragover{border-color:var(--engineering-panel-highlight);background:rgba(107,45,139,.06)}
+.closer-form .qfield-upload-icon{flex:0 0 auto;width:32px;height:32px;border-radius:9px;background:#fff;border:1px solid var(--engineering-panel-border);display:grid;place-items:center;color:var(--engineering-panel-muted)}
+.closer-form .qfield-upload-icon svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.6}
+.closer-form .qfield-upload-text{display:block;font-family:'Golos Text',sans-serif;font-weight:500;font-size:14.5px;color:var(--engineering-panel-text);line-height:1.3}
+.closer-form .qfield-upload-text small{display:block;margin-top:3px;font-family:'Golos Text',sans-serif;font-weight:500;font-size:11.5px;letter-spacing:.06em;color:var(--engineering-panel-muted);text-transform:uppercase}
+.closer-form .qfield:not(.upload){height:46px;padding:0 16px;border-radius:12px;background:var(--paper);border:1px solid rgba(26,26,26,.12);color:var(--engineering-panel-text);font-family:'Golos Text',sans-serif;font-weight:400;font-size:14.5px}
 .closer-form .qfield:not(.upload)::placeholder{color:var(--engineering-panel-muted)}
-.closer-form .qfield:not(.upload):focus{outline:none;border-color:var(--engineering-panel-highlight);background:rgba(255,255,255,.08)}
+.closer-form .qfield:not(.upload):focus{outline:none;border-color:var(--engineering-panel-highlight);background:#fff}
 .closer-form .qfield.closer-textarea{height:auto;min-height:78px;padding:12px 16px;resize:none;line-height:1.5;font-family:'Golos Text',sans-serif}
 .closer-sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-.closer-btn{position:relative;z-index:1;width:100%;display:inline-flex;align-items:center;justify-content:center;gap:10px;height:46px;padding:0 24px;font-family:'Golos Text',sans-serif;font-size:12px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:#fff;border:0;border-radius:10px;cursor:pointer;background:linear-gradient(135deg,#8a45b0 0%,#6B2D8B 52%,#4f2069 100%);box-shadow:0 10px 26px rgba(107,45,139,.42);transition:transform .18s ease,box-shadow .18s ease,filter .18s ease}
-.closer-btn:hover{filter:brightness(1.09);transform:translateY(-2px);box-shadow:0 14px 34px rgba(107,45,139,.58)}
+.closer-btn{position:relative;z-index:1;width:100%;display:inline-flex;align-items:center;justify-content:center;gap:10px;height:46px;padding:0 24px;font-family:'Golos Text',sans-serif;font-size:12px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:#fff;border:0;border-radius:10px;cursor:pointer;background:linear-gradient(135deg,#8a45b0 0%,#6B2D8B 52%,#4f2069 100%);box-shadow:0 10px 26px rgba(107,45,139,.3)}
+.closer-btn:hover{filter:brightness(1.07);transform:translateY(-2px);box-shadow:0 14px 34px rgba(107,45,139,.4)}
 .closer-btn span{transition:transform .18s ease}
 .closer-btn:hover span{transform:translateX(4px)}
-.closer-secure{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:2px;font-family:'Golos Text',sans-serif;font-size:11.5px;color:rgba(234,234,230,.42)}
+.closer-btn.btn-quiet{background:transparent;border:1.5px solid rgba(26,26,26,.18);color:var(--bm);box-shadow:none}
+.closer-btn.btn-quiet:hover{border-color:var(--ce);color:var(--ce);background:rgba(107,45,139,.05)}
+.closer-secure{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:2px;font-family:'Golos Text',sans-serif;font-size:11.5px;color:var(--engineering-panel-muted)}
 .closer-secure svg{width:14px;height:14px;flex:0 0 auto;fill:none;stroke:currentColor;stroke-width:1.6}
 @media(max-width:1279px){.closer-band-grid{gap:clamp(28px,3.2vw,42px)}.closer-text h2{font-size:clamp(24px,3vw,30px)}}
+@media(max-width:900px){.closer-contacts{flex-wrap:wrap}.closer-contact-item{flex:1 1 45%;border-right:0;padding:8px 6px}}
 @media(max-width:860px){.closer-band-grid{grid-template-columns:1fr}.closer-text{max-width:none}.closer-text p{max-width:none}}
-@media(max-width:640px){.closer-band{padding:22px 18px}.closer-text h2{font-size:clamp(23px,7vw,28px)}.closer-contacts{flex-direction:column}.closer-contact-item{border-right:0;border-bottom:1px solid var(--engineering-panel-border)}.closer-contact-item:last-child{border-bottom:0}}
+@media(max-width:640px){.closer-band-grid{padding:34px 0}.closer-text h2{font-size:clamp(23px,7vw,28px)}.closer-usp-item{flex:1 1 100%}.closer-contacts{flex-direction:column}.closer-contact-item{border-bottom:1px solid var(--engineering-panel-border)}.closer-contact-item:last-child{border-bottom:0}}
 
 /* FOOTER */
 footer{background:var(--bm);color:rgba(234,234,230,.55);padding:3rem 0 2rem;border-top:2px solid var(--gold)}
@@ -1807,11 +1807,15 @@ body.hide-hdr-cta .hdr .hdr-cta{display:none}
 /* ===== HOMEPAGE REBUILD: trust-strip / scenarios / solutions-cta / case / stock / process / expertise ===== */
 
 /* TRUST STRIP */
-.trust-strip{padding:22px 0;background:rgba(255,255,255,.6);border-bottom:1px solid var(--line)}
-.ts-in{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px 32px}
-.ts-item{display:flex;align-items:center;gap:12px;font-family:'Golos Text',sans-serif;font-size:12.5px;color:var(--mid);line-height:1.35}
-.ts-item svg{flex:0 0 auto;width:22px;height:22px;stroke:var(--ce);fill:none;stroke-width:1.6}
-.ts-item b{display:block;font-family:'Magistral',sans-serif;font-size:14.5px;font-weight:600;letter-spacing:-.015em;color:var(--bm)}
+.trust-strip{padding:8px 0 4.6rem}
+.ts-in{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;padding:38px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.ts-item{display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center}
+.ts-ic{flex:0 0 auto;width:68px;height:68px;border-radius:18px;background:radial-gradient(ellipse at 35% 30%,rgba(107,45,139,.12),rgba(107,45,139,.03) 70%);border:1px solid rgba(107,45,139,.18);display:flex;align-items:center;justify-content:center;color:var(--ce);transition:transform .22s ease,box-shadow .22s ease}
+.ts-item:hover .ts-ic{transform:translateY(-3px);box-shadow:0 14px 28px rgba(107,45,139,.16)}
+.ts-ic svg{width:32px;height:32px;fill:none;stroke:currentColor;stroke-width:1.5}
+.ts-label{font-family:'Golos Text',sans-serif;font-size:14px;font-weight:700;letter-spacing:-.01em;color:var(--bm);line-height:1.3}
+@media(max-width:900px){.ts-in{grid-template-columns:repeat(3,1fr);row-gap:28px}}
+@media(max-width:560px){.ts-in{grid-template-columns:repeat(2,1fr)}}
 
 /* SCENARIOS */
 .scenarios{padding-top:2.6rem;padding-bottom:3.4rem}
@@ -1844,6 +1848,8 @@ body.hide-hdr-cta .hdr .hdr-cta{display:none}
 .section-cta-row .btn{min-width:280px}
 
 /* SOLUTIONS: интро слева / 3×3 иконки-отрасли справа */
+.sol-head{margin-bottom:22px}
+.sol-title-full{width:100%;white-space:nowrap}
 .sol-split{position:relative;display:grid;grid-template-columns:minmax(360px,28%) 1fr;gap:40px;align-items:start}
 .sol-split::before{content:'';position:absolute;inset:-40px -20px;z-index:0;pointer-events:none;opacity:.035;background-repeat:no-repeat;background-position:right 6% top 4%;background-size:min(30%,420px) auto;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='420' height='420'%3E%3Cg stroke='%236B2D8B' stroke-width='1' fill='none'%3E%3Cline x1='60' y1='0' x2='60' y2='420'/%3E%3Cline x1='0' y1='150' x2='420' y2='150'/%3E%3Ccircle cx='340' cy='320' r='34'/%3E%3Ccircle cx='340' cy='320' r='2' fill='%236B2D8B'/%3E%3Cline x1='300' y1='320' x2='320' y2='320'/%3E%3Cline x1='360' y1='320' x2='380' y2='320'/%3E%3Ctext x='300' y='70' font-family='monospace' font-size='26'%3E%C3%98%3C/text%3E%3Ctext x='40' y='400' font-family='monospace' font-size='24'%3ER18%3C/text%3E%3C/g%3E%3C/svg%3E")}
 .sol-intro{position:relative;z-index:1;display:flex;flex-direction:column;align-items:flex-start;min-width:0}
@@ -1854,6 +1860,8 @@ body.hide-hdr-cta .hdr .hdr-cta{display:none}
 .sol-link-secondary:hover{color:var(--ce)}
 .sol-icon-rows{position:relative;z-index:1;display:flex;flex-direction:column;gap:4px}
 .sol-icon-row{display:flex;gap:6px}
+.sol-icon-row-end{justify-content:flex-end}
+@media(max-width:760px){.sol-icon-row-end{justify-content:flex-start}}
 .sol-icon-item{position:relative;display:flex;flex-direction:column;flex:0 0 calc((100% - 18px)/4);width:calc((100% - 18px)/4);background:transparent;border:0;border-radius:10px;overflow:visible;text-decoration:none;padding:14px 8px 12px;transition:transform .22s ease}
 .sol-icon-media{display:flex;align-items:center;justify-content:center;padding:0 6px}
 .sol-icon-media img{max-width:88%;max-height:194px;object-fit:contain;filter:drop-shadow(0 14px 18px rgba(26,26,26,.16));transition:transform .3s ease}
@@ -1865,6 +1873,7 @@ body.hide-hdr-cta .hdr .hdr-cta{display:none}
 .sol-icon-item:hover .sol-icon-label,.sol-icon-item:focus-visible .sol-icon-label{color:var(--ce)}
 .sol-icon-item:hover .sol-icon-arrow,.sol-icon-item:focus-visible .sol-icon-arrow{opacity:1;transform:translateX(0)}
 @media(max-width:1180px){.sol-split{grid-template-columns:1fr}.sol-icon-media img{max-height:214px}}
+@media(max-width:700px){.sol-title-full{white-space:normal}}
 @media(max-width:760px){.sol-icon-row{flex-wrap:wrap;row-gap:8px}.sol-icon-item{flex:0 0 calc(50% - 4px);width:calc(50% - 4px)}.sol-icon-media img{max-height:184px}}
 @media(max-width:480px){.sol-icon-item{flex:0 0 100%;width:100%}.sol-icon-media img{max-height:230px}}
 
@@ -1940,7 +1949,6 @@ body.hide-hdr-cta .hdr .hdr-cta{display:none}
 
 /* FINAL CTA — вторая кнопка */
 .closer-actions-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:6px}
-.closer-actions-row .btn-quiet{background:transparent;border:1.5px solid rgba(255,255,255,.28);color:inherit}
 @media(max-width:640px){.closer-actions-row{flex-direction:column}.closer-actions-row .btn{width:100%}}
 
 /* EQUIPMENT — левая интро-колонка + горизонтальная карусель категорий */
@@ -1965,16 +1973,17 @@ body.hide-hdr-cta .hdr .hdr-cta{display:none}
 .eq-car-nav{flex:0 0 auto;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--bm);transition:border-color .2s ease,color .2s ease}
 .eq-car-nav:hover{border-color:var(--ce);color:var(--ce)}
 .eq-car-nav svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.8}
-.eq-grid-static{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.eq-grid-static .eq-car-item{position:relative;width:auto;display:flex;flex-direction:column;justify-content:flex-end;height:278px;padding:22px 20px 20px;background:radial-gradient(ellipse 90% 65% at 50% 30%,rgba(107,45,139,.09),rgba(107,45,139,0) 68%),linear-gradient(165deg,#f8f8f7 0%,#e7e7e5 100%);border:1px solid rgba(36,39,43,.13);border-radius:14px;box-shadow:0 14px 30px rgba(26,26,26,.09)}
-.eq-grid-static .eq-car-media{position:absolute;top:16px;left:8px;right:8px;bottom:64px}
-.eq-grid-static .eq-car-media img{max-width:90%;max-height:90%;filter:drop-shadow(0 16px 18px rgba(26,26,26,.18));transition:transform .3s cubic-bezier(.2,.7,.2,1)}
-.eq-grid-static .eq-car-title{position:relative;z-index:1;min-height:0;margin-bottom:0;font-size:14px}
-.eq-grid-static .eq-car-item:hover,.eq-grid-static .eq-car-item:focus-visible{border-color:rgba(107,45,139,.45);box-shadow:0 0 0 1px rgba(107,45,139,.16),0 26px 52px rgba(107,45,139,.24),0 8px 22px rgba(26,26,26,.12);transform:translateY(-4px)}
-.eq-grid-static .eq-car-item:hover .eq-car-media img,.eq-grid-static .eq-car-item:focus-visible .eq-car-media img{transform:translateY(-3px) scale(1.04)}
+.eq-grid-static{display:grid;grid-template-columns:repeat(4,1fr);gap:4px 6px}
+.eq-grid-static .eq-car-item{position:relative;width:auto;display:flex;flex-direction:column;align-items:center;height:auto;padding:14px 8px 12px;background:transparent;border:0;border-radius:10px;box-shadow:none;transition:transform .22s ease}
+.eq-grid-static .eq-car-media{position:relative;top:auto;left:auto;right:auto;bottom:auto;order:1;display:flex;align-items:center;justify-content:center;width:100%;padding:0 6px}
+.eq-grid-static .eq-car-media img{max-width:88%;max-height:170px;object-fit:contain;filter:drop-shadow(0 14px 18px rgba(26,26,26,.16));transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+.eq-grid-static .eq-car-title{order:2;position:relative;z-index:1;min-height:0;margin:12px 0 0;font-size:15px;font-weight:700;color:var(--bm);text-align:center;transition:color .22s ease}
+.eq-grid-static .eq-car-item:hover,.eq-grid-static .eq-car-item:focus-visible{border-color:transparent;box-shadow:none;transform:translateY(-3px)}
+.eq-grid-static .eq-car-item:hover .eq-car-media img,.eq-grid-static .eq-car-item:focus-visible .eq-car-media img{transform:scale(1.12)}
+.eq-grid-static .eq-car-item:hover .eq-car-title,.eq-grid-static .eq-car-item:focus-visible .eq-car-title{color:var(--ce)}
 @media(max-width:1080px){.eq-split{grid-template-columns:1fr;gap:32px}.eq-split-desc{max-width:520px}.eq-grid-static{grid-template-columns:repeat(4,1fr)}}
 @media(max-width:860px){.eq-grid-static{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:640px){.eq-car-nav{display:none}.eq-car-item{width:168px}.eq-car-title{font-size:12.5px;min-height:44px}.eq-grid-static{grid-template-columns:repeat(2,1fr);gap:10px}.eq-grid-static .eq-car-item{height:224px;padding:18px 14px 14px}.eq-grid-static .eq-car-media{bottom:54px}}
+@media(max-width:640px){.eq-car-nav{display:none}.eq-car-item{width:168px}.eq-car-title{font-size:12.5px;min-height:44px}.eq-grid-static{grid-template-columns:repeat(2,1fr);gap:8px}.eq-grid-static .eq-car-media img{max-height:150px}}
 
 /* Ленты «Станки в наличии» и «Комплексный подход» — компактный вариант carousel */
 .eq-carousel-wrap-tight{margin-top:28px}
@@ -2020,22 +2029,12 @@ body.hide-hdr-cta .hdr .hdr-cta{display:none}
 <div class="hero-premium-inner hero-stage-a">
 <div class="hero-premium-copy">
 <h1><span class="hero-title-main">Комплексные решения</span><span class="hero-title-sub">в металлообработке</span></h1>
-<p class="hero-premium-subline">Механит подбирает, поставляет и запускает оборудование под вашу производственную задачу.</p>
 <div class="hero-premium-actions hero-premium-actions-lowered"><a class="btn btn-light" href="solutions.html">Каталог решений</a><a class="btn btn-ghost" href="equipment.html">Каталог оборудования</a></div>
 </div>
 </div>
 </section>
 </div>
 <div class="page-content">
-<!-- TRUST STRIP -->
-<section class="trust-strip reveal-up" aria-label="Проверенные факты о компании">
-<div class="wrap ts-in">
-<div class="ts-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 5.5V11c0 4.5 2.8 7.7 7 9 4.2-1.3 7-4.5 7-9V5.5L12 3Z"/></svg><span><b>&gt;20 лет</b>оснащаем предприятия России</span></div>
-<div class="ts-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 4.5a3.5 3.5 0 0 0-4.79 4.03L4 15.24V20h4.76l6.71-6.71a3.5 3.5 0 0 0 4.03-4.79l-2.6 2.6-2.1-2.1 2.6-2.6Z"/></svg><span><b>ПНР и обучение</b>запуск станка и подготовка персонала</span></div>
-<div class="ts-item"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m9 12 2 2 4-4"/></svg><span><b>Гарантия 2 года</b>сервисные обязательства</span></div>
-<div class="ts-item"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="1"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg><span><b>Склад в России</b>Нижний Новгород</span></div>
-</div>
-</section>
 <!-- SCENARIOS: НАЧНИТЕ С ВАШЕЙ ЗАДАЧИ -->
 <section class="scenarios reveal-up" id="scenarios">
 <div class="wrap scenarios-intro">
@@ -2070,6 +2069,17 @@ body.hide-hdr-cta .hdr .hdr-cta{display:none}
 </span>
 </a>
 </div>
+</div>
+</section>
+<!-- TRUST STRIP -->
+<section class="trust-strip reveal-up" aria-label="Проверенные факты о компании">
+<div class="wrap ts-in">
+<div class="ts-item"><span class="ts-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 5 5.5V11c0 4.5 2.8 7.7 7 9 4.2-1.3 7-4.5 7-9V5.5L12 3Z"/></svg></span><span class="ts-label">&gt;20 лет опыта</span></div>
+<div class="ts-item"><span class="ts-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20 15 9l3.5-3.5L21 8 17.5 11.5 6.5 22.5"/><path d="m14 10 3 3M4 20l2.5 2.5"/></svg></span><span class="ts-label">Подбор по чертежу</span></div>
+<div class="ts-item"><span class="ts-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/><path d="M19.4 13a7.4 7.4 0 0 0 0-2l2-1.6-2-3.4-2.4 1a7.3 7.3 0 0 0-1.7-1L15 3h-4l-.3 2.6a7.3 7.3 0 0 0-1.7 1l-2.4-1-2 3.4L6.6 11a7.4 7.4 0 0 0 0 2l-2 1.6 2 3.4 2.4-1c.5.4 1.1.75 1.7 1L11 21h4l.3-2.6c.6-.25 1.2-.6 1.7-1l2.4 1 2-3.4Z"/></svg></span><span class="ts-label">Технология обработки</span></div>
+<div class="ts-item"><span class="ts-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15.5 4.5a3.5 3.5 0 0 0-4.79 4.03L4 15.24V20h4.76l6.71-6.71a3.5 3.5 0 0 0 4.03-4.79l-2.6 2.6-2.1-2.1 2.6-2.6Z"/></svg></span><span class="ts-label">ПНР и обучение</span></div>
+<div class="ts-item"><span class="ts-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m9 12 2 2 4-4"/></svg></span><span class="ts-label">Гарантия 2 года</span></div>
+<div class="ts-item"><span class="ts-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="1"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></span><span class="ts-label">Склад в России</span></div>
 </div>
 </section>
 <!-- EQUIPMENT OVERVIEW (warehouse) -->
@@ -2250,16 +2260,18 @@ body.hide-hdr-cta .hdr .hdr-cta{display:none}
 </section>
 <!-- SOLUTIONS BY INDUSTRY -->
 <section class="equipment solutions-block" id="solutions">
+<div class="wrap sol-head reveal-up">
+<div class="eyebrow">Решения</div>
+<div class="h2 eq-split-title sol-title-full">Готовые отраслевые решения</div>
+</div>
 <div class="wrap sol-split reveal-up">
 <div class="sol-intro">
-<div class="eyebrow">Решения</div>
-<div class="h2 eq-split-title">Готовые отраслевые<br/>решения</div>
 <p class="eq-split-desc">От детали и требований к обработке — к технологическому маршруту и подбору оборудования.</p>
 <a class="sol-link" href="solutions.html">Смотреть все решения <i aria-hidden="true">→</i></a>
 <a class="sol-link sol-link-secondary" href="#quiz" onclick="event.preventDefault();openLeadModal()">Передать свой чертёж <i aria-hidden="true">→</i></a>
 </div>
 <div class="sol-icon-rows">
-<div class="sol-icon-row">
+<div class="sol-icon-row sol-icon-row-end">
 <a class="sol-icon-item" href="solution-auto.html"><span class="sol-icon-media"><img src="icon-auto.png" alt="Автомобильная промышленность" loading="lazy"/></span><span class="sol-icon-foot"><span class="sol-icon-label">Автомобильная промышленность</span><i class="sol-icon-arrow" aria-hidden="true">→</i></span></a>
 <a class="sol-icon-item" href="solution-aero.html"><span class="sol-icon-media"><img src="icon-aero.png" alt="Авиационная промышленность" loading="lazy"/></span><span class="sol-icon-foot"><span class="sol-icon-label">Авиационная промышленность</span><i class="sol-icon-arrow" aria-hidden="true">→</i></span></a>
 </div>
@@ -2380,26 +2392,6 @@ body.hide-hdr-cta .hdr .hdr-cta{display:none}
 <div class="section-cta-row"><a class="sol-link" href="press.html#vnedreniya">Все внедрения <i aria-hidden="true">→</i></a></div>
 </div>
 </section>
-<!-- КОМПЛЕКСНЫЙ ПОДХОД -->
-<section class="complex-approach reveal-up" id="complex-approach">
-<div class="wrap">
-<div class="eyebrow">Комплексный подход</div>
-<div class="h2">Комплексный подход</div>
-<p class="complex-approach-lead">Берём на себя весь путь проекта — от анализа задачи до запуска и дальнейшего сопровождения.</p>
-<div class="eq-carousel-wrap eq-carousel-wrap-tight">
-<button class="eq-car-nav eq-car-prev" type="button" aria-label="Предыдущие направления" onclick="scrollApproachCarousel(-1)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5 8 12l7 7"/></svg></button>
-<div class="eq-carousel eq-carousel-photo" id="approachCarousel">
-<a class="eq-car-item" href="production-cutting-tools.html"><span class="eq-car-title">Режущий инструмент</span><span class="eq-car-media"><img src="module-banners/cutting-tools.jpeg" alt="Режущий инструмент" loading="lazy"/></span></a>
-<a class="eq-car-item" href="production-tooling.html"><span class="eq-car-title">Оснастка</span><span class="eq-car-media"><img src="module-banners/tooling.jpeg" alt="Оснастка" loading="lazy"/></span></a>
-<a class="eq-car-item" href="production-measurement.html"><span class="eq-car-title">Измерение</span><span class="eq-car-media"><img src="module-banners/measurement.jpeg" alt="Измерение" loading="lazy"/></span></a>
-<a class="eq-car-item" href="production-automation.html"><span class="eq-car-title">Автоматизация</span><span class="eq-car-media"><img src="module-banners/automation.jpeg" alt="Автоматизация" loading="lazy"/></span></a>
-<a class="eq-car-item" href="production-coolant-chips.html"><span class="eq-car-title">СОЖ и стружка</span><span class="eq-car-media"><img src="module-banners/coolant-chips.jpeg" alt="СОЖ и стружка" loading="lazy"/></span></a>
-<a class="eq-car-item" href="production-complex.html"><span class="eq-car-title">Комплексное оснащение</span><span class="eq-car-media"><img src="module-banners/complex.jpeg" alt="Комплексное оснащение" loading="lazy"/></span></a>
-</div>
-<button class="eq-car-nav eq-car-next" type="button" aria-label="Следующие направления" onclick="scrollApproachCarousel(1)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button>
-</div>
-</div>
-</section>
 <!-- ЭКСПЕРТИЗА -->
 <section class="expertise reveal-up" id="expertise">
 <div class="wrap">
@@ -2469,11 +2461,9 @@ body.hide-hdr-cta .hdr .hdr-cta{display:none}
 </section>
 <!-- ФИНАЛЬНЫЙ БЛОК (кейсы → клиенты → финал) -->
 <section class="closer" id="quiz">
-<div class="wrap">
 <div class="closer-band reveal-up">
-<div class="closer-band-grid">
+<div class="wrap closer-band-grid">
 <div class="closer-text">
-<div class="closer-eyebrow"><i></i>Инженерный подход</div>
 <h2>Есть производственная задача?</h2>
 <p>Передайте чертёж или описание задачи — подберём технологию, оборудование и конфигурацию проекта.</p>
 <div class="closer-usp">
@@ -2498,7 +2488,6 @@ body.hide-hdr-cta .hdr .hdr-cta{display:none}
 <div class="closer-actions-row"><button class="closer-btn" type="button" style="flex:1">Передать задачу <span>→</span></button><button class="closer-btn btn-quiet" type="button" onclick="openLeadModal()" style="flex:1">Получить консультацию</button></div>
 <div class="closer-secure"><svg aria-hidden="true" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Ваши данные защищены</div>
 </form>
-</div>
 </div>
 </div>
 </section>
