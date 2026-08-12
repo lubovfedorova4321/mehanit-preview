@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Как рассчитать производительность станка под программу выпуска | Механит</title>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<meta name="description" content="Цикл, загрузка, переналадка, стойкость инструмента, коэффициент использования оборудования и запас мощности проекта — как рассчитать реальную производительность."/>
+<link rel="canonical" href="https://mehanit.ru/press-raschet-proizvoditelnosti-stanka.html"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Как рассчитать производительность станка под программу выпуска"/>
+<meta property="og:description" content="Цикл, загрузка, переналадка, стойкость инструмента, коэффициент использования оборудования и запас мощности проекта — как рассчитать реальную производительность."/>
+<meta property="og:url" content="https://mehanit.ru/press-raschet-proizvoditelnosti-stanka.html"/>
+<meta property="og:image" content="https://mehanit.ru/press-assets/resheniya/zero-point-automation-real.jpg"/>
+<meta property="article:published_time" content="2025-12-31"/>
+<meta property="article:modified_time" content="2025-12-31"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+
+<style>
+:root{--ink:#24272b;--mid:#6f7479;--line:rgba(36,39,43,.11);--purple:#6b2d8b;--purple2:rgba(107,45,139,.08);--gold:#c9a227;--paper:#f3f4f3;--max:1600px}
+*{box-sizing:border-box;min-width:0}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:'Golos Text',sans-serif;position:relative;overflow-x:hidden}a{color:inherit}img{max-width:100%}
+body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(rgba(107,45,139,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(107,45,139,.04) 1px,transparent 1px);background-size:72px 72px}
+main{position:relative;z-index:1;padding-bottom:20px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;font-size:12px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;border:1px solid var(--ink);color:var(--ink);background:transparent;cursor:pointer;transition:.18s;text-decoration:none}
+.btn:hover{background:var(--ink);color:#fff}
+.btn.primary{background:var(--purple);border-color:var(--purple);color:#fff}
+.btn.primary:hover{background:#5a2574}
+.art-head{padding:clamp(22px,3vw,36px) 0 10px}
+.final-cta-wrap{padding:20px 0 70px}
+.final-cta{background:#1c1b20;border-radius:2px;padding:clamp(30px,4vw,52px) clamp(28px,4.5vw,56px);display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;position:relative;overflow:hidden}
+.final-cta::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(107,45,139,.18) 1px,transparent 1px),linear-gradient(90deg,rgba(107,45,139,.14) 1px,transparent 1px);background-size:48px 48px;opacity:.5}
+.final-cta-copy{position:relative;max-width:560px}
+.final-cta-copy h2{margin:0 0 12px;font-family:'Magistral','Golos Text',sans-serif;font-size:clamp(22px,2.6vw,30px);font-weight:500;letter-spacing:-.02em;color:#fff}
+.final-cta-copy p{margin:0;font-size:14.5px;line-height:1.65;color:rgba(255,255,255,.68)}
+.final-cta-actions{position:relative;display:flex;gap:12px;flex-wrap:wrap}
+.final-cta-actions .btn{border-color:rgba(255,255,255,.3);color:#fff}
+.final-cta-actions .btn:hover{background:#fff;color:var(--ink)}
+.final-cta-actions .btn.primary{border-color:var(--purple)}
+.final-cta-actions .btn.primary:hover{background:#5a2574;color:#fff}
+</style>
+<link rel="stylesheet" href="site-shell.css"/>
+<link rel="stylesheet" href="industry-solutions.css"/>
+<link rel="stylesheet" href="press-article.css"/>
+</head>
+<body>
+<header></header>
+<main>
+<nav class="ind-crumbs" aria-label="Хлебные крошки"><div class="art-wrap"><ol>
+  <li><a href="index.html">Главная</a></li>
+  <li><a href="press.html">Пресс-центр</a></li>
+  <li><a href="press.html#resheniya">Инженерные решения</a></li>
+  <li aria-current="page">Расчёт производительности станка</li>
+</ol></div></nav>
+
+<section class="art-head"><div class="art-wrap"><div class="art-col">
+<div class="art-meta-row"><span class="art-rubric">Инженерные решения</span><span>31.12.2025</span><span>≈8 мин чтения</span></div>
+<h1 class="art-h1">Как рассчитать производительность станка под программу выпуска</h1>
+<p class="art-lead">Производительность станка под программу выпуска рассчитывают не по времени резания в идеальных условиях, а по полному такту: времени цикла обработки одной детали, времени на смену заготовки и переналадку между партиями, стойкости инструмента (как часто требуется его замена) и общему коэффициенту использования оборудования с учётом планового обслуживания и непроизводительных простоев. Станок, теоретически способный выпускать деталь за минуту резания, может реально давать значительно меньшую производительность, если вспомогательное время не учтено при планировании.</p>
+<div class="art-byline"><span>Материал подготовлен редакцией Механита</span></div>
+</div></div></section>
+
+<div class="art-hero-media"><img src="press-assets/resheniya/zero-point-automation-real.jpg" alt="Смена оснастки на модульном зажимном приспособлении станка с ЧПУ" loading="lazy"/></div>
+<div class="art-wrap"><div class="art-col"><p class="art-hero-caption">Повторяемость базирования при быстрой смене оснастки сокращает время наладки между операциями.</p></div></div>
+
+<div class="art-wrap"><div class="art-col">
+<nav class="art-toc" aria-label="Содержание статьи">
+<div class="art-toc-title">Содержание</div>
+<ol>
+<li><a href="#cycle">Время цикла</a></li>
+<li><a href="#loading">Смена заготовки и переналадка</a></li>
+<li><a href="#tool-life">Стойкость инструмента</a></li>
+<li><a href="#oee">Коэффициент использования оборудования</a></li>
+<li><a href="#margin">Запас мощности проекта</a></li>
+</ol>
+</nav>
+
+<article class="art-body">
+
+<h2 id="cycle">Время цикла</h2>
+
+<p>Время цикла — сумма времени резания на всех операциях программы и вспомогательного времени внутри цикла: холостых перемещений, смены инструмента внутри станка (chip-to-chip), пауз на измерение или продувку. Для деталей с большим числом переходов вспомогательное время внутри цикла может составлять значительную долю такта — это одна из причин, почему количество позиций инструментального магазина и скорость смены инструмента (см. материал про выбор VMC) напрямую влияют на реальную производительность.</p>
+
+
+<h2 id="loading">Смена заготовки и переналадка</h2>
+
+<p>Время на установку новой заготовки вручную, закрепление и выверку добавляется к каждому циклу, если производство не автоматизировано. Переналадка между партиями разных деталей (смена оснастки, инструмента, программы) — отдельная статья времени, которая для многономенклатурного мелкосерийного производства с частой сменой партий может занимать существенную долю рабочего времени станка.</p>
+<div class="art-callout"><div class="art-callout-title">Что учитывать</div>
+<p>Автоматизация (барфидер, робот-загрузчик, палетный накопитель) сокращает время смены заготовки почти до нуля, но не сокращает время переналадки между разными деталями — если номенклатура меняется часто, выигрыш от автоматизации загрузки заметно меньше, чем на устойчивом однономенклатурном потоке.</p></div>
+
+
+<h2 id="tool-life">Стойкость инструмента</h2>
+
+<p>Каждая замена изношенного инструмента — это остановка станка на время смены, а для отдельных операций ещё и подналадка размера. Стойкость инструмента (количество деталей или минут резания до необходимой замены) закладывается в расчёт производительности партии — для крупной серии время на плановые замены инструмента может быть заметной статьёй общего времени изготовления партии.</p>
+
+
+<h2 id="oee">Коэффициент использования оборудования</h2>
+
+<p>Общий коэффициент использования оборудования (OEE — Overall Equipment Effectiveness) учитывает доступность станка (плановое обслуживание, незапланированные простои), производительность (реальный такт против номинального) и качество (доля годных деталей без брака и переделки). Реалистичный расчёт производительности проекта должен закладывать OEE ниже теоретического максимума — единого универсального значения нет, оно определяется опытом эксплуатации конкретного производства и типа оборудования.</p>
+
+
+<h2 id="margin">Запас мощности проекта</h2>
+
+<div class="art-callout is-warn"><p>Расчёт производительности станка под текущую программу выпуска без запаса мощности рискован: рост заказов, расширение номенклатуры или необходимость наверстать отставание после простоя быстро упирается в предел station, работающей на пределе своей расчётной производительности. При планировании оборудования разумно закладывать запас — не покупать станок впритык под сегодняшний объём, если перспектива роста производства реалистична.</p></div>
+
+
+</article>
+
+<section class="art-faq" id="faq">
+<h2 style="font-family:'Magistral','Golos Text',sans-serif;font-size:clamp(22px,2.2vw,28px);font-weight:600;letter-spacing:-.02em;margin:10px 0 20px">Частые вопросы</h2>
+<div class="faqi"><button class="faqq" onclick="toggleFaq(this)">Что такое такт и чем он отличается от времени резания?<span class="ic">+</span></button>
+<div class="faqa"><p>Такт — это полное время на одну деталь, включая резание, вспомогательные перемещения внутри цикла, а на неавтоматизированном производстве — ещё и время смены заготовки. Время резания — только часть такта, и ориентироваться на него одно при планировании производительности некорректно.</p></div></div>
+<div class="faqi"><button class="faqq" onclick="toggleFaq(this)">Как оценить, сколько станков нужно под программу выпуска?<span class="ic">+</span></button>
+<div class="faqa"><p>Нужно рассчитать такт на одну деталь с учётом всех составляющих (резание, смена заготовки, переналадка, доля времени на замену инструмента), умножить на плановый объём выпуска и сопоставить с доступным рабочим временем с учётом коэффициента использования оборудования — это даёт требуемое количество станко-часов, которое можно разделить на число станков.</p></div></div>
+<div class="faqi"><button class="faqq" onclick="toggleFaq(this)">Всегда ли автоматизация повышает производительность?<span class="ic">+</span></button>
+<div class="faqa"><p>Она сокращает время смены заготовки, но не время переналадки между разными деталями. Для многономенклатурного мелкосерийного производства с частыми переналадками эффект автоматизации загрузки ограничен, и вложения в неё нужно оценивать по фактической структуре номенклатуры.</p></div></div>
+<div class="faqi"><button class="faqq" onclick="toggleFaq(this)">Что делать, если расчётная производительность не покрывает плановый объём?<span class="ic">+</span></button>
+<div class="faqa"><p>Рассмотреть сокращение такта (оптимизация режимов, инструмента, маршрута), добавление станков, автоматизацию для многономенклатурного потока, либо перераспределение операций между несколькими станками — конкретное решение зависит от того, какая составляющая такта занимает больше всего времени.</p></div></div>
+</section>
+
+<ul class="art-sources">
+<li>Смежная тема: <a href="press-kak-podobrat-oborudovanie-po-chertezhu.html">как выбрать оборудование по чертежу детали</a></li>
+</ul>
+
+</div></div>
+
+<section class="art-related"><div class="art-wrap">
+<div class="section-eyebrow" style="font-family:'Golos Text',monospace;font-size:10.5px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold);margin-bottom:14px">Связанное оборудование</div>
+<div class="art-related-grid">
+<a class="art-related-card" href="press-kak-podobrat-oborudovanie-po-chertezhu.html"><div class="r-label">Инженерные решения</div><h4>Как выбрать оборудование по чертежу детали</h4></a>
+<a class="art-related-card" href="press-kakie-oboroty-shpindelya-nuzhny.html"><div class="r-label">Пресс-центр</div><h4>Какие обороты шпинделя нужны производству</h4></a>
+<a class="art-related-card" href="production-automation.html"><div class="r-label">Производство</div><h4>Автоматизация и роботизация производства</h4></a>
+</div>
+</div></section>
+
+<div class="art-wrap"><a class="art-back" href="press.html#resheniya">← Ко всем материалам пресс-центра</a></div>
+
+<section class="final-cta-wrap"><div class="art-wrap">
+<div class="final-cta">
+<div class="final-cta-copy"><h2>Есть производственная задача?</h2><p>Передайте чертёж, материал и программу выпуска. Технолог Механита поможет определить маршрут обработки и подобрать оборудование.</p></div>
+<div class="final-cta-actions">
+<a class="btn primary" href="index.html#quiz">Передать чертёж технологу</a>
+<a class="btn" href="equipment.html">Перейти к оборудованию</a>
+</div>
+</div>
+</div></section>
+
+</main>
+<script src="press-data.js"></script>
+<script src="press-article.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://mehanit.ru/"},{"@type":"ListItem","position":2,"name":"Пресс-центр","item":"https://mehanit.ru/press.html"},{"@type":"ListItem","position":3,"name":"Инженерные решения","item":"https://mehanit.ru/press.html#resheniya"},{"@type":"ListItem","position":4,"name":"Расчёт производительности станка","item":"https://mehanit.ru/press-raschet-proizvoditelnosti-stanka.html"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Как рассчитать производительность станка под программу выпуска","description":"Цикл, загрузка, переналадка, стойкость инструмента, коэффициент использования оборудования и запас мощности проекта — как рассчитать реальную производительность.","image":"https://mehanit.ru/press-assets/resheniya/zero-point-automation-real.jpg","datePublished":"2025-12-31","dateModified":"2025-12-31","author":{"@type":"Organization","name":"Механит"},"publisher":{"@type":"Organization","name":"Механит","logo":{"@type":"ImageObject","url":"https://mehanit.ru/mehanit-logo-cropped.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://mehanit.ru/press-raschet-proizvoditelnosti-stanka.html"}}</script>
+<script src="site-shell.js"></script>
+</body>
+</html>

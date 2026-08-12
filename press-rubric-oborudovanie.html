@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Оборудование — Пресс-центр Механита</title>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<meta name="description" content="Практические критерии выбора обрабатывающих центров и токарных станков — от шпинделя до автоматизации."/>
+<link rel="canonical" href="https://mehanit.ru/press-rubric-oborudovanie.html"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Оборудование — Пресс-центр Механита"/>
+<meta property="og:description" content="Практические критерии выбора обрабатывающих центров и токарных станков — от шпинделя до автоматизации."/>
+<meta property="og:url" content="https://mehanit.ru/press-rubric-oborudovanie.html"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+
+<style>
+:root{--ink:#24272b;--mid:#6f7479;--line:rgba(36,39,43,.11);--purple:#6b2d8b;--purple2:rgba(107,45,139,.08);--gold:#c9a227;--paper:#f3f4f3;--max:1600px}
+*{box-sizing:border-box;min-width:0}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:'Golos Text',sans-serif;position:relative;overflow-x:hidden}a{color:inherit;text-decoration:none}button{font:inherit}img{max-width:100%}
+body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(rgba(107,45,139,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(107,45,139,.04) 1px,transparent 1px);background-size:72px 72px}
+main{position:relative;z-index:1}
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding-inline:clamp(24px,4.4vw,84px)}
+
+.rubric-wrap{position:sticky;top:0;z-index:15;background:rgba(243,244,243,.9);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.rubric-nav{display:flex;align-items:center;gap:6px;overflow-x:auto;padding:12px 0;scrollbar-width:none}
+.rubric-nav::-webkit-scrollbar{display:none}
+.rubric-pill{display:inline-flex;align-items:center;gap:7px;flex:0 0 auto;padding:8px 15px 8px 12px;font-size:12.5px;font-weight:600;color:var(--mid);border:1px solid transparent;border-radius:999px;white-space:nowrap;transition:.18s}
+.rubric-pill:hover{color:var(--ink);background:rgba(36,39,43,.05)}
+.rubric-pill.on{color:var(--purple);background:var(--purple2);font-weight:700}
+.rp-ic{flex:0 0 auto;width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.7;opacity:.75}
+.rubric-pill.on .rp-ic{opacity:1}
+
+.page-head{padding:clamp(26px,3.2vw,42px) 0 28px;border-bottom:1px solid var(--line)}
+.section-eyebrow{font-family:'Golos Text',monospace;font-size:10.5px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.page-head h1{margin:0 0 12px;max-width:760px;font-family:'Magistral','Golos Text',sans-serif;font-weight:700;font-size:clamp(27px,3.2vw,40px);line-height:1.1;letter-spacing:-.015em;color:var(--ink)}
+.page-head-row{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.page-head-lede{max-width:620px;margin:0;font-size:14.5px;line-height:1.6;color:var(--mid)}
+.rubric-count{flex:0 0 auto;font-family:'Golos Text',monospace;font-size:11px;letter-spacing:.6px;text-transform:uppercase;color:var(--mid);padding-bottom:3px}
+
+.rubric-page-section{padding:34px 0 60px}
+.rubric-page-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{padding:0;border:1px solid var(--line);background:#fff;text-align:left;color:inherit;overflow:hidden;box-shadow:0 14px 38px rgba(31,34,37,.05);transition:.25s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-4px);border-color:rgba(107,45,139,.26);box-shadow:0 24px 54px rgba(31,34,37,.1)}
+.c-media{height:190px;overflow:hidden;background:#dfe2e4}
+.c-media img{width:100%;height:100%;display:block;object-fit:cover;filter:saturate(.85) contrast(.99);transition:.35s}
+.card:hover .c-media img{transform:scale(1.035)}
+.c-content{padding:18px 20px 20px;display:flex;flex-direction:column;flex:1}
+.c-top{display:flex;align-items:center;gap:10px;margin-bottom:10px;flex-wrap:wrap}
+.c-rubric{font-family:'Golos Text',monospace;font-size:9.5px;font-weight:700;letter-spacing:1.3px;text-transform:uppercase;color:var(--purple)}
+.c-meta{font-family:'Golos Text',monospace;font-size:9.5px;letter-spacing:.8px;text-transform:uppercase;color:var(--mid)}
+.c-meta::before{content:'·';margin-right:10px;color:var(--line)}
+.c-content h3{margin:0 0 8px;font-family:'Magistral','Golos Text',sans-serif;font-size:16px;font-weight:500;line-height:1.3;letter-spacing:-.02em}
+.c-content p{margin:0;color:var(--mid);font-size:12.6px;line-height:1.6}
+.c-action{display:inline-block;margin-top:auto;padding-top:14px;font-size:11.5px;font-weight:700;color:var(--purple)}
+@media(max-width:1000px){.rubric-page-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.rubric-page-grid{grid-template-columns:1fr}.page-head-row{align-items:flex-start}.wrap{padding-inline:15px}}
+
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;font-size:12px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;border:1px solid var(--ink);color:var(--ink);background:transparent;cursor:pointer;transition:.18s}
+.btn:hover{background:var(--ink);color:#fff}
+.btn.primary{background:var(--purple);border-color:var(--purple);color:#fff}
+.btn.primary:hover{background:#5a2574}
+.final-cta-wrap{padding:0 0 70px}
+.final-cta{background:#1c1b20;border-radius:2px;padding:clamp(30px,4vw,52px) clamp(28px,4.5vw,56px);display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;position:relative;overflow:hidden}
+.final-cta::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(107,45,139,.18) 1px,transparent 1px),linear-gradient(90deg,rgba(107,45,139,.14) 1px,transparent 1px);background-size:48px 48px;opacity:.5}
+.final-cta-copy{position:relative;max-width:560px}
+.final-cta-copy h2{margin:0 0 12px;font-family:'Magistral','Golos Text',sans-serif;font-size:clamp(22px,2.6vw,30px);font-weight:500;letter-spacing:-.02em;color:#fff}
+.final-cta-copy p{margin:0;font-size:14.5px;line-height:1.65;color:rgba(255,255,255,.68)}
+.final-cta-actions{position:relative;display:flex;gap:12px;flex-wrap:wrap}
+.final-cta-actions .btn{border-color:rgba(255,255,255,.3);color:#fff}
+.final-cta-actions .btn:hover{background:#fff;color:var(--ink)}
+.final-cta-actions .btn.primary{border-color:var(--purple)}
+.final-cta-actions .btn.primary:hover{background:#5a2574;color:#fff}
+</style>
+<link rel="stylesheet" href="site-shell.css"/>
+<link rel="stylesheet" href="industry-solutions.css"/>
+</head>
+<body>
+<header></header>
+<main>
+<nav class="ind-crumbs" aria-label="Хлебные крошки"><div class="wrap"><ol>
+  <li><a href="index.html">Главная</a></li>
+  <li><a href="press.html">Пресс-центр</a></li>
+  <li aria-current="page">Оборудование</li>
+</ol></div></nav>
+
+<div class="rubric-wrap"><div class="wrap"><nav class="rubric-nav" aria-label="Рубрики">
+<a class="rubric-pill" href="press.html"><svg class="rp-ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="7" height="7" rx="1"/><rect x="13.5" y="3.5" width="7" height="7" rx="1"/><rect x="3.5" y="13.5" width="7" height="7" rx="1"/><rect x="13.5" y="13.5" width="7" height="7" rx="1"/></svg>Все материалы</a>
+<a class="rubric-pill on" href="press-rubric-oborudovanie.html"><svg class="rp-ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.1"/><path d="M12 3v2.4M12 18.6V21M21 12h-2.4M5.4 12H3M18.5 5.5l-1.7 1.7M7.2 16.8l-1.7 1.7M18.5 18.5l-1.7-1.7M7.2 7.2 5.5 5.5"/></svg>Оборудование</a>
+<a class="rubric-pill" href="press-rubric-resheniya.html"><svg class="rp-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20 15 9l3.5-3.5L21 8 17.5 11.5 6.5 22.5"/><path d="m14 10 3 3M4 20l2.5 2.5"/></svg>Инженерные решения</a>
+<a class="rubric-pill" href="press-rubric-vnedreniya.html"><svg class="rp-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 12.5l2.5 2.5L16 9"/><circle cx="12" cy="12" r="9"/></svg>Внедрения</a>
+<a class="rubric-pill" href="press-rubric-vystavki.html"><svg class="rp-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3v18"/><path d="M5 4h13l-2.4 3.5L18 11H5"/></svg>Выставки</a>
+<a class="rubric-pill" href="press-rubric-kompaniya.html"><svg class="rp-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 21V6l7-3 7 3v15"/><path d="M9 21v-6h6v6M9 10h.01M15 10h.01M9 14h.01M15 14h.01"/></svg>Компания</a>
+</nav></div></div>
+
+<section class="page-head"><div class="wrap">
+<div class="section-eyebrow">Пресс-центр · Оборудование</div>
+<div class="page-head-row">
+<div><h1>Как выбрать станок</h1><p class="page-head-lede">Практические критерии выбора обрабатывающих центров и токарных станков — от шпинделя до автоматизации.</p></div>
+<span class="rubric-count">14 материалов</span>
+</div>
+</div></section>
+
+<section class="rubric-page-section"><div class="wrap">
+<div class="rubric-page-grid">
+<a class="card" href="press-kak-vybrat-vertikalnyy-obrabatyvayushchiy-centr.html">
+<div class="c-media"><img src="mehanit-milling-machine.jpg" alt="Вертикальный обрабатывающий центр с ЧПУ" loading="lazy"/></div>
+<div class="c-content"><div class="c-top"><span class="c-rubric">Оборудование</span><span class="c-meta">11.08.2026</span></div><h3>Как выбрать вертикальный обрабатывающий центр</h3><p>10 параметров, которые определяют возможности станка: от рабочей зоны до автоматизации.</p><span class="c-action">Читать →</span></div>
+</a>
+<a class="card" href="press-protivoshpindel-kogda-nuzhen.html">
+<div class="c-media"><img src="press-assets/oborudovanie/sub-spindle-closeup.jpg" alt="Токарный центр с противошпинделем: деталь зажата между главным и вторым шпинделем" loading="lazy"/></div>
+<div class="c-content"><div class="c-top"><span class="c-rubric">Оборудование</span><span class="c-meta">10.08.2026</span></div><h3>Противошпиндель: когда он нужен</h3><p>Когда передача детали на второй шпиндель убирает вторую операцию и переустановку.</p><span class="c-action">Читать →</span></div>
+</a>
+<a class="card" href="press-3-plus-2-ili-odnovremennaya-5-osevaya-obrabotka.html">
+<div class="c-media"><img src="press-assets/oborudovanie/4th-axis-chuck.jpg" alt="Фрезерная обработка детали, закреплённой в поворотном патроне четвёртой оси" loading="lazy"/></div>
+<div class="c-content"><div class="c-top"><span class="c-rubric">Оборудование</span><span class="c-meta">10.07.2026</span></div><h3>3+2 или одновременная 5-осевая обработка</h3><p>Разница кинематики и применения: позиционная обработка против simultaneous 5-axis.</p><span class="c-action">Читать →</span></div>
+</a>
+<a class="card" href="press-gorizontalno-rastochnyy-chpu-ili-uci.html">
+<div class="c-media"><img src="press-assets/oborudovanie/horizontal-boring-mill.jpg" alt="Горизонтально-расточной станок в производственном цехе" loading="lazy"/></div>
+<div class="c-content"><div class="c-top"><span class="c-rubric">Оборудование</span><span class="c-meta">06.07.2026</span></div><h3>Горизонтально-расточный станок: ЧПУ или УЦИ</h3><p>Как выбор управления связан с серийностью, траекторией и типом крупной детали.</p><span class="c-action">Читать →</span></div>
+</a>
+<a class="card" href="press-kakie-oboroty-shpindelya-nuzhny.html">
+<div class="c-media"><img src="press-assets/oborudovanie/frezernyy-centr-oboroty.jpg" alt="Вертикальный обрабатывающий центр в производственном цехе" loading="lazy"/></div>
+<div class="c-content"><div class="c-top"><span class="c-rubric">Оборудование</span><span class="c-meta">07.06.2026</span></div><h3>8 000, 12 000 или 15 000 об/мин: какие обороты нужны</h3><p>Как связать максимальные обороты с диаметром инструмента, материалом и режимами резания.</p><span class="c-action">Читать →</span></div>
+</a>
+<a class="card" href="press-privodnoy-instrument-v-tokarnom-centre.html">
+<div class="c-media"><img src="press-assets/oborudovanie/live-tooling-turret.jpg" alt="Револьверная головка токарного центра с приводным инструментом" loading="lazy"/></div>
+<div class="c-content"><div class="c-top"><span class="c-rubric">Оборудование</span><span class="c-meta">31.05.2026</span></div><h3>Приводной инструмент в токарном центре</h3><p>Какие сверлильные и фрезерные операции можно интегрировать в токарный цикл.</p><span class="c-action">Читать →</span></div>
+</a>
+<a class="card" href="press-kak-vybrat-tokarnyy-stanok-s-chpu-po-detali.html">
+<div class="c-media"><img src="press-assets/oborudovanie/cnc-lathe-joa252.jpg" alt="Токарный станок с ЧПУ в производственном цехе" loading="lazy"/></div>
+<div class="c-content"><div class="c-top"><span class="c-rubric">Оборудование</span><span class="c-meta">29.04.2026</span></div><h3>Как выбрать токарный станок по детали</h3><p>Диаметр, длина, проход шпинделя, патрон, револьвер, задняя бабка и программа выпуска.</p><span class="c-action">Читать →</span></div>
+</a>
+<a class="card" href="press-kakoy-shlifovalnyy-stanok-vybrat.html">
+<div class="c-media"><img src="press-assets/oborudovanie/precision-surface-grinder.jpg" alt="Прецизионный плоскошлифовальный станок в производственном цехе" loading="lazy"/></div>
+<div class="c-content"><div class="c-top"><span class="c-rubric">Оборудование</span><span class="c-meta">25.04.2026</span></div><h3>Какой шлифовальный станок выбрать</h3><p>Круглошлифовальный, плоскошлифовальный или бесцентровый — выбор по геометрии и партии.</p><span class="c-action">Читать →</span></div>
+</a>
+<a class="card" href="press-vertikalnyy-ili-gorizontalnyy-obrabatyvayushchiy-centr.html">
+<div class="c-media"><img src="press-assets/oborudovanie/vmc-mehanit.jpg" alt="Вертикальный обрабатывающий центр Механит в производственном цехе" loading="lazy"/></div>
+<div class="c-content"><div class="c-top"><span class="c-rubric">Оборудование</span><span class="c-meta">29.03.2026</span></div><h3>Вертикальный или горизонтальный обрабатывающий центр</h3><p>Сравнение по числу сторон детали, стружкоудалению, паллетизации и стоимости проекта.</p><span class="c-action">Читать →</span></div>
+</a>
+<a class="card" href="press-lineynye-ili-rolikovye-napravlyayushchie.html">
+<div class="c-media"><img src="press-assets/oborudovanie/lineynye-napravlyayushchie-real.jpg" alt="Технолог проверяет точность установки роликовой направляющей на гранитной плите измерительным щупом" loading="lazy"/></div>
+<div class="c-content"><div class="c-top"><span class="c-rubric">Оборудование</span><span class="c-meta">25.03.2026</span></div><h3>Линейные или роликовые направляющие</h3><p>Сравнение динамики, жёсткости и задач тяжёлой или высокоскоростной обработки.</p><span class="c-action">Читать →</span></div>
+</a>
+<a class="card" href="press-os-y-v-tokarnom-centre.html">
+<div class="c-media"><img src="press-assets/oborudovanie/lathe-y-axis-head.jpg" alt="Токарный центр с приводным инструментом и осью Y" loading="lazy"/></div>
+<div class="c-content"><div class="c-top"><span class="c-rubric">Оборудование</span><span class="c-meta">23.02.2026</span></div><h3>Ось Y в токарном центре</h3><p>Какие операции она позволяет убрать: практика фрезерования и сверления вне оси.</p><span class="c-action">Читать →</span></div>
+</a>
+<a class="card" href="press-kogda-nuzhen-pyatiosevoy-obrabatyvayushchiy-centr.html">
+<div class="c-media"><img src="press-assets/oborudovanie/5-axis-rotary-fixture.jpg" alt="Деталь закреплена в поворотной оснастке под шпинделем обрабатывающего центра" loading="lazy"/></div>
+<div class="c-content"><div class="c-top"><span class="c-rubric">Оборудование</span><span class="c-meta">19.01.2026</span></div><h3>Когда действительно нужен пятиосевой центр</h3><p>Критерии, при которых 5 осей сокращают установки и дают измеримый эффект.</p><span class="c-action">Читать →</span></div>
+</a>
+<a class="card" href="press-kak-vybrat-portalnyy-obrabatyvayushchiy-centr.html">
+<div class="c-media"><img src="press-assets/oborudovanie/gantry-machine-floor.jpg" alt="Портальный обрабатывающий центр в производственном цехе" loading="lazy"/></div>
+<div class="c-content"><div class="c-top"><span class="c-rubric">Оборудование</span><span class="c-meta">15.01.2026</span></div><h3>Как выбрать портальный обрабатывающий центр</h3><p>Межколонное расстояние, стол, ходы, масса детали, ползун и шпиндельные головки.</p><span class="c-action">Читать →</span></div>
+</a>
+<a class="card" href="press-bt40-ili-bt50-kakoy-konus-shpindelya-vybrat.html">
+<div class="c-media"><img src="press-assets/oborudovanie/bt40-bt50-shpindel.jpg" alt="Шпиндель обрабатывающего центра с инструментом, закреплённым в конусном держателе" loading="lazy"/></div>
+<div class="c-content"><div class="c-top"><span class="c-rubric">Оборудование</span><span class="c-meta">18.12.2025</span></div><h3>BT40 или BT50: какой конус шпинделя выбрать</h3><p>Сравнение жёсткости, инструмента, оборотов и типовых задач без упрощения «один лучше другого».</p><span class="c-action">Читать →</span></div>
+</a>
+</div>
+</div></section>
+
+<section class="final-cta-wrap"><div class="wrap">
+<div class="final-cta">
+<div class="final-cta-copy"><h2>Есть производственная задача?</h2><p>Передайте чертёж, материал и программу выпуска. Технолог Механита поможет определить маршрут обработки и подобрать оборудование.</p></div>
+<div class="final-cta-actions">
+<a class="btn primary" href="index.html#quiz">Передать чертёж технологу</a>
+<a class="btn" href="equipment.html">Перейти к оборудованию</a>
+</div>
+</div>
+</div></section>
+
+</main>
+<script src="press-data.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://mehanit.ru/"},{"@type":"ListItem","position":2,"name":"Пресс-центр","item":"https://mehanit.ru/press.html"},{"@type":"ListItem","position":3,"name":"Оборудование","item":"https://mehanit.ru/press-rubric-oborudovanie.html"}]}</script>
+<script src="site-shell.js"></script>
+</body>
+</html>
