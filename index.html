@@ -1857,10 +1857,10 @@ body.hide-hdr-cta .hdr .hdr-cta{display:none}
 .sol-row-media img{max-width:100%;max-height:100%;object-fit:contain;filter:drop-shadow(0 10px 18px rgba(26,26,26,.18));transition:transform .5s cubic-bezier(.22,1.5,.36,1),filter .5s ease}
 .sol-row-name{flex:1;font-family:'Golos Text',sans-serif;font-size:17px;font-weight:600;letter-spacing:-.005em;line-height:1.3;color:var(--bm);transform-origin:left center;transition:color .3s ease,transform .35s cubic-bezier(.22,1.5,.36,1),text-shadow .3s ease}
 .sol-row-arrow{flex:0 0 auto;font-style:normal;font-size:16px;color:var(--ce);opacity:0;transform:translateX(-4px);transition:opacity .2s ease,transform .2s ease}
-.sol-row:hover,.sol-row:focus-visible{border-color:rgba(107,45,139,.4);z-index:2}
-.sol-row:hover .sol-row-media img,.sol-row:focus-visible .sol-row-media img{transform:scale(1.55) translateY(-10px) rotate(-3deg);filter:drop-shadow(0 34px 44px rgba(26,26,26,.3)) drop-shadow(0 14px 30px rgba(107,45,139,.35))}
-.sol-row:hover .sol-row-name,.sol-row:focus-visible .sol-row-name{color:var(--ce);font-weight:700;transform:scale(1.1);text-shadow:0 0 28px rgba(107,45,139,.5)}
-.sol-row:hover .sol-row-arrow,.sol-row:focus-visible .sol-row-arrow{opacity:1;transform:translateX(0)}
+.sol-row:hover,.sol-row:focus-visible,.sol-row.auto-pop{border-color:rgba(107,45,139,.4);z-index:2}
+.sol-row:hover .sol-row-media img,.sol-row:focus-visible .sol-row-media img,.sol-row.auto-pop .sol-row-media img{transform:scale(1.55) translateY(-10px) rotate(-3deg);filter:drop-shadow(0 34px 44px rgba(26,26,26,.3)) drop-shadow(0 14px 30px rgba(107,45,139,.35))}
+.sol-row:hover .sol-row-name,.sol-row:focus-visible .sol-row-name,.sol-row.auto-pop .sol-row-name{color:var(--ce);font-weight:700;transform:scale(1.1);text-shadow:0 0 28px rgba(107,45,139,.5)}
+.sol-row:hover .sol-row-arrow,.sol-row:focus-visible .sol-row-arrow,.sol-row.auto-pop .sol-row-arrow{opacity:1;transform:translateX(0)}
 .sol-row:focus-visible{outline:2px solid var(--ce);outline-offset:2px}
 @media(prefers-reduced-motion:reduce){.sol-row-media img,.sol-row-name{transition:color .3s ease}.sol-row:hover .sol-row-media img,.sol-row:focus-visible .sol-row-media img{transform:none}.sol-row:hover .sol-row-name,.sol-row:focus-visible .sol-row-name{transform:none}}
 @media(max-width:1180px){.sol-split{grid-template-columns:1fr;gap:44px}.sol-intro .eq-split-desc{max-width:560px}}
@@ -1974,22 +1974,12 @@ body.hide-hdr-cta .hdr .hdr-cta{display:none}
 @media(max-width:1080px){.eq-split{grid-template-columns:1fr;gap:32px}.eq-split-desc{max-width:520px}.eq-grid-static{grid-template-columns:repeat(4,1fr)}}
 @media(max-width:860px){.eq-grid-static{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:640px){.eq-car-nav{display:none}.eq-car-item{width:168px}.eq-car-title{font-size:12.5px;min-height:44px}.eq-grid-static{grid-template-columns:repeat(2,1fr);gap:8px}.eq-grid-static .eq-car-media img{max-height:180px}}
-/* Оборудование: появление иконок справа + волна по буквам заголовка */
-.eq-grid-static .eq-car-item{opacity:0;transform:translateX(70px);transition:opacity .55s cubic-bezier(.16,.8,.24,1),transform .55s cubic-bezier(.16,.8,.24,1)}
-.eq-grid-static.eq-in-view .eq-car-item{opacity:1;transform:translateX(0)}
-.eq-grid-static .eq-car-item:nth-child(1){transition-delay:0s}
-.eq-grid-static .eq-car-item:nth-child(2){transition-delay:.09s}
-.eq-grid-static .eq-car-item:nth-child(3){transition-delay:.18s}
-.eq-grid-static .eq-car-item:nth-child(4){transition-delay:.27s}
-.eq-grid-static .eq-car-item:nth-child(5){transition-delay:.36s}
-.eq-grid-static .eq-car-item:nth-child(6){transition-delay:.45s}
-.eq-grid-static .eq-car-item:nth-child(7){transition-delay:.54s}
-.eq-grid-static .eq-car-item:nth-child(8){transition-delay:.63s}
-@media(prefers-reduced-motion:reduce){.eq-grid-static .eq-car-item{opacity:1;transform:none;transition:none}}
-#equipment .eq-split-title .letter{display:inline-block}
-#equipment .eq-split-title.play-letters .letter{animation:eqLetterPop .5s cubic-bezier(.22,1.5,.36,1) both}
-@keyframes eqLetterPop{0%{transform:scale(1);color:inherit}35%{transform:scale(1.3);color:var(--ce)}100%{transform:scale(1);color:inherit}}
-@media(prefers-reduced-motion:reduce){#equipment .eq-split-title.play-letters .letter{animation:none}}
+/* Универсальная волна увеличения по буквам заголовка (используется на нескольких секциях) */
+.lw-word{display:inline-block}
+.lw-letter{display:inline-block}
+.lw-active .lw-letter{animation:letterWavePop .5s cubic-bezier(.22,1.5,.36,1) both}
+@keyframes letterWavePop{0%{transform:scale(1);color:inherit}35%{transform:scale(1.3);color:var(--ce)}100%{transform:scale(1);color:inherit}}
+@media(prefers-reduced-motion:reduce){.lw-active .lw-letter{animation:none}}
 
 /* Ленты «Станки в наличии» и «Комплексный подход» — компактный вариант carousel */
 .eq-carousel-wrap-tight{margin-top:28px}
@@ -3559,19 +3549,16 @@ renderToolBrands('turning');
   var cards=grid.querySelectorAll('.scenario-card');
   if(cards.length<2){return;}
   function runSweep(){
-    var order=[];
-    for(var i=0;i<cards.length;i++){order.push(i);}
-    for(var j=cards.length-2;j>=0;j--){order.push(j);}
     var stepMs=330;
-    order.forEach(function(idx,i){
+    cards.forEach(function(card,i){
       setTimeout(function(){
         cards.forEach(function(c){c.classList.remove('auto-pop');});
-        cards[idx].classList.add('auto-pop');
+        cards[i].classList.add('auto-pop');
       },i*stepMs);
     });
     setTimeout(function(){
       cards.forEach(function(c){c.classList.remove('auto-pop');});
-    },order.length*stepMs+180);
+    },cards.length*stepMs+180);
   }
   var fired=false;
   var obs2=new IntersectionObserver(function(entries){
@@ -3586,48 +3573,91 @@ renderToolBrands('turning');
   obs2.observe(grid);
 })();
 (function(){
-  var section=document.getElementById('equipment');
-  var grid=section&&section.querySelector('.eq-grid-static');
-  var title=section&&section.querySelector('.eq-split-title');
-  if(!section||!grid||!title||!('IntersectionObserver' in window)){return;}
+  var list=document.querySelector('.sol-list');
+  if(!list||!('IntersectionObserver' in window)){return;}
   if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches){return;}
-  var text=title.textContent;
-  title.textContent='';
-  var frag=document.createDocumentFragment();
-  var words=text.split(' ');
-  var idx=0;
-  words.forEach(function(word,wi){
-    var wordSpan=document.createElement('span');
-    wordSpan.style.display='inline-block';
-    for(var k=0;k<word.length;k++){
-      var span=document.createElement('span');
-      span.className='letter';
-      span.style.animationDelay=(idx*60)+'ms';
-      span.textContent=word[k];
-      wordSpan.appendChild(span);
-      idx++;
-    }
-    frag.appendChild(wordSpan);
-    if(wi<words.length-1){
-      frag.appendChild(document.createTextNode(' '));
-      idx++;
-    }
+  var items=list.querySelectorAll('.sol-row');
+  if(items.length<2){return;}
+  var rows=[];
+  items.forEach(function(el,i){
+    var r=i<5?i:i-5;
+    if(!rows[r]){rows[r]=[];}
+    rows[r].push(el);
   });
-  title.appendChild(frag);
+  function runSweep(){
+    var stepMs=380;
+    rows.forEach(function(rowItems,i){
+      setTimeout(function(){
+        items.forEach(function(el){el.classList.remove('auto-pop');});
+        rowItems.forEach(function(el){el.classList.add('auto-pop');});
+      },i*stepMs);
+    });
+    setTimeout(function(){
+      items.forEach(function(el){el.classList.remove('auto-pop');});
+    },rows.length*stepMs+250);
+  }
   var fired=false;
   var obs3=new IntersectionObserver(function(entries){
     entries.forEach(function(entry){
       if(entry.isIntersecting&&!fired){
         fired=true;
-        grid.classList.add('eq-in-view');
-        setTimeout(function(){
-          title.classList.add('play-letters');
-        },1330);
+        setTimeout(runSweep,350);
         obs3.disconnect();
       }
     });
   },{threshold:.35});
-  obs3.observe(section);
+  obs3.observe(list);
+})();
+(function(){
+  if(!('IntersectionObserver' in window)){return;}
+  if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches){return;}
+  function initLetterWave(el,opts){
+    if(!el){return;}
+    opts=opts||{};
+    var root=opts.root||el;
+    var text=el.textContent;
+    el.textContent='';
+    var frag=document.createDocumentFragment();
+    var words=text.split(' ');
+    var idx=0;
+    words.forEach(function(word,wi){
+      var wordSpan=document.createElement('span');
+      wordSpan.className='lw-word';
+      for(var k=0;k<word.length;k++){
+        var span=document.createElement('span');
+        span.className='lw-letter';
+        span.style.animationDelay=(idx*60)+'ms';
+        span.textContent=word[k];
+        wordSpan.appendChild(span);
+        idx++;
+      }
+      frag.appendChild(wordSpan);
+      if(wi<words.length-1){
+        frag.appendChild(document.createTextNode(' '));
+        idx++;
+      }
+    });
+    el.appendChild(frag);
+    var fired=false;
+    var obs=new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting&&!fired){
+          fired=true;
+          setTimeout(function(){el.classList.add('lw-active');},opts.delay||300);
+          obs.disconnect();
+        }
+      });
+    },{threshold:opts.threshold!=null?opts.threshold:.4});
+    obs.observe(root);
+  }
+  initLetterWave(document.querySelector('.hero-premium .hero-title-main'),{root:document.querySelector('.hero-premium'),threshold:.2,delay:700});
+  initLetterWave(document.querySelector('#scenarios .scenarios-intro .h2'),{delay:300});
+  initLetterWave(document.querySelector('#stock-home .h2'),{delay:300});
+  initLetterWave(document.querySelector('#solutions .sol-h2'),{delay:300});
+  initLetterWave(document.querySelector('#case-realized .h2'),{delay:300});
+  initLetterWave(document.querySelector('#expertise .h2'),{delay:300});
+  initLetterWave(document.querySelector('#clients .h2'),{delay:300});
+  initLetterWave(document.querySelector('.closer-text h2'),{delay:300});
 })();
 (function(){
   var steps=document.querySelectorAll('.sys-scrolly-step');
