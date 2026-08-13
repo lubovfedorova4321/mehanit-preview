@@ -34,9 +34,9 @@ body{background-image:linear-gradient(rgba(107,45,139,.05) 1px,transparent 1px),
    контент < .stock-tab(125) < .contact-launcher(140) < .contact-panel(141)
    < .mega/.floating-search(130/150, index.html) < .lead-modal(200) < .site-header(999) < .site-dropdown(1200) */
 
-.stock-tab{position:fixed;top:116px;right:24px;left:auto;z-index:125;display:inline-flex;align-items:center;gap:10px;height:52px;max-width:280px;padding:0 20px;background:#fff;border:1px solid rgba(26,26,26,.10);border-radius:14px;box-shadow:0 12px 32px rgba(26,26,26,.10);font-family:'PT Root UI',sans-serif;font-weight:600;font-size:15px;line-height:1.2;color:#1a1a1a;text-decoration:none;opacity:0;visibility:hidden;pointer-events:none;transform:translateX(6px);transition:opacity .2s ease,transform .2s ease,visibility .2s ease}
-.stock-tab.is-visible{opacity:1;visibility:visible;pointer-events:auto;transform:translateX(0)}
-.stock-tab:hover,.stock-tab:focus-visible{transform:translateX(-4px);box-shadow:0 16px 40px rgba(26,26,26,.16)}
+.stock-tab{position:fixed;top:auto;right:clamp(16px,2vw,32px);bottom:calc(clamp(16px,2vw,28px) + env(safe-area-inset-bottom,0px) + 66px);left:auto;z-index:125;display:inline-flex;align-items:center;gap:10px;height:52px;max-width:280px;padding:0 20px;background:#fff;border:1px solid rgba(26,26,26,.10);border-radius:14px;box-shadow:0 12px 32px rgba(26,26,26,.10);font-family:'PT Root UI',sans-serif;font-weight:600;font-size:15px;line-height:1.2;color:#1a1a1a;text-decoration:none;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(10px);transition:opacity .2s ease,transform .2s ease,visibility .2s ease}
+.stock-tab.is-visible{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.stock-tab:hover,.stock-tab:focus-visible{transform:translateY(-3px);box-shadow:0 16px 40px rgba(26,26,26,.16)}
 .stock-tab:focus-visible{outline:2px solid #6B2D8B;outline-offset:2px}
 .stock-tab-icon{display:grid;place-items:center;flex:0 0 auto;color:#6B2D8B}
 .stock-tab-icon svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.7}
