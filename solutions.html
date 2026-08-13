@@ -54,20 +54,22 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 main{padding-bottom:clamp(20px,3vw,32px)}
 
 .sol-hero{padding:clamp(4px,1vw,14px) 0 clamp(26px,3vw,38px)}
-.sol-title{font-family:'Magistral',sans-serif;font-weight:700;font-size:clamp(34px,4.4vw,58px);line-height:1.02;letter-spacing:-.015em;color:var(--bm);margin:2px 0 18px}
-.title-row{display:flex;align-items:center;gap:16px}
+.eq-hero-top{display:grid;grid-template-columns:minmax(0,1.8fr) minmax(0,1fr);gap:40px;align-items:center}
+.sol-title{font-family:'Magistral',sans-serif;font-weight:700;font-size:clamp(32px,4.4vw,58px);line-height:1.05;letter-spacing:-.015em;color:var(--bm);margin:0;max-width:900px}
+.title-row{display:flex;align-items:center;gap:16px;min-width:0}
 .title-dash{flex:0 0 auto;width:40px;height:3px;background:linear-gradient(90deg,var(--gold),var(--ce))}
-.sol-title::after{content:'';display:block;width:72px;height:3px;margin-top:22px;background:var(--gold)}
-.sol-intro{font-family:'Golos Text',sans-serif;font-weight:400;font-size:16px;line-height:1.65;color:var(--mid);max-width:760px;margin:0}
+.title-text{min-width:0;overflow-wrap:break-word}
+.sol-intro{font-family:'Golos Text',sans-serif;font-weight:400;font-size:15.5px;line-height:1.65;color:var(--mid);max-width:480px;margin:0}
+@media(max-width:1180px){.eq-hero-top{grid-template-columns:1fr;gap:16px}}
 
-.sol-grid-section{padding:clamp(20px,3vw,36px) 0 clamp(50px,6vw,84px)}
-.sol-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(28px,3vw,44px) clamp(20px,2.4vw,32px)}
+.sol-grid-section{padding:clamp(16px,2.4vw,28px) 0 clamp(36px,4.6vw,60px)}
+.sol-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,2.2vw,32px) clamp(16px,2vw,26px)}
 .sol-tile{display:flex;flex-direction:column;transition:transform .2s ease}
 .sol-tile:hover{transform:translateY(-3px)}
-.sol-tile-media{position:relative;z-index:2;height:clamp(150px,13vw,196px);display:flex;align-items:flex-end;justify-content:center;margin-bottom:-40px;pointer-events:none}
-.sol-tile-media img{max-width:82%;max-height:100%;width:auto;height:auto;object-fit:contain;filter:drop-shadow(0 18px 20px rgba(26,26,26,.22));transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+.sol-tile-media{position:relative;z-index:2;height:clamp(96px,7.4vw,124px);display:flex;align-items:flex-end;justify-content:center;margin-bottom:-28px;pointer-events:none}
+.sol-tile-media img{max-width:78%;max-height:100%;width:auto;height:auto;object-fit:contain;filter:drop-shadow(0 14px 16px rgba(26,26,26,.2));transition:transform .3s cubic-bezier(.2,.7,.2,1)}
 .sol-tile:hover .sol-tile-media img{transform:scale(1.05)}
-.sol-tile-panel{position:relative;z-index:1;flex:1;display:flex;align-items:center;min-height:118px;background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:0 10px 30px rgba(26,26,26,.05);padding:52px 24px 22px;transition:box-shadow .2s ease,border-color .2s ease}
+.sol-tile-panel{position:relative;z-index:1;flex:1;display:flex;align-items:center;min-height:96px;background:radial-gradient(ellipse 84% 138% at 6% 100%,rgba(122,60,160,.14),rgba(122,60,160,0) 60%),#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 10px 30px rgba(26,26,26,.05);padding:36px 20px 18px;transition:box-shadow .2s ease,border-color .2s ease}
 .sol-tile:hover .sol-tile-panel{box-shadow:0 18px 42px rgba(26,26,26,.09);border-color:rgba(26,26,26,.16)}
 .sol-tile-panel h3{margin:0;font-family:'Golos Text',sans-serif;font-weight:700;font-size:16.5px;line-height:1.3;color:var(--bm);text-transform:uppercase;letter-spacing:.01em}
 .sol-tile-arrow{margin-left:auto;flex:0 0 auto;font-size:19px;color:var(--ce);transition:transform .2s ease}
@@ -78,18 +80,16 @@ main{padding-bottom:clamp(20px,3vw,32px)}
 }
 @media(max-width:640px){
   .sol-grid{grid-template-columns:1fr}
-  .sol-title{font-size:clamp(32px,9vw,44px)}
+  .sol-title{font-size:clamp(20px,6.2vw,34px)}
+  .title-row{flex-direction:column;align-items:flex-start;gap:10px}
 }
 @media(prefers-reduced-motion:reduce){.sol-tile,.sol-tile-media img,.sol-tile-panel{transition:none}}
 
 .sol-tile-body{display:flex;flex-direction:column;gap:6px}
 .sol-tile-desc{font-family:'Golos Text',sans-serif;font-weight:400;font-size:12.5px;line-height:1.4;color:var(--mid);text-transform:none;letter-spacing:0}
-.sol-hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:24px}
-.btn-gray{background:var(--paper2);color:var(--bm);border-color:transparent}
-.btn-gray:hover{background:#d8d9dc}
 
 /* ===== SEO-контент: блоки после каталога отраслей ===== */
-.eq-section{padding:clamp(36px,4.6vw,64px) 0}
+.eq-section{padding:clamp(28px,3.6vw,48px) 0}
 .eq-h2{font-family:'Magistral',sans-serif;font-weight:700;font-size:clamp(26px,3vw,40px);line-height:1.1;letter-spacing:-.015em;color:var(--bm);margin:0}
 .eq-h2::after{content:'';display:block;width:56px;height:3px;margin-top:16px;background:var(--gold)}
 .eq-lede{font-family:'Golos Text',sans-serif;font-size:15.5px;line-height:1.6;color:var(--mid);max-width:640px;margin-top:16px}
@@ -97,61 +97,44 @@ main{padding-bottom:clamp(20px,3vw,32px)}
 .btn-ce{background:linear-gradient(120deg,#7a3c9c 0%,#6B2D8B 50%,#63297e 100%);color:#fff;border-color:transparent}
 .btn-ce:hover{filter:brightness(1.12)}
 
-.eq-crit-list{display:flex;flex-direction:column}
-.eq-crit{display:flex;align-items:flex-start;gap:16px;padding:16px 0;border-top:1px solid var(--line)}
-.eq-crit:first-child{border-top:0;padding-top:0}
-.eq-crit:last-child{padding-bottom:0}
-.eq-crit-icon{flex:0 0 auto;width:42px;height:42px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:var(--ce2);color:var(--ce)}
-.eq-crit-icon svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.7}
-.eq-crit-body b{display:block;font-family:'Golos Text',sans-serif;font-size:14.5px;font-weight:700;color:var(--bm);margin-bottom:3px}
-.eq-crit-body span{display:block;font-family:'Golos Text',sans-serif;font-size:13px;line-height:1.45;color:var(--mid)}
+/* Блок 1 — как пользоваться разделом «Решения» (интро + шаги + действия, единая карточка) */
+.eq-fit{background:#fff;border:1px solid var(--line);border-radius:24px;box-shadow:0 20px 56px rgba(26,26,26,.06);padding:clamp(28px,3.4vw,52px)}
+.eq-fit-intro{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:center}
+.eq-fit-lede{font-family:'Golos Text',sans-serif;font-size:15.5px;line-height:1.7;color:var(--mid);margin:0}
+@media(max-width:860px){.eq-fit-intro{grid-template-columns:1fr;gap:14px}}
+.eq-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:clamp(28px,3.2vw,42px)}
+.eq-step{position:relative;padding-right:22px}
+.eq-step:last-child{padding-right:0}
+.eq-step-icon{width:60px;height:60px;border-radius:14px;background:#fff;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--ce);margin-bottom:16px;box-shadow:0 8px 20px rgba(26,26,26,.05)}
+.eq-step-icon svg{width:30px;height:30px;fill:none;stroke:currentColor;stroke-width:1.6}
+.eq-step h3{font-family:'Golos Text',sans-serif;font-size:16px;font-weight:700;color:var(--bm);margin:0 0 8px;line-height:1.3}
+.eq-step p{font-family:'Golos Text',sans-serif;font-size:13.5px;line-height:1.5;color:var(--mid);margin:0}
+.eq-step-arrow{position:absolute;top:22px;right:-6px;font-size:18px;color:rgba(26,26,26,.2)}
+.eq-fit-actions{display:flex;align-items:center;gap:28px;flex-wrap:wrap;margin-top:clamp(28px,3vw,40px);padding-top:clamp(24px,2.6vw,32px);border-top:1px solid var(--line)}
+.eq-fit-actions a{font-family:'PT Root UI',sans-serif;font-size:12.5px;font-weight:700;letter-spacing:.03em;color:var(--ce)}
+.eq-fit-actions a:hover{color:var(--ceHover)}
 
-/* Блок 3 — как пользоваться разделом: горизонтальный маршрут 01–04 */
-.route-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:clamp(28px,3vw,40px)}
-.route-step{position:relative;padding-right:24px}
-.route-step:last-child{padding-right:0}
-.route-step-num{font-family:'Magistral',sans-serif;font-weight:700;font-size:15px;color:var(--ce);width:40px;height:40px;border-radius:50%;border:1.5px solid var(--ce3);display:flex;align-items:center;justify-content:center;margin-bottom:16px;background:#fff}
-.route-step h3{font-family:'Golos Text',sans-serif;font-size:16px;font-weight:700;color:var(--bm);margin:0 0 8px;line-height:1.3}
-.route-step p{font-family:'Golos Text',sans-serif;font-size:13.5px;line-height:1.5;color:var(--mid);margin:0}
-.route-step::after{content:'';position:absolute;top:19px;right:0;width:20px;height:1px;background:repeating-linear-gradient(90deg,var(--ce3) 0 6px,transparent 6px 10px)}
-.route-step:last-child::after{display:none}
-
-/* Блок 4 — что содержит решение */
-.route-solution{background:#fff;border:1px solid var(--line);border-radius:24px;box-shadow:0 20px 56px rgba(26,26,26,.06);padding:clamp(28px,3.4vw,52px);display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(32px,4vw,56px);align-items:center}
-.route-solution-media{border-radius:16px;overflow:hidden;aspect-ratio:4/3}
-.route-solution-media img{width:100%;height:100%;object-fit:cover;display:block}
-.route-solution-text .eq-crit-list{margin:20px 0 26px}
-
-/* Блок 5 — как формируется решение: вертикальный маршрут */
-.route-flow-wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(32px,4vw,56px);align-items:start;margin-top:clamp(28px,3vw,40px)}
-.route-flow-step{position:relative;padding:0 0 30px 54px;min-height:40px}
-.route-flow-step:last-child{padding-bottom:0}
-.route-flow-step::before{content:'';position:absolute;left:19px;top:40px;bottom:0;width:1.5px;background:repeating-linear-gradient(180deg,var(--ce3) 0 6px,transparent 6px 10px)}
-.route-flow-step:last-child::before{display:none}
-.route-flow-num{position:absolute;left:0;top:0;width:40px;height:40px;border-radius:50%;border:1.5px solid var(--ce);color:var(--ce);background:#fff;display:flex;align-items:center;justify-content:center;font-family:'Magistral',sans-serif;font-weight:700;font-size:15px}
-.route-flow-label{display:block;font-family:'Golos Text',sans-serif;font-size:15px;font-weight:600;color:var(--bm);line-height:1.4;padding-top:9px}
-.route-flow-text p{font-family:'Golos Text',sans-serif;font-size:15.5px;line-height:1.75;color:var(--mid);margin:0}
-
-/* Блок 6 — три сценария */
-.eq-scenarios{display:flex;flex-direction:column;gap:16px;margin-top:clamp(28px,3vw,40px)}
-.eq-scenario{display:grid;grid-template-columns:280px 1fr;align-items:stretch;background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 14px 40px rgba(26,26,26,.05);transition:box-shadow .2s ease,transform .2s ease}
-.eq-scenario:hover{transform:translateY(-2px);box-shadow:0 22px 56px rgba(26,26,26,.1)}
-.eq-scenario-media{position:relative;min-height:170px}
-.eq-scenario-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.eq-scenario-body{padding:clamp(20px,2.4vw,32px);display:flex;flex-direction:column;justify-content:center;gap:8px}
-.eq-scenario-body h3{font-family:'Magistral',sans-serif;font-size:clamp(19px,1.6vw,23px);font-weight:700;color:var(--bm);letter-spacing:-.01em;margin:0}
-.eq-scenario-body p{font-family:'Golos Text',sans-serif;font-size:14px;line-height:1.6;color:var(--mid);max-width:520px;margin:0}
-.eq-scenario-link{margin-top:4px;font-family:'PT Root UI',sans-serif;font-size:12px;font-weight:700;letter-spacing:.03em;color:var(--ce);display:inline-flex;align-items:center;gap:6px}
+/* Блок 3 — три сценария: модули в один ряд (как на «Оборудование») */
+.eq-scenarios{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:clamp(28px,3vw,40px)}
+.eq-scenario{position:relative;display:block;min-height:clamp(300px,22vw,360px);background:#fff;border:1px solid var(--line);border-radius:20px;text-decoration:none;outline:none;overflow:hidden;transition:transform .4s cubic-bezier(.22,1.5,.36,1),box-shadow .4s ease}
+.eq-scenario-media{position:absolute;inset:0;z-index:0}
+.eq-scenario-media img{width:100%;height:100%;object-fit:cover;object-position:60% center;display:block;transition:transform .5s cubic-bezier(.22,1.5,.36,1)}
+.eq-scenario-media::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#fff 0%,#fff 46%,rgba(255,255,255,.94) 54%,rgba(255,255,255,.4) 64%,rgba(255,255,255,0) 78%)}
+.eq-scenario-body{position:relative;z-index:1;display:flex;flex-direction:column;height:100%;width:50%;box-sizing:border-box;justify-content:center;gap:8px;padding:clamp(20px,2.2vw,28px) 14px clamp(20px,2.2vw,28px) 22px}
+.eq-scenario-body h3{font-family:'Magistral',sans-serif;font-size:clamp(21px,2vw,26px);font-weight:700;color:var(--bm);letter-spacing:-.01em;margin:0}
+.eq-scenario-body p{font-family:'Golos Text',sans-serif;font-size:13.5px;line-height:1.55;color:var(--mid);margin:0}
+.eq-scenario-link{display:inline-flex;align-items:center;gap:8px;margin-top:10px;font-family:'PT Root UI',sans-serif;font-size:12.5px;font-weight:700;letter-spacing:.3px;text-transform:uppercase;color:var(--ce)}
+.eq-scenario-link i{font-style:normal;transition:transform .22s ease}
+.eq-scenario:hover{transform:translateY(-4px);box-shadow:0 24px 56px rgba(26,26,26,.12)}
+.eq-scenario:hover .eq-scenario-media img{transform:scale(1.06)}
 .eq-scenario:hover .eq-scenario-link{color:var(--ceHover)}
+.eq-scenario:hover .eq-scenario-link i{transform:translateX(4px)}
 button.eq-scenario{border:1px solid var(--line);text-align:left;width:100%;font:inherit;color:inherit}
+@media(max-width:1080px){.eq-scenarios{grid-template-columns:repeat(2,1fr)}.eq-scenario:last-child{grid-column:1/-1}.eq-scenario:last-child .eq-scenario-media{aspect-ratio:4/1;position:relative}}
+@media(max-width:640px){.eq-scenarios{grid-template-columns:1fr}.eq-scenario{min-height:0}.eq-scenario-media{position:relative;display:block;aspect-ratio:16/10}.eq-scenario-media::after{background:linear-gradient(180deg,rgba(255,255,255,0) 60%,#fff 100%)}.eq-scenario-body{width:100%;height:auto;padding:22px 24px 28px}.eq-scenario:last-child .eq-scenario-media{aspect-ratio:16/10}}
+@media(prefers-reduced-motion:reduce){.eq-scenario,.eq-scenario-media img,.eq-scenario-link i{transition:none}}
 
-/* Блок 7 — что получает заказчик */
-.route-trust-strip{display:grid;grid-template-columns:repeat(7,1fr);gap:12px;margin-top:clamp(28px,3vw,40px)}
-.route-trust-item{text-align:center;padding:18px 8px;background:#fff;border:1px solid var(--line);border-radius:16px}
-.route-trust-item svg{width:26px;height:26px;fill:none;stroke:var(--ce);stroke-width:1.7;margin-bottom:10px}
-.route-trust-item span{display:block;font-family:'Golos Text',sans-serif;font-size:11.5px;line-height:1.4;font-weight:600;color:var(--bm)}
-
-/* Блок 8 — FAQ (визуал как на faq.html / equipment.html) */
+/* Блок 4 — FAQ (визуал как на faq.html / equipment.html) */
 .faq-list{max-width:860px;margin:clamp(24px,2.6vw,36px) 0 0}
 .faqi{background:#fff;border:1px solid var(--line);border-radius:14px;margin-bottom:10px;overflow:hidden}
 .faqq{width:100%;text-align:left;padding:20px 24px;font-family:'Golos Text',sans-serif;font-size:15px;font-weight:700;color:var(--bm);background:none;border:none;display:flex;align-items:center;justify-content:space-between;gap:16px;transition:color .2s}
@@ -170,18 +153,11 @@ button.eq-scenario{border:1px solid var(--line);text-align:left;width:100%;font:
 .eq-final-cta-btn{flex:0 0 auto}
 
 @media(max-width:1100px){
-  .route-solution{grid-template-columns:1fr}
-  .route-solution-media{aspect-ratio:16/9}
-  .route-steps{grid-template-columns:repeat(2,1fr);row-gap:28px}
-  .route-step::after{display:none}
-  .route-flow-wrap{grid-template-columns:1fr}
-  .route-trust-strip{grid-template-columns:repeat(4,1fr)}
+  .eq-steps{grid-template-columns:repeat(2,1fr);row-gap:28px}
+  .eq-step-arrow{display:none}
 }
 @media(max-width:760px){
-  .eq-scenario{grid-template-columns:1fr}
-  .eq-scenario-media{min-height:150px}
-  .route-steps{grid-template-columns:1fr}
-  .route-trust-strip{grid-template-columns:repeat(2,1fr)}
+  .eq-steps{grid-template-columns:1fr}
   .eq-final-cta{flex-direction:column;align-items:flex-start}
 }
 
@@ -222,12 +198,10 @@ button.eq-scenario{border:1px solid var(--line);text-align:left;width:100%;font:
 
 <section class="sol-hero">
 <div class="wrap">
-  <h1 class="sol-title"><span class="title-row"><span class="title-dash"></span>От детали — к технологии и оборудованию</span></h1>
+<div class="eq-hero-top">
+  <h1 class="sol-title"><span class="title-row"><span class="title-dash"></span><span class="title-text">От детали — к технологии и оборудованию</span></span></h1>
   <p class="sol-intro">Выберите отрасль и деталь, близкую к вашей задаче. Посмотрите маршрут обработки, ключевые операции и оборудование для каждого этапа — чтобы быстрее сформировать решение под своё производство.</p>
-  <div class="sol-hero-actions">
-  <a class="btn btn-ce" href="#catalog">Выбрать отрасль ↓</a>
-  <a class="btn btn-gray" href="#how-to-use">Как пользоваться разделом? ↓</a>
-  </div>
+</div>
 </div>
 </section>
 
@@ -247,87 +221,41 @@ button.eq-scenario{border:1px solid var(--line);text-align:left;width:100%;font:
 </div>
 </section>
 
-<!-- Блок 3: как пользоваться разделом -->
+<!-- Блок 1: как пользоваться разделом «Решения» -->
 <section class="eq-section" id="how-to-use">
 <div class="wrap">
-<h2 class="eq-h2">Как пользоваться разделом</h2>
-<p class="eq-lede">Найдите задачу, близкую к вашей.</p>
-<div class="route-steps">
-<div class="route-step"><span class="route-step-num">01</span><h3>Выберите отрасль</h3><p>Откройте направление, соответствующее вашему производству.</p></div>
-<div class="route-step"><span class="route-step-num">02</span><h3>Найдите аналогичную деталь</h3><p>Используйте типовой пример как отправную точку для своей задачи.</p></div>
-<div class="route-step"><span class="route-step-num">03</span><h3>Изучите маршрут обработки</h3><p>Посмотрите последовательность операций и требования к каждому этапу.</p></div>
-<div class="route-step"><span class="route-step-num">04</span><h3>Подберите оборудование</h3><p>Перейдите к категориям и моделям станков, подходящим для технологии.</p></div>
+<div class="eq-fit">
+<div class="eq-fit-intro">
+<h2 class="eq-h2">Как пользоваться разделом «Решения»</h2>
+<p class="eq-fit-lede">Каждое отраслевое решение показывает деталь, технологический маршрут и оборудование для каждого этапа обработки — без отдельного запроса и ожидания расчёта. Используйте готовый пример как отправную точку или передайте чертёж технологу, если ваша деталь отличается.</p>
 </div>
+<div class="eq-steps">
+<div class="eq-step"><span class="eq-step-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="1"/><path d="M3 7l9-4 9 4"/></svg></span><h3>Выберите отрасль</h3><p>Откройте направление, соответствующее вашему производству.</p><span class="eq-step-arrow">→</span></div>
+<div class="eq-step"><span class="eq-step-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="6" r="2"/><circle cx="19" cy="18" r="2"/><path d="M5 8v3a4 4 0 0 0 4 4h6"/></svg></span><h3>Изучите деталь и маршрут</h3><p>Посмотрите технологический маршрут, операции и требования к каждому этапу.</p><span class="eq-step-arrow">→</span></div>
+<div class="eq-step"><span class="eq-step-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1"/><path d="M3 9h18M8 16v4M16 16v4M6 20h12"/></svg></span><h3>Сверьте с оборудованием</h3><p>Основное и дополнительное оборудование, подобранное под маршрут обработки.</p><span class="eq-step-arrow">→</span></div>
+<div class="eq-step"><span class="eq-step-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l3 3v15H6z"/><path d="M15 3v3h3"/><path d="M9 12h6M9 16h6M9 8h3"/></svg></span><h3>Уточните под свою задачу</h3><p>Если деталь отличается — передайте чертёж технологу для разработки решения.</p></div>
 </div>
-</section>
-
-<!-- Блок 4: что содержит технологическое решение -->
-<section class="eq-section" id="what-inside">
-<div class="wrap">
-<div class="route-solution">
-<div class="route-solution-media"><img src="auto_hub.jpg" alt="Ступица колеса — пример обработанной детали" loading="lazy"/></div>
-<div class="route-solution-text">
-<h2 class="eq-h2">Не просто перечень станков — готовая логика производства</h2>
-<div class="eq-crit-list">
-<div class="eq-crit"><span class="eq-crit-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3v18"/><path d="M5 4h11l-2 4 2 4H5"/></svg></span><span class="eq-crit-body"><b>Производственная задача</b><span>Какой результат обработки необходимо обеспечить</span></span></div>
-<div class="eq-crit"><span class="eq-crit-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="6" r="2"/><circle cx="19" cy="18" r="2"/><path d="M5 8v3a4 4 0 0 0 4 4h6"/></svg></span><span class="eq-crit-body"><b>Технологический маршрут</b><span>Последовательность операций от заготовки до готовой детали</span></span></div>
-<div class="eq-crit"><span class="eq-crit-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 13 9 5 9-5"/></svg></span><span class="eq-crit-body"><b>Конфигурация оборудования</b><span>Основное, дополнительное и финишное оборудование</span></span></div>
-<div class="eq-crit"><span class="eq-crit-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v2.2M12 18.8V21M21 12h-2.2M5.2 12H3M18.4 5.6l-1.55 1.55M7.15 16.85l-1.55 1.55M18.4 18.4l-1.55-1.55M7.15 7.15 5.6 5.6"/></svg></span><span class="eq-crit-body"><b>Подходящие станки</b><span>Реальные категории и модели из каталога Механита</span></span></div>
-</div>
-<a class="btn btn-ce" href="solution-auto-wheel-hub.html">Посмотреть пример решения →</a>
+<div class="eq-fit-actions">
+<button type="button" class="btn btn-ce" onclick="openSolLeadModal()">Передать чертёж технологу →</button>
+<a href="solution-auto-wheel-hub.html">Смотреть пример решения →</a>
 </div>
 </div>
 </div>
 </section>
 
-<!-- Блок 5: как Механит разрабатывает решение -->
-<section class="eq-section" id="how-we-build">
-<div class="wrap">
-<h2 class="eq-h2">Как формируется решение под вашу деталь</h2>
-<div class="route-flow-wrap">
-<div class="route-flow">
-<div class="route-flow-step"><span class="route-flow-num">1</span><span class="route-flow-label">Чертёж и программа выпуска</span></div>
-<div class="route-flow-step"><span class="route-flow-num">2</span><span class="route-flow-label">Анализ материала, допусков и операций</span></div>
-<div class="route-flow-step"><span class="route-flow-num">3</span><span class="route-flow-label">Разработка технологического маршрута</span></div>
-<div class="route-flow-step"><span class="route-flow-num">4</span><span class="route-flow-label">Подбор станков, инструмента и оснастки</span></div>
-<div class="route-flow-step"><span class="route-flow-num">5</span><span class="route-flow-label">Проверка производительности и стоимости цикла</span></div>
-</div>
-<div class="route-flow-text">
-<p>При подборе оборудования инженеры учитывают геометрию детали, материал заготовки, допуски, шероховатость, количество установов, производственную программу и требования к длительности цикла. На основании этих данных формируется конфигурация оборудования и состав проекта.</p>
-</div>
-</div>
-</div>
-</section>
-
-<!-- Блок 6: три сценария -->
+<!-- Блок 2: три сценария -->
 <section class="eq-section" id="scenarios">
 <div class="wrap">
 <h2 class="eq-h2">Три сценария для вашей задачи</h2>
 <div class="eq-scenarios">
-<a class="eq-scenario" href="#catalog"><span class="eq-scenario-media"><img src="scenario-similar-part.png" alt="Похожая деталь и маршрут обработки" loading="lazy"/></span><span class="eq-scenario-body"><h3>Есть похожая деталь</h3><p>Посмотрите готовые отраслевые решения и используйте их как основу для своего проекта.</p><span class="eq-scenario-link">Выбрать отрасль →</span></span></a>
-<a class="eq-scenario" href="equipment.html"><span class="eq-scenario-media"><img src="scenario-pick-machine.png" alt="Каталог металлообрабатывающего оборудования" loading="lazy"/></span><span class="eq-scenario-body"><h3>Нужно сразу подобрать станок</h3><p>Перейдите в каталог металлообрабатывающего оборудования.</p><span class="eq-scenario-link">Смотреть оборудование →</span></span></a>
-<button type="button" class="eq-scenario" onclick="openSolLeadModal()"><span class="eq-scenario-media"><img src="scenario-nonstandard.png" alt="Нестандартная задача — передать чертёж технологу" loading="lazy"/></span><span class="eq-scenario-body"><h3>Задача нестандартная</h3><p>Передайте чертёж, требования к точности и производственную программу технологу.</p><span class="eq-scenario-link">Передать чертёж →</span></span></button>
+<a class="eq-scenario" href="#catalog"><span class="eq-scenario-media"><img src="scenario-similar-part.png" alt="Похожая деталь и маршрут обработки" loading="lazy"/></span><span class="eq-scenario-body"><h3>Есть похожая деталь</h3><p>Посмотрите готовые отраслевые решения и используйте их как основу для своего проекта.</p><span class="eq-scenario-link">Выбрать отрасль <i aria-hidden="true">→</i></span></span></a>
+<a class="eq-scenario" href="equipment.html"><span class="eq-scenario-media"><img src="scenario-pick-machine.png" alt="Каталог металлообрабатывающего оборудования" loading="lazy"/></span><span class="eq-scenario-body"><h3>Нужно сразу подобрать станок</h3><p>Перейдите в каталог металлообрабатывающего оборудования.</p><span class="eq-scenario-link">Смотреть оборудование <i aria-hidden="true">→</i></span></span></a>
+<button type="button" class="eq-scenario" onclick="openSolLeadModal()"><span class="eq-scenario-media"><img src="scenario-nonstandard.png" alt="Нестандартная задача — передать чертёж технологу" loading="lazy"/></span><span class="eq-scenario-body"><h3>Задача нестандартная</h3><p>Передайте чертёж, требования к точности и производственную программу технологу.</p><span class="eq-scenario-link">Передать чертёж <i aria-hidden="true">→</i></span></span></button>
 </div>
 </div>
 </section>
 
-<!-- Блок 7: что получает заказчик -->
-<section class="eq-section" id="trust">
-<div class="wrap">
-<h2 class="eq-h2">Что получает заказчик</h2>
-<div class="route-trust-strip">
-<div class="route-trust-item"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="6" r="2"/><circle cx="19" cy="18" r="2"/><path d="M5 8v3a4 4 0 0 0 4 4h6"/></svg><span>Обоснованный маршрут обработки</span></div>
-<div class="route-trust-item"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg><span>Перечень необходимых операций</span></div>
-<div class="route-trust-item"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="1"/><path d="M3 7l9-4 9 4"/></svg><span>Подходящие классы оборудования</span></div>
-<div class="route-trust-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3v6M3 6h6"/><path d="m9 9 10.5 10.5c.6.6.6 1.5 0 2.1-.6.6-1.5.6-2.1 0L6.9 11.1"/><path d="M14 14 19 9"/></svg><span>Рекомендации по инструменту и оснастке</span></div>
-<div class="route-trust-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M12 20V4M20 20v-7"/></svg><span>Расчёт производительности</span></div>
-<div class="route-trust-item"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r=".9" fill="currentColor" stroke="none"/></svg><span>Подбор реальных моделей станков</span></div>
-<div class="route-trust-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 5.5V11c0 4.5 2.8 7.7 7 9 4.2-1.3 7-4.5 7-9V5.5L12 3Z"/><path d="m9 12 2 2 4-4"/></svg><span>Сопровождение поставки и запуска</span></div>
-</div>
-</div>
-</section>
-
-<!-- Блок 8: частые вопросы -->
+<!-- Блок 3: частые вопросы -->
 <section class="eq-section" id="faq">
 <div class="wrap">
 <h2 class="eq-h2">Частые вопросы</h2>
