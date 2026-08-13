@@ -111,8 +111,9 @@ main{padding-bottom:clamp(20px,3vw,32px)}
 
 /* Блок 1 — как Механит подбирает оборудование (интро + этапы + действия, единая карточка) */
 .eq-fit{background:#fff;border:1px solid var(--line);border-radius:24px;box-shadow:0 20px 56px rgba(26,26,26,.06);padding:clamp(28px,3.4vw,52px)}
-.eq-fit-intro{max-width:720px}
-.eq-fit-intro p{font-family:'Golos Text',sans-serif;font-size:15.5px;line-height:1.7;color:var(--mid);margin:14px 0 0}
+.eq-fit-intro{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:center}
+.eq-fit-lede{font-family:'Golos Text',sans-serif;font-size:15.5px;line-height:1.7;color:var(--mid);margin:0}
+@media(max-width:860px){.eq-fit-intro{grid-template-columns:1fr;gap:14px}}
 .eq-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:clamp(28px,3.2vw,42px)}
 .eq-step{position:relative;padding-right:22px}
 .eq-step:last-child{padding-right:0}
@@ -130,15 +131,15 @@ main{padding-bottom:clamp(20px,3vw,32px)}
 .eq-scenario{position:relative;display:block;min-height:clamp(300px,22vw,360px);background:#fff;border:1px solid var(--line);border-radius:20px;text-decoration:none;outline:none;overflow:hidden;transition:transform .4s cubic-bezier(.22,1.5,.36,1),box-shadow .4s ease}
 .eq-scenario-media{position:absolute;inset:0;z-index:0}
 .eq-scenario-media img{width:100%;height:100%;object-fit:cover;object-position:60% center;display:block;transition:transform .5s cubic-bezier(.22,1.5,.36,1)}
-.eq-scenario-media::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#fff 0%,#fff 50%,rgba(255,255,255,.97) 62%,rgba(255,255,255,.5) 76%,rgba(255,255,255,0) 92%)}
-.eq-scenario-body{position:relative;z-index:1;display:flex;flex-direction:column;height:100%;width:72%;box-sizing:border-box;justify-content:center;gap:8px;padding:clamp(20px,2.2vw,28px) 14px clamp(20px,2.2vw,28px) 22px}
+.eq-scenario-media::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#fff 0%,#fff 46%,rgba(255,255,255,.94) 54%,rgba(255,255,255,.4) 64%,rgba(255,255,255,0) 78%)}
+.eq-scenario-body{position:relative;z-index:1;display:flex;flex-direction:column;height:100%;width:50%;box-sizing:border-box;justify-content:center;gap:8px;padding:clamp(20px,2.2vw,28px) 14px clamp(20px,2.2vw,28px) 22px}
 .eq-scenario-body h3{font-family:'Magistral',sans-serif;font-size:clamp(21px,2vw,26px);font-weight:700;color:var(--bm);letter-spacing:-.01em;margin:0}
 .eq-scenario-body p{font-family:'Golos Text',sans-serif;font-size:13.5px;line-height:1.55;color:var(--mid);margin:0}
-.eq-scenario-link{margin-top:10px;padding-bottom:5px;width:fit-content;border-bottom:2px solid var(--ce);font-family:'PT Root UI',sans-serif;font-size:13px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--ce);display:inline-flex;align-items:center;gap:7px;transition:color .3s ease,border-color .3s ease}
+.eq-scenario-link{display:inline-flex;align-items:center;gap:8px;margin-top:10px;font-family:'PT Root UI',sans-serif;font-size:12.5px;font-weight:700;letter-spacing:.3px;text-transform:uppercase;color:var(--ce)}
 .eq-scenario-link i{font-style:normal;transition:transform .22s ease}
 .eq-scenario:hover{transform:translateY(-4px);box-shadow:0 24px 56px rgba(26,26,26,.12)}
 .eq-scenario:hover .eq-scenario-media img{transform:scale(1.06)}
-.eq-scenario:hover .eq-scenario-link{color:var(--ceHover);border-color:var(--ceHover)}
+.eq-scenario:hover .eq-scenario-link{color:var(--ceHover)}
 .eq-scenario:hover .eq-scenario-link i{transform:translateX(4px)}
 @media(max-width:1080px){.eq-scenarios{grid-template-columns:repeat(2,1fr)}.eq-scenario:last-child{grid-column:1/-1}.eq-scenario:last-child .eq-scenario-media{aspect-ratio:4/1;position:relative}}
 @media(max-width:640px){.eq-scenarios{grid-template-columns:1fr}.eq-scenario{min-height:0}.eq-scenario-media{position:relative;display:block;aspect-ratio:16/10}.eq-scenario-media::after{background:linear-gradient(180deg,rgba(255,255,255,0) 60%,#fff 100%)}.eq-scenario-body{width:100%;height:auto;padding:22px 24px 28px}.eq-scenario:last-child .eq-scenario-media{aspect-ratio:16/10}}
@@ -242,7 +243,7 @@ button.eq-scenario{border:1px solid var(--line);text-align:left;width:100%;font:
 <div class="eq-fit">
 <div class="eq-fit-intro">
 <h2 class="eq-h2">Как Механит подбирает оборудование</h2>
-<p>Выбор оборудования начинается с производственной задачи, а не с модели станка. Инженеры анализируют чертёж детали, материал, допуски и объём выпуска — и на основании этих данных определяют технологию обработки, конфигурацию оборудования, ЧПУ, инструмент и оснастку.</p>
+<p class="eq-fit-lede">Выбор оборудования начинается с производственной задачи, а не с модели станка. Инженеры анализируют чертёж детали, материал, допуски и объём выпуска — и на основании этих данных определяют технологию обработки, конфигурацию оборудования, ЧПУ, инструмент и оснастку.</p>
 </div>
 <div class="eq-steps">
 <div class="eq-step"><span class="eq-step-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l3 3v15H6z"/><path d="M15 3v3h3"/><path d="M9 12h6M9 16h6M9 8h3"/></svg></span><h3>Чертёж и производственная задача</h3><p>Анализируем деталь, материал, допуски и объём выпуска.</p><span class="eq-step-arrow">→</span></div>
