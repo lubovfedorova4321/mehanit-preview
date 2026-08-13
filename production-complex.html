@@ -1,351 +1,316 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Комплексное оснащение производства — Механит</title><link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-  <meta name="description" content="Комплексные решения для оснащения производственных участков: токарные, фрезерные, 5-осевые, инструментальные, заготовительные и роботизированные ячейки."/>
-  
-  <style>
-    :root{--bm:#1A1A1A;--gold:#C9A227;--ce:#6B2D8B;--paper:#F3F4F3;--mid:#5B6166;--soft:#E7E8EA;--line:rgba(26,26,26,.1)}
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;background:var(--paper);color:var(--bm);font-family:'Golos Text',Arial,sans-serif}
-    a{text-decoration:none;color:inherit}
-    .wrap{width:min(1220px,calc(100% - 48px));margin:auto}
-    .top{position:sticky;top:0;z-index:10;background:rgba(246,246,244,.9);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
-    .top-in{height:74px;display:flex;align-items:center;justify-content:space-between}
-    .brand img{height:44px}
-    .phone{text-align:right}
-    .phone b{font-family:'Magistral';font-size:15px;letter-spacing:-.03em}
-    .phone span{display:block;color:#8a8f94;font-size:11px}
-    .crumbbar{background:rgba(246,246,244,.78);border-bottom:1px solid rgba(26,26,26,.055)}
-    .crumbs{min-height:44px;display:flex;align-items:center;gap:10px;font-family:'Golos Text';font-size:10px;letter-spacing:1px;text-transform:uppercase;color:#b1b5b9}
-    .crumbs a,.crumbs span,.crumbs b{color:#b1b5b9}
-    .hero{position:relative;overflow:hidden;padding:58px 0 42px;background:linear-gradient(135deg,#f8f8f6 0%,#eceeed 52%,#dedfe2 100%)}
-    .hero:before{content:"";position:absolute;inset:auto -8% -40% 38%;height:440px;background:radial-gradient(circle,rgba(107,45,139,.12),transparent 62%);pointer-events:none}
-    .hero-in{position:relative;display:grid;grid-template-columns:1.02fr .98fr;gap:34px;align-items:center}
-    .eyebrow{font-family:'Golos Text';font-size:10px;font-weight:800;letter-spacing:1.8px;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
-    .h1{font-family:'Magistral';font-size:clamp(34px,4.7vw,58px);line-height:1.02;letter-spacing:-.02em;margin:0}
-    .h1 span,.h2 span{color:var(--ce);font-weight:400}
-    .lead{font-size:17px;line-height:1.65;color:var(--mid);max-width:760px;margin:20px 0 0}
-    .hero-media{position:relative;min-height:360px;border:1px solid rgba(26,26,26,.08);overflow:hidden;background:#d9dcde;box-shadow:0 28px 90px rgba(26,26,26,.12)}
-    .hero-media img{width:100%;height:100%;min-height:360px;display:block;object-fit:cover;filter:saturate(1.02) contrast(1.04)}
-    .hero-media:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(243,244,243,.12),rgba(243,244,243,.02) 35%,rgba(26,26,26,.12))}
-    .quick-nav{position:sticky;top:74px;z-index:8;background:rgba(243,244,243,.9);backdrop-filter:blur(18px);border-top:1px solid rgba(26,26,26,.05);border-bottom:1px solid rgba(26,26,26,.07)}
-    .quick-nav .wrap{display:flex;gap:10px;overflow:auto;padding:12px 0}
-    .quick-nav a{white-space:nowrap;border:1px solid rgba(26,26,26,.1);background:rgba(255,255,255,.5);padding:10px 13px;font-family:'Golos Text';font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#737980;transition:.25s ease}
-    .quick-nav a:hover{color:var(--bm);border-color:rgba(201,162,39,.45);transform:translateY(-1px)}
-    section{padding:58px 0}
-    .sec-head{display:flex;justify-content:space-between;gap:28px;align-items:end;margin-bottom:24px}
-    .h2{font-family:'Magistral';font-size:clamp(28px,3.6vw,46px);line-height:1.05;letter-spacing:-.02em;margin:0}
-    .sec-head p{max-width:540px;margin:0;color:var(--mid);font-size:15px;line-height:1.65}
-    .complex-tabs{display:grid;grid-template-columns:repeat(6,1fr);gap:7px;margin:6px 0 18px;padding:8px;background:rgba(255,255,255,.5);border:1px solid rgba(26,26,26,.08);box-shadow:0 18px 54px rgba(26,26,26,.045)}
-    .complex-tab{min-height:56px;border:1px solid rgba(26,26,26,.1);background:rgba(243,244,243,.72);color:#6d7378;font-family:'Golos Text';font-size:9px;font-weight:800;letter-spacing:.7px;text-transform:uppercase;cursor:pointer;transition:.24s ease;padding:0 8px}
-    .complex-tab:hover{color:var(--bm);border-color:rgba(201,162,39,.45);transform:translateY(-1px)}
-    .complex-tab.is-active{background:var(--bm);border-color:var(--bm);color:#fff;box-shadow:0 12px 34px rgba(26,26,26,.18)}
-    .complex-card{position:relative;display:none;min-height:520px;overflow:hidden;background:#e7e8ea;border:1px solid rgba(26,26,26,.09);box-shadow:0 24px 70px rgba(26,26,26,.075)}
-    .complex-card.is-active{display:block}
-    .complex-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.95) contrast(1.03);transition:.45s ease}
-    .complex-card:hover img{transform:scale(1.035);filter:saturate(1.08) contrast(1.08)}
-    .complex-card:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(246,246,244,.02),rgba(246,246,244,.7) 48%,rgba(246,246,244,.97));z-index:1}
-    .complex-card.dark{color:#fff}
-    .complex-card.dark:before{background:linear-gradient(180deg,rgba(26,26,26,.06),rgba(26,26,26,.56) 48%,rgba(26,26,26,.88))}
-    .complex-body{position:relative;z-index:2;min-height:inherit;display:flex;flex-direction:column;justify-content:flex-end;padding:28px}
-    .complex-body small{font-family:'Golos Text';font-size:9px;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold)}
-    .complex-body h2{font-family:'Magistral';font-size:clamp(24px,2.7vw,34px);line-height:1.05;letter-spacing:-.02em;margin:12px 0 16px}
-    .panel-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:14px;max-width:940px}
-    .panel-box{padding:18px;background:rgba(255,255,255,.72);border:1px solid rgba(26,26,26,.1)}
-    .dark .panel-box{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.16)}
-    .panel-box h3{margin:0 0 12px;font-family:'Golos Text';font-size:10px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:var(--ce)}
-    .dark .panel-box h3{color:var(--gold)}
-    .chip-list{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
-    .chip-list li{display:inline-flex;align-items:center;min-height:32px;padding:7px 10px;border:1px solid rgba(26,26,26,.1);background:rgba(255,255,255,.68);font-size:13px;font-weight:600;color:#4f555a}
-    .dark .chip-list li{color:rgba(255,255,255,.82);border-color:rgba(255,255,255,.15);background:rgba(255,255,255,.08)}
-    .result{margin-top:14px;padding:16px 18px;background:rgba(201,162,39,.16);border:1px solid rgba(201,162,39,.34);font-weight:700;line-height:1.45}
-    .result span{display:block;margin-bottom:4px;font-family:'Golos Text';font-size:9px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:var(--gold)}
-    .support-band{background:linear-gradient(135deg,#1A1A1A,#2f3237);color:#fff}
-    .support-band .sec-head p{color:rgba(255,255,255,.68)}
-    .support-band .h2 span{color:var(--gold)}
-    .support-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-    .support-card{position:relative;overflow:hidden;min-height:270px;padding:20px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);box-shadow:0 22px 66px rgba(0,0,0,.2)}
-    .support-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.22;filter:saturate(.9) contrast(1.05)}
-    .support-card div{position:relative;z-index:1}
-    .support-card small{font-family:'Golos Text';font-size:9px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:var(--gold)}
-    .support-card h3{font-family:'Magistral';font-size:22px;line-height:1.08;letter-spacing:-.02em;margin:12px 0}
-    .support-card ul{margin:0;padding:0;list-style:none;display:grid;gap:8px;color:rgba(255,255,255,.78);font-size:15px}
-    .process-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;counter-reset:steps}
-    .step-card{position:relative;min-height:190px;padding:22px;background:#fff;border:1px solid var(--line);box-shadow:0 20px 60px rgba(26,26,26,.055);counter-increment:steps}
-    .step-card:before{content:counter(steps,decimal-leading-zero);display:block;margin-bottom:28px;font-family:'Golos Text';font-size:11px;font-weight:800;color:var(--gold);letter-spacing:1.4px}
-    .step-card h3{font-family:'Magistral';font-size:21px;line-height:1.08;letter-spacing:-.02em;margin:0 0 10px}
-    .step-card p{margin:0;color:var(--mid);line-height:1.55}
-    .cta-panel{display:grid;grid-template-columns:1fr auto;gap:22px;align-items:center;padding:28px;background:#fff;border:1px solid var(--line);box-shadow:0 24px 70px rgba(26,26,26,.06)}
-    .cta-panel h2{font-family:'Magistral';font-size:28px;line-height:1.1;letter-spacing:-.02em;margin:0 0 8px}
-    .cta-panel p{margin:0;color:var(--mid);line-height:1.6}
-    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 20px;background:var(--gold);border:0;color:var(--bm);font-family:'Golos Text';font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1px;cursor:pointer;transition:.25s ease;white-space:nowrap}
-    .btn:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(201,162,39,.28)}
-    .request-modal{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:22px;background:rgba(26,26,26,.62);backdrop-filter:blur(10px)}
-    .request-modal.is-open{display:flex}
-    .request-dialog{width:min(620px,100%);background:#f6f6f3;border:1px solid rgba(201,162,39,.34);box-shadow:0 40px 110px rgba(0,0,0,.34);padding:28px;position:relative}
-    .request-x{position:absolute;right:15px;top:12px;border:0;background:transparent;font-size:28px;color:#5B6166;cursor:pointer}
-    .request-dialog h3{font-family:'Magistral';font-size:28px;line-height:1.08;letter-spacing:-.018em;margin:0 0 10px}
-    .request-dialog h3 span{display:block;color:var(--ce);font-weight:400}
-    .request-dialog p{font-size:14px;line-height:1.6;color:#5B6166;margin:0 0 16px}
-    .request-form{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-    .request-form input,.request-form textarea{width:100%;border:1px solid rgba(26,26,26,.12);background:#fff;padding:13px;font:inherit;font-size:14px}
-    .request-form textarea{grid-column:1/-1;min-height:104px;resize:vertical}
-    .request-form .btn{grid-column:1/-1;margin-top:2px}
-    .request-note{font-family:'Golos Text';font-size:9px;letter-spacing:1px;text-transform:uppercase;color:#8a8f94;margin-top:12px}
-    @media(max-width:1080px){.hero-in,.panel-grid,.cta-panel{grid-template-columns:1fr}.complex-tabs{display:flex;overflow:auto}.complex-tab{flex:0 0 190px}.support-grid{grid-template-columns:repeat(2,1fr)}.process-grid{grid-template-columns:repeat(2,1fr)}}
-    @media(max-width:720px){.wrap{width:min(100% - 28px,1220px)}.hero{padding-top:40px}.hero-media,.hero-media img{min-height:270px}.complex-card{min-height:620px}.complex-body{padding:22px}.support-grid,.process-grid{grid-template-columns:1fr}.request-form{grid-template-columns:1fr}.request-dialog{padding:22px}.quick-nav{position:relative;top:auto}.phone b{font-size:13px}}
-  </style>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Комплексное оснащение производственных участков | Механит</title>
+<meta name="description" content="Готовые производственные участки: токарный, фрезерный, 5-осевой, инструментальный, заготовительный, роботизированные ячейки. Станок, инструмент, оснастка, автоматизация и сервис одним проектом."/>
+<link rel="canonical" href="https://mehanit.ru/production-complex.html"/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="Механит"/>
+<meta property="og:title" content="Комплексное оснащение производственных участков | Механит"/>
+<meta property="og:description" content="Готовые производственные участки: токарный, фрезерный, 5-осевой, инструментальный, заготовительный, роботизированные ячейки. Станок, инструмент, оснастка, автоматизация и сервис одним проектом."/>
+<meta property="og:url" content="https://mehanit.ru/production-complex.html"/>
+<meta property="og:image" content="https://mehanit.ru/module-banners/complex.jpeg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Главная","item":"https://mehanit.ru/"},
+    {"@type":"ListItem","position":2,"name":"Комплексный подход","item":"https://mehanit.ru/production-equipment.html"},
+    {"@type":"ListItem","position":3,"name":"Комплексное оснащение","item":"https://mehanit.ru/production-complex.html"}
+  ]
+}
+</script>
+<style>
+@font-face{font-family:'Magistral';src:url('fonts/Magistral-Regular.otf') format('opentype');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Magistral';src:url('fonts/Magistral-Bold.otf') format('opentype');font-weight:600 700;font-style:normal;font-display:swap}
+@font-face{font-family:'PT Root UI';src:url('fonts/PT-Root-UI_Regular.ttf') format('truetype');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'PT Root UI';src:url('fonts/PT-Root-UI_Medium.ttf') format('truetype');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:'PT Root UI';src:url('fonts/PT-Root-UI_Bold.ttf') format('truetype');font-weight:600 700;font-style:normal;font-display:swap}
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bm:#1A1A1A;--sg:#3D3D3D;--sg2:#2B2E31;--mid:#696D71;--muted:#8A9096;
+  --ce:#6B2D8B;--ce2:rgba(107,45,139,.10);--ce3:rgba(107,45,139,.20);--ceHover:#7d3aa0;
+  --gold:#C9A227;
+  --tl:#EAEAE6;--tl2:#F5F5F3;--paper:#EDEEF0;--paper2:#E4E5E8;--white:#fff;
+  --line:rgba(26,26,26,.10);--line2:rgba(234,234,230,.08);
+  --max:1600px;--shadow:0 24px 70px rgba(26,26,26,.10);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Golos Text',sans-serif;background:var(--paper);color:var(--bm);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding-inline:clamp(24px,4.4vw,84px)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1.5px solid transparent;min-height:48px;padding:0 22px;font-size:11px;font-weight:600;letter-spacing:.04em;font-family:'PT Root UI',sans-serif;transition:.18s;border-radius:8px;cursor:pointer}
+main{padding-bottom:clamp(20px,3vw,32px)}
+
+.sol-hero{padding:clamp(4px,1vw,14px) 0 clamp(26px,3vw,38px)}
+.eq-hero-top{display:grid;grid-template-columns:minmax(0,1.8fr) minmax(0,1fr);gap:40px;align-items:center}
+.sol-title{font-family:'Magistral',sans-serif;font-weight:700;font-size:clamp(32px,4.4vw,58px);line-height:1.05;letter-spacing:-.015em;color:var(--bm);margin:0;max-width:900px}
+.title-row{display:flex;align-items:center;gap:16px;min-width:0}
+.title-dash{flex:0 0 auto;width:40px;height:3px;background:linear-gradient(90deg,var(--gold),var(--ce))}
+.title-text{min-width:0;overflow-wrap:break-word}
+.sol-intro{font-family:'Golos Text',sans-serif;font-weight:400;font-size:15.5px;line-height:1.65;color:var(--mid);max-width:480px;margin:0}
+@media(max-width:1180px){.eq-hero-top{grid-template-columns:1fr;gap:16px}}
+@media(max-width:560px){.sol-title{font-size:clamp(20px,6.2vw,34px)}.title-row{flex-direction:column;align-items:flex-start;gap:10px}}
+
+.eq-section{padding:clamp(28px,3.6vw,48px) 0}
+.eq-h2{font-family:'Magistral',sans-serif;font-weight:700;font-size:clamp(26px,3vw,40px);line-height:1.1;letter-spacing:-.015em;color:var(--bm);margin:0}
+.eq-h2::after{content:'';display:block;width:56px;height:3px;margin-top:16px;background:var(--gold)}
+.eq-lede{font-family:'Golos Text',sans-serif;font-size:15.5px;line-height:1.6;color:var(--mid);max-width:640px;margin-top:16px}
+
+.btn-ce{background:linear-gradient(120deg,#7a3c9c 0%,#6B2D8B 50%,#63297e 100%);color:#fff;border-color:transparent}
+.btn-ce:hover{filter:brightness(1.12)}
+
+.tf-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:clamp(24px,2.6vw,32px)}
+.tf-btn{border:1.5px solid var(--line);background:#fff;color:var(--sg);border-radius:10px;min-height:44px;padding:0 16px;font-family:'PT Root UI',sans-serif;font-size:12px;font-weight:700;letter-spacing:.02em;transition:.18s}
+.tf-btn:hover{border-color:var(--ce3);color:var(--bm)}
+.tf-btn.on{background:var(--ce);border-color:var(--ce);color:#fff}
+
+.tp-panel{margin-top:clamp(20px,2.2vw,28px);background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 14px 40px rgba(26,26,26,.05)}
+.tp-media{aspect-ratio:21/9;background:#dfe1e4}
+.tp-media img{width:100%;height:100%;object-fit:cover;display:block}
+.tp-body{padding:clamp(24px,2.8vw,36px)}
+.tp-body small{display:block;font-family:'Golos Text',monospace;font-size:10px;letter-spacing:1.8px;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.tp-body h3{font-family:'Magistral',sans-serif;font-size:clamp(21px,2vw,27px);font-weight:700;color:var(--bm);letter-spacing:-.01em;margin:0 0 18px}
+.tp-2col{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.tp-2col h4{font-family:'PT Root UI',sans-serif;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
+.tp-2col ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.tp-2col li{font-family:'Golos Text',sans-serif;font-size:13.5px;color:var(--sg);display:flex;align-items:center;gap:8px}
+.tp-2col li::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--ce);flex:0 0 auto}
+.tp-result{margin-top:22px;padding-top:18px;border-top:1px solid var(--line);font-family:'Golos Text',sans-serif;font-size:14px;color:var(--sg)}
+.tp-result b{display:block;font-family:'PT Root UI',sans-serif;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ce);margin-bottom:4px}
+@media(max-width:640px){.tp-media{aspect-ratio:4/3}.tp-2col{grid-template-columns:1fr}}
+
+.sup-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:clamp(20px,2.2vw,28px)}
+.sup-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:transform .2s ease,box-shadow .2s ease}
+.sup-card:hover{transform:translateY(-3px);box-shadow:0 18px 42px rgba(26,26,26,.09)}
+.sup-media{aspect-ratio:16/10;background:#dfe1e4}
+.sup-media img{width:100%;height:100%;object-fit:cover;display:block}
+.sup-body{padding:16px}
+.sup-body small{display:block;font-family:'Golos Text',monospace;font-size:9px;letter-spacing:1.4px;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.sup-body h3{font-family:'Magistral',sans-serif;font-size:15px;font-weight:700;color:var(--bm);letter-spacing:-.01em;margin:0 0 8px}
+.sup-body ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:5px}
+.sup-body li{font-family:'Golos Text',sans-serif;font-size:11px;color:var(--mid);background:var(--paper2);border-radius:6px;padding:3px 7px}
+@media(max-width:1080px){.sup-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.sup-grid{grid-template-columns:1fr}}
+
+.flow-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:0;margin-top:clamp(28px,3.2vw,42px)}
+.flow-step{position:relative;padding:0 22px 0 0}
+.flow-step:last-child{padding-right:0}
+.flow-num{font-family:'Magistral',sans-serif;font-weight:700;font-size:15px;color:var(--ce);width:40px;height:40px;border-radius:50%;border:1.5px solid var(--ce3);display:flex;align-items:center;justify-content:center;margin-bottom:14px;background:#fff}
+.flow-step h3{font-family:'Golos Text',sans-serif;font-size:14.5px;font-weight:700;color:var(--bm);margin:0 0 6px;line-height:1.3}
+.flow-step p{font-family:'Golos Text',sans-serif;font-size:12.5px;line-height:1.45;color:var(--mid);margin:0}
+.flow-step::after{content:'';position:absolute;top:19px;right:0;width:16px;height:1px;background:repeating-linear-gradient(90deg,var(--ce3) 0 5px,transparent 5px 8px)}
+.flow-step:last-child::after{display:none}
+@media(max-width:1080px){.flow-grid{grid-template-columns:repeat(3,1fr);row-gap:26px}.flow-step::after{display:none}}
+@media(max-width:640px){.flow-grid{grid-template-columns:1fr}}
+
+.faq-list{max-width:860px;margin:clamp(24px,2.6vw,36px) 0 0}
+.faqi{background:#fff;border:1px solid var(--line);border-radius:14px;margin-bottom:10px;overflow:hidden}
+.faqq{width:100%;text-align:left;padding:20px 24px;font-family:'Golos Text',sans-serif;font-size:15px;font-weight:700;color:var(--bm);background:none;border:none;display:flex;align-items:center;justify-content:space-between;gap:16px;transition:color .2s}
+.faqq .ic{flex:0 0 auto;font-size:20px;color:var(--ce);transition:transform .2s}
+.faqi.open .faqq .ic{transform:rotate(45deg)}
+.faqa{max-height:0;overflow:hidden;transition:max-height .3s ease;padding:0 24px}
+.faqi.open .faqa{max-height:320px;padding-bottom:20px}
+.faqa p{font-family:'Golos Text',sans-serif;font-size:14px;line-height:1.65;color:var(--mid);margin:0}
+
+.eq-final-cta{background:linear-gradient(135deg,#1c1e22,#2c2e33);border-radius:24px;padding:clamp(32px,4vw,56px);display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap}
+.eq-final-cta h2{font-family:'Magistral',sans-serif;font-weight:700;font-size:clamp(24px,2.6vw,34px);color:#fff;letter-spacing:-.01em;max-width:560px;line-height:1.15;margin:0}
+.eq-final-cta p{font-family:'Golos Text',sans-serif;font-size:14.5px;color:rgba(234,234,230,.6);margin:10px 0 0;max-width:520px}
+.eq-final-cta-btn{flex:0 0 auto}
+@media(max-width:760px){.eq-final-cta{flex-direction:column;align-items:flex-start}}
+
+.eq-modal{position:fixed;inset:0;z-index:400;display:grid;place-items:center;padding:24px;background:rgba(26,26,26,.55);backdrop-filter:blur(6px);opacity:0;pointer-events:none;transition:opacity .2s ease}
+.eq-modal.is-open{opacity:1;pointer-events:auto}
+.eq-modal-dialog{width:min(560px,100%);max-height:min(90vh,720px);overflow:auto;background:#fff;border-radius:20px;border:1px solid var(--line);box-shadow:0 40px 100px rgba(0,0,0,.3);padding:clamp(28px,3.4vw,44px);position:relative;transform:translateY(10px);transition:transform .2s ease}
+.eq-modal.is-open .eq-modal-dialog{transform:translateY(0)}
+.eq-modal-close{position:absolute;top:14px;right:14px;width:38px;height:38px;border:1px solid var(--line);background:#fff;border-radius:50%;font-size:20px;line-height:1;color:var(--bm);display:grid;place-items:center;cursor:pointer}
+.eq-modal-eyebrow{font-family:'Golos Text',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--ce);margin-bottom:10px}
+.eq-modal-dialog h3{font-family:'Magistral',sans-serif;font-weight:700;font-size:clamp(21px,2vw,27px);color:var(--bm);letter-spacing:-.01em;margin:0 0 10px}
+.eq-modal-lead{font-family:'Golos Text',sans-serif;font-size:14px;line-height:1.6;color:var(--mid);margin:0 0 22px}
+.eq-modal-form{display:flex;flex-direction:column;gap:11px}
+.eq-modal-upload{position:relative;display:flex;align-items:center;gap:12px;min-height:64px;padding:12px 16px;border:1px dashed rgba(26,26,26,.22);border-radius:12px;cursor:pointer;font-family:'Golos Text',sans-serif;font-size:13px;color:var(--mid);transition:border-color .18s ease,background .18s ease}
+.eq-modal-upload:hover{border-color:rgba(107,45,139,.4);background:rgba(107,45,139,.03)}
+.eq-modal-upload svg{flex:0 0 auto;width:20px;height:20px;fill:none;stroke:var(--ce);stroke-width:1.8}
+.eq-modal-upload small{display:block;font-size:11px;color:var(--muted);margin-top:2px}
+.eq-modal-input{width:100%;min-height:48px;border:1px solid var(--line);border-radius:10px;padding:0 15px;font-family:'Golos Text',sans-serif;font-size:14px;color:var(--bm)}
+.eq-modal-input:focus{outline:2px solid var(--ce);outline-offset:1px}
+.eq-modal-form .btn{width:100%;margin-top:4px}
+.lead-consent{display:flex;align-items:flex-start;gap:9px;margin:2px 0;cursor:pointer;font-family:'PT Root UI',sans-serif;font-weight:400;font-size:12px;line-height:1.4;color:var(--sg)}
+.lead-consent input{accent-color:var(--ce);width:16px;height:16px;min-width:16px;margin-top:1px;cursor:pointer}
+.lead-consent a{color:var(--ce);text-decoration:underline;text-underline-offset:2px}
+.lead-consent a:hover{color:var(--ceHover)}
+.lead-err{display:none;color:#b3261e;font-family:'PT Root UI',sans-serif;font-size:11.5px;margin:-2px 0 0}
+.lead-err.is-shown{display:block}
+</style>
 <link rel="stylesheet" href="site-shell.css"/>
+<link rel="stylesheet" href="industry-solutions.css"/>
 </head>
 <body>
-  <header class="top">
-    <div class="wrap top-in">
-      <a class="brand" href="index.html"><img src="mehanit-logo-cropped.png" alt="Механит"/></a>
-      <a class="phone" href="tel:88005511206"><b>8 800 55 11 206</b><span>бесплатный звонок</span></a>
-    </div>
-  </header>
+<header></header>
+<main>
+<nav class="ind-crumbs" aria-label="Хлебные крошки"><div class="wrap"><ol>
+  <li><a href="index.html">Главная</a></li>
+  <li><a href="production-equipment.html">Комплексный подход</a></li>
+  <li aria-current="page">Комплексное оснащение</li>
+</ol></div></nav>
 
-  <div class="crumbbar">
-    <nav class="wrap crumbs" aria-label="Хлебные крошки"><a href="index.html">Главная</a><span class="crumb-sep" aria-hidden="true">/</span><a href="production-equipment.html">Комплексный подход</a><span class="crumb-sep" aria-hidden="true">/</span><span class="current" aria-current="page">Комплексное оснащение</span></nav>
-  </div>
+<section class="sol-hero">
+<div class="wrap">
+<div class="eq-hero-top">
+  <h1 class="sol-title"><span class="title-row"><span class="title-dash"></span><span class="title-text">Комплексные решения для производственных участков</span></span></h1>
+  <p class="sol-intro">Собираем участок как рабочую технологическую систему: станки, инструмент, оснастка, СОЖ, стружка, измерение, автоматизация, пусконаладка, обучение и сервис.</p>
+</div>
+</div>
+</section>
 
-  <main>
-    <section class="hero">
-      <div class="wrap hero-in">
-        <div>
-          <div class="eyebrow">Комплексное оснащение производства</div>
-          <h1 class="h1">Комплексные решения <span>для производственных участков</span></h1>
-          <p class="lead">Собираем участок как рабочую технологическую систему: станки, инструмент, оснастка, СОЖ, стружка, измерение, автоматизация, пусконаладка, обучение и сервис.</p>
-        </div>
-        <div class="hero-media" aria-label="Производственный участок с оборудованием">
-          <img src="complex-assets/production-floor.jpeg" alt="Производственный участок с металлообрабатывающим оборудованием"/>
-        </div>
-      </div>
-    </section>
+<section class="eq-section" id="directions">
+<div class="wrap">
+<h2 class="eq-h2">Готовые участки под тип деталей</h2>
+<p class="eq-lede">Выберите производственный сценарий — состав поставки, типовые детали и ожидаемый результат для участка.</p>
 
-    <nav class="quick-nav" aria-label="Разделы комплексного оснащения">
-      <div class="wrap">
-        <a href="#complex-directions">Направления оснащения</a>
-        <a href="#additional-equipment">Дополнительное оснащение</a>
-        <a href="#project-flow">Как работает проект</a>
-      </div>
-    </nav>
+<div class="tf-row" role="tablist" aria-label="Направления комплексного оснащения">
+<button class="tf-btn on" type="button" data-cx-tab="turning-area">Токарный участок</button>
+<button class="tf-btn" type="button" data-cx-tab="milling-area">Фрезерный участок</button>
+<button class="tf-btn" type="button" data-cx-tab="five-axis-area">5-осевой участок</button>
+<button class="tf-btn" type="button" data-cx-tab="tool-area">Инструментальное производство</button>
+<button class="tf-btn" type="button" data-cx-tab="blanking-area">Заготовительный участок</button>
+<button class="tf-btn" type="button" data-cx-tab="robot-area">Роботизированные ячейки</button>
+</div>
 
-    <section id="complex-directions">
-      <div class="wrap">
-        <div class="sec-head">
-          <div>
-            <div class="eyebrow">Направления оснащения</div>
-            <h2 class="h2">Готовые участки <span>под тип деталей</span></h2>
-          </div>
-          <p>Выберите производственный сценарий. Каждый вариант включает состав поставки, типовые детали и ожидаемый результат для участка.</p>
-        </div>
+<div class="tp-panel">
+<div class="tp-media"><img id="cxImg" src="complex-assets/turning-section.jpeg" alt="Токарная обработка детали вращения"/></div>
+<div class="tp-body">
+<small id="cxKicker">Токарный участок</small>
+<h3 id="cxTitle">Готовый участок для серийного производства деталей вращения</h3>
+<div class="tp-2col">
+<div><h4>Что входит</h4><ul id="cxIncludes"></ul></div>
+<div><h4 id="cxRightLabel">Типовые детали</h4><ul id="cxItems"></ul></div>
+</div>
+<div class="tp-result"><b>Результат</b><span id="cxResult">Готовый участок для серийного производства деталей вращения.</span></div>
+</div>
+</div>
+</div>
+</section>
 
-        <div class="complex-tabs" role="tablist" aria-label="Направления комплексного оснащения">
-          <button class="complex-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="turning-area" data-complex-tab="turning-area">Токарный участок</button>
-          <button class="complex-tab" type="button" role="tab" aria-selected="false" aria-controls="milling-area" data-complex-tab="milling-area">Фрезерный участок</button>
-          <button class="complex-tab" type="button" role="tab" aria-selected="false" aria-controls="five-axis-area" data-complex-tab="five-axis-area">5-осевой участок</button>
-          <button class="complex-tab" type="button" role="tab" aria-selected="false" aria-controls="tool-area" data-complex-tab="tool-area">Инструментальное производство</button>
-          <button class="complex-tab" type="button" role="tab" aria-selected="false" aria-controls="blanking-area" data-complex-tab="blanking-area">Заготовительный участок</button>
-          <button class="complex-tab" type="button" role="tab" aria-selected="false" aria-controls="robot-area" data-complex-tab="robot-area">Роботизированные ячейки</button>
-        </div>
+<section class="eq-section" id="additional-equipment">
+<div class="wrap">
+<h2 class="eq-h2">Все компоненты в одной поставке</h2>
+<p class="eq-lede">Комплексный проект закрывает не только станок, но и весь контур работы участка: инструмент, зажим, контроль, СОЖ, стружку и автоматизацию.</p>
+<div class="sup-grid">
+<div class="sup-card"><div class="sup-media"><img src="tool-strip-03.png" alt="Режущий инструмент"/></div><div class="sup-body"><small>Инструмент</small><h3>Режущий инструмент</h3><ul><li>Токарный</li><li>Фрезерный</li><li>Сверлильный</li><li>Расточной</li></ul></div></div>
+<div class="sup-card"><div class="sup-media"><img src="tooling-assets/machine-vise.jpeg" alt="Оснастка"/></div><div class="sup-body"><small>Оснастка</small><h3>Зажим и базирование</h3><ul><li>Тиски</li><li>Патроны</li><li>Цанги</li><li>Оправки</li></ul></div></div>
+<div class="sup-card"><div class="sup-media"><img src="complex-assets/quality-scan.jpeg" alt="Контроль качества"/></div><div class="sup-body"><small>Контроль качества</small><h3>Измерение</h3><ul><li>Измерительный инструмент</li><li>КИМ</li><li>Видеоизмерение</li><li>3D-сканирование</li></ul></div></div>
+<div class="sup-card"><div class="sup-media"><img src="coolant-assets/chip-conveyors.jpeg" alt="СОЖ и стружка"/></div><div class="sup-body"><small>СОЖ и стружка</small><h3>Чистый цикл</h3><ul><li>Насосные станции</li><li>Фильтрация СОЖ</li><li>Конвейеры стружки</li><li>Брикетирование</li></ul></div></div>
+<div class="sup-card"><div class="sup-media"><img src="automation-assets/robot-loading.jpeg" alt="Автоматизация производства"/></div><div class="sup-body"><small>Автоматизация</small><h3>Автономность участка</h3><ul><li>Податчики прутка</li><li>Паллетные системы</li><li>Роботизация</li><li>Автозагрузка</li></ul></div></div>
+<div class="sup-card"><div class="sup-media"><img src="complex-assets/production-floor.jpeg" alt="Комплексный участок"/></div><div class="sup-body"><small>Интеграция</small><h3>Стыковка решений</h3><ul><li>Технология</li><li>Компоновка</li><li>Запуск</li><li>Сервис</li></ul></div></div>
+<div class="sup-card"><div class="sup-media"><img src="measurement-assets/machine-probe.jpeg" alt="Контроль в станке"/></div><div class="sup-body"><small>В станке</small><h3>Контроль процесса</h3><ul><li>Щупы</li><li>Привязка инструмента</li><li>Коррекции</li><li>Снижение брака</li></ul></div></div>
+<div class="sup-card"><div class="sup-media"><img src="automation-assets/fms-line.jpeg" alt="Производственная линия"/></div><div class="sup-body"><small>Производственный поток</small><h3>Линии и ячейки</h3><ul><li>Несколько станков</li><li>Роботы</li><li>Склады паллет</li><li>Диспетчеризация</li></ul></div></div>
+</div>
+</div>
+</section>
 
-        <div class="complex-panels">
-          <article class="complex-card is-active" id="turning-area" role="tabpanel">
-            <img src="complex-assets/turning-section.jpeg" alt="Токарная обработка детали вращения"/>
-            <div class="complex-body">
-              <small>Токарный участок</small>
-              <h2>Готовый участок для серийного производства деталей вращения</h2>
-              <div class="panel-grid">
-                <div class="panel-box"><h3>Что входит</h3><ul class="chip-list"><li>Токарные станки</li><li>Патроны и зажимные системы</li><li>Режущий инструмент</li><li>Системы СОЖ</li><li>Конвейеры стружки</li><li>Измерительный инструмент</li><li>Автоматические податчики прутка</li></ul></div>
-                <div class="panel-box"><h3>Типовые детали</h3><ul class="chip-list"><li>Валы</li><li>Втулки</li><li>Фланцы</li><li>Штуцеры</li><li>Корпусные элементы</li></ul></div>
-              </div>
-              <div class="result"><span>Результат</span>Готовый участок для серийного производства деталей вращения.</div>
-            </div>
-          </article>
+<section class="eq-section" id="project-flow">
+<div class="wrap">
+<h2 class="eq-h2">От задачи до работающего участка</h2>
+<p class="eq-lede">Маршрут проекта помогает заранее увязать технологию, поставку, запуск и дальнейшую поддержку.</p>
+<div class="flow-grid">
+<div class="flow-step"><span class="flow-num">01</span><h3>Анализ задачи</h3><p>Изучаем детали, чертежи, объёмы производства и требования к точности.</p></div>
+<div class="flow-step"><span class="flow-num">02</span><h3>Подбор решения</h3><p>Формируем конфигурацию оборудования и оснащения.</p></div>
+<div class="flow-step"><span class="flow-num">03</span><h3>Поставка</h3><p>Поставляем оборудование, инструмент и оснастку.</p></div>
+<div class="flow-step"><span class="flow-num">04</span><h3>Пусконаладка</h3><p>Выполняем монтаж, настройку и запуск оборудования.</p></div>
+<div class="flow-step"><span class="flow-num">05</span><h3>Обучение персонала</h3><p>Подготавливаем операторов и технологов.</p></div>
+<div class="flow-step"><span class="flow-num">06</span><h3>Сервисная поддержка</h3><p>Гарантийное и постгарантийное обслуживание.</p></div>
+</div>
+</div>
+</section>
 
-          <article class="complex-card dark" id="milling-area" role="tabpanel">
-            <img src="complex-assets/milling-section.jpeg" alt="Фрезерная обработка корпусной детали"/>
-            <div class="complex-body">
-              <small>Фрезерный участок</small>
-              <h2>Высокопроизводительная обработка корпусных деталей</h2>
-              <div class="panel-grid">
-                <div class="panel-box"><h3>Что входит</h3><ul class="chip-list"><li>Вертикальные и горизонтальные обрабатывающие центры</li><li>Тиски</li><li>Оснастка</li><li>Оправки</li><li>Фрезерный инструмент</li><li>Системы измерения</li><li>Роботизированная загрузка</li></ul></div>
-                <div class="panel-box"><h3>Типовые детали</h3><ul class="chip-list"><li>Корпуса</li><li>Плиты</li><li>Кронштейны</li><li>Основания</li></ul></div>
-              </div>
-              <div class="result"><span>Результат</span>Высокопроизводительная обработка корпусных деталей.</div>
-            </div>
-          </article>
+<section class="eq-section" id="faq">
+<div class="wrap">
+<h2 class="eq-h2">Частые вопросы</h2>
+<div class="faq-list">
+<div class="faqi"><button class="faqq" onclick="toggleFaq(this)">Можно ли собрать участок под нестандартный тип деталей?<span class="ic">+</span></button><div class="faqa"><p>Да, состав оборудования и оснащения формируется под конкретную деталь, материал и объём выпуска.</p></div></div>
+<div class="faqi"><button class="faqq" onclick="toggleFaq(this)">Входит ли обучение персонала в комплексный проект?<span class="ic">+</span></button><div class="faqa"><p>Да, поставка сопровождается пусконаладкой и обучением операторов и технологов.</p></div></div>
+<div class="faqi"><button class="faqq" onclick="toggleFaq(this)">Можно ли расширить существующий участок, а не строить с нуля?<span class="ic">+</span></button><div class="faqa"><p>Да, дополнительное оснащение — инструмент, оснастку, измерение или автоматизацию — можно добавить к уже работающему участку.</p></div></div>
+</div>
+</div>
+</section>
 
-          <article class="complex-card" id="five-axis-area" role="tabpanel">
-            <img src="complex-assets/five-axis-section.jpeg" alt="Контроль и обработка сложной 5-осевой детали"/>
-            <div class="complex-body">
-              <small>5-осевой производственный участок</small>
-              <h2>Изготовление сложных деталей за один установ</h2>
-              <div class="panel-grid">
-                <div class="panel-box"><h3>Что входит</h3><ul class="chip-list"><li>5-осевые обрабатывающие центры</li><li>Высокоточная оснастка</li><li>Инструментальная система</li><li>CAM-подготовка</li><li>Контроль геометрии</li></ul></div>
-                <div class="panel-box"><h3>Типовые детали</h3><ul class="chip-list"><li>Импеллеры</li><li>Лопатки</li><li>Авиационные компоненты</li><li>Медицинские изделия</li></ul></div>
-              </div>
-              <div class="result"><span>Результат</span>Изготовление сложных деталей за один установ.</div>
-            </div>
-          </article>
+<section class="eq-section" id="final-cta">
+<div class="wrap">
+<div class="eq-final-cta">
+<div><h2>Опишите производство — получите состав решения</h2><p>Передайте деталь, материал, партию, требования к точности и желаемый уровень автоматизации. Соберём конфигурацию участка.</p></div>
+<button type="button" class="btn btn-ce eq-final-cta-btn" onclick="openEqLeadModal()">Передать задачу технологу →</button>
+</div>
+</div>
+</section>
 
-          <article class="complex-card dark" id="tool-area" role="tabpanel">
-            <img src="complex-assets/tool-production.jpeg" alt="Инструментальное производство и пресс-форма"/>
-            <div class="complex-body">
-              <small>Инструментальное производство</small>
-              <h2>Полный цикл изготовления инструментальной оснастки</h2>
-              <div class="panel-grid">
-                <div class="panel-box"><h3>Что входит</h3><ul class="chip-list"><li>Электроэрозионные станки</li><li>Шлифовальные станки</li><li>Оснастка</li><li>Измерительное оборудование</li><li>Системы хранения инструмента</li></ul></div>
-                <div class="panel-box"><h3>Типовые изделия</h3><ul class="chip-list"><li>Пресс-формы</li><li>Штампы</li><li>Электроды</li><li>Фильеры</li></ul></div>
-              </div>
-              <div class="result"><span>Результат</span>Полный цикл изготовления инструментальной оснастки.</div>
-            </div>
-          </article>
+</main>
 
-          <article class="complex-card dark" id="blanking-area" role="tabpanel">
-            <img src="complex-assets/blanking-section.jpeg" alt="Заготовительный участок листовой обработки"/>
-            <div class="complex-body">
-              <small>Заготовительный участок</small>
-              <h2>Подготовка заготовок перед механической обработкой</h2>
-              <div class="panel-grid">
-                <div class="panel-box"><h3>Что входит</h3><ul class="chip-list"><li>Ленточнопильные станки</li><li>Лазерные комплексы</li><li>Гидроабразивная резка</li><li>Системы загрузки и выгрузки</li></ul></div>
-                <div class="panel-box"><h3>Задачи участка</h3><ul class="chip-list"><li>Раскрой прутка</li><li>Раскрой листа</li><li>Подготовка партии</li><li>Подача на мехобработку</li></ul></div>
-              </div>
-              <div class="result"><span>Результат</span>Подготовка заготовок перед механической обработкой.</div>
-            </div>
-          </article>
+<div class="eq-modal" id="eqLeadModal" aria-hidden="true">
+<div class="eq-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="eqLeadModalTitle">
+<button class="eq-modal-close" type="button" onclick="closeEqLeadModal()" aria-label="Закрыть окно">×</button>
+<div class="eq-modal-eyebrow">Комплексное оснащение</div>
+<h3 id="eqLeadModalTitle">Передать задачу технологу</h3>
+<p class="eq-modal-lead">Опишите деталь, материал, партию и требования к точности — технолог соберёт конфигурацию участка.</p>
+<form class="eq-modal-form" onsubmit="return false">
+<label class="eq-modal-upload"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 12.5 15 5.5a3 3 0 0 1 4.24 4.24L11 18a2 2 0 0 1-2.83-2.83l6.36-6.36"></path></svg><span>Прикрепить чертёж или ТЗ<small>(не обязательно) · PDF · DWG · STEP</small></span><input type="file" style="position:absolute;width:1px;height:1px;overflow:hidden;opacity:0"/></label>
+<input class="eq-modal-input" id="eqLeadContact" placeholder="Телефон или email для ответа"/>
+<label class="lead-consent"><input type="checkbox" id="eqLeadConsent" required/><span>Принимаю условия <a href="privacy.html" data-legal="privacy">Политики конфиденциальности</a> и даю согласие на обработку персональных данных</span></label>
+<div class="lead-err" id="eqLeadConsentErr" role="alert"></div>
+<button class="btn btn-ce" type="button" onclick="submitEqLeadForm()">Передать задачу технологу</button>
+</form>
+</div>
+</div>
 
-          <article class="complex-card" id="robot-area" role="tabpanel">
-            <img src="complex-assets/robot-cell.jpeg" alt="Роботизированная производственная ячейка"/>
-            <div class="complex-body">
-              <small>Роботизированные производственные ячейки</small>
-              <h2>Автономная работа оборудования без постоянного участия оператора</h2>
-              <div class="panel-grid">
-                <div class="panel-box"><h3>Что входит</h3><ul class="chip-list"><li>Станок ЧПУ</li><li>Робот-манипулятор</li><li>Захватные устройства</li><li>Системы контроля</li><li>Безопасность и ограждения</li></ul></div>
-                <div class="panel-box"><h3>Сценарии</h3><ul class="chip-list"><li>Загрузка заготовок</li><li>Выгрузка деталей</li><li>Контроль между операциями</li><li>Работа 24/7</li></ul></div>
-              </div>
-              <div class="result"><span>Результат</span>Автономная работа оборудования без постоянного участия оператора.</div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="support-band" id="additional-equipment">
-      <div class="wrap">
-        <div class="sec-head">
-          <div>
-            <div class="eyebrow">Дополнительное оснащение</div>
-            <h2 class="h2">Все компоненты <span>в одной поставке</span></h2>
-          </div>
-          <p>Комплексный проект закрывает не только станок, но и весь контур работы участка: инструмент, зажим, контроль, СОЖ, стружку и автоматизацию.</p>
-        </div>
-
-        <div class="support-grid">
-          <article class="support-card"><img src="tool-strip-03.png" alt="Режущий инструмент"/><div><small>Инструмент</small><h3>Режущий инструмент</h3><ul><li>Токарный</li><li>Фрезерный</li><li>Сверлильный</li><li>Расточной</li></ul></div></article>
-          <article class="support-card"><img src="tooling-assets/machine-vise.jpeg" alt="Оснастка"/><div><small>Оснастка</small><h3>Зажим и базирование</h3><ul><li>Тиски</li><li>Патроны</li><li>Цанги</li><li>Оправки</li></ul></div></article>
-          <article class="support-card"><img src="complex-assets/quality-scan.jpeg" alt="Контроль качества"/><div><small>Контроль качества</small><h3>Измерение</h3><ul><li>Измерительный инструмент</li><li>КИМ</li><li>Видеоизмерительные машины</li><li>3D-сканирование</li></ul></div></article>
-          <article class="support-card"><img src="coolant-assets/chip-conveyors.jpeg" alt="СОЖ и стружка"/><div><small>СОЖ и стружка</small><h3>Чистый цикл</h3><ul><li>Насосные станции</li><li>Фильтрация СОЖ</li><li>Конвейеры стружки</li><li>Брикетирование отходов</li></ul></div></article>
-          <article class="support-card"><img src="automation-assets/robot-loading.jpeg" alt="Автоматизация производства"/><div><small>Автоматизация</small><h3>Автономность участка</h3><ul><li>Податчики прутка</li><li>Паллетные системы</li><li>Роботизация</li><li>Автоматическая загрузка</li></ul></div></article>
-          <article class="support-card"><img src="complex-assets/production-floor.jpeg" alt="Комплексный участок"/><div><small>Интеграция</small><h3>Стыковка решений</h3><ul><li>Технология</li><li>Компоновка</li><li>Запуск</li><li>Сервис</li></ul></div></article>
-          <article class="support-card"><img src="measurement-assets/machine-probe.jpeg" alt="Контроль в станке"/><div><small>В станке</small><h3>Контроль процесса</h3><ul><li>Щупы</li><li>Привязка инструмента</li><li>Коррекции</li><li>Снижение брака</li></ul></div></article>
-          <article class="support-card"><img src="automation-assets/fms-line.jpeg" alt="Производственная линия"/><div><small>Производственный поток</small><h3>Линии и ячейки</h3><ul><li>Несколько станков</li><li>Роботы</li><li>Склады паллет</li><li>Диспетчеризация</li></ul></div></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="project-flow">
-      <div class="wrap">
-        <div class="sec-head">
-          <div>
-            <div class="eyebrow">Как работает проект</div>
-            <h2 class="h2">От задачи <span>до работающего участка</span></h2>
-          </div>
-          <p>Маршрут проекта помогает заранее увязать технологию, поставку, запуск и дальнейшую поддержку.</p>
-        </div>
-        <div class="process-grid">
-          <article class="step-card"><h3>Анализ задачи</h3><p>Изучаем детали, чертежи, объемы производства и требования к точности.</p></article>
-          <article class="step-card"><h3>Подбор решения</h3><p>Формируем оптимальную конфигурацию оборудования и оснащения.</p></article>
-          <article class="step-card"><h3>Поставка</h3><p>Поставляем оборудование, инструмент и оснастку.</p></article>
-          <article class="step-card"><h3>Пусконаладка</h3><p>Выполняем монтаж, настройку и запуск оборудования.</p></article>
-          <article class="step-card"><h3>Обучение персонала</h3><p>Подготавливаем операторов и технологов.</p></article>
-          <article class="step-card"><h3>Сервисная поддержка</h3><p>Обеспечиваем гарантийное и постгарантийное обслуживание.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="wrap">
-        <div class="cta-panel">
-          <div>
-            <div class="eyebrow">Инженерный подбор участка</div>
-            <h2>Опишите производство — получите состав решения</h2>
-            <p>Передайте деталь, материал, партию, требования к точности и желаемый уровень автоматизации. Мы соберем конфигурацию участка и покажем, что входит в поставку.</p>
-          </div>
-          <button class="btn" type="button" data-module-request="Комплексное оснащение производства">Опишите деталь — получите решение</button>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <div class="request-modal" id="moduleRequestModal" aria-hidden="true">
-    <div class="request-dialog" role="dialog" aria-modal="true" aria-labelledby="moduleRequestTitle">
-      <button class="request-x" type="button" aria-label="Закрыть" onclick="closeModuleRequest()">×</button>
-      <div class="eyebrow">Заявка на подбор</div>
-      <h3 id="moduleRequestTitle">Опишите деталь <span id="moduleRequestName">получите решение</span></h3>
-      <p>Оставьте контакты и кратко опишите задачу. Инженер Механит уточнит состав участка, оборудование, инструмент, оснастку, контроль, автоматизацию и сервис.</p>
-      <form class="request-form">
-        <input id="moduleRequestField" name="module" readonly value="Комплексное оснащение производства"/>
-        <input name="name" placeholder="Ваше имя"/>
-        <input name="phone" placeholder="Телефон"/>
-        <input name="email" placeholder="Email"/>
-        <textarea name="task" placeholder="Что нужно оснастить: участок, деталь, материал, партия, точность, автоматизация, сроки"></textarea>
-        <button class="btn" type="button">Опишите деталь — получите решение</button>
-      </form>
-      <div class="request-note">Форма демонстрационная. Подключение отправки выполняется на этапе разработки сайта.</div>
-    </div>
-  </div>
-
-  <script>
-    document.addEventListener('click',function(e){
-      var tab=e.target.closest('[data-complex-tab]');
-      if(tab){
-        var id=tab.dataset.complexTab;
-        document.querySelectorAll('[data-complex-tab]').forEach(function(item){
-          var active=item===tab;
-          item.classList.toggle('is-active',active);
-          item.setAttribute('aria-selected',active?'true':'false');
-        });
-        document.querySelectorAll('.complex-card').forEach(function(card){
-          card.classList.toggle('is-active',card.id===id);
-        });
-        return;
-      }
-      var btn=e.target.closest('[data-module-request]');
-      if(btn){e.preventDefault();openModuleRequest(btn.dataset.moduleRequest);return;}
-      if(e.target&&e.target.id==='moduleRequestModal'){closeModuleRequest();}
-    });
-    function openModuleRequest(name){
-      var modal=document.getElementById('moduleRequestModal');
-      document.getElementById('moduleRequestName').textContent='получите решение';
-      document.getElementById('moduleRequestField').value=name||'Комплексное оснащение производства';
-      modal.classList.add('is-open');
-      modal.setAttribute('aria-hidden','false');
-      document.body.style.overflow='hidden';
-    }
-    function closeModuleRequest(){
-      var modal=document.getElementById('moduleRequestModal');
-      modal.classList.remove('is-open');
-      modal.setAttribute('aria-hidden','true');
-      document.body.style.overflow='';
-    }
-    document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModuleRequest();});
-  </script>
+<footer></footer>
 <script src="site-shell.js"></script>
+<script>
+function toggleFaq(b){b.parentElement.classList.toggle('open')}
+function openEqLeadModal(){var m=document.getElementById('eqLeadModal');m.classList.add('is-open');m.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';}
+function closeEqLeadModal(){var m=document.getElementById('eqLeadModal');m.classList.remove('is-open');m.setAttribute('aria-hidden','true');document.body.style.overflow='';}
+function submitEqLeadForm(){
+  var consent=document.getElementById('eqLeadConsent');
+  var err=document.getElementById('eqLeadConsentErr');
+  if(!consent.checked){err.textContent='Нужно принять условия обработки данных';err.classList.add('is-shown');consent.focus();return;}
+  err.textContent='';err.classList.remove('is-shown');closeEqLeadModal();
+}
+document.getElementById('eqLeadModal').addEventListener('click',function(e){if(e.target.id==='eqLeadModal'){closeEqLeadModal();}});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeEqLeadModal();}});
+
+var cxData={
+ 'turning-area':{kicker:'Токарный участок',title:'Готовый участок для серийного производства деталей вращения',img:'complex-assets/turning-section.jpeg',alt:'Токарная обработка детали вращения',rightLabel:'Типовые детали',includes:['Токарные станки','Патроны и зажимные системы','Режущий инструмент','Системы СОЖ','Конвейеры стружки','Измерительный инструмент','Автоматические податчики прутка'],items:['Валы','Втулки','Фланцы','Штуцеры','Корпусные элементы'],result:'Готовый участок для серийного производства деталей вращения.'},
+ 'milling-area':{kicker:'Фрезерный участок',title:'Высокопроизводительная обработка корпусных деталей',img:'complex-assets/milling-section.jpeg',alt:'Фрезерная обработка корпусной детали',rightLabel:'Типовые детали',includes:['Вертикальные и горизонтальные обрабатывающие центры','Тиски','Оснастка','Оправки','Фрезерный инструмент','Системы измерения','Роботизированная загрузка'],items:['Корпуса','Плиты','Кронштейны','Основания'],result:'Высокопроизводительная обработка корпусных деталей.'},
+ 'five-axis-area':{kicker:'5-осевой производственный участок',title:'Изготовление сложных деталей за один установ',img:'complex-assets/five-axis-section.jpeg',alt:'Контроль и обработка сложной 5-осевой детали',rightLabel:'Типовые детали',includes:['5-осевые обрабатывающие центры','Высокоточная оснастка','Инструментальная система','CAM-подготовка','Контроль геометрии'],items:['Импеллеры','Лопатки','Авиационные компоненты','Медицинские изделия'],result:'Изготовление сложных деталей за один установ.'},
+ 'tool-area':{kicker:'Инструментальное производство',title:'Полный цикл изготовления инструментальной оснастки',img:'complex-assets/tool-production.jpeg',alt:'Инструментальное производство и пресс-форма',rightLabel:'Типовые изделия',includes:['Электроэрозионные станки','Шлифовальные станки','Оснастка','Измерительное оборудование','Системы хранения инструмента'],items:['Пресс-формы','Штампы','Электроды','Фильеры'],result:'Полный цикл изготовления инструментальной оснастки.'},
+ 'blanking-area':{kicker:'Заготовительный участок',title:'Подготовка заготовок перед механической обработкой',img:'complex-assets/blanking-section.jpeg',alt:'Заготовительный участок листовой обработки',rightLabel:'Задачи участка',includes:['Ленточнопильные станки','Лазерные комплексы','Гидроабразивная резка','Системы загрузки и выгрузки'],items:['Раскрой прутка','Раскрой листа','Подготовка партии','Подача на мехобработку'],result:'Подготовка заготовок перед механической обработкой.'},
+ 'robot-area':{kicker:'Роботизированные производственные ячейки',title:'Автономная работа оборудования без постоянного участия оператора',img:'complex-assets/robot-cell.jpeg',alt:'Роботизированная производственная ячейка',rightLabel:'Сценарии',includes:['Станок ЧПУ','Робот-манипулятор','Захватные устройства','Системы контроля','Безопасность и ограждения'],items:['Загрузка заготовок','Выгрузка деталей','Контроль между операциями','Работа 24/7'],result:'Автономная работа оборудования без постоянного участия оператора.'}
+};
+function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+function li(arr){return arr.map(function(t){return '<li>'+esc(t)+'</li>';}).join('');}
+function renderCx(key){
+  var d=cxData[key];
+  document.getElementById('cxImg').src=d.img;
+  document.getElementById('cxImg').alt=d.alt;
+  document.getElementById('cxKicker').textContent=d.kicker;
+  document.getElementById('cxTitle').textContent=d.title;
+  document.getElementById('cxRightLabel').textContent=d.rightLabel;
+  document.getElementById('cxIncludes').innerHTML=li(d.includes);
+  document.getElementById('cxItems').innerHTML=li(d.items);
+  document.getElementById('cxResult').textContent=d.result;
+}
+document.addEventListener('click',function(e){
+  var t=e.target.closest('[data-cx-tab]');
+  if(t){
+    document.querySelectorAll('[data-cx-tab]').forEach(function(b){b.classList.toggle('on',b===t)});
+    renderCx(t.dataset.cxTab);
+  }
+});
+renderCx('turning-area');
+</script>
 </body>
 </html>
