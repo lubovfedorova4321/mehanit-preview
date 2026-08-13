@@ -1974,12 +1974,12 @@ body.hide-hdr-cta .hdr .hdr-cta{display:none}
 @media(max-width:1080px){.eq-split{grid-template-columns:1fr;gap:32px}.eq-split-desc{max-width:520px}.eq-grid-static{grid-template-columns:repeat(4,1fr)}}
 @media(max-width:860px){.eq-grid-static{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:640px){.eq-car-nav{display:none}.eq-car-item{width:168px}.eq-car-title{font-size:12.5px;min-height:44px}.eq-grid-static{grid-template-columns:repeat(2,1fr);gap:8px}.eq-grid-static .eq-car-media img{max-height:180px}}
-/* Универсальная волна увеличения по буквам заголовка (используется на нескольких секциях) */
-.lw-word{display:inline-block}
-.lw-letter{display:inline-block}
-.lw-active .lw-letter{animation:letterWavePop .5s cubic-bezier(.22,1.5,.36,1) both}
-@keyframes letterWavePop{0%{transform:scale(1);color:inherit}35%{transform:scale(1.3);color:var(--ce)}100%{transform:scale(1);color:inherit}}
-@media(prefers-reduced-motion:reduce){.lw-active .lw-letter{animation:none}}
+/* Отблеск на металле — однократный световой блик, пробегающий по заголовку (используется точечно) */
+.lw-shine-host{position:relative}
+.lw-shine{position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(100deg,transparent 35%,rgba(255,250,232,.95) 50%,transparent 65%);background-size:200% 100%;background-position:0% 0;background-repeat:no-repeat;-webkit-background-clip:text;background-clip:text;color:transparent}
+.lw-shine-host.lw-active .lw-shine{animation:metalShine 1.3s cubic-bezier(.4,0,.2,1) forwards}
+@keyframes metalShine{from{background-position:0% 0}to{background-position:200% 0}}
+@media(prefers-reduced-motion:reduce){.lw-shine-host.lw-active .lw-shine{animation:none}.lw-shine{display:none}}
 
 /* Ленты «Станки в наличии» и «Комплексный подход» — компактный вариант carousel */
 .eq-carousel-wrap-tight{margin-top:28px}
@@ -3605,33 +3605,17 @@ renderToolBrands('turning');
 (function(){
   if(!('IntersectionObserver' in window)){return;}
   if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches){return;}
-  function initLetterWave(el,opts){
+  function initShine(el,opts){
     if(!el){return;}
     opts=opts||{};
     var root=opts.root||el;
     var text=el.textContent;
-    el.textContent='';
-    var frag=document.createDocumentFragment();
-    var words=text.split(' ');
-    var idx=0;
-    words.forEach(function(word,wi){
-      var wordSpan=document.createElement('span');
-      wordSpan.className='lw-word';
-      for(var k=0;k<word.length;k++){
-        var span=document.createElement('span');
-        span.className='lw-letter';
-        span.style.animationDelay=(idx*60)+'ms';
-        span.textContent=word[k];
-        wordSpan.appendChild(span);
-        idx++;
-      }
-      frag.appendChild(wordSpan);
-      if(wi<words.length-1){
-        frag.appendChild(document.createTextNode(' '));
-        idx++;
-      }
-    });
-    el.appendChild(frag);
+    el.classList.add('lw-shine-host');
+    var shine=document.createElement('span');
+    shine.className='lw-shine';
+    shine.setAttribute('aria-hidden','true');
+    shine.textContent=text;
+    el.appendChild(shine);
     var fired=false;
     var obs=new IntersectionObserver(function(entries){
       entries.forEach(function(entry){
@@ -3644,12 +3628,8 @@ renderToolBrands('turning');
     },{threshold:opts.threshold!=null?opts.threshold:.4});
     obs.observe(root);
   }
-  initLetterWave(document.querySelector('#equipment .eq-split-title'),{delay:300});
-  initLetterWave(document.querySelector('#stock-home .h2'),{delay:300});
-  initLetterWave(document.querySelector('#case-realized .h2'),{delay:300});
-  initLetterWave(document.querySelector('#expertise .h2'),{delay:300});
-  initLetterWave(document.querySelector('#clients .h2'),{delay:300});
-  initLetterWave(document.querySelector('.closer-text h2'),{delay:300});
+  initShine(document.querySelector('.hero-premium .hero-title-main'),{root:document.querySelector('.hero-premium'),threshold:.2,delay:700});
+  initShine(document.querySelector('.closer-text h2'),{delay:300});
 })();
 (function(){
   var steps=document.querySelectorAll('.sys-scrolly-step');
