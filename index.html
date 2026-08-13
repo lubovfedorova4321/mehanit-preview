@@ -3578,34 +3578,28 @@ renderToolBrands('turning');
   if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches){return;}
   var items=list.querySelectorAll('.sol-row');
   if(items.length<2){return;}
-  var rows=[];
-  items.forEach(function(el,i){
-    var r=i<5?i:i-5;
-    if(!rows[r]){rows[r]=[];}
-    rows[r].push(el);
-  });
   function runSweep(){
-    var stepMs=380;
-    rows.forEach(function(rowItems,i){
+    var stepMs=220;
+    items.forEach(function(el,i){
       setTimeout(function(){
-        items.forEach(function(el){el.classList.remove('auto-pop');});
-        rowItems.forEach(function(el){el.classList.add('auto-pop');});
+        items.forEach(function(e){e.classList.remove('auto-pop');});
+        el.classList.add('auto-pop');
       },i*stepMs);
     });
     setTimeout(function(){
-      items.forEach(function(el){el.classList.remove('auto-pop');});
-    },rows.length*stepMs+250);
+      items.forEach(function(e){e.classList.remove('auto-pop');});
+    },items.length*stepMs+250);
   }
   var fired=false;
   var obs3=new IntersectionObserver(function(entries){
     entries.forEach(function(entry){
       if(entry.isIntersecting&&!fired){
         fired=true;
-        setTimeout(runSweep,350);
+        setTimeout(runSweep,300);
         obs3.disconnect();
       }
     });
-  },{threshold:.35});
+  },{threshold:.98});
   obs3.observe(list);
 })();
 (function(){
@@ -3650,10 +3644,8 @@ renderToolBrands('turning');
     },{threshold:opts.threshold!=null?opts.threshold:.4});
     obs.observe(root);
   }
-  initLetterWave(document.querySelector('.hero-premium .hero-title-main'),{root:document.querySelector('.hero-premium'),threshold:.2,delay:700});
-  initLetterWave(document.querySelector('#scenarios .scenarios-intro .h2'),{delay:300});
+  initLetterWave(document.querySelector('#equipment .eq-split-title'),{delay:300});
   initLetterWave(document.querySelector('#stock-home .h2'),{delay:300});
-  initLetterWave(document.querySelector('#solutions .sol-h2'),{delay:300});
   initLetterWave(document.querySelector('#case-realized .h2'),{delay:300});
   initLetterWave(document.querySelector('#expertise .h2'),{delay:300});
   initLetterWave(document.querySelector('#clients .h2'),{delay:300});
