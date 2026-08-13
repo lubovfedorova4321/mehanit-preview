@@ -1852,9 +1852,10 @@ body.hide-hdr-cta .hdr .hdr-cta{display:none}
 .sol-cta-secondary:hover{border-color:var(--ce);color:var(--ce)}
 .sol-cta-secondary:hover i{transform:translateX(4px)}
 .sol-list{position:relative;z-index:1;display:grid;grid-template-columns:repeat(2,1fr);grid-template-rows:repeat(5,auto);grid-auto-flow:column;column-gap:44px}
-.sol-row{display:flex;align-items:center;gap:16px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;outline:none;transition:border-color .2s ease}
-.sol-row-media{flex:0 0 auto;width:56px;height:56px;border-radius:50%;background:radial-gradient(circle at 32% 28%,#fff,var(--tl2) 76%);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;overflow:hidden;transition:border-color .2s ease}
-.sol-row-media img{width:72%;height:72%;object-fit:contain;filter:drop-shadow(0 4px 6px rgba(26,26,26,.14))}
+.sol-row{display:flex;align-items:center;gap:20px;padding:6px 2px;border-bottom:1px solid var(--line);text-decoration:none;outline:none;transition:border-color .2s ease}
+.sol-row-media{flex:0 0 auto;width:72px;height:72px;border-radius:50%;background:radial-gradient(circle at 32% 28%,#fff,var(--tl2) 76%);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;overflow:hidden;transition:border-color .2s ease}
+.sol-row-media img{width:74%;height:74%;object-fit:contain;filter:drop-shadow(0 4px 6px rgba(26,26,26,.14));transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+.sol-row:hover .sol-row-media img,.sol-row:focus-visible .sol-row-media img{transform:scale(1.2)}
 .sol-row-name{flex:1;font-family:'Golos Text',sans-serif;font-size:15px;font-weight:600;letter-spacing:-.005em;line-height:1.25;color:var(--bm);transition:color .2s ease}
 .sol-row-arrow{flex:0 0 auto;font-style:normal;font-size:15px;color:var(--ce);opacity:0;transform:translateX(-4px);transition:opacity .2s ease,transform .2s ease}
 .sol-row:hover,.sol-row:focus-visible{border-color:rgba(107,45,139,.4)}
