@@ -1,9 +1,9 @@
-@font-face{font-family:'Magistral';src:url('fonts/Magistral-Regular.otf') format('opentype');font-weight:400;font-style:normal;font-display:swap}
-@font-face{font-family:'Magistral';src:url('fonts/Magistral-Bold.otf') format('opentype');font-weight:600 700;font-style:normal;font-display:swap}
-@font-face{font-family:'Magistral';src:url('fonts/Magistral-Black.otf') format('opentype');font-weight:800 900;font-style:normal;font-display:swap}
-@font-face{font-family:'PT Root UI';src:url('fonts/PT-Root-UI_Regular.ttf') format('truetype');font-weight:400;font-style:normal;font-display:swap}
-@font-face{font-family:'PT Root UI';src:url('fonts/PT-Root-UI_Medium.ttf') format('truetype');font-weight:500;font-style:normal;font-display:swap}
-@font-face{font-family:'PT Root UI';src:url('fonts/PT-Root-UI_Bold.ttf') format('truetype');font-weight:600 700;font-style:normal;font-display:swap}
+@font-face{font-family:'Magistral';src:url('fonts/Magistral-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Magistral';src:url('fonts/Magistral-Bold.woff2') format('woff2');font-weight:600 700;font-style:normal;font-display:swap}
+@font-face{font-family:'Magistral';src:url('fonts/Magistral-Black.woff2') format('woff2');font-weight:800 900;font-style:normal;font-display:swap}
+@font-face{font-family:'PT Root UI';src:url('fonts/PT-Root-UI_Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'PT Root UI';src:url('fonts/PT-Root-UI_Medium.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:'PT Root UI';src:url('fonts/PT-Root-UI_Bold.woff2') format('woff2');font-weight:600 700;font-style:normal;font-display:swap}
 :root{--hdr-bg:rgba(247,248,249,.96);--hdr-border:rgba(32,36,42,.10);--hdr-graphite:#30343A;--hdr-ink:#20242A;--hdr-icon:#555B63;--hdr-muted:#5f6469;--hdr-purple:#6B2D8B;--hdr-menu-hover-bg:rgba(113,49,138,.10);--hdr-radius:8px;--hdr-h:92px;--hdr-h-stuck:74px}
 .site-header{position:sticky;top:0;z-index:999;background:var(--hdr-bg);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--hdr-border);box-shadow:0 6px 24px rgba(20,24,30,.05);font-family:'Golos Text',Arial,sans-serif;transition:box-shadow .2s ease}.site-header *{box-sizing:border-box}.site-header.is-stuck{box-shadow:0 10px 28px rgba(20,24,30,.08)}
 .site-nav{width:min(100% - 56px,1760px);height:var(--hdr-h);margin:auto;display:flex;align-items:center;transition:height .2s ease}.site-header.is-stuck .site-nav{height:var(--hdr-h-stuck)}
