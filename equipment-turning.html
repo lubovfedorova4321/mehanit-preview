@@ -212,6 +212,8 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 }
 .eqcat-subnav-head{margin-bottom:16px}
 .eqcat-subcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.eqcat-subcards-3col{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media(max-width:900px){.eqcat-subcards-3col{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .eqcat-subcards.is-scroll{display:flex;gap:16px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x proximity;padding-bottom:8px;margin-bottom:-8px;-webkit-overflow-scrolling:touch}
 .eqcat-subcards.is-scroll .eqcat-subcard{flex:0 0 300px;scroll-snap-align:start}
 .eqcat-subcards.is-scroll::-webkit-scrollbar{height:6px}
@@ -743,7 +745,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 
 <section class="eqcat-subnav-wrap" id="subcats"><div class="wrap">
 <div class="eqcat-subnav-head"><div class="eyebrow">Подкатегории</div><h2 class="h2 g2-subnav-title">Выберите тип оборудования</h2></div>
-<nav class="eqcat-subcards is-scroll">
+<nav class="eqcat-subcards eqcat-subcards-3col">
 <button type="button" class="eqcat-subcard is-active" data-milling-tab="engine" aria-current="true">
 <span class="eqcat-subcard-badge" aria-hidden="true">✓</span>
 <span class="eqcat-subcard-media"><img src="stock-assets/cutout/turning-macroline-lb-b500x1500.png" alt="Токарно-винторезные станки (универсальные)" loading="lazy"/></span>
