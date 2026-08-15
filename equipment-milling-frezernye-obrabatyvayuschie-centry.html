@@ -1447,24 +1447,69 @@ footer{background:var(--bm);color:rgba(234,234,230,.55);padding:3rem 0 2rem;bord
 .vmc-specs{margin-top:auto}
 @media(max-width:1180px){.vmc-actions{grid-template-columns:1fr}}
 .vmc-photo{padding:10px}.vmc-photo img{position:relative;z-index:1;max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;filter:drop-shadow(0 10px 16px rgba(26,26,26,.16))}
+.vmc-hero{background:radial-gradient(ellipse at 82% 14%,rgba(107,45,139,.12),transparent 38%),linear-gradient(180deg,var(--tl2),var(--paper))!important}
+.vmc-hero .machine-list-hero-grid{padding:44px 0 26px!important;gap:28px!important}
+.vmc-side h3{font-weight:500!important;line-height:1.55!important;color:rgba(42,45,50,.82)!important}
+.vmc-model-section{padding:38px 0 92px;background:linear-gradient(180deg,var(--paper),var(--tl2))}
+.vmc-toolbar{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:24px}
+.vmc-chips{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:8px;max-width:640px}
+.vmc-chip{appearance:none;border:1px solid rgba(255,255,255,.28);background:rgba(91,96,104,.25);box-shadow:inset 0 1px 0 rgba(255,255,255,.22);backdrop-filter:blur(14px);padding:10px 14px;font-family:'Golos Text',monospace;font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:rgba(55,59,65,.82);cursor:pointer;transition:.18s}
+.vmc-chip:hover,.vmc-chip.is-active{background:rgba(78,83,92,.42);border-color:rgba(107,45,139,.34);color:var(--bm);box-shadow:0 14px 34px rgba(107,45,139,.12),inset 0 1px 0 rgba(255,255,255,.18)}
+.vmc-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.vmc-card{position:relative;overflow:hidden;background:rgba(255,255,255,.80);border:1px solid rgba(26,26,26,.08);box-shadow:0 22px 58px rgba(26,26,26,.08);transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease,background .22s ease}
+.vmc-card:hover{transform:translateY(-5px);border-color:rgba(107,45,139,.30);box-shadow:0 28px 72px rgba(107,45,139,.13),0 18px 44px rgba(26,26,26,.10);background:rgba(255,255,255,.88)}
+.vmc-card.is-hidden{display:none}
+.vmc-photo{height:210px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(91,96,104,.18),rgba(255,255,255,.34));border-bottom:1px solid rgba(26,26,26,.06);position:relative}
+.vmc-photo::before{content:'';position:absolute;left:50%;top:0;width:54px;height:1px;transform:translateX(-50%);background:linear-gradient(90deg,rgba(107,45,139,.66),rgba(201,162,39,.45))}
+.vmc-photo span{font-family:'Golos Text',monospace;font-size:10px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:rgba(82,86,90,.55)}
+.vmc-body{padding:20px}
+.vmc-body small{display:block;margin-bottom:10px;font-family:'Golos Text',monospace;font-size:9px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:var(--ce)}
+.vmc-body h3{font-size:19px;line-height:1.25;margin-bottom:10px;letter-spacing:-.018em}
+.vmc-body p{min-height:84px;color:var(--mid);font-size:13px;line-height:1.55;margin-bottom:16px}
+.vmc-specs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.vmc-specs div{background:rgba(237,238,240,.72);border:1px solid rgba(26,26,26,.06);padding:10px;min-height:64px}
+.vmc-specs span{display:block;margin-bottom:5px;font-family:'Golos Text',monospace;font-size:8px;letter-spacing:.9px;text-transform:uppercase;color:rgba(82,86,90,.66)}
+.vmc-specs b{display:block;font-size:12px;line-height:1.25;color:rgba(32,35,39,.92)}
+@media(max-width:1180px){.vmc-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.vmc-toolbar{display:block}.vmc-chips{justify-content:flex-start;margin-top:18px}}
+@media(max-width:720px){.vmc-grid{grid-template-columns:1fr}.vmc-photo{height:180px}.vmc-body p{min-height:auto}}
+
+
+
+/* === V25 engineering filter catalog === */
+.vmc-catalog-layout{display:grid;grid-template-columns:286px minmax(0,1fr);gap:24px;align-items:start}
+.vmc-filter-panel{position:sticky;top:92px;background:rgba(255,255,255,.62);border:1px solid rgba(26,26,26,.08);box-shadow:0 24px 62px rgba(26,26,26,.075);backdrop-filter:blur(18px);padding:18px;clip-path:polygon(0 0,calc(100% - 16px) 0,100% 16px,100% 100%,16px 100%,0 calc(100% - 16px))}
+.vmc-filter-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px;padding-bottom:14px;border-bottom:1px solid rgba(26,26,26,.08)}
+.vmc-filter-head span,.vmc-filter-group strong,.vmc-search span,.vmc-sort{font-family:'Golos Text',monospace;font-size:10px;font-weight:800;letter-spacing:1.15px;text-transform:uppercase;color:rgba(58,62,68,.72)}
+.vmc-reset{appearance:none;border:0;background:transparent;color:var(--ce);font-family:'Golos Text',monospace;font-size:9px;font-weight:800;letter-spacing:1px;text-transform:uppercase;cursor:pointer;padding:0}
+.vmc-search{display:block;margin-bottom:16px}
+.vmc-search span{display:block;margin-bottom:8px}
+.vmc-search input,.vmc-range-row input,.vmc-sort select{width:100%;border:1px solid rgba(26,26,26,.10);background:rgba(255,255,255,.68);color:var(--bm);font-family:inherit;font-size:13px;padding:11px 12px;outline:none;transition:.18s}
+.vmc-search input:focus,.vmc-range-row input:focus,.vmc-sort select:focus{border-color:rgba(107,45,139,.38);box-shadow:0 0 0 3px rgba(107,45,139,.08)}
+.vmc-filter-group{display:grid;gap:10px;margin-top:18px;padding-top:16px;border-top:1px solid rgba(26,26,26,.07)}
+.vmc-filter-group label{display:flex;align-items:center;gap:9px;color:rgba(42,45,50,.74);font-size:13px;font-weight:650;line-height:1.35;cursor:pointer}
+.vmc-filter-group input[type="checkbox"]{width:15px;height:15px;accent-color:var(--ce)}
+.vmc-check-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px 12px}
+.vmc-range-row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.vmc-filter-note{margin-top:18px;padding-top:14px;border-top:1px solid rgba(26,26,26,.07);color:rgba(82,86,90,.68);font-size:12px;line-height:1.6}
+.vmc-catalog-main{min-width:0}.vmc-toolbar{align-items:flex-start}.vmc-result-line{margin-top:12px;color:rgba(82,86,90,.72);font-size:13px;line-height:1.5}.vmc-toolbar-actions{display:grid;gap:12px;min-width:230px}.vmc-sort{display:grid;gap:8px;color:rgba(58,62,68,.62)}.vmc-toolbar-actions .btn{width:100%;justify-content:center;min-height:42px}
+.vmc-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.vmc-empty{display:none;padding:34px;background:rgba(255,255,255,.68);border:1px solid rgba(26,26,26,.08);color:var(--mid);font-size:15px;line-height:1.6}.vmc-empty.is-visible{display:block}
+@media(max-width:1180px){.vmc-catalog-layout{grid-template-columns:1fr}.vmc-filter-panel{position:relative;top:auto}.vmc-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.vmc-toolbar-actions{margin-top:18px}.vmc-toolbar{display:block}}
+@media(max-width:720px){.vmc-grid{grid-template-columns:1fr}.vmc-check-grid{grid-template-columns:1fr}.vmc-filter-panel{padding:16px}}
+
+/* === V24 model actions === */
+.vmc-actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:16px}
+.vmc-actions .btn{min-height:40px;padding:0 10px;font-size:9px;letter-spacing:.85px;text-align:center}
+.vmc-actions .btn-ghost{background:rgba(255,255,255,.38);border-color:rgba(26,26,26,.16)}
+.vmc-actions .btn-ghost:hover{background:var(--bm);border-color:var(--bm);color:#fff}
+.vmc-body{display:flex;flex-direction:column;height:calc(100% - 210px)}
+.vmc-specs{margin-top:auto}
+@media(max-width:1180px){.vmc-actions{grid-template-columns:1fr}}
+.vmc-photo{padding:10px}.vmc-photo img{position:relative;z-index:1;max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;filter:drop-shadow(0 10px 16px rgba(26,26,26,.16))}.vmc-card-link{position:absolute;inset:0;z-index:3}.vmc-photo-cta{position:absolute;inset:0;z-index:2;display:flex;align-items:center;justify-content:center;background:rgba(20,18,26,.36);opacity:0;transition:opacity .2s ease;pointer-events:none}.vmc-card:hover .vmc-photo-cta{opacity:1}.vmc-photo-cta span{display:inline-flex;align-items:center;gap:6px;padding:9px 20px;background:#fff;color:var(--bm);border-radius:999px;font-family:'Golos Text',monospace;font-size:10px;font-weight:800;letter-spacing:1.1px;text-transform:uppercase;box-shadow:0 12px 26px rgba(26,26,26,.28);transform:translateY(6px);transition:transform .2s ease}.vmc-card:hover .vmc-photo-cta span{transform:translateY(0)}.vmc-body{padding:20px}
 </style>
 <link rel="stylesheet" href="site-shell.css"/>
 </head>
 <body class="premium-v3">
-<header class="hdr">
-<div class="wrap nav">
-<a class="brand" href="index.html"><img alt="Механит" src="mehanit-logo-cropped.png"/></a>
-<ul class="menu menu--simple" id="mainMenu"><li class="menu-item"><a class="menu-trigger" href="index.html#equipment">Оборудование</a></li><li class="menu-item"><a class="menu-trigger" href="index.html#solutions">Решения</a></li><li class="menu-item"><a class="menu-trigger" href="stock.html">Склад в РФ</a></li><li class="menu-item"><a class="menu-trigger" href="production-equipment.html">Комплексный подход</a></li><li class="menu-item"><a class="menu-trigger" href="press.html">Пресс-центр</a></li></ul>
-<div class="nav-act">
-<div class="nav-contact">
-<a class="nav-tile" href="tel:88005511206"><small>Позвонить</small><b>8 800 55 11 206</b></a>
-<a class="nav-tile" href="mailto:info@mehanit.ru"><small>Отправить ТЗ</small><b>info@mehanit.ru</b></a>
-<a class="nav-tile chat" href="index.html#quiz"><small>Инжиниринг</small><b>Обсудить задачу</b></a>
-</div>
-<button class="burger">☰</button>
-</div>
-</div>
-</header>
+<header></header>
 <div class="crumbbar" aria-label="Хлебные крошки">
 <div class="wrap crumbbar-in">
 <nav class="crumbs" aria-label="Путь по сайту"><a href="index.html">Главная</a><span class="crumb-sep" aria-hidden="true">/</span><a href="equipment.html">Оборудование</a><span class="crumb-sep" aria-hidden="true">/</span><a href="equipment-milling.html">Фрезерное оборудование</a><span class="crumb-sep" aria-hidden="true">/</span><span class="current" aria-current="page">Вертикально-фрезерные обрабатывающие центры</span></nav>
@@ -1487,22 +1532,12 @@ footer{background:var(--bm);color:rgba(234,234,230,.55);padding:3rem 0 2rem;bord
 <div class="vmc-filter-group">
 <strong>Серия</strong>
 <div class="vmc-check-grid">
-<label><input type="checkbox" name="series" value="F">F</label>
-<label><input type="checkbox" name="series" value="LV">LV</label>
-<label><input type="checkbox" name="series" value="MX">MX</label>
-<label><input type="checkbox" name="series" value="VMC">VMC</label>
-<label><input type="checkbox" name="series" value="VNM">VNM</label>
-<label><input type="checkbox" name="series" value="KDVM">KDVM</label>
-<label><input type="checkbox" name="series" value="Power">Power</label>
-<label><input type="checkbox" name="series" value="Z">Z</label>
-<label><input type="checkbox" name="series" value="Другие">Другие</label>
+<label><input type="checkbox" name="series" value="F">F</label><label><input type="checkbox" name="series" value="KDVM">KDVM</label><label><input type="checkbox" name="series" value="LV">LV</label><label><input type="checkbox" name="series" value="MS">MS</label><label><input type="checkbox" name="series" value="MV">MV</label><label><input type="checkbox" name="series" value="MX">MX</label><label><input type="checkbox" name="series" value="POWER">POWER</label><label><input type="checkbox" name="series" value="V">V</label><label><input type="checkbox" name="series" value="VMC">VMC</label><label><input type="checkbox" name="series" value="VNM">VNM</label><label><input type="checkbox" name="series" value="Z">Z</label>
 </div>
 </div>
 <div class="vmc-filter-group">
 <strong>Конус шпинделя</strong>
-<label><input type="checkbox" name="taper" value="BT30">BT30</label>
-<label><input type="checkbox" name="taper" value="BT40">BT40 / BBT40</label>
-<label><input type="checkbox" name="taper" value="BT50">BT50</label>
+<label><input type="checkbox" name="taper" value="BT30">BT30</label><label><input type="checkbox" name="taper" value="BT40">BT40</label><label><input type="checkbox" name="taper" value="BT50">BT50</label>
 </div>
 <div class="vmc-filter-group">
 <strong>Ход по X, мм</strong>
@@ -1519,7 +1554,7 @@ footer{background:var(--bm);color:rgba(234,234,230,.55);padding:3rem 0 2rem;bord
 <div>
 <div class="eyebrow">Модельный ряд</div>
 <h2 class="h2">Вертикальные центры<br/><span class="lt">в категории</span></h2>
-<p class="vmc-result-line"><span id="vmcResultCount">55</span> моделей · фильтр по техническим параметрам</p>
+<p class="vmc-result-line"><span id="vmcResultCount">56</span> моделей · фильтр по техническим параметрам</p>
 </div>
 <div class="vmc-toolbar-actions">
 <label class="vmc-sort">Сортировка
@@ -1535,1159 +1570,508 @@ footer{background:var(--bm);color:rgba(234,234,230,.55);padding:3rem 0 2rem;bord
 </div>
 </div>
 <div class="vmc-grid">
-<article class="vmc-card" data-series="F" data-name="вертикальный обрабатывающий центр f1055 f 1200×550 мм 600 кг 1000 мм / 550 мм / 550 мм по запросу · по запросу по запросу ~6500 кг" data-x="1000" data-load="600" data-spindle="" data-taper="" data-atc="">
-<div class="vmc-photo"><img src="milling-assets/f1055.png" alt="Вертикальный обрабатывающий центр F1055" loading="lazy"/></div>
+<article class="vmc-card" data-series="F" data-name="f1055 z f 1200 × 550 мм 600 кг 48 м/мин BT40 · " data-x="48" data-load="600" data-spindle="" data-taper="BT40" data-atc="">
+<a class="vmc-card-link" href="equipment-milling-f1055-z.html" aria-label="F1055 Z — подробнее"></a>
+<div class="vmc-photo"><img src="milling-assets/f1055-z.png" alt="F1055 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
-<small>F · Вертикальный центр</small>
-<h3>Вертикальный обрабатывающий центр F1055</h3>
-<p>Вертикальный обрабатывающий центр F1055 — высокоскоростное решение для высокоточной обработки деталей в аэрокосмической, оборонной, ИТ- и телекоммуникационной промышленности. Станок оснащён цилиндрическими...</p>
-<div class="vmc-specs">
-<div><span>Стол</span><b>1200×550 мм</b></div>
-<div><span>Нагрузка</span><b>600 кг</b></div>
-<div><span>Ходы X/Y/Z</span><b>1000 мм / 550 мм / 550 мм</b></div>
-<div><span>Шпиндель</span><b>по запросу · по запросу</b></div>
-<div><span>Инструменты</span><b>по запросу</b></div>
-<div><span>Масса</span><b>~6500 кг</b></div>
-</div>
-<div class="vmc-actions">
-<a class="btn btn-ce" href="index.html#quiz">Запросить КП</a>
-<a class="btn btn-gold" href="tel:88005511206">Позвонить</a>
-<a class="btn btn-ghost" href="equipment-milling.html#subcats">Подробнее</a>
-</div>
+<small>F · Вертикальный ОЦ</small>
+<h3>F1055 Z</h3>
+<div class="vmc-specs"><div><span>Стол</span><b>1200 × 550 мм</b></div><div><span>Ходы X/Y/Z</span><b>48 м/мин</b></div><div><span>Шпиндель</span><b>BT40</b></div><div><span>Масса</span><b>по запросу</b></div></div>
 </div>
 </article>
-<article class="vmc-card" data-series="F" data-name="вертикальный обрабатывающий центр f1060 f 1200×600 мм 600 кг 1000 мм / 600 мм / 550 мм по запросу · по запросу по запросу ~6400 кг" data-x="1000" data-load="600" data-spindle="" data-taper="" data-atc="">
-<div class="vmc-photo"><img src="milling-assets/f1060.png" alt="Вертикальный обрабатывающий центр F1060" loading="lazy"/></div>
+<article class="vmc-card" data-series="F" data-name="f1060 z f 1200 × 600 мм 600 кг 48 м/мин BT40 (опц. BBT40) · " data-x="48" data-load="600" data-spindle="" data-taper="BT40" data-atc="">
+<a class="vmc-card-link" href="equipment-milling-f1060-z.html" aria-label="F1060 Z — подробнее"></a>
+<div class="vmc-photo"><img src="milling-assets/f1060-z.png" alt="F1060 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
-<small>F · Вертикальный центр</small>
-<h3>Вертикальный обрабатывающий центр F1060</h3>
-<p>Вертикальный обрабатывающий центр F1060 — высокопроизводительный станок с ЧПУ серии F, предназначенный для высокоскоростной обработки деталей в аэрокосмической, оборонной, ИТ- и телекоммуникационной...</p>
-<div class="vmc-specs">
-<div><span>Стол</span><b>1200×600 мм</b></div>
-<div><span>Нагрузка</span><b>600 кг</b></div>
-<div><span>Ходы X/Y/Z</span><b>1000 мм / 600 мм / 550 мм</b></div>
-<div><span>Шпиндель</span><b>по запросу · по запросу</b></div>
-<div><span>Инструменты</span><b>по запросу</b></div>
-<div><span>Масса</span><b>~6400 кг</b></div>
-</div>
-<div class="vmc-actions">
-<a class="btn btn-ce" href="index.html#quiz">Запросить КП</a>
-<a class="btn btn-gold" href="tel:88005511206">Позвонить</a>
-<a class="btn btn-ghost" href="equipment-milling.html#subcats">Подробнее</a>
-</div>
+<small>F · Вертикальный ОЦ</small>
+<h3>F1060 Z</h3>
+<div class="vmc-specs"><div><span>Стол</span><b>1200 × 600 мм</b></div><div><span>Ходы X/Y/Z</span><b>48 м/мин</b></div><div><span>Шпиндель</span><b>BT40 (опц. BBT40)</b></div><div><span>Масса</span><b>по запросу</b></div></div>
 </div>
 </article>
-<article class="vmc-card" data-series="F" data-name="вертикальный обрабатывающий центр f650 f 750 × 500 мм 400 кг 600 мм / 500 мм / 550 мм bt40 · 10 000 / 12 000 / 15 000 об/мин 24 инструмента (дисковый тип) 4 400 кг" data-x="600" data-load="400" data-spindle="15000" data-taper="BT40" data-atc="24">
-<div class="vmc-photo"><img src="milling-assets/f650.png" alt="Вертикальный обрабатывающий центр F650" loading="lazy"/></div>
+<article class="vmc-card" data-series="F" data-name="f650 z f 750 × 500 мм 400 кг 48 м/мин BT40 (опц. BBT40) · " data-x="48" data-load="400" data-spindle="" data-taper="BT40" data-atc="">
+<a class="vmc-card-link" href="equipment-milling-f650-z.html" aria-label="F650 Z — подробнее"></a>
+<div class="vmc-photo"><img src="milling-assets/f650-z.png" alt="F650 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
-<small>F · Вертикальный центр</small>
-<h3>Вертикальный обрабатывающий центр F650</h3>
-<p>Вертикальный обрабатывающий центр F650 — высокопроизводительное оборудование для точной многокоординатной обработки деталей из металла. Оснащён линейными цилиндрическими направляющими, обеспечивающими высокую...</p>
-<div class="vmc-specs">
-<div><span>Стол</span><b>750 × 500 мм</b></div>
-<div><span>Нагрузка</span><b>400 кг</b></div>
-<div><span>Ходы X/Y/Z</span><b>600 мм / 500 мм / 550 мм</b></div>
-<div><span>Шпиндель</span><b>BT40 · 10 000 / 12 000 / 15 000 об/мин</b></div>
-<div><span>Инструменты</span><b>24 инструмента (дисковый тип)</b></div>
-<div><span>Масса</span><b>4 400 кг</b></div>
-</div>
-<div class="vmc-actions">
-<a class="btn btn-ce" href="index.html#quiz">Запросить КП</a>
-<a class="btn btn-gold" href="tel:88005511206">Позвонить</a>
-<a class="btn btn-ghost" href="equipment-milling.html#subcats">Подробнее</a>
-</div>
+<small>F · Вертикальный ОЦ</small>
+<h3>F650 Z</h3>
+<div class="vmc-specs"><div><span>Стол</span><b>750 × 500 мм</b></div><div><span>Ходы X/Y/Z</span><b>48 м/мин</b></div><div><span>Шпиндель</span><b>BT40 (опц. BBT40)</b></div><div><span>Масса</span><b>по запросу</b></div></div>
 </div>
 </article>
-<article class="vmc-card" data-series="F" data-name="вертикальный обрабатывающий центр f855 f 950 × 550 мм 500 кг 800 мм / 550 мм / 550 мм bt40 · 10 000 об/мин (опция: 12 000 об/мин) 24 инструмента (дисковый тип) 8 кг" data-x="800" data-load="500" data-spindle="12000" data-taper="BT40" data-atc="24">
-<div class="vmc-photo"><img src="milling-assets/f855.png" alt="Вертикальный обрабатывающий центр F855" loading="lazy"/></div>
+<article class="vmc-card" data-series="F" data-name="f855 z f 950 × 550 мм 500 кг 48 м/мин BT40 · " data-x="48" data-load="500" data-spindle="" data-taper="BT40" data-atc="">
+<a class="vmc-card-link" href="equipment-milling-f855-z.html" aria-label="F855 Z — подробнее"></a>
+<div class="vmc-photo"><img src="milling-assets/f855-z.png" alt="F855 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
-<small>F · Вертикальный центр</small>
-<h3>Вертикальный обрабатывающий центр F855</h3>
-<p>Вертикальный обрабатывающий центр F855 — высокопроизводительный станок для точной обработки крупногабаритных деталей из металла. Оснащён роликовыми линейными направляющими (LM), обеспечивающими повышенную...</p>
-<div class="vmc-specs">
-<div><span>Стол</span><b>950 × 550 мм</b></div>
-<div><span>Нагрузка</span><b>500 кг</b></div>
-<div><span>Ходы X/Y/Z</span><b>800 мм / 550 мм / 550 мм</b></div>
-<div><span>Шпиндель</span><b>BT40 · 10 000 об/мин (опция: 12 000 об/мин)</b></div>
-<div><span>Инструменты</span><b>24 инструмента (дисковый тип)</b></div>
-<div><span>Масса</span><b>8 кг</b></div>
-</div>
-<div class="vmc-actions">
-<a class="btn btn-ce" href="index.html#quiz">Запросить КП</a>
-<a class="btn btn-gold" href="tel:88005511206">Позвонить</a>
-<a class="btn btn-ghost" href="equipment-milling.html#subcats">Подробнее</a>
-</div>
+<small>F · Вертикальный ОЦ</small>
+<h3>F855 Z</h3>
+<div class="vmc-specs"><div><span>Стол</span><b>950 × 550 мм</b></div><div><span>Ходы X/Y/Z</span><b>48 м/мин</b></div><div><span>Шпиндель</span><b>BT40</b></div><div><span>Масса</span><b>по запросу</b></div></div>
 </div>
 </article>
-<article class="vmc-card" data-series="LV" data-name="вертикальный обрабатывающий центр lv-1050 lv 1 100 × 550 мм по запросу 1 000 мм / 500 мм / 500 мм bbt-40 · 10 000 об/мин по запросу 5 000 кг" data-x="1000" data-load="" data-spindle="10000" data-taper="BBT40" data-atc="">
-<div class="vmc-photo"><img src="milling-assets/lv-1050.png" alt="Вертикальный обрабатывающий центр LV-1050" loading="lazy"/></div>
+<article class="vmc-card" data-series="KDVM" data-name="kdvm1160l k kdvm 1200×600 мм (1160L) / 1360×700 мм (1270L)  1100 мм (1160L) / 1200 мм (1270L) / 600 мм (1160L) / 700 мм (1270L) / 600 мм (1160L) / 700 мм (1270L) BT40 / диаметр шейки Ø150 · " data-x="1100" data-load="" data-spindle="" data-taper="BT40" data-atc="">
+<a class="vmc-card-link" href="equipment-milling-kdvm1160l-k.html" aria-label="KDVM1160L K — подробнее"></a>
+<div class="vmc-photo"><img src="milling-assets/kdvm1160l-k.png" alt="KDVM1160L K" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
-<small>LV · Вертикальный центр</small>
-<h3>Вертикальный обрабатывающий центр LV-1050</h3>
-<p>Вертикальный обрабатывающий центр LV-1050 предназначен для обработки протяжённых деталей с большим ходом по оси X до 1 000 мм. Станина из чугуна Meehanite с A-образной реберной структурой и внутренними...</p>
-<div class="vmc-specs">
-<div><span>Стол</span><b>1 100 × 550 мм</b></div>
-<div><span>Нагрузка</span><b>по запросу</b></div>
-<div><span>Ходы X/Y/Z</span><b>1 000 мм / 500 мм / 500 мм</b></div>
-<div><span>Шпиндель</span><b>BBT-40 · 10 000 об/мин</b></div>
-<div><span>Инструменты</span><b>по запросу</b></div>
-<div><span>Масса</span><b>5 000 кг</b></div>
-</div>
-<div class="vmc-actions">
-<a class="btn btn-ce" href="index.html#quiz">Запросить КП</a>
-<a class="btn btn-gold" href="tel:88005511206">Позвонить</a>
-<a class="btn btn-ghost" href="equipment-milling.html#subcats">Подробнее</a>
-</div>
+<small>KDVM · Вертикальный ОЦ</small>
+<h3>KDVM1160L K</h3>
+<div class="vmc-specs"><div><span>Стол</span><b>1200×600 мм (1160L) / 1360×700 мм (1270L)</b></div><div><span>Ходы X/Y/Z</span><b>1100 мм (1160L) / 1200 мм (1270L) / 600 мм (1160L) / 700 мм (1270L) / 600 мм (1160L) / 700 мм (1270L)</b></div><div><span>Шпиндель</span><b>BT40 / диаметр шейки Ø150</b></div><div><span>Масса</span><b>по запросу</b></div></div>
 </div>
 </article>
-<article class="vmc-card" data-series="LV" data-name="вертикальный обрабатывающий центр lv-1060e lv 1 200 × 550 мм по запросу 1 000 мм / 600 мм / 600 мм bt-40 · 10 000 об/мин по запросу 5 600 кг" data-x="1000" data-load="" data-spindle="10000" data-taper="BT40" data-atc="">
-<div class="vmc-photo"><img src="milling-assets/lv-1060e.png" alt="Вертикальный обрабатывающий центр LV-1060E" loading="lazy"/></div>
+<article class="vmc-card" data-series="KDVM" data-name="kdvm1370l k kdvm от 1500×700 до 2000×900 мм  20 м/мин (все оси) BT40 / BT50 (в зависимости от модели) · " data-x="20" data-load="" data-spindle="" data-taper="BT40" data-atc="">
+<a class="vmc-card-link" href="equipment-milling-kdvm1370l-k.html" aria-label="KDVM1370L K — подробнее"></a>
+<div class="vmc-photo"><img src="milling-assets/kdvm1370l-k.png" alt="KDVM1370L K" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
-<small>LV · Вертикальный центр</small>
-<h3>Вертикальный обрабатывающий центр LV-1060E</h3>
-<p>Вертикальный обрабатывающий центр LV-1060E сочетает большой ход по оси X (1 000 мм) с расширенным ходом по оси Y (600 мм), что делает его универсальным решением для обработки крупных плоских деталей и...</p>
-<div class="vmc-specs">
-<div><span>Стол</span><b>1 200 × 550 мм</b></div>
-<div><span>Нагрузка</span><b>по запросу</b></div>
-<div><span>Ходы X/Y/Z</span><b>1 000 мм / 600 мм / 600 мм</b></div>
-<div><span>Шпиндель</span><b>BT-40 · 10 000 об/мин</b></div>
-<div><span>Инструменты</span><b>по запросу</b></div>
-<div><span>Масса</span><b>5 600 кг</b></div>
-</div>
-<div class="vmc-actions">
-<a class="btn btn-ce" href="index.html#quiz">Запросить КП</a>
-<a class="btn btn-gold" href="tel:88005511206">Позвонить</a>
-<a class="btn btn-ghost" href="equipment-milling.html#subcats">Подробнее</a>
-</div>
+<small>KDVM · Вертикальный ОЦ</small>
+<h3>KDVM1370L K</h3>
+<div class="vmc-specs"><div><span>Стол</span><b>от 1500×700 до 2000×900 мм</b></div><div><span>Ходы X/Y/Z</span><b>20 м/мин (все оси)</b></div><div><span>Шпиндель</span><b>BT40 / BT50 (в зависимости от модели)</b></div><div><span>Масса</span><b>по запросу</b></div></div>
 </div>
 </article>
-<article class="vmc-card" data-series="LV" data-name="вертикальный обрабатывающий центр lv-1165 lv 1 200 × 650 мм по запросу 1 100 мм / 650 мм / 600 мм bt-40 · 10 000 об/мин по запросу 6 000 кг" data-x="1100" data-load="" data-spindle="10000" data-taper="BT40" data-atc="">
-<div class="vmc-photo"><img src="milling-assets/lv-1165.png" alt="Вертикальный обрабатывающий центр LV-1165" loading="lazy"/></div>
+<article class="vmc-card" data-series="KDVM" data-name="kdvm600l k kdvm 700×420 мм  ≤0,006 мм BT40-120 · " data-x="0.006" data-load="" data-spindle="" data-taper="BT40" data-atc="">
+<a class="vmc-card-link" href="equipment-milling-kdvm600l-k.html" aria-label="KDVM600L K — подробнее"></a>
+<div class="vmc-photo"><img src="milling-assets/kdvm600l-k.png" alt="KDVM600L K" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
-<small>LV · Вертикальный центр</small>
-<h3>Вертикальный обрабатывающий центр LV-1165</h3>
-<p>Вертикальный обрабатывающий центр LV-1165 предлагает расширенную рабочую зону 1 100 × 650 мм по осям X и Y и повышенную мощность шпинделя до 15 кВт, что обеспечивает высокую производительность при силовом...</p>
-<div class="vmc-specs">
-<div><span>Стол</span><b>1 200 × 650 мм</b></div>
-<div><span>Нагрузка</span><b>по запросу</b></div>
-<div><span>Ходы X/Y/Z</span><b>1 100 мм / 650 мм / 600 мм</b></div>
-<div><span>Шпиндель</span><b>BT-40 · 10 000 об/мин</b></div>
-<div><span>Инструменты</span><b>по запросу</b></div>
-<div><span>Масса</span><b>6 000 кг</b></div>
-</div>
-<div class="vmc-actions">
-<a class="btn btn-ce" href="index.html#quiz">Запросить КП</a>
-<a class="btn btn-gold" href="tel:88005511206">Позвонить</a>
-<a class="btn btn-ghost" href="equipment-milling.html#subcats">Подробнее</a>
-</div>
+<small>KDVM · Вертикальный ОЦ</small>
+<h3>KDVM600L K</h3>
+<div class="vmc-specs"><div><span>Стол</span><b>700×420 мм</b></div><div><span>Ходы X/Y/Z</span><b>≤0,006 мм</b></div><div><span>Шпиндель</span><b>BT40-120</b></div><div><span>Масса</span><b>по запросу</b></div></div>
 </div>
 </article>
-<article class="vmc-card" data-series="LV" data-name="вертикальный обрабатывающий центр lv-1170 lv 1 200 × 700 мм по запросу 1 100 мм / 700 мм / 700 мм bt-40 (опция bt-50) · 10 000 об/мин по запросу 7 100 кг" data-x="1100" data-load="" data-spindle="10000" data-taper="BT50" data-atc="">
-<div class="vmc-photo"><img src="milling-assets/lv-1170.png" alt="Вертикальный обрабатывающий центр LV-1170" loading="lazy"/></div>
+<article class="vmc-card" data-series="KDVM" data-name="kdvm800la k kdvm 950×510 мм (800LA) / 1130×510 мм (1000LA)  800 мм (800LA) / 1000 мм (1000LA) / 520 мм / 520 мм BT40 / диаметр шейки Ø150 · " data-x="800" data-load="" data-spindle="" data-taper="BT40" data-atc="">
+<a class="vmc-card-link" href="equipment-milling-kdvm800la-k.html" aria-label="KDVM800LA K — подробнее"></a>
+<div class="vmc-photo"><img src="milling-assets/kdvm800la-k.png" alt="KDVM800LA K" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
-<small>LV · Вертикальный центр</small>
-<h3>Вертикальный обрабатывающий центр LV-1170</h3>
-<p>Вертикальный обрабатывающий центр LV-1170 обеспечивает большую рабочую зону с ходом по оси Y до 700 мм и широким столом 1 200 × 700 мм, что делает его эффективным решением для обработки корпусных деталей и...</p>
-<div class="vmc-specs">
-<div><span>Стол</span><b>1 200 × 700 мм</b></div>
-<div><span>Нагрузка</span><b>по запросу</b></div>
-<div><span>Ходы X/Y/Z</span><b>1 100 мм / 700 мм / 700 мм</b></div>
-<div><span>Шпиндель</span><b>BT-40 (опция BT-50) · 10 000 об/мин</b></div>
-<div><span>Инструменты</span><b>по запросу</b></div>
-<div><span>Масса</span><b>7 100 кг</b></div>
-</div>
-<div class="vmc-actions">
-<a class="btn btn-ce" href="index.html#quiz">Запросить КП</a>
-<a class="btn btn-gold" href="tel:88005511206">Позвонить</a>
-<a class="btn btn-ghost" href="equipment-milling.html#subcats">Подробнее</a>
-</div>
+<small>KDVM · Вертикальный ОЦ</small>
+<h3>KDVM800LA K</h3>
+<div class="vmc-specs"><div><span>Стол</span><b>950×510 мм (800LA) / 1130×510 мм (1000LA)</b></div><div><span>Ходы X/Y/Z</span><b>800 мм (800LA) / 1000 мм (1000LA) / 520 мм / 520 мм</b></div><div><span>Шпиндель</span><b>BT40 / диаметр шейки Ø150</b></div><div><span>Масса</span><b>по запросу</b></div></div>
 </div>
 </article>
-<article class="vmc-card" data-series="LV" data-name="вертикальный обрабатывающий центр lv-1370 lv 1 400 × 700 мм по запросу 1 300 мм / 700 мм / 700 мм bt-40 (опция bt-50) · 10 000 об/мин по запросу 7 500 кг" data-x="1300" data-load="" data-spindle="10000" data-taper="BT50" data-atc="">
-<div class="vmc-photo"><img src="milling-assets/lv-1370.png" alt="Вертикальный обрабатывающий центр LV-1370" loading="lazy"/></div>
+<article class="vmc-card" data-series="KDVM" data-name="kdvm855l k kdvm 1000×550 мм  800 мм / 550 мм / 550 мм BT40 / диаметр шейки Ø150 · " data-x="800" data-load="" data-spindle="" data-taper="BT40" data-atc="">
+<a class="vmc-card-link" href="equipment-milling-kdvm855l-k.html" aria-label="KDVM855L K — подробнее"></a>
+<div class="vmc-photo"><img src="milling-assets/kdvm855l-k.png" alt="KDVM855L K" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
-<small>LV · Вертикальный центр</small>
-<h3>Вертикальный обрабатывающий центр LV-1370</h3>
-<p>Вертикальный обрабатывающий центр LV-1370 предназначен для тяжёлой высокопроизводительной обработки крупных заготовок. Большой ход по оси X (1 300 мм) и широкий рабочий стол 1 400 × 700 мм открывают...</p>
-<div class="vmc-specs">
-<div><span>Стол</span><b>1 400 × 700 мм</b></div>
-<div><span>Нагрузка</span><b>по запросу</b></div>
-<div><span>Ходы X/Y/Z</span><b>1 300 мм / 700 мм / 700 мм</b></div>
-<div><span>Шпиндель</span><b>BT-40 (опция BT-50) · 10 000 об/мин</b></div>
-<div><span>Инструменты</span><b>по запросу</b></div>
-<div><span>Масса</span><b>7 500 кг</b></div>
-</div>
-<div class="vmc-actions">
-<a class="btn btn-ce" href="index.html#quiz">Запросить КП</a>
-<a class="btn btn-gold" href="tel:88005511206">Позвонить</a>
-<a class="btn btn-ghost" href="equipment-milling.html#subcats">Подробнее</a>
-</div>
+<small>KDVM · Вертикальный ОЦ</small>
+<h3>KDVM855L K</h3>
+<div class="vmc-specs"><div><span>Стол</span><b>1000×550 мм</b></div><div><span>Ходы X/Y/Z</span><b>800 мм / 550 мм / 550 мм</b></div><div><span>Шпиндель</span><b>BT40 / диаметр шейки Ø150</b></div><div><span>Масса</span><b>по запросу</b></div></div>
 </div>
 </article>
-<article class="vmc-card" data-series="LV" data-name="вертикальный обрабатывающий центр lv-1685 lv 1 700 × 800 мм по запросу 1 600 мм / 850 мм / 800 мм bt-40 (опция bt-50) · 10 000 об/мин по запросу 11 450 кг" data-x="1600" data-load="" data-spindle="10000" data-taper="BT50" data-atc="">
-<div class="vmc-photo"><img src="milling-assets/lv-1685.png" alt="Вертикальный обрабатывающий центр LV-1685" loading="lazy"/></div>
+<article class="vmc-card" data-series="LV" data-name="lv-1050 m lv 1100×550 мм  1000/500/550 мм BT40 · 10000 об/мин" data-x="1000" data-load="" data-spindle="10000.0" data-taper="BT40" data-atc="">
+<a class="vmc-card-link" href="equipment-milling-lv-1050-m.html" aria-label="LV-1050 M — подробнее"></a>
+<div class="vmc-photo"><img src="milling-assets/lv-1050-m.png" alt="LV-1050 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
-<small>LV · Вертикальный центр</small>
-<h3>Вертикальный обрабатывающий центр LV-1685</h3>
-<p>Вертикальный обрабатывающий центр LV-1685 — мощная крупноформатная машина для обработки тяжёлых заготовок массой до 2 000 кг. Ход по оси X 1 600 мм и большой рабочий стол 1 700 × 800 мм позволяют обрабатывать...</p>
-<div class="vmc-specs">
-<div><span>Стол</span><b>1 700 × 800 мм</b></div>
-<div><span>Нагрузка</span><b>по запросу</b></div>
-<div><span>Ходы X/Y/Z</span><b>1 600 мм / 850 мм / 800 мм</b></div>
-<div><span>Шпиндель</span><b>BT-40 (опция BT-50) · 10 000 об/мин</b></div>
-<div><span>Инструменты</span><b>по запросу</b></div>
-<div><span>Масса</span><b>11 450 кг</b></div>
-</div>
-<div class="vmc-actions">
-<a class="btn btn-ce" href="index.html#quiz">Запросить КП</a>
-<a class="btn btn-gold" href="tel:88005511206">Позвонить</a>
-<a class="btn btn-ghost" href="equipment-milling.html#subcats">Подробнее</a>
-</div>
+<small>LV · Вертикальный ОЦ</small>
+<h3>LV-1050 M</h3>
+<div class="vmc-specs"><div><span>Стол</span><b>1100×550 мм</b></div><div><span>Ходы X/Y/Z</span><b>1000/500/550 мм</b></div><div><span>Шпиндель</span><b>BT40 · 10000 об/мин</b></div><div><span>Масса</span><b>5000 кг</b></div></div>
 </div>
 </article>
-<article class="vmc-card" data-series="LV" data-name="вертикальный обрабатывающий центр lv-700 lv 800 × 450 мм по запросу 700 мм / 500 мм / 550 мм bt-40 · 10 000 об/мин по запросу 4 100 кг" data-x="700" data-load="" data-spindle="10000" data-taper="BT40" data-atc="">
-<div class="vmc-photo"><img src="milling-assets/lv-700.png" alt="Вертикальный обрабатывающий центр LV-700" loading="lazy"/></div>
+<article class="vmc-card" data-series="LV" data-name="lv-1060e m lv 1200×550 мм  1000/600/600 мм BT40 · 10000 об/мин" data-x="1000" data-load="" data-spindle="10000.0" data-taper="BT40" data-atc="">
+<a class="vmc-card-link" href="equipment-milling-lv-1060e-m.html" aria-label="LV-1060E M — подробнее"></a>
+<div class="vmc-photo"><img src="milling-assets/lv-1060e-m.png" alt="LV-1060E M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
-<small>LV · Вертикальный центр</small>
-<h3>Вертикальный обрабатывающий центр LV-700</h3>
-<p>Вертикальный обрабатывающий центр LV-700 относится к линейке станков с увеличенной рабочей зоной, предназначенных для обработки деталей среднего размера с высокой производительностью. Станина из чугуна...</p>
-<div class="vmc-specs">
-<div><span>Стол</span><b>800 × 450 мм</b></div>
-<div><span>Нагрузка</span><b>по запросу</b></div>
-<div><span>Ходы X/Y/Z</span><b>700 мм / 500 мм / 550 мм</b></div>
-<div><span>Шпиндель</span><b>BT-40 · 10 000 об/мин</b></div>
-<div><span>Инструменты</span><b>по запросу</b></div>
-<div><span>Масса</span><b>4 100 кг</b></div>
-</div>
-<div class="vmc-actions">
-<a class="btn btn-ce" href="index.html#quiz">Запросить КП</a>
-<a class="btn btn-gold" href="tel:88005511206">Позвонить</a>
-<a class="btn btn-ghost" href="equipment-milling.html#subcats">Подробнее</a>
-</div>
+<small>LV · Вертикальный ОЦ</small>
+<h3>LV-1060E M</h3>
+<div class="vmc-specs"><div><span>Стол</span><b>1200×550 мм</b></div><div><span>Ходы X/Y/Z</span><b>1000/600/600 мм</b></div><div><span>Шпиндель</span><b>BT40 · 10000 об/мин</b></div><div><span>Масса</span><b>5600 кг</b></div></div>
 </div>
 </article>
-<article class="vmc-card" data-series="LV" data-name="вертикальный обрабатывающий центр lv-850 lv 1 000 × 450 мм по запросу 800 мм / 500 мм / 550 мм bt-40 · 10 000 об/мин по запросу 4 500 кг" data-x="800" data-load="" data-spindle="10000" data-taper="BT40" data-atc="">
-<div class="vmc-photo"><img src="milling-assets/lv-850.png" alt="Вертикальный обрабатывающий центр LV-850" loading="lazy"/></div>
+<article class="vmc-card" data-series="LV" data-name="lv-1165 m lv 1200×650 мм  1100/650/600 мм BT40 · 10000 об/мин" data-x="1100" data-load="" data-spindle="10000.0" data-taper="BT40" data-atc="">
+<a class="vmc-card-link" href="equipment-milling-lv-1165-m.html" aria-label="LV-1165 M — подробнее"></a>
+<div class="vmc-photo"><img src="milling-assets/lv-1165-m.png" alt="LV-1165 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
-<small>LV · Вертикальный центр</small>
-<h3>Вертикальный обрабатывающий центр LV-850</h3>
-<p>Вертикальный обрабатывающий центр LV-850 предназначен для обработки деталей среднего и увеличенного размера с высокими требованиями к качеству поверхности и точности. Литая станина из чугуна Meehanite с...</p>
-<div class="vmc-specs">
-<div><span>Стол</span><b>1 000 × 450 мм</b></div>
-<div><span>Нагрузка</span><b>по запросу</b></div>
-<div><span>Ходы X/Y/Z</span><b>800 мм / 500 мм / 550 мм</b></div>
-<div><span>Шпиндель</span><b>BT-40 · 10 000 об/мин</b></div>
-<div><span>Инструменты</span><b>по запросу</b></div>
-<div><span>Масса</span><b>4 500 кг</b></div>
-</div>
-<div class="vmc-actions">
-<a class="btn btn-ce" href="index.html#quiz">Запросить КП</a>
-<a class="btn btn-gold" href="tel:88005511206">Позвонить</a>
-<a class="btn btn-ghost" href="equipment-milling.html#subcats">Подробнее</a>
-</div>
+<small>LV · Вертикальный ОЦ</small>
+<h3>LV-1165 M</h3>
+<div class="vmc-specs"><div><span>Стол</span><b>1200×650 мм</b></div><div><span>Ходы X/Y/Z</span><b>1100/650/600 мм</b></div><div><span>Шпиндель</span><b>BT40 · 10000 об/мин</b></div><div><span>Масса</span><b>6000 кг</b></div></div>
 </div>
 </article>
-<article class="vmc-card" data-series="LV" data-name="вертикальный обрабатывающий центр lv-860e lv 1 000 × 550 мм по запросу 800 мм / 600 мм / 600 мм bt-40 · 10 000 об/мин по запросу 5 400 кг" data-x="800" data-load="" data-spindle="10000" data-taper="BT40" data-atc="">
-<div class="vmc-photo"><img src="milling-assets/lv-860e.png" alt="Вертикальный обрабатывающий центр LV-860E" loading="lazy"/></div>
+<article class="vmc-card" data-series="LV" data-name="lv-1170 m lv 1200×700 мм 700 кг 1100/700/700 мм BT40 · 10000 об/мин" data-x="1100" data-load="700" data-spindle="10000.0" data-taper="BT40" data-atc="">
+<a class="vmc-card-link" href="equipment-milling-lv-1170-m.html" aria-label="LV-1170 M — подробнее"></a>
+<div class="vmc-photo"><img src="milling-assets/lv-1170-m.png" alt="LV-1170 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
-<small>LV · Вертикальный центр</small>
-<h3>Вертикальный обрабатывающий центр LV-860E</h3>
-<p>Вертикальный обрабатывающий центр LV-860E выделяется увеличенным ходом по оси Y до 600 мм и повышенной мощностью шпинделя, что делает его оптимальным выбором для обработки широких и тяжёлых заготовок....</p>
-<div class="vmc-specs">
-<div><span>Стол</span><b>1 000 × 550 мм</b></div>
-<div><span>Нагрузка</span><b>по запросу</b></div>
-<div><span>Ходы X/Y/Z</span><b>800 мм / 600 мм / 600 мм</b></div>
-<div><span>Шпиндель</span><b>BT-40 · 10 000 об/мин</b></div>
-<div><span>Инструменты</span><b>по запросу</b></div>
-<div><span>Масса</span><b>5 400 кг</b></div>
-</div>
-<div class="vmc-actions">
-<a class="btn btn-ce" href="index.html#quiz">Запросить КП</a>
-<a class="btn btn-gold" href="tel:88005511206">Позвонить</a>
-<a class="btn btn-ghost" href="equipment-milling.html#subcats">Подробнее</a>
-</div>
+<small>LV · Вертикальный ОЦ</small>
+<h3>LV-1170 M</h3>
+<div class="vmc-specs"><div><span>Стол</span><b>1200×700 мм</b></div><div><span>Ходы X/Y/Z</span><b>1100/700/700 мм</b></div><div><span>Шпиндель</span><b>BT40 · 10000 об/мин</b></div><div><span>Масса</span><b>7100 кг</b></div></div>
 </div>
 </article>
-<article class="vmc-card" data-series="MS" data-name="вертикальный обрабатывающий центр ms-500 ms 700 × 1 090 мм (700 × 500 мм на паллет) по запросу 500 мм / 400 мм / 450 мм bt-40 · 10 000 об/мин (опция 12 000–20 000 об/мин) по запросу 5 200 кг" data-x="500" data-load="" data-spindle="20000" data-taper="BT40" data-atc="">
-<div class="vmc-photo"><img src="milling-assets/ms-500.png" alt="Вертикальный обрабатывающий центр MS-500" loading="lazy"/></div>
+<article class="vmc-card" data-series="LV" data-name="lv-1370 m lv 1400×700 мм  1300/700/700 мм BT40 · 10000 об/мин" data-x="1300" data-load="" data-spindle="10000.0" data-taper="BT40" data-atc="">
+<a class="vmc-card-link" href="equipment-milling-lv-1370-m.html" aria-label="LV-1370 M — подробнее"></a>
+<div class="vmc-photo"><img src="milling-assets/lv-1370-m.png" alt="LV-1370 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
-<small>MS · Вертикальный центр</small>
-<h3>Вертикальный обрабатывающий центр MS-500</h3>
-<p>Вертикальный обрабатывающий центр MS-500 оснащён системой автоматической смены паллет (АСП), что позволяет вести непрерывную обработку без простоев на загрузку и выгрузку заготовок. Пока на одном паллете...</p>
-<div class="vmc-specs">
-<div><span>Стол</span><b>700 × 1 090 мм (700 × 500 мм на паллет)</b></div>
-<div><span>Нагрузка</span><b>по запросу</b></div>
-<div><span>Ходы X/Y/Z</span><b>500 мм / 400 мм / 450 мм</b></div>
-<div><span>Шпиндель</span><b>BT-40 · 10 000 об/мин (опция 12 000–20 000 об/мин)</b></div>
-<div><span>Инструменты</span><b>по запросу</b></div>
-<div><span>Масса</span><b>5 200 кг</b></div>
-</div>
-<div class="vmc-actions">
-<a class="btn btn-ce" href="index.html#quiz">Запросить КП</a>
-<a class="btn btn-gold" href="tel:88005511206">Позвонить</a>
-<a class="btn btn-ghost" href="equipment-milling.html#subcats">Подробнее</a>
-</div>
+<small>LV · Вертикальный ОЦ</small>
+<h3>LV-1370 M</h3>
+<div class="vmc-specs"><div><span>Стол</span><b>1400×700 мм</b></div><div><span>Ходы X/Y/Z</span><b>1300/700/700 мм</b></div><div><span>Шпиндель</span><b>BT40 · 10000 об/мин</b></div><div><span>Масса</span><b>7500 кг</b></div></div>
 </div>
 </article>
-<article class="vmc-card" data-series="MV" data-name="вертикальный обрабатывающий центр mv-1685 (box way) mv 1 700 × 800 мм по запросу 1 600 мм / 850 мм / 800 мм bt-50 · 6 000 об/мин по запросу 11 450 кг" data-x="1600" data-load="" data-spindle="6000" data-taper="BT50" data-atc="">
-<div class="vmc-photo"><img src="milling-assets/mv-1685.png" alt="Вертикальный обрабатывающий центр MV-1685 (Box Way)" loading="lazy"/></div>
+<article class="vmc-card" data-series="LV" data-name="lv-1685 m lv 1700×800 мм  1600/850/800 мм BT40 · 10000 об/мин" data-x="1600" data-load="" data-spindle="10000.0" data-taper="BT40" data-atc="">
+<a class="vmc-card-link" href="equipment-milling-lv-1685-m.html" aria-label="LV-1685 M — подробнее"></a>
+<div class="vmc-photo"><img src="milling-assets/lv-1685-m.png" alt="LV-1685 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
-<small>MV · Вертикальный центр</small>
-<h3>Вертикальный обрабатывающий центр MV-1685 (Box Way)</h3>
-<p>Вертикальный обрабатывающий центр MV-1685 Box Way создан для тяжёлой силовой обработки крупных заготовок с применением коробчатых направляющих вместо роликовых. Сочетание двух широких коробчатых направляющих с...</p>
-<div class="vmc-specs">
-<div><span>Стол</span><b>1 700 × 800 мм</b></div>
-<div><span>Нагрузка</span><b>по запросу</b></div>
-<div><span>Ходы X/Y/Z</span><b>1 600 мм / 850 мм / 800 мм</b></div>
-<div><span>Шпиндель</span><b>BT-50 · 6 000 об/мин</b></div>
-<div><span>Инструменты</span><b>по запросу</b></div>
-<div><span>Масса</span><b>11 450 кг</b></div>
-</div>
-<div class="vmc-actions">
-<a class="btn btn-ce" href="index.html#quiz">Запросить КП</a>
-<a class="btn btn-gold" href="tel:88005511206">Позвонить</a>
-<a class="btn btn-ghost" href="equipment-milling.html#subcats">Подробнее</a>
-</div>
+<small>LV · Вертикальный ОЦ</small>
+<h3>LV-1685 M</h3>
+<div class="vmc-specs"><div><span>Стол</span><b>1700×800 мм</b></div><div><span>Ходы X/Y/Z</span><b>1600/850/800 мм</b></div><div><span>Шпиндель</span><b>BT40 · 10000 об/мин</b></div><div><span>Масса</span><b>11450 кг</b></div></div>
 </div>
 </article>
-<article class="vmc-card" data-series="MX" data-name="вертикальный обрабатывающий центр mx-2 mx 2 200 × 600 (900) мм по запросу 2 000 мм / 600 (900) мм / 600 (900) мм bt-40 · 10 000 об/мин по запросу 16 000 кг" data-x="2000" data-load="" data-spindle="10000" data-taper="BT40" data-atc="">
-<div class="vmc-photo"><img src="milling-assets/mx-2.png" alt="Вертикальный обрабатывающий центр MX-2" loading="lazy"/></div>
+<article class="vmc-card" data-series="LV" data-name="lv-700 m lv 800×450 мм  700/500/550 мм BT40 · 10000 об/мин" data-x="700" data-load="" data-spindle="10000.0" data-taper="BT40" data-atc="">
+<a class="vmc-card-link" href="equipment-milling-lv-700-m.html" aria-label="LV-700 M — подробнее"></a>
+<div class="vmc-photo"><img src="milling-assets/lv-700-m.png" alt="LV-700 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
-<small>MX · Вертикальный центр</small>
-<h3>Вертикальный обрабатывающий центр MX-2</h3>
-<p>Вертикальный обрабатывающий центр MX-2 с подвижной колонной представляет новое поколение крупноформатных обрабатывающих центров с неподвижным рабочим столом. Концепция фиксированного стола позволяет размещать...</p>
-<div class="vmc-specs">
-<div><span>Стол</span><b>2 200 × 600 (900) мм</b></div>
-<div><span>Нагрузка</span><b>по запросу</b></div>
-<div><span>Ходы X/Y/Z</span><b>2 000 мм / 600 (900) мм / 600 (900) мм</b></div>
-<div><span>Шпиндель</span><b>BT-40 · 10 000 об/мин</b></div>
-<div><span>Инструменты</span><b>по запросу</b></div>
-<div><span>Масса</span><b>16 000 кг</b></div>
-</div>
-<div class="vmc-actions">
-<a class="btn btn-ce" href="index.html#quiz">Запросить КП</a>
-<a class="btn btn-gold" href="tel:88005511206">Позвонить</a>
-<a class="btn btn-ghost" href="equipment-milling.html#subcats">Подробнее</a>
-</div>
+<small>LV · Вертикальный ОЦ</small>
+<h3>LV-700 M</h3>
+<div class="vmc-specs"><div><span>Стол</span><b>800×450 мм</b></div><div><span>Ходы X/Y/Z</span><b>700/500/550 мм</b></div><div><span>Шпиндель</span><b>BT40 · 10000 об/мин</b></div><div><span>Масса</span><b>4100 кг</b></div></div>
 </div>
 </article>
-<article class="vmc-card" data-series="MX" data-name="вертикальный обрабатывающий центр mx-3 mx 3 200 × 600 (900) мм по запросу 3 000 мм / 600 (900) мм / 600 (900) мм bt-40 · 10 000 об/мин по запросу 24 000 кг" data-x="3000" data-load="" data-spindle="10000" data-taper="BT40" data-atc="">
-<div class="vmc-photo"><img src="milling-assets/mx-3.png" alt="Вертикальный обрабатывающий центр MX-3" loading="lazy"/></div>
+<article class="vmc-card" data-series="LV" data-name="lv-850 m lv 1000×450 мм  800/500/550 мм BT40 · 10000 об/мин" data-x="800" data-load="" data-spindle="10000.0" data-taper="BT40" data-atc="">
+<a class="vmc-card-link" href="equipment-milling-lv-850-m.html" aria-label="LV-850 M — подробнее"></a>
+<div class="vmc-photo"><img src="milling-assets/lv-850-m.png" alt="LV-850 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
-<small>MX · Вертикальный центр</small>
-<h3>Вертикальный обрабатывающий центр MX-3</h3>
-<p>Вертикальный обрабатывающий центр MX-3 с подвижной колонной предназначен для обработки особо длинных заготовок с ходом по оси X до 3 000 мм. Концепция фиксированного рабочего стола позволяет размещать...</p>
-<div class="vmc-specs">
-<div><span>Стол</span><b>3 200 × 600 (900) мм</b></div>
-<div><span>Нагрузка</span><b>по запросу</b></div>
-<div><span>Ходы X/Y/Z</span><b>3 000 мм / 600 (900) мм / 600 (900) мм</b></div>
-<div><span>Шпиндель</span><b>BT-40 · 10 000 об/мин</b></div>
-<div><span>Инструменты</span><b>по запросу</b></div>
-<div><span>Масса</span><b>24 000 кг</b></div>
-</div>
-<div class="vmc-actions">
-<a class="btn btn-ce" href="index.html#quiz">Запросить КП</a>
-<a class="btn btn-gold" href="tel:88005511206">Позвонить</a>
-<a class="btn btn-ghost" href="equipment-milling.html#subcats">Подробнее</a>
-</div>
+<small>LV · Вертикальный ОЦ</small>
+<h3>LV-850 M</h3>
+<div class="vmc-specs"><div><span>Стол</span><b>1000×450 мм</b></div><div><span>Ходы X/Y/Z</span><b>800/500/550 мм</b></div><div><span>Шпиндель</span><b>BT40 · 10000 об/мин</b></div><div><span>Масса</span><b>4500 кг</b></div></div>
 </div>
 </article>
-<article class="vmc-card" data-series="MX" data-name="вертикальный обрабатывающий центр mx-4 mx 4 200 × 600 (900) мм по запросу 4 000 мм / 600 (900) мм / 600 (900) мм bt-40 · 10 000 об/мин по запросу 29 000 кг" data-x="4000" data-load="" data-spindle="10000" data-taper="BT40" data-atc="">
-<div class="vmc-photo"><img src="milling-assets/mx-4.png" alt="Вертикальный обрабатывающий центр MX-4" loading="lazy"/></div>
+<article class="vmc-card" data-series="LV" data-name="lv-860e m lv 1000×550 мм 550 кг 800/600/600 мм BT40 · 10000 об/мин" data-x="800" data-load="550" data-spindle="10000.0" data-taper="BT40" data-atc="">
+<a class="vmc-card-link" href="equipment-milling-lv-860e-m.html" aria-label="LV-860E M — подробнее"></a>
+<div class="vmc-photo"><img src="milling-assets/lv-860e-m.png" alt="LV-860E M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
-<small>MX · Вертикальный центр</small>
-<h3>Вертикальный обрабатывающий центр MX-4</h3>
-<p>Вертикальный обрабатывающий центр MX-4 с подвижной колонной обеспечивает ход по оси X 4 000 мм и рассчитан на обработку особо крупных и длинных заготовок в авиационной, энергетической, судостроительной и...</p>
-<div class="vmc-specs">
-<div><span>Стол</span><b>4 200 × 600 (900) мм</b></div>
-<div><span>Нагрузка</span><b>по запросу</b></div>
-<div><span>Ходы X/Y/Z</span><b>4 000 мм / 600 (900) мм / 600 (900) мм</b></div>
-<div><span>Шпиндель</span><b>BT-40 · 10 000 об/мин</b></div>
-<div><span>Инструменты</span><b>по запросу</b></div>
-<div><span>Масса</span><b>29 000 кг</b></div>
-</div>
-<div class="vmc-actions">
-<a class="btn btn-ce" href="index.html#quiz">Запросить КП</a>
-<a class="btn btn-gold" href="tel:88005511206">Позвонить</a>
-<a class="btn btn-ghost" href="equipment-milling.html#subcats">Подробнее</a>
-</div>
+<small>LV · Вертикальный ОЦ</small>
+<h3>LV-860E M</h3>
+<div class="vmc-specs"><div><span>Стол</span><b>1000×550 мм</b></div><div><span>Ходы X/Y/Z</span><b>800/600/600 мм</b></div><div><span>Шпиндель</span><b>BT40 · 10000 об/мин</b></div><div><span>Масса</span><b>5400 кг</b></div></div>
 </div>
 </article>
-<article class="vmc-card" data-series="MX" data-name="вертикальный обрабатывающий центр mx-5 mx 5 200 × 600 (900) мм по запросу 5 000 мм / 600 (900) мм / 600 (900) мм bt-40 · 10 000 об/мин по запросу 35 000 кг" data-x="5000" data-load="" data-spindle="10000" data-taper="BT40" data-atc="">
-<div class="vmc-photo"><img src="milling-assets/mx-5.png" alt="Вертикальный обрабатывающий центр MX-5" loading="lazy"/></div>
+<article class="vmc-card" data-series="MS" data-name="ms-500 m ms 700×500 мм 350 кг 500/400/450 мм BT40 · 10000 (опц. 12000–20000) об/мин" data-x="500" data-load="350" data-spindle="20000.0" data-taper="BT40" data-atc="">
+<a class="vmc-card-link" href="equipment-milling-ms-500-m.html" aria-label="MS-500 M — подробнее"></a>
+<div class="vmc-photo"><img src="milling-assets/ms-500-m.png" alt="MS-500 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
-<small>MX · Вертикальный центр</small>
-<h3>Вертикальный обрабатывающий центр MX-5</h3>
-<p>Вертикальный обрабатывающий центр MX-5 с подвижной колонной относится к классу тяжёлых крупноформатных станков с ходом по оси X 5 000 мм. Возможность работы с заготовками массой до 5 000 кг на фиксированном...</p>
-<div class="vmc-specs">
-<div><span>Стол</span><b>5 200 × 600 (900) мм</b></div>
-<div><span>Нагрузка</span><b>по запросу</b></div>
-<div><span>Ходы X/Y/Z</span><b>5 000 мм / 600 (900) мм / 600 (900) мм</b></div>
-<div><span>Шпиндель</span><b>BT-40 · 10 000 об/мин</b></div>
-<div><span>Инструменты</span><b>по запросу</b></div>
-<div><span>Масса</span><b>35 000 кг</b></div>
-</div>
-<div class="vmc-actions">
-<a class="btn btn-ce" href="index.html#quiz">Запросить КП</a>
-<a class="btn btn-gold" href="tel:88005511206">Позвонить</a>
-<a class="btn btn-ghost" href="equipment-milling.html#subcats">Подробнее</a>
-</div>
+<small>MS · Вертикальный ОЦ</small>
+<h3>MS-500 M</h3>
+<div class="vmc-specs"><div><span>Стол</span><b>700×500 мм</b></div><div><span>Ходы X/Y/Z</span><b>500/400/450 мм</b></div><div><span>Шпиндель</span><b>BT40 · 10000 (опц. 12000–20000) об/мин</b></div><div><span>Масса</span><b>5200 кг</b></div></div>
 </div>
 </article>
-<article class="vmc-card" data-series="MX" data-name="вертикальный обрабатывающий центр mx-6 mx 6 200 × 600 (900) мм по запросу 6 000 мм / 600 (900) мм / 600 (900) мм bt-40 · 10 000 об/мин по запросу 39 000 кг" data-x="6000" data-load="" data-spindle="10000" data-taper="BT40" data-atc="">
-<div class="vmc-photo"><img src="milling-assets/mx-6.png" alt="Вертикальный обрабатывающий центр MX-6" loading="lazy"/></div>
+<article class="vmc-card" data-series="MV" data-name="mv-1685 m mv 1700×800 мм  1600/850/800 мм BT50 · 6000 об/мин" data-x="1600" data-load="" data-spindle="6000.0" data-taper="BT50" data-atc="">
+<a class="vmc-card-link" href="equipment-milling-mv-1685-m.html" aria-label="MV-1685 M — подробнее"></a>
+<div class="vmc-photo"><img src="milling-assets/mv-1685-m.png" alt="MV-1685 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
-<small>MX · Вертикальный центр</small>
-<h3>Вертикальный обрабатывающий центр MX-6</h3>
-<p>Вертикальный обрабатывающий центр MX-6 с подвижной колонной — флагманская модель серии с максимальным ходом по оси X 6 000 мм и грузоподъёмностью фиксированного стола 6 000 кг. Станок предназначен для...</p>
-<div class="vmc-specs">
-<div><span>Стол</span><b>6 200 × 600 (900) мм</b></div>
-<div><span>Нагрузка</span><b>по запросу</b></div>
-<div><span>Ходы X/Y/Z</span><b>6 000 мм / 600 (900) мм / 600 (900) мм</b></div>
-<div><span>Шпиндель</span><b>BT-40 · 10 000 об/мин</b></div>
-<div><span>Инструменты</span><b>по запросу</b></div>
-<div><span>Масса</span><b>39 000 кг</b></div>
-</div>
-<div class="vmc-actions">
-<a class="btn btn-ce" href="index.html#quiz">Запросить КП</a>
-<a class="btn btn-gold" href="tel:88005511206">Позвонить</a>
-<a class="btn btn-ghost" href="equipment-milling.html#subcats">Подробнее</a>
-</div>
+<small>MV · Вертикальный ОЦ</small>
+<h3>MV-1685 M</h3>
+<div class="vmc-specs"><div><span>Стол</span><b>1700×800 мм</b></div><div><span>Ходы X/Y/Z</span><b>1600/850/800 мм</b></div><div><span>Шпиндель</span><b>BT50 · 6000 об/мин</b></div><div><span>Масса</span><b>11450 кг</b></div></div>
 </div>
 </article>
-<article class="vmc-card" data-series="Power" data-name="вертикальный обрабатывающий центр power v10 power 1400×650 мм 1000 кг 1050 мм / 650 мм / 600 мм по запросу · по запросу по запросу ~8200 кг" data-x="1050" data-load="1000" data-spindle="" data-taper="" data-atc="">
-<div class="vmc-photo"><img src="milling-assets/power-v10.png" alt="Вертикальный обрабатывающий центр Power V10" loading="lazy"/></div>
+<article class="vmc-card" data-series="MX" data-name="mx-2 m mx 2200×600-900 мм (опц. 900 мм по Y)  2000 / 600-900 / 600-900 мм BT40 · 10000 об/мин" data-x="2000" data-load="" data-spindle="10000.0" data-taper="BT40" data-atc="">
+<a class="vmc-card-link" href="equipment-milling-mx-2-m.html" aria-label="MX-2 M — подробнее"></a>
+<div class="vmc-photo"><img src="milling-assets/mx-2-m.png" alt="MX-2 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
-<small>Power · Вертикальный центр</small>
-<h3>Вертикальный обрабатывающий центр Power V10</h3>
-<p>Вертикальный обрабатывающий центр Power V10 — флагманская модель серии Power, созданная по принципу «те же габариты — больше мощности». Станок предназначен для высокопроизводительной обработки крупных...</p>
-<div class="vmc-specs">
-<div><span>Стол</span><b>1400×650 мм</b></div>
-<div><span>Нагрузка</span><b>1000 кг</b></div>
-<div><span>Ходы X/Y/Z</span><b>1050 мм / 650 мм / 600 мм</b></div>
-<div><span>Шпиндель</span><b>по запросу · по запросу</b></div>
-<div><span>Инструменты</span><b>по запросу</b></div>
-<div><span>Масса</span><b>~8200 кг</b></div>
-</div>
-<div class="vmc-actions">
-<a class="btn btn-ce" href="index.html#quiz">Запросить КП</a>
-<a class="btn btn-gold" href="tel:88005511206">Позвонить</a>
-<a class="btn btn-ghost" href="equipment-milling.html#subcats">Подробнее</a>
-</div>
+<small>MX · Вертикальный ОЦ</small>
+<h3>MX-2 M</h3>
+<div class="vmc-specs"><div><span>Стол</span><b>2200×600-900 мм (опц. 900 мм по Y)</b></div><div><span>Ходы X/Y/Z</span><b>2000 / 600-900 / 600-900 мм</b></div><div><span>Шпиндель</span><b>BT40 · 10000 об/мин</b></div><div><span>Масса</span><b>16000 кг</b></div></div>
 </div>
 </article>
-<article class="vmc-card" data-series="Power" data-name="вертикальный обрабатывающий центр power v6 power 1000×450 мм 750 кг 600 мм / 400 мм / 530 мм по запросу · по запросу по запросу ~5500 кг" data-x="600" data-load="750" data-spindle="" data-taper="" data-atc="">
-<div class="vmc-photo"><img src="milling-assets/power-v6.png" alt="Вертикальный обрабатывающий центр Power V6" loading="lazy"/></div>
+<article class="vmc-card" data-series="MX" data-name="mx-3 m mx 3200×600-900 мм (опц. 900 мм по Y)  3000 / 600-900 / 600-900 мм BT40 · 10000 об/мин" data-x="3000" data-load="" data-spindle="10000.0" data-taper="BT40" data-atc="">
+<a class="vmc-card-link" href="equipment-milling-mx-3-m.html" aria-label="MX-3 M — подробнее"></a>
+<div class="vmc-photo"><img src="milling-assets/mx-3-m.png" alt="MX-3 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
-<small>Power · Вертикальный центр</small>
-<h3>Вертикальный обрабатывающий центр Power V6</h3>
-<p>Вертикальный обрабатывающий центр Power V6 сочетает высокую скорость обработки с исключительной жёсткостью конструкции. Просторная рабочая зона и высокая грузоподъёмность стола (750 кг) делают этот станок...</p>
-<div class="vmc-specs">
-<div><span>Стол</span><b>1000×450 мм</b></div>
-<div><span>Нагрузка</span><b>750 кг</b></div>
-<div><span>Ходы X/Y/Z</span><b>600 мм / 400 мм / 530 мм</b></div>
-<div><span>Шпиндель</span><b>по запросу · по запросу</b></div>
-<div><span>Инструменты</span><b>по запросу</b></div>
-<div><span>Масса</span><b>~5500 кг</b></div>
-</div>
-<div class="vmc-actions">
-<a class="btn btn-ce" href="index.html#quiz">Запросить КП</a>
-<a class="btn btn-gold" href="tel:88005511206">Позвонить</a>
-<a class="btn btn-ghost" href="equipment-milling.html#subcats">Подробнее</a>
-</div>
+<small>MX · Вертикальный ОЦ</small>
+<h3>MX-3 M</h3>
+<div class="vmc-specs"><div><span>Стол</span><b>3200×600-900 мм (опц. 900 мм по Y)</b></div><div><span>Ходы X/Y/Z</span><b>3000 / 600-900 / 600-900 мм</b></div><div><span>Шпиндель</span><b>BT40 · 10000 об/мин</b></div><div><span>Масса</span><b>24000 кг</b></div></div>
 </div>
 </article>
-<article class="vmc-card" data-series="Power" data-name="вертикальный обрабатывающий центр power v8 power 1200×520 мм 800 кг 850 мм / 500 мм / 570 мм по запросу · по запросу по запросу ~7300 кг" data-x="850" data-load="800" data-spindle="" data-taper="" data-atc="">
-<div class="vmc-photo"><img src="milling-assets/power-v8.png" alt="Вертикальный обрабатывающий центр Power V8" loading="lazy"/></div>
+<article class="vmc-card" data-series="MX" data-name="mx-4 m mx 4200×600-900 мм (опц. 900 мм по Y)  4000 / 600-900 / 600-900 мм BT40 · 10000 об/мин" data-x="4000" data-load="" data-spindle="10000.0" data-taper="BT40" data-atc="">
+<a class="vmc-card-link" href="equipment-milling-mx-4-m.html" aria-label="MX-4 M — подробнее"></a>
+<div class="vmc-photo"><img src="milling-assets/mx-4-m.png" alt="MX-4 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
-<small>Power · Вертикальный центр</small>
-<h3>Вертикальный обрабатывающий центр Power V8</h3>
-<p>Вертикальный обрабатывающий центр Power V8 — производительный станок с ЧПУ, объединяющий высокую скорость обработки с исключительной жёсткостью конструкции. Увеличенный ход по осям X (850 мм) и Y (500 мм) и...</p>
-<div class="vmc-specs">
-<div><span>Стол</span><b>1200×520 мм</b></div>
-<div><span>Нагрузка</span><b>800 кг</b></div>
-<div><span>Ходы X/Y/Z</span><b>850 мм / 500 мм / 570 мм</b></div>
-<div><span>Шпиндель</span><b>по запросу · по запросу</b></div>
-<div><span>Инструменты</span><b>по запросу</b></div>
-<div><span>Масса</span><b>~7300 кг</b></div>
-</div>
-<div class="vmc-actions">
-<a class="btn btn-ce" href="index.html#quiz">Запросить КП</a>
-<a class="btn btn-gold" href="tel:88005511206">Позвонить</a>
-<a class="btn btn-ghost" href="equipment-milling.html#subcats">Подробнее</a>
-</div>
+<small>MX · Вертикальный ОЦ</small>
+<h3>MX-4 M</h3>
+<div class="vmc-specs"><div><span>Стол</span><b>4200×600-900 мм (опц. 900 мм по Y)</b></div><div><span>Ходы X/Y/Z</span><b>4000 / 600-900 / 600-900 мм</b></div><div><span>Шпиндель</span><b>BT40 · 10000 об/мин</b></div><div><span>Масса</span><b>29000 кг</b></div></div>
 </div>
 </article>
-<article class="vmc-card" data-series="Другие" data-name="вертикальный обрабатывающий центр v-5f другие 620 × 420 мм по запросу 500 мм / 400 мм / 450 мм bt-30 · 12 000 об/мин по запросу 3 200 кг" data-x="500" data-load="" data-spindle="12000" data-taper="BT30" data-atc="">
-<div class="vmc-photo"><img src="milling-assets/v-5f.png" alt="Вертикальный обрабатывающий центр V-5F" loading="lazy"/></div>
+<article class="vmc-card" data-series="MX" data-name="mx-5 m mx 5200×600-900 мм (опц. 900 мм по Y)  5000 / 600-900 / 600-900 мм BT40 · 10000 об/мин" data-x="5000" data-load="" data-spindle="10000.0" data-taper="BT40" data-atc="">
+<a class="vmc-card-link" href="equipment-milling-mx-5-m.html" aria-label="MX-5 M — подробнее"></a>
+<div class="vmc-photo"><img src="milling-assets/mx-5-m.png" alt="MX-5 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
-<small>Другие · Вертикальный центр</small>
-<h3>Вертикальный обрабатывающий центр V-5F</h3>
-<p>Вертикальный обрабатывающий центр V-5F создан для высокоскоростной и высокоточной обработки деталей малого и среднего размера. Станина выполнена из чугуна марки Meehanite с A-образным реберным усилением,...</p>
-<div class="vmc-specs">
-<div><span>Стол</span><b>620 × 420 мм</b></div>
-<div><span>Нагрузка</span><b>по запросу</b></div>
-<div><span>Ходы X/Y/Z</span><b>500 мм / 400 мм / 450 мм</b></div>
-<div><span>Шпиндель</span><b>BT-30 · 12 000 об/мин</b></div>
-<div><span>Инструменты</span><b>по запросу</b></div>
-<div><span>Масса</span><b>3 200 кг</b></div>
-</div>
-<div class="vmc-actions">
-<a class="btn btn-ce" href="index.html#quiz">Запросить КП</a>
-<a class="btn btn-gold" href="tel:88005511206">Позвонить</a>
-<a class="btn btn-ghost" href="equipment-milling.html#subcats">Подробнее</a>
-</div>
+<small>MX · Вертикальный ОЦ</small>
+<h3>MX-5 M</h3>
+<div class="vmc-specs"><div><span>Стол</span><b>5200×600-900 мм (опц. 900 мм по Y)</b></div><div><span>Ходы X/Y/Z</span><b>5000 / 600-900 / 600-900 мм</b></div><div><span>Шпиндель</span><b>BT40 · 10000 об/мин</b></div><div><span>Масса</span><b>35000 кг</b></div></div>
 </div>
 </article>
-<article class="vmc-card" data-series="Другие" data-name="вертикальный обрабатывающий центр v-6 другие 700 × 420 мм по запросу 600 мм / 400 мм / 450 мм bt-40 · 10 000 об/мин по запросу 3 300 кг" data-x="600" data-load="" data-spindle="10000" data-taper="BT40" data-atc="">
-<div class="vmc-photo"><img src="milling-assets/v-6.png" alt="Вертикальный обрабатывающий центр V-6" loading="lazy"/></div>
+<article class="vmc-card" data-series="MX" data-name="mx-6 m mx 6200×600-900 мм (опц. 900 мм по Y)  6000 / 600-900 / 600-900 мм BT40 · 10000 об/мин" data-x="6000" data-load="" data-spindle="10000.0" data-taper="BT40" data-atc="">
+<a class="vmc-card-link" href="equipment-milling-mx-6-m.html" aria-label="MX-6 M — подробнее"></a>
+<div class="vmc-photo"><img src="milling-assets/mx-6-m.png" alt="MX-6 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
-<small>Другие · Вертикальный центр</small>
-<h3>Вертикальный обрабатывающий центр V-6</h3>
-<p>Вертикальный обрабатывающий центр V-6 предназначен для точной многономенклатурной обработки деталей в условиях серийного и мелкосерийного производства. Жёсткая литая станина из чугуна Meehanite с A-образной...</p>
-<div class="vmc-specs">
-<div><span>Стол</span><b>700 × 420 мм</b></div>
-<div><span>Нагрузка</span><b>по запросу</b></div>
-<div><span>Ходы X/Y/Z</span><b>600 мм / 400 мм / 450 мм</b></div>
-<div><span>Шпиндель</span><b>BT-40 · 10 000 об/мин</b></div>
-<div><span>Инструменты</span><b>по запросу</b></div>
-<div><span>Масса</span><b>3 300 кг</b></div>
-</div>
-<div class="vmc-actions">
-<a class="btn btn-ce" href="index.html#quiz">Запросить КП</a>
-<a class="btn btn-gold" href="tel:88005511206">Позвонить</a>
-<a class="btn btn-ghost" href="equipment-milling.html#subcats">Подробнее</a>
-</div>
+<small>MX · Вертикальный ОЦ</small>
+<h3>MX-6 M</h3>
+<div class="vmc-specs"><div><span>Стол</span><b>6200×600-900 мм (опц. 900 мм по Y)</b></div><div><span>Ходы X/Y/Z</span><b>6000 / 600-900 / 600-900 мм</b></div><div><span>Шпиндель</span><b>BT40 · 10000 об/мин</b></div><div><span>Масса</span><b>39000 кг</b></div></div>
 </div>
 </article>
-<article class="vmc-card" data-series="VMC" data-name="вертикальный обрабатывающий центр vmc1050e vmc 1300×520 мм 800 кг 1050/500/570 мм / по запросу / по запросу по запросу · 8000 об/мин (опц. 10000, 12000 об/мин) 24 места / дисковый 7600 кг" data-x="1050" data-load="800" data-spindle="12000" data-taper="" data-atc="24">
-<div class="vmc-photo"><img src="milling-assets/vmc1050e.png" alt="Вертикальный обрабатывающий центр VMC1050E" loading="lazy"/></div>
+<article class="vmc-card" data-series="POWER" data-name="power v10 z power 1400 × 650 мм 1000 кг 30 м/мин BT40 (опц. BT50) · " data-x="30" data-load="1000" data-spindle="" data-taper="BT40" data-atc="">
+<a class="vmc-card-link" href="equipment-milling-power-v10-z.html" aria-label="Power V10 Z — подробнее"></a>
+<div class="vmc-photo"><img src="milling-assets/power-v10-z.png" alt="Power V10 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
-<small>VMC · Вертикальный центр</small>
-<h3>Вертикальный обрабатывающий центр VMC1050E</h3>
-<p>Вертикальный обрабатывающий центр VMC1050E предназначен для высокопроизводительной обработки крупных деталей в серийном и мелкосерийном производстве. Станок построен на жёсткой литой станине с роликовыми...</p>
-<div class="vmc-specs">
-<div><span>Стол</span><b>1300×520 мм</b></div>
-<div><span>Нагрузка</span><b>800 кг</b></div>
-<div><span>Ходы X/Y/Z</span><b>1050/500/570 мм / по запросу / по запросу</b></div>
-<div><span>Шпиндель</span><b>по запросу · 8000 об/мин (опц. 10000, 12000 об/мин)</b></div>
-<div><span>Инструменты</span><b>24 места / дисковый</b></div>
-<div><span>Масса</span><b>7600 кг</b></div>
-</div>
-<div class="vmc-actions">
-<a class="btn btn-ce" href="index.html#quiz">Запросить КП</a>
-<a class="btn btn-gold" href="tel:88005511206">Позвонить</a>
-<a class="btn btn-ghost" href="equipment-milling.html#subcats">Подробнее</a>
-</div>
+<small>POWER · Вертикальный ОЦ</small>
+<h3>Power V10 Z</h3>
+<div class="vmc-specs"><div><span>Стол</span><b>1400 × 650 мм</b></div><div><span>Ходы X/Y/Z</span><b>30 м/мин</b></div><div><span>Шпиндель</span><b>BT40 (опц. BT50)</b></div><div><span>Масса</span><b>по запросу</b></div></div>
 </div>
 </article>
-<article class="vmc-card" data-series="VMC" data-name="вертикальный обрабатывающий центр vmc1160 vmc 1200×600 мм 1000 кг 1100 мм / 600 мм / 600 мм bt40 · 10000 об/мин рычажный тип, 24 позиции по запросу" data-x="1100" data-load="1000" data-spindle="10000" data-taper="BT40" data-atc="24">
-<div class="vmc-photo"><img src="milling-assets/vmc1160.png" alt="Вертикальный обрабатывающий центр VMC1160" loading="lazy"/></div>
+<article class="vmc-card" data-series="POWER" data-name="power v6 z power 160–690 мм 750 кг 30 м/мин BT40 · " data-x="30" data-load="750" data-spindle="" data-taper="BT40" data-atc="">
+<a class="vmc-card-link" href="equipment-milling-power-v6-z.html" aria-label="Power V6 Z — подробнее"></a>
+<div class="vmc-photo"><img src="milling-assets/power-v6-z.png" alt="Power V6 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
-<small>VMC · Вертикальный центр</small>
-<h3>Вертикальный обрабатывающий центр VMC1160</h3>
-<p>Вертикальный обрабатывающий центр VMC1160 обеспечивает высокоточную обработку крупных и тяжёлых деталей весом до 1000 кг. Станок предназначен для выполнения многоэтапных операций на деталях сложной формы —...</p>
-<div class="vmc-specs">
-<div><span>Стол</span><b>1200×600 мм</b></div>
-<div><span>Нагрузка</span><b>1000 кг</b></div>
-<div><span>Ходы X/Y/Z</span><b>1100 мм / 600 мм / 600 мм</b></div>
-<div><span>Шпиндель</span><b>BT40 · 10000 об/мин</b></div>
-<div><span>Инструменты</span><b>рычажный тип, 24 позиции</b></div>
-<div><span>Масса</span><b>по запросу</b></div>
-</div>
-<div class="vmc-actions">
-<a class="btn btn-ce" href="index.html#quiz">Запросить КП</a>
-<a class="btn btn-gold" href="tel:88005511206">Позвонить</a>
-<a class="btn btn-ghost" href="equipment-milling.html#subcats">Подробнее</a>
-</div>
+<small>POWER · Вертикальный ОЦ</small>
+<h3>Power V6 Z</h3>
+<div class="vmc-specs"><div><span>Стол</span><b>160–690 мм</b></div><div><span>Ходы X/Y/Z</span><b>30 м/мин</b></div><div><span>Шпиндель</span><b>BT40</b></div><div><span>Масса</span><b>по запросу</b></div></div>
 </div>
 </article>
-<article class="vmc-card" data-series="VMC" data-name="вертикальный обрабатывающий центр vmc1200e vmc 1400×520 мм 800 кг 1200/500/570 мм / по запросу / по запросу по запросу · 8000 об/мин (опц. 10000, 12000 об/мин) 24 места / дисковый 7900 кг" data-x="1200" data-load="800" data-spindle="12000" data-taper="" data-atc="24">
-<div class="vmc-photo"><img src="milling-assets/vmc1200e.png" alt="Вертикальный обрабатывающий центр VMC1200E" loading="lazy"/></div>
+<article class="vmc-card" data-series="POWER" data-name="power v8 z power 1200 × 520 мм 800 кг 30 м/мин BT40 (опц. BT50) · " data-x="30" data-load="800" data-spindle="" data-taper="BT40" data-atc="">
+<a class="vmc-card-link" href="equipment-milling-power-v8-z.html" aria-label="Power V8 Z — подробнее"></a>
+<div class="vmc-photo"><img src="milling-assets/power-v8-z.png" alt="Power V8 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
-<small>VMC · Вертикальный центр</small>
-<h3>Вертикальный обрабатывающий центр VMC1200E</h3>
-<p>Вертикальный обрабатывающий центр VMC1200E — высокопроизводительная машина для обработки крупногабаритных деталей в условиях серийного производства. Станок оснащён жёсткой литой станиной, роликовыми линейными...</p>
-<div class="vmc-specs">
-<div><span>Стол</span><b>1400×520 мм</b></div>
-<div><span>Нагрузка</span><b>800 кг</b></div>
-<div><span>Ходы X/Y/Z</span><b>1200/500/570 мм / по запросу / по запросу</b></div>
-<div><span>Шпиндель</span><b>по запросу · 8000 об/мин (опц. 10000, 12000 об/мин)</b></div>
-<div><span>Инструменты</span><b>24 места / дисковый</b></div>
-<div><span>Масса</span><b>7900 кг</b></div>
-</div>
-<div class="vmc-actions">
-<a class="btn btn-ce" href="index.html#quiz">Запросить КП</a>
-<a class="btn btn-gold" href="tel:88005511206">Позвонить</a>
-<a class="btn btn-ghost" href="equipment-milling.html#subcats">Подробнее</a>
-</div>
+<small>POWER · Вертикальный ОЦ</small>
+<h3>Power V8 Z</h3>
+<div class="vmc-specs"><div><span>Стол</span><b>1200 × 520 мм</b></div><div><span>Ходы X/Y/Z</span><b>30 м/мин</b></div><div><span>Шпиндель</span><b>BT40 (опц. BT50)</b></div><div><span>Масса</span><b>по запросу</b></div></div>
 </div>
 </article>
-<article class="vmc-card" data-series="VMC" data-name="вертикальный обрабатывающий центр vmc1300e vmc 1600×650 мм 1000 кг 1300/650/600 мм / по запросу / по запросу по запросу · 8000 об/мин (опц. 10000, 12000 об/мин) 24 места / дисковый 9700 кг" data-x="1300" data-load="1000" data-spindle="12000" data-taper="" data-atc="24">
-<div class="vmc-photo"><img src="milling-assets/vmc1300e.png" alt="Вертикальный обрабатывающий центр VMC1300E" loading="lazy"/></div>
+<article class="vmc-card" data-series="V" data-name="v-5f m v 620×420 мм  500/400/450 мм BT30 · 12000 об/мин" data-x="500" data-load="" data-spindle="12000.0" data-taper="BT30" data-atc="">
+<a class="vmc-card-link" href="equipment-milling-v-5f-m.html" aria-label="V-5F M — подробнее"></a>
+<div class="vmc-photo"><img src="milling-assets/v-5f-m.png" alt="V-5F M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
-<small>VMC · Вертикальный центр</small>
-<h3>Вертикальный обрабатывающий центр VMC1300E</h3>
-<p>Вертикальный обрабатывающий центр VMC1300E предназначен для высокопроизводительной обработки тяжёлых и крупногабаритных деталей. Станок выполнен на массивной литой станине с роликовыми линейными направляющими...</p>
-<div class="vmc-specs">
-<div><span>Стол</span><b>1600×650 мм</b></div>
-<div><span>Нагрузка</span><b>1000 кг</b></div>
-<div><span>Ходы X/Y/Z</span><b>1300/650/600 мм / по запросу / по запросу</b></div>
-<div><span>Шпиндель</span><b>по запросу · 8000 об/мин (опц. 10000, 12000 об/мин)</b></div>
-<div><span>Инструменты</span><b>24 места / дисковый</b></div>
-<div><span>Масса</span><b>9700 кг</b></div>
-</div>
-<div class="vmc-actions">
-<a class="btn btn-ce" href="index.html#quiz">Запросить КП</a>
-<a class="btn btn-gold" href="tel:88005511206">Позвонить</a>
-<a class="btn btn-ghost" href="equipment-milling.html#subcats">Подробнее</a>
-</div>
+<small>V · Вертикальный ОЦ</small>
+<h3>V-5F M</h3>
+<div class="vmc-specs"><div><span>Стол</span><b>620×420 мм</b></div><div><span>Ходы X/Y/Z</span><b>500/400/450 мм</b></div><div><span>Шпиндель</span><b>BT30 · 12000 об/мин</b></div><div><span>Масса</span><b>3200 кг</b></div></div>
 </div>
 </article>
-<article class="vmc-card" data-series="VMC" data-name="вертикальный обрабатывающий центр vmc1375 vmc 1600×750 мм 1300 кг 1300/750/700 мм / по запросу / по запросу по запросу · 8000 об/мин (опц. 6000, 12000 об/мин) 24 места / дисковый 12300 кг" data-x="1300" data-load="1300" data-spindle="12000" data-taper="" data-atc="24">
-<div class="vmc-photo"><img src="milling-assets/vmc1375.png" alt="Вертикальный обрабатывающий центр VMC1375" loading="lazy"/></div>
+<article class="vmc-card" data-series="V" data-name="v-6 m v 700×420 мм 300 кг 48/48/48 м/мин BT40 · 10000 об/мин" data-x="48" data-load="300" data-spindle="10000.0" data-taper="BT40" data-atc="">
+<a class="vmc-card-link" href="equipment-milling-v-6-m.html" aria-label="V-6 M — подробнее"></a>
+<div class="vmc-photo"><img src="milling-assets/v-6-m.png" alt="V-6 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
-<small>VMC · Вертикальный центр</small>
-<h3>Вертикальный обрабатывающий центр VMC1375</h3>
-<p>Вертикальный обрабатывающий центр VMC1375 — мощная машина серии высокопроизводительных станков для обработки крупных и тяжёлых деталей. Увеличенный ход по оси Y до 750 мм делает этот станок особенно...</p>
-<div class="vmc-specs">
-<div><span>Стол</span><b>1600×750 мм</b></div>
-<div><span>Нагрузка</span><b>1300 кг</b></div>
-<div><span>Ходы X/Y/Z</span><b>1300/750/700 мм / по запросу / по запросу</b></div>
-<div><span>Шпиндель</span><b>по запросу · 8000 об/мин (опц. 6000, 12000 об/мин)</b></div>
-<div><span>Инструменты</span><b>24 места / дисковый</b></div>
-<div><span>Масса</span><b>12300 кг</b></div>
-</div>
-<div class="vmc-actions">
-<a class="btn btn-ce" href="index.html#quiz">Запросить КП</a>
-<a class="btn btn-gold" href="tel:88005511206">Позвонить</a>
-<a class="btn btn-ghost" href="equipment-milling.html#subcats">Подробнее</a>
-</div>
+<small>V · Вертикальный ОЦ</small>
+<h3>V-6 M</h3>
+<div class="vmc-specs"><div><span>Стол</span><b>700×420 мм</b></div><div><span>Ходы X/Y/Z</span><b>48/48/48 м/мин</b></div><div><span>Шпиндель</span><b>BT40 · 10000 об/мин</b></div><div><span>Масса</span><b>3300 кг</b></div></div>
 </div>
 </article>
-<article class="vmc-card" data-series="VMC" data-name="вертикальный обрабатывающий центр vmc1580 vmc 1700×800 мм 1500 кг 1500/800/700 мм / по запросу / по запросу по запросу · 8000 об/мин (опц. 6000 об/мин) 24 места / дисковый 13300 кг" data-x="1500" data-load="1500" data-spindle="8000" data-taper="" data-atc="24">
-<div class="vmc-photo"><img src="milling-assets/vmc1580.png" alt="Вертикальный обрабатывающий центр VMC1580" loading="lazy"/></div>
+<article class="vmc-card" data-series="VMC" data-name="vmc1050e z vmc 1300×520 мм 800 кг 1050 мм / 500 мм / 570 мм BT40 (опц. BT50) · " data-x="1050" data-load="800" data-spindle="" data-taper="BT40" data-atc="">
+<a class="vmc-card-link" href="equipment-milling-vmc1050e-z.html" aria-label="VMC1050E Z — подробнее"></a>
+<div class="vmc-photo"><img src="milling-assets/vmc1050e-z.png" alt="VMC1050E Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
-<small>VMC · Вертикальный центр</small>
-<h3>Вертикальный обрабатывающий центр VMC1580</h3>
-<p>Вертикальный обрабатывающий центр VMC1580 — тяжёлая машина высокопроизводительной серии, предназначенная для обработки крупногабаритных и тяжёлых деталей в условиях интенсивного производства. Станок построен...</p>
-<div class="vmc-specs">
-<div><span>Стол</span><b>1700×800 мм</b></div>
-<div><span>Нагрузка</span><b>1500 кг</b></div>
-<div><span>Ходы X/Y/Z</span><b>1500/800/700 мм / по запросу / по запросу</b></div>
-<div><span>Шпиндель</span><b>по запросу · 8000 об/мин (опц. 6000 об/мин)</b></div>
-<div><span>Инструменты</span><b>24 места / дисковый</b></div>
-<div><span>Масса</span><b>13300 кг</b></div>
-</div>
-<div class="vmc-actions">
-<a class="btn btn-ce" href="index.html#quiz">Запросить КП</a>
-<a class="btn btn-gold" href="tel:88005511206">Позвонить</a>
-<a class="btn btn-ghost" href="equipment-milling.html#subcats">Подробнее</a>
-</div>
+<small>VMC · Вертикальный ОЦ</small>
+<h3>VMC1050E Z</h3>
+<div class="vmc-specs"><div><span>Стол</span><b>1300×520 мм</b></div><div><span>Ходы X/Y/Z</span><b>1050 мм / 500 мм / 570 мм</b></div><div><span>Шпиндель</span><b>BT40 (опц. BT50)</b></div><div><span>Масса</span><b>по запросу</b></div></div>
 </div>
 </article>
-<article class="vmc-card" data-series="VMC" data-name="вертикальный обрабатывающий центр vmc1580 vmc 1700×800 мм 1500 кг 1500 мм / 800 мм / 700 мм bt50 · 6000 об/мин рычажный тип, 24 позиции 13000 кг" data-x="1500" data-load="1500" data-spindle="6000" data-taper="BT50" data-atc="24">
-<div class="vmc-photo"><img src="milling-assets/vmc1580-2.png" alt="Вертикальный обрабатывающий центр VMC1580" loading="lazy"/></div>
+<article class="vmc-card" data-series="VMC" data-name="vmc1160 w vmc 1200×600 мм  30 000/30 000/24 000 мм/мин BT40 · " data-x="30000" data-load="" data-spindle="" data-taper="BT40" data-atc="">
+<a class="vmc-card-link" href="equipment-milling-vmc1160-w.html" aria-label="VMC1160 W — подробнее"></a>
+<div class="vmc-photo"><img src="milling-assets/vmc1160-w.png" alt="VMC1160 W" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
-<small>VMC · Вертикальный центр</small>
-<h3>Вертикальный обрабатывающий центр VMC1580</h3>
-<p>Вертикальный обрабатывающий центр VMC1580 предназначен для высокоточной обработки крупногабаритных деталей и выполнения многоэтапных технологических операций. Станок справляется с обработкой сложных форм —...</p>
-<div class="vmc-specs">
-<div><span>Стол</span><b>1700×800 мм</b></div>
-<div><span>Нагрузка</span><b>1500 кг</b></div>
-<div><span>Ходы X/Y/Z</span><b>1500 мм / 800 мм / 700 мм</b></div>
-<div><span>Шпиндель</span><b>BT50 · 6000 об/мин</b></div>
-<div><span>Инструменты</span><b>рычажный тип, 24 позиции</b></div>
-<div><span>Масса</span><b>13000 кг</b></div>
-</div>
-<div class="vmc-actions">
-<a class="btn btn-ce" href="index.html#quiz">Запросить КП</a>
-<a class="btn btn-gold" href="tel:88005511206">Позвонить</a>
-<a class="btn btn-ghost" href="equipment-milling.html#subcats">Подробнее</a>
-</div>
+<small>VMC · Вертикальный ОЦ</small>
+<h3>VMC1160 W</h3>
+<div class="vmc-specs"><div><span>Стол</span><b>1200×600 мм</b></div><div><span>Ходы X/Y/Z</span><b>30 000/30 000/24 000 мм/мин</b></div><div><span>Шпиндель</span><b>BT40</b></div><div><span>Масса</span><b>по запросу</b></div></div>
 </div>
 </article>
-<article class="vmc-card" data-series="VMC" data-name="вертикальный обрабатывающий центр vmc1675 vmc 1700×700 мм 1500 кг 1600 мм / 750 мм / 700 мм по запросу · по запросу по запросу 11 200 кг" data-x="1600" data-load="1500" data-spindle="" data-taper="" data-atc="">
-<div class="vmc-photo"><img src="milling-assets/vmc1675.png" alt="Вертикальный обрабатывающий центр VMC1675" loading="lazy"/></div>
+<article class="vmc-card" data-series="VMC" data-name="vmc1200e z vmc 1400×520 мм 800 кг 1200 мм / 500 мм / 570 мм BT40 (опц. BT50) · " data-x="1200" data-load="800" data-spindle="" data-taper="BT40" data-atc="">
+<a class="vmc-card-link" href="equipment-milling-vmc1200e-z.html" aria-label="VMC1200E Z — подробнее"></a>
+<div class="vmc-photo"><img src="milling-assets/vmc1200e-z.png" alt="VMC1200E Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
-<small>VMC · Вертикальный центр</small>
-<h3>Вертикальный обрабатывающий центр VMC1675</h3>
-<p>Вертикальный обрабатывающий центр VMC1675 — крупногабаритный станок с ЧПУ серии высокой производительности, предназначенный для обработки тяжёлых заготовок с повышенными требованиями к точности и качеству...</p>
-<div class="vmc-specs">
-<div><span>Стол</span><b>1700×700 мм</b></div>
-<div><span>Нагрузка</span><b>1500 кг</b></div>
-<div><span>Ходы X/Y/Z</span><b>1600 мм / 750 мм / 700 мм</b></div>
-<div><span>Шпиндель</span><b>по запросу · по запросу</b></div>
-<div><span>Инструменты</span><b>по запросу</b></div>
-<div><span>Масса</span><b>11 200 кг</b></div>
-</div>
-<div class="vmc-actions">
-<a class="btn btn-ce" href="index.html#quiz">Запросить КП</a>
-<a class="btn btn-gold" href="tel:88005511206">Позвонить</a>
-<a class="btn btn-ghost" href="equipment-milling.html#subcats">Подробнее</a>
-</div>
+<small>VMC · Вертикальный ОЦ</small>
+<h3>VMC1200E Z</h3>
+<div class="vmc-specs"><div><span>Стол</span><b>1400×520 мм</b></div><div><span>Ходы X/Y/Z</span><b>1200 мм / 500 мм / 570 мм</b></div><div><span>Шпиндель</span><b>BT40 (опц. BT50)</b></div><div><span>Масса</span><b>по запросу</b></div></div>
 </div>
 </article>
-<article class="vmc-card" data-series="VMC" data-name="вертикальный обрабатывающий центр vmc320 vmc 600×305 мм 260 кг 320 мм / 240 мм / 450 мм по запросу · по запросу по запросу 2800 кг" data-x="320" data-load="260" data-spindle="" data-taper="" data-atc="">
-<div class="vmc-photo"><img src="milling-assets/vmc320.png" alt="Вертикальный обрабатывающий центр VMC320" loading="lazy"/></div>
+<article class="vmc-card" data-series="VMC" data-name="vmc1300e z vmc 1600×650 мм 1000 кг 1300 мм / 650 мм / 600 мм BT40 (опц. BT50) · " data-x="1300" data-load="1000" data-spindle="" data-taper="BT40" data-atc="">
+<a class="vmc-card-link" href="equipment-milling-vmc1300e-z.html" aria-label="VMC1300E Z — подробнее"></a>
+<div class="vmc-photo"><img src="milling-assets/vmc1300e-z.png" alt="VMC1300E Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
-<small>VMC · Вертикальный центр</small>
-<h3>Вертикальный обрабатывающий центр VMC320</h3>
-<p>Вертикальный обрабатывающий центр VMC320 — компактный высокоточный станок с ЧПУ серии высокой производительности, созданный для обработки небольших деталей с высокими требованиями к качеству поверхности и...</p>
-<div class="vmc-specs">
-<div><span>Стол</span><b>600×305 мм</b></div>
-<div><span>Нагрузка</span><b>260 кг</b></div>
-<div><span>Ходы X/Y/Z</span><b>320 мм / 240 мм / 450 мм</b></div>
-<div><span>Шпиндель</span><b>по запросу · по запросу</b></div>
-<div><span>Инструменты</span><b>по запросу</b></div>
-<div><span>Масса</span><b>2800 кг</b></div>
-</div>
-<div class="vmc-actions">
-<a class="btn btn-ce" href="index.html#quiz">Запросить КП</a>
-<a class="btn btn-gold" href="tel:88005511206">Позвонить</a>
-<a class="btn btn-ghost" href="equipment-milling.html#subcats">Подробнее</a>
-</div>
+<small>VMC · Вертикальный ОЦ</small>
+<h3>VMC1300E Z</h3>
+<div class="vmc-specs"><div><span>Стол</span><b>1600×650 мм</b></div><div><span>Ходы X/Y/Z</span><b>1300 мм / 650 мм / 600 мм</b></div><div><span>Шпиндель</span><b>BT40 (опц. BT50)</b></div><div><span>Масса</span><b>по запросу</b></div></div>
 </div>
 </article>
-<article class="vmc-card" data-series="VMC" data-name="вертикальный обрабатывающий центр vmc400 vmc 600×380 мм 350 кг 400 мм / 350 мм / 450 мм по запросу · по запросу по запросу ~3400 кг" data-x="400" data-load="350" data-spindle="" data-taper="" data-atc="">
-<div class="vmc-photo"><img src="milling-assets/vmc400.png" alt="Вертикальный обрабатывающий центр VMC400" loading="lazy"/></div>
+<article class="vmc-card" data-series="VMC" data-name="vmc1375 z vmc 1600×750 мм 1300 кг 24/24/20 м/мин BT40 (опц. BT50) · " data-x="24" data-load="1300" data-spindle="" data-taper="BT40" data-atc="">
+<a class="vmc-card-link" href="equipment-milling-vmc1375-z.html" aria-label="VMC1375 Z — подробнее"></a>
+<div class="vmc-photo"><img src="milling-assets/vmc1375-z.png" alt="VMC1375 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
-<small>VMC · Вертикальный центр</small>
-<h3>Вертикальный обрабатывающий центр VMC400</h3>
-<p>Вертикальный обрабатывающий центр VMC400 — универсальный станок с ЧПУ серии высокой производительности, оптимальный для точной обработки деталей малого и среднего размера. Сочетание увеличенного хода по оси Y...</p>
-<div class="vmc-specs">
-<div><span>Стол</span><b>600×380 мм</b></div>
-<div><span>Нагрузка</span><b>350 кг</b></div>
-<div><span>Ходы X/Y/Z</span><b>400 мм / 350 мм / 450 мм</b></div>
-<div><span>Шпиндель</span><b>по запросу · по запросу</b></div>
-<div><span>Инструменты</span><b>по запросу</b></div>
-<div><span>Масса</span><b>~3400 кг</b></div>
-</div>
-<div class="vmc-actions">
-<a class="btn btn-ce" href="index.html#quiz">Запросить КП</a>
-<a class="btn btn-gold" href="tel:88005511206">Позвонить</a>
-<a class="btn btn-ghost" href="equipment-milling.html#subcats">Подробнее</a>
-</div>
+<small>VMC · Вертикальный ОЦ</small>
+<h3>VMC1375 Z</h3>
+<div class="vmc-specs"><div><span>Стол</span><b>1600×750 мм</b></div><div><span>Ходы X/Y/Z</span><b>24/24/20 м/мин</b></div><div><span>Шпиндель</span><b>BT40 (опц. BT50)</b></div><div><span>Масса</span><b>по запросу</b></div></div>
 </div>
 </article>
-<article class="vmc-card" data-series="VMC" data-name="вертикальный обрабатывающий центр vmc400e vmc 600×350 мм 100 кг 400 мм / 350 мм / 400 мм bt40 · 10000 об/мин зонтичный тип, 16 позиций 2000 кг" data-x="400" data-load="100" data-spindle="10000" data-taper="BT40" data-atc="16">
-<div class="vmc-photo"><img src="milling-assets/vmc400e.png" alt="Вертикальный обрабатывающий центр VMC400E" loading="lazy"/></div>
+<article class="vmc-card" data-series="VMC" data-name="vmc1580 w vmc 1700×800 мм  1500 мм / 800 мм / 700 мм BT50 · " data-x="1500" data-load="" data-spindle="" data-taper="BT50" data-atc="">
+<a class="vmc-card-link" href="equipment-milling-vmc1580-w.html" aria-label="VMC1580 W — подробнее"></a>
+<div class="vmc-photo"><img src="milling-assets/vmc1580-w.png" alt="VMC1580 W" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
-<small>VMC · Вертикальный центр</small>
-<h3>Вертикальный обрабатывающий центр VMC400E</h3>
-<p>Вертикальный обрабатывающий центр VMC400E — компактное решение для высокоточной обработки деталей небольших и средних размеров: пластин, дисков, корпусов и пресс-форм. Станок позволяет выполнять в одном цикле...</p>
-<div class="vmc-specs">
-<div><span>Стол</span><b>600×350 мм</b></div>
-<div><span>Нагрузка</span><b>100 кг</b></div>
-<div><span>Ходы X/Y/Z</span><b>400 мм / 350 мм / 400 мм</b></div>
-<div><span>Шпиндель</span><b>BT40 · 10000 об/мин</b></div>
-<div><span>Инструменты</span><b>зонтичный тип, 16 позиций</b></div>
-<div><span>Масса</span><b>2000 кг</b></div>
-</div>
-<div class="vmc-actions">
-<a class="btn btn-ce" href="index.html#quiz">Запросить КП</a>
-<a class="btn btn-gold" href="tel:88005511206">Позвонить</a>
-<a class="btn btn-ghost" href="equipment-milling.html#subcats">Подробнее</a>
-</div>
+<small>VMC · Вертикальный ОЦ</small>
+<h3>VMC1580 W</h3>
+<div class="vmc-specs"><div><span>Стол</span><b>1700×800 мм</b></div><div><span>Ходы X/Y/Z</span><b>1500 мм / 800 мм / 700 мм</b></div><div><span>Шпиндель</span><b>BT50</b></div><div><span>Масса</span><b>по запросу</b></div></div>
 </div>
 </article>
-<article class="vmc-card" data-series="VMC" data-name="вертикальный обрабатывающий центр vmc420e vmc 720×305 мм 260 кг 420 мм / 240 мм / 450 мм по запросу · по запросу по запросу 3100 кг" data-x="420" data-load="260" data-spindle="" data-taper="" data-atc="">
-<div class="vmc-photo"><img src="milling-assets/vmc420e.png" alt="Вертикальный обрабатывающий центр VMC420E" loading="lazy"/></div>
+<article class="vmc-card" data-series="VMC" data-name="vmc1580 z vmc 1700×800 мм 1500 кг 20/20/15 м/мин BT50 · " data-x="20" data-load="1500" data-spindle="" data-taper="BT50" data-atc="">
+<a class="vmc-card-link" href="equipment-milling-vmc1580-z.html" aria-label="VMC1580 Z — подробнее"></a>
+<div class="vmc-photo"><img src="milling-assets/vmc1580-z.png" alt="VMC1580 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
-<small>VMC · Вертикальный центр</small>
-<h3>Вертикальный обрабатывающий центр VMC420E</h3>
-<p>Вертикальный обрабатывающий центр VMC420E — компактный высокоточный станок с ЧПУ, предназначенный для обработки небольших деталей с высокими требованиями к качеству поверхности. Увеличенный по оси X ход (420...</p>
-<div class="vmc-specs">
-<div><span>Стол</span><b>720×305 мм</b></div>
-<div><span>Нагрузка</span><b>260 кг</b></div>
-<div><span>Ходы X/Y/Z</span><b>420 мм / 240 мм / 450 мм</b></div>
-<div><span>Шпиндель</span><b>по запросу · по запросу</b></div>
-<div><span>Инструменты</span><b>по запросу</b></div>
-<div><span>Масса</span><b>3100 кг</b></div>
-</div>
-<div class="vmc-actions">
-<a class="btn btn-ce" href="index.html#quiz">Запросить КП</a>
-<a class="btn btn-gold" href="tel:88005511206">Позвонить</a>
-<a class="btn btn-ghost" href="equipment-milling.html#subcats">Подробнее</a>
-</div>
+<small>VMC · Вертикальный ОЦ</small>
+<h3>VMC1580 Z</h3>
+<div class="vmc-specs"><div><span>Стол</span><b>1700×800 мм</b></div><div><span>Ходы X/Y/Z</span><b>20/20/15 м/мин</b></div><div><span>Шпиндель</span><b>BT50</b></div><div><span>Масса</span><b>по запросу</b></div></div>
 </div>
 </article>
-<article class="vmc-card" data-series="VMC" data-name="вертикальный обрабатывающий центр vmc420s vmc 720×305 мм 250 кг 420/240/450 мм / по запросу / по запросу по запросу · 8000 об/мин (опц. 20000 об/мин) по запросу 2500 кг" data-x="420" data-load="250" data-spindle="20000" data-taper="" data-atc="">
-<div class="vmc-photo"><img src="milling-assets/vmc420s.png" alt="Вертикальный обрабатывающий центр VMC420S" loading="lazy"/></div>
+<article class="vmc-card" data-series="VMC" data-name="vmc1675 z vmc 1700×700 мм 1500 кг 1600/750/700 мм BT40 · 8000 (опц. 10000/12000) об/мин" data-x="1600" data-load="1500" data-spindle="12000.0" data-taper="BT40" data-atc="">
+<a class="vmc-card-link" href="equipment-milling-vmc1675-z.html" aria-label="VMC1675 Z — подробнее"></a>
+<div class="vmc-photo"><img src="milling-assets/vmc1675-z.png" alt="VMC1675 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
-<small>VMC · Вертикальный центр</small>
-<h3>Вертикальный обрабатывающий центр VMC420S</h3>
-<p>Вертикальный обрабатывающий центр VMC420S — компактный высокоскоростной станок, разработанный для точного сверления, нарезания резьбы и фрезерования малых и средних деталей. Широкое исполнение конструкции...</p>
-<div class="vmc-specs">
-<div><span>Стол</span><b>720×305 мм</b></div>
-<div><span>Нагрузка</span><b>250 кг</b></div>
-<div><span>Ходы X/Y/Z</span><b>420/240/450 мм / по запросу / по запросу</b></div>
-<div><span>Шпиндель</span><b>по запросу · 8000 об/мин (опц. 20000 об/мин)</b></div>
-<div><span>Инструменты</span><b>по запросу</b></div>
-<div><span>Масса</span><b>2500 кг</b></div>
-</div>
-<div class="vmc-actions">
-<a class="btn btn-ce" href="index.html#quiz">Запросить КП</a>
-<a class="btn btn-gold" href="tel:88005511206">Позвонить</a>
-<a class="btn btn-ghost" href="equipment-milling.html#subcats">Подробнее</a>
-</div>
+<small>VMC · Вертикальный ОЦ</small>
+<h3>VMC1675 Z</h3>
+<div class="vmc-specs"><div><span>Стол</span><b>1700×700 мм</b></div><div><span>Ходы X/Y/Z</span><b>1600/750/700 мм</b></div><div><span>Шпиндель</span><b>BT40 · 8000 (опц. 10000/12000) об/мин</b></div><div><span>Масса</span><b>11 200 кг</b></div></div>
 </div>
 </article>
-<article class="vmc-card" data-series="VMC" data-name="вертикальный обрабатывающий центр vmc500 vmc 700×400 мм 350 кг 500 мм / 400 мм / 450 мм по запросу · по запросу по запросу 3900 кг" data-x="500" data-load="350" data-spindle="" data-taper="" data-atc="">
-<div class="vmc-photo"><img src="milling-assets/vmc500.png" alt="Вертикальный обрабатывающий центр VMC500" loading="lazy"/></div>
+<article class="vmc-card" data-series="VMC" data-name="vmc320 z vmc 600×305 мм 260 кг 320/240/450 мм BT30 · 8000 (опц. 12000) об/мин" data-x="320" data-load="260" data-spindle="12000.0" data-taper="BT30" data-atc="">
+<a class="vmc-card-link" href="equipment-milling-vmc320-z.html" aria-label="VMC320 Z — подробнее"></a>
+<div class="vmc-photo"><img src="milling-assets/vmc320-z.png" alt="VMC320 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
-<small>VMC · Вертикальный центр</small>
-<h3>Вертикальный обрабатывающий центр VMC500</h3>
-<p>Вертикальный обрабатывающий центр VMC500 — универсальный станок с ЧПУ серии высокой производительности, предназначенный для точной обработки деталей малого и среднего размера. Ход по осям X и Y (500×400 мм) и...</p>
-<div class="vmc-specs">
-<div><span>Стол</span><b>700×400 мм</b></div>
-<div><span>Нагрузка</span><b>350 кг</b></div>
-<div><span>Ходы X/Y/Z</span><b>500 мм / 400 мм / 450 мм</b></div>
-<div><span>Шпиндель</span><b>по запросу · по запросу</b></div>
-<div><span>Инструменты</span><b>по запросу</b></div>
-<div><span>Масса</span><b>3900 кг</b></div>
-</div>
-<div class="vmc-actions">
-<a class="btn btn-ce" href="index.html#quiz">Запросить КП</a>
-<a class="btn btn-gold" href="tel:88005511206">Позвонить</a>
-<a class="btn btn-ghost" href="equipment-milling.html#subcats">Подробнее</a>
-</div>
+<small>VMC · Вертикальный ОЦ</small>
+<h3>VMC320 Z</h3>
+<div class="vmc-specs"><div><span>Стол</span><b>600×305 мм</b></div><div><span>Ходы X/Y/Z</span><b>320/240/450 мм</b></div><div><span>Шпиндель</span><b>BT30 · 8000 (опц. 12000) об/мин</b></div><div><span>Масса</span><b>2800 кг</b></div></div>
 </div>
 </article>
-<article class="vmc-card" data-series="VMC" data-name="вертикальный обрабатывающий центр vmc550e vmc 800×305 мм 260 кг 550 мм / 240 мм / 450 мм по запросу · по запросу по запросу 2600 кг" data-x="550" data-load="260" data-spindle="" data-taper="" data-atc="">
-<div class="vmc-photo"><img src="milling-assets/vmc550e.png" alt="Вертикальный обрабатывающий центр VMC550E" loading="lazy"/></div>
+<article class="vmc-card" data-series="VMC" data-name="vmc400 z vmc 600×380 мм  400/350/450 мм BT40 · 8000 (опц. 12000) об/мин" data-x="400" data-load="" data-spindle="12000.0" data-taper="BT40" data-atc="">
+<a class="vmc-card-link" href="equipment-milling-vmc400-z.html" aria-label="VMC400 Z — подробнее"></a>
+<div class="vmc-photo"><img src="milling-assets/vmc400-z.png" alt="VMC400 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
-<small>VMC · Вертикальный центр</small>
-<h3>Вертикальный обрабатывающий центр VMC550E</h3>
-<p>Вертикальный обрабатывающий центр VMC550E — компактный высокоточный станок с ЧПУ, предназначенный для высокоточной обработки деталей небольшого размера. Расширенный ход по оси X (550 мм) при увеличенном столе...</p>
-<div class="vmc-specs">
-<div><span>Стол</span><b>800×305 мм</b></div>
-<div><span>Нагрузка</span><b>260 кг</b></div>
-<div><span>Ходы X/Y/Z</span><b>550 мм / 240 мм / 450 мм</b></div>
-<div><span>Шпиндель</span><b>по запросу · по запросу</b></div>
-<div><span>Инструменты</span><b>по запросу</b></div>
-<div><span>Масса</span><b>2600 кг</b></div>
-</div>
-<div class="vmc-actions">
-<a class="btn btn-ce" href="index.html#quiz">Запросить КП</a>
-<a class="btn btn-gold" href="tel:88005511206">Позвонить</a>
-<a class="btn btn-ghost" href="equipment-milling.html#subcats">Подробнее</a>
-</div>
+<small>VMC · Вертикальный ОЦ</small>
+<h3>VMC400 Z</h3>
+<div class="vmc-specs"><div><span>Стол</span><b>600×380 мм</b></div><div><span>Ходы X/Y/Z</span><b>400/350/450 мм</b></div><div><span>Шпиндель</span><b>BT40 · 8000 (опц. 12000) об/мин</b></div><div><span>Масса</span><b>3400 кг</b></div></div>
 </div>
 </article>
-<article class="vmc-card" data-series="VMC" data-name="вертикальный обрабатывающий центр vmc600e vmc 800×380 мм 350 кг 600/350/450 мм / по запросу / по запросу по запросу · 8000 об/мин (опц. 12000 об/мин) 24 места / дисковый (опц. 16 мест / карусельный) 3900 кг" data-x="600" data-load="350" data-spindle="12000" data-taper="" data-atc="24">
-<div class="vmc-photo"><img src="milling-assets/vmc600e.png" alt="Вертикальный обрабатывающий центр VMC600E" loading="lazy"/></div>
+<article class="vmc-card" data-series="VMC" data-name="vmc400e w vmc 600×350 мм  400 мм / 350 мм / 400 мм BT40 · " data-x="400" data-load="" data-spindle="" data-taper="BT40" data-atc="">
+<a class="vmc-card-link" href="equipment-milling-vmc400e-w.html" aria-label="VMC400E W — подробнее"></a>
+<div class="vmc-photo"><img src="milling-assets/vmc400e-w.png" alt="VMC400E W" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
-<small>VMC · Вертикальный центр</small>
-<h3>Вертикальный обрабатывающий центр VMC600E</h3>
-<p>Вертикальный обрабатывающий центр VMC600E — компактная и производительная машина серии высокопроизводительных обрабатывающих центров. Станок оснащён роликовыми линейными направляющими по всем трём осям,...</p>
-<div class="vmc-specs">
-<div><span>Стол</span><b>800×380 мм</b></div>
-<div><span>Нагрузка</span><b>350 кг</b></div>
-<div><span>Ходы X/Y/Z</span><b>600/350/450 мм / по запросу / по запросу</b></div>
-<div><span>Шпиндель</span><b>по запросу · 8000 об/мин (опц. 12000 об/мин)</b></div>
-<div><span>Инструменты</span><b>24 места / дисковый (опц. 16 мест / карусельный)</b></div>
-<div><span>Масса</span><b>3900 кг</b></div>
-</div>
-<div class="vmc-actions">
-<a class="btn btn-ce" href="index.html#quiz">Запросить КП</a>
-<a class="btn btn-gold" href="tel:88005511206">Позвонить</a>
-<a class="btn btn-ghost" href="equipment-milling.html#subcats">Подробнее</a>
-</div>
+<small>VMC · Вертикальный ОЦ</small>
+<h3>VMC400E W</h3>
+<div class="vmc-specs"><div><span>Стол</span><b>600×350 мм</b></div><div><span>Ходы X/Y/Z</span><b>400 мм / 350 мм / 400 мм</b></div><div><span>Шпиндель</span><b>BT40</b></div><div><span>Масса</span><b>по запросу</b></div></div>
 </div>
 </article>
-<article class="vmc-card" data-series="VMC" data-name="вертикальный обрабатывающий центр vmc640 vmc 920×400 мм 300 кг 650 мм / 400 мм / 500 мм bt40 · 10000 об/мин рычажный тип, 16 позиций 3500 кг" data-x="650" data-load="300" data-spindle="10000" data-taper="BT40" data-atc="16">
-<div class="vmc-photo"><img src="milling-assets/vmc640.png" alt="Вертикальный обрабатывающий центр VMC640" loading="lazy"/></div>
+<article class="vmc-card" data-series="VMC" data-name="vmc420e z vmc 720×305 мм  420/240/450 мм BT30 · 8000 (опц. 12000) об/мин" data-x="420" data-load="" data-spindle="12000.0" data-taper="BT30" data-atc="">
+<a class="vmc-card-link" href="equipment-milling-vmc420e-z.html" aria-label="VMC420E Z — подробнее"></a>
+<div class="vmc-photo"><img src="milling-assets/vmc420e-z.png" alt="VMC420E Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
-<small>VMC · Вертикальный центр</small>
-<h3>Вертикальный обрабатывающий центр VMC640</h3>
-<p>Вертикальный обрабатывающий центр VMC640 обеспечивает высокоточную обработку деталей различной сложности — пластин, дисков, корпусов и пресс-форм. Станок выполняет полный спектр операций механической...</p>
-<div class="vmc-specs">
-<div><span>Стол</span><b>920×400 мм</b></div>
-<div><span>Нагрузка</span><b>300 кг</b></div>
-<div><span>Ходы X/Y/Z</span><b>650 мм / 400 мм / 500 мм</b></div>
-<div><span>Шпиндель</span><b>BT40 · 10000 об/мин</b></div>
-<div><span>Инструменты</span><b>рычажный тип, 16 позиций</b></div>
-<div><span>Масса</span><b>3500 кг</b></div>
-</div>
-<div class="vmc-actions">
-<a class="btn btn-ce" href="index.html#quiz">Запросить КП</a>
-<a class="btn btn-gold" href="tel:88005511206">Позвонить</a>
-<a class="btn btn-ghost" href="equipment-milling.html#subcats">Подробнее</a>
-</div>
+<small>VMC · Вертикальный ОЦ</small>
+<h3>VMC420E Z</h3>
+<div class="vmc-specs"><div><span>Стол</span><b>720×305 мм</b></div><div><span>Ходы X/Y/Z</span><b>420/240/450 мм</b></div><div><span>Шпиндель</span><b>BT30 · 8000 (опц. 12000) об/мин</b></div><div><span>Масса</span><b>3100 кг</b></div></div>
 </div>
 </article>
-<article class="vmc-card" data-series="VMC" data-name="вертикальный обрабатывающий центр vmc700e vmc 800×400 мм 400 кг 700/400/450 мм / по запросу / по запросу по запросу · 8000 об/мин (опц. 12000 об/мин) 24 места / дисковый (опц. 16 мест / карусельный) 4100 кг" data-x="700" data-load="400" data-spindle="12000" data-taper="" data-atc="24">
-<div class="vmc-photo"><img src="milling-assets/vmc700e.png" alt="Вертикальный обрабатывающий центр VMC700E" loading="lazy"/></div>
+<article class="vmc-card" data-series="VMC" data-name="vmc420s z vmc 720×305 мм  420/240/450 мм BT30 · 8000 (опц. 20000) об/мин" data-x="420" data-load="" data-spindle="20000.0" data-taper="BT30" data-atc="">
+<a class="vmc-card-link" href="equipment-milling-vmc420s-z.html" aria-label="VMC420S Z — подробнее"></a>
+<div class="vmc-photo"><img src="milling-assets/vmc420s-z.png" alt="VMC420S Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
-<small>VMC · Вертикальный центр</small>
-<h3>Вертикальный обрабатывающий центр VMC700E</h3>
-<p>Вертикальный обрабатывающий центр VMC700E относится к серии высокопроизводительных машин с улучшенными геометрическими характеристиками рабочей зоны. Станок построен на жёсткой литой станине с роликовыми...</p>
-<div class="vmc-specs">
-<div><span>Стол</span><b>800×400 мм</b></div>
-<div><span>Нагрузка</span><b>400 кг</b></div>
-<div><span>Ходы X/Y/Z</span><b>700/400/450 мм / по запросу / по запросу</b></div>
-<div><span>Шпиндель</span><b>по запросу · 8000 об/мин (опц. 12000 об/мин)</b></div>
-<div><span>Инструменты</span><b>24 места / дисковый (опц. 16 мест / карусельный)</b></div>
-<div><span>Масса</span><b>4100 кг</b></div>
-</div>
-<div class="vmc-actions">
-<a class="btn btn-ce" href="index.html#quiz">Запросить КП</a>
-<a class="btn btn-gold" href="tel:88005511206">Позвонить</a>
-<a class="btn btn-ghost" href="equipment-milling.html#subcats">Подробнее</a>
-</div>
+<small>VMC · Вертикальный ОЦ</small>
+<h3>VMC420S Z</h3>
+<div class="vmc-specs"><div><span>Стол</span><b>720×305 мм</b></div><div><span>Ходы X/Y/Z</span><b>420/240/450 мм</b></div><div><span>Шпиндель</span><b>BT30 · 8000 (опц. 20000) об/мин</b></div><div><span>Масса</span><b>2500 кг</b></div></div>
 </div>
 </article>
-<article class="vmc-card" data-series="VMC" data-name="вертикальный обрабатывающий центр vmc740 vmc 920×400 мм 300 кг 700 мм / 400 мм / 500 мм bt40 · 10000 об/мин рычажный тип, 16 позиций 3500 кг" data-x="700" data-load="300" data-spindle="10000" data-taper="BT40" data-atc="16">
-<div class="vmc-photo"><img src="milling-assets/vmc740.png" alt="Вертикальный обрабатывающий центр VMC740" loading="lazy"/></div>
+<article class="vmc-card" data-series="VMC" data-name="vmc500 z vmc 700×400 мм 350 кг 500/400/450 мм BT40 · 8000 (опц. 12000) об/мин" data-x="500" data-load="350" data-spindle="12000.0" data-taper="BT40" data-atc="">
+<a class="vmc-card-link" href="equipment-milling-vmc500-z.html" aria-label="VMC500 Z — подробнее"></a>
+<div class="vmc-photo"><img src="milling-assets/vmc500-z.png" alt="VMC500 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
-<small>VMC · Вертикальный центр</small>
-<h3>Вертикальный обрабатывающий центр VMC740</h3>
-<p>Вертикальный обрабатывающий центр VMC740 предназначен для высокоточной обработки деталей средних размеров: пластин, дисков, корпусов и пресс-форм. Станок реализует полный цикл механической обработки —...</p>
-<div class="vmc-specs">
-<div><span>Стол</span><b>920×400 мм</b></div>
-<div><span>Нагрузка</span><b>300 кг</b></div>
-<div><span>Ходы X/Y/Z</span><b>700 мм / 400 мм / 500 мм</b></div>
-<div><span>Шпиндель</span><b>BT40 · 10000 об/мин</b></div>
-<div><span>Инструменты</span><b>рычажный тип, 16 позиций</b></div>
-<div><span>Масса</span><b>3500 кг</b></div>
-</div>
-<div class="vmc-actions">
-<a class="btn btn-ce" href="index.html#quiz">Запросить КП</a>
-<a class="btn btn-gold" href="tel:88005511206">Позвонить</a>
-<a class="btn btn-ghost" href="equipment-milling.html#subcats">Подробнее</a>
-</div>
+<small>VMC · Вертикальный ОЦ</small>
+<h3>VMC500 Z</h3>
+<div class="vmc-specs"><div><span>Стол</span><b>700×400 мм</b></div><div><span>Ходы X/Y/Z</span><b>500/400/450 мм</b></div><div><span>Шпиндель</span><b>BT40 · 8000 (опц. 12000) об/мин</b></div><div><span>Масса</span><b>3900 кг</b></div></div>
 </div>
 </article>
-<article class="vmc-card" data-series="VMC" data-name="вертикальный обрабатывающий центр vmc840 vmc 1000×470 мм 700 кг 800/400/530 мм / по запросу / по запросу по запросу · 8000 об/мин (опц. 10000, 12000 об/мин) 24 места / дисковый 5700 кг" data-x="800" data-load="700" data-spindle="12000" data-taper="" data-atc="24">
-<div class="vmc-photo"><img src="milling-assets/vmc840.png" alt="Вертикальный обрабатывающий центр VMC840" loading="lazy"/></div>
+<article class="vmc-card" data-series="VMC" data-name="vmc550e z vmc 800×305 мм 260 кг 550/240/450 мм BT30 · 8000 об/мин" data-x="550" data-load="260" data-spindle="8000.0" data-taper="BT30" data-atc="">
+<a class="vmc-card-link" href="equipment-milling-vmc550e-z.html" aria-label="VMC550E Z — подробнее"></a>
+<div class="vmc-photo"><img src="milling-assets/vmc550e-z.png" alt="VMC550E Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
-<small>VMC · Вертикальный центр</small>
-<h3>Вертикальный обрабатывающий центр VMC840</h3>
-<p>Вертикальный обрабатывающий центр VMC840 — производительная машина серии высокоточных станков, предназначенная для обработки деталей среднего и крупного размера. Станок выполнен на массивной литой станине с...</p>
-<div class="vmc-specs">
-<div><span>Стол</span><b>1000×470 мм</b></div>
-<div><span>Нагрузка</span><b>700 кг</b></div>
-<div><span>Ходы X/Y/Z</span><b>800/400/530 мм / по запросу / по запросу</b></div>
-<div><span>Шпиндель</span><b>по запросу · 8000 об/мин (опц. 10000, 12000 об/мин)</b></div>
-<div><span>Инструменты</span><b>24 места / дисковый</b></div>
-<div><span>Масса</span><b>5700 кг</b></div>
-</div>
-<div class="vmc-actions">
-<a class="btn btn-ce" href="index.html#quiz">Запросить КП</a>
-<a class="btn btn-gold" href="tel:88005511206">Позвонить</a>
-<a class="btn btn-ghost" href="equipment-milling.html#subcats">Подробнее</a>
-</div>
+<small>VMC · Вертикальный ОЦ</small>
+<h3>VMC550E Z</h3>
+<div class="vmc-specs"><div><span>Стол</span><b>800×305 мм</b></div><div><span>Ходы X/Y/Z</span><b>550/240/450 мм</b></div><div><span>Шпиндель</span><b>BT30 · 8000 об/мин</b></div><div><span>Масса</span><b>2600 кг</b></div></div>
 </div>
 </article>
-<article class="vmc-card" data-series="VMC" data-name="вертикальный обрабатывающий центр vmc855 vmc 1000×550 мм 600 кг 800 мм / 550 мм / 550 мм bt40 · 10000 об/мин рычажный тип, 24 позиции 5000 кг" data-x="800" data-load="600" data-spindle="10000" data-taper="BT40" data-atc="24">
-<div class="vmc-photo"><img src="milling-assets/vmc855.png" alt="Вертикальный обрабатывающий центр VMC855" loading="lazy"/></div>
+<article class="vmc-card" data-series="VMC" data-name="vmc600e z vmc 800×380 мм 350 кг 600 мм / 350 мм / 450 мм BT40 · " data-x="600" data-load="350" data-spindle="" data-taper="BT40" data-atc="">
+<a class="vmc-card-link" href="equipment-milling-vmc600e-z.html" aria-label="VMC600E Z — подробнее"></a>
+<div class="vmc-photo"><img src="milling-assets/vmc600e-z.png" alt="VMC600E Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
-<small>VMC · Вертикальный центр</small>
-<h3>Вертикальный обрабатывающий центр VMC855</h3>
-<p>Вертикальный обрабатывающий центр VMC855 предназначен для высокоточной обработки деталей средних размеров: пластин, дисков, корпусов и пресс-форм весом до 600 кг. Станок реализует комплексную обработку в...</p>
-<div class="vmc-specs">
-<div><span>Стол</span><b>1000×550 мм</b></div>
-<div><span>Нагрузка</span><b>600 кг</b></div>
-<div><span>Ходы X/Y/Z</span><b>800 мм / 550 мм / 550 мм</b></div>
-<div><span>Шпиндель</span><b>BT40 · 10000 об/мин</b></div>
-<div><span>Инструменты</span><b>рычажный тип, 24 позиции</b></div>
-<div><span>Масса</span><b>5000 кг</b></div>
-</div>
-<div class="vmc-actions">
-<a class="btn btn-ce" href="index.html#quiz">Запросить КП</a>
-<a class="btn btn-gold" href="tel:88005511206">Позвонить</a>
-<a class="btn btn-ghost" href="equipment-milling.html#subcats">Подробнее</a>
-</div>
+<small>VMC · Вертикальный ОЦ</small>
+<h3>VMC600E Z</h3>
+<div class="vmc-specs"><div><span>Стол</span><b>800×380 мм</b></div><div><span>Ходы X/Y/Z</span><b>600 мм / 350 мм / 450 мм</b></div><div><span>Шпиндель</span><b>BT40</b></div><div><span>Масса</span><b>по запросу</b></div></div>
 </div>
 </article>
-<article class="vmc-card" data-series="VNM" data-name="вертикальный обрабатывающий центр vnm1100 vnm 1300×600 мм 1000 кг 1100 мм / 600 мм / 650 мм bt40 · 8000 об/мин рычажный тип, 24 позиции 6500 кг" data-x="1100" data-load="1000" data-spindle="8000" data-taper="BT40" data-atc="24">
-<div class="vmc-photo"><img src="milling-assets/vnm1100.png" alt="Вертикальный обрабатывающий центр VNM1100" loading="lazy"/></div>
+<article class="vmc-card" data-series="VMC" data-name="vmc640 w vmc 920×400 мм  30 000/30 000/18 000 мм/мин BT40 · " data-x="30000" data-load="" data-spindle="" data-taper="BT40" data-atc="">
+<a class="vmc-card-link" href="equipment-milling-vmc640-w.html" aria-label="VMC640 W — подробнее"></a>
+<div class="vmc-photo"><img src="milling-assets/vmc640-w.png" alt="VMC640 W" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
-<small>VNM · Вертикальный центр</small>
-<h3>Вертикальный обрабатывающий центр VNM1100</h3>
-<p>Вертикальный обрабатывающий центр VNM1100 создан для обработки крупных и тяжёлых деталей, требующих высокой точности и выполнения множества технологических переходов в рамках одной установки. Станок эффективно...</p>
-<div class="vmc-specs">
-<div><span>Стол</span><b>1300×600 мм</b></div>
-<div><span>Нагрузка</span><b>1000 кг</b></div>
-<div><span>Ходы X/Y/Z</span><b>1100 мм / 600 мм / 650 мм</b></div>
-<div><span>Шпиндель</span><b>BT40 · 8000 об/мин</b></div>
-<div><span>Инструменты</span><b>рычажный тип, 24 позиции</b></div>
-<div><span>Масса</span><b>6500 кг</b></div>
-</div>
-<div class="vmc-actions">
-<a class="btn btn-ce" href="index.html#quiz">Запросить КП</a>
-<a class="btn btn-gold" href="tel:88005511206">Позвонить</a>
-<a class="btn btn-ghost" href="equipment-milling.html#subcats">Подробнее</a>
-</div>
+<small>VMC · Вертикальный ОЦ</small>
+<h3>VMC640 W</h3>
+<div class="vmc-specs"><div><span>Стол</span><b>920×400 мм</b></div><div><span>Ходы X/Y/Z</span><b>30 000/30 000/18 000 мм/мин</b></div><div><span>Шпиндель</span><b>BT40</b></div><div><span>Масса</span><b>по запросу</b></div></div>
 </div>
 </article>
-<article class="vmc-card" data-series="VNM" data-name="вертикальный обрабатывающий центр vnm1300 vnm 1500×700 мм 1200 кг 1300 мм / 700 мм / 700 мм bt50 · 6000 об/мин рычажный тип, 24 позиции 9500 кг" data-x="1300" data-load="1200" data-spindle="6000" data-taper="BT50" data-atc="24">
-<div class="vmc-photo"><img src="milling-assets/vnm1300.png" alt="Вертикальный обрабатывающий центр VNM1300" loading="lazy"/></div>
+<article class="vmc-card" data-series="VMC" data-name="vmc700e z vmc 800×400 мм 400 кг 700 мм / 400 мм / 450 мм BT40 · " data-x="700" data-load="400" data-spindle="" data-taper="BT40" data-atc="">
+<a class="vmc-card-link" href="equipment-milling-vmc700e-z.html" aria-label="VMC700E Z — подробнее"></a>
+<div class="vmc-photo"><img src="milling-assets/vmc700e-z.png" alt="VMC700E Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
-<small>VNM · Вертикальный центр</small>
-<h3>Вертикальный обрабатывающий центр VNM1300</h3>
-<p>Вертикальный обрабатывающий центр VNM1300 предназначен для высокоточной обработки крупногабаритных и тяжёлых деталей весом до 1200 кг. Станок обрабатывает плиты, диски, корпусные детали и пресс-формы сложной...</p>
-<div class="vmc-specs">
-<div><span>Стол</span><b>1500×700 мм</b></div>
-<div><span>Нагрузка</span><b>1200 кг</b></div>
-<div><span>Ходы X/Y/Z</span><b>1300 мм / 700 мм / 700 мм</b></div>
-<div><span>Шпиндель</span><b>BT50 · 6000 об/мин</b></div>
-<div><span>Инструменты</span><b>рычажный тип, 24 позиции</b></div>
-<div><span>Масса</span><b>9500 кг</b></div>
-</div>
-<div class="vmc-actions">
-<a class="btn btn-ce" href="index.html#quiz">Запросить КП</a>
-<a class="btn btn-gold" href="tel:88005511206">Позвонить</a>
-<a class="btn btn-ghost" href="equipment-milling.html#subcats">Подробнее</a>
-</div>
+<small>VMC · Вертикальный ОЦ</small>
+<h3>VMC700E Z</h3>
+<div class="vmc-specs"><div><span>Стол</span><b>800×400 мм</b></div><div><span>Ходы X/Y/Z</span><b>700 мм / 400 мм / 450 мм</b></div><div><span>Шпиндель</span><b>BT40</b></div><div><span>Масса</span><b>по запросу</b></div></div>
 </div>
 </article>
-<article class="vmc-card" data-series="VNM" data-name="вертикальный обрабатывающий центр vnm860 vnm 1000×550 мм 600 кг 850 мм / 600 мм / 600 мм bt40 · 8000 об/мин рычажный тип, 24 позиции 5500 кг" data-x="850" data-load="600" data-spindle="8000" data-taper="BT40" data-atc="24">
-<div class="vmc-photo"><img src="milling-assets/vnm860.png" alt="Вертикальный обрабатывающий центр VNM860" loading="lazy"/></div>
+<article class="vmc-card" data-series="VMC" data-name="vmc740 w vmc 920×400 мм  30 000/30 000/24 000 мм/мин BT40 · " data-x="30000" data-load="" data-spindle="" data-taper="BT40" data-atc="">
+<a class="vmc-card-link" href="equipment-milling-vmc740-w.html" aria-label="VMC740 W — подробнее"></a>
+<div class="vmc-photo"><img src="milling-assets/vmc740-w.png" alt="VMC740 W" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
-<small>VNM · Вертикальный центр</small>
-<h3>Вертикальный обрабатывающий центр VNM860</h3>
-<p>Вертикальный обрабатывающий центр VNM860 предназначен для обработки деталей, требующих высокой точности и выполнения множества технологических операций. Станок уверенно справляется со сложными геометрическими...</p>
-<div class="vmc-specs">
-<div><span>Стол</span><b>1000×550 мм</b></div>
-<div><span>Нагрузка</span><b>600 кг</b></div>
-<div><span>Ходы X/Y/Z</span><b>850 мм / 600 мм / 600 мм</b></div>
-<div><span>Шпиндель</span><b>BT40 · 8000 об/мин</b></div>
-<div><span>Инструменты</span><b>рычажный тип, 24 позиции</b></div>
-<div><span>Масса</span><b>5500 кг</b></div>
-</div>
-<div class="vmc-actions">
-<a class="btn btn-ce" href="index.html#quiz">Запросить КП</a>
-<a class="btn btn-gold" href="tel:88005511206">Позвонить</a>
-<a class="btn btn-ghost" href="equipment-milling.html#subcats">Подробнее</a>
-</div>
+<small>VMC · Вертикальный ОЦ</small>
+<h3>VMC740 W</h3>
+<div class="vmc-specs"><div><span>Стол</span><b>920×400 мм</b></div><div><span>Ходы X/Y/Z</span><b>30 000/30 000/24 000 мм/мин</b></div><div><span>Шпиндель</span><b>BT40</b></div><div><span>Масса</span><b>по запросу</b></div></div>
 </div>
 </article>
-<article class="vmc-card" data-series="Z" data-name="высокоскоростной сверлильно-фрезерный центр z640 z 700×420 мм 300 кг 610 мм / 410 мм / 350 мм по запросу · 24000 об/мин (опц. 20000, 12000 об/мин) по запросу 4300 кг" data-x="610" data-load="300" data-spindle="24000" data-taper="" data-atc="">
-<div class="vmc-photo"><img src="milling-assets/z640.png" alt="Высокоскоростной сверлильно-фрезерный центр Z640" loading="lazy"/></div>
+<article class="vmc-card" data-series="VMC" data-name="vmc840 z vmc 1000×470 мм 700 кг 800 мм / 400 мм / 530 мм BT40 · " data-x="800" data-load="700" data-spindle="" data-taper="BT40" data-atc="">
+<a class="vmc-card-link" href="equipment-milling-vmc840-z.html" aria-label="VMC840 Z — подробнее"></a>
+<div class="vmc-photo"><img src="milling-assets/vmc840-z.png" alt="VMC840 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
-<small>Z · Вертикальный центр</small>
-<h3>Высокоскоростной сверлильно-фрезерный центр Z640</h3>
-<p>Высокоскоростной сверлильно-фрезерный центр Z640 разработан для высокопроизводительного сверления, нарезания резьбы и лёгкого фрезерования в условиях крупносерийного и массового производства. Станок оснащён...</p>
-<div class="vmc-specs">
-<div><span>Стол</span><b>700×420 мм</b></div>
-<div><span>Нагрузка</span><b>300 кг</b></div>
-<div><span>Ходы X/Y/Z</span><b>610 мм / 410 мм / 350 мм</b></div>
-<div><span>Шпиндель</span><b>по запросу · 24000 об/мин (опц. 20000, 12000 об/мин)</b></div>
-<div><span>Инструменты</span><b>по запросу</b></div>
-<div><span>Масса</span><b>4300 кг</b></div>
-</div>
-<div class="vmc-actions">
-<a class="btn btn-ce" href="index.html#quiz">Запросить КП</a>
-<a class="btn btn-gold" href="tel:88005511206">Позвонить</a>
-<a class="btn btn-ghost" href="equipment-milling.html#subcats">Подробнее</a>
-</div>
+<small>VMC · Вертикальный ОЦ</small>
+<h3>VMC840 Z</h3>
+<div class="vmc-specs"><div><span>Стол</span><b>1000×470 мм</b></div><div><span>Ходы X/Y/Z</span><b>800 мм / 400 мм / 530 мм</b></div><div><span>Шпиндель</span><b>BT40</b></div><div><span>Масса</span><b>по запросу</b></div></div>
 </div>
 </article>
-<article class="vmc-card" data-series="Z" data-name="сверлильно-фрезерный центр z540 z 600×400 мм 250 кг 500 мм / 400 мм / 300 мм по запросу · 12000 об/мин (опц. 20000 об/мин) по запросу 2900 кг" data-x="500" data-load="250" data-spindle="20000" data-taper="" data-atc="">
-<div class="vmc-photo"><img src="milling-assets/z540.png" alt="Сверлильно-фрезерный центр Z540" loading="lazy"/></div>
+<article class="vmc-card" data-series="VMC" data-name="vmc855 w vmc 1000×550 мм  30 000/30 000/24 000 мм/мин BT40 · " data-x="30000" data-load="" data-spindle="" data-taper="BT40" data-atc="">
+<a class="vmc-card-link" href="equipment-milling-vmc855-w.html" aria-label="VMC855 W — подробнее"></a>
+<div class="vmc-photo"><img src="milling-assets/vmc855-w.png" alt="VMC855 W" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
-<small>Z · Вертикальный центр</small>
-<h3>Сверлильно-фрезерный центр Z540</h3>
-<p>Высокоскоростной сверлильно-фрезерный центр Z540 — компактная и высокопроизводительная машина для сверления, нарезания резьбы и лёгкого фрезерования в условиях крупносерийного и массового производства. Станок...</p>
-<div class="vmc-specs">
-<div><span>Стол</span><b>600×400 мм</b></div>
-<div><span>Нагрузка</span><b>250 кг</b></div>
-<div><span>Ходы X/Y/Z</span><b>500 мм / 400 мм / 300 мм</b></div>
-<div><span>Шпиндель</span><b>по запросу · 12000 об/мин (опц. 20000 об/мин)</b></div>
-<div><span>Инструменты</span><b>по запросу</b></div>
-<div><span>Масса</span><b>2900 кг</b></div>
-</div>
-<div class="vmc-actions">
-<a class="btn btn-ce" href="index.html#quiz">Запросить КП</a>
-<a class="btn btn-gold" href="tel:88005511206">Позвонить</a>
-<a class="btn btn-ghost" href="equipment-milling.html#subcats">Подробнее</a>
-</div>
+<small>VMC · Вертикальный ОЦ</small>
+<h3>VMC855 W</h3>
+<div class="vmc-specs"><div><span>Стол</span><b>1000×550 мм</b></div><div><span>Ходы X/Y/Z</span><b>30 000/30 000/24 000 мм/мин</b></div><div><span>Шпиндель</span><b>BT40</b></div><div><span>Масса</span><b>по запросу</b></div></div>
 </div>
 </article>
-<article class="vmc-card" data-series="KDVM" data-name="kdvm1160l-1270l kdvm 1200×600 мм 1360×700 мм 800 кг 1000 кг 1100 мм 1200 мм / 600 мм 700 мм / 600 мм 700 мм bt40 bt40 · 8000 об/мин 8000 об/мин по запросу 6,5 т 8,8 т" data-x="1100" data-load="800" data-spindle="8000" data-taper="BT40" data-atc="">
-<div class="vmc-photo"><img src="milling-assets/kdvm1160l.png" alt="KDVM1160L-1270L" loading="lazy"/></div>
+<article class="vmc-card" data-series="VNM" data-name="vnm1100 w vnm 1300×600 мм  36 000/36 000/30 000 мм/мин BT40 · " data-x="36000" data-load="" data-spindle="" data-taper="BT40" data-atc="">
+<a class="vmc-card-link" href="equipment-milling-vnm1100-w.html" aria-label="VNM1100 W — подробнее"></a>
+<div class="vmc-photo"><img src="milling-assets/vnm1100-w.png" alt="VNM1100 W" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
-<small>KDVM · Вертикальный центр</small>
-<h3>KDVM1160L-1270L</h3>
-<p>Вертикальные обрабатывающие центры серии KDVM1160L/1270L созданы для высокоточной обработки крупногабаритных деталей в машиностроении, приборостроении и инструментальном производстве. Корпусные детали станков...</p>
-<div class="vmc-specs">
-<div><span>Стол</span><b>1200×600 мм 1360×700 мм</b></div>
-<div><span>Нагрузка</span><b>800 кг 1000 кг</b></div>
-<div><span>Ходы X/Y/Z</span><b>1100 мм 1200 мм / 600 мм 700 мм / 600 мм 700 мм</b></div>
-<div><span>Шпиндель</span><b>BT40 BT40 · 8000 об/мин 8000 об/мин</b></div>
-<div><span>Инструменты</span><b>по запросу</b></div>
-<div><span>Масса</span><b>6,5 т 8,8 т</b></div>
-</div>
-<div class="vmc-actions">
-<a class="btn btn-ce" href="index.html#quiz">Запросить КП</a>
-<a class="btn btn-gold" href="tel:88005511206">Позвонить</a>
-<a class="btn btn-ghost" href="equipment-milling.html#subcats">Подробнее</a>
-</div>
+<small>VNM · Вертикальный ОЦ</small>
+<h3>VNM1100 W</h3>
+<div class="vmc-specs"><div><span>Стол</span><b>1300×600 мм</b></div><div><span>Ходы X/Y/Z</span><b>36 000/36 000/30 000 мм/мин</b></div><div><span>Шпиндель</span><b>BT40</b></div><div><span>Масса</span><b>по запросу</b></div></div>
 </div>
 </article>
-<article class="vmc-card" data-series="KDVM" data-name="kdvm1370l-1580l-1690l-1890l kdvm 1500×700 мм 1700×800 мм 2000×900 мм 2000×900 мм 900 кг 1500 кг 1900 кг 1900 кг 1300 мм 1500 мм 1600 мм 1800 мм / 700 мм 800 мм 900 мм 900 мм / 700 мм 700 мм 700 мм 700 мм bt40 bt50 bt50 bt50 · 8000 об/мин 6000 об/мин 6000 об/мин 6000 об/мин по запросу 9,5 т 13 т 15,5 т 16 т" data-x="1300" data-load="900" data-spindle="8000" data-taper="BT50" data-atc="">
-<div class="vmc-photo"><img src="milling-assets/kdvm1370l.png" alt="KDVM1370L-1580L-1690L-1890L" loading="lazy"/></div>
+<article class="vmc-card" data-series="VNM" data-name="vnm1300 w vnm 1500×700 мм  30 000/30 000/24 000 мм/мин BT50 · " data-x="30000" data-load="" data-spindle="" data-taper="BT50" data-atc="">
+<a class="vmc-card-link" href="equipment-milling-vnm1300-w.html" aria-label="VNM1300 W — подробнее"></a>
+<div class="vmc-photo"><img src="milling-assets/vnm1300-w.png" alt="VNM1300 W" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
-<small>KDVM · Вертикальный центр</small>
-<h3>KDVM1370L-1580L-1690L-1890L</h3>
-<p>Вертикальные обрабатывающие центры серии KDVM1370L, KDVM1580L, KDVM1690L и KDVM1890L предназначены для тяжёлой высокоточной обработки крупногабаритных деталей в энергетическом машиностроении, авиационной...</p>
-<div class="vmc-specs">
-<div><span>Стол</span><b>1500×700 мм 1700×800 мм 2000×900 мм 2000×900 мм</b></div>
-<div><span>Нагрузка</span><b>900 кг 1500 кг 1900 кг 1900 кг</b></div>
-<div><span>Ходы X/Y/Z</span><b>1300 мм 1500 мм 1600 мм 1800 мм / 700 мм 800 мм 900 мм 900 мм / 700 мм 700 мм 700 мм 700 мм</b></div>
-<div><span>Шпиндель</span><b>BT40 BT50 BT50 BT50 · 8000 об/мин 6000 об/мин 6000 об/мин 6000 об/мин</b></div>
-<div><span>Инструменты</span><b>по запросу</b></div>
-<div><span>Масса</span><b>9,5 т 13 т 15,5 т 16 т</b></div>
-</div>
-<div class="vmc-actions">
-<a class="btn btn-ce" href="index.html#quiz">Запросить КП</a>
-<a class="btn btn-gold" href="tel:88005511206">Позвонить</a>
-<a class="btn btn-ghost" href="equipment-milling.html#subcats">Подробнее</a>
-</div>
+<small>VNM · Вертикальный ОЦ</small>
+<h3>VNM1300 W</h3>
+<div class="vmc-specs"><div><span>Стол</span><b>1500×700 мм</b></div><div><span>Ходы X/Y/Z</span><b>30 000/30 000/24 000 мм/мин</b></div><div><span>Шпиндель</span><b>BT50</b></div><div><span>Масса</span><b>по запросу</b></div></div>
 </div>
 </article>
-<article class="vmc-card" data-series="KDVM" data-name="kdvm600l kdvm 700×420 мм 300 кг 600 мм / 400 мм / 560 мм bt40 · 8000 об/мин по запросу 4,6 т" data-x="600" data-load="300" data-spindle="8000" data-taper="BT40" data-atc="">
-<div class="vmc-photo"><img src="milling-assets/kdvm600l.png" alt="KDVM600L" loading="lazy"/></div>
+<article class="vmc-card" data-series="VNM" data-name="vnm860 w vnm 1000×550 мм  850 мм / 600 мм / 600 мм BT40 · " data-x="850" data-load="" data-spindle="" data-taper="BT40" data-atc="">
+<a class="vmc-card-link" href="equipment-milling-vnm860-w.html" aria-label="VNM860 W — подробнее"></a>
+<div class="vmc-photo"><img src="milling-assets/vnm860-w.png" alt="VNM860 W" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
-<small>KDVM · Вертикальный центр</small>
-<h3>KDVM600L</h3>
-<p>Вертикальный обрабатывающий центр KDVM600L — компактное и высокоточное решение для обработки деталей средних размеров. Станок выполнен на широком основании с усиленной стойкой и оснащён прецизионными линейными...</p>
-<div class="vmc-specs">
-<div><span>Стол</span><b>700×420 мм</b></div>
-<div><span>Нагрузка</span><b>300 кг</b></div>
-<div><span>Ходы X/Y/Z</span><b>600 мм / 400 мм / 560 мм</b></div>
-<div><span>Шпиндель</span><b>BT40 · 8000 об/мин</b></div>
-<div><span>Инструменты</span><b>по запросу</b></div>
-<div><span>Масса</span><b>4,6 т</b></div>
-</div>
-<div class="vmc-actions">
-<a class="btn btn-ce" href="index.html#quiz">Запросить КП</a>
-<a class="btn btn-gold" href="tel:88005511206">Позвонить</a>
-<a class="btn btn-ghost" href="equipment-milling.html#subcats">Подробнее</a>
-</div>
+<small>VNM · Вертикальный ОЦ</small>
+<h3>VNM860 W</h3>
+<div class="vmc-specs"><div><span>Стол</span><b>1000×550 мм</b></div><div><span>Ходы X/Y/Z</span><b>850 мм / 600 мм / 600 мм</b></div><div><span>Шпиндель</span><b>BT40</b></div><div><span>Масса</span><b>по запросу</b></div></div>
 </div>
 </article>
-<article class="vmc-card" data-series="KDVM" data-name="kdvm855l kdvm 1000×550 мм 800 кг 800 мм / 550 мм / 550 мм bt40 · 8000 об/мин по запросу 5,25 т" data-x="800" data-load="800" data-spindle="8000" data-taper="BT40" data-atc="">
-<div class="vmc-photo"><img src="milling-assets/kdvm855l.png" alt="KDVM855L" loading="lazy"/></div>
+<article class="vmc-card" data-series="Z" data-name="z540 z z 600×400 мм 250 кг 500/400/300 мм BT30 · 12000 (опц. 20000) об/мин" data-x="500" data-load="250" data-spindle="20000.0" data-taper="BT30" data-atc="">
+<a class="vmc-card-link" href="equipment-milling-z540-z.html" aria-label="Z540 Z — подробнее"></a>
+<div class="vmc-photo"><img src="milling-assets/z540-z.png" alt="Z540 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
-<small>KDVM · Вертикальный центр</small>
-<h3>KDVM855L</h3>
-<p>Вертикальный обрабатывающий центр KDVM855L предназначен для высокопроизводительной обработки крупногабаритных и тяжёлых деталей. Корпус станка изготовлен методом литья из смолопесчаной смеси с последующим...</p>
-<div class="vmc-specs">
-<div><span>Стол</span><b>1000×550 мм</b></div>
-<div><span>Нагрузка</span><b>800 кг</b></div>
-<div><span>Ходы X/Y/Z</span><b>800 мм / 550 мм / 550 мм</b></div>
-<div><span>Шпиндель</span><b>BT40 · 8000 об/мин</b></div>
-<div><span>Инструменты</span><b>по запросу</b></div>
-<div><span>Масса</span><b>5,25 т</b></div>
+<small>Z · Вертикальный ОЦ</small>
+<h3>Z540 Z</h3>
+<div class="vmc-specs"><div><span>Стол</span><b>600×400 мм</b></div><div><span>Ходы X/Y/Z</span><b>500/400/300 мм</b></div><div><span>Шпиндель</span><b>BT30 · 12000 (опц. 20000) об/мин</b></div><div><span>Масса</span><b>2900 кг</b></div></div>
 </div>
-<div class="vmc-actions">
-<a class="btn btn-ce" href="index.html#quiz">Запросить КП</a>
-<a class="btn btn-gold" href="tel:88005511206">Позвонить</a>
-<a class="btn btn-ghost" href="equipment-milling.html#subcats">Подробнее</a>
-</div>
+</article>
+<article class="vmc-card" data-series="Z" data-name="z640 z z 700×420 мм 300 кг 610/410/350 мм BT30 (опц. BT40) · 24000 (опц. 20000 / 12000) об/мин" data-x="610" data-load="300" data-spindle="24000.0" data-taper="BT30" data-atc="">
+<a class="vmc-card-link" href="equipment-milling-z640-z.html" aria-label="Z640 Z — подробнее"></a>
+<div class="vmc-photo"><img src="milling-assets/z640-z.png" alt="Z640 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Z · Вертикальный ОЦ</small>
+<h3>Z640 Z</h3>
+<div class="vmc-specs"><div><span>Стол</span><b>700×420 мм</b></div><div><span>Ходы X/Y/Z</span><b>610/410/350 мм</b></div><div><span>Шпиндель</span><b>BT30 (опц. BT40) · 24000 (опц. 20000 / 12000) об/мин</b></div><div><span>Масса</span><b>4300 кг</b></div></div>
 </div>
 </article>
 </div>
@@ -3285,6 +2669,80 @@ window.addEventListener('DOMContentLoaded',function(){
 });
 </script>
 <script>
+(function(){
+  var grid=document.querySelector('.vmc-grid');
+  if(!grid){return;}
+  var cards=Array.prototype.slice.call(document.querySelectorAll('.vmc-card'));
+  var original=cards.slice();
+  var count=document.getElementById('vmcResultCount');
+  var empty=document.getElementById('vmcEmpty');
+  var search=document.getElementById('vmcSearch');
+  var sort=document.getElementById('vmcSort');
+  var xMin=document.getElementById('vmcXMin');
+  var xMax=document.getElementById('vmcXMax');
+  var loadMin=document.getElementById('vmcLoadMin');
+  var loadMax=document.getElementById('vmcLoadMax');
+  function checked(name){return Array.prototype.slice.call(document.querySelectorAll('input[name="'+name+'"]:checked')).map(function(i){return i.value;});}
+  function num(v){var n=parseInt(v,10);return isNaN(n)?0:n;}
+  function inRange(value,min,max){
+    if(!value){return true;}
+    var n=num(value);
+    if(min&&n<num(min)){return false;}
+    if(max&&n>num(max)){return false;}
+    return true;
+  }
+  function taperMatch(card,selected){
+    if(!selected.length){return true;}
+    var value=(card.dataset.taper||'').toUpperCase();
+    return selected.some(function(item){
+      if(item==='BT40'){return value==='BT40'||value==='BBT40';}
+      return value===item;
+    });
+  }
+  function applyFilters(){
+    var series=checked('series');
+    var tapers=checked('taper');
+    var q=(search&&search.value||'').trim().toLowerCase();
+    var visible=[];
+    cards.forEach(function(card){
+      var ok=true;
+      if(series.length&&series.indexOf(card.dataset.series)<0){ok=false;}
+      if(ok&&!taperMatch(card,tapers)){ok=false;}
+      if(ok&&q&&(card.dataset.name||'').indexOf(q)<0){ok=false;}
+      if(ok&&!inRange(card.dataset.x,xMin&&xMin.value,xMax&&xMax.value)){ok=false;}
+      if(ok&&!inRange(card.dataset.load,loadMin&&loadMin.value,loadMax&&loadMax.value)){ok=false;}
+      card.classList.toggle('is-hidden',!ok);
+      if(ok){visible.push(card);}
+    });
+    if(count){count.textContent=visible.length;}
+    if(empty){empty.classList.toggle('is-visible',visible.length===0);}
+  }
+  function applySort(){
+    var mode=sort?sort.value:'default';
+    var sorted=original.slice();
+    if(mode==='series'){
+      sorted.sort(function(a,b){return (a.dataset.series||'').localeCompare(b.dataset.series||'','ru')||(a.dataset.name||'').localeCompare(b.dataset.name||'','ru');});
+    }
+    if(mode==='x-desc'){sorted.sort(function(a,b){return num(b.dataset.x)-num(a.dataset.x);});}
+    if(mode==='load-desc'){sorted.sort(function(a,b){return num(b.dataset.load)-num(a.dataset.load);});}
+    if(mode==='spindle-desc'){sorted.sort(function(a,b){return num(b.dataset.spindle)-num(a.dataset.spindle);});}
+    sorted.forEach(function(card){grid.appendChild(card);});
+    cards=sorted;
+    applyFilters();
+  }
+  document.querySelectorAll('.vmc-filter-panel input').forEach(function(input){input.addEventListener('input',applyFilters);input.addEventListener('change',applyFilters);});
+  if(search){search.addEventListener('input',applyFilters);}
+  if(sort){sort.addEventListener('change',applySort);}
+  var reset=document.querySelector('[data-vmc-reset]');
+  if(reset){reset.addEventListener('click',function(){
+    document.querySelectorAll('.vmc-filter-panel input[type="checkbox"]').forEach(function(input){input.checked=false;});
+    [search,xMin,xMax,loadMin,loadMax].forEach(function(input){if(input){input.value='';}});
+    if(sort){sort.value='default';}
+    applySort();
+  });}
+  applyFilters();
+})();
+</script><script>
 (function(){
   var grid=document.querySelector('.vmc-grid');
   if(!grid){return;}
