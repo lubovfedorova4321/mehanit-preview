@@ -783,40 +783,32 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="od-diameter" data-bound="min"/>
 <input type="number" placeholder="До" data-range="od-diameter" data-bound="max"/>
-</div></div><div class="g2-field"><strong>Высота центров</strong>
-<div class="vmc-range-row">
-<input type="number" placeholder="От" data-range="center-height" data-bound="min"/>
-<input type="number" placeholder="До" data-range="center-height" data-bound="max"/>
-</div></div></div>
-<details class="g2-group" open><summary>Дополнительные параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Расстояние между центрами</strong>
+</div></div><div class="g2-field"><strong>Расстояние между центрами</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="distance-between-centers" data-bound="min"/>
 <input type="number" placeholder="До" data-range="distance-between-centers" data-bound="max"/>
-</div></div><div class="g2-field"><strong>Макс. масса заготовки</strong>
-<div class="vmc-range-row">
-<input type="number" placeholder="От" data-range="max-workpiece-weight" data-bound="min"/>
-<input type="number" placeholder="До" data-range="max-workpiece-weight" data-bound="max"/>
-</div></div><div class="g2-field"><strong>Окружная скорость круга</strong>
-<div class="vmc-range-row">
-<input type="number" placeholder="От" data-range="wheel-speed" data-bound="min"/>
-<input type="number" placeholder="До" data-range="wheel-speed" data-bound="max"/>
-</div></div><div class="g2-field"><strong>Макс. длина детали/шлифования</strong>
-<div class="vmc-range-row">
-<input type="number" placeholder="От" data-range="max-length" data-bound="min"/>
-<input type="number" placeholder="До" data-range="max-length" data-bound="max"/>
-</div></div></div></details>
-<details class="g2-group"><summary>Все параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Мощность привода круга</strong>
-<div class="vmc-range-row">
-<input type="number" placeholder="От" data-range="drive-power" data-bound="min"/>
-<input type="number" placeholder="До" data-range="drive-power" data-bound="max"/>
-</div></div><div class="g2-field"><strong>Диаметр шлифования (внутреннее)</strong>
-<div class="vmc-range-row">
-<input type="number" placeholder="От" data-range="id-diameter" data-bound="min"/>
-<input type="number" placeholder="До" data-range="id-diameter" data-bound="max"/>
-</div></div><div class="g2-field"><strong>Частота вращения детали</strong>
+</div></div><div class="g2-field"><label class="g2-check"><input type="checkbox" name="cnc-present" value="да"/><span>Наличие ЧПУ</span></label></div></div>
+<details class="g2-group" open><summary>Дополнительные параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Частота вращения передней бабки</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="workhead-speed" data-bound="min"/>
 <input type="number" placeholder="До" data-range="workhead-speed" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Размер круга</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="wheel-size" data-bound="min"/>
+<input type="number" placeholder="До" data-range="wheel-size" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Частота вращения шлифовальной бабки</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="wheel-speed" data-bound="min"/>
+<input type="number" placeholder="До" data-range="wheel-speed" data-bound="max"/>
+</div></div></div></details>
+<details class="g2-group"><summary>Все параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Макс. масса заготовки</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="max-workpiece-weight" data-bound="min"/>
+<input type="number" placeholder="До" data-range="max-workpiece-weight" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Конус шпинделя передней бабки</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="headstock-taper" data-bound="min"/>
+<input type="number" placeholder="До" data-range="headstock-taper" data-bound="max"/>
 </div></div></div></details>
 <div class="g2-apply-wrap">
 <button type="button" class="btn btn-ce g2-apply" data-role="apply">Показать <span data-role="preview">23</span> <span data-role="preview-word">моделей</span></button>
@@ -845,7 +837,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="dbs75 / md150 / b686 f круглошлифовальные станки" data-title="DBS75 / MD150 / B686 F" data-sortkey="0" >
+<article class="vmc-card" data-name="dbs75 / md150 / b686 f круглошлифовальные станки" data-title="DBS75 / MD150 / B686 F" data-sortkey="0"  data-wheel-size="Ø150×20×Ø12,7 мм">
 <a class="vmc-card-link" href="equipment-grinding-dbs75-md150-b686-f.html" aria-label="DBS75 / MD150 / B686 F — подробнее"></a>
 <div class="vmc-photo"><img src="grinding-assets/dbs75-md150-b686-f.png" alt="DBS75 / MD150 / B686 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -875,47 +867,47 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="hd-010 h круглошлифовальные станки" data-title="HD-010 H" data-sortkey="500.0" data-grinding-diameter-max="φ500mm" data-workpiece-weight-max="1000kg" data-workhead-speed="15~150rpm(Reserved parking positioning function for bridge shell)" data-center-height="600 мм" data-distance-between-centers="≥3000 мм" data-max-workpiece-weight="1000 кг" data-wheel-speed="≤45 м/с" data-max-length="3000 мм" data-drive-power="30 кВт" data-workhead-speed="15–150 об/мин">
+<article class="vmc-card" data-name="hd-010 h круглошлифовальные станки" data-title="HD-010 H" data-sortkey="500.0" data-distance-between-centers="≥3000 мм" data-workhead-speed="15–150 об/мин" data-wheel-size="Ø900/750 × 300 (макс.) × Ø305 мм" data-wheel-speed="≤45 м/с" data-max-workpiece-weight="1000 кг" data-headstock-taper="Конус Морзе №6">
 <a class="vmc-card-link" href="equipment-grinding-hd-010-h.html" aria-label="HD-010 H — подробнее"></a>
 <div class="vmc-photo"><img src="grinding-assets/hd-010-h.png" alt="HD-010 H" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Круглошлифовальные</small>
 <h3>HD-010 H</h3>
-<div class="vmc-specs"><div><span>Высота центров</span><b>600 мм</b></div><div><span>Расстояние между центрами</span><b>≥3000 мм</b></div><div><span>Макс. масса заготовки</span><b>1000 кг</b></div><div><span>Размер шлифовального круга</span><b>Ø900/750 × 300 (макс.) × Ø305 мм</b></div></div>
+<div class="vmc-specs"><div><span>Расстояние между центрами</span><b>≥3000 мм</b></div><div><span>Высота центров</span><b>600 мм</b></div><div><span>Частота вращения детали</span><b>15–150 об/мин</b></div><div><span>Размер шлифовального круга</span><b>Ø900/750 × 300 (макс.) × Ø305 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="hdgie2010 h круглошлифовальные станки" data-title="HDGie2010 H" data-sortkey="0"  data-od-diameter="200 мм" data-center-height="135 мм" data-max-workpiece-weight="50 кг" data-wheel-speed="35 м/с (наружное) / 30000 об/мин (внутреннее)" data-drive-power="5,5 кВт (наружное) / 14 кВт (внутреннее)" data-id-diameter="3 мм" data-workhead-speed="0–1000 об/мин">
+<article class="vmc-card" data-name="hdgie2010 h круглошлифовальные станки" data-title="HDGie2010 H" data-sortkey="0" data-od-diameter="200 мм" data-workhead-speed="0–1000 об/мин" data-wheel-size="наружное шлифование 400×50×127 мм, внутреннее шлифование 50×50×10 мм" data-wheel-speed="35 м/с (наружное) / 30000 об/мин (внутреннее)" data-max-workpiece-weight="50 кг">
 <a class="vmc-card-link" href="equipment-grinding-hdgie2010-h.html" aria-label="HDGie2010 H — подробнее"></a>
 <div class="vmc-photo"><img src="grinding-assets/hdgie2010-h.png" alt="HDGie2010 H" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Круглошлифовальные</small>
 <h3>HDGie2010 H</h3>
-<div class="vmc-specs"><div><span>Диаметр шлифования (наружное)</span><b>200 мм</b></div><div><span>Высота центров</span><b>135 мм</b></div><div><span>Макс. масса заготовки</span><b>50 кг</b></div><div><span>Размер шлифовального круга</span><b>наружное шлифование 400×50×127 мм, внутреннее шлифование 50×50×10 мм</b></div></div>
+<div class="vmc-specs"><div><span>Диаметр шлифования (наружное)</span><b>200 мм</b></div><div><span>Высота центров</span><b>135 мм</b></div><div><span>Частота вращения детали</span><b>0–1000 об/мин</b></div><div><span>Размер шлифовального круга</span><b>наружное шлифование 400×50×127 мм, внутреннее шлифование 50×50×10 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="m1420 / m1432b / m1432h / m1450 / m1463 h круглошлифовальные станки" data-title="M1420 / M1432B / M1432H / M1450 / M1463 H" data-sortkey="0"  data-od-diameter="5-200" data-center-height="125" data-distance-between-centers="2000、3000、4000、5000" data-max-workpiece-weight="50" data-wheel-speed="35" data-max-length="500/750" data-drive-power="5.5" data-id-diameter="13-80">
+<article class="vmc-card" data-name="m1420 / m1432b / m1432h / m1450 / m1463 h круглошлифовальные станки" data-title="M1420 / M1432B / M1432H / M1450 / M1463 H" data-sortkey="0" data-od-diameter="5-200" data-distance-between-centers="2000、3000、4000、5000" data-wheel-size="400*50*203" data-wheel-speed="35" data-max-workpiece-weight="50">
 <a class="vmc-card-link" href="equipment-grinding-m1420-m1432b-m1432h-m1450-m1463-h.html" aria-label="M1420 / M1432B / M1432H / M1450 / M1463 H — подробнее"></a>
 <div class="vmc-photo"><img src="grinding-assets/m1420-m1432b-m1432h-m1450-m1463-h.png" alt="M1420 / M1432B / M1432H / M1450 / M1463 H" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Круглошлифовальные</small>
 <h3>M1420 / M1432B / M1432H / M1450 / M1463 H</h3>
-<div class="vmc-specs"><div><span>Диаметр шлифования (наружное)</span><b>5-200</b></div><div><span>Высота центров</span><b>125</b></div><div><span>Расстояние между центрами</span><b>2000、3000、4000、5000</b></div><div><span>Макс. масса заготовки</span><b>50</b></div></div>
+<div class="vmc-specs"><div><span>Диаметр шлифования (наружное)</span><b>5-200</b></div><div><span>Расстояние между центрами</span><b>2000、3000、4000、5000</b></div><div><span>Высота центров</span><b>125</b></div><div><span>Размер шлифовального круга</span><b>400*50*203</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="m1420 / mw1420 / m1432b / m1450 f круглошлифовальные станки" data-title="M1420 / MW1420 / M1432B / M1450 F" data-sortkey="8.0" data-grinding-diameter-max="Ø8~200 мм" data-distance-between-centers="520, 750 мм" data-od-diameter="Ø8~200 мм" data-center-height="118 мм" data-distance-between-centers="520, 750 мм" data-wheel-speed="35 м/с" data-drive-power="3 кВт" data-id-diameter="Ø13~80 мм">
+<article class="vmc-card" data-name="m1420 / mw1420 / m1432b / m1450 f круглошлифовальные станки" data-title="M1420 / MW1420 / M1432B / M1450 F" data-sortkey="8.0" data-od-diameter="Ø8~200 мм" data-distance-between-centers="520, 750 мм" data-wheel-speed="35 м/с">
 <a class="vmc-card-link" href="equipment-grinding-m1420-mw1420-m1432b-m1450-f.html" aria-label="M1420 / MW1420 / M1432B / M1450 F — подробнее"></a>
 <div class="vmc-photo"><img src="grinding-assets/m1420-mw1420-m1432b-m1450-f.png" alt="M1420 / MW1420 / M1432B / M1450 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Круглошлифовальные</small>
 <h3>M1420 / MW1420 / M1432B / M1450 F</h3>
-<div class="vmc-specs"><div><span>Диаметр шлифования (наружное)</span><b>Ø8~200 мм</b></div><div><span>Высота центров</span><b>118 мм</b></div><div><span>Расстояние между центрами</span><b>520, 750 мм</b></div><div><span>Окружная скорость круга</span><b>35 м/с</b></div></div>
+<div class="vmc-specs"><div><span>Диаметр шлифования (наружное)</span><b>Ø8~200 мм</b></div><div><span>Расстояние между центрами</span><b>520, 750 мм</b></div><div><span>Высота центров</span><b>118 мм</b></div><div><span>Окружная скорость круга</span><b>35 м/с</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="md3212f / md3225g / md3215f / md3215e / md3220f / md3212g / md150-200fg / md3215g f круглошлифовальные станки" data-title="MD3212F / MD3225G / MD3215F / MD3215E / MD3220F / MD3212G / MD150-200FG / MD3215G F" data-sortkey="0" >
+<article class="vmc-card" data-name="md3212f / md3225g / md3215f / md3215e / md3220f / md3212g / md150-200fg / md3215g f круглошлифовальные станки" data-title="MD3212F / MD3225G / MD3215F / MD3215E / MD3220F / MD3212G / MD150-200FG / MD3215G F" data-sortkey="0"  data-wheel-size="125×16×12.7 мм">
 <a class="vmc-card-link" href="equipment-grinding-md3212f-md3225g-md3215f-md3215e-md3220f-md3212g-md150-200fg-md3215g-f.html" aria-label="MD3212F / MD3225G / MD3215F / MD3215E / MD3220F / MD3212G / MD150-200FG / MD3215G F — подробнее"></a>
 <div class="vmc-photo"><img src="grinding-assets/md3212f-md3225g-md3215f-md3215e-md3220f-md3212g-md150-200fg-md3215g-f.png" alt="MD3212F / MD3225G / MD3215F / MD3215E / MD3220F / MD3212G / MD150-200FG / MD3215G F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -925,67 +917,67 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="mg1432 / mg1350 / mg1363 h круглошлифовальные станки" data-title="MG1432 / MG1350 / MG1363 H" data-sortkey="0"  data-od-diameter="8-320" data-center-height="180" data-max-workpiece-weight="150" data-wheel-speed="35" data-max-length="1000/1500" data-id-diameter="30-100">
+<article class="vmc-card" data-name="mg1432 / mg1350 / mg1363 h круглошлифовальные станки" data-title="MG1432 / MG1350 / MG1363 H" data-sortkey="0" data-od-diameter="8-320" data-wheel-size="400*50*203" data-wheel-speed="35" data-max-workpiece-weight="150">
 <a class="vmc-card-link" href="equipment-grinding-mg1432-mg1350-mg1363-h.html" aria-label="MG1432 / MG1350 / MG1363 H — подробнее"></a>
 <div class="vmc-photo"><img src="grinding-assets/mg1432-mg1350-mg1363-h.png" alt="MG1432 / MG1350 / MG1363 H" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Круглошлифовальные</small>
 <h3>MG1432 / MG1350 / MG1363 H</h3>
-<div class="vmc-specs"><div><span>Диаметр шлифования (наружное)</span><b>8-320</b></div><div><span>Высота центров</span><b>180</b></div><div><span>Макс. масса заготовки</span><b>150</b></div><div><span>Размер шлифовального круга</span><b>400*50*203</b></div></div>
+<div class="vmc-specs"><div><span>Диаметр шлифования (наружное)</span><b>8-320</b></div><div><span>Высота центров</span><b>180</b></div><div><span>Размер шлифовального круга</span><b>400*50*203</b></div><div><span>Окружная скорость круга</span><b>35</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="mgk1450x2000 / mgk1463x3000 h круглошлифовальные станки" data-title="MGK1450x2000 / MGK1463x3000 H" data-sortkey="0"  data-od-diameter="25–500" data-center-height="270" data-distance-between-centers="1500 / 2000" data-max-workpiece-weight="1000" data-wheel-speed="≤35" data-max-length="1500 / 2000" data-id-diameter="30–200" data-workhead-speed="20–224 (частотное регулирование)">
+<article class="vmc-card" data-name="mgk1450x2000 / mgk1463x3000 h круглошлифовальные станки" data-title="MGK1450x2000 / MGK1463x3000 H" data-sortkey="0" data-od-diameter="25–500" data-distance-between-centers="1500 / 2000" data-workhead-speed="20–224 (частотное регулирование)" data-wheel-size="Ø500×75×305" data-wheel-speed="≤35" data-max-workpiece-weight="1000" data-headstock-taper="конус Морзе №6">
 <a class="vmc-card-link" href="equipment-grinding-mgk1450x2000-mgk1463x3000-h.html" aria-label="MGK1450x2000 / MGK1463x3000 H — подробнее"></a>
 <div class="vmc-photo"><img src="grinding-assets/mgk1450x2000-mgk1463x3000-h.png" alt="MGK1450x2000 / MGK1463x3000 H" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Круглошлифовальные</small>
 <h3>MGK1450x2000 / MGK1463x3000 H</h3>
-<div class="vmc-specs"><div><span>Диаметр шлифования (наружное)</span><b>25–500</b></div><div><span>Высота центров</span><b>270</b></div><div><span>Расстояние между центрами</span><b>1500 / 2000</b></div><div><span>Макс. масса заготовки</span><b>1000</b></div></div>
+<div class="vmc-specs"><div><span>Диаметр шлифования (наружное)</span><b>25–500</b></div><div><span>Расстояние между центрами</span><b>1500 / 2000</b></div><div><span>Высота центров</span><b>270</b></div><div><span>Частота вращения детали</span><b>20–224 (частотное регулирование)</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="mgk84 h круглошлифовальные станки" data-title="MGK84 H" data-sortkey="1000.0" data-grinding-diameter-max="mm | 1000/1250/1600" data-workhead-speed="rpm | 5-60" data-center-height="950 мм" data-max-workpiece-weight="20 т" data-wheel-speed="45 м/с" data-max-length="4000/5000/6000/8000/10000/12000 мм" data-workhead-speed="5-60 об/мин">
+<article class="vmc-card" data-name="mgk84 h круглошлифовальные станки" data-title="MGK84 H" data-sortkey="1000.0" data-cnc-present="да" data-workhead-speed="5-60 об/мин" data-wheel-speed="45 м/с" data-max-workpiece-weight="20 т">
 <a class="vmc-card-link" href="equipment-grinding-mgk84-h.html" aria-label="MGK84 H — подробнее"></a>
 <div class="vmc-photo"><img src="grinding-assets/mgk84-h.png" alt="MGK84 H" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Круглошлифовальные</small>
 <h3>MGK84 H</h3>
-<div class="vmc-specs"><div><span>Высота центров</span><b>950 мм</b></div><div><span>Макс. масса заготовки</span><b>20 т</b></div><div><span>Окружная скорость круга</span><b>45 м/с</b></div><div><span>Макс. длина детали/шлифования</span><b>4000/5000/6000/8000/10000/12000 мм</b></div></div>
+<div class="vmc-specs"><div><span>Высота центров</span><b>950 мм</b></div><div><span>Наличие ЧПУ</span><b>да</b></div><div><span>Частота вращения детали</span><b>5-60 об/мин</b></div><div><span>Окружная скорость круга</span><b>45 м/с</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="mgkw8250 h круглошлифовальные станки" data-title="MGKW8250 H" data-sortkey="0"  data-od-diameter="Ø8–Ø320 мм" data-center-height="350 мм" data-distance-between-centers="1000/1500/2000/3000 мм" data-max-workpiece-weight="500 кг" data-wheel-speed="≤80 м/с" data-max-length="1000/1500/2000/3000 мм" data-workhead-speed="0–200 об/мин (50 Гц)">
+<article class="vmc-card" data-name="mgkw8250 h круглошлифовальные станки" data-title="MGKW8250 H" data-sortkey="0" data-od-diameter="Ø8–Ø320 мм" data-distance-between-centers="1000/1500/2000/3000 мм" data-cnc-present="да" data-workhead-speed="0–200 об/мин (50 Гц)" data-wheel-size="CBN-круг 750×40×305 мм" data-wheel-speed="≤80 м/с" data-max-workpiece-weight="500 кг" data-headstock-taper="конус Морзе №6">
 <a class="vmc-card-link" href="equipment-grinding-mgkw8250-h.html" aria-label="MGKW8250 H — подробнее"></a>
 <div class="vmc-photo"><img src="grinding-assets/mgkw8250-h.png" alt="MGKW8250 H" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Круглошлифовальные</small>
 <h3>MGKW8250 H</h3>
-<div class="vmc-specs"><div><span>Диаметр шлифования (наружное)</span><b>Ø8–Ø320 мм</b></div><div><span>Высота центров</span><b>350 мм</b></div><div><span>Расстояние между центрами</span><b>1000/1500/2000/3000 мм</b></div><div><span>Макс. масса заготовки</span><b>500 кг</b></div></div>
+<div class="vmc-specs"><div><span>Диаметр шлифования (наружное)</span><b>Ø8–Ø320 мм</b></div><div><span>Расстояние между центрами</span><b>1000/1500/2000/3000 мм</b></div><div><span>Высота центров</span><b>350 мм</b></div><div><span>Наличие ЧПУ</span><b>да</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="mk-end-face h круглошлифовальные станки" data-title="MK-End-Face H" data-sortkey="0"  data-od-diameter="mm | 8~200 | 8~320 | 8~320 | 8(5)~200" data-center-height="mm | 135 | 180 | 180 | 125/135" data-distance-between-centers="mm | 500、750、1000 | 1000、1500 | 2000、3000 | 500、750、1000" data-max-workpiece-weight="Kg | 50 | 150 | 300 | 50" data-wheel-speed="m/s | 35 | 35 | 35 | 35" data-max-length="mm | / | / | / | 125" data-drive-power="Kw | 4 | 11 | 11 | 4/5.5" data-id-diameter="mm | / | / | / | 13~80">
+<article class="vmc-card" data-name="mk-end-face h круглошлифовальные станки" data-title="MK-End-Face H" data-sortkey="0" data-od-diameter="mm | 8~200 | 8~320 | 8~320 | 8(5)~200" data-distance-between-centers="mm | 500、750、1000 | 1000、1500 | 2000、3000 | 500、750、1000" data-cnc-present="да" data-wheel-size="mm | 400×50x203 | 600×75x305 | 600x75x305 | 400×50x203" data-wheel-speed="m/s | 35 | 35 | 35 | 35" data-max-workpiece-weight="Kg | 50 | 150 | 300 | 50">
 <a class="vmc-card-link" href="equipment-grinding-mk-end-face-h.html" aria-label="MK-End-Face H — подробнее"></a>
 <div class="vmc-photo"><img src="grinding-assets/mk-end-face-h.png" alt="MK-End-Face H" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Круглошлифовальные</small>
 <h3>MK-End-Face H</h3>
-<div class="vmc-specs"><div><span>Диаметр шлифования (наружное)</span><b>mm | 8~200 | 8~320 | 8~320 | 8(5)~200</b></div><div><span>Высота центров</span><b>mm | 135 | 180 | 180 | 125/135</b></div><div><span>Расстояние между центрами</span><b>mm | 500、750、1000 | 1000、1500 | 2000、3000 | 500、750、1000</b></div><div><span>Макс. масса заготовки</span><b>Kg | 50 | 150 | 300 | 50</b></div></div>
+<div class="vmc-specs"><div><span>Диаметр шлифования (наружное)</span><b>mm | 8~200 | 8~320 | 8~320 | 8(5)~200</b></div><div><span>Расстояние между центрами</span><b>mm | 500、750、1000 | 1000、1500 | 2000、3000 | 500、750、1000</b></div><div><span>Высота центров</span><b>mm | 135 | 180 | 180 | 125/135</b></div><div><span>Наличие ЧПУ</span><b>да</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="mk1320b / mk1332 / mk1620b / mk1632 / mke1350 f круглошлифовальные станки" data-title="MK1320B / MK1332 / MK1620B / MK1632 / MKE1350 F" data-sortkey="8.0" data-grinding-diameter-max="Ø8, 200 мм" data-distance-between-centers="500, 750 мм" data-workpiece-weight-max="50 кг" data-workhead-speed="26–260 об/мин" data-od-diameter="Ø8, 200 мм" data-center-height="135 мм" data-distance-between-centers="500, 750 мм" data-max-workpiece-weight="50 кг" data-drive-power="4 кВт" data-workhead-speed="26–260 об/мин">
+<article class="vmc-card" data-name="mk1320b / mk1332 / mk1620b / mk1632 / mke1350 f круглошлифовальные станки" data-title="MK1320B / MK1332 / MK1620B / MK1632 / MKE1350 F" data-sortkey="8.0" data-od-diameter="Ø8, 200 мм" data-distance-between-centers="500, 750 мм" data-cnc-present="да" data-workhead-speed="26–260 об/мин" data-max-workpiece-weight="50 кг">
 <a class="vmc-card-link" href="equipment-grinding-mk1320b-mk1332-mk1620b-mk1632-mke1350-f.html" aria-label="MK1320B / MK1332 / MK1620B / MK1632 / MKE1350 F — подробнее"></a>
 <div class="vmc-photo"><img src="grinding-assets/mk1320b-mk1332-mk1620b-mk1632-mke1350-f.png" alt="MK1320B / MK1332 / MK1620B / MK1632 / MKE1350 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Круглошлифовальные</small>
 <h3>MK1320B / MK1332 / MK1620B / MK1632 / MKE1350 F</h3>
-<div class="vmc-specs"><div><span>Диаметр шлифования (наружное)</span><b>Ø8, 200 мм</b></div><div><span>Высота центров</span><b>135 мм</b></div><div><span>Расстояние между центрами</span><b>500, 750 мм</b></div><div><span>Макс. масса заготовки</span><b>50 кг</b></div></div>
+<div class="vmc-specs"><div><span>Диаметр шлифования (наружное)</span><b>Ø8, 200 мм</b></div><div><span>Расстояние между центрами</span><b>500, 750 мм</b></div><div><span>Высота центров</span><b>135 мм</b></div><div><span>Наличие ЧПУ</span><b>да</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="mks2720x500 / mks2732x1000 h круглошлифовальные станки" data-title="MKS2720x500 / MKS2732x1000 H" data-sortkey="0"  data-od-diameter="Ø8–Ø200 мм" data-center-height="180 мм" data-wheel-speed="50 м/с" data-max-length="500 мм" data-id-diameter="Ø10–Ø80 мм">
+<article class="vmc-card" data-name="mks2720x500 / mks2732x1000 h круглошлифовальные станки" data-title="MKS2720x500 / MKS2732x1000 H" data-sortkey="0" data-od-diameter="Ø8–Ø200 мм" data-wheel-size="500×63×203 мм" data-wheel-speed="50 м/с">
 <a class="vmc-card-link" href="equipment-grinding-mks2720x500-mks2732x1000-h.html" aria-label="MKS2720x500 / MKS2732x1000 H — подробнее"></a>
 <div class="vmc-photo"><img src="grinding-assets/mks2720x500-mks2732x1000-h.png" alt="MKS2720x500 / MKS2732x1000 H" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -995,23 +987,23 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="mks8320x500 h круглошлифовальные станки" data-title="MKS8320x500 H" data-sortkey="0"  data-od-diameter="Ø8–Ø200 мм" data-max-workpiece-weight="50 кг" data-wheel-speed="≤60 м/с" data-max-length="500 мм" data-workhead-speed="60–600 об/мин, частотное регулирование (50 Гц)">
+<article class="vmc-card" data-name="mks8320x500 h круглошлифовальные станки" data-title="MKS8320x500 H" data-sortkey="0" data-od-diameter="Ø8–Ø200 мм" data-cnc-present="да" data-workhead-speed="60–600 об/мин, частотное регулирование (50 Гц)" data-wheel-size="350(400)×40×127 мм" data-wheel-speed="≤60 м/с" data-max-workpiece-weight="50 кг" data-headstock-taper="конус Морзе №4">
 <a class="vmc-card-link" href="equipment-grinding-mks8320x500-h.html" aria-label="MKS8320x500 H — подробнее"></a>
 <div class="vmc-photo"><img src="grinding-assets/mks8320x500-h.png" alt="MKS8320x500 H" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Круглошлифовальные</small>
 <h3>MKS8320x500 H</h3>
-<div class="vmc-specs"><div><span>Диаметр шлифования (наружное)</span><b>Ø8–Ø200 мм</b></div><div><span>Макс. масса заготовки</span><b>50 кг</b></div><div><span>Размер шлифовального круга</span><b>350(400)×40×127 мм</b></div><div><span>Окружная скорость круга</span><b>≤60 м/с</b></div></div>
+<div class="vmc-specs"><div><span>Диаметр шлифования (наружное)</span><b>Ø8–Ø200 мм</b></div><div><span>Наличие ЧПУ</span><b>да</b></div><div><span>Частота вращения детали</span><b>60–600 об/мин, частотное регулирование (50 Гц)</b></div><div><span>Размер шлифовального круга</span><b>350(400)×40×127 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="mkw1350ta / mkw1363 h круглошлифовальные станки" data-title="MKW1350TA / MKW1363 H" data-sortkey="0"  data-od-diameter="40-500" data-distance-between-centers="4000、50006000、800010000、1200014000、16000" data-max-workpiece-weight="1500" data-wheel-speed="≤35" data-max-length="4000、50006000、800010000、1200014000、16000" data-drive-power="15">
+<article class="vmc-card" data-name="mkw1350ta / mkw1363 h круглошлифовальные станки" data-title="MKW1350TA / MKW1363 H" data-sortkey="0" data-od-diameter="40-500" data-distance-between-centers="4000、50006000、800010000、1200014000、16000" data-wheel-size="750*75*305" data-wheel-speed="≤35" data-max-workpiece-weight="1500">
 <a class="vmc-card-link" href="equipment-grinding-mkw1350ta-mkw1363-h.html" aria-label="MKW1350TA / MKW1363 H — подробнее"></a>
 <div class="vmc-photo"><img src="grinding-assets/mkw1350ta-mkw1363-h.png" alt="MKW1350TA / MKW1363 H" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Круглошлифовальные</small>
 <h3>MKW1350TA / MKW1363 H</h3>
-<div class="vmc-specs"><div><span>Диаметр шлифования (наружное)</span><b>40-500</b></div><div><span>Расстояние между центрами</span><b>4000、50006000、800010000、1200014000、16000</b></div><div><span>Макс. масса заготовки</span><b>1500</b></div><div><span>Размер шлифовального круга</span><b>750*75*305</b></div></div>
+<div class="vmc-specs"><div><span>Диаметр шлифования (наружное)</span><b>40-500</b></div><div><span>Расстояние между центрами</span><b>4000、50006000、800010000、1200014000、16000</b></div><div><span>Размер шлифовального круга</span><b>750*75*305</b></div><div><span>Окружная скорость круга</span><b>≤35</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
@@ -1025,33 +1017,33 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="mmks1312x350 h круглошлифовальные станки" data-title="MMKS1312x350 H" data-sortkey="0"  data-od-diameter="5 mm" data-center-height="100mm" data-distance-between-centers="370mm" data-max-workpiece-weight="50kg" data-wheel-speed="≤60m/s（Corundum Wheel）≤80 m/s（CBN Wheel）">
+<article class="vmc-card" data-name="mmks1312x350 h круглошлифовальные станки" data-title="MMKS1312x350 H" data-sortkey="0" data-od-diameter="5 mm" data-distance-between-centers="370mm" data-cnc-present="да" data-wheel-size="Φ400mm×40mm×Φ203mm（Corundum Grinding Wheel）" data-wheel-speed="≤60m/s（Corundum Wheel）≤80 m/s（CBN Wheel）" data-max-workpiece-weight="50kg">
 <a class="vmc-card-link" href="equipment-grinding-mmks1312x350-h.html" aria-label="MMKS1312x350 H — подробнее"></a>
 <div class="vmc-photo"><img src="grinding-assets/mmks1312x350-h.png" alt="MMKS1312x350 H" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Круглошлифовальные</small>
 <h3>MMKS1312x350 H</h3>
-<div class="vmc-specs"><div><span>Диаметр шлифования (наружное)</span><b>5 mm</b></div><div><span>Высота центров</span><b>100mm</b></div><div><span>Расстояние между центрами</span><b>370mm</b></div><div><span>Макс. масса заготовки</span><b>50kg</b></div></div>
+<div class="vmc-specs"><div><span>Диаметр шлифования (наружное)</span><b>5 mm</b></div><div><span>Расстояние между центрами</span><b>370mm</b></div><div><span>Высота центров</span><b>100mm</b></div><div><span>Наличие ЧПУ</span><b>да</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="mw1320 / m1332 / m1350 / m1363 / m1380 f круглошлифовальные станки" data-title="MW1320 / M1332 / M1350 / M1363 / M1380 F" data-sortkey="5.0" data-grinding-diameter-max="Ø5~200 мм" data-distance-between-centers="500, 750 мм" data-od-diameter="Ø5~200 мм" data-center-height="135 мм" data-distance-between-centers="500, 750 мм" data-wheel-speed="35 м/с" data-drive-power="5.5 кВт">
+<article class="vmc-card" data-name="mw1320 / m1332 / m1350 / m1363 / m1380 f круглошлифовальные станки" data-title="MW1320 / M1332 / M1350 / M1363 / M1380 F" data-sortkey="5.0" data-od-diameter="Ø5~200 мм" data-distance-between-centers="500, 750 мм" data-wheel-speed="35 м/с">
 <a class="vmc-card-link" href="equipment-grinding-mw1320-m1332-m1350-m1363-m1380-f.html" aria-label="MW1320 / M1332 / M1350 / M1363 / M1380 F — подробнее"></a>
 <div class="vmc-photo"><img src="grinding-assets/mw1320-m1332-m1350-m1363-m1380-f.png" alt="MW1320 / M1332 / M1350 / M1363 / M1380 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Круглошлифовальные</small>
 <h3>MW1320 / M1332 / M1350 / M1363 / M1380 F</h3>
-<div class="vmc-specs"><div><span>Диаметр шлифования (наружное)</span><b>Ø5~200 мм</b></div><div><span>Высота центров</span><b>135 мм</b></div><div><span>Расстояние между центрами</span><b>500, 750 мм</b></div><div><span>Окружная скорость круга</span><b>35 м/с</b></div></div>
+<div class="vmc-specs"><div><span>Диаметр шлифования (наружное)</span><b>Ø5~200 мм</b></div><div><span>Расстояние между центрами</span><b>500, 750 мм</b></div><div><span>Высота центров</span><b>135 мм</b></div><div><span>Окружная скорость круга</span><b>35 м/с</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="mw1320 / m1332x1000 / m1332x1500 / m1332hx2000 / m1332hx3000 / m1350 / m1363 / mq1380a h круглошлифовальные станки" data-title="MW1320 / M1332x1000 / M1332x1500 / M1332Hx2000 / M1332Hx3000 / M1350 / M1363 / MQ1380A H" data-sortkey="0"  data-od-diameter="8-200" data-center-height="135" data-max-workpiece-weight="100" data-wheel-speed="35" data-max-length="500、750" data-drive-power="5.5">
+<article class="vmc-card" data-name="mw1320 / m1332x1000 / m1332x1500 / m1332hx2000 / m1332hx3000 / m1350 / m1363 / mq1380a h круглошлифовальные станки" data-title="MW1320 / M1332x1000 / M1332x1500 / M1332Hx2000 / M1332Hx3000 / M1350 / M1363 / MQ1380A H" data-sortkey="0" data-od-diameter="8-200" data-wheel-size="500*25*203" data-wheel-speed="35" data-max-workpiece-weight="100">
 <a class="vmc-card-link" href="equipment-grinding-mw1320-m1332x1000-m1332x1500-m1332hx2000-m1332hx3000-m1350-m1363-mq1380a-h.html" aria-label="MW1320 / M1332x1000 / M1332x1500 / M1332Hx2000 / M1332Hx3000 / M1350 / M1363 / MQ1380A H — подробнее"></a>
 <div class="vmc-photo"><img src="grinding-assets/mw1320-m1332x1000-m1332x1500-m1332hx2000-m1332hx3000-m1350-m1363-mq1380a-h.png" alt="MW1320 / M1332x1000 / M1332x1500 / M1332Hx2000 / M1332Hx3000 / M1350 / M1363 / MQ1380A H" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Круглошлифовальные</small>
 <h3>MW1320 / M1332x1000 / M1332x1500 / M1332Hx2000 / M1332Hx3000 / M1350 / M1363 / MQ1380A H</h3>
-<div class="vmc-specs"><div><span>Диаметр шлифования (наружное)</span><b>8-200</b></div><div><span>Высота центров</span><b>135</b></div><div><span>Макс. масса заготовки</span><b>100</b></div><div><span>Размер шлифовального круга</span><b>500*25*203</b></div></div>
+<div class="vmc-specs"><div><span>Диаметр шлифования (наружное)</span><b>8-200</b></div><div><span>Высота центров</span><b>135</b></div><div><span>Размер шлифовального круга</span><b>500*25*203</b></div><div><span>Окружная скорость круга</span><b>35</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
@@ -1080,27 +1072,27 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="table-size" data-bound="min"/>
 <input type="number" placeholder="До" data-range="table-size" data-bound="max"/>
-</div></div><div class="g2-field"><strong>Макс. размер шлифования</strong>
+</div></div><div class="g2-field"><strong>Размер шлифовального круга</strong>
 <div class="vmc-range-row">
-<input type="number" placeholder="От" data-range="grinding-size-max" data-bound="min"/>
-<input type="number" placeholder="До" data-range="grinding-size-max" data-bound="max"/>
+<input type="number" placeholder="От" data-range="wheel-size" data-bound="min"/>
+<input type="number" placeholder="До" data-range="wheel-size" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Макс. вес заготовки</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="max-workpiece-weight" data-bound="min"/>
+<input type="number" placeholder="До" data-range="max-workpiece-weight" data-bound="max"/>
 </div></div></div>
-<details class="g2-group" open><summary>Заготовка</summary><div class="g2-group-body"><div class="g2-field"><strong>Грузоподъёмность стола (т)</strong>
-<div class="vmc-range-row">
-<input type="number" placeholder="От" data-range="table-load" data-bound="min"/>
-<input type="number" placeholder="До" data-range="table-load" data-bound="max"/>
-</div></div></div></details><details class="g2-group" open><summary>Привод и скорости</summary><div class="g2-group-body"><div class="g2-field"><strong>Частота вращения круга (об/мин)</strong>
+<details class="g2-group" open><summary>Дополнительные параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Частота вращения круга</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="wheel-speed" data-bound="min"/>
 <input type="number" placeholder="До" data-range="wheel-speed" data-bound="max"/>
-</div></div><div class="g2-field"><strong>Мощность привода (кВт)</strong>
+</div></div><div class="g2-field"><strong>Мощность привода</strong>
 <div class="vmc-range-row">
-<input type="number" placeholder="От" data-range="spindle-power" data-bound="min"/>
-<input type="number" placeholder="До" data-range="spindle-power" data-bound="max"/>
+<input type="number" placeholder="От" data-range="motor-power" data-bound="min"/>
+<input type="number" placeholder="До" data-range="motor-power" data-bound="max"/>
 </div></div></div></details>
 
 <div class="g2-apply-wrap">
-<button type="button" class="btn btn-ce g2-apply" data-role="apply">Показать <span data-role="preview">23</span> <span data-role="preview-word">модели</span></button>
+<button type="button" class="btn btn-ce g2-apply" data-role="apply">Показать <span data-role="preview">24</span> <span data-role="preview-word">моделей</span></button>
 </div>
 <p class="vmc-filter-note">Не нашли нужный параметр в фильтре — характеристики каждой модели указаны в карточке и на странице станка.</p>
 </aside>
@@ -1127,73 +1119,73 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="m7130a / m7140 / m7140ax1600 / m7140ax2200 / m7150a / m7150ax1600 / m7150ax2200 / m7170ax1250 / m7170ax1600 / m7170ax2200 / m7180x1600 / m7180x2200 / m7180x3000 h плоскошлифовальные станки" data-title="M7130A / M7140 / M7140Ax1600 / M7140Ax2200 / M7150A / M7150Ax1600 / M7150Ax2200 / M7170Ax1250 / M7170Ax1600 / M7170Ax2200 / M7180x1600 / M7180x2200 / M7180x3000 H" data-sortkey="1000.0" data-table-size="1000*300" data-spindle-power="7.5">
+<article class="vmc-card" data-name="m7130a / m7140 / m7140ax1600 / m7140ax2200 / m7150a / m7150ax1600 / m7150ax2200 / m7170ax1250 / m7170ax1600 / m7170ax2200 / m7180x1600 / m7180x2200 / m7180x3000 h плоскошлифовальные станки" data-title="M7130A / M7140 / M7140Ax1600 / M7140Ax2200 / M7150A / M7150Ax1600 / M7150Ax2200 / M7170Ax1250 / M7170Ax1600 / M7170Ax2200 / M7180x1600 / M7180x2200 / M7180x3000 H" data-sortkey="1000.0" data-table-size="1000*300" data-wheel-size="400*40*127" data-max-workpiece-weight="470" data-wheel-speed="1440" data-motor-power="7.5">
 <a class="vmc-card-link" href="equipment-grinding-m7130a-m7140-m7140ax1600-m7140ax2200-m7150a-m7150ax1600-m7150ax2200-m7170ax1250-m7170ax1600-m7170ax2200-m7180x1600-m7180x2200-m7180x3000-h.html" aria-label="M7130A / M7140 / M7140Ax1600 / M7140Ax2200 / M7150A / M7150Ax1600 / M7150Ax2200 / M7170Ax1250 / M7170Ax1600 / M7170Ax2200 / M7180x1600 / M7180x2200 / M7180x3000 H — подробнее"></a>
 <div class="vmc-photo"><img src="grinding-assets/m7130a-m7140-m7140ax1600-m7140ax2200-m7150a-m7150ax1600-m7150ax2200-m7170ax1250-m7170ax1600-m7170ax2200-m7180x1600-m7180x2200-m7180x3000-h.png" alt="M7130A / M7140 / M7140Ax1600 / M7140Ax2200 / M7150A / M7150Ax1600 / M7150Ax2200 / M7170Ax1250 / M7170Ax1600 / M7170Ax2200 / M7180x1600 / M7180x2200 / M7180x3000 H" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Плоскошлифовальные</small>
 <h3>M7130A / M7140 / M7140Ax1600 / M7140Ax2200 / M7150A / M7150Ax1600 / M7150Ax2200 / M7170Ax1250 / M7170Ax1600 / M7170Ax2200 / M7180x1600 / M7180x2200 / M7180x3000 H</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>1000*300</b></div><div><span>Max.grinding size of workpiece(L*W), мм</span><b>1000*300*400</b></div><div><span>Longitudinal travel, мм</span><b>200-1100</b></div><div><span>Table longitudinal speed — mm/min</span><b>3-27</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>1000*300</b></div><div><span>Размер шлифовального круга</span><b>400*40*127</b></div><div><span>Макс. вес заготовки</span><b>470</b></div><div><span>Частота вращения круга</span><b>1440</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="m7140ax2200 / m7150a / m7150ax1600 / m7150ax2200 / m7163a / m7163x1600 / m7163x2200 f плоскошлифовальные станки" data-title="M7140Ax2200 / M7150A / M7150Ax1600 / M7150Ax2200 / M7163A / M7163x1600 / M7163x2200 F" data-sortkey="400.0" data-table-size="400×2200 мм" data-grinding-size-max="400×2200 мм" data-wheel-speed="1440 об/мин" data-spindle-power="7.5 кВт">
+<article class="vmc-card" data-name="m7140ax2200 / m7150a / m7150ax1600 / m7150ax2200 / m7163a / m7163x1600 / m7163x2200 f плоскошлифовальные станки" data-title="M7140Ax2200 / M7150A / M7150Ax1600 / M7150Ax2200 / M7163A / M7163x1600 / M7163x2200 F" data-sortkey="400.0" data-table-size="400×2200 мм" data-wheel-size="400×40×127 мм" data-wheel-speed="1440 об/мин" data-motor-power="7.5 кВт">
 <a class="vmc-card-link" href="equipment-grinding-m7140ax2200-m7150a-m7150ax1600-m7150ax2200-m7163a-m7163x1600-m7163x2200-f.html" aria-label="M7140Ax2200 / M7150A / M7150Ax1600 / M7150Ax2200 / M7163A / M7163x1600 / M7163x2200 F — подробнее"></a>
 <div class="vmc-photo"><img src="grinding-assets/m7140ax2200-m7150a-m7150ax1600-m7150ax2200-m7163a-m7163x1600-m7163x2200-f.png" alt="M7140Ax2200 / M7150A / M7150Ax1600 / M7150Ax2200 / M7163A / M7163x1600 / M7163x2200 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Плоскошлифовальные</small>
 <h3>M7140Ax2200 / M7150A / M7150Ax1600 / M7150Ax2200 / M7163A / M7163x1600 / M7163x2200 F</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>400×2200 мм</b></div><div><span>Макс. размер шлифования</span><b>400×2200 мм</b></div><div><span>Частота вращения круга</span><b>1440 об/мин</b></div><div><span>Тип</span><b>с подвижной шлифовальной бабкой (горизонтальный шпиндель)</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>400×2200 мм</b></div><div><span>Размер шлифовального круга</span><b>400×40×127 мм</b></div><div><span>Частота вращения круга</span><b>1440 об/мин</b></div><div><span>Мощность привода</span><b>7.5 кВт</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="mg-nc-saddle h плоскошлифовальные станки" data-title="MG-NC-Saddle H" data-sortkey="210.0" data-table-size="mm | 210*480" data-spindle-power="KW | 2.2">
+<article class="vmc-card" data-name="mg-nc-saddle h плоскошлифовальные станки" data-title="MG-NC-Saddle H" data-sortkey="210.0" data-table-size="mm | 210*480" data-wheel-size="mm | 200*13* 31.75" data-max-workpiece-weight="kg | 120" data-wheel-speed="r/min | 0-3600" data-motor-power="KW | 2.2">
 <a class="vmc-card-link" href="equipment-grinding-mg-nc-saddle-h.html" aria-label="MG-NC-Saddle H — подробнее"></a>
 <div class="vmc-photo"><img src="grinding-assets/mg-nc-saddle-h.png" alt="MG-NC-Saddle H" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Плоскошлифовальные</small>
 <h3>MG-NC-Saddle H</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>mm | 210*480</b></div><div><span>Description</span><b>Unit | MG2050NC2</b></div><div><span>Max stroke(W*L)</span><b>mm | 260*580</b></div><div><span>T-slot of table(No.*width)</span><b>mm | 1*14</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>mm | 210*480</b></div><div><span>Размер шлифовального круга</span><b>mm | 200*13* 31.75</b></div><div><span>Макс. вес заготовки</span><b>kg | 120</b></div><div><span>Частота вращения круга</span><b>r/min | 0-3600</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="mg2050 / mg40100 h плоскошлифовальные станки" data-title="MG2050 / MG40100 H" data-sortkey="210.0" data-table-size="210*480" data-spindle-power="2.2">
+<article class="vmc-card" data-name="mg2050 / mg40100 h плоскошлифовальные станки" data-title="MG2050 / MG40100 H" data-sortkey="210.0" data-table-size="210*480" data-wheel-size="200*13* 31.75" data-max-workpiece-weight="120" data-wheel-speed="0-3600" data-motor-power="2.2">
 <a class="vmc-card-link" href="equipment-grinding-mg2050-mg40100-h.html" aria-label="MG2050 / MG40100 H — подробнее"></a>
 <div class="vmc-photo"><img src="grinding-assets/mg2050-mg40100-h.png" alt="MG2050 / MG40100 H" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Плоскошлифовальные</small>
 <h3>MG2050 / MG40100 H</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>210*480</b></div><div><span>Max stroke(W*L), мм</span><b>260*580</b></div><div><span>T-slot of table(No.*width), мм</span><b>1*14</b></div><div><span>Distance from spindle center to worktable, мм</span><b>420</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>210*480</b></div><div><span>Размер шлифовального круга</span><b>200*13* 31.75</b></div><div><span>Макс. вес заготовки</span><b>120</b></div><div><span>Частота вращения круга</span><b>0-3600</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="mg50100 / mg60220 h плоскошлифовальные станки" data-title="MG50100 / MG60220 H" data-sortkey="500.0" data-table-size="500*1200">
+<article class="vmc-card" data-name="mg50100 / mg60220 h плоскошлифовальные станки" data-title="MG50100 / MG60220 H" data-sortkey="500.0" data-table-size="500*1200" data-wheel-size="355*50*127" data-max-workpiece-weight="700">
 <a class="vmc-card-link" href="equipment-grinding-mg50100-mg60220-h.html" aria-label="MG50100 / MG60220 H — подробнее"></a>
 <div class="vmc-photo"><img src="grinding-assets/mg50100-mg60220-h.png" alt="MG50100 / MG60220 H" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Плоскошлифовальные</small>
 <h3>MG50100 / MG60220 H</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>500*1200</b></div><div><span>Max.grinding size of workpiece(L*W), мм</span><b>500*1000*420</b></div><div><span>Distance from spindle center to table surface, мм</span><b>600</b></div><div><span>Magnetic chuck size, мм</span><b>500*1000</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>500*1200</b></div><div><span>Размер шлифовального круга</span><b>355*50*127</b></div><div><span>Макс. вес заготовки</span><b>700</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="mg618a h плоскошлифовальные станки" data-title="MG618A H" data-sortkey="460.0" data-table-size="460*180">
+<article class="vmc-card" data-name="mg618a h плоскошлифовальные станки" data-title="MG618A H" data-sortkey="460.0" data-table-size="460*180" data-wheel-size="200*13*31.75" data-wheel-speed="2850" data-motor-power="1.1">
 <a class="vmc-card-link" href="equipment-grinding-mg618a-h.html" aria-label="MG618A H — подробнее"></a>
 <div class="vmc-photo"><img src="grinding-assets/mg618a-h.png" alt="MG618A H" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Плоскошлифовальные</small>
 <h3>MG618A H</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>460*180</b></div><div><span>Max.travel of table(L*W) — 500*190, мм</span><b>500*190</b></div><div><span>T-slot of table(No.*width) — 1*14, мм</span><b>1*14</b></div><div><span>Distance from spindle center to worktable — 335, мм</span><b>440</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>460*180</b></div><div><span>Размер шлифовального круга</span><b>200*13*31.75</b></div><div><span>Частота вращения круга</span><b>2850</b></div><div><span>Мощность привода</span><b>1.1</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="mg73120 h плоскошлифовальные станки" data-title="MG73120 H" data-sortkey="0" >
+<article class="vmc-card" data-name="mg73120 h плоскошлифовальные станки" data-title="MG73120 H" data-sortkey="0"  data-motor-power="18,5 кВт">
 <a class="vmc-card-link" href="equipment-grinding-mg73120-h.html" aria-label="MG73120 H — подробнее"></a>
 <div class="vmc-photo"><img src="grinding-assets/mg73120-h.png" alt="MG73120 H" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Плоскошлифовальные</small>
 <h3>MG73120 H</h3>
-<div class="vmc-specs"><div><span>Electromagnetic suction cup diameter, мм</span><b>1250</b></div><div><span>Effective diameter of electromagnetic suction cup, мм</span><b>1200</b></div><div><span>Worktable rotation speed (infinitely variable) — pm</span><b>15-50</b></div><div><span>Max distance from the centerline of the grinding wheel spindle to the worktable, мм</span><b>600</b></div></div>
+<div class="vmc-specs"><div><span>Мощность привода</span><b>18,5 кВт</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
@@ -1203,157 +1195,157 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <div class="vmc-body">
 <small>Плоскошлифовальные</small>
 <h3>MG7330 / MG7340 / MG7350 H</h3>
-<div class="vmc-specs"><div><span>Worktable diameter, мм</span><b>300</b></div><div><span>Worktable speed — RPM/min</span><b>60-160</b></div><div><span>The maximum distance from the centerline of the grinding wheel spindle to the worktable, мм</span><b>350</b></div><div><span>Horizontal movement of worktable — Automatic feed rate — mm/stork</span><b>0.005～12</b></div></div>
+<div class="vmc-specs"></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="mgk7160x120 h плоскошлифовальные станки" data-title="MGK7160x120 H" data-sortkey="600.0" data-table-size="600 x 1600">
+<article class="vmc-card" data-name="mgk7160x120 h плоскошлифовальные станки" data-title="MGK7160x120 H" data-sortkey="600.0" data-wheel-size="400 x (50–120) x 203" data-max-workpiece-weight="1200" data-motor-power="44/54">
 <a class="vmc-card-link" href="equipment-grinding-mgk7160x120-h.html" aria-label="MGK7160x120 H — подробнее"></a>
 <div class="vmc-photo"><img src="grinding-assets/mgk7160x120-h.png" alt="MGK7160x120 H" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Плоскошлифовальные</small>
 <h3>MGK7160x120 H</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>600 x 1600</b></div><div><span>Grinding length dimensions</span><b>1200</b></div><div><span>Grinding width dimensions</span><b>600</b></div><div><span>Maximum table load</span><b>1200</b></div></div>
+<div class="vmc-specs"><div><span>Размер шлифовального круга</span><b>400 x (50–120) x 203</b></div><div><span>Макс. вес заготовки</span><b>1200</b></div><div><span>Мощность привода</span><b>44/54</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="mprg7360nc h плоскошлифовальные станки" data-title="MPRG7360NC H" data-sortkey="0" >
+<article class="vmc-card" data-name="mprg7360nc h плоскошлифовальные станки" data-title="MPRG7360NC H" data-sortkey="0"  data-wheel-size="∅355×38×∅127 мм" data-max-workpiece-weight="150 кг" data-motor-power="7,5 кВт">
 <a class="vmc-card-link" href="equipment-grinding-mprg7360nc-h.html" aria-label="MPRG7360NC H — подробнее"></a>
 <div class="vmc-photo"><img src="grinding-assets/mprg7360nc-h.png" alt="MPRG7360NC H" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Плоскошлифовальные</small>
 <h3>MPRG7360NC H</h3>
-<div class="vmc-specs"><div><span>Item</span><b>Unit | Specification</b></div><div><span>Capacity</span><b>Electromagnetic suction cup diameter | mm | ∅630</b></div><div><span>Effective diameter of electromagnetic suction cup</span><b>mm | ∅600</b></div><div><span>Maximum travel inside the worktable protective cover</span><b>mm | ∅750</b></div></div>
+<div class="vmc-specs"><div><span>Размер шлифовального круга</span><b>∅355×38×∅127 мм</b></div><div><span>Макс. вес заготовки</span><b>150 кг</b></div><div><span>Мощность привода</span><b>7,5 кВт</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="mygk7370 h плоскошлифовальные станки" data-title="MYGK7370 H" data-sortkey="800.0" data-table-size="800×1600">
+<article class="vmc-card" data-name="mygk7370 h плоскошлифовальные станки" data-title="MYGK7370 H" data-sortkey="800.0" data-max-workpiece-weight="1230" data-motor-power="11/15">
 <a class="vmc-card-link" href="equipment-grinding-mygk7370-h.html" aria-label="MYGK7370 H — подробнее"></a>
 <div class="vmc-photo"><img src="grinding-assets/mygk7370-h.png" alt="MYGK7370 H" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Плоскошлифовальные</small>
 <h3>MYGK7370 H</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>800×1600</b></div><div><span>Grinding Range on Worktable (L*W), мм</span><b>700×700</b></div><div><span>CNC rotary table diameter, мм</span><b>Φ700</b></div><div><span>Grinding Range on CNC Rotary Table (D* H), мм</span><b>Φ700*400</b></div></div>
+<div class="vmc-specs"><div><span>Макс. вес заготовки</span><b>1230</b></div><div><span>Мощность привода</span><b>11/15</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="psg103dnc h плоскошлифовальные станки" data-title="PSG103DNC H" data-sortkey="0" >
+<article class="vmc-card" data-name="psg103dnc h плоскошлифовальные станки" data-title="PSG103DNC H" data-sortkey="0"  data-wheel-size="350×40×127 мм" data-max-workpiece-weight="400 кг" data-motor-power="7,5 кВт, 100–3000 об/мин">
 <a class="vmc-card-link" href="equipment-grinding-psg103dnc-h.html" aria-label="PSG103DNC H — подробнее"></a>
 <div class="vmc-photo"><img src="grinding-assets/psg103dnc-h.png" alt="PSG103DNC H" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Плоскошлифовальные</small>
 <h3>PSG103DNC H</h3>
-<div class="vmc-specs"><div><span>Item</span><b>Unit | Specifications</b></div><div><span>Worktable Area （W×L）</span><b>mm | 305×1020</b></div><div><span>Worktable T-slots</span><b>mm×n | 14×3</b></div><div><span>Worktable Lateral Speed</span><b>m/min | 1～30</b></div></div>
+<div class="vmc-specs"><div><span>Размер шлифовального круга</span><b>350×40×127 мм</b></div><div><span>Макс. вес заготовки</span><b>400 кг</b></div><div><span>Мощность привода</span><b>7,5 кВт, 100–3000 об/мин</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="sg50100pc2 / sg50120pc2 / sg60120pc2 / sg60160pc2 / sg60220pc2 h плоскошлифовальные станки" data-title="SG50100PC2 / SG50120PC2 / SG60120PC2 / SG60160PC2 / SG60220PC2 H" data-sortkey="1000.0" data-table-size="1000*500">
+<article class="vmc-card" data-name="sg50100pc2 / sg50120pc2 / sg60120pc2 / sg60160pc2 / sg60220pc2 h плоскошлифовальные станки" data-title="SG50100PC2 / SG50120PC2 / SG60120PC2 / SG60160PC2 / SG60220PC2 H" data-sortkey="1000.0" data-table-size="1000*500" data-wheel-size="355*50*127" data-max-workpiece-weight="800">
 <a class="vmc-card-link" href="equipment-grinding-sg50100pc2-sg50120pc2-sg60120pc2-sg60160pc2-sg60220pc2-h.html" aria-label="SG50100PC2 / SG50120PC2 / SG60120PC2 / SG60160PC2 / SG60220PC2 H — подробнее"></a>
 <div class="vmc-photo"><img src="grinding-assets/sg50100pc2-sg50120pc2-sg60120pc2-sg60160pc2-sg60220pc2-h.png" alt="SG50100PC2 / SG50120PC2 / SG60120PC2 / SG60160PC2 / SG60220PC2 H" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Плоскошлифовальные</small>
 <h3>SG50100PC2 / SG50120PC2 / SG60120PC2 / SG60160PC2 / SG60220PC2 H</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>1000*500</b></div><div><span>Max.grinding size of workpiece(L*W), мм</span><b>1000*500</b></div><div><span>Distance from spindle center to table surface, мм</span><b>820</b></div><div><span>Magnetic chuck size, мм</span><b>500*1000</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>1000*500</b></div><div><span>Размер шлифовального круга</span><b>355*50*127</b></div><div><span>Макс. вес заготовки</span><b>800</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="sg60160sd / sg60220sd / sg60600sd / sg80160sd / sg80220sd / sg80300sd / sg80400sd h плоскошлифовальные станки" data-title="SG60160SD / SG60220SD / SG60600SD / SG80160SD / SG80220SD / SG80300SD / SG80400SD H" data-sortkey="1600.0" data-table-size="1600*610">
+<article class="vmc-card" data-name="sg60160sd / sg60220sd / sg60600sd / sg80160sd / sg80220sd / sg80300sd / sg80400sd h плоскошлифовальные станки" data-title="SG60160SD / SG60220SD / SG60600SD / SG80160SD / SG80220SD / SG80300SD / SG80400SD H" data-sortkey="1600.0" data-table-size="1600*610" data-wheel-size="500*75*305" data-max-workpiece-weight="1230">
 <a class="vmc-card-link" href="equipment-grinding-sg60160sd-sg60220sd-sg60600sd-sg80160sd-sg80220sd-sg80300sd-sg80400sd-h.html" aria-label="SG60160SD / SG60220SD / SG60600SD / SG80160SD / SG80220SD / SG80300SD / SG80400SD H — подробнее"></a>
 <div class="vmc-photo"><img src="grinding-assets/sg60160sd-sg60220sd-sg60600sd-sg80160sd-sg80220sd-sg80300sd-sg80400sd-h.png" alt="SG60160SD / SG60220SD / SG60600SD / SG80160SD / SG80220SD / SG80300SD / SG80400SD H" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Плоскошлифовальные</small>
 <h3>SG60160SD / SG60220SD / SG60600SD / SG80160SD / SG80220SD / SG80300SD / SG80400SD H</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>1600*610</b></div><div><span>Max.grinding size of workpiece(L*W), мм</span><b>1600*610</b></div><div><span>Distance from spindle center to table surface, мм</span><b>820/1050</b></div><div><span>Magnetic chuck size, мм</span><b>600*800*2</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>1600*610</b></div><div><span>Размер шлифовального круга</span><b>500*75*305</b></div><div><span>Макс. вес заготовки</span><b>1230</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="sg618 / sg618a / sg818a f плоскошлифовальные станки" data-title="SG618 / SG618A / SG818A F" data-sortkey="500.0" data-table-size="500×190 мм" data-grinding-size-max="460×180 мм" data-table-load="100 кг" data-wheel-speed="2850 об/мин" data-spindle-power="1.1 кВт">
+<article class="vmc-card" data-name="sg618 / sg618a / sg818a f плоскошлифовальные станки" data-title="SG618 / SG618A / SG818A F" data-sortkey="500.0" data-table-size="500×190 мм" data-wheel-size="180×12×31.75 мм" data-max-workpiece-weight="100 кг" data-wheel-speed="2850 об/мин" data-motor-power="1.1 кВт">
 <a class="vmc-card-link" href="equipment-grinding-sg618-sg618a-sg818a-f.html" aria-label="SG618 / SG618A / SG818A F — подробнее"></a>
 <div class="vmc-photo"><img src="grinding-assets/sg618-sg618a-sg818a-f.png" alt="SG618 / SG618A / SG818A F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Плоскошлифовальные</small>
 <h3>SG618 / SG618A / SG818A F</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>500×190 мм</b></div><div><span>Макс. размер шлифования</span><b>460×180 мм</b></div><div><span>Грузоподъёмность стола</span><b>100 кг т</b></div><div><span>Частота вращения круга</span><b>2850 об/мин</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>500×190 мм</b></div><div><span>Размер шлифовального круга</span><b>180×12×31.75 мм</b></div><div><span>Макс. вес заготовки</span><b>100 кг</b></div><div><span>Частота вращения круга</span><b>2850 об/мин</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="sg618 / sg820 f плоскошлифовальные станки" data-title="SG618 / SG820 F" data-sortkey="500.0" data-table-size="500×190 мм" data-grinding-size-max="460×180 мм" data-table-load="100 кг" data-wheel-speed="2850 об/мин" data-spindle-power="1.1 кВт">
+<article class="vmc-card" data-name="sg618 / sg820 f плоскошлифовальные станки" data-title="SG618 / SG820 F" data-sortkey="500.0" data-table-size="500×190 мм" data-wheel-size="180×12×31.75 мм" data-max-workpiece-weight="100 кг" data-wheel-speed="2850 об/мин" data-motor-power="1.1 кВт">
 <a class="vmc-card-link" href="equipment-grinding-sg618-sg820-f.html" aria-label="SG618 / SG820 F — подробнее"></a>
 <div class="vmc-photo"><img src="grinding-assets/sg618-sg820-f.png" alt="SG618 / SG820 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Плоскошлифовальные</small>
 <h3>SG618 / SG820 F</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>500×190 мм</b></div><div><span>Макс. размер шлифования</span><b>460×180 мм</b></div><div><span>Грузоподъёмность стола</span><b>100 кг т</b></div><div><span>Частота вращения круга</span><b>2850 об/мин</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>500×190 мм</b></div><div><span>Размер шлифовального круга</span><b>180×12×31.75 мм</b></div><div><span>Макс. вес заготовки</span><b>100 кг</b></div><div><span>Частота вращения круга</span><b>2850 об/мин</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="sga-100220znc / sga-100300znc / sga-100400znc / sga-50450znc / sga-60600znc f плоскошлифовальные станки" data-title="SGA-100220ZNC / SGA-100300ZNC / SGA-100400ZNC / SGA-50450ZNC / SGA-60600ZNC F" data-sortkey="1000.0" data-table-size="1000×2200 мм" data-grinding-size-max="1000×2200 мм" data-wheel-speed="960 (50Гц) / 1150 (60Гц)" data-spindle-power="18.5/22 кВт">
+<article class="vmc-card" data-name="sga-100220znc / sga-100300znc / sga-100400znc / sga-50450znc / sga-60600znc f плоскошлифовальные станки" data-title="SGA-100220ZNC / SGA-100300ZNC / SGA-100400ZNC / SGA-50450ZNC / SGA-60600ZNC F" data-sortkey="1000.0" data-table-size="1000×2200 мм" data-wheel-size="500×100×203 мм" data-wheel-speed="960 (50Гц) / 1150 (60Гц)" data-motor-power="18.5/22 кВт">
 <a class="vmc-card-link" href="equipment-grinding-sga-100220znc-sga-100300znc-sga-100400znc-sga-50450znc-sga-60600znc-f.html" aria-label="SGA-100220ZNC / SGA-100300ZNC / SGA-100400ZNC / SGA-50450ZNC / SGA-60600ZNC F — подробнее"></a>
 <div class="vmc-photo"><img src="grinding-assets/sga-100220znc-sga-100300znc-sga-100400znc-sga-50450znc-sga-60600znc-f.png" alt="SGA-100220ZNC / SGA-100300ZNC / SGA-100400ZNC / SGA-50450ZNC / SGA-60600ZNC F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Плоскошлифовальные</small>
 <h3>SGA-100220ZNC / SGA-100300ZNC / SGA-100400ZNC / SGA-50450ZNC / SGA-60600ZNC F</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>1000×2200 мм</b></div><div><span>Макс. размер шлифования</span><b>1000×2200 мм</b></div><div><span>Частота вращения круга</span><b>960 (50Гц) / 1150 (60Гц) об/мин</b></div><div><span>Тип</span><b>ZNC (крупногабаритный)</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>1000×2200 мм</b></div><div><span>Размер шлифовального круга</span><b>500×100×203 мм</b></div><div><span>Частота вращения круга</span><b>960 (50Гц) / 1150 (60Гц)</b></div><div><span>Мощность привода</span><b>18.5/22 кВт</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="sga-2050cnc / sga-2550cnc / sga-3063cnc / sga-40100cnc f плоскошлифовальные станки" data-title="SGA-2050CNC / SGA-2550CNC / SGA-3063CNC / SGA-40100CNC F" data-sortkey="200.0" data-table-size="200×500 мм" data-grinding-size-max="200×500 мм" data-wheel-speed="2850/3450 или 1450/1750 об/мин" data-spindle-power="2.2 кВт">
+<article class="vmc-card" data-name="sga-2050cnc / sga-2550cnc / sga-3063cnc / sga-40100cnc f плоскошлифовальные станки" data-title="SGA-2050CNC / SGA-2550CNC / SGA-3063CNC / SGA-40100CNC F" data-sortkey="200.0" data-table-size="200×500 мм" data-wheel-size="200×20×31.75 мм" data-wheel-speed="2850/3450 или 1450/1750 об/мин" data-motor-power="2.2 кВт">
 <a class="vmc-card-link" href="equipment-grinding-sga-2050cnc-sga-2550cnc-sga-3063cnc-sga-40100cnc-f.html" aria-label="SGA-2050CNC / SGA-2550CNC / SGA-3063CNC / SGA-40100CNC F — подробнее"></a>
 <div class="vmc-photo"><img src="grinding-assets/sga-2050cnc-sga-2550cnc-sga-3063cnc-sga-40100cnc-f.png" alt="SGA-2050CNC / SGA-2550CNC / SGA-3063CNC / SGA-40100CNC F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Плоскошлифовальные</small>
 <h3>SGA-2050CNC / SGA-2550CNC / SGA-3063CNC / SGA-40100CNC F</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>200×500 мм</b></div><div><span>Макс. размер шлифования</span><b>200×500 мм</b></div><div><span>Частота вращения круга</span><b>2850/3450 или 1450/1750 об/мин</b></div><div><span>Тип</span><b>CNC (трёхосевой)</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>200×500 мм</b></div><div><span>Размер шлифовального круга</span><b>200×20×31.75 мм</b></div><div><span>Частота вращения круга</span><b>2850/3450 или 1450/1750 об/мин</b></div><div><span>Мощность привода</span><b>2.2 кВт</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="sga-3063ahr / sga-3063ahd / sga-30100ah / sga-30100ahr / sga-30100ahd / sga-4080ah / sga-4080ahr / sga-4080ahd / sga-40100ah / sga-40100ahr / sga-40100ahd f плоскошлифовальные станки" data-title="SGA-3063AHR / SGA-3063AHD / SGA-30100AH / SGA-30100AHR / SGA-30100AHD / SGA-4080AH / SGA-4080AHR / SGA-4080AHD / SGA-40100AH / SGA-40100AHR / SGA-40100AHD F" data-sortkey="305.0" data-table-size="305×635 мм" data-grinding-size-max="305×635 мм" data-wheel-speed="1450 (50Гц) / 1750 (60Гц)" data-spindle-power="4 кВт">
+<article class="vmc-card" data-name="sga-3063ahr / sga-3063ahd / sga-30100ah / sga-30100ahr / sga-30100ahd / sga-4080ah / sga-4080ahr / sga-4080ahd / sga-40100ah / sga-40100ahr / sga-40100ahd f плоскошлифовальные станки" data-title="SGA-3063AHR / SGA-3063AHD / SGA-30100AH / SGA-30100AHR / SGA-30100AHD / SGA-4080AH / SGA-4080AHR / SGA-4080AHD / SGA-40100AH / SGA-40100AHR / SGA-40100AHD F" data-sortkey="305.0" data-table-size="305×635 мм" data-wheel-size="350×40×127 мм" data-wheel-speed="1450 (50Гц) / 1750 (60Гц)" data-motor-power="4 кВт">
 <a class="vmc-card-link" href="equipment-grinding-sga-3063ahr-sga-3063ahd-sga-30100ah-sga-30100ahr-sga-30100ahd-sga-4080ah-sga-4080ahr-sga-4080ahd-sga-40100ah-sga-40100ahr-sga-40100ahd-f.html" aria-label="SGA-3063AHR / SGA-3063AHD / SGA-30100AH / SGA-30100AHR / SGA-30100AHD / SGA-4080AH / SGA-4080AHR / SGA-4080AHD / SGA-40100AH / SGA-40100AHR / SGA-40100AHD F — подробнее"></a>
 <div class="vmc-photo"><img src="grinding-assets/sga-3063ahr-sga-3063ahd-sga-30100ah-sga-30100ahr-sga-30100ahd-sga-4080ah-sga-4080ahr-sga-4080ahd-sga-40100ah-sga-40100ahr-sga-40100ahd-f.png" alt="SGA-3063AHR / SGA-3063AHD / SGA-30100AH / SGA-30100AHR / SGA-30100AHD / SGA-4080AH / SGA-4080AHR / SGA-4080AHD / SGA-40100AH / SGA-40100AHR / SGA-40100AHD F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Плоскошлифовальные</small>
 <h3>SGA-3063AHR / SGA-3063AHD / SGA-30100AH / SGA-30100AHR / SGA-30100AHD / SGA-4080AH / SGA-4080AHR / SGA-4080AHD / SGA-40100AH / SGA-40100AHR / SGA-40100AHD F</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>305×635 мм</b></div><div><span>Макс. размер шлифования</span><b>305×635 мм</b></div><div><span>Частота вращения круга</span><b>1450 (50Гц) / 1750 (60Гц) об/мин</b></div><div><span>Тип</span><b>гидравлический, подвижное седло (AHR)</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>305×635 мм</b></div><div><span>Размер шлифовального круга</span><b>350×40×127 мм</b></div><div><span>Частота вращения круга</span><b>1450 (50Гц) / 1750 (60Гц)</b></div><div><span>Мощность привода</span><b>4 кВт</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="sga-50100nc / sga-50160nc / sga-60120nc / sga-60160nc / sga-60220nc f плоскошлифовальные станки" data-title="SGA-50100NC / SGA-50160NC / SGA-60120NC / SGA-60160NC / SGA-60220NC F" data-sortkey="500.0" data-table-size="500×1000 мм" data-grinding-size-max="500×1000 мм" data-wheel-speed="1450 (50Гц) / 1750 (60Гц)" data-spindle-power="7.5 кВт">
+<article class="vmc-card" data-name="sga-50100nc / sga-50160nc / sga-60120nc / sga-60160nc / sga-60220nc f плоскошлифовальные станки" data-title="SGA-50100NC / SGA-50160NC / SGA-60120NC / SGA-60160NC / SGA-60220NC F" data-sortkey="500.0" data-table-size="500×1000 мм" data-wheel-size="350×40×127 мм" data-wheel-speed="1450 (50Гц) / 1750 (60Гц)" data-motor-power="7.5 кВт">
 <a class="vmc-card-link" href="equipment-grinding-sga-50100nc-sga-50160nc-sga-60120nc-sga-60160nc-sga-60220nc-f.html" aria-label="SGA-50100NC / SGA-50160NC / SGA-60120NC / SGA-60160NC / SGA-60220NC F — подробнее"></a>
 <div class="vmc-photo"><img src="grinding-assets/sga-50100nc-sga-50160nc-sga-60120nc-sga-60160nc-sga-60220nc-f.png" alt="SGA-50100NC / SGA-50160NC / SGA-60120NC / SGA-60160NC / SGA-60220NC F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Плоскошлифовальные</small>
 <h3>SGA-50100NC / SGA-50160NC / SGA-60120NC / SGA-60160NC / SGA-60220NC F</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>500×1000 мм</b></div><div><span>Макс. размер шлифования</span><b>500×1000 мм</b></div><div><span>Частота вращения круга</span><b>1450 (50Гц) / 1750 (60Гц) об/мин</b></div><div><span>Тип</span><b>NC (числовое управление)</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>500×1000 мм</b></div><div><span>Размер шлифовального круга</span><b>350×40×127 мм</b></div><div><span>Частота вращения круга</span><b>1450 (50Гц) / 1750 (60Гц)</b></div><div><span>Мощность привода</span><b>7.5 кВт</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="sga-80160nc / sga-80220nc / sga-80300nc / sga-85250nc f плоскошлифовальные станки" data-title="SGA-80160NC / SGA-80220NC / SGA-80300NC / SGA-85250NC F" data-sortkey="810.0" data-table-size="810×1600 мм" data-grinding-size-max="810×1600 мм" data-wheel-speed="960 (50Гц) / 1150 (60Гц)" data-spindle-power="18.5 кВт">
+<article class="vmc-card" data-name="sga-80160nc / sga-80220nc / sga-80300nc / sga-85250nc f плоскошлифовальные станки" data-title="SGA-80160NC / SGA-80220NC / SGA-80300NC / SGA-85250NC F" data-sortkey="810.0" data-table-size="810×1600 мм" data-wheel-size="500×75×203 мм" data-wheel-speed="960 (50Гц) / 1150 (60Гц)" data-motor-power="18.5 кВт">
 <a class="vmc-card-link" href="equipment-grinding-sga-80160nc-sga-80220nc-sga-80300nc-sga-85250nc-f.html" aria-label="SGA-80160NC / SGA-80220NC / SGA-80300NC / SGA-85250NC F — подробнее"></a>
 <div class="vmc-photo"><img src="grinding-assets/sga-80160nc-sga-80220nc-sga-80300nc-sga-85250nc-f.png" alt="SGA-80160NC / SGA-80220NC / SGA-80300NC / SGA-85250NC F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Плоскошлифовальные</small>
 <h3>SGA-80160NC / SGA-80220NC / SGA-80300NC / SGA-85250NC F</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>810×1600 мм</b></div><div><span>Макс. размер шлифования</span><b>810×1600 мм</b></div><div><span>Частота вращения круга</span><b>960 (50Гц) / 1150 (60Гц) об/мин</b></div><div><span>Тип</span><b>NC (крупногабаритный)</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>810×1600 мм</b></div><div><span>Размер шлифовального круга</span><b>500×75×203 мм</b></div><div><span>Частота вращения круга</span><b>960 (50Гц) / 1150 (60Гц)</b></div><div><span>Мощность привода</span><b>18.5 кВт</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="sga2050 / sga2550 / sga3063 / sga30100 / sga4080 / sga40100 h плоскошлифовальные станки" data-title="SGA2050 / SGA2550 / SGA3063 / SGA30100 / SGA4080 / SGA40100 H" data-sortkey="200.0" data-table-size="200*460" data-spindle-power="1.5">
+<article class="vmc-card" data-name="sga2050 / sga2550 / sga3063 / sga30100 / sga4080 / sga40100 h плоскошлифовальные станки" data-title="SGA2050 / SGA2550 / SGA3063 / SGA30100 / SGA4080 / SGA40100 H" data-sortkey="200.0" data-table-size="200*460" data-wheel-size="200*20*31.75" data-max-workpiece-weight="120" data-wheel-speed="2850" data-motor-power="1.5">
 <a class="vmc-card-link" href="equipment-grinding-sga2050-sga2550-sga3063-sga30100-sga4080-sga40100-h.html" aria-label="SGA2050 / SGA2550 / SGA3063 / SGA30100 / SGA4080 / SGA40100 H — подробнее"></a>
 <div class="vmc-photo"><img src="grinding-assets/sga2050-sga2550-sga3063-sga30100-sga4080-sga40100-h.png" alt="SGA2050 / SGA2550 / SGA3063 / SGA30100 / SGA4080 / SGA40100 H" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Плоскошлифовальные</small>
 <h3>SGA2050 / SGA2550 / SGA3063 / SGA30100 / SGA4080 / SGA40100 H</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>200*460</b></div><div><span>Distance from spindle center to worktable, мм</span><b>450</b></div><div><span>Max. loading of table(including magentic chuck)</span><b>120</b></div><div><span>Magnetic chuck size, мм</span><b>200*460</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>200*460</b></div><div><span>Размер шлифовального круга</span><b>200*20*31.75</b></div><div><span>Макс. вес заготовки</span><b>120</b></div><div><span>Частота вращения круга</span><b>2850</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="sgt60160sd / sgt60220sd / sgt80160sd / sgt80220sd / sgt80300sd h плоскошлифовальные станки" data-title="SGT60160SD / SGT60220SD / SGT80160SD / SGT80220SD / SGT80300SD H" data-sortkey="1600.0" data-table-size="1600*610">
+<article class="vmc-card" data-name="sgt60160sd / sgt60220sd / sgt80160sd / sgt80220sd / sgt80300sd h плоскошлифовальные станки" data-title="SGT60160SD / SGT60220SD / SGT80160SD / SGT80220SD / SGT80300SD H" data-sortkey="1600.0" data-table-size="1600*610" data-wheel-size="According to process requirements" data-max-workpiece-weight="1230">
 <a class="vmc-card-link" href="equipment-grinding-sgt60160sd-sgt60220sd-sgt80160sd-sgt80220sd-sgt80300sd-h.html" aria-label="SGT60160SD / SGT60220SD / SGT80160SD / SGT80220SD / SGT80300SD H — подробнее"></a>
 <div class="vmc-photo"><img src="grinding-assets/sgt60160sd-sgt60220sd-sgt80160sd-sgt80220sd-sgt80300sd-h.png" alt="SGT60160SD / SGT60220SD / SGT80160SD / SGT80220SD / SGT80300SD H" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Плоскошлифовальные</small>
 <h3>SGT60160SD / SGT60220SD / SGT80160SD / SGT80220SD / SGT80300SD H</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>1600*610</b></div><div><span>Max.grinding size of workpiece(L*W*H), мм</span><b>1600*610*600</b></div><div><span>Magnetic chuck size, мм</span><b>600*800*2</b></div><div><span>Table longitudinal speed, мм</span><b>7-23</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>1600*610</b></div><div><span>Размер шлифовального круга</span><b>According to process requirements</b></div><div><span>Макс. вес заготовки</span><b>1230</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
@@ -1368,19 +1360,27 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <div class="eqcat-filter-backdrop" data-role="filter-backdrop"></div>
 <div class="g2-filter-head"><span>Фильтр</span><button type="button" class="g2-reset" data-role="reset"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg>Сбросить всё</button><button type="button" class="eqcat-filter-close" data-role="filter-close" aria-label="Закрыть фильтр">×</button></div>
 <label class="g2-search"><span class="g2-search-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span><input type="search" data-role="search" placeholder="Поиск по модели"/></label>
-<div class="g2-direct"><div class="g2-field"><strong>Макс. длина заготовки (мм)</strong>
+<div class="g2-direct"><div class="g2-field"><strong>Диаметр шлифовки</strong>
 <div class="vmc-range-row">
-<input type="number" placeholder="От" data-range="workpiece-length-max" data-bound="min"/>
-<input type="number" placeholder="До" data-range="workpiece-length-max" data-bound="max"/>
+<input type="number" placeholder="От" data-range="od-diameter" data-bound="min"/>
+<input type="number" placeholder="До" data-range="od-diameter" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Размер шлифовального круга</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="wheel-size" data-bound="min"/>
+<input type="number" placeholder="До" data-range="wheel-size" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Размер подающего круга</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="regulating-wheel-size" data-bound="min"/>
+<input type="number" placeholder="До" data-range="regulating-wheel-size" data-bound="max"/>
 </div></div></div>
-<details class="g2-group" open><summary>Привод и скорости</summary><div class="g2-group-body"><div class="g2-field"><strong>Частота вращения круга (об/мин)</strong>
-<div class="vmc-range-row">
-<input type="number" placeholder="От" data-range="wheel-speed" data-bound="min"/>
-<input type="number" placeholder="До" data-range="wheel-speed" data-bound="max"/>
-</div></div><div class="g2-field"><strong>Скорость регулирующего круга (об/мин)</strong>
+<details class="g2-group" open><summary>Дополнительные параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Частота вращения подающего круга</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="regulating-wheel-speed" data-bound="min"/>
 <input type="number" placeholder="До" data-range="regulating-wheel-speed" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Частота вращения шлифовального круга</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="wheel-speed" data-bound="min"/>
+<input type="number" placeholder="До" data-range="wheel-speed" data-bound="max"/>
 </div></div></div></details>
 
 <div class="g2-apply-wrap">
@@ -1400,173 +1400,173 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 <div class="g2-fallback-note" data-role="fallback-note" hidden>Точных совпадений не нашлось — показаны ближайшие по параметрам модели.</div>
 <div class="vmc-grid">
-<article class="vmc-card" data-name="hcgm-h6060 f бесцентровошлифовальные станки" data-title="HCGM-H6060 F" data-sortkey="1950.0" data-wheel-speed="1950 об/мин">
+<article class="vmc-card" data-name="hcgm-h6060 f бесцентровошлифовальные станки" data-title="HCGM-H6060 F" data-sortkey="1950.0" data-od-diameter="10–300 мм" data-wheel-size="Ø600×600×305 мм" data-regulating-wheel-size="Ø350×600×203 мм" data-regulating-wheel-speed="10–200 об/мин" data-wheel-speed="1950 об/мин">
 <a class="vmc-card-link" href="equipment-grinding-hcgm-h6060-f.html" aria-label="HCGM-H6060 F — подробнее"></a>
 <div class="vmc-photo"><img src="grinding-assets/hcgm-h6060-f.png" alt="HCGM-H6060 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Бесцентровошлифовальные</small>
 <h3>HCGM-H6060 F</h3>
-<div class="vmc-specs"><div><span>Частота вращения круга</span><b>1950 об/мин</b></div><div><span>Диаметр шлифовки (врезное/сквозное)</span><b>10–300 мм</b></div><div><span>Шлифовальный круг</span><b>Ø600×600×305 мм</b></div><div><span>Регулирующее колесо</span><b>Ø350×600×203 мм</b></div></div>
+<div class="vmc-specs"><div><span>Диаметр шлифовки</span><b>10–300 мм</b></div><div><span>Размер шлифовального круга</span><b>Ø600×600×305 мм</b></div><div><span>Размер подающего круга</span><b>Ø350×600×203 мм</b></div><div><span>Частота вращения подающего круга</span><b>10–200 об/мин</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="hcgm-l6060 f бесцентровошлифовальные станки" data-title="HCGM-L6060 F" data-sortkey="1100.0" data-wheel-speed="1100 об/мин">
+<article class="vmc-card" data-name="hcgm-l6060 f бесцентровошлифовальные станки" data-title="HCGM-L6060 F" data-sortkey="1100.0" data-od-diameter="10-250 мм" data-wheel-size="Ø600×600×305 мм" data-regulating-wheel-size="Ø350×600×203 мм" data-regulating-wheel-speed="10-200 об/мин" data-wheel-speed="1100 об/мин">
 <a class="vmc-card-link" href="equipment-grinding-hcgm-l6060-f.html" aria-label="HCGM-L6060 F — подробнее"></a>
 <div class="vmc-photo"><img src="grinding-assets/hcgm-l6060-f.png" alt="HCGM-L6060 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Бесцентровошлифовальные</small>
 <h3>HCGM-L6060 F</h3>
-<div class="vmc-specs"><div><span>Частота вращения круга</span><b>1100 об/мин</b></div><div><span>Погружный подача</span><b>Диаметр шлифовки: 10-250 мм</b></div><div><span>Сквозная подача</span><b>Диаметр шлифовки: 10-250 мм</b></div><div><span>Технические характеристики шлифовального круга</span><b>Ø600×600×305 мм</b></div></div>
+<div class="vmc-specs"><div><span>Диаметр шлифовки</span><b>10-250 мм</b></div><div><span>Размер шлифовального круга</span><b>Ø600×600×305 мм</b></div><div><span>Размер подающего круга</span><b>Ø350×600×203 мм</b></div><div><span>Частота вращения подающего круга</span><b>10-200 об/мин</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="hcgm-m6020 f бесцентровошлифовальные станки" data-title="HCGM-M6020 F" data-sortkey="1100.0" data-wheel-speed="1100 об/мин">
+<article class="vmc-card" data-name="hcgm-m6020 f бесцентровошлифовальные станки" data-title="HCGM-M6020 F" data-sortkey="1100.0" data-od-diameter="5-100 мм" data-wheel-size="Ø600×200(250)×305 мм" data-regulating-wheel-size="Ø350×200(300)×203 мм" data-regulating-wheel-speed="10-200 об/мин" data-wheel-speed="1100 об/мин">
 <a class="vmc-card-link" href="equipment-grinding-hcgm-m6020-f.html" aria-label="HCGM-M6020 F — подробнее"></a>
 <div class="vmc-photo"><img src="grinding-assets/hcgm-m6020-f.png" alt="HCGM-M6020 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Бесцентровошлифовальные</small>
 <h3>HCGM-M6020 F</h3>
-<div class="vmc-specs"><div><span>Частота вращения круга</span><b>1100 об/мин</b></div><div><span>Погружный подача</span><b>Диаметр шлифовки: 5-100 мм</b></div><div><span>Сквозная подача</span><b>Диаметр шлифовки: 5-100 мм</b></div><div><span>Технические характеристики шлифовального круга</span><b>Ø600×200(250)×305 мм</b></div></div>
+<div class="vmc-specs"><div><span>Диаметр шлифовки</span><b>5-100 мм</b></div><div><span>Размер шлифовального круга</span><b>Ø600×200(250)×305 мм</b></div><div><span>Размер подающего круга</span><b>Ø350×200(300)×203 мм</b></div><div><span>Частота вращения подающего круга</span><b>10-200 об/мин</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="hcgm-m6040 f бесцентровошлифовальные станки" data-title="HCGM-M6040 F" data-sortkey="1100.0" data-wheel-speed="1100 об/мин">
+<article class="vmc-card" data-name="hcgm-m6040 f бесцентровошлифовальные станки" data-title="HCGM-M6040 F" data-sortkey="1100.0" data-od-diameter="5-200 мм" data-wheel-size="Ø600×400×305 мм" data-regulating-wheel-size="Ø350×400×203 мм" data-regulating-wheel-speed="10-200 об/мин" data-wheel-speed="1100 об/мин">
 <a class="vmc-card-link" href="equipment-grinding-hcgm-m6040-f.html" aria-label="HCGM-M6040 F — подробнее"></a>
 <div class="vmc-photo"><img src="grinding-assets/hcgm-m6040-f.png" alt="HCGM-M6040 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Бесцентровошлифовальные</small>
 <h3>HCGM-M6040 F</h3>
-<div class="vmc-specs"><div><span>Частота вращения круга</span><b>1100 об/мин</b></div><div><span>Погружный подача</span><b>Диаметр шлифовки: 5-200 мм</b></div><div><span>Сквозная подача</span><b>Диаметр шлифовки: 5-200 мм</b></div><div><span>Технические характеристики шлифовального круга</span><b>Ø600×400×305 мм</b></div></div>
+<div class="vmc-specs"><div><span>Диаметр шлифовки</span><b>5-200 мм</b></div><div><span>Размер шлифовального круга</span><b>Ø600×400×305 мм</b></div><div><span>Размер подающего круга</span><b>Ø350×400×203 мм</b></div><div><span>Частота вращения подающего круга</span><b>10-200 об/мин</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="hcgm-s4020 f бесцентровошлифовальные станки" data-title="HCGM-S4020 F" data-sortkey="1625.0" data-wheel-speed="1625 об/мин">
+<article class="vmc-card" data-name="hcgm-s4020 f бесцентровошлифовальные станки" data-title="HCGM-S4020 F" data-sortkey="1625.0" data-od-diameter="2-45 мм" data-wheel-size="PSA400×150(200)×203 мм" data-regulating-wheel-size="Ø250×150(200)×127 мм" data-wheel-speed="1625 об/мин">
 <a class="vmc-card-link" href="equipment-grinding-hcgm-s4020-f.html" aria-label="HCGM-S4020 F — подробнее"></a>
 <div class="vmc-photo"><img src="grinding-assets/hcgm-s4020-f.png" alt="HCGM-S4020 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Бесцентровошлифовальные</small>
 <h3>HCGM-S4020 F</h3>
-<div class="vmc-specs"><div><span>Частота вращения круга</span><b>1625 об/мин</b></div><div><span>Погружный подача</span><b>Диаметр шлифовки: 2-45 мм</b></div><div><span>Сквозная подача</span><b>Диаметр шлифовки: 2-45 мм</b></div><div><span>Технические характеристики шлифовального круга</span><b>PSA400×150(200)×203 мм</b></div></div>
+<div class="vmc-specs"><div><span>Диаметр шлифовки</span><b>2-45 мм</b></div><div><span>Размер шлифовального круга</span><b>PSA400×150(200)×203 мм</b></div><div><span>Размер подающего круга</span><b>Ø250×150(200)×127 мм</b></div><div><span>Частота вращения шлифовального круга</span><b>1625 об/мин</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="hcgm-s5020 f бесцентровошлифовальные станки" data-title="HCGM-S5020 F" data-sortkey="1338.0" data-wheel-speed="1338 об/мин">
+<article class="vmc-card" data-name="hcgm-s5020 f бесцентровошлифовальные станки" data-title="HCGM-S5020 F" data-sortkey="1338.0" data-od-diameter="2-60 мм" data-wheel-size="Ø500×200×305 мм" data-regulating-wheel-size="Ø350×200×203 мм" data-regulating-wheel-speed="10-200 об/мин" data-wheel-speed="1338 об/мин">
 <a class="vmc-card-link" href="equipment-grinding-hcgm-s5020-f.html" aria-label="HCGM-S5020 F — подробнее"></a>
 <div class="vmc-photo"><img src="grinding-assets/hcgm-s5020-f.png" alt="HCGM-S5020 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Бесцентровошлифовальные</small>
 <h3>HCGM-S5020 F</h3>
-<div class="vmc-specs"><div><span>Частота вращения круга</span><b>1338 об/мин</b></div><div><span>Погружный подача</span><b>Диаметр шлифовки: 2-60 мм</b></div><div><span>Сквозная подача</span><b>Диаметр шлифовки: 2-60 мм</b></div><div><span>Технические характеристики шлифовального круга</span><b>Ø500×200×305 мм</b></div></div>
+<div class="vmc-specs"><div><span>Диаметр шлифовки</span><b>2-60 мм</b></div><div><span>Размер шлифовального круга</span><b>Ø500×200×305 мм</b></div><div><span>Размер подающего круга</span><b>Ø350×200×203 мм</b></div><div><span>Частота вращения подающего круга</span><b>10-200 об/мин</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="hcgm-s5025 f бесцентровошлифовальные станки" data-title="HCGM-S5025 F" data-sortkey="1338.0" data-wheel-speed="1338 об/мин">
+<article class="vmc-card" data-name="hcgm-s5025 f бесцентровошлифовальные станки" data-title="HCGM-S5025 F" data-sortkey="1338.0" data-od-diameter="2-60 мм" data-wheel-size="Ø500×250×305 мм" data-regulating-wheel-size="Ø350×250×203 мм" data-regulating-wheel-speed="10-200 об/мин" data-wheel-speed="1338 об/мин">
 <a class="vmc-card-link" href="equipment-grinding-hcgm-s5025-f.html" aria-label="HCGM-S5025 F — подробнее"></a>
 <div class="vmc-photo"><img src="grinding-assets/hcgm-s5025-f.png" alt="HCGM-S5025 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Бесцентровошлифовальные</small>
 <h3>HCGM-S5025 F</h3>
-<div class="vmc-specs"><div><span>Частота вращения круга</span><b>1338 об/мин</b></div><div><span>Погружный подача</span><b>Диаметр шлифовки: 2-60 мм</b></div><div><span>Сквозная подача</span><b>Диаметр шлифовки: 2-60 мм</b></div><div><span>Технические характеристики шлифовального круга</span><b>Ø500×250×305 мм</b></div></div>
+<div class="vmc-specs"><div><span>Диаметр шлифовки</span><b>2-60 мм</b></div><div><span>Размер шлифовального круга</span><b>Ø500×250×305 мм</b></div><div><span>Размер подающего круга</span><b>Ø350×250×203 мм</b></div><div><span>Частота вращения подающего круга</span><b>10-200 об/мин</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="m10100 f бесцентровошлифовальные станки" data-title="M10100 F" data-sortkey="195.0" data-workpiece-length-max="195 мм" data-wheel-speed="1338 об/мин" data-regulating-wheel-speed="10-200 об/мин">
+<article class="vmc-card" data-name="m10100 f бесцентровошлифовальные станки" data-title="M10100 F" data-sortkey="195.0" data-od-diameter="10-100 мм" data-wheel-size="Ø500×200×305 мм" data-regulating-wheel-size="PDA350×200×203 мм" data-regulating-wheel-speed="10-200 об/мин" data-wheel-speed="1338 об/мин">
 <a class="vmc-card-link" href="equipment-grinding-m10100-f.html" aria-label="M10100 F — подробнее"></a>
 <div class="vmc-photo"><img src="grinding-assets/m10100-f.png" alt="M10100 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Бесцентровошлифовальные</small>
 <h3>M10100 F</h3>
-<div class="vmc-specs"><div><span>Макс. длина заготовки</span><b>195 мм</b></div><div><span>Частота вращения круга</span><b>1338 об/мин</b></div><div><span>Скорость регулирующего круга</span><b>10-200 об/мин</b></div><div><span>Погружный подача</span><b>Диаметр шлифовки: 10-100 мм</b></div></div>
+<div class="vmc-specs"><div><span>Диаметр шлифовки</span><b>10-100 мм</b></div><div><span>Размер шлифовального круга</span><b>Ø500×200×305 мм</b></div><div><span>Размер подающего круга</span><b>PDA350×200×203 мм</b></div><div><span>Частота вращения подающего круга</span><b>10-200 об/мин</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="m10200 f бесцентровошлифовальные станки" data-title="M10200 F" data-sortkey="1110.0" data-wheel-speed="1110 об/мин">
+<article class="vmc-card" data-name="m10200 f бесцентровошлифовальные станки" data-title="M10200 F" data-sortkey="1110.0" data-od-diameter="10-200 мм" data-wheel-size="Ø600×400×305 мм" data-regulating-wheel-size="Ø350×400×203 мм" data-regulating-wheel-speed="10-200 об/мин" data-wheel-speed="1110 об/мин">
 <a class="vmc-card-link" href="equipment-grinding-m10200-f.html" aria-label="M10200 F — подробнее"></a>
 <div class="vmc-photo"><img src="grinding-assets/m10200-f.png" alt="M10200 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Бесцентровошлифовальные</small>
 <h3>M10200 F</h3>
-<div class="vmc-specs"><div><span>Частота вращения круга</span><b>1110 об/мин</b></div><div><span>Погружный подача</span><b>Диаметр шлифовки: 10-200 мм</b></div><div><span>Сквозная подача</span><b>Диаметр шлифовки: 10-200 мм</b></div><div><span>Технические характеристики шлифовального круга</span><b>Ø600×400×305 мм</b></div></div>
+<div class="vmc-specs"><div><span>Диаметр шлифовки</span><b>10-200 мм</b></div><div><span>Размер шлифовального круга</span><b>Ø600×400×305 мм</b></div><div><span>Размер подающего круга</span><b>Ø350×400×203 мм</b></div><div><span>Частота вращения подающего круга</span><b>10-200 об/мин</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="m1040b f бесцентровошлифовальные станки" data-title="M1040B F" data-sortkey="1870.0" data-wheel-speed="1870 об/мин">
+<article class="vmc-card" data-name="m1040b f бесцентровошлифовальные станки" data-title="M1040B F" data-sortkey="1870.0" data-od-diameter="2-40 мм" data-wheel-size="PSA350×125×127 мм" data-regulating-wheel-size="PSA250×125×75 мм" data-regulating-wheel-speed="10-200 об/мин" data-wheel-speed="1870 об/мин">
 <a class="vmc-card-link" href="equipment-grinding-m1040b-f.html" aria-label="M1040B F — подробнее"></a>
 <div class="vmc-photo"><img src="grinding-assets/m1040b-f.png" alt="M1040B F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Бесцентровошлифовальные</small>
 <h3>M1040B F</h3>
-<div class="vmc-specs"><div><span>Частота вращения круга</span><b>1870 об/мин</b></div><div><span>Погружный подача</span><b>Диаметр шлифовки: 2-40 мм</b></div><div><span>Сквозная подача</span><b>Диаметр шлифовки: 2-40 мм</b></div><div><span>Технические характеристики шлифовального круга</span><b>PSA350×125×127 мм</b></div></div>
+<div class="vmc-specs"><div><span>Диаметр шлифовки</span><b>2-40 мм</b></div><div><span>Размер шлифовального круга</span><b>PSA350×125×127 мм</b></div><div><span>Размер подающего круга</span><b>PSA250×125×75 мм</b></div><div><span>Частота вращения подающего круга</span><b>10-200 об/мин</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="m1050a f бесцентровошлифовальные станки" data-title="M1050A F" data-sortkey="1668.0" data-wheel-speed="1668 об/мин">
+<article class="vmc-card" data-name="m1050a f бесцентровошлифовальные станки" data-title="M1050A F" data-sortkey="1668.0" data-od-diameter="5-50 мм" data-wheel-size="Ø400×150×203 мм" data-regulating-wheel-size="PSA300×150×127 мм" data-regulating-wheel-speed="10-200 об/мин" data-wheel-speed="1668 об/мин">
 <a class="vmc-card-link" href="equipment-grinding-m1050a-f.html" aria-label="M1050A F — подробнее"></a>
 <div class="vmc-photo"><img src="grinding-assets/m1050a-f.png" alt="M1050A F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Бесцентровошлифовальные</small>
 <h3>M1050A F</h3>
-<div class="vmc-specs"><div><span>Частота вращения круга</span><b>1668 об/мин</b></div><div><span>Погружный подача</span><b>Диаметр шлифовки: 5-50 мм</b></div><div><span>Сквозная подача</span><b>Диаметр шлифовки: 5-50 мм</b></div><div><span>Технические характеристики шлифовального круга</span><b>Ø400×150×203 мм</b></div></div>
+<div class="vmc-specs"><div><span>Диаметр шлифовки</span><b>5-50 мм</b></div><div><span>Размер шлифовального круга</span><b>Ø400×150×203 мм</b></div><div><span>Размер подающего круга</span><b>PSA300×150×127 мм</b></div><div><span>Частота вращения подающего круга</span><b>10-200 об/мин</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="m1080b f бесцентровошлифовальные станки" data-title="M1080B F" data-sortkey="140.0" data-workpiece-length-max="140 мм" data-wheel-speed="1300 об/мин" data-regulating-wheel-speed="10-200 об/мин">
+<article class="vmc-card" data-name="m1080b f бесцентровошлифовальные станки" data-title="M1080B F" data-sortkey="140.0" data-od-diameter="5-80 мм" data-wheel-size="Ø500×150×305 мм" data-regulating-wheel-size="PSA300×150×127 мм" data-regulating-wheel-speed="10-200 об/мин" data-wheel-speed="1300 об/мин">
 <a class="vmc-card-link" href="equipment-grinding-m1080b-f.html" aria-label="M1080B F — подробнее"></a>
 <div class="vmc-photo"><img src="grinding-assets/m1080b-f.png" alt="M1080B F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Бесцентровошлифовальные</small>
 <h3>M1080B F</h3>
-<div class="vmc-specs"><div><span>Макс. длина заготовки</span><b>140 мм</b></div><div><span>Частота вращения круга</span><b>1300 об/мин</b></div><div><span>Скорость регулирующего круга</span><b>10-200 об/мин</b></div><div><span>Погружный подача</span><b>Диаметр шлифовки: 5-80 мм</b></div></div>
+<div class="vmc-specs"><div><span>Диаметр шлифовки</span><b>5-80 мм</b></div><div><span>Размер шлифовального круга</span><b>Ø500×150×305 мм</b></div><div><span>Размер подающего круга</span><b>PSA300×150×127 мм</b></div><div><span>Частота вращения подающего круга</span><b>10-200 об/мин</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="m1083b f бесцентровошлифовальные станки" data-title="M1083B F" data-sortkey="1115.0" data-wheel-speed="1115 об/мин" data-regulating-wheel-speed="10-200 об/мин">
+<article class="vmc-card" data-name="m1083b f бесцентровошлифовальные станки" data-title="M1083B F" data-sortkey="1115.0" data-od-diameter="10-150 мм" data-wheel-size="Ø600×200×305 мм" data-regulating-wheel-size="PDA350×200×203 мм" data-regulating-wheel-speed="10-200 об/мин" data-wheel-speed="1115 об/мин">
 <a class="vmc-card-link" href="equipment-grinding-m1083b-f.html" aria-label="M1083B F — подробнее"></a>
 <div class="vmc-photo"><img src="grinding-assets/m1083b-f.png" alt="M1083B F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Бесцентровошлифовальные</small>
 <h3>M1083B F</h3>
-<div class="vmc-specs"><div><span>Частота вращения круга</span><b>1115 об/мин</b></div><div><span>Скорость регулирующего круга</span><b>10-200 об/мин</b></div><div><span>Погружный подача</span><b>Диаметр шлифовки: 10-150 мм</b></div><div><span>Сквозная подача</span><b>Диаметр шлифовки: 10-150 мм</b></div></div>
+<div class="vmc-specs"><div><span>Диаметр шлифовки</span><b>10-150 мм</b></div><div><span>Размер шлифовального круга</span><b>Ø600×200×305 мм</b></div><div><span>Размер подающего круга</span><b>PDA350×200×203 мм</b></div><div><span>Частота вращения подающего круга</span><b>10-200 об/мин</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="m11100 f бесцентровошлифовальные станки" data-title="M11100 F" data-sortkey="1330.0" data-wheel-speed="1330 об/мин">
+<article class="vmc-card" data-name="m11100 f бесцентровошлифовальные станки" data-title="M11100 F" data-sortkey="1330.0" data-od-diameter="10-100 мм" data-wheel-size="Ø500×400×305 мм" data-regulating-wheel-size="Ø350×400×203 мм" data-regulating-wheel-speed="10-200 об/мин" data-wheel-speed="1330 об/мин">
 <a class="vmc-card-link" href="equipment-grinding-m11100-f.html" aria-label="M11100 F — подробнее"></a>
 <div class="vmc-photo"><img src="grinding-assets/m11100-f.png" alt="M11100 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Бесцентровошлифовальные</small>
 <h3>M11100 F</h3>
-<div class="vmc-specs"><div><span>Частота вращения круга</span><b>1330 об/мин</b></div><div><span>Погружный подача</span><b>Диаметр шлифовки: 10-100 мм</b></div><div><span>Сквозная подача</span><b>Диаметр шлифовки: 10-100 мм</b></div><div><span>Технические характеристики шлифовального круга</span><b>Ø500×400×305 мм</b></div></div>
+<div class="vmc-specs"><div><span>Диаметр шлифовки</span><b>10-100 мм</b></div><div><span>Размер шлифовального круга</span><b>Ø500×400×305 мм</b></div><div><span>Размер подающего круга</span><b>Ø350×400×203 мм</b></div><div><span>Частота вращения подающего круга</span><b>10-200 об/мин</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="m11200 f бесцентровошлифовальные станки" data-title="M11200 F" data-sortkey="1330.0" data-wheel-speed="1330 об/мин">
+<article class="vmc-card" data-name="m11200 f бесцентровошлифовальные станки" data-title="M11200 F" data-sortkey="1330.0" data-od-diameter="10-200 мм" data-wheel-size="Ø500×600×305 мм" data-regulating-wheel-size="Ø350×600×203 мм" data-regulating-wheel-speed="10-200 об/мин" data-wheel-speed="1330 об/мин">
 <a class="vmc-card-link" href="equipment-grinding-m11200-f.html" aria-label="M11200 F — подробнее"></a>
 <div class="vmc-photo"><img src="grinding-assets/m11200-f.png" alt="M11200 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Бесцентровошлифовальные</small>
 <h3>M11200 F</h3>
-<div class="vmc-specs"><div><span>Частота вращения круга</span><b>1330 об/мин</b></div><div><span>Погружный подача</span><b>Диаметр шлифовки: 10-200 мм</b></div><div><span>Сквозная подача</span><b>Диаметр шлифовки: 10-200 мм</b></div><div><span>Технические характеристики шлифовального круга</span><b>Ø500×600×305 мм</b></div></div>
+<div class="vmc-specs"><div><span>Диаметр шлифовки</span><b>10-200 мм</b></div><div><span>Размер шлифовального круга</span><b>Ø500×600×305 мм</b></div><div><span>Размер подающего круга</span><b>Ø350×600×203 мм</b></div><div><span>Частота вращения подающего круга</span><b>10-200 об/мин</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="mk1060 f бесцентровошлифовальные станки" data-title="MK1060 F" data-sortkey="1318.0" data-wheel-speed="1318 об/мин" data-regulating-wheel-speed="10-200 об/мин">
+<article class="vmc-card" data-name="mk1060 f бесцентровошлифовальные станки" data-title="MK1060 F" data-sortkey="1318.0" data-od-diameter="5-60 мм" data-wheel-size="Ø500×200（250）×305 мм" data-regulating-wheel-size="PSA350×200×127 мм" data-regulating-wheel-speed="10-200 об/мин" data-wheel-speed="1318 об/мин">
 <a class="vmc-card-link" href="equipment-grinding-mk1060-f.html" aria-label="MK1060 F — подробнее"></a>
 <div class="vmc-photo"><img src="grinding-assets/mk1060-f.png" alt="MK1060 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Бесцентровошлифовальные</small>
 <h3>MK1060 F</h3>
-<div class="vmc-specs"><div><span>Частота вращения круга</span><b>1318 об/мин</b></div><div><span>Скорость регулирующего круга</span><b>10-200 об/мин</b></div><div><span>Погружный подача</span><b>Диаметр шлифовки: 5-60 мм</b></div><div><span>Сквозная подача</span><b>Диаметр шлифовки: 5-60 мм</b></div></div>
+<div class="vmc-specs"><div><span>Диаметр шлифовки</span><b>5-60 мм</b></div><div><span>Размер шлифовального круга</span><b>Ø500×200（250）×305 мм</b></div><div><span>Размер подающего круга</span><b>PSA350×200×127 мм</b></div><div><span>Частота вращения подающего круга</span><b>10-200 об/мин</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="mk11250 f бесцентровошлифовальные станки" data-title="MK11250 F" data-sortkey="1110.0" data-wheel-speed="1110 об/мин">
+<article class="vmc-card" data-name="mk11250 f бесцентровошлифовальные станки" data-title="MK11250 F" data-sortkey="1110.0" data-od-diameter="10-250 мм" data-wheel-size="Ø600×600×305 мм" data-regulating-wheel-size="Ø350×600×203 мм" data-regulating-wheel-speed="10-200 об/мин" data-wheel-speed="1110 об/мин">
 <a class="vmc-card-link" href="equipment-grinding-mk11250-f.html" aria-label="MK11250 F — подробнее"></a>
 <div class="vmc-photo"><img src="grinding-assets/mk11250-f.png" alt="MK11250 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Бесцентровошлифовальные</small>
 <h3>MK11250 F</h3>
-<div class="vmc-specs"><div><span>Частота вращения круга</span><b>1110 об/мин</b></div><div><span>Погружный подача</span><b>Диаметр шлифовки: 10-250 мм</b></div><div><span>Сквозная подача</span><b>Диаметр шлифовки: 10-250 мм</b></div><div><span>Технические характеристики шлифовального круга</span><b>Ø600×600×305 мм</b></div></div>
+<div class="vmc-specs"><div><span>Диаметр шлифовки</span><b>10-250 мм</b></div><div><span>Размер шлифовального круга</span><b>Ø600×600×305 мм</b></div><div><span>Размер подающего круга</span><b>Ø350×600×203 мм</b></div><div><span>Частота вращения подающего круга</span><b>10-200 об/мин</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('grindingLeadModal')">Получить предложение</button>
 </div>
 </article>
