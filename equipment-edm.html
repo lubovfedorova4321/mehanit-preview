@@ -779,14 +779,18 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <div class="eqcat-filter-backdrop" data-role="filter-backdrop"></div>
 <div class="g2-filter-head"><span>Фильтр</span><button type="button" class="g2-reset" data-role="reset"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg>Сбросить всё</button><button type="button" class="eqcat-filter-close" data-role="filter-close" aria-label="Закрыть фильтр">×</button></div>
 <label class="g2-search"><span class="g2-search-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span><input type="search" data-role="search" placeholder="Поиск по модели"/></label>
-<div class="g2-direct"><div class="g2-field"><strong>Размер стола</strong>
+<div class="g2-direct"><div class="g2-field"><strong>Макс. габариты заготовки</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="max-workpiece-dims" data-bound="min"/>
+<input type="number" placeholder="До" data-range="max-workpiece-dims" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Размер стола</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="table-size" data-bound="min"/>
 <input type="number" placeholder="До" data-range="table-size" data-bound="max"/>
-</div></div><div class="g2-field"><strong>Макс. масса заготовки (кг)</strong>
+</div></div><div class="g2-field"><strong>Перемещение по осям X и Y</strong>
 <div class="vmc-range-row">
-<input type="number" placeholder="От" data-range="workpiece-weight-max" data-bound="min"/>
-<input type="number" placeholder="До" data-range="workpiece-weight-max" data-bound="max"/>
+<input type="number" placeholder="От" data-range="travel-xy" data-bound="min"/>
+<input type="number" placeholder="До" data-range="travel-xy" data-bound="max"/>
 </div></div></div>
 <details class="g2-group" open><summary>Дополнительные параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Диаметр проволоки</strong>
 <div class="vmc-range-row">
@@ -794,14 +798,18 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <input type="number" placeholder="До" data-range="wire-diameter" data-bound="max"/>
 </div></div><div class="g2-field"><strong>Скорость реза / подачи</strong>
 <div class="vmc-range-row">
-<input type="number" placeholder="От" data-range="wire-speed-max" data-bound="min"/>
-<input type="number" placeholder="До" data-range="wire-speed-max" data-bound="max"/>
-</div></div><div class="g2-field"><strong>Масса станка (кг)</strong>
+<input type="number" placeholder="От" data-range="cut-speed" data-bound="min"/>
+<input type="number" placeholder="До" data-range="cut-speed" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Макс. масса заготовки</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="max-workpiece-weight" data-bound="min"/>
+<input type="number" placeholder="До" data-range="max-workpiece-weight" data-bound="max"/>
+</div></div></div></details>
+<details class="g2-group"><summary>Все параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Масса станка</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="machine-weight" data-bound="min"/>
 <input type="number" placeholder="До" data-range="machine-weight" data-bound="max"/>
 </div></div></div></details>
-
 <div class="g2-apply-wrap">
 <button type="button" class="btn btn-ce g2-apply" data-role="apply">Показать <span data-role="preview">38</span> <span data-role="preview-word">моделей</span></button>
 </div>
@@ -819,383 +827,383 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 <div class="g2-fallback-note" data-role="fallback-note" hidden>Точных совпадений не нашлось — показаны ближайшие по параметрам модели.</div>
 <div class="vmc-grid">
-<article class="vmc-card" data-name="bh-320 f проволочно-вырезные станки" data-title="BH-320 F" data-sortkey="760.0" data-table-size="760×520 мм" data-wire-diameter="0.12–0.25 мм (станд. 0.18)" data-wire-speed-max="180 мм²/мин" data-machine-weight="1860 кг">
+<article class="vmc-card" data-name="bh-320 f проволочно-вырезные станки" data-title="BH-320 F" data-sortkey="760.0" data-table-size="760×520 мм" data-travel-xy="400×320 мм" data-wire-diameter="0.12–0.25 мм (станд. 0.18)" data-cut-speed="180 мм²/мин" data-machine-weight="1860 кг">
 <a class="vmc-card-link" href="equipment-edm-bh-320-f.html" aria-label="BH-320 F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/bh-320-f.png" alt="BH-320 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Проволочно-вырезные</small>
 <h3>BH-320 F</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>760×520 мм</b></div><div><span>Диаметр проволоки</span><b>0.12–0.25 мм (станд. 0.18)</b></div><div><span>Скорость реза / подачи</span><b>180 мм²/мин</b></div><div><span>Перемещение стола X×Y</span><b>400×320 мм</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>760×520 мм</b></div><div><span>Перемещение по осям X и Y</span><b>400×320 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="bh-400 f проволочно-вырезные станки" data-title="BH-400 F" data-sortkey="850.0" data-table-size="850×600 мм" data-wire-diameter="0.12–0.25 мм (станд. 0.18)" data-wire-speed-max="180 мм²/мин" data-machine-weight="2160 кг">
+<article class="vmc-card" data-name="bh-400 f проволочно-вырезные станки" data-title="BH-400 F" data-sortkey="850.0" data-table-size="850×600 мм" data-travel-xy="500×400 мм" data-wire-diameter="0.12–0.25 мм (станд. 0.18)" data-cut-speed="180 мм²/мин" data-machine-weight="2160 кг">
 <a class="vmc-card-link" href="equipment-edm-bh-400-f.html" aria-label="BH-400 F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/bh-400-f.png" alt="BH-400 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Проволочно-вырезные</small>
 <h3>BH-400 F</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>850×600 мм</b></div><div><span>Диаметр проволоки</span><b>0.12–0.25 мм (станд. 0.18)</b></div><div><span>Скорость реза / подачи</span><b>180 мм²/мин</b></div><div><span>Перемещение стола X×Y</span><b>500×400 мм</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>850×600 мм</b></div><div><span>Перемещение по осям X и Y</span><b>500×400 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="bh-500 f проволочно-вырезные станки" data-title="BH-500 F" data-sortkey="1000.0" data-table-size="1000×750 мм" data-wire-diameter="0.12–0.25 мм (станд. 0.18)" data-wire-speed-max="180 мм²/мин" data-machine-weight="2750 кг">
+<article class="vmc-card" data-name="bh-500 f проволочно-вырезные станки" data-title="BH-500 F" data-sortkey="1000.0" data-table-size="1000×750 мм" data-travel-xy="630×500 мм" data-wire-diameter="0.12–0.25 мм (станд. 0.18)" data-cut-speed="180 мм²/мин" data-machine-weight="2750 кг">
 <a class="vmc-card-link" href="equipment-edm-bh-500-f.html" aria-label="BH-500 F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/bh-500-f.png" alt="BH-500 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Проволочно-вырезные</small>
 <h3>BH-500 F</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>1000×750 мм</b></div><div><span>Диаметр проволоки</span><b>0.12–0.25 мм (станд. 0.18)</b></div><div><span>Скорость реза / подачи</span><b>180 мм²/мин</b></div><div><span>Перемещение стола X×Y</span><b>630×500 мм</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>1000×750 мм</b></div><div><span>Перемещение по осям X и Y</span><b>630×500 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="bh-630 f проволочно-вырезные станки" data-title="BH-630 F" data-sortkey="1170.0" data-table-size="1170×830 мм" data-wire-diameter="0.12–0.25 мм (станд. 0.18)" data-wire-speed-max="180 мм²/мин" data-machine-weight="3450 кг">
+<article class="vmc-card" data-name="bh-630 f проволочно-вырезные станки" data-title="BH-630 F" data-sortkey="1170.0" data-table-size="1170×830 мм" data-travel-xy="800×630 мм" data-wire-diameter="0.12–0.25 мм (станд. 0.18)" data-cut-speed="180 мм²/мин" data-machine-weight="3450 кг">
 <a class="vmc-card-link" href="equipment-edm-bh-630-f.html" aria-label="BH-630 F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/bh-630-f.png" alt="BH-630 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Проволочно-вырезные</small>
 <h3>BH-630 F</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>1170×830 мм</b></div><div><span>Диаметр проволоки</span><b>0.12–0.25 мм (станд. 0.18)</b></div><div><span>Скорость реза / подачи</span><b>180 мм²/мин</b></div><div><span>Перемещение стола X×Y</span><b>800×630 мм</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>1170×830 мм</b></div><div><span>Перемещение по осям X и Y</span><b>800×630 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="bsw1270 m проволочно-вырезные станки" data-title="BSW1270 M" data-sortkey="1530.0" data-table-size="1530 × 970 мм" data-workpiece-weight-max="1500 кг" data-wire-diameter="Ø 0,15–0,3 мм" data-wire-speed-max="400 мм/сек" data-machine-weight="7000 кг">
+<article class="vmc-card" data-name="bsw1270 m проволочно-вырезные станки" data-title="BSW1270 M" data-sortkey="1530.0" data-max-workpiece-dims="1600 × 1000 × 310 мм" data-table-size="1530 × 970 мм" data-travel-xy="1200 × 700 × 350 мм" data-wire-diameter="Ø 0,15–0,3 мм" data-cut-speed="400 мм/сек" data-max-workpiece-weight="1500 кг" data-machine-weight="7000 кг">
 <a class="vmc-card-link" href="equipment-edm-bsw1270-m.html" aria-label="BSW1270 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/bsw1270-m.png" alt="BSW1270 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Проволочно-вырезные</small>
 <h3>BSW1270 M</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>1530 × 970 мм</b></div><div><span>Макс. масса заготовки</span><b>1500 кг</b></div><div><span>Диаметр проволоки</span><b>Ø 0,15–0,3 мм</b></div><div><span>Скорость реза / подачи</span><b>400 мм/сек</b></div></div>
+<div class="vmc-specs"><div><span>Макс. габариты заготовки</span><b>1600 × 1000 × 310 мм</b></div><div><span>Размер стола</span><b>1530 × 970 мм</b></div><div><span>Перемещение по осям X и Y</span><b>1200 × 700 × 350 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="bsw325 m проволочно-вырезные станки" data-title="BSW325 M" data-sortkey="560.0" data-table-size="560 × 410 мм" data-workpiece-weight-max="350 кг" data-wire-diameter="Ø 0,15–0,3 мм" data-wire-speed-max="400 мм/сек" data-machine-weight="2000 кг">
+<article class="vmc-card" data-name="bsw325 m проволочно-вырезные станки" data-title="BSW325 M" data-sortkey="560.0" data-max-workpiece-dims="700 × 450 × 200 мм" data-table-size="560 × 410 мм" data-travel-xy="350 × 250 × 200 мм" data-wire-diameter="Ø 0,15–0,3 мм" data-cut-speed="400 мм/сек" data-max-workpiece-weight="350 кг" data-machine-weight="2000 кг">
 <a class="vmc-card-link" href="equipment-edm-bsw325-m.html" aria-label="BSW325 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/bsw325-m.png" alt="BSW325 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Проволочно-вырезные</small>
 <h3>BSW325 M</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>560 × 410 мм</b></div><div><span>Макс. масса заготовки</span><b>350 кг</b></div><div><span>Диаметр проволоки</span><b>Ø 0,15–0,3 мм</b></div><div><span>Скорость реза / подачи</span><b>400 мм/сек</b></div></div>
+<div class="vmc-specs"><div><span>Макс. габариты заготовки</span><b>700 × 450 × 200 мм</b></div><div><span>Размер стола</span><b>560 × 410 мм</b></div><div><span>Перемещение по осям X и Y</span><b>350 × 250 × 200 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="bsw530 m проволочно-вырезные станки" data-title="BSW530 M" data-sortkey="710.0" data-table-size="710 × 460 мм" data-workpiece-weight-max="350 кг" data-wire-diameter="Ø 0,15–0,3 мм" data-wire-speed-max="400 мм/сек" data-machine-weight="2800 кг">
+<article class="vmc-card" data-name="bsw530 m проволочно-вырезные станки" data-title="BSW530 M" data-sortkey="710.0" data-max-workpiece-dims="850 × 500 × 200 мм" data-table-size="710 × 460 мм" data-travel-xy="500 × 300 × 250 мм" data-wire-diameter="Ø 0,15–0,3 мм" data-cut-speed="400 мм/сек" data-max-workpiece-weight="350 кг" data-machine-weight="2800 кг">
 <a class="vmc-card-link" href="equipment-edm-bsw530-m.html" aria-label="BSW530 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/bsw530-m.png" alt="BSW530 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Проволочно-вырезные</small>
 <h3>BSW530 M</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>710 × 460 мм</b></div><div><span>Макс. масса заготовки</span><b>350 кг</b></div><div><span>Диаметр проволоки</span><b>Ø 0,15–0,3 мм</b></div><div><span>Скорость реза / подачи</span><b>400 мм/сек</b></div></div>
+<div class="vmc-specs"><div><span>Макс. габариты заготовки</span><b>850 × 500 × 200 мм</b></div><div><span>Размер стола</span><b>710 × 460 мм</b></div><div><span>Перемещение по осям X и Y</span><b>500 × 300 × 250 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="bsw645 m проволочно-вырезные станки" data-title="BSW645 M" data-sortkey="868.0" data-table-size="868 × 668 мм" data-workpiece-weight-max="500 кг" data-wire-diameter="Ø 0,15–0,3 мм" data-wire-speed-max="400 мм/сек" data-machine-weight="3800 кг">
+<article class="vmc-card" data-name="bsw645 m проволочно-вырезные станки" data-title="BSW645 M" data-sortkey="868.0" data-max-workpiece-dims="1100 × 800 × 250 мм" data-table-size="868 × 668 мм" data-travel-xy="600 × 450 × 300 мм" data-wire-diameter="Ø 0,15–0,3 мм" data-cut-speed="400 мм/сек" data-max-workpiece-weight="500 кг" data-machine-weight="3800 кг">
 <a class="vmc-card-link" href="equipment-edm-bsw645-m.html" aria-label="BSW645 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/bsw645-m.png" alt="BSW645 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Проволочно-вырезные</small>
 <h3>BSW645 M</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>868 × 668 мм</b></div><div><span>Макс. масса заготовки</span><b>500 кг</b></div><div><span>Диаметр проволоки</span><b>Ø 0,15–0,3 мм</b></div><div><span>Скорость реза / подачи</span><b>400 мм/сек</b></div></div>
+<div class="vmc-specs"><div><span>Макс. габариты заготовки</span><b>1100 × 800 × 250 мм</b></div><div><span>Размер стола</span><b>868 × 668 мм</b></div><div><span>Перемещение по осям X и Y</span><b>600 × 450 × 300 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="dk77100h f проволочно-вырезные станки" data-title="DK77100H F" data-sortkey="1220.0" data-table-size="1220×1550 мм" data-workpiece-weight-max="3000 кг" data-wire-diameter="Φ0.12–0.25 мм" data-wire-speed-max="200 мм²/мин" data-machine-weight="5500 кг">
+<article class="vmc-card" data-name="dk77100h f проволочно-вырезные станки" data-title="DK77100H F" data-sortkey="1220.0" data-table-size="1220×1550 мм" data-travel-xy="1000×1200 мм" data-wire-diameter="Φ0.12–0.25 мм" data-cut-speed="200 мм²/мин" data-max-workpiece-weight="3000 кг" data-machine-weight="5500 кг">
 <a class="vmc-card-link" href="equipment-edm-dk77100h-f.html" aria-label="DK77100H F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/dk77100h-f.png" alt="DK77100H F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Проволочно-вырезные</small>
 <h3>DK77100H F</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>1220×1550 мм</b></div><div><span>Макс. масса заготовки</span><b>3000 кг</b></div><div><span>Диаметр проволоки</span><b>Φ0.12–0.25 мм</b></div><div><span>Скорость реза / подачи</span><b>200 мм²/мин</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>1220×1550 мм</b></div><div><span>Перемещение по осям X и Y</span><b>1000×1200 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="dk7732h f проволочно-вырезные станки" data-title="DK7732H F" data-sortkey="500.0" data-table-size="500×720 мм" data-workpiece-weight-max="450 кг" data-wire-diameter="Φ0.12–0.25 мм" data-wire-speed-max="200 мм²/мин" data-machine-weight="1650 кг">
+<article class="vmc-card" data-name="dk7732h f проволочно-вырезные станки" data-title="DK7732H F" data-sortkey="500.0" data-table-size="500×720 мм" data-travel-xy="320×400 мм" data-wire-diameter="Φ0.12–0.25 мм" data-cut-speed="200 мм²/мин" data-max-workpiece-weight="450 кг" data-machine-weight="1650 кг">
 <a class="vmc-card-link" href="equipment-edm-dk7732h-f.html" aria-label="DK7732H F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/dk7732h-f.png" alt="DK7732H F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Проволочно-вырезные</small>
 <h3>DK7732H F</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>500×720 мм</b></div><div><span>Макс. масса заготовки</span><b>450 кг</b></div><div><span>Диаметр проволоки</span><b>Φ0.12–0.25 мм</b></div><div><span>Скорость реза / подачи</span><b>200 мм²/мин</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>500×720 мм</b></div><div><span>Перемещение по осям X и Y</span><b>320×400 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="dk7735 f проволочно-вырезные станки" data-title="DK7735 F" data-sortkey="750.0" data-table-size="750×510 мм" data-workpiece-weight-max="300 кг" data-wire-diameter="0.1–0.3 мм (рек. 0.18)" data-wire-speed-max="≥90 (высокоск. ≥150) мм²/мин" data-machine-weight="1200 кг">
+<article class="vmc-card" data-name="dk7735 f проволочно-вырезные станки" data-title="DK7735 F" data-sortkey="750.0" data-table-size="750×510 мм" data-travel-xy="350×450 мм" data-wire-diameter="0.1–0.3 мм (рек. 0.18)" data-cut-speed="≥90 (высокоск. ≥150) мм²/мин" data-max-workpiece-weight="300 кг" data-machine-weight="1200 кг">
 <a class="vmc-card-link" href="equipment-edm-dk7735-f.html" aria-label="DK7735 F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/dk7735-f.png" alt="DK7735 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Проволочно-вырезные</small>
 <h3>DK7735 F</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>750×510 мм</b></div><div><span>Макс. масса заготовки</span><b>300 кг</b></div><div><span>Диаметр проволоки</span><b>0.1–0.3 мм (рек. 0.18)</b></div><div><span>Скорость реза / подачи</span><b>≥90 (высокоск. ≥150) мм²/мин</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>750×510 мм</b></div><div><span>Перемещение по осям X и Y</span><b>350×450 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="dk7740f f проволочно-вырезные станки" data-title="DK7740F F" data-sortkey="1060.0" data-table-size="1060×600 мм" data-workpiece-weight-max="350 кг" data-wire-diameter="0.1–0.2 мм (рек. 0.18)" data-wire-speed-max="≥90 (высокоск. ≥150) мм²/мин" data-machine-weight="2200 кг">
+<article class="vmc-card" data-name="dk7740f f проволочно-вырезные станки" data-title="DK7740F F" data-sortkey="1060.0" data-table-size="1060×600 мм" data-travel-xy="400×600 мм" data-wire-diameter="0.1–0.2 мм (рек. 0.18)" data-cut-speed="≥90 (высокоск. ≥150) мм²/мин" data-max-workpiece-weight="350 кг" data-machine-weight="2200 кг">
 <a class="vmc-card-link" href="equipment-edm-dk7740f-f.html" aria-label="DK7740F F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/dk7740f-f.png" alt="DK7740F F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Проволочно-вырезные</small>
 <h3>DK7740F F</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>1060×600 мм</b></div><div><span>Макс. масса заготовки</span><b>350 кг</b></div><div><span>Диаметр проволоки</span><b>0.1–0.2 мм (рек. 0.18)</b></div><div><span>Скорость реза / подачи</span><b>≥90 (высокоск. ≥150) мм²/мин</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>1060×600 мм</b></div><div><span>Перемещение по осям X и Y</span><b>400×600 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="dk7740h f проволочно-вырезные станки" data-title="DK7740H F" data-sortkey="600.0" data-table-size="600×820 мм" data-workpiece-weight-max="600 кг" data-wire-diameter="Φ0.12–0.25 мм" data-wire-speed-max="200 мм²/мин" data-machine-weight="1850 кг">
+<article class="vmc-card" data-name="dk7740h f проволочно-вырезные станки" data-title="DK7740H F" data-sortkey="600.0" data-table-size="600×820 мм" data-travel-xy="400×500 мм" data-wire-diameter="Φ0.12–0.25 мм" data-cut-speed="200 мм²/мин" data-max-workpiece-weight="600 кг" data-machine-weight="1850 кг">
 <a class="vmc-card-link" href="equipment-edm-dk7740h-f.html" aria-label="DK7740H F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/dk7740h-f.png" alt="DK7740H F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Проволочно-вырезные</small>
 <h3>DK7740H F</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>600×820 мм</b></div><div><span>Макс. масса заготовки</span><b>600 кг</b></div><div><span>Диаметр проволоки</span><b>Φ0.12–0.25 мм</b></div><div><span>Скорость реза / подачи</span><b>200 мм²/мин</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>600×820 мм</b></div><div><span>Перемещение по осям X и Y</span><b>400×500 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="dk7745 f проволочно-вырезные станки" data-title="DK7745 F" data-sortkey="820.0" data-table-size="820×580 мм" data-workpiece-weight-max="450 кг" data-wire-diameter="0.1–0.3 мм (рек. 0.18)" data-wire-speed-max="≥90 (высокоск. ≥150) мм²/мин" data-machine-weight="1350 кг">
+<article class="vmc-card" data-name="dk7745 f проволочно-вырезные станки" data-title="DK7745 F" data-sortkey="820.0" data-table-size="820×580 мм" data-travel-xy="450×550 мм" data-wire-diameter="0.1–0.3 мм (рек. 0.18)" data-cut-speed="≥90 (высокоск. ≥150) мм²/мин" data-max-workpiece-weight="450 кг" data-machine-weight="1350 кг">
 <a class="vmc-card-link" href="equipment-edm-dk7745-f.html" aria-label="DK7745 F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/dk7745-f.png" alt="DK7745 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Проволочно-вырезные</small>
 <h3>DK7745 F</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>820×580 мм</b></div><div><span>Макс. масса заготовки</span><b>450 кг</b></div><div><span>Диаметр проволоки</span><b>0.1–0.3 мм (рек. 0.18)</b></div><div><span>Скорость реза / подачи</span><b>≥90 (высокоск. ≥150) мм²/мин</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>820×580 мм</b></div><div><span>Перемещение по осям X и Y</span><b>450×550 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="dk7750 f проволочно-вырезные станки" data-title="DK7750 F" data-sortkey="1000.0" data-table-size="1000×690 мм" data-workpiece-weight-max="700 кг" data-wire-diameter="0.1–0.3 мм (рек. 0.18)" data-wire-speed-max="≥90 (высокоск. ≥150) мм²/мин" data-machine-weight="2100 кг">
+<article class="vmc-card" data-name="dk7750 f проволочно-вырезные станки" data-title="DK7750 F" data-sortkey="1000.0" data-table-size="1000×690 мм" data-travel-xy="500×630 мм" data-wire-diameter="0.1–0.3 мм (рек. 0.18)" data-cut-speed="≥90 (высокоск. ≥150) мм²/мин" data-max-workpiece-weight="700 кг" data-machine-weight="2100 кг">
 <a class="vmc-card-link" href="equipment-edm-dk7750-f.html" aria-label="DK7750 F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/dk7750-f.png" alt="DK7750 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Проволочно-вырезные</small>
 <h3>DK7750 F</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>1000×690 мм</b></div><div><span>Макс. масса заготовки</span><b>700 кг</b></div><div><span>Диаметр проволоки</span><b>0.1–0.3 мм (рек. 0.18)</b></div><div><span>Скорость реза / подачи</span><b>≥90 (высокоск. ≥150) мм²/мин</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>1000×690 мм</b></div><div><span>Перемещение по осям X и Y</span><b>500×630 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="dk7750f f проволочно-вырезные станки" data-title="DK7750F F" data-sortkey="1060.0" data-table-size="1060×660 мм" data-workpiece-weight-max="500 кг" data-wire-diameter="0.1–0.2 мм (рек. 0.18)" data-wire-speed-max="≥90 (высокоск. ≥150) мм²/мин" data-machine-weight="2900 кг">
+<article class="vmc-card" data-name="dk7750f f проволочно-вырезные станки" data-title="DK7750F F" data-sortkey="1060.0" data-table-size="1060×660 мм" data-travel-xy="500×700 мм" data-wire-diameter="0.1–0.2 мм (рек. 0.18)" data-cut-speed="≥90 (высокоск. ≥150) мм²/мин" data-max-workpiece-weight="500 кг" data-machine-weight="2900 кг">
 <a class="vmc-card-link" href="equipment-edm-dk7750f-f.html" aria-label="DK7750F F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/dk7750f-f.png" alt="DK7750F F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Проволочно-вырезные</small>
 <h3>DK7750F F</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>1060×660 мм</b></div><div><span>Макс. масса заготовки</span><b>500 кг</b></div><div><span>Диаметр проволоки</span><b>0.1–0.2 мм (рек. 0.18)</b></div><div><span>Скорость реза / подачи</span><b>≥90 (высокоск. ≥150) мм²/мин</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>1060×660 мм</b></div><div><span>Перемещение по осям X и Y</span><b>500×700 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="dk7750h f проволочно-вырезные станки" data-title="DK7750H F" data-sortkey="700.0" data-table-size="700×1000 мм" data-workpiece-weight-max="1000 кг" data-wire-diameter="Φ0.12–0.25 мм" data-wire-speed-max="200 мм²/мин" data-machine-weight="2600 кг">
+<article class="vmc-card" data-name="dk7750h f проволочно-вырезные станки" data-title="DK7750H F" data-sortkey="700.0" data-table-size="700×1000 мм" data-travel-xy="500×630 мм" data-wire-diameter="Φ0.12–0.25 мм" data-cut-speed="200 мм²/мин" data-max-workpiece-weight="1000 кг" data-machine-weight="2600 кг">
 <a class="vmc-card-link" href="equipment-edm-dk7750h-f.html" aria-label="DK7750H F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/dk7750h-f.png" alt="DK7750H F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Проволочно-вырезные</small>
 <h3>DK7750H F</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>700×1000 мм</b></div><div><span>Макс. масса заготовки</span><b>1000 кг</b></div><div><span>Диаметр проволоки</span><b>Φ0.12–0.25 мм</b></div><div><span>Скорость реза / подачи</span><b>200 мм²/мин</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>700×1000 мм</b></div><div><span>Перемещение по осям X и Y</span><b>500×630 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="dk7763 f проволочно-вырезные станки" data-title="DK7763 F" data-sortkey="1140.0" data-table-size="1140×770 мм" data-workpiece-weight-max="1000 кг" data-wire-diameter="0.1–0.3 мм (рек. 0.18)" data-wire-speed-max="≥90 (высокоск. ≥150) мм²/мин" data-machine-weight="3000 кг">
+<article class="vmc-card" data-name="dk7763 f проволочно-вырезные станки" data-title="DK7763 F" data-sortkey="1140.0" data-table-size="1140×770 мм" data-travel-xy="630×800 мм" data-wire-diameter="0.1–0.3 мм (рек. 0.18)" data-cut-speed="≥90 (высокоск. ≥150) мм²/мин" data-max-workpiece-weight="1000 кг" data-machine-weight="3000 кг">
 <a class="vmc-card-link" href="equipment-edm-dk7763-f.html" aria-label="DK7763 F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/dk7763-f.png" alt="DK7763 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Проволочно-вырезные</small>
 <h3>DK7763 F</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>1140×770 мм</b></div><div><span>Макс. масса заготовки</span><b>1000 кг</b></div><div><span>Диаметр проволоки</span><b>0.1–0.3 мм (рек. 0.18)</b></div><div><span>Скорость реза / подачи</span><b>≥90 (высокоск. ≥150) мм²/мин</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>1140×770 мм</b></div><div><span>Перемещение по осям X и Y</span><b>630×800 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="dk7763f f проволочно-вырезные станки" data-title="DK7763F F" data-sortkey="1360.0" data-table-size="1360×770 мм" data-workpiece-weight-max="800 кг" data-wire-diameter="0.1–0.2 мм (рек. 0.18)" data-wire-speed-max="≥90 (высокоск. ≥150) мм²/мин" data-machine-weight="3200 кг">
+<article class="vmc-card" data-name="dk7763f f проволочно-вырезные станки" data-title="DK7763F F" data-sortkey="1360.0" data-table-size="1360×770 мм" data-travel-xy="630×1000 мм" data-wire-diameter="0.1–0.2 мм (рек. 0.18)" data-cut-speed="≥90 (высокоск. ≥150) мм²/мин" data-max-workpiece-weight="800 кг" data-machine-weight="3200 кг">
 <a class="vmc-card-link" href="equipment-edm-dk7763f-f.html" aria-label="DK7763F F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/dk7763f-f.png" alt="DK7763F F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Проволочно-вырезные</small>
 <h3>DK7763F F</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>1360×770 мм</b></div><div><span>Макс. масса заготовки</span><b>800 кг</b></div><div><span>Диаметр проволоки</span><b>0.1–0.2 мм (рек. 0.18)</b></div><div><span>Скорость реза / подачи</span><b>≥90 (высокоск. ≥150) мм²/мин</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>1360×770 мм</b></div><div><span>Перемещение по осям X и Y</span><b>630×1000 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="dk7763h f проволочно-вырезные станки" data-title="DK7763H F" data-sortkey="800.0" data-table-size="800×1200 мм" data-workpiece-weight-max="1200 кг" data-wire-diameter="Φ0.12–0.25 мм" data-wire-speed-max="200 мм²/мин" data-machine-weight="3000 кг">
+<article class="vmc-card" data-name="dk7763h f проволочно-вырезные станки" data-title="DK7763H F" data-sortkey="800.0" data-table-size="800×1200 мм" data-travel-xy="630×800 мм" data-wire-diameter="Φ0.12–0.25 мм" data-cut-speed="200 мм²/мин" data-max-workpiece-weight="1200 кг" data-machine-weight="3000 кг">
 <a class="vmc-card-link" href="equipment-edm-dk7763h-f.html" aria-label="DK7763H F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/dk7763h-f.png" alt="DK7763H F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Проволочно-вырезные</small>
 <h3>DK7763H F</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>800×1200 мм</b></div><div><span>Макс. масса заготовки</span><b>1200 кг</b></div><div><span>Диаметр проволоки</span><b>Φ0.12–0.25 мм</b></div><div><span>Скорость реза / подачи</span><b>200 мм²/мин</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>800×1200 мм</b></div><div><span>Перемещение по осям X и Y</span><b>630×800 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="dk7780 f проволочно-вырезные станки" data-title="DK7780 F" data-sortkey="1350.0" data-table-size="1350×1000 мм" data-workpiece-weight-max="2000 кг" data-wire-diameter="0.1–0.3 мм (рек. 0.18)" data-wire-speed-max="≥90 (высокоск. ≥150) мм²/мин" data-machine-weight="4000 кг">
+<article class="vmc-card" data-name="dk7780 f проволочно-вырезные станки" data-title="DK7780 F" data-sortkey="1350.0" data-table-size="1350×1000 мм" data-travel-xy="800×1000 мм" data-wire-diameter="0.1–0.3 мм (рек. 0.18)" data-cut-speed="≥90 (высокоск. ≥150) мм²/мин" data-max-workpiece-weight="2000 кг" data-machine-weight="4000 кг">
 <a class="vmc-card-link" href="equipment-edm-dk7780-f.html" aria-label="DK7780 F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/dk7780-f.png" alt="DK7780 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Проволочно-вырезные</small>
 <h3>DK7780 F</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>1350×1000 мм</b></div><div><span>Макс. масса заготовки</span><b>2000 кг</b></div><div><span>Диаметр проволоки</span><b>0.1–0.3 мм (рек. 0.18)</b></div><div><span>Скорость реза / подачи</span><b>≥90 (высокоск. ≥150) мм²/мин</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>1350×1000 мм</b></div><div><span>Перемещение по осям X и Y</span><b>800×1000 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="dk7780h f проволочно-вырезные станки" data-title="DK7780H F" data-sortkey="1000.0" data-table-size="1000×1350 мм" data-workpiece-weight-max="2000 кг" data-wire-diameter="Φ0.12–0.25 мм" data-wire-speed-max="200 мм²/мин" data-machine-weight="4000 кг">
+<article class="vmc-card" data-name="dk7780h f проволочно-вырезные станки" data-title="DK7780H F" data-sortkey="1000.0" data-table-size="1000×1350 мм" data-travel-xy="800×1000 мм" data-wire-diameter="Φ0.12–0.25 мм" data-cut-speed="200 мм²/мин" data-max-workpiece-weight="2000 кг" data-machine-weight="4000 кг">
 <a class="vmc-card-link" href="equipment-edm-dk7780h-f.html" aria-label="DK7780H F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/dk7780h-f.png" alt="DK7780H F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Проволочно-вырезные</small>
 <h3>DK7780H F</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>1000×1350 мм</b></div><div><span>Макс. масса заготовки</span><b>2000 кг</b></div><div><span>Диаметр проволоки</span><b>Φ0.12–0.25 мм</b></div><div><span>Скорость реза / подачи</span><b>200 мм²/мин</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>1000×1350 мм</b></div><div><span>Перемещение по осям X и Y</span><b>800×1000 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="fw-bfw 1270 m проволочно-вырезные станки" data-title="FW-BFW 1270 M" data-sortkey="1500.0" data-workpiece-weight-max="1500 кг" data-machine-weight="6500 кг">
+<article class="vmc-card" data-name="fw-bfw 1270 m проволочно-вырезные станки" data-title="FW-BFW 1270 M" data-sortkey="1500.0" data-max-workpiece-dims="1600 x 1000 x 350 мм" data-table-size="1530×970 мм" data-travel-xy="1200 x 700 мм" data-max-workpiece-weight="1500 кг" data-machine-weight="6500 кг">
 <a class="vmc-card-link" href="equipment-edm-fw-bfw-1270-m.html" aria-label="FW-BFW 1270 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/fw-bfw-1270-m.png" alt="FW-BFW 1270 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Проволочно-вырезные</small>
 <h3>FW-BFW 1270 M</h3>
-<div class="vmc-specs"><div><span>Макс. масса заготовки</span><b>1500 кг</b></div><div><span>Размер стола</span><b>1530×970 мм</b></div><div><span>Макс. габариты заготовки</span><b>1600 x 1000 x 350 мм</b></div><div><span>Объем диэлектрика</span><b>580 л</b></div></div>
+<div class="vmc-specs"><div><span>Макс. габариты заготовки</span><b>1600 x 1000 x 350 мм</b></div><div><span>Размер стола</span><b>1530×970 мм</b></div><div><span>Перемещение по осям X и Y</span><b>1200 x 700 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="fw-bfw 325 m проволочно-вырезные станки" data-title="FW-BFW 325 M" data-sortkey="350.0" data-workpiece-weight-max="350 кг">
+<article class="vmc-card" data-name="fw-bfw 325 m проволочно-вырезные станки" data-title="FW-BFW 325 M" data-sortkey="350.0" data-max-workpiece-dims="800x550x200 мм" data-table-size="560×410 мм" data-travel-xy="350x250 мм" data-max-workpiece-weight="350 кг" data-machine-weight="1800 кг">
 <a class="vmc-card-link" href="equipment-edm-fw-bfw-325-m.html" aria-label="FW-BFW 325 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/fw-bfw-325-m.png" alt="FW-BFW 325 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Проволочно-вырезные</small>
 <h3>FW-BFW 325 M</h3>
-<div class="vmc-specs"><div><span>Макс. масса заготовки</span><b>350 кг</b></div><div><span>Размер стола</span><b>560×410 мм</b></div><div><span>Макс. габариты заготовки</span><b>800x550x200 мм</b></div><div><span>Масса станка нетто</span><b>1800 кг</b></div></div>
+<div class="vmc-specs"><div><span>Макс. габариты заготовки</span><b>800x550x200 мм</b></div><div><span>Размер стола</span><b>560×410 мм</b></div><div><span>Перемещение по осям X и Y</span><b>350x250 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="fw-bfw 530 m проволочно-вырезные станки" data-title="FW-BFW 530 M" data-sortkey="710.0" data-table-size="710х460 мм" data-workpiece-weight-max="350 кг" data-machine-weight="2500 кг">
+<article class="vmc-card" data-name="fw-bfw 530 m проволочно-вырезные станки" data-title="FW-BFW 530 M" data-sortkey="710.0" data-max-workpiece-dims="850x550x250 мм" data-table-size="710х460 мм" data-travel-xy="500x300 мм" data-max-workpiece-weight="350 кг" data-machine-weight="2500 кг">
 <a class="vmc-card-link" href="equipment-edm-fw-bfw-530-m.html" aria-label="FW-BFW 530 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/fw-bfw-530-m.png" alt="FW-BFW 530 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Проволочно-вырезные</small>
 <h3>FW-BFW 530 M</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>710х460 мм</b></div><div><span>Макс. масса заготовки</span><b>350 кг</b></div><div><span>Макс. габариты заготовки</span><b>850x550x250 мм</b></div><div><span>Размеры станка, мм</span><b>3300x2700x2400 ДхШхВ</b></div></div>
+<div class="vmc-specs"><div><span>Макс. габариты заготовки</span><b>850x550x250 мм</b></div><div><span>Размер стола</span><b>710х460 мм</b></div><div><span>Перемещение по осям X и Y</span><b>500x300 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="fw-bfw 645 m проволочно-вырезные станки" data-title="FW-BFW 645 M" data-sortkey="600.0" data-workpiece-weight-max="600 кг" data-machine-weight="3600 кг">
+<article class="vmc-card" data-name="fw-bfw 645 m проволочно-вырезные станки" data-title="FW-BFW 645 M" data-sortkey="600.0" data-max-workpiece-dims="1250x850x300 мм" data-travel-xy="600x450 мм" data-max-workpiece-weight="600 кг" data-machine-weight="3600 кг">
 <a class="vmc-card-link" href="equipment-edm-fw-bfw-645-m.html" aria-label="FW-BFW 645 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/fw-bfw-645-m.png" alt="FW-BFW 645 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Проволочно-вырезные</small>
 <h3>FW-BFW 645 M</h3>
-<div class="vmc-specs"><div><span>Макс. масса заготовки</span><b>600 кг</b></div><div><span>Макс. габариты заготовки</span><b>1250x850x300 мм</b></div><div><span>Размеры станка, мм</span><b>3200x3500x2500 ДхШхВ</b></div><div><span>Объем диэлектрика</span><b>420 л</b></div></div>
+<div class="vmc-specs"><div><span>Макс. габариты заготовки</span><b>1250x850x300 мм</b></div><div><span>Перемещение по осям X и Y</span><b>600x450 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="fw-bfw 845 m проволочно-вырезные станки" data-title="FW-BFW 845 M" data-sortkey="600.0" data-workpiece-weight-max="600 кг" data-machine-weight="4000 кг">
+<article class="vmc-card" data-name="fw-bfw 845 m проволочно-вырезные станки" data-title="FW-BFW 845 M" data-sortkey="600.0" data-max-workpiece-dims="1350x850x300 мм" data-travel-xy="800x450 мм" data-max-workpiece-weight="600 кг" data-machine-weight="4000 кг">
 <a class="vmc-card-link" href="equipment-edm-fw-bfw-845-m.html" aria-label="FW-BFW 845 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/fw-bfw-845-m.png" alt="FW-BFW 845 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Проволочно-вырезные</small>
 <h3>FW-BFW 845 M</h3>
-<div class="vmc-specs"><div><span>Макс. масса заготовки</span><b>600 кг</b></div><div><span>Макс. габариты заготовки</span><b>1350x850x300 мм</b></div><div><span>Масса станка нетто</span><b>4000 кг</b></div><div><span>Размеры станка, мм</span><b>3800x3500x2500 ДхШхВ</b></div></div>
+<div class="vmc-specs"><div><span>Макс. габариты заготовки</span><b>1350x850x300 мм</b></div><div><span>Перемещение по осям X и Y</span><b>800x450 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="fw1270 m проволочно-вырезные станки" data-title="FW1270 M" data-sortkey="1530.0" data-table-size="1530 × 970 мм" data-workpiece-weight-max="1500 кг" data-wire-diameter="Ø 0,15–0,3 мм" data-wire-speed-max="400 мм/сек" data-machine-weight="6500 кг">
+<article class="vmc-card" data-name="fw1270 m проволочно-вырезные станки" data-title="FW1270 M" data-sortkey="1530.0" data-max-workpiece-dims="1600 × 1000 × 310 мм (ориент.)" data-table-size="1530 × 970 мм" data-travel-xy="1200 × 700 × 350 мм" data-wire-diameter="Ø 0,15–0,3 мм" data-cut-speed="400 мм/сек" data-max-workpiece-weight="1500 кг" data-machine-weight="6500 кг">
 <a class="vmc-card-link" href="equipment-edm-fw1270-m.html" aria-label="FW1270 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/fw1270-m.png" alt="FW1270 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Проволочно-вырезные</small>
 <h3>FW1270 M</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>1530 × 970 мм</b></div><div><span>Макс. масса заготовки</span><b>1500 кг</b></div><div><span>Диаметр проволоки</span><b>Ø 0,15–0,3 мм</b></div><div><span>Скорость реза / подачи</span><b>400 мм/сек</b></div></div>
+<div class="vmc-specs"><div><span>Макс. габариты заготовки</span><b>1600 × 1000 × 310 мм (ориент.)</b></div><div><span>Размер стола</span><b>1530 × 970 мм</b></div><div><span>Перемещение по осям X и Y</span><b>1200 × 700 × 350 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="fw325 m проволочно-вырезные станки" data-title="FW325 M" data-sortkey="560.0" data-table-size="560 × 410 мм" data-workpiece-weight-max="350 кг" data-wire-diameter="Ø 0,15–0,3 мм" data-wire-speed-max="400 мм/сек" data-machine-weight="1800 кг">
+<article class="vmc-card" data-name="fw325 m проволочно-вырезные станки" data-title="FW325 M" data-sortkey="560.0" data-max-workpiece-dims="800 × 550 × 200 мм" data-table-size="560 × 410 мм" data-travel-xy="350 × 250 × 200 мм" data-wire-diameter="Ø 0,15–0,3 мм" data-cut-speed="400 мм/сек" data-max-workpiece-weight="350 кг" data-machine-weight="1800 кг">
 <a class="vmc-card-link" href="equipment-edm-fw325-m.html" aria-label="FW325 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/fw325-m.png" alt="FW325 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Проволочно-вырезные</small>
 <h3>FW325 M</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>560 × 410 мм</b></div><div><span>Макс. масса заготовки</span><b>350 кг</b></div><div><span>Диаметр проволоки</span><b>Ø 0,15–0,3 мм</b></div><div><span>Скорость реза / подачи</span><b>400 мм/сек</b></div></div>
+<div class="vmc-specs"><div><span>Макс. габариты заготовки</span><b>800 × 550 × 200 мм</b></div><div><span>Размер стола</span><b>560 × 410 мм</b></div><div><span>Перемещение по осям X и Y</span><b>350 × 250 × 200 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="fw530 m проволочно-вырезные станки" data-title="FW530 M" data-sortkey="710.0" data-table-size="710 × 460 мм" data-workpiece-weight-max="350 кг" data-wire-diameter="Ø 0,15–0,3 мм" data-wire-speed-max="400 мм/сек" data-machine-weight="2500 кг">
+<article class="vmc-card" data-name="fw530 m проволочно-вырезные станки" data-title="FW530 M" data-sortkey="710.0" data-max-workpiece-dims="850 × 550 × 250 мм" data-table-size="710 × 460 мм" data-travel-xy="500 × 300 × 250 мм" data-wire-diameter="Ø 0,15–0,3 мм" data-cut-speed="400 мм/сек" data-max-workpiece-weight="350 кг" data-machine-weight="2500 кг">
 <a class="vmc-card-link" href="equipment-edm-fw530-m.html" aria-label="FW530 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/fw530-m.png" alt="FW530 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Проволочно-вырезные</small>
 <h3>FW530 M</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>710 × 460 мм</b></div><div><span>Макс. масса заготовки</span><b>350 кг</b></div><div><span>Диаметр проволоки</span><b>Ø 0,15–0,3 мм</b></div><div><span>Скорость реза / подачи</span><b>400 мм/сек</b></div></div>
+<div class="vmc-specs"><div><span>Макс. габариты заготовки</span><b>850 × 550 × 250 мм</b></div><div><span>Размер стола</span><b>710 × 460 мм</b></div><div><span>Перемещение по осям X и Y</span><b>500 × 300 × 250 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="fw645 m проволочно-вырезные станки" data-title="FW645 M" data-sortkey="868.0" data-table-size="868 × 668 мм" data-workpiece-weight-max="600 кг" data-wire-diameter="Ø 0,15–0,3 мм" data-wire-speed-max="400 мм/сек" data-machine-weight="3600 кг">
+<article class="vmc-card" data-name="fw645 m проволочно-вырезные станки" data-title="FW645 M" data-sortkey="868.0" data-max-workpiece-dims="1250 × 850 × 300 мм" data-table-size="868 × 668 мм" data-travel-xy="600 × 450 × 300 мм" data-wire-diameter="Ø 0,15–0,3 мм" data-cut-speed="400 мм/сек" data-max-workpiece-weight="600 кг" data-machine-weight="3600 кг">
 <a class="vmc-card-link" href="equipment-edm-fw645-m.html" aria-label="FW645 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/fw645-m.png" alt="FW645 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Проволочно-вырезные</small>
 <h3>FW645 M</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>868 × 668 мм</b></div><div><span>Макс. масса заготовки</span><b>600 кг</b></div><div><span>Диаметр проволоки</span><b>Ø 0,15–0,3 мм</b></div><div><span>Скорость реза / подачи</span><b>400 мм/сек</b></div></div>
+<div class="vmc-specs"><div><span>Макс. габариты заготовки</span><b>1250 × 850 × 300 мм</b></div><div><span>Размер стола</span><b>868 × 668 мм</b></div><div><span>Перемещение по осям X и Y</span><b>600 × 450 × 300 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="fw845 m проволочно-вырезные станки" data-title="FW845 M" data-sortkey="1068.0" data-table-size="1068 × 670 мм" data-workpiece-weight-max="600 кг" data-wire-diameter="Ø 0,15–0,3 мм" data-wire-speed-max="400 мм/сек" data-machine-weight="4000 кг">
+<article class="vmc-card" data-name="fw845 m проволочно-вырезные станки" data-title="FW845 M" data-sortkey="1068.0" data-max-workpiece-dims="1350 × 850 × 300 мм" data-table-size="1068 × 670 мм" data-travel-xy="800 × 450 × 300 мм" data-wire-diameter="Ø 0,15–0,3 мм" data-cut-speed="400 мм/сек" data-max-workpiece-weight="600 кг" data-machine-weight="4000 кг">
 <a class="vmc-card-link" href="equipment-edm-fw845-m.html" aria-label="FW845 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/fw845-m.png" alt="FW845 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Проволочно-вырезные</small>
 <h3>FW845 M</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>1068 × 670 мм</b></div><div><span>Макс. масса заготовки</span><b>600 кг</b></div><div><span>Диаметр проволоки</span><b>Ø 0,15–0,3 мм</b></div><div><span>Скорость реза / подачи</span><b>400 мм/сек</b></div></div>
+<div class="vmc-specs"><div><span>Макс. габариты заготовки</span><b>1350 × 850 × 300 мм</b></div><div><span>Размер стола</span><b>1068 × 670 мм</b></div><div><span>Перемещение по осям X и Y</span><b>800 × 450 × 300 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="sw-bsw 1270 m проволочно-вырезные станки" data-title="SW-BSW 1270 M" data-sortkey="1500.0" data-workpiece-weight-max="1500 кг" data-machine-weight="7000 кг">
+<article class="vmc-card" data-name="sw-bsw 1270 m проволочно-вырезные станки" data-title="SW-BSW 1270 M" data-sortkey="1500.0" data-max-workpiece-dims="1600 x 1000 x 310 мм" data-travel-xy="1200 x 700 мм" data-max-workpiece-weight="1500 кг" data-machine-weight="7000 кг">
 <a class="vmc-card-link" href="equipment-edm-sw-bsw-1270-m.html" aria-label="SW-BSW 1270 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/sw-bsw-1270-m.png" alt="SW-BSW 1270 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Проволочно-вырезные</small>
 <h3>SW-BSW 1270 M</h3>
-<div class="vmc-specs"><div><span>Макс. масса заготовки</span><b>1500 кг</b></div><div><span>Макс. габариты заготовки</span><b>1600 x 1000 x 310 мм</b></div><div><span>Объем диэлектрика</span><b>4800 л</b></div><div><span>Максимальные габариты заготовки</span><b>1600 x 1000 x 310 мм</b></div></div>
+<div class="vmc-specs"><div><span>Макс. габариты заготовки</span><b>1600 x 1000 x 310 мм</b></div><div><span>Перемещение по осям X и Y</span><b>1200 x 700 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="sw-bsw 325 m проволочно-вырезные станки" data-title="SW-BSW 325 M" data-sortkey="350.0" data-workpiece-weight-max="350 кг" data-machine-weight="2000 кг">
+<article class="vmc-card" data-name="sw-bsw 325 m проволочно-вырезные станки" data-title="SW-BSW 325 M" data-sortkey="350.0" data-max-workpiece-dims="700 x 450 x 180 мм" data-travel-xy="350 х 250 мм" data-max-workpiece-weight="350 кг" data-machine-weight="2000 кг">
 <a class="vmc-card-link" href="equipment-edm-sw-bsw-325-m.html" aria-label="SW-BSW 325 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/sw-bsw-325-m.png" alt="SW-BSW 325 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Проволочно-вырезные</small>
 <h3>SW-BSW 325 M</h3>
-<div class="vmc-specs"><div><span>Макс. масса заготовки</span><b>350 кг</b></div><div><span>Макс. габариты заготовки</span><b>700 x 450 x 180 мм</b></div><div><span>Размеры станка, мм</span><b>2800х2800х2400 ДхШхВ</b></div><div><span>Объем диэлектрика</span><b>630 л</b></div></div>
+<div class="vmc-specs"><div><span>Макс. габариты заготовки</span><b>700 x 450 x 180 мм</b></div><div><span>Перемещение по осям X и Y</span><b>350 х 250 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="sw-bsw 530 m проволочно-вырезные станки" data-title="SW-BSW 530 M" data-sortkey="350.0" data-workpiece-weight-max="350 кг" data-machine-weight="2800 кг">
+<article class="vmc-card" data-name="sw-bsw 530 m проволочно-вырезные станки" data-title="SW-BSW 530 M" data-sortkey="350.0" data-max-workpiece-dims="850x500x200 мм" data-travel-xy="500x300 мм" data-max-workpiece-weight="350 кг" data-machine-weight="2800 кг">
 <a class="vmc-card-link" href="equipment-edm-sw-bsw-530-m.html" aria-label="SW-BSW 530 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/sw-bsw-530-m.png" alt="SW-BSW 530 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Проволочно-вырезные</small>
 <h3>SW-BSW 530 M</h3>
-<div class="vmc-specs"><div><span>Макс. масса заготовки</span><b>350 кг</b></div><div><span>Макс. габариты заготовки</span><b>850x500x200 мм</b></div><div><span>Размеры станка, мм</span><b>2800x2800x2500 ДхШхВ</b></div><div><span>Объем диэлектрика</span><b>770 л</b></div></div>
+<div class="vmc-specs"><div><span>Макс. габариты заготовки</span><b>850x500x200 мм</b></div><div><span>Перемещение по осям X и Y</span><b>500x300 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="sw-bsw 645 m проволочно-вырезные станки" data-title="SW-BSW 645 M" data-sortkey="500.0" data-workpiece-weight-max="500 кг" data-machine-weight="3800 кг">
+<article class="vmc-card" data-name="sw-bsw 645 m проволочно-вырезные станки" data-title="SW-BSW 645 M" data-sortkey="500.0" data-max-workpiece-dims="1100 x 800 x 250 мм" data-travel-xy="600 x 450 мм" data-max-workpiece-weight="500 кг" data-machine-weight="3800 кг">
 <a class="vmc-card-link" href="equipment-edm-sw-bsw-645-m.html" aria-label="SW-BSW 645 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/sw-bsw-645-m.png" alt="SW-BSW 645 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Проволочно-вырезные</small>
 <h3>SW-BSW 645 M</h3>
-<div class="vmc-specs"><div><span>Макс. масса заготовки</span><b>500 кг</b></div><div><span>Макс. габариты заготовки</span><b>1100 x 800 x 250 мм</b></div><div><span>Объем диэлектрика</span><b>1450 л</b></div><div><span>Максимальные габариты заготовки</span><b>1100 x 800 x 250 мм</b></div></div>
+<div class="vmc-specs"><div><span>Макс. габариты заготовки</span><b>1100 x 800 x 250 мм</b></div><div><span>Перемещение по осям X и Y</span><b>600 x 450 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="sw1270 m проволочно-вырезные станки" data-title="SW1270 M" data-sortkey="1530.0" data-table-size="1530 × 970 мм" data-workpiece-weight-max="1500 кг" data-wire-diameter="Ø 0,15–0,3 мм" data-wire-speed-max="400 мм/сек" data-machine-weight="7000 кг">
+<article class="vmc-card" data-name="sw1270 m проволочно-вырезные станки" data-title="SW1270 M" data-sortkey="1530.0" data-max-workpiece-dims="1600 × 1000 × 310 мм" data-table-size="1530 × 970 мм" data-travel-xy="1200 × 700 × 350 мм" data-wire-diameter="Ø 0,15–0,3 мм" data-cut-speed="400 мм/сек" data-max-workpiece-weight="1500 кг" data-machine-weight="7000 кг">
 <a class="vmc-card-link" href="equipment-edm-sw1270-m.html" aria-label="SW1270 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/sw1270-m.png" alt="SW1270 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Проволочно-вырезные</small>
 <h3>SW1270 M</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>1530 × 970 мм</b></div><div><span>Макс. масса заготовки</span><b>1500 кг</b></div><div><span>Диаметр проволоки</span><b>Ø 0,15–0,3 мм</b></div><div><span>Скорость реза / подачи</span><b>400 мм/сек</b></div></div>
+<div class="vmc-specs"><div><span>Макс. габариты заготовки</span><b>1600 × 1000 × 310 мм</b></div><div><span>Размер стола</span><b>1530 × 970 мм</b></div><div><span>Перемещение по осям X и Y</span><b>1200 × 700 × 350 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="sw645 m проволочно-вырезные станки" data-title="SW645 M" data-sortkey="868.0" data-table-size="868 × 668 мм" data-workpiece-weight-max="500 кг" data-wire-diameter="Ø 0,15–0,3 мм" data-wire-speed-max="400 мм/сек" data-machine-weight="3800 кг">
+<article class="vmc-card" data-name="sw645 m проволочно-вырезные станки" data-title="SW645 M" data-sortkey="868.0" data-max-workpiece-dims="1100 × 800 × 250 мм" data-table-size="868 × 668 мм" data-travel-xy="600 × 450 × 300 мм" data-wire-diameter="Ø 0,15–0,3 мм" data-cut-speed="400 мм/сек" data-max-workpiece-weight="500 кг" data-machine-weight="3800 кг">
 <a class="vmc-card-link" href="equipment-edm-sw645-m.html" aria-label="SW645 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/sw645-m.png" alt="SW645 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Проволочно-вырезные</small>
 <h3>SW645 M</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>868 × 668 мм</b></div><div><span>Макс. масса заготовки</span><b>500 кг</b></div><div><span>Диаметр проволоки</span><b>Ø 0,15–0,3 мм</b></div><div><span>Скорость реза / подачи</span><b>400 мм/сек</b></div></div>
+<div class="vmc-specs"><div><span>Макс. габариты заготовки</span><b>1100 × 800 × 250 мм</b></div><div><span>Размер стола</span><b>868 × 668 мм</b></div><div><span>Перемещение по осям X и Y</span><b>600 × 450 × 300 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
@@ -1210,39 +1218,39 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <div class="eqcat-filter-backdrop" data-role="filter-backdrop"></div>
 <div class="g2-filter-head"><span>Фильтр</span><button type="button" class="g2-reset" data-role="reset"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg>Сбросить всё</button><button type="button" class="eqcat-filter-close" data-role="filter-close" aria-label="Закрыть фильтр">×</button></div>
 <label class="g2-search"><span class="g2-search-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span><input type="search" data-role="search" placeholder="Поиск по модели"/></label>
-<div class="g2-direct"><div class="g2-field"><strong>Размер стола</strong>
+<div class="g2-direct"><div class="g2-field"><strong>Макс. габариты заготовки</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="max-workpiece-dims" data-bound="min"/>
+<input type="number" placeholder="До" data-range="max-workpiece-dims" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Размер стола</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="table-size" data-bound="min"/>
 <input type="number" placeholder="До" data-range="table-size" data-bound="max"/>
-</div></div><div class="g2-field"><strong>Макс. масса электрода</strong>
+</div></div><div class="g2-field"><strong>Перемещение по осям X и Y</strong>
 <div class="vmc-range-row">
-<input type="number" placeholder="От" data-range="electrode-weight-max" data-bound="min"/>
-<input type="number" placeholder="До" data-range="electrode-weight-max" data-bound="max"/>
-</div></div></div>
-<details class="g2-group" open><summary>Дополнительные параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Макс. масса заготовки (кг)</strong>
+<input type="number" placeholder="От" data-range="travel-xy" data-bound="min"/>
+<input type="number" placeholder="До" data-range="travel-xy" data-bound="max"/>
+</div></div><div class="g2-field"><label class="g2-check"><input type="checkbox" name="cnc-present" value="да"/><span>Наличие ЧПУ</span></label></div></div>
+<details class="g2-group" open><summary>Дополнительные параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Макс. масса заготовки</strong>
 <div class="vmc-range-row">
-<input type="number" placeholder="От" data-range="workpiece-weight-max" data-bound="min"/>
-<input type="number" placeholder="До" data-range="workpiece-weight-max" data-bound="max"/>
+<input type="number" placeholder="От" data-range="max-workpiece-weight" data-bound="min"/>
+<input type="number" placeholder="До" data-range="max-workpiece-weight" data-bound="max"/>
 </div></div><div class="g2-field"><strong>Макс. ток обработки</strong>
 <div class="vmc-range-row">
-<input type="number" placeholder="От" data-range="current-max" data-bound="min"/>
-<input type="number" placeholder="До" data-range="current-max" data-bound="max"/>
-</div></div><div class="g2-field"><strong>Грузоподъёмность стола (т)</strong>
-<div class="vmc-range-row">
-<input type="number" placeholder="От" data-range="table-load" data-bound="min"/>
-<input type="number" placeholder="До" data-range="table-load" data-bound="max"/>
-</div></div><div class="g2-field"><strong>Масса станка (кг)</strong>
+<input type="number" placeholder="От" data-range="max-current" data-bound="min"/>
+<input type="number" placeholder="До" data-range="max-current" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Масса станка</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="machine-weight" data-bound="min"/>
 <input type="number" placeholder="До" data-range="machine-weight" data-bound="max"/>
 </div></div></div></details>
-<details class="g2-group"><summary>Все параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Потребляемая мощность</strong>
+<details class="g2-group"><summary>Все параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Достигаемая шероховатость</strong>
 <div class="vmc-range-row">
-<input type="number" placeholder="От" data-range="input-power" data-bound="min"/>
-<input type="number" placeholder="До" data-range="input-power" data-bound="max"/>
+<input type="number" placeholder="От" data-range="surface-roughness" data-bound="min"/>
+<input type="number" placeholder="До" data-range="surface-roughness" data-bound="max"/>
 </div></div></div></details>
 <div class="g2-apply-wrap">
-<button type="button" class="btn btn-ce g2-apply" data-role="apply">Показать <span data-role="preview">61</span> <span data-role="preview-word">модель</span></button>
+<button type="button" class="btn btn-ce g2-apply" data-role="apply">Показать <span data-role="preview">61</span> <span data-role="preview-word">моделей</span></button>
 </div>
 <p class="vmc-filter-note">Не нашли нужный параметр в фильтре — характеристики каждой модели указаны в карточке и на странице станка.</p>
 </aside>
@@ -1258,613 +1266,613 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 <div class="g2-fallback-note" data-role="fallback-note" hidden>Точных совпадений не нашлось — показаны ближайшие по параметрам модели.</div>
 <div class="vmc-grid">
-<article class="vmc-card" data-name="cnc-c26 m копировально-прошивочные станки" data-title="CNC-C26 M" data-sortkey="600.0" data-table-size="600 × 300 мм" data-workpiece-weight-max="800 кг" data-current-max="30 А" data-machine-weight="1700 кг">
+<article class="vmc-card" data-name="cnc-c26 m копировально-прошивочные станки" data-title="CNC-C26 M" data-sortkey="600.0" data-table-size="600 × 300 мм" data-travel-xy="280 × 230 × 150 мм" data-max-workpiece-weight="800 кг" data-max-current="30 А" data-machine-weight="1700 кг">
 <a class="vmc-card-link" href="equipment-edm-cnc-c26-m.html" aria-label="CNC-C26 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/cnc-c26-m.png" alt="CNC-C26 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>CNC-C26 M</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>600 × 300 мм</b></div><div><span>Макс. масса заготовки</span><b>800 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>280 × 230 × 150 мм</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>600 × 300 мм</b></div><div><span>Макс. масса заготовки</span><b>800 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="cnc-c36 m копировально-прошивочные станки" data-title="CNC-C36 M" data-sortkey="650.0" data-table-size="650 × 350 мм" data-electrode-weight-max="120 кг" data-workpiece-weight-max="1000 кг" data-current-max="50 А" data-machine-weight="2350 кг">
+<article class="vmc-card" data-name="cnc-c36 m копировально-прошивочные станки" data-title="CNC-C36 M" data-sortkey="650.0" data-max-workpiece-dims="1000 × 600 × 330 мм" data-table-size="650 × 350 мм" data-travel-xy="380 × 280 × 185 мм" data-max-workpiece-weight="1000 кг" data-max-current="50 А" data-machine-weight="2350 кг">
 <a class="vmc-card-link" href="equipment-edm-cnc-c36-m.html" aria-label="CNC-C36 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/cnc-c36-m.png" alt="CNC-C36 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>CNC-C36 M</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>650 × 350 мм</b></div><div><span>Макс. масса электрода</span><b>120 кг</b></div><div><span>Макс. масса заготовки</span><b>1000 кг</b></div><div><span>Макс. ток обработки</span><b>50 А</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>650 × 350 мм</b></div><div><span>Макс. масса заготовки</span><b>1000 кг</b></div><div><span>Макс. ток обработки</span><b>50 А</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="cnc-c54 m копировально-прошивочные станки" data-title="CNC-C54 M" data-sortkey="850.0" data-table-size="850 × 450 мм" data-electrode-weight-max="180 кг" data-workpiece-weight-max="1300 кг" data-current-max="75 А" data-machine-weight="2450 кг">
+<article class="vmc-card" data-name="cnc-c54 m копировально-прошивочные станки" data-title="CNC-C54 M" data-sortkey="850.0" data-table-size="850 × 450 мм" data-travel-xy="480 × 380 × 185 мм" data-max-workpiece-weight="1300 кг" data-max-current="75 А" data-machine-weight="2450 кг">
 <a class="vmc-card-link" href="equipment-edm-cnc-c54-m.html" aria-label="CNC-C54 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/cnc-c54-m.png" alt="CNC-C54 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>CNC-C54 M</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>850 × 450 мм</b></div><div><span>Макс. масса электрода</span><b>180 кг</b></div><div><span>Макс. масса заготовки</span><b>1300 кг</b></div><div><span>Макс. ток обработки</span><b>75 А</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>850 × 450 мм</b></div><div><span>Макс. масса заготовки</span><b>1300 кг</b></div><div><span>Макс. ток обработки</span><b>75 А</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="cnc-p26 m копировально-прошивочные станки" data-title="CNC-P26 M" data-sortkey="600.0" data-table-size="600 × 300 мм" data-electrode-weight-max="100 кг" data-workpiece-weight-max="800 кг" data-current-max="30 А" data-machine-weight="1700 кг">
+<article class="vmc-card" data-name="cnc-p26 m копировально-прошивочные станки" data-title="CNC-P26 M" data-sortkey="600.0" data-max-workpiece-dims="750 × 500 × 240 мм" data-table-size="600 × 300 мм" data-travel-xy="280 × 230 мм" data-cnc-present="да" data-max-workpiece-weight="800 кг" data-max-current="30 А" data-machine-weight="1700 кг" data-surface-roughness="0,3 Ra">
 <a class="vmc-card-link" href="equipment-edm-cnc-p26-m.html" aria-label="CNC-P26 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/cnc-p26-m.png" alt="CNC-P26 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>CNC-P26 M</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>600 × 300 мм</b></div><div><span>Макс. масса электрода</span><b>100 кг</b></div><div><span>Макс. масса заготовки</span><b>800 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>600 × 300 мм</b></div><div><span>Макс. масса заготовки</span><b>800 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="cnc-p36 m копировально-прошивочные станки" data-title="CNC-P36 M" data-sortkey="650.0" data-table-size="650 × 350 мм" data-electrode-weight-max="120 кг" data-workpiece-weight-max="1000 кг" data-current-max="50 А" data-machine-weight="2350 кг">
+<article class="vmc-card" data-name="cnc-p36 m копировально-прошивочные станки" data-title="CNC-P36 M" data-sortkey="650.0" data-max-workpiece-dims="1000 × 600 × 330 мм" data-table-size="650 × 350 мм" data-travel-xy="380 × 280 мм" data-cnc-present="да" data-max-workpiece-weight="1000 кг" data-max-current="50 А" data-machine-weight="2350 кг" data-surface-roughness="0,3 Ra">
 <a class="vmc-card-link" href="equipment-edm-cnc-p36-m.html" aria-label="CNC-P36 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/cnc-p36-m.png" alt="CNC-P36 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>CNC-P36 M</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>650 × 350 мм</b></div><div><span>Макс. масса электрода</span><b>120 кг</b></div><div><span>Макс. масса заготовки</span><b>1000 кг</b></div><div><span>Макс. ток обработки</span><b>50 А</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>650 × 350 мм</b></div><div><span>Макс. масса заготовки</span><b>1000 кг</b></div><div><span>Макс. ток обработки</span><b>50 А</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="cnc-p54 m копировально-прошивочные станки" data-title="CNC-P54 M" data-sortkey="850.0" data-table-size="850 × 450 мм" data-electrode-weight-max="180 кг" data-workpiece-weight-max="1300 кг" data-current-max="75 А" data-machine-weight="2450 кг">
+<article class="vmc-card" data-name="cnc-p54 m копировально-прошивочные станки" data-title="CNC-P54 M" data-sortkey="850.0" data-max-workpiece-dims="1200 × 700 × 380 мм" data-table-size="850 × 450 мм" data-travel-xy="480 × 380 мм" data-cnc-present="да" data-max-workpiece-weight="1300 кг" data-max-current="75 А" data-machine-weight="2450 кг" data-surface-roughness="0,3 Ra">
 <a class="vmc-card-link" href="equipment-edm-cnc-p54-m.html" aria-label="CNC-P54 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/cnc-p54-m.png" alt="CNC-P54 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>CNC-P54 M</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>850 × 450 мм</b></div><div><span>Макс. масса электрода</span><b>180 кг</b></div><div><span>Макс. масса заготовки</span><b>1300 кг</b></div><div><span>Макс. ток обработки</span><b>75 А</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>850 × 450 мм</b></div><div><span>Макс. масса заготовки</span><b>1300 кг</b></div><div><span>Макс. ток обработки</span><b>75 А</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="cnc-p56 m копировально-прошивочные станки" data-title="CNC-P56 M" data-sortkey="1000.0" data-table-size="1000 × 550 мм" data-electrode-weight-max="300 кг" data-workpiece-weight-max="1600 кг" data-current-max="75 А" data-machine-weight="3200 кг">
+<article class="vmc-card" data-name="cnc-p56 m копировально-прошивочные станки" data-title="CNC-P56 M" data-sortkey="1000.0" data-max-workpiece-dims="1600 × 1000 × 650 мм" data-table-size="1000 × 550 мм" data-travel-xy="580 × 470 мм" data-cnc-present="да" data-max-workpiece-weight="1600 кг" data-max-current="75 А" data-machine-weight="3200 кг" data-surface-roughness="0,3 Ra">
 <a class="vmc-card-link" href="equipment-edm-cnc-p56-m.html" aria-label="CNC-P56 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/cnc-p56-m.png" alt="CNC-P56 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>CNC-P56 M</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>1000 × 550 мм</b></div><div><span>Макс. масса электрода</span><b>300 кг</b></div><div><span>Макс. масса заготовки</span><b>1600 кг</b></div><div><span>Макс. ток обработки</span><b>75 А</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>1000 × 550 мм</b></div><div><span>Макс. масса заготовки</span><b>1600 кг</b></div><div><span>Макс. ток обработки</span><b>75 А</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="cnc1260 f копировально-прошивочные станки" data-title="CNC1260 F" data-sortkey="1250.0" data-table-size="1250×800 мм" data-electrode-weight-max="300 кг" data-current-max="30 А" data-table-load="3500 кг" data-machine-weight="5500 кг">
+<article class="vmc-card" data-name="cnc1260 f копировально-прошивочные станки" data-title="CNC1260 F" data-sortkey="1250.0" data-table-size="1250×800 мм" data-travel-xy="1200 (одинарн.) / 600 (сдвоен.) мм × 600 мм" data-max-current="30 А" data-machine-weight="5500 кг">
 <a class="vmc-card-link" href="equipment-edm-cnc1260-f.html" aria-label="CNC1260 F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/cnc1260-f.png" alt="CNC1260 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>CNC1260 F</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>1250×800 мм</b></div><div><span>Макс. масса электрода</span><b>300 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Перемещение по оси X</span><b>1200 (одинарн.) / 600 (сдвоен.) мм</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>1250×800 мм</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>1200 (одинарн.) / 600 (сдвоен.) мм × 600 мм × 450 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="cnc1470 f копировально-прошивочные станки" data-title="CNC1470 F" data-sortkey="1500.0" data-table-size="1500×900 мм" data-electrode-weight-max="400 кг" data-current-max="30 А" data-table-load="5000 кг" data-machine-weight="одинарн. 9000 / сдвоен. 11000 кг">
+<article class="vmc-card" data-name="cnc1470 f копировально-прошивочные станки" data-title="CNC1470 F" data-sortkey="1500.0" data-table-size="1500×900 мм" data-travel-xy="1400 (одинарн.) / 850 (сдвоен.) мм × 700 мм" data-max-current="30 А" data-machine-weight="одинарн. 9000 / сдвоен. 11000 кг">
 <a class="vmc-card-link" href="equipment-edm-cnc1470-f.html" aria-label="CNC1470 F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/cnc1470-f.png" alt="CNC1470 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>CNC1470 F</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>1500×900 мм</b></div><div><span>Макс. масса электрода</span><b>400 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Перемещение по оси X</span><b>1400 (одинарн.) / 850 (сдвоен.) мм</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>1500×900 мм</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>1400 (одинарн.) / 850 (сдвоен.) мм × 700 мм × 500 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="cnc1880 f копировально-прошивочные станки" data-title="CNC1880 F" data-sortkey="2000.0" data-table-size="2000×1000 мм" data-electrode-weight-max="400 кг" data-current-max="30 А" data-table-load="6500 кг" data-machine-weight="одинарн. 13000 / сдвоен. 15000 кг">
+<article class="vmc-card" data-name="cnc1880 f копировально-прошивочные станки" data-title="CNC1880 F" data-sortkey="2000.0" data-table-size="2000×1000 мм" data-travel-xy="1800 (одинарн.) / 1200 (сдвоен.) мм × 800 мм" data-max-current="30 А" data-machine-weight="одинарн. 13000 / сдвоен. 15000 кг">
 <a class="vmc-card-link" href="equipment-edm-cnc1880-f.html" aria-label="CNC1880 F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/cnc1880-f.png" alt="CNC1880 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>CNC1880 F</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>2000×1000 мм</b></div><div><span>Макс. масса электрода</span><b>400 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Перемещение по оси X</span><b>1800 (одинарн.) / 1200 (сдвоен.) мм</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>2000×1000 мм</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>1800 (одинарн.) / 1200 (сдвоен.) мм × 800 мм × 600 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="cnc2110 f копировально-прошивочные станки" data-title="CNC2110 F" data-sortkey="2500.0" data-table-size="2500×1200 мм" data-electrode-weight-max="450 кг" data-current-max="30 А" data-table-load="8000 кг" data-machine-weight="одинарн. 15000 / сдвоен. 17000 кг">
+<article class="vmc-card" data-name="cnc2110 f копировально-прошивочные станки" data-title="CNC2110 F" data-sortkey="2500.0" data-table-size="2500×1200 мм" data-travel-xy="2300 (одинарн.) / 1450 (сдвоен.) мм × 900 мм" data-max-current="30 А" data-machine-weight="одинарн. 15000 / сдвоен. 17000 кг">
 <a class="vmc-card-link" href="equipment-edm-cnc2110-f.html" aria-label="CNC2110 F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/cnc2110-f.png" alt="CNC2110 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>CNC2110 F</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>2500×1200 мм</b></div><div><span>Макс. масса электрода</span><b>450 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Перемещение по оси X</span><b>2300 (одинарн.) / 1450 (сдвоен.) мм</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>2500×1200 мм</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>2300 (одинарн.) / 1450 (сдвоен.) мм × 900 мм × 600 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="cnc2510 f копировально-прошивочные станки" data-title="CNC2510 F" data-sortkey="2700.0" data-table-size="2700×1200 мм" data-electrode-weight-max="450 кг" data-current-max="30 А" data-table-load="10000 кг" data-machine-weight="сдвоен. 17000 кг">
+<article class="vmc-card" data-name="cnc2510 f копировально-прошивочные станки" data-title="CNC2510 F" data-sortkey="2700.0" data-table-size="2700×1200 мм" data-travel-xy="1750 (сдвоен.) мм × 900 мм" data-max-current="30 А" data-machine-weight="сдвоен. 17000 кг">
 <a class="vmc-card-link" href="equipment-edm-cnc2510-f.html" aria-label="CNC2510 F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/cnc2510-f.png" alt="CNC2510 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>CNC2510 F</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>2700×1200 мм</b></div><div><span>Макс. масса электрода</span><b>450 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Перемещение по оси X</span><b>1750 (сдвоен.) мм</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>2700×1200 мм</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>1750 (сдвоен.) мм × 900 мм × 600 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="cnc3110 f копировально-прошивочные станки" data-title="CNC3110 F" data-sortkey="3200.0" data-table-size="3200×1200 мм" data-electrode-weight-max="450 кг" data-current-max="30 А" data-table-load="15000 кг" data-machine-weight="сдвоен. 25000 кг">
+<article class="vmc-card" data-name="cnc3110 f копировально-прошивочные станки" data-title="CNC3110 F" data-sortkey="3200.0" data-table-size="3200×1200 мм" data-travel-xy="2400 (сдвоен.) мм × 900 мм" data-max-current="30 А" data-machine-weight="сдвоен. 25000 кг">
 <a class="vmc-card-link" href="equipment-edm-cnc3110-f.html" aria-label="CNC3110 F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/cnc3110-f.png" alt="CNC3110 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>CNC3110 F</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>3200×1200 мм</b></div><div><span>Макс. масса электрода</span><b>450 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Перемещение по оси X</span><b>2400 (сдвоен.) мм</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>3200×1200 мм</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>2400 (сдвоен.) мм × 900 мм × 600 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="cnc320j f копировально-прошивочные станки" data-title="CNC320J F" data-sortkey="500.0" data-table-size="500×300 мм" data-electrode-weight-max="50 кг" data-current-max="30 А" data-table-load="400 кг" data-machine-weight="1350 кг">
+<article class="vmc-card" data-name="cnc320j f копировально-прошивочные станки" data-title="CNC320J F" data-sortkey="500.0" data-table-size="500×300 мм" data-travel-xy="300 мм × 200 мм" data-max-current="30 А" data-machine-weight="1350 кг">
 <a class="vmc-card-link" href="equipment-edm-cnc320j-f.html" aria-label="CNC320J F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/cnc320j-f.png" alt="CNC320J F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>CNC320J F</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>500×300 мм</b></div><div><span>Макс. масса электрода</span><b>50 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Перемещение по оси X</span><b>300 мм</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>500×300 мм</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>300 мм × 200 мм × 200 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="cnc430 f копировально-прошивочные станки" data-title="CNC430 F" data-sortkey="600.0" data-table-size="600×400 мм" data-electrode-weight-max="50 кг" data-current-max="30 А" data-table-load="400 кг" data-machine-weight="1600 кг">
+<article class="vmc-card" data-name="cnc430 f копировально-прошивочные станки" data-title="CNC430 F" data-sortkey="600.0" data-table-size="600×400 мм" data-travel-xy="400 мм × 300 мм" data-max-current="30 А" data-machine-weight="1600 кг">
 <a class="vmc-card-link" href="equipment-edm-cnc430-f.html" aria-label="CNC430 F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/cnc430-f.png" alt="CNC430 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>CNC430 F</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>600×400 мм</b></div><div><span>Макс. масса электрода</span><b>50 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Перемещение по оси X</span><b>400 мм</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>600×400 мм</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>400 мм × 300 мм × 300 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="cnc430-s f копировально-прошивочные станки" data-title="CNC430-S F" data-sortkey="560.0" data-table-size="560×420 мм" data-electrode-weight-max="60 кг" data-current-max="30 А" data-table-load="1200 кг" data-machine-weight="3500 кг">
+<article class="vmc-card" data-name="cnc430-s f копировально-прошивочные станки" data-title="CNC430-S F" data-sortkey="560.0" data-table-size="560×420 мм" data-travel-xy="400 мм × 300 мм" data-max-current="30 А" data-machine-weight="3500 кг">
 <a class="vmc-card-link" href="equipment-edm-cnc430-s-f.html" aria-label="CNC430-S F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/cnc430-s-f.png" alt="CNC430-S F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>CNC430-S F</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>560×420 мм</b></div><div><span>Макс. масса электрода</span><b>60 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Перемещение по оси X</span><b>400 мм</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>560×420 мм</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>400 мм × 300 мм × 350 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="cnc450 f копировально-прошивочные станки" data-title="CNC450 F" data-sortkey="700.0" data-table-size="700×450 мм" data-electrode-weight-max="75 кг" data-current-max="30 А" data-table-load="500 кг" data-machine-weight="2100 кг">
+<article class="vmc-card" data-name="cnc450 f копировально-прошивочные станки" data-title="CNC450 F" data-sortkey="700.0" data-table-size="700×450 мм" data-travel-xy="450 мм × 350 мм" data-max-current="30 А" data-machine-weight="2100 кг">
 <a class="vmc-card-link" href="equipment-edm-cnc450-f.html" aria-label="CNC450 F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/cnc450-f.png" alt="CNC450 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>CNC450 F</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>700×450 мм</b></div><div><span>Макс. масса электрода</span><b>75 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Перемещение по оси X</span><b>450 мм</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>700×450 мм</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>450 мм × 350 мм × 300 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="cnc450j f копировально-прошивочные станки" data-title="CNC450J F" data-sortkey="700.0" data-table-size="700×450 мм" data-electrode-weight-max="75 кг" data-current-max="30 А" data-table-load="600 кг" data-machine-weight="1600 кг">
+<article class="vmc-card" data-name="cnc450j f копировально-прошивочные станки" data-title="CNC450J F" data-sortkey="700.0" data-table-size="700×450 мм" data-travel-xy="450 мм × 350 мм" data-max-current="30 А" data-machine-weight="1600 кг">
 <a class="vmc-card-link" href="equipment-edm-cnc450j-f.html" aria-label="CNC450J F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/cnc450j-f.png" alt="CNC450J F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>CNC450J F</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>700×450 мм</b></div><div><span>Макс. масса электрода</span><b>75 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Перемещение по оси X</span><b>450 мм</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>700×450 мм</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>450 мм × 350 мм × 250+250 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="cnc540 f копировально-прошивочные станки" data-title="CNC540 F" data-sortkey="800.0" data-table-size="800×500 мм" data-electrode-weight-max="150 кг" data-current-max="30 А" data-table-load="1800 кг" data-machine-weight="3000 кг">
+<article class="vmc-card" data-name="cnc540 f копировально-прошивочные станки" data-title="CNC540 F" data-sortkey="800.0" data-table-size="800×500 мм" data-travel-xy="500 мм × 400 мм" data-max-current="30 А" data-machine-weight="3000 кг">
 <a class="vmc-card-link" href="equipment-edm-cnc540-f.html" aria-label="CNC540 F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/cnc540-f.png" alt="CNC540 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>CNC540 F</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>800×500 мм</b></div><div><span>Макс. масса электрода</span><b>150 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Перемещение по оси X</span><b>500 мм</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>800×500 мм</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>500 мм × 400 мм × 300 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="cnc540-s f копировально-прошивочные станки" data-title="CNC540-S F" data-sortkey="700.0" data-table-size="700×400 мм" data-electrode-weight-max="60 кг" data-current-max="30 А" data-table-load="1500 кг" data-machine-weight="3300 кг">
+<article class="vmc-card" data-name="cnc540-s f копировально-прошивочные станки" data-title="CNC540-S F" data-sortkey="700.0" data-table-size="700×400 мм" data-travel-xy="500 мм × 400 мм" data-max-current="30 А" data-machine-weight="3300 кг">
 <a class="vmc-card-link" href="equipment-edm-cnc540-s-f.html" aria-label="CNC540-S F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/cnc540-s-f.png" alt="CNC540-S F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>CNC540-S F</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>700×400 мм</b></div><div><span>Макс. масса электрода</span><b>60 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Перемещение по оси X</span><b>500 мм</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>700×400 мм</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>500 мм × 400 мм × 300 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="cnc540j f копировально-прошивочные станки" data-title="CNC540J F" data-sortkey="800.0" data-table-size="800×500 мм" data-electrode-weight-max="75 кг" data-current-max="30 А" data-table-load="800 кг" data-machine-weight="2200 кг">
+<article class="vmc-card" data-name="cnc540j f копировально-прошивочные станки" data-title="CNC540J F" data-sortkey="800.0" data-table-size="800×500 мм" data-travel-xy="500 мм × 400 мм" data-max-current="30 А" data-machine-weight="2200 кг">
 <a class="vmc-card-link" href="equipment-edm-cnc540j-f.html" aria-label="CNC540J F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/cnc540j-f.png" alt="CNC540J F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>CNC540J F</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>800×500 мм</b></div><div><span>Макс. масса электрода</span><b>75 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Перемещение по оси X</span><b>500 мм</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>800×500 мм</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>500 мм × 400 мм × 250+250 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="cnc640 f копировально-прошивочные станки" data-title="CNC640 F" data-sortkey="900.0" data-table-size="900×500 мм" data-electrode-weight-max="150 кг" data-current-max="30 А" data-table-load="2000 кг" data-machine-weight="3700 кг">
+<article class="vmc-card" data-name="cnc640 f копировально-прошивочные станки" data-title="CNC640 F" data-sortkey="900.0" data-table-size="900×500 мм" data-travel-xy="600 мм × 400 мм" data-max-current="30 А" data-machine-weight="3700 кг">
 <a class="vmc-card-link" href="equipment-edm-cnc640-f.html" aria-label="CNC640 F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/cnc640-f.png" alt="CNC640 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>CNC640 F</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>900×500 мм</b></div><div><span>Макс. масса электрода</span><b>150 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Перемещение по оси X</span><b>600 мм</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>900×500 мм</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>600 мм × 400 мм × 350 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="cnc640-s f копировально-прошивочные станки" data-title="CNC640-S F" data-sortkey="800.0" data-table-size="800×550 мм" data-electrode-weight-max="80 кг" data-current-max="30 А" data-table-load="1500 кг" data-machine-weight="4800 кг">
+<article class="vmc-card" data-name="cnc640-s f копировально-прошивочные станки" data-title="CNC640-S F" data-sortkey="800.0" data-table-size="800×550 мм" data-travel-xy="600 мм × 500 мм" data-max-current="30 А" data-machine-weight="4800 кг">
 <a class="vmc-card-link" href="equipment-edm-cnc640-s-f.html" aria-label="CNC640-S F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/cnc640-s-f.png" alt="CNC640-S F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>CNC640-S F</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>800×550 мм</b></div><div><span>Макс. масса электрода</span><b>80 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Перемещение по оси X</span><b>600 мм</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>800×550 мм</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>600 мм × 500 мм × 400 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="cnc850 f копировально-прошивочные станки" data-title="CNC850 F" data-sortkey="1050.0" data-table-size="1050×600 мм" data-electrode-weight-max="200 кг" data-current-max="30 А" data-table-load="3000 кг" data-machine-weight="4500 кг">
+<article class="vmc-card" data-name="cnc850 f копировально-прошивочные станки" data-title="CNC850 F" data-sortkey="1050.0" data-table-size="1050×600 мм" data-travel-xy="800 мм × 500 мм" data-max-current="30 А" data-machine-weight="4500 кг">
 <a class="vmc-card-link" href="equipment-edm-cnc850-f.html" aria-label="CNC850 F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/cnc850-f.png" alt="CNC850 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>CNC850 F</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>1050×600 мм</b></div><div><span>Макс. масса электрода</span><b>200 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Перемещение по оси X</span><b>800 мм</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>1050×600 мм</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>800 мм × 500 мм × 400 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="cnc850-s f копировально-прошивочные станки" data-title="CNC850-S F" data-sortkey="1000.0" data-table-size="1000×600 мм" data-electrode-weight-max="80 кг" data-current-max="30 А" data-table-load="1800 кг" data-machine-weight="6000 кг">
+<article class="vmc-card" data-name="cnc850-s f копировально-прошивочные станки" data-title="CNC850-S F" data-sortkey="1000.0" data-table-size="1000×600 мм" data-travel-xy="800 мм × 500 мм" data-max-current="30 А" data-machine-weight="6000 кг">
 <a class="vmc-card-link" href="equipment-edm-cnc850-s-f.html" aria-label="CNC850-S F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/cnc850-s-f.png" alt="CNC850-S F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>CNC850-S F</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>1000×600 мм</b></div><div><span>Макс. масса электрода</span><b>80 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Перемещение по оси X</span><b>800 мм</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>1000×600 мм</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>800 мм × 500 мм × 400 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="p207 cnc m копировально-прошивочные станки" data-title="P207 CNC M" data-sortkey="1600.0" data-table-size="1600х950 мм" data-electrode-weight-max="500 кг" data-workpiece-weight-max="8000 кг" data-current-max="150 А">
+<article class="vmc-card" data-name="p207 cnc m копировально-прошивочные станки" data-title="P207 CNC M" data-sortkey="1600.0" data-max-workpiece-dims="3100х1400х630 мм" data-table-size="1600х950 мм" data-travel-xy="2000х700 мм" data-cnc-present="да" data-max-workpiece-weight="8000 кг" data-max-current="150 А" data-machine-weight="8800 кг" data-surface-roughness="0,7 Ra">
 <a class="vmc-card-link" href="equipment-edm-p207-cnc-m.html" aria-label="P207 CNC M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/p207-cnc-m.png" alt="P207 CNC M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>P207 CNC M</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>1600х950 мм</b></div><div><span>Макс. масса электрода</span><b>500 кг</b></div><div><span>Макс. масса заготовки</span><b>8000 кг</b></div><div><span>Макс. ток обработки</span><b>150 А</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>1600х950 мм</b></div><div><span>Макс. масса заготовки</span><b>8000 кг</b></div><div><span>Макс. ток обработки</span><b>150 А</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="p307 cnc m копировально-прошивочные станки" data-title="P307 CNC M" data-sortkey="500.0" data-electrode-weight-max="500 кг" data-workpiece-weight-max="16000 кг" data-current-max="150 А">
+<article class="vmc-card" data-name="p307 cnc m копировально-прошивочные станки" data-title="P307 CNC M" data-sortkey="500.0" data-max-workpiece-dims="4000х1450х630 мм" data-travel-xy="3000х700 мм" data-cnc-present="да" data-max-workpiece-weight="16000 кг" data-max-current="150 А" data-machine-weight="16050(S)/18550(D) кг" data-surface-roughness="0,7 Ra">
 <a class="vmc-card-link" href="equipment-edm-p307-cnc-m.html" aria-label="P307 CNC M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/p307-cnc-m.png" alt="P307 CNC M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>P307 CNC M</h3>
-<div class="vmc-specs"><div><span>Макс. масса электрода</span><b>500 кг</b></div><div><span>Макс. масса заготовки</span><b>16000 кг</b></div><div><span>Макс. ток обработки</span><b>150 А</b></div><div><span>CNC, перемещение по осям X и Y от ЧПУ</span><b>3000х700 мм</b></div></div>
+<div class="vmc-specs"><div><span>Макс. масса заготовки</span><b>16000 кг</b></div><div><span>Макс. ток обработки</span><b>150 А</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="p36 cnc m копировально-прошивочные станки" data-title="P36 CNC M" data-sortkey="120.0" data-electrode-weight-max="120 кг" data-workpiece-weight-max="1000 кг" data-current-max="50 А">
+<article class="vmc-card" data-name="p36 cnc m копировально-прошивочные станки" data-title="P36 CNC M" data-sortkey="120.0" data-max-workpiece-dims="1000x600x330 мм" data-table-size="650х350 мм" data-travel-xy="380x280 мм" data-cnc-present="да" data-max-workpiece-weight="1000 кг" data-max-current="50 А" data-machine-weight="2350 кг" data-surface-roughness="0,3 Ra">
 <a class="vmc-card-link" href="equipment-edm-p36-cnc-m.html" aria-label="P36 CNC M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/p36-cnc-m.png" alt="P36 CNC M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>P36 CNC M</h3>
-<div class="vmc-specs"><div><span>Макс. масса электрода</span><b>120 кг</b></div><div><span>Макс. масса заготовки</span><b>1000 кг</b></div><div><span>Макс. ток обработки</span><b>50 А</b></div><div><span>Ход по осям Z и U</span><b>185 / 230 мм</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>650х350 мм</b></div><div><span>Макс. масса заготовки</span><b>1000 кг</b></div><div><span>Макс. ток обработки</span><b>50 А</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="p36 znc m копировально-прошивочные станки" data-title="P36 ZNC M" data-sortkey="120.0" data-electrode-weight-max="120 кг" data-workpiece-weight-max="1000 кг" data-current-max="50 А">
+<article class="vmc-card" data-name="p36 znc m копировально-прошивочные станки" data-title="P36 ZNC M" data-sortkey="120.0" data-max-workpiece-dims="1000x600x330 мм" data-table-size="650х350 мм" data-travel-xy="400x300 мм" data-cnc-present="да" data-max-workpiece-weight="1000 кг" data-max-current="50 А" data-machine-weight="2350 кг" data-surface-roughness="0,3 Ra">
 <a class="vmc-card-link" href="equipment-edm-p36-znc-m.html" aria-label="P36 ZNC M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/p36-znc-m.png" alt="P36 ZNC M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>P36 ZNC M</h3>
-<div class="vmc-specs"><div><span>Макс. масса электрода</span><b>120 кг</b></div><div><span>Макс. масса заготовки</span><b>1000 кг</b></div><div><span>Макс. ток обработки</span><b>50 А</b></div><div><span>Ход по осям Z и U</span><b>185 / 230 мм</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>650х350 мм</b></div><div><span>Макс. масса заготовки</span><b>1000 кг</b></div><div><span>Макс. ток обработки</span><b>50 А</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="p40 cnc m копировально-прошивочные станки" data-title="P40 CNC M" data-sortkey="300.0" data-electrode-weight-max="300 кг" data-workpiece-weight-max="2000 кг" data-current-max="75 А">
+<article class="vmc-card" data-name="p40 cnc m копировально-прошивочные станки" data-title="P40 CNC M" data-sortkey="300.0" data-max-workpiece-dims="1200х750х430 мм" data-travel-xy="400х300 мм" data-cnc-present="да" data-max-workpiece-weight="2000 кг" data-max-current="75 А" data-machine-weight="2000 кг" data-surface-roughness="0,3 Ra">
 <a class="vmc-card-link" href="equipment-edm-p40-cnc-m.html" aria-label="P40 CNC M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/p40-cnc-m.png" alt="P40 CNC M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>P40 CNC M</h3>
-<div class="vmc-specs"><div><span>Макс. масса электрода</span><b>300 кг</b></div><div><span>Макс. масса заготовки</span><b>2000 кг</b></div><div><span>Макс. ток обработки</span><b>75 А</b></div><div><span>CNC, перемещение по осям X и Y от ЧПУ</span><b>400х300 мм</b></div></div>
+<div class="vmc-specs"><div><span>Макс. масса заготовки</span><b>2000 кг</b></div><div><span>Макс. ток обработки</span><b>75 А</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="p50 cnc m копировально-прошивочные станки" data-title="P50 CNC M" data-sortkey="300.0" data-electrode-weight-max="300 кг" data-workpiece-weight-max="2500 кг" data-current-max="75 А">
+<article class="vmc-card" data-name="p50 cnc m копировально-прошивочные станки" data-title="P50 CNC M" data-sortkey="300.0" data-max-workpiece-dims="1400х970х570 мм" data-table-size="800х650 мм" data-travel-xy="600х500 мм" data-cnc-present="да" data-max-workpiece-weight="2500 кг" data-max-current="75 А" data-machine-weight="3200 кг" data-surface-roughness="0,3 Ra">
 <a class="vmc-card-link" href="equipment-edm-p50-cnc-m.html" aria-label="P50 CNC M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/p50-cnc-m.png" alt="P50 CNC M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>P50 CNC M</h3>
-<div class="vmc-specs"><div><span>Макс. масса электрода</span><b>300 кг</b></div><div><span>Макс. масса заготовки</span><b>2500 кг</b></div><div><span>Макс. ток обработки</span><b>75 А</b></div><div><span>CNC, перемещение по осям X и Y от ЧПУ</span><b>600х500 мм</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>800х650 мм</b></div><div><span>Макс. масса заготовки</span><b>2500 кг</b></div><div><span>Макс. ток обработки</span><b>75 А</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="p54 cnc m копировально-прошивочные станки" data-title="P54 CNC M" data-sortkey="850.0" data-table-size="850x450 мм" data-electrode-weight-max="180 кг" data-workpiece-weight-max="1300 кг" data-current-max="75 А">
+<article class="vmc-card" data-name="p54 cnc m копировально-прошивочные станки" data-title="P54 CNC M" data-sortkey="850.0" data-max-workpiece-dims="1200x700x380 мм" data-table-size="850x450 мм" data-travel-xy="480x380 мм" data-cnc-present="да" data-max-workpiece-weight="1300 кг" data-max-current="75 А" data-machine-weight="2450 кг" data-surface-roughness="0,3 Ra">
 <a class="vmc-card-link" href="equipment-edm-p54-cnc-m.html" aria-label="P54 CNC M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/p54-cnc-m.png" alt="P54 CNC M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>P54 CNC M</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>850x450 мм</b></div><div><span>Макс. масса электрода</span><b>180 кг</b></div><div><span>Макс. масса заготовки</span><b>1300 кг</b></div><div><span>Макс. ток обработки</span><b>75 А</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>850x450 мм</b></div><div><span>Макс. масса заготовки</span><b>1300 кг</b></div><div><span>Макс. ток обработки</span><b>75 А</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="p54 znc m копировально-прошивочные станки" data-title="P54 ZNC M" data-sortkey="850.0" data-table-size="850x450 мм" data-electrode-weight-max="180 кг" data-workpiece-weight-max="1300 кг" data-current-max="75 А">
+<article class="vmc-card" data-name="p54 znc m копировально-прошивочные станки" data-title="P54 ZNC M" data-sortkey="850.0" data-max-workpiece-dims="1200x700x380 мм" data-table-size="850x450 мм" data-travel-xy="500x400 мм" data-cnc-present="да" data-max-workpiece-weight="1300 кг" data-max-current="75 А" data-machine-weight="2450 кг" data-surface-roughness="0.3 Ra">
 <a class="vmc-card-link" href="equipment-edm-p54-znc-m.html" aria-label="P54 ZNC M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/p54-znc-m.png" alt="P54 ZNC M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>P54 ZNC M</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>850x450 мм</b></div><div><span>Макс. масса электрода</span><b>180 кг</b></div><div><span>Макс. масса заготовки</span><b>1300 кг</b></div><div><span>Макс. ток обработки</span><b>75 А</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>850x450 мм</b></div><div><span>Макс. масса заготовки</span><b>1300 кг</b></div><div><span>Макс. ток обработки</span><b>75 А</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="p56 cnc m копировально-прошивочные станки" data-title="P56 CNC M" data-sortkey="300.0" data-electrode-weight-max="300 кг" data-workpiece-weight-max="1600 кг" data-current-max="75 А">
+<article class="vmc-card" data-name="p56 cnc m копировально-прошивочные станки" data-title="P56 CNC M" data-sortkey="300.0" data-max-workpiece-dims="1600x1000x650 мм" data-table-size="1000x550 мм" data-travel-xy="580x470 мм" data-cnc-present="да" data-max-workpiece-weight="1600 кг" data-max-current="75 А" data-machine-weight="3200 кг" data-surface-roughness="0,3 Ra">
 <a class="vmc-card-link" href="equipment-edm-p56-cnc-m.html" aria-label="P56 CNC M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/p56-cnc-m.png" alt="P56 CNC M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>P56 CNC M</h3>
-<div class="vmc-specs"><div><span>Макс. масса электрода</span><b>300 кг</b></div><div><span>Макс. масса заготовки</span><b>1600 кг</b></div><div><span>Макс. ток обработки</span><b>75 А</b></div><div><span>Ход по осям Z и U</span><b>250 / 450 мм</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>1000x550 мм</b></div><div><span>Макс. масса заготовки</span><b>1600 кг</b></div><div><span>Макс. ток обработки</span><b>75 А</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="p56 znc m копировально-прошивочные станки" data-title="P56 ZNC M" data-sortkey="300.0" data-electrode-weight-max="300 кг" data-workpiece-weight-max="1600 кг" data-current-max="75 А">
+<article class="vmc-card" data-name="p56 znc m копировально-прошивочные станки" data-title="P56 ZNC M" data-sortkey="300.0" data-max-workpiece-dims="1600x1000x650 мм" data-table-size="1000x550 мм" data-travel-xy="580x470 мм" data-cnc-present="да" data-max-workpiece-weight="1600 кг" data-max-current="75 А" data-machine-weight="3200 кг" data-surface-roughness="0,3 Ra">
 <a class="vmc-card-link" href="equipment-edm-p56-znc-m.html" aria-label="P56 ZNC M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/p56-znc-m.png" alt="P56 ZNC M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>P56 ZNC M</h3>
-<div class="vmc-specs"><div><span>Макс. масса электрода</span><b>300 кг</b></div><div><span>Макс. масса заготовки</span><b>1600 кг</b></div><div><span>Макс. ток обработки</span><b>75 А</b></div><div><span>Ход по осям Z и U</span><b>250 / 450 мм</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>1000x550 мм</b></div><div><span>Макс. масса заготовки</span><b>1600 кг</b></div><div><span>Макс. ток обработки</span><b>75 А</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="p58 cnc m копировально-прошивочные станки" data-title="P58 CNC M" data-sortkey="300.0" data-electrode-weight-max="300 кг" data-workpiece-weight-max="4000 кг" data-current-max="75 А">
+<article class="vmc-card" data-name="p58 cnc m копировально-прошивочные станки" data-title="P58 CNC M" data-sortkey="300.0" data-max-workpiece-dims="1480х1050х510 мм" data-travel-xy="800x500 мм" data-cnc-present="да" data-max-workpiece-weight="4000 кг" data-max-current="75 А" data-machine-weight="4200 кг" data-surface-roughness="0,3 мкм Ra">
 <a class="vmc-card-link" href="equipment-edm-p58-cnc-m.html" aria-label="P58 CNC M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/p58-cnc-m.png" alt="P58 CNC M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>P58 CNC M</h3>
-<div class="vmc-specs"><div><span>Макс. масса электрода</span><b>300 кг</b></div><div><span>Макс. масса заготовки</span><b>4000 кг</b></div><div><span>Макс. ток обработки</span><b>75 А</b></div><div><span>Макс. габариты заготовки</span><b>1480х1050х510 мм</b></div></div>
+<div class="vmc-specs"><div><span>Макс. масса заготовки</span><b>4000 кг</b></div><div><span>Макс. ток обработки</span><b>75 А</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="p66 cnc m копировально-прошивочные станки" data-title="P66 CNC M" data-sortkey="500.0" data-electrode-weight-max="500 кг" data-workpiece-weight-max="8000 кг" data-current-max="100 А">
+<article class="vmc-card" data-name="p66 cnc m копировально-прошивочные станки" data-title="P66 CNC M" data-sortkey="500.0" data-max-workpiece-dims="2100х1150х630 мм" data-table-size="1600х950 мм" data-travel-xy="1300х700 мм" data-cnc-present="да" data-max-workpiece-weight="8000 кг" data-max-current="100 А" data-machine-weight="8050 кг" data-surface-roughness="0,5 Ra">
 <a class="vmc-card-link" href="equipment-edm-p66-cnc-m.html" aria-label="P66 CNC M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/p66-cnc-m.png" alt="P66 CNC M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>P66 CNC M</h3>
-<div class="vmc-specs"><div><span>Макс. масса электрода</span><b>500 кг</b></div><div><span>Макс. масса заготовки</span><b>8000 кг</b></div><div><span>Макс. ток обработки</span><b>100 А</b></div><div><span>CNC, перемещение по осям X и Y от ЧПУ</span><b>1300х700 мм</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>1600х950 мм</b></div><div><span>Макс. масса заготовки</span><b>8000 кг</b></div><div><span>Макс. ток обработки</span><b>100 А</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="r26 cnc m копировально-прошивочные станки" data-title="R26 CNC M" data-sortkey="600.0" data-table-size="600х300 мм" data-electrode-weight-max="100 кг" data-workpiece-weight-max="800 кг" data-current-max="30 А" data-machine-weight="1700 кг">
+<article class="vmc-card" data-name="r26 cnc m копировально-прошивочные станки" data-title="R26 CNC M" data-sortkey="600.0" data-max-workpiece-dims="750х500х240 мм" data-table-size="600х300 мм" data-travel-xy="280x230 мм" data-cnc-present="да" data-max-workpiece-weight="800 кг" data-max-current="30 А" data-machine-weight="1700 кг" data-surface-roughness="0,3 Ra">
 <a class="vmc-card-link" href="equipment-edm-r26-cnc-m.html" aria-label="R26 CNC M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/r26-cnc-m.png" alt="R26 CNC M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>R26 CNC M</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>600х300 мм</b></div><div><span>Макс. масса электрода</span><b>100 кг</b></div><div><span>Макс. масса заготовки</span><b>800 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>600х300 мм</b></div><div><span>Макс. масса заготовки</span><b>800 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="r26 znc m копировально-прошивочные станки" data-title="R26 ZNC M" data-sortkey="600.0" data-table-size="600x300 мм" data-electrode-weight-max="100 кг" data-workpiece-weight-max="800 кг" data-current-max="30 А" data-machine-weight="1700 кг">
+<article class="vmc-card" data-name="r26 znc m копировально-прошивочные станки" data-title="R26 ZNC M" data-sortkey="600.0" data-max-workpiece-dims="750х500х240 мм" data-table-size="600x300 мм" data-travel-xy="300 х 250 мм" data-cnc-present="да" data-max-workpiece-weight="800 кг" data-max-current="30 А" data-machine-weight="1700 кг" data-surface-roughness="0.3 Ra">
 <a class="vmc-card-link" href="equipment-edm-r26-znc-m.html" aria-label="R26 ZNC M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/r26-znc-m.png" alt="R26 ZNC M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>R26 ZNC M</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>600x300 мм</b></div><div><span>Макс. масса электрода</span><b>100 кг</b></div><div><span>Макс. масса заготовки</span><b>800 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>600x300 мм</b></div><div><span>Макс. масса заготовки</span><b>800 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="rta40 m копировально-прошивочные станки" data-title="RTA40 M" data-sortkey="740.0" data-table-size="740 × 390 мм" data-workpiece-weight-max="800 кг" data-machine-weight="3500 кг">
+<article class="vmc-card" data-name="rta40 m копировально-прошивочные станки" data-title="RTA40 M" data-sortkey="740.0" data-max-workpiece-dims="800 × 600 × 400 мм" data-table-size="740 × 390 мм" data-travel-xy="400 × 300 × 400 мм" data-max-workpiece-weight="800 кг" data-machine-weight="3500 кг">
 <a class="vmc-card-link" href="equipment-edm-rta40-m.html" aria-label="RTA40 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/rta40-m.png" alt="RTA40 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>RTA40 M</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>740 × 390 мм</b></div><div><span>Макс. масса заготовки</span><b>800 кг</b></div><div><span>Ход по осям X/Y/Z</span><b>400 × 300 × 400 мм</b></div><div><span>Макс. габариты заготовки</span><b>800 × 600 × 400 мм</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>740 × 390 мм</b></div><div><span>Макс. масса заготовки</span><b>800 кг</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="rta50 m копировально-прошивочные станки" data-title="RTA50 M" data-sortkey="800.0" data-table-size="800 × 700 мм" data-workpiece-weight-max="2000 кг" data-machine-weight="4500 кг">
+<article class="vmc-card" data-name="rta50 m копировально-прошивочные станки" data-title="RTA50 M" data-sortkey="800.0" data-max-workpiece-dims="1000 × 800 × 570 мм" data-table-size="800 × 700 мм" data-travel-xy="600 × 500 × 400 мм" data-max-workpiece-weight="2000 кг" data-machine-weight="4500 кг">
 <a class="vmc-card-link" href="equipment-edm-rta50-m.html" aria-label="RTA50 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/rta50-m.png" alt="RTA50 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>RTA50 M</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>800 × 700 мм</b></div><div><span>Макс. масса заготовки</span><b>2000 кг</b></div><div><span>Ход по осям X/Y/Z</span><b>600 × 500 × 400 мм</b></div><div><span>Макс. габариты заготовки</span><b>1000 × 800 × 570 мм</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>800 × 700 мм</b></div><div><span>Макс. масса заготовки</span><b>2000 кг</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="rta58 m копировально-прошивочные станки" data-title="RTA58 M" data-sortkey="900.0" data-table-size="900 × 800 мм" data-workpiece-weight-max="3000 кг" data-machine-weight="5000 кг">
+<article class="vmc-card" data-name="rta58 m копировально-прошивочные станки" data-title="RTA58 M" data-sortkey="900.0" data-max-workpiece-dims="1100 × 900 × 570 мм" data-table-size="900 × 800 мм" data-travel-xy="800 × 500 × 400 мм" data-max-workpiece-weight="3000 кг" data-machine-weight="5000 кг">
 <a class="vmc-card-link" href="equipment-edm-rta58-m.html" aria-label="RTA58 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/rta58-m.png" alt="RTA58 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>RTA58 M</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>900 × 800 мм</b></div><div><span>Макс. масса заготовки</span><b>3000 кг</b></div><div><span>Ход по осям X/Y/Z</span><b>800 × 500 × 400 мм</b></div><div><span>Макс. габариты заготовки</span><b>1100 × 900 × 570 мм</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>900 × 800 мм</b></div><div><span>Макс. масса заготовки</span><b>3000 кг</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="s26-r26 m копировально-прошивочные станки" data-title="S26-R26 M" data-sortkey="600.0" data-table-size="600×300 мм">
+<article class="vmc-card" data-name="s26-r26 m копировально-прошивочные станки" data-title="S26-R26 M" data-sortkey="600.0" data-table-size="600×300 мм" data-travel-xy="280×230 мм" data-cnc-present="да" data-max-current="30 А" data-machine-weight="1700 кг" data-surface-roughness="0,3 Ra">
 <a class="vmc-card-link" href="equipment-edm-s26-r26-m.html" aria-label="S26-R26 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/s26-r26-m.png" alt="S26-R26 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>S26-R26 M</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>600×300 мм</b></div><div><span>CNC, перемещение по осям X и Y от ЧПУ</span><b>280×230 мм</b></div><div><span>Размер стола</span><b>600×300 мм</b></div><div><span>Масса станка нетто</span><b>1700 кг</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>600×300 мм</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="s36-r36 m копировально-прошивочные станки" data-title="S36-R36 M" data-sortkey="0" >
+<article class="vmc-card" data-name="s36-r36 m копировально-прошивочные станки" data-title="S36-R36 M" data-sortkey="0"  data-table-size="650×350 мм" data-travel-xy="380×280 мм" data-cnc-present="да" data-max-current="50 А" data-machine-weight="2350 кг" data-surface-roughness="0,3 Ra">
 <a class="vmc-card-link" href="equipment-edm-s36-r36-m.html" aria-label="S36-R36 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/s36-r36-m.png" alt="S36-R36 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>S36-R36 M</h3>
-<div class="vmc-specs"><div><span>CNC, перемещение по осям X и Y от ЧПУ</span><b>380×280 мм</b></div><div><span>Размер стола</span><b>650×350 мм</b></div><div><span>Масса станка нетто</span><b>2350 кг</b></div><div><span>Уровень диэлектрика</span><b>280 мм</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>650×350 мм</b></div><div><span>Макс. ток обработки</span><b>50 А</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="s54-r54 m копировально-прошивочные станки" data-title="S54-R54 M" data-sortkey="850.0" data-table-size="850×450 мм">
+<article class="vmc-card" data-name="s54-r54 m копировально-прошивочные станки" data-title="S54-R54 M" data-sortkey="850.0" data-table-size="850×450 мм" data-travel-xy="480×380 мм" data-cnc-present="да" data-max-current="75 А" data-machine-weight="2450 кг" data-surface-roughness="0,3 Ra">
 <a class="vmc-card-link" href="equipment-edm-s54-r54-m.html" aria-label="S54-R54 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/s54-r54-m.png" alt="S54-R54 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>S54-R54 M</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>850×450 мм</b></div><div><span>Размер стола</span><b>850×450 мм</b></div><div><span>Масса станка нетто</span><b>2450 кг</b></div><div><span>Уровень диэлектрика</span><b>350 мм</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>850×450 мм</b></div><div><span>Макс. ток обработки</span><b>75 А</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="znc-c26 m копировально-прошивочные станки" data-title="ZNC-C26 M" data-sortkey="100.0" data-electrode-weight-max="100 кг" data-workpiece-weight-max="800 кг" data-current-max="30 А">
+<article class="vmc-card" data-name="znc-c26 m копировально-прошивочные станки" data-title="ZNC-C26 M" data-sortkey="100.0" data-table-size="600 × 300 мм" data-max-workpiece-weight="800 кг" data-max-current="30 А" data-machine-weight="1700 кг">
 <a class="vmc-card-link" href="equipment-edm-znc-c26-m.html" aria-label="ZNC-C26 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/znc-c26-m.png" alt="ZNC-C26 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>ZNC-C26 M</h3>
-<div class="vmc-specs"><div><span>Макс. масса электрода</span><b>100 кг</b></div><div><span>Макс. масса заготовки</span><b>800 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Модель</span><b>C26</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>600 × 300 мм</b></div><div><span>Макс. масса заготовки</span><b>800 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="znc-c36 m копировально-прошивочные станки" data-title="ZNC-C36 M" data-sortkey="650.0" data-table-size="650 × 350 мм" data-electrode-weight-max="120 кг" data-workpiece-weight-max="1000 кг" data-current-max="50 А" data-machine-weight="2350 кг">
+<article class="vmc-card" data-name="znc-c36 m копировально-прошивочные станки" data-title="ZNC-C36 M" data-sortkey="650.0" data-table-size="650 × 350 мм" data-travel-xy="400 × 300 × 185 мм" data-max-workpiece-weight="1000 кг" data-max-current="50 А" data-machine-weight="2350 кг">
 <a class="vmc-card-link" href="equipment-edm-znc-c36-m.html" aria-label="ZNC-C36 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/znc-c36-m.png" alt="ZNC-C36 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>ZNC-C36 M</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>650 × 350 мм</b></div><div><span>Макс. масса электрода</span><b>120 кг</b></div><div><span>Макс. масса заготовки</span><b>1000 кг</b></div><div><span>Макс. ток обработки</span><b>50 А</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>650 × 350 мм</b></div><div><span>Макс. масса заготовки</span><b>1000 кг</b></div><div><span>Макс. ток обработки</span><b>50 А</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="znc-c54 m копировально-прошивочные станки" data-title="ZNC-C54 M" data-sortkey="850.0" data-table-size="850 × 450 мм" data-electrode-weight-max="180 кг" data-workpiece-weight-max="1300 кг" data-current-max="75 А" data-machine-weight="2450 кг">
+<article class="vmc-card" data-name="znc-c54 m копировально-прошивочные станки" data-title="ZNC-C54 M" data-sortkey="850.0" data-max-workpiece-dims="достаточный для стола 850×450 мм" data-table-size="850 × 450 мм" data-travel-xy="500 × 400 × 185 мм" data-max-workpiece-weight="1300 кг" data-max-current="75 А" data-machine-weight="2450 кг">
 <a class="vmc-card-link" href="equipment-edm-znc-c54-m.html" aria-label="ZNC-C54 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/znc-c54-m.png" alt="ZNC-C54 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>ZNC-C54 M</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>850 × 450 мм</b></div><div><span>Макс. масса электрода</span><b>180 кг</b></div><div><span>Макс. масса заготовки</span><b>1300 кг</b></div><div><span>Макс. ток обработки</span><b>75 А</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>850 × 450 мм</b></div><div><span>Макс. масса заготовки</span><b>1300 кг</b></div><div><span>Макс. ток обработки</span><b>75 А</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="znc-p26 m копировально-прошивочные станки" data-title="ZNC-P26 M" data-sortkey="600.0" data-table-size="600 × 300 мм" data-workpiece-weight-max="800 кг" data-current-max="30 А" data-machine-weight="1700 кг">
+<article class="vmc-card" data-name="znc-p26 m копировально-прошивочные станки" data-title="ZNC-P26 M" data-sortkey="600.0" data-table-size="600 × 300 мм" data-travel-xy="300 × 250 × 150 мм" data-max-workpiece-weight="800 кг" data-max-current="30 А" data-machine-weight="1700 кг">
 <a class="vmc-card-link" href="equipment-edm-znc-p26-m.html" aria-label="ZNC-P26 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/znc-p26-m.png" alt="ZNC-P26 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>ZNC-P26 M</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>600 × 300 мм</b></div><div><span>Макс. масса заготовки</span><b>800 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>300 × 250 × 150 мм</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>600 × 300 мм</b></div><div><span>Макс. масса заготовки</span><b>800 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="znc-p36 m копировально-прошивочные станки" data-title="ZNC-P36 M" data-sortkey="650.0" data-table-size="650 × 350 мм" data-workpiece-weight-max="1000 кг" data-current-max="50 А" data-machine-weight="2350 кг">
+<article class="vmc-card" data-name="znc-p36 m копировально-прошивочные станки" data-title="ZNC-P36 M" data-sortkey="650.0" data-table-size="650 × 350 мм" data-travel-xy="400 × 300 × 185 мм" data-max-workpiece-weight="1000 кг" data-max-current="50 А" data-machine-weight="2350 кг">
 <a class="vmc-card-link" href="equipment-edm-znc-p36-m.html" aria-label="ZNC-P36 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/znc-p36-m.png" alt="ZNC-P36 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>ZNC-P36 M</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>650 × 350 мм</b></div><div><span>Макс. масса заготовки</span><b>1000 кг</b></div><div><span>Макс. ток обработки</span><b>50 А</b></div><div><span>Ход по осям X/Y/Z</span><b>400 × 300 × 185 мм</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>650 × 350 мм</b></div><div><span>Макс. масса заготовки</span><b>1000 кг</b></div><div><span>Макс. ток обработки</span><b>50 А</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="znc-p54 m копировально-прошивочные станки" data-title="ZNC-P54 M" data-sortkey="850.0" data-table-size="850 × 450 мм" data-electrode-weight-max="180 кг" data-workpiece-weight-max="1300 кг" data-current-max="75 А" data-machine-weight="2450 кг">
+<article class="vmc-card" data-name="znc-p54 m копировально-прошивочные станки" data-title="ZNC-P54 M" data-sortkey="850.0" data-table-size="850 × 450 мм" data-travel-xy="500 × 400 × 185 мм" data-max-workpiece-weight="1300 кг" data-max-current="75 А" data-machine-weight="2450 кг">
 <a class="vmc-card-link" href="equipment-edm-znc-p54-m.html" aria-label="ZNC-P54 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/znc-p54-m.png" alt="ZNC-P54 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>ZNC-P54 M</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>850 × 450 мм</b></div><div><span>Макс. масса электрода</span><b>180 кг</b></div><div><span>Макс. масса заготовки</span><b>1300 кг</b></div><div><span>Макс. ток обработки</span><b>75 А</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>850 × 450 мм</b></div><div><span>Макс. масса заготовки</span><b>1300 кг</b></div><div><span>Макс. ток обработки</span><b>75 А</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="znc-p56 m копировально-прошивочные станки" data-title="ZNC-P56 M" data-sortkey="1000.0" data-table-size="1000 × 550 мм" data-electrode-weight-max="300 кг" data-workpiece-weight-max="1600 кг" data-current-max="75 А" data-machine-weight="3200 кг">
+<article class="vmc-card" data-name="znc-p56 m копировально-прошивочные станки" data-title="ZNC-P56 M" data-sortkey="1000.0" data-max-workpiece-dims="1600 × 1000 × 650 мм" data-table-size="1000 × 550 мм" data-travel-xy="580 × 470 × 250 мм" data-max-workpiece-weight="1600 кг" data-max-current="75 А" data-machine-weight="3200 кг">
 <a class="vmc-card-link" href="equipment-edm-znc-p56-m.html" aria-label="ZNC-P56 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/znc-p56-m.png" alt="ZNC-P56 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>ZNC-P56 M</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>1000 × 550 мм</b></div><div><span>Макс. масса электрода</span><b>300 кг</b></div><div><span>Макс. масса заготовки</span><b>1600 кг</b></div><div><span>Макс. ток обработки</span><b>75 А</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>1000 × 550 мм</b></div><div><span>Макс. масса заготовки</span><b>1600 кг</b></div><div><span>Макс. ток обработки</span><b>75 А</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="znc320 f копировально-прошивочные станки" data-title="ZNC320 F" data-sortkey="500.0" data-table-size="500×300 мм" data-electrode-weight-max="50 кг" data-current-max="30 А" data-table-load="450 кг" data-machine-weight="1200 кг">
+<article class="vmc-card" data-name="znc320 f копировально-прошивочные станки" data-title="ZNC320 F" data-sortkey="500.0" data-table-size="500×300 мм" data-travel-xy="300 мм × 200 мм" data-max-current="30 А" data-machine-weight="1200 кг">
 <a class="vmc-card-link" href="equipment-edm-znc320-f.html" aria-label="ZNC320 F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/znc320-f.png" alt="ZNC320 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>ZNC320 F</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>500×300 мм</b></div><div><span>Макс. масса электрода</span><b>50 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Перемещение по оси X</span><b>300 мм</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>500×300 мм</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>300 мм × 200 мм × 200 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="znc320y f копировально-прошивочные станки" data-title="ZNC320Y F" data-sortkey="500.0" data-table-size="500×300 мм" data-electrode-weight-max="50 кг" data-current-max="30 А" data-table-load="450 кг" data-machine-weight="1200 кг">
+<article class="vmc-card" data-name="znc320y f копировально-прошивочные станки" data-title="ZNC320Y F" data-sortkey="500.0" data-table-size="500×300 мм" data-travel-xy="300 мм × 200 мм" data-max-current="30 А" data-machine-weight="1200 кг">
 <a class="vmc-card-link" href="equipment-edm-znc320y-f.html" aria-label="ZNC320Y F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/znc320y-f.png" alt="ZNC320Y F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>ZNC320Y F</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>500×300 мм</b></div><div><span>Макс. масса электрода</span><b>50 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Перемещение по оси X</span><b>300 мм</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>500×300 мм</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>300 мм × 200 мм × 200 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="znc350 f копировально-прошивочные станки" data-title="ZNC350 F" data-sortkey="630.0" data-table-size="630×350 мм" data-electrode-weight-max="75 кг" data-current-max="30 А" data-table-load="500 кг" data-machine-weight="1300 кг">
+<article class="vmc-card" data-name="znc350 f копировально-прошивочные станки" data-title="ZNC350 F" data-sortkey="630.0" data-table-size="630×350 мм" data-travel-xy="350 мм × 250 мм" data-max-current="30 А" data-machine-weight="1300 кг">
 <a class="vmc-card-link" href="equipment-edm-znc350-f.html" aria-label="ZNC350 F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/znc350-f.png" alt="ZNC350 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>ZNC350 F</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>630×350 мм</b></div><div><span>Макс. масса электрода</span><b>75 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Перемещение по оси X</span><b>350 мм</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>630×350 мм</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>350 мм × 250 мм × 200+200 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="znc350y f копировально-прошивочные станки" data-title="ZNC350Y F" data-sortkey="630.0" data-table-size="630×350 мм" data-electrode-weight-max="75 кг" data-current-max="30 А" data-table-load="500 кг" data-machine-weight="1300 кг">
+<article class="vmc-card" data-name="znc350y f копировально-прошивочные станки" data-title="ZNC350Y F" data-sortkey="630.0" data-table-size="630×350 мм" data-travel-xy="350 мм × 250 мм" data-max-current="30 А" data-machine-weight="1300 кг">
 <a class="vmc-card-link" href="equipment-edm-znc350y-f.html" aria-label="ZNC350Y F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/znc350y-f.png" alt="ZNC350Y F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>ZNC350Y F</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>630×350 мм</b></div><div><span>Макс. масса электрода</span><b>75 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Перемещение по оси X</span><b>350 мм</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>630×350 мм</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>350 мм × 250 мм × 200+200 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="znc450 f копировально-прошивочные станки" data-title="ZNC450 F" data-sortkey="700.0" data-table-size="700×450 мм" data-electrode-weight-max="75 кг" data-current-max="30 А" data-table-load="700 кг" data-machine-weight="1600 кг">
+<article class="vmc-card" data-name="znc450 f копировально-прошивочные станки" data-title="ZNC450 F" data-sortkey="700.0" data-table-size="700×450 мм" data-travel-xy="450 мм × 350 мм" data-max-current="30 А" data-machine-weight="1600 кг">
 <a class="vmc-card-link" href="equipment-edm-znc450-f.html" aria-label="ZNC450 F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/znc450-f.png" alt="ZNC450 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>ZNC450 F</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>700×450 мм</b></div><div><span>Макс. масса электрода</span><b>75 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Перемещение по оси X</span><b>450 мм</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>700×450 мм</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>450 мм × 350 мм × 250+250 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="znc450y f копировально-прошивочные станки" data-title="ZNC450Y F" data-sortkey="700.0" data-table-size="700×450 мм" data-electrode-weight-max="75 кг" data-current-max="30 А" data-table-load="700 кг" data-machine-weight="1600 кг">
+<article class="vmc-card" data-name="znc450y f копировально-прошивочные станки" data-title="ZNC450Y F" data-sortkey="700.0" data-table-size="700×450 мм" data-travel-xy="450 мм × 350 мм" data-max-current="30 А" data-machine-weight="1600 кг">
 <a class="vmc-card-link" href="equipment-edm-znc450y-f.html" aria-label="ZNC450Y F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/znc450y-f.png" alt="ZNC450Y F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>ZNC450Y F</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>700×450 мм</b></div><div><span>Макс. масса электрода</span><b>75 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Перемещение по оси X</span><b>450 мм</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>700×450 мм</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>450 мм × 350 мм × 250+250 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="znc540 f копировально-прошивочные станки" data-title="ZNC540 F" data-sortkey="800.0" data-table-size="800×500 мм" data-electrode-weight-max="100 кг" data-current-max="30 А" data-table-load="1000 кг" data-machine-weight="1900 кг">
+<article class="vmc-card" data-name="znc540 f копировально-прошивочные станки" data-title="ZNC540 F" data-sortkey="800.0" data-table-size="800×500 мм" data-travel-xy="500 мм × 400 мм" data-max-current="30 А" data-machine-weight="1900 кг">
 <a class="vmc-card-link" href="equipment-edm-znc540-f.html" aria-label="ZNC540 F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/znc540-f.png" alt="ZNC540 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>ZNC540 F</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>800×500 мм</b></div><div><span>Макс. масса электрода</span><b>100 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Перемещение по оси X</span><b>500 мм</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>800×500 мм</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>500 мм × 400 мм × 250+250 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="znc540y f копировально-прошивочные станки" data-title="ZNC540Y F" data-sortkey="800.0" data-table-size="800×500 мм" data-electrode-weight-max="100 кг" data-current-max="30 А" data-table-load="1000 кг" data-machine-weight="1900 кг">
+<article class="vmc-card" data-name="znc540y f копировально-прошивочные станки" data-title="ZNC540Y F" data-sortkey="800.0" data-table-size="800×500 мм" data-travel-xy="500 мм × 400 мм" data-max-current="30 А" data-machine-weight="1900 кг">
 <a class="vmc-card-link" href="equipment-edm-znc540y-f.html" aria-label="ZNC540Y F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/znc540y-f.png" alt="ZNC540Y F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>ZNC540Y F</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>800×500 мм</b></div><div><span>Макс. масса электрода</span><b>100 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Перемещение по оси X</span><b>500 мм</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>800×500 мм</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>500 мм × 400 мм × 250+250 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="znc760 f копировально-прошивочные станки" data-title="ZNC760 F" data-sortkey="1200.0" data-table-size="1200×700 мм" data-electrode-weight-max="150 кг" data-current-max="30 А" data-table-load="2000 кг" data-machine-weight="3500 кг">
+<article class="vmc-card" data-name="znc760 f копировально-прошивочные станки" data-title="ZNC760 F" data-sortkey="1200.0" data-table-size="1200×700 мм" data-travel-xy="700 мм × 600 мм" data-max-current="30 А" data-machine-weight="3500 кг">
 <a class="vmc-card-link" href="equipment-edm-znc760-f.html" aria-label="ZNC760 F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/znc760-f.png" alt="ZNC760 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Копир.-прошивочные</small>
 <h3>ZNC760 F</h3>
-<div class="vmc-specs"><div><span>Размер стола</span><b>1200×700 мм</b></div><div><span>Макс. масса электрода</span><b>150 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Перемещение по оси X</span><b>700 мм</b></div></div>
+<div class="vmc-specs"><div><span>Размер стола</span><b>1200×700 мм</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>700 мм × 600 мм × 300+300 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
@@ -1883,25 +1891,29 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="electrode-diameter" data-bound="min"/>
 <input type="number" placeholder="До" data-range="electrode-diameter" data-bound="max"/>
-</div></div><div class="g2-field"><strong>Ход по оси Z</strong>
+</div></div><div class="g2-field"><strong>Макс. габариты заготовки</strong>
 <div class="vmc-range-row">
-<input type="number" placeholder="От" data-range="spindle-travel-z" data-bound="min"/>
-<input type="number" placeholder="До" data-range="spindle-travel-z" data-bound="max"/>
-</div></div></div>
-<details class="g2-group" open><summary>Дополнительные параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Макс. масса заготовки (кг)</strong>
+<input type="number" placeholder="От" data-range="max-workpiece-dims" data-bound="min"/>
+<input type="number" placeholder="До" data-range="max-workpiece-dims" data-bound="max"/>
+</div></div><div class="g2-field"><label class="g2-check"><input type="checkbox" name="cnc-present" value="да"/><span>Наличие ЧПУ</span></label></div></div>
+<details class="g2-group" open><summary>Дополнительные параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Макс. масса заготовки</strong>
 <div class="vmc-range-row">
-<input type="number" placeholder="От" data-range="workpiece-weight-max" data-bound="min"/>
-<input type="number" placeholder="До" data-range="workpiece-weight-max" data-bound="max"/>
-</div></div><div class="g2-field"><strong>Потребляемая мощность</strong>
+<input type="number" placeholder="От" data-range="max-workpiece-weight" data-bound="min"/>
+<input type="number" placeholder="До" data-range="max-workpiece-weight" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Макс. ток обработки</strong>
 <div class="vmc-range-row">
-<input type="number" placeholder="От" data-range="input-power" data-bound="min"/>
-<input type="number" placeholder="До" data-range="input-power" data-bound="max"/>
-</div></div><div class="g2-field"><strong>Масса станка (кг)</strong>
+<input type="number" placeholder="От" data-range="max-current" data-bound="min"/>
+<input type="number" placeholder="До" data-range="max-current" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Масса станка</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="machine-weight" data-bound="min"/>
 <input type="number" placeholder="До" data-range="machine-weight" data-bound="max"/>
 </div></div></div></details>
-
+<details class="g2-group"><summary>Все параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Габариты станка</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="overall-dimensions" data-bound="min"/>
+<input type="number" placeholder="До" data-range="overall-dimensions" data-bound="max"/>
+</div></div></div></details>
 <div class="g2-apply-wrap">
 <button type="button" class="btn btn-ce g2-apply" data-role="apply">Показать <span data-role="preview">12</span> <span data-role="preview-word">моделей</span></button>
 </div>
@@ -1919,123 +1931,123 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 <div class="g2-fallback-note" data-role="fallback-note" hidden>Точных совпадений не нашлось — показаны ближайшие по параметрам модели.</div>
 <div class="vmc-grid">
-<article class="vmc-card" data-name="bh4030 f супердрели" data-title="BH4030 F" data-sortkey="0.3" data-electrode-diameter="Φ0.3–Φ3.0 мм" data-spindle-travel-z="400 мм" data-input-power="3.5 кВт" data-machine-weight="500 кг">
+<article class="vmc-card" data-name="bh4030 f супердрели" data-title="BH4030 F" data-sortkey="0.3" data-electrode-diameter="Φ0.3–Φ3.0 мм" data-max-current="30 А" data-machine-weight="500 кг">
 <a class="vmc-card-link" href="equipment-edm-bh4030-f.html" aria-label="BH4030 F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/bh4030-f.png" alt="BH4030 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Супердрели</small>
 <h3>BH4030 F</h3>
-<div class="vmc-specs"><div><span>Диаметр электрода</span><b>Φ0.3–Φ3.0 мм</b></div><div><span>Ход по оси Z</span><b>400 мм</b></div><div><span>Потребляемая мощность</span><b>3.5 кВт</b></div><div><span>Размер рабочего стола (Д×Ш)</span><b>400×600 мм</b></div></div>
+<div class="vmc-specs"><div><span>Диаметр электрода</span><b>Φ0.3–Φ3.0 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="bh5040 f супердрели" data-title="BH5040 F" data-sortkey="0.3" data-electrode-diameter="Φ0.3–Φ3.0 мм" data-spindle-travel-z="400 мм" data-input-power="3.5 кВт" data-machine-weight="600 кг">
+<article class="vmc-card" data-name="bh5040 f супердрели" data-title="BH5040 F" data-sortkey="0.3" data-electrode-diameter="Φ0.3–Φ3.0 мм" data-max-current="30 А" data-machine-weight="600 кг">
 <a class="vmc-card-link" href="equipment-edm-bh5040-f.html" aria-label="BH5040 F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/bh5040-f.png" alt="BH5040 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Супердрели</small>
 <h3>BH5040 F</h3>
-<div class="vmc-specs"><div><span>Диаметр электрода</span><b>Φ0.3–Φ3.0 мм</b></div><div><span>Ход по оси Z</span><b>400 мм</b></div><div><span>Потребляемая мощность</span><b>3.5 кВт</b></div><div><span>Размер рабочего стола (Д×Ш)</span><b>440×630 мм</b></div></div>
+<div class="vmc-specs"><div><span>Диаметр электрода</span><b>Φ0.3–Φ3.0 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="cnc s-26 m супердрели" data-title="CNC S-26 M" data-sortkey="0.3" data-electrode-diameter="Ø0,3–3,0 мм" data-workpiece-weight-max="150 кг" data-input-power="3,5 кВА" data-machine-weight="900 кг">
+<article class="vmc-card" data-name="cnc s-26 m супердрели" data-title="CNC S-26 M" data-sortkey="0.3" data-electrode-diameter="Ø0,3–3,0 мм" data-max-workpiece-dims="450 × 300 × 300 мм" data-max-workpiece-weight="150 кг" data-max-current="30 А" data-machine-weight="900 кг" data-overall-dimensions="1370 × 1000 × 2200 мм">
 <a class="vmc-card-link" href="equipment-edm-cnc-s-26-m.html" aria-label="CNC S-26 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/cnc-s-26-m.png" alt="CNC S-26 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Супердрели</small>
 <h3>CNC S-26 M</h3>
-<div class="vmc-specs"><div><span>Диаметр электрода</span><b>Ø0,3–3,0 мм</b></div><div><span>Макс. масса заготовки</span><b>150 кг</b></div><div><span>Потребляемая мощность</span><b>3,5 кВА</b></div><div><span>Ход по осям X/Y/Z</span><b>280 × 230 × 350 мм</b></div></div>
+<div class="vmc-specs"><div><span>Диаметр электрода</span><b>Ø0,3–3,0 мм</b></div><div><span>Макс. габариты заготовки</span><b>450 × 300 × 300 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="cnc s-36 m супердрели" data-title="CNC S-36 M" data-sortkey="0.3" data-electrode-diameter="Ø0,3–3,0 мм" data-workpiece-weight-max="150 кг" data-input-power="3,5 кВА" data-machine-weight="1150 кг">
+<article class="vmc-card" data-name="cnc s-36 m супердрели" data-title="CNC S-36 M" data-sortkey="0.3" data-electrode-diameter="Ø0,3–3,0 мм" data-max-workpiece-dims="650 × 350 × 300 мм" data-max-workpiece-weight="150 кг" data-max-current="30 А" data-machine-weight="1150 кг" data-overall-dimensions="1490 × 1000 × 2200 мм">
 <a class="vmc-card-link" href="equipment-edm-cnc-s-36-m.html" aria-label="CNC S-36 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/cnc-s-36-m.png" alt="CNC S-36 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Супердрели</small>
 <h3>CNC S-36 M</h3>
-<div class="vmc-specs"><div><span>Диаметр электрода</span><b>Ø0,3–3,0 мм</b></div><div><span>Макс. масса заготовки</span><b>150 кг</b></div><div><span>Потребляемая мощность</span><b>3,5 кВА</b></div><div><span>Ход по осям X/Y/Z</span><b>380 × 280 × 350 мм</b></div></div>
+<div class="vmc-specs"><div><span>Диаметр электрода</span><b>Ø0,3–3,0 мм</b></div><div><span>Макс. габариты заготовки</span><b>650 × 350 × 300 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="cnc s-46 m супердрели" data-title="CNC S-46 M" data-sortkey="0.3" data-electrode-diameter="Ø0,3–3,0 мм" data-workpiece-weight-max="1300 кг" data-input-power="3,5 кВА" data-machine-weight="1820 кг">
+<article class="vmc-card" data-name="cnc s-46 m супердрели" data-title="CNC S-46 M" data-sortkey="0.3" data-electrode-diameter="Ø0,3–3,0 мм" data-max-workpiece-dims="750 × 400 × 300 мм" data-max-workpiece-weight="1300 кг" data-max-current="30 А" data-machine-weight="1820 кг" data-overall-dimensions="1900 × 1710 × 2325 мм">
 <a class="vmc-card-link" href="equipment-edm-cnc-s-46-m.html" aria-label="CNC S-46 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/cnc-s-46-m.png" alt="CNC S-46 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Супердрели</small>
 <h3>CNC S-46 M</h3>
-<div class="vmc-specs"><div><span>Диаметр электрода</span><b>Ø0,3–3,0 мм</b></div><div><span>Макс. масса заготовки</span><b>1300 кг</b></div><div><span>Потребляемая мощность</span><b>3,5 кВА</b></div><div><span>Ход по осям X/Y/Z</span><b>450 × 360 × 350 мм</b></div></div>
+<div class="vmc-specs"><div><span>Диаметр электрода</span><b>Ø0,3–3,0 мм</b></div><div><span>Макс. габариты заготовки</span><b>750 × 400 × 300 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="cnc4030 f супердрели" data-title="CNC4030 F" data-sortkey="0.2" data-electrode-diameter="Φ0.2–Φ3.0 мм" data-spindle-travel-z="350 мм" data-input-power="3.5 кВт" data-machine-weight="800 кг">
+<article class="vmc-card" data-name="cnc4030 f супердрели" data-title="CNC4030 F" data-sortkey="0.2" data-electrode-diameter="Φ0.2–Φ3.0 мм" data-max-current="30 А" data-machine-weight="800 кг">
 <a class="vmc-card-link" href="equipment-edm-cnc4030-f.html" aria-label="CNC4030 F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/cnc4030-f.png" alt="CNC4030 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Супердрели</small>
 <h3>CNC4030 F</h3>
-<div class="vmc-specs"><div><span>Диаметр электрода</span><b>Φ0.2–Φ3.0 мм</b></div><div><span>Ход по оси Z</span><b>350 мм</b></div><div><span>Потребляемая мощность</span><b>3.5 кВт</b></div><div><span>Размер рабочего стола (Д×Ш)</span><b>400×600 мм</b></div></div>
+<div class="vmc-specs"><div><span>Диаметр электрода</span><b>Φ0.2–Φ3.0 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="cnc5040 f супердрели" data-title="CNC5040 F" data-sortkey="0.2" data-electrode-diameter="Φ0.2–Φ3.0 мм" data-spindle-travel-z="350 мм" data-input-power="3.5 кВт" data-machine-weight="900 кг">
+<article class="vmc-card" data-name="cnc5040 f супердрели" data-title="CNC5040 F" data-sortkey="0.2" data-electrode-diameter="Φ0.2–Φ3.0 мм" data-max-current="30 А" data-machine-weight="900 кг">
 <a class="vmc-card-link" href="equipment-edm-cnc5040-f.html" aria-label="CNC5040 F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/cnc5040-f.png" alt="CNC5040 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Супердрели</small>
 <h3>CNC5040 F</h3>
-<div class="vmc-specs"><div><span>Диаметр электрода</span><b>Φ0.2–Φ3.0 мм</b></div><div><span>Ход по оси Z</span><b>350 мм</b></div><div><span>Потребляемая мощность</span><b>3.5 кВт</b></div><div><span>Размер рабочего стола (Д×Ш)</span><b>440×630 мм</b></div></div>
+<div class="vmc-specs"><div><span>Диаметр электрода</span><b>Φ0.2–Φ3.0 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="dznc s26 m супердрели" data-title="DZNC S26 M" data-sortkey="0.3" data-electrode-diameter="Ø0,3–3,0 мм" data-spindle-travel-z="350 мм" data-workpiece-weight-max="500 кг" data-input-power="3,5 кВА" data-machine-weight="900 кг">
+<article class="vmc-card" data-name="dznc s26 m супердрели" data-title="DZNC S26 M" data-sortkey="0.3" data-electrode-diameter="Ø0,3–3,0 мм" data-max-workpiece-dims="450 × 300 × 300 мм" data-max-workpiece-weight="500 кг" data-max-current="30 А" data-machine-weight="900 кг" data-overall-dimensions="1900 × 1350 × 2300 мм">
 <a class="vmc-card-link" href="equipment-edm-dznc-s26-m.html" aria-label="DZNC S26 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/dznc-s26-m.png" alt="DZNC S26 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Супердрели</small>
 <h3>DZNC S26 M</h3>
-<div class="vmc-specs"><div><span>Диаметр электрода</span><b>Ø0,3–3,0 мм</b></div><div><span>Ход по оси Z</span><b>350 мм</b></div><div><span>Макс. масса заготовки</span><b>500 кг</b></div><div><span>Потребляемая мощность</span><b>3,5 кВА</b></div></div>
+<div class="vmc-specs"><div><span>Диаметр электрода</span><b>Ø0,3–3,0 мм</b></div><div><span>Макс. габариты заготовки</span><b>450 × 300 × 300 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="dznc s36 m супердрели" data-title="DZNC S36 M" data-sortkey="0.3" data-electrode-diameter="Ø0,3–3,0 мм" data-spindle-travel-z="350 мм" data-workpiece-weight-max="800 кг" data-input-power="3,5 кВА" data-machine-weight="1150 кг">
+<article class="vmc-card" data-name="dznc s36 m супердрели" data-title="DZNC S36 M" data-sortkey="0.3" data-electrode-diameter="Ø0,3–3,0 мм" data-max-workpiece-dims="650 × 350 × 300 мм" data-max-workpiece-weight="800 кг" data-max-current="30 А" data-machine-weight="1150 кг" data-overall-dimensions="1900 × 1500 × 2600 мм">
 <a class="vmc-card-link" href="equipment-edm-dznc-s36-m.html" aria-label="DZNC S36 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/dznc-s36-m.png" alt="DZNC S36 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Супердрели</small>
 <h3>DZNC S36 M</h3>
-<div class="vmc-specs"><div><span>Диаметр электрода</span><b>Ø0,3–3,0 мм</b></div><div><span>Ход по оси Z</span><b>350 мм</b></div><div><span>Макс. масса заготовки</span><b>800 кг</b></div><div><span>Потребляемая мощность</span><b>3,5 кВА</b></div></div>
+<div class="vmc-specs"><div><span>Диаметр электрода</span><b>Ø0,3–3,0 мм</b></div><div><span>Макс. габариты заготовки</span><b>650 × 350 × 300 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="dznc s46 m супердрели" data-title="DZNC S46 M" data-sortkey="0.3" data-electrode-diameter="Ø0,3–3,0 мм" data-spindle-travel-z="350 мм" data-workpiece-weight-max="1300 кг" data-input-power="3,5 кВА" data-machine-weight="1820 кг">
+<article class="vmc-card" data-name="dznc s46 m супердрели" data-title="DZNC S46 M" data-sortkey="0.3" data-electrode-diameter="Ø0,3–3,0 мм" data-max-workpiece-dims="750 × 400 × 300 мм" data-max-workpiece-weight="1300 кг" data-max-current="30 А" data-machine-weight="1820 кг" data-overall-dimensions="2100 × 2800 × 2500 мм">
 <a class="vmc-card-link" href="equipment-edm-dznc-s46-m.html" aria-label="DZNC S46 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/dznc-s46-m.png" alt="DZNC S46 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Супердрели</small>
 <h3>DZNC S46 M</h3>
-<div class="vmc-specs"><div><span>Диаметр электрода</span><b>Ø0,3–3,0 мм</b></div><div><span>Ход по оси Z</span><b>350 мм</b></div><div><span>Макс. масса заготовки</span><b>1300 кг</b></div><div><span>Потребляемая мощность</span><b>3,5 кВА</b></div></div>
+<div class="vmc-specs"><div><span>Диаметр электрода</span><b>Ø0,3–3,0 мм</b></div><div><span>Макс. габариты заготовки</span><b>750 × 400 × 300 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="fx600 m супердрели" data-title="FX600 M" data-sortkey="45.0" data-input-power="45 кВА / 380 В" data-machine-weight="7000 кг">
+<article class="vmc-card" data-name="fx600 m супердрели" data-title="FX600 M" data-sortkey="45.0" data-max-workpiece-dims="Ø520 × 330 мм" data-machine-weight="7000 кг" data-overall-dimensions="1862 × 1380 × 2000 мм">
 <a class="vmc-card-link" href="equipment-edm-fx600-m.html" aria-label="FX600 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/fx600-m.png" alt="FX600 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Супердрели</small>
 <h3>FX600 M</h3>
-<div class="vmc-specs"><div><span>Потребляемая мощность</span><b>45 кВА / 380 В</b></div><div><span>Ходы X/Y/Z</span><b>620 × 520 × 460 мм</b></div><div><span>Диапазон наклона оси B</span><b>−40° ~ +110°</b></div><div><span>Макс. габариты заготовки</span><b>Ø520 × 330 мм</b></div></div>
+<div class="vmc-specs"><div><span>Макс. габариты заготовки</span><b>Ø520 × 330 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="sdr56 m супердрели" data-title="SDR56 M" data-sortkey="0.3" data-electrode-diameter="0,3–3,0 мм" data-workpiece-weight-max="1300 кг" data-machine-weight="2000 кг">
+<article class="vmc-card" data-name="sdr56 m супердрели" data-title="SDR56 M" data-sortkey="0.3" data-electrode-diameter="0,3–3,0 мм" data-max-workpiece-dims="800 × 750 × 300 мм" data-max-workpiece-weight="1300 кг" data-machine-weight="2000 кг" data-overall-dimensions="2200 × 2500 × 2600 мм">
 <a class="vmc-card-link" href="equipment-edm-sdr56-m.html" aria-label="SDR56 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/sdr56-m.png" alt="SDR56 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
 <small>Супердрели</small>
 <h3>SDR56 M</h3>
-<div class="vmc-specs"><div><span>Диаметр электрода</span><b>0,3–3,0 мм</b></div><div><span>Макс. масса заготовки</span><b>1300 кг</b></div><div><span>Ходы X/Y/Z</span><b>600 × 500 × 450 мм</b></div><div><span>Ход по оси W</span><b>300 мм</b></div></div>
+<div class="vmc-specs"><div><span>Диаметр электрода</span><b>0,3–3,0 мм</b></div><div><span>Макс. габариты заготовки</span><b>800 × 750 × 300 мм</b></div></div>
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
