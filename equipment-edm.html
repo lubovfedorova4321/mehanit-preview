@@ -779,18 +779,14 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <div class="eqcat-filter-backdrop" data-role="filter-backdrop"></div>
 <div class="g2-filter-head"><span>Фильтр</span><button type="button" class="g2-reset" data-role="reset"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg>Сбросить всё</button><button type="button" class="eqcat-filter-close" data-role="filter-close" aria-label="Закрыть фильтр">×</button></div>
 <label class="g2-search"><span class="g2-search-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span><input type="search" data-role="search" placeholder="Поиск по модели"/></label>
-<div class="g2-direct"><div class="g2-field"><strong>Макс. габариты заготовки</strong>
-<div class="vmc-range-row">
-<input type="number" placeholder="От" data-range="max-workpiece-dims" data-bound="min"/>
-<input type="number" placeholder="До" data-range="max-workpiece-dims" data-bound="max"/>
-</div></div><div class="g2-field"><strong>Размер стола</strong>
+<div class="g2-direct"><div class="g2-field"><strong>Размер стола</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="table-size" data-bound="min"/>
 <input type="number" placeholder="До" data-range="table-size" data-bound="max"/>
-</div></div><div class="g2-field"><strong>Перемещение по осям X и Y</strong>
+</div></div><div class="g2-field"><strong>Макс. масса заготовки</strong>
 <div class="vmc-range-row">
-<input type="number" placeholder="От" data-range="travel-xy" data-bound="min"/>
-<input type="number" placeholder="До" data-range="travel-xy" data-bound="max"/>
+<input type="number" placeholder="От" data-range="max-workpiece-weight" data-bound="min"/>
+<input type="number" placeholder="До" data-range="max-workpiece-weight" data-bound="max"/>
 </div></div></div>
 <details class="g2-group" open><summary>Дополнительные параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Диаметр проволоки</strong>
 <div class="vmc-range-row">
@@ -800,15 +796,18 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="cut-speed" data-bound="min"/>
 <input type="number" placeholder="До" data-range="cut-speed" data-bound="max"/>
-</div></div><div class="g2-field"><strong>Макс. масса заготовки</strong>
-<div class="vmc-range-row">
-<input type="number" placeholder="От" data-range="max-workpiece-weight" data-bound="min"/>
-<input type="number" placeholder="До" data-range="max-workpiece-weight" data-bound="max"/>
-</div></div></div></details>
-<details class="g2-group"><summary>Все параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Масса станка</strong>
+</div></div><div class="g2-field"><strong>Масса станка</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="machine-weight" data-bound="min"/>
 <input type="number" placeholder="До" data-range="machine-weight" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Макс. габариты заготовки</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="max-workpiece-dims" data-bound="min"/>
+<input type="number" placeholder="До" data-range="max-workpiece-dims" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Перемещение по осям X и Y</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="travel-xy" data-bound="min"/>
+<input type="number" placeholder="До" data-range="travel-xy" data-bound="max"/>
 </div></div></div></details>
 <div class="g2-apply-wrap">
 <button type="button" class="btn btn-ce g2-apply" data-role="apply">Показать <span data-role="preview">38</span> <span data-role="preview-word">моделей</span></button>
@@ -1218,18 +1217,14 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <div class="eqcat-filter-backdrop" data-role="filter-backdrop"></div>
 <div class="g2-filter-head"><span>Фильтр</span><button type="button" class="g2-reset" data-role="reset"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg>Сбросить всё</button><button type="button" class="eqcat-filter-close" data-role="filter-close" aria-label="Закрыть фильтр">×</button></div>
 <label class="g2-search"><span class="g2-search-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span><input type="search" data-role="search" placeholder="Поиск по модели"/></label>
-<div class="g2-direct"><div class="g2-field"><strong>Макс. габариты заготовки</strong>
-<div class="vmc-range-row">
-<input type="number" placeholder="От" data-range="max-workpiece-dims" data-bound="min"/>
-<input type="number" placeholder="До" data-range="max-workpiece-dims" data-bound="max"/>
-</div></div><div class="g2-field"><strong>Размер стола</strong>
+<div class="g2-direct"><div class="g2-field"><strong>Размер стола</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="table-size" data-bound="min"/>
 <input type="number" placeholder="До" data-range="table-size" data-bound="max"/>
-</div></div><div class="g2-field"><strong>Перемещение по осям X и Y</strong>
+</div></div><div class="g2-field"><strong>Макс. масса электрода</strong>
 <div class="vmc-range-row">
-<input type="number" placeholder="От" data-range="travel-xy" data-bound="min"/>
-<input type="number" placeholder="До" data-range="travel-xy" data-bound="max"/>
+<input type="number" placeholder="От" data-range="max-electrode-weight" data-bound="min"/>
+<input type="number" placeholder="До" data-range="max-electrode-weight" data-bound="max"/>
 </div></div><div class="g2-field"><label class="g2-check"><input type="checkbox" name="cnc-present" value="да"/><span>Наличие ЧПУ</span></label></div></div>
 <details class="g2-group" open><summary>Дополнительные параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Макс. масса заготовки</strong>
 <div class="vmc-range-row">
@@ -1239,15 +1234,31 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="max-current" data-bound="min"/>
 <input type="number" placeholder="До" data-range="max-current" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Грузоподъёмность стола</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="table-load-capacity" data-bound="min"/>
+<input type="number" placeholder="До" data-range="table-load-capacity" data-bound="max"/>
 </div></div><div class="g2-field"><strong>Масса станка</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="machine-weight" data-bound="min"/>
 <input type="number" placeholder="До" data-range="machine-weight" data-bound="max"/>
 </div></div></div></details>
-<details class="g2-group"><summary>Все параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Достигаемая шероховатость</strong>
+<details class="g2-group"><summary>Все параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Потребляемая мощность</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="power-consumption" data-bound="min"/>
+<input type="number" placeholder="До" data-range="power-consumption" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Достигаемая шероховатость</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="surface-roughness" data-bound="min"/>
 <input type="number" placeholder="До" data-range="surface-roughness" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Макс. габариты заготовки</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="max-workpiece-dims" data-bound="min"/>
+<input type="number" placeholder="До" data-range="max-workpiece-dims" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Перемещение по осям X и Y</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="travel-xy" data-bound="min"/>
+<input type="number" placeholder="До" data-range="travel-xy" data-bound="max"/>
 </div></div></div></details>
 <div class="g2-apply-wrap">
 <button type="button" class="btn btn-ce g2-apply" data-role="apply">Показать <span data-role="preview">61</span> <span data-role="preview-word">моделей</span></button>
@@ -1266,7 +1277,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 <div class="g2-fallback-note" data-role="fallback-note" hidden>Точных совпадений не нашлось — показаны ближайшие по параметрам модели.</div>
 <div class="vmc-grid">
-<article class="vmc-card" data-name="cnc-c26 m копировально-прошивочные станки" data-title="CNC-C26 M" data-sortkey="600.0" data-table-size="600 × 300 мм" data-travel-xy="280 × 230 × 150 мм" data-max-workpiece-weight="800 кг" data-max-current="30 А" data-machine-weight="1700 кг">
+<article class="vmc-card" data-name="cnc-c26 m копировально-прошивочные станки" data-title="CNC-C26 M" data-sortkey="600.0" data-table-size="600 × 300 мм" data-travel-xy="280 × 230 × 150 мм" data-max-workpiece-weight="800 кг" data-max-current="30 А" data-machine-weight="1700 кг" data-power-consumption="3 кВА">
 <a class="vmc-card-link" href="equipment-edm-cnc-c26-m.html" aria-label="CNC-C26 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/cnc-c26-m.png" alt="CNC-C26 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1276,7 +1287,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="cnc-c36 m копировально-прошивочные станки" data-title="CNC-C36 M" data-sortkey="650.0" data-max-workpiece-dims="1000 × 600 × 330 мм" data-table-size="650 × 350 мм" data-travel-xy="380 × 280 × 185 мм" data-max-workpiece-weight="1000 кг" data-max-current="50 А" data-machine-weight="2350 кг">
+<article class="vmc-card" data-name="cnc-c36 m копировально-прошивочные станки" data-title="CNC-C36 M" data-sortkey="650.0" data-max-workpiece-dims="1000 × 600 × 330 мм" data-table-size="650 × 350 мм" data-travel-xy="380 × 280 × 185 мм" data-max-workpiece-weight="1000 кг" data-max-current="50 А" data-machine-weight="2350 кг" data-max-electrode-weight="120 кг" data-power-consumption="4,5 кВА">
 <a class="vmc-card-link" href="equipment-edm-cnc-c36-m.html" aria-label="CNC-C36 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/cnc-c36-m.png" alt="CNC-C36 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1286,7 +1297,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="cnc-c54 m копировально-прошивочные станки" data-title="CNC-C54 M" data-sortkey="850.0" data-table-size="850 × 450 мм" data-travel-xy="480 × 380 × 185 мм" data-max-workpiece-weight="1300 кг" data-max-current="75 А" data-machine-weight="2450 кг">
+<article class="vmc-card" data-name="cnc-c54 m копировально-прошивочные станки" data-title="CNC-C54 M" data-sortkey="850.0" data-table-size="850 × 450 мм" data-travel-xy="480 × 380 × 185 мм" data-max-workpiece-weight="1300 кг" data-max-current="75 А" data-machine-weight="2450 кг" data-max-electrode-weight="180 кг" data-power-consumption="8 кВА">
 <a class="vmc-card-link" href="equipment-edm-cnc-c54-m.html" aria-label="CNC-C54 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/cnc-c54-m.png" alt="CNC-C54 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1296,7 +1307,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="cnc-p26 m копировально-прошивочные станки" data-title="CNC-P26 M" data-sortkey="600.0" data-max-workpiece-dims="750 × 500 × 240 мм" data-table-size="600 × 300 мм" data-travel-xy="280 × 230 мм" data-cnc-present="да" data-max-workpiece-weight="800 кг" data-max-current="30 А" data-machine-weight="1700 кг" data-surface-roughness="0,3 Ra">
+<article class="vmc-card" data-name="cnc-p26 m копировально-прошивочные станки" data-title="CNC-P26 M" data-sortkey="600.0" data-max-workpiece-dims="750 × 500 × 240 мм" data-table-size="600 × 300 мм" data-travel-xy="280 × 230 мм" data-cnc-present="да" data-max-workpiece-weight="800 кг" data-max-current="30 А" data-machine-weight="1700 кг" data-surface-roughness="0,3 Ra" data-max-electrode-weight="100 кг" data-power-consumption="3 кВА">
 <a class="vmc-card-link" href="equipment-edm-cnc-p26-m.html" aria-label="CNC-P26 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/cnc-p26-m.png" alt="CNC-P26 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1306,7 +1317,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="cnc-p36 m копировально-прошивочные станки" data-title="CNC-P36 M" data-sortkey="650.0" data-max-workpiece-dims="1000 × 600 × 330 мм" data-table-size="650 × 350 мм" data-travel-xy="380 × 280 мм" data-cnc-present="да" data-max-workpiece-weight="1000 кг" data-max-current="50 А" data-machine-weight="2350 кг" data-surface-roughness="0,3 Ra">
+<article class="vmc-card" data-name="cnc-p36 m копировально-прошивочные станки" data-title="CNC-P36 M" data-sortkey="650.0" data-max-workpiece-dims="1000 × 600 × 330 мм" data-table-size="650 × 350 мм" data-travel-xy="380 × 280 мм" data-cnc-present="да" data-max-workpiece-weight="1000 кг" data-max-current="50 А" data-machine-weight="2350 кг" data-surface-roughness="0,3 Ra" data-max-electrode-weight="120 кг" data-power-consumption="4,5 кВА">
 <a class="vmc-card-link" href="equipment-edm-cnc-p36-m.html" aria-label="CNC-P36 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/cnc-p36-m.png" alt="CNC-P36 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1316,7 +1327,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="cnc-p54 m копировально-прошивочные станки" data-title="CNC-P54 M" data-sortkey="850.0" data-max-workpiece-dims="1200 × 700 × 380 мм" data-table-size="850 × 450 мм" data-travel-xy="480 × 380 мм" data-cnc-present="да" data-max-workpiece-weight="1300 кг" data-max-current="75 А" data-machine-weight="2450 кг" data-surface-roughness="0,3 Ra">
+<article class="vmc-card" data-name="cnc-p54 m копировально-прошивочные станки" data-title="CNC-P54 M" data-sortkey="850.0" data-max-workpiece-dims="1200 × 700 × 380 мм" data-table-size="850 × 450 мм" data-travel-xy="480 × 380 мм" data-cnc-present="да" data-max-workpiece-weight="1300 кг" data-max-current="75 А" data-machine-weight="2450 кг" data-surface-roughness="0,3 Ra" data-max-electrode-weight="180 кг" data-power-consumption="8 кВА">
 <a class="vmc-card-link" href="equipment-edm-cnc-p54-m.html" aria-label="CNC-P54 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/cnc-p54-m.png" alt="CNC-P54 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1326,7 +1337,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="cnc-p56 m копировально-прошивочные станки" data-title="CNC-P56 M" data-sortkey="1000.0" data-max-workpiece-dims="1600 × 1000 × 650 мм" data-table-size="1000 × 550 мм" data-travel-xy="580 × 470 мм" data-cnc-present="да" data-max-workpiece-weight="1600 кг" data-max-current="75 А" data-machine-weight="3200 кг" data-surface-roughness="0,3 Ra">
+<article class="vmc-card" data-name="cnc-p56 m копировально-прошивочные станки" data-title="CNC-P56 M" data-sortkey="1000.0" data-max-workpiece-dims="1600 × 1000 × 650 мм" data-table-size="1000 × 550 мм" data-travel-xy="580 × 470 мм" data-cnc-present="да" data-max-workpiece-weight="1600 кг" data-max-current="75 А" data-machine-weight="3200 кг" data-surface-roughness="0,3 Ra" data-max-electrode-weight="300 кг" data-power-consumption="8 кВА">
 <a class="vmc-card-link" href="equipment-edm-cnc-p56-m.html" aria-label="CNC-P56 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/cnc-p56-m.png" alt="CNC-P56 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1336,7 +1347,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="cnc1260 f копировально-прошивочные станки" data-title="CNC1260 F" data-sortkey="1250.0" data-table-size="1250×800 мм" data-travel-xy="1200 (одинарн.) / 600 (сдвоен.) мм × 600 мм" data-max-current="30 А" data-machine-weight="5500 кг">
+<article class="vmc-card" data-name="cnc1260 f копировально-прошивочные станки" data-title="CNC1260 F" data-sortkey="1250.0" data-table-size="1250×800 мм" data-travel-xy="1200 (одинарн.) / 600 (сдвоен.) мм × 600 мм" data-max-current="30 А" data-machine-weight="5500 кг" data-max-electrode-weight="300 кг" data-table-load-capacity="3500 кг т">
 <a class="vmc-card-link" href="equipment-edm-cnc1260-f.html" aria-label="CNC1260 F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/cnc1260-f.png" alt="CNC1260 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1346,7 +1357,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="cnc1470 f копировально-прошивочные станки" data-title="CNC1470 F" data-sortkey="1500.0" data-table-size="1500×900 мм" data-travel-xy="1400 (одинарн.) / 850 (сдвоен.) мм × 700 мм" data-max-current="30 А" data-machine-weight="одинарн. 9000 / сдвоен. 11000 кг">
+<article class="vmc-card" data-name="cnc1470 f копировально-прошивочные станки" data-title="CNC1470 F" data-sortkey="1500.0" data-table-size="1500×900 мм" data-travel-xy="1400 (одинарн.) / 850 (сдвоен.) мм × 700 мм" data-max-current="30 А" data-machine-weight="одинарн. 9000 / сдвоен. 11000 кг" data-max-electrode-weight="400 кг" data-table-load-capacity="5000 кг т">
 <a class="vmc-card-link" href="equipment-edm-cnc1470-f.html" aria-label="CNC1470 F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/cnc1470-f.png" alt="CNC1470 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1356,7 +1367,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="cnc1880 f копировально-прошивочные станки" data-title="CNC1880 F" data-sortkey="2000.0" data-table-size="2000×1000 мм" data-travel-xy="1800 (одинарн.) / 1200 (сдвоен.) мм × 800 мм" data-max-current="30 А" data-machine-weight="одинарн. 13000 / сдвоен. 15000 кг">
+<article class="vmc-card" data-name="cnc1880 f копировально-прошивочные станки" data-title="CNC1880 F" data-sortkey="2000.0" data-table-size="2000×1000 мм" data-travel-xy="1800 (одинарн.) / 1200 (сдвоен.) мм × 800 мм" data-max-current="30 А" data-machine-weight="одинарн. 13000 / сдвоен. 15000 кг" data-max-electrode-weight="400 кг" data-table-load-capacity="6500 кг т">
 <a class="vmc-card-link" href="equipment-edm-cnc1880-f.html" aria-label="CNC1880 F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/cnc1880-f.png" alt="CNC1880 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1366,7 +1377,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="cnc2110 f копировально-прошивочные станки" data-title="CNC2110 F" data-sortkey="2500.0" data-table-size="2500×1200 мм" data-travel-xy="2300 (одинарн.) / 1450 (сдвоен.) мм × 900 мм" data-max-current="30 А" data-machine-weight="одинарн. 15000 / сдвоен. 17000 кг">
+<article class="vmc-card" data-name="cnc2110 f копировально-прошивочные станки" data-title="CNC2110 F" data-sortkey="2500.0" data-table-size="2500×1200 мм" data-travel-xy="2300 (одинарн.) / 1450 (сдвоен.) мм × 900 мм" data-max-current="30 А" data-machine-weight="одинарн. 15000 / сдвоен. 17000 кг" data-max-electrode-weight="450 кг" data-table-load-capacity="8000 кг т">
 <a class="vmc-card-link" href="equipment-edm-cnc2110-f.html" aria-label="CNC2110 F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/cnc2110-f.png" alt="CNC2110 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1376,7 +1387,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="cnc2510 f копировально-прошивочные станки" data-title="CNC2510 F" data-sortkey="2700.0" data-table-size="2700×1200 мм" data-travel-xy="1750 (сдвоен.) мм × 900 мм" data-max-current="30 А" data-machine-weight="сдвоен. 17000 кг">
+<article class="vmc-card" data-name="cnc2510 f копировально-прошивочные станки" data-title="CNC2510 F" data-sortkey="2700.0" data-table-size="2700×1200 мм" data-travel-xy="1750 (сдвоен.) мм × 900 мм" data-max-current="30 А" data-machine-weight="сдвоен. 17000 кг" data-max-electrode-weight="450 кг" data-table-load-capacity="10000 кг т">
 <a class="vmc-card-link" href="equipment-edm-cnc2510-f.html" aria-label="CNC2510 F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/cnc2510-f.png" alt="CNC2510 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1386,7 +1397,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="cnc3110 f копировально-прошивочные станки" data-title="CNC3110 F" data-sortkey="3200.0" data-table-size="3200×1200 мм" data-travel-xy="2400 (сдвоен.) мм × 900 мм" data-max-current="30 А" data-machine-weight="сдвоен. 25000 кг">
+<article class="vmc-card" data-name="cnc3110 f копировально-прошивочные станки" data-title="CNC3110 F" data-sortkey="3200.0" data-table-size="3200×1200 мм" data-travel-xy="2400 (сдвоен.) мм × 900 мм" data-max-current="30 А" data-machine-weight="сдвоен. 25000 кг" data-max-electrode-weight="450 кг" data-table-load-capacity="15000 кг т">
 <a class="vmc-card-link" href="equipment-edm-cnc3110-f.html" aria-label="CNC3110 F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/cnc3110-f.png" alt="CNC3110 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1396,7 +1407,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="cnc320j f копировально-прошивочные станки" data-title="CNC320J F" data-sortkey="500.0" data-table-size="500×300 мм" data-travel-xy="300 мм × 200 мм" data-max-current="30 А" data-machine-weight="1350 кг">
+<article class="vmc-card" data-name="cnc320j f копировально-прошивочные станки" data-title="CNC320J F" data-sortkey="500.0" data-table-size="500×300 мм" data-travel-xy="300 мм × 200 мм" data-max-current="30 А" data-machine-weight="1350 кг" data-max-electrode-weight="50 кг" data-table-load-capacity="400 кг т">
 <a class="vmc-card-link" href="equipment-edm-cnc320j-f.html" aria-label="CNC320J F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/cnc320j-f.png" alt="CNC320J F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1406,7 +1417,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="cnc430 f копировально-прошивочные станки" data-title="CNC430 F" data-sortkey="600.0" data-table-size="600×400 мм" data-travel-xy="400 мм × 300 мм" data-max-current="30 А" data-machine-weight="1600 кг">
+<article class="vmc-card" data-name="cnc430 f копировально-прошивочные станки" data-title="CNC430 F" data-sortkey="600.0" data-table-size="600×400 мм" data-travel-xy="400 мм × 300 мм" data-max-current="30 А" data-machine-weight="1600 кг" data-max-electrode-weight="50 кг" data-table-load-capacity="400 кг т">
 <a class="vmc-card-link" href="equipment-edm-cnc430-f.html" aria-label="CNC430 F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/cnc430-f.png" alt="CNC430 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1416,7 +1427,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="cnc430-s f копировально-прошивочные станки" data-title="CNC430-S F" data-sortkey="560.0" data-table-size="560×420 мм" data-travel-xy="400 мм × 300 мм" data-max-current="30 А" data-machine-weight="3500 кг">
+<article class="vmc-card" data-name="cnc430-s f копировально-прошивочные станки" data-title="CNC430-S F" data-sortkey="560.0" data-table-size="560×420 мм" data-travel-xy="400 мм × 300 мм" data-max-current="30 А" data-machine-weight="3500 кг" data-max-electrode-weight="60 кг" data-table-load-capacity="1200 кг т">
 <a class="vmc-card-link" href="equipment-edm-cnc430-s-f.html" aria-label="CNC430-S F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/cnc430-s-f.png" alt="CNC430-S F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1426,7 +1437,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="cnc450 f копировально-прошивочные станки" data-title="CNC450 F" data-sortkey="700.0" data-table-size="700×450 мм" data-travel-xy="450 мм × 350 мм" data-max-current="30 А" data-machine-weight="2100 кг">
+<article class="vmc-card" data-name="cnc450 f копировально-прошивочные станки" data-title="CNC450 F" data-sortkey="700.0" data-table-size="700×450 мм" data-travel-xy="450 мм × 350 мм" data-max-current="30 А" data-machine-weight="2100 кг" data-max-electrode-weight="75 кг" data-table-load-capacity="500 кг т">
 <a class="vmc-card-link" href="equipment-edm-cnc450-f.html" aria-label="CNC450 F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/cnc450-f.png" alt="CNC450 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1436,7 +1447,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="cnc450j f копировально-прошивочные станки" data-title="CNC450J F" data-sortkey="700.0" data-table-size="700×450 мм" data-travel-xy="450 мм × 350 мм" data-max-current="30 А" data-machine-weight="1600 кг">
+<article class="vmc-card" data-name="cnc450j f копировально-прошивочные станки" data-title="CNC450J F" data-sortkey="700.0" data-table-size="700×450 мм" data-travel-xy="450 мм × 350 мм" data-max-current="30 А" data-machine-weight="1600 кг" data-max-electrode-weight="75 кг" data-table-load-capacity="600 кг т">
 <a class="vmc-card-link" href="equipment-edm-cnc450j-f.html" aria-label="CNC450J F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/cnc450j-f.png" alt="CNC450J F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1446,7 +1457,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="cnc540 f копировально-прошивочные станки" data-title="CNC540 F" data-sortkey="800.0" data-table-size="800×500 мм" data-travel-xy="500 мм × 400 мм" data-max-current="30 А" data-machine-weight="3000 кг">
+<article class="vmc-card" data-name="cnc540 f копировально-прошивочные станки" data-title="CNC540 F" data-sortkey="800.0" data-table-size="800×500 мм" data-travel-xy="500 мм × 400 мм" data-max-current="30 А" data-machine-weight="3000 кг" data-max-electrode-weight="150 кг" data-table-load-capacity="1800 кг т">
 <a class="vmc-card-link" href="equipment-edm-cnc540-f.html" aria-label="CNC540 F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/cnc540-f.png" alt="CNC540 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1456,7 +1467,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="cnc540-s f копировально-прошивочные станки" data-title="CNC540-S F" data-sortkey="700.0" data-table-size="700×400 мм" data-travel-xy="500 мм × 400 мм" data-max-current="30 А" data-machine-weight="3300 кг">
+<article class="vmc-card" data-name="cnc540-s f копировально-прошивочные станки" data-title="CNC540-S F" data-sortkey="700.0" data-table-size="700×400 мм" data-travel-xy="500 мм × 400 мм" data-max-current="30 А" data-machine-weight="3300 кг" data-max-electrode-weight="60 кг" data-table-load-capacity="1500 кг т">
 <a class="vmc-card-link" href="equipment-edm-cnc540-s-f.html" aria-label="CNC540-S F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/cnc540-s-f.png" alt="CNC540-S F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1466,7 +1477,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="cnc540j f копировально-прошивочные станки" data-title="CNC540J F" data-sortkey="800.0" data-table-size="800×500 мм" data-travel-xy="500 мм × 400 мм" data-max-current="30 А" data-machine-weight="2200 кг">
+<article class="vmc-card" data-name="cnc540j f копировально-прошивочные станки" data-title="CNC540J F" data-sortkey="800.0" data-table-size="800×500 мм" data-travel-xy="500 мм × 400 мм" data-max-current="30 А" data-machine-weight="2200 кг" data-max-electrode-weight="75 кг" data-table-load-capacity="800 кг т">
 <a class="vmc-card-link" href="equipment-edm-cnc540j-f.html" aria-label="CNC540J F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/cnc540j-f.png" alt="CNC540J F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1476,7 +1487,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="cnc640 f копировально-прошивочные станки" data-title="CNC640 F" data-sortkey="900.0" data-table-size="900×500 мм" data-travel-xy="600 мм × 400 мм" data-max-current="30 А" data-machine-weight="3700 кг">
+<article class="vmc-card" data-name="cnc640 f копировально-прошивочные станки" data-title="CNC640 F" data-sortkey="900.0" data-table-size="900×500 мм" data-travel-xy="600 мм × 400 мм" data-max-current="30 А" data-machine-weight="3700 кг" data-max-electrode-weight="150 кг" data-table-load-capacity="2000 кг т">
 <a class="vmc-card-link" href="equipment-edm-cnc640-f.html" aria-label="CNC640 F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/cnc640-f.png" alt="CNC640 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1486,7 +1497,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="cnc640-s f копировально-прошивочные станки" data-title="CNC640-S F" data-sortkey="800.0" data-table-size="800×550 мм" data-travel-xy="600 мм × 500 мм" data-max-current="30 А" data-machine-weight="4800 кг">
+<article class="vmc-card" data-name="cnc640-s f копировально-прошивочные станки" data-title="CNC640-S F" data-sortkey="800.0" data-table-size="800×550 мм" data-travel-xy="600 мм × 500 мм" data-max-current="30 А" data-machine-weight="4800 кг" data-max-electrode-weight="80 кг" data-table-load-capacity="1500 кг т">
 <a class="vmc-card-link" href="equipment-edm-cnc640-s-f.html" aria-label="CNC640-S F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/cnc640-s-f.png" alt="CNC640-S F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1496,7 +1507,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="cnc850 f копировально-прошивочные станки" data-title="CNC850 F" data-sortkey="1050.0" data-table-size="1050×600 мм" data-travel-xy="800 мм × 500 мм" data-max-current="30 А" data-machine-weight="4500 кг">
+<article class="vmc-card" data-name="cnc850 f копировально-прошивочные станки" data-title="CNC850 F" data-sortkey="1050.0" data-table-size="1050×600 мм" data-travel-xy="800 мм × 500 мм" data-max-current="30 А" data-machine-weight="4500 кг" data-max-electrode-weight="200 кг" data-table-load-capacity="3000 кг т">
 <a class="vmc-card-link" href="equipment-edm-cnc850-f.html" aria-label="CNC850 F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/cnc850-f.png" alt="CNC850 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1506,7 +1517,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="cnc850-s f копировально-прошивочные станки" data-title="CNC850-S F" data-sortkey="1000.0" data-table-size="1000×600 мм" data-travel-xy="800 мм × 500 мм" data-max-current="30 А" data-machine-weight="6000 кг">
+<article class="vmc-card" data-name="cnc850-s f копировально-прошивочные станки" data-title="CNC850-S F" data-sortkey="1000.0" data-table-size="1000×600 мм" data-travel-xy="800 мм × 500 мм" data-max-current="30 А" data-machine-weight="6000 кг" data-max-electrode-weight="80 кг" data-table-load-capacity="1800 кг т">
 <a class="vmc-card-link" href="equipment-edm-cnc850-s-f.html" aria-label="CNC850-S F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/cnc850-s-f.png" alt="CNC850-S F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1516,7 +1527,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="p207 cnc m копировально-прошивочные станки" data-title="P207 CNC M" data-sortkey="1600.0" data-max-workpiece-dims="3100х1400х630 мм" data-table-size="1600х950 мм" data-travel-xy="2000х700 мм" data-cnc-present="да" data-max-workpiece-weight="8000 кг" data-max-current="150 А" data-machine-weight="8800 кг" data-surface-roughness="0,7 Ra">
+<article class="vmc-card" data-name="p207 cnc m копировально-прошивочные станки" data-title="P207 CNC M" data-sortkey="1600.0" data-max-workpiece-dims="3100х1400х630 мм" data-table-size="1600х950 мм" data-travel-xy="2000х700 мм" data-cnc-present="да" data-max-workpiece-weight="8000 кг" data-max-current="150 А" data-machine-weight="8800 кг" data-surface-roughness="0,7 Ra" data-max-electrode-weight="500 кг" data-power-consumption="16 кВА">
 <a class="vmc-card-link" href="equipment-edm-p207-cnc-m.html" aria-label="P207 CNC M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/p207-cnc-m.png" alt="P207 CNC M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1526,7 +1537,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="p307 cnc m копировально-прошивочные станки" data-title="P307 CNC M" data-sortkey="500.0" data-max-workpiece-dims="4000х1450х630 мм" data-travel-xy="3000х700 мм" data-cnc-present="да" data-max-workpiece-weight="16000 кг" data-max-current="150 А" data-machine-weight="16050(S)/18550(D) кг" data-surface-roughness="0,7 Ra">
+<article class="vmc-card" data-name="p307 cnc m копировально-прошивочные станки" data-title="P307 CNC M" data-sortkey="500.0" data-max-workpiece-dims="4000х1450х630 мм" data-travel-xy="3000х700 мм" data-cnc-present="да" data-max-workpiece-weight="16000 кг" data-max-current="150 А" data-machine-weight="16050(S)/18550(D) кг" data-surface-roughness="0,7 Ra" data-max-electrode-weight="500 кг" data-power-consumption="16 кВА">
 <a class="vmc-card-link" href="equipment-edm-p307-cnc-m.html" aria-label="P307 CNC M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/p307-cnc-m.png" alt="P307 CNC M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1536,7 +1547,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="p36 cnc m копировально-прошивочные станки" data-title="P36 CNC M" data-sortkey="120.0" data-max-workpiece-dims="1000x600x330 мм" data-table-size="650х350 мм" data-travel-xy="380x280 мм" data-cnc-present="да" data-max-workpiece-weight="1000 кг" data-max-current="50 А" data-machine-weight="2350 кг" data-surface-roughness="0,3 Ra">
+<article class="vmc-card" data-name="p36 cnc m копировально-прошивочные станки" data-title="P36 CNC M" data-sortkey="120.0" data-max-workpiece-dims="1000x600x330 мм" data-table-size="650х350 мм" data-travel-xy="380x280 мм" data-cnc-present="да" data-max-workpiece-weight="1000 кг" data-max-current="50 А" data-machine-weight="2350 кг" data-surface-roughness="0,3 Ra" data-max-electrode-weight="120 кг" data-power-consumption="4,5 кВА">
 <a class="vmc-card-link" href="equipment-edm-p36-cnc-m.html" aria-label="P36 CNC M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/p36-cnc-m.png" alt="P36 CNC M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1546,7 +1557,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="p36 znc m копировально-прошивочные станки" data-title="P36 ZNC M" data-sortkey="120.0" data-max-workpiece-dims="1000x600x330 мм" data-table-size="650х350 мм" data-travel-xy="400x300 мм" data-cnc-present="да" data-max-workpiece-weight="1000 кг" data-max-current="50 А" data-machine-weight="2350 кг" data-surface-roughness="0,3 Ra">
+<article class="vmc-card" data-name="p36 znc m копировально-прошивочные станки" data-title="P36 ZNC M" data-sortkey="120.0" data-max-workpiece-dims="1000x600x330 мм" data-table-size="650х350 мм" data-travel-xy="400x300 мм" data-cnc-present="да" data-max-workpiece-weight="1000 кг" data-max-current="50 А" data-machine-weight="2350 кг" data-surface-roughness="0,3 Ra" data-max-electrode-weight="120 кг" data-power-consumption="4,5 кВА">
 <a class="vmc-card-link" href="equipment-edm-p36-znc-m.html" aria-label="P36 ZNC M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/p36-znc-m.png" alt="P36 ZNC M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1556,7 +1567,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="p40 cnc m копировально-прошивочные станки" data-title="P40 CNC M" data-sortkey="300.0" data-max-workpiece-dims="1200х750х430 мм" data-travel-xy="400х300 мм" data-cnc-present="да" data-max-workpiece-weight="2000 кг" data-max-current="75 А" data-machine-weight="2000 кг" data-surface-roughness="0,3 Ra">
+<article class="vmc-card" data-name="p40 cnc m копировально-прошивочные станки" data-title="P40 CNC M" data-sortkey="300.0" data-max-workpiece-dims="1200х750х430 мм" data-travel-xy="400х300 мм" data-cnc-present="да" data-max-workpiece-weight="2000 кг" data-max-current="75 А" data-machine-weight="2000 кг" data-surface-roughness="0,3 Ra" data-max-electrode-weight="300 кг" data-power-consumption="8 кВА">
 <a class="vmc-card-link" href="equipment-edm-p40-cnc-m.html" aria-label="P40 CNC M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/p40-cnc-m.png" alt="P40 CNC M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1566,7 +1577,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="p50 cnc m копировально-прошивочные станки" data-title="P50 CNC M" data-sortkey="300.0" data-max-workpiece-dims="1400х970х570 мм" data-table-size="800х650 мм" data-travel-xy="600х500 мм" data-cnc-present="да" data-max-workpiece-weight="2500 кг" data-max-current="75 А" data-machine-weight="3200 кг" data-surface-roughness="0,3 Ra">
+<article class="vmc-card" data-name="p50 cnc m копировально-прошивочные станки" data-title="P50 CNC M" data-sortkey="300.0" data-max-workpiece-dims="1400х970х570 мм" data-table-size="800х650 мм" data-travel-xy="600х500 мм" data-cnc-present="да" data-max-workpiece-weight="2500 кг" data-max-current="75 А" data-machine-weight="3200 кг" data-surface-roughness="0,3 Ra" data-max-electrode-weight="300 кг" data-power-consumption="8 кВА">
 <a class="vmc-card-link" href="equipment-edm-p50-cnc-m.html" aria-label="P50 CNC M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/p50-cnc-m.png" alt="P50 CNC M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1576,7 +1587,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="p54 cnc m копировально-прошивочные станки" data-title="P54 CNC M" data-sortkey="850.0" data-max-workpiece-dims="1200x700x380 мм" data-table-size="850x450 мм" data-travel-xy="480x380 мм" data-cnc-present="да" data-max-workpiece-weight="1300 кг" data-max-current="75 А" data-machine-weight="2450 кг" data-surface-roughness="0,3 Ra">
+<article class="vmc-card" data-name="p54 cnc m копировально-прошивочные станки" data-title="P54 CNC M" data-sortkey="850.0" data-max-workpiece-dims="1200x700x380 мм" data-table-size="850x450 мм" data-travel-xy="480x380 мм" data-cnc-present="да" data-max-workpiece-weight="1300 кг" data-max-current="75 А" data-machine-weight="2450 кг" data-surface-roughness="0,3 Ra" data-max-electrode-weight="180 кг" data-power-consumption="8 кВА">
 <a class="vmc-card-link" href="equipment-edm-p54-cnc-m.html" aria-label="P54 CNC M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/p54-cnc-m.png" alt="P54 CNC M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1586,7 +1597,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="p54 znc m копировально-прошивочные станки" data-title="P54 ZNC M" data-sortkey="850.0" data-max-workpiece-dims="1200x700x380 мм" data-table-size="850x450 мм" data-travel-xy="500x400 мм" data-cnc-present="да" data-max-workpiece-weight="1300 кг" data-max-current="75 А" data-machine-weight="2450 кг" data-surface-roughness="0.3 Ra">
+<article class="vmc-card" data-name="p54 znc m копировально-прошивочные станки" data-title="P54 ZNC M" data-sortkey="850.0" data-max-workpiece-dims="1200x700x380 мм" data-table-size="850x450 мм" data-travel-xy="500x400 мм" data-cnc-present="да" data-max-workpiece-weight="1300 кг" data-max-current="75 А" data-machine-weight="2450 кг" data-surface-roughness="0.3 Ra" data-max-electrode-weight="180 кг" data-power-consumption="8 кВА">
 <a class="vmc-card-link" href="equipment-edm-p54-znc-m.html" aria-label="P54 ZNC M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/p54-znc-m.png" alt="P54 ZNC M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1596,7 +1607,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="p56 cnc m копировально-прошивочные станки" data-title="P56 CNC M" data-sortkey="300.0" data-max-workpiece-dims="1600x1000x650 мм" data-table-size="1000x550 мм" data-travel-xy="580x470 мм" data-cnc-present="да" data-max-workpiece-weight="1600 кг" data-max-current="75 А" data-machine-weight="3200 кг" data-surface-roughness="0,3 Ra">
+<article class="vmc-card" data-name="p56 cnc m копировально-прошивочные станки" data-title="P56 CNC M" data-sortkey="300.0" data-max-workpiece-dims="1600x1000x650 мм" data-table-size="1000x550 мм" data-travel-xy="580x470 мм" data-cnc-present="да" data-max-workpiece-weight="1600 кг" data-max-current="75 А" data-machine-weight="3200 кг" data-surface-roughness="0,3 Ra" data-max-electrode-weight="300 кг" data-power-consumption="8 кВА">
 <a class="vmc-card-link" href="equipment-edm-p56-cnc-m.html" aria-label="P56 CNC M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/p56-cnc-m.png" alt="P56 CNC M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1606,7 +1617,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="p56 znc m копировально-прошивочные станки" data-title="P56 ZNC M" data-sortkey="300.0" data-max-workpiece-dims="1600x1000x650 мм" data-table-size="1000x550 мм" data-travel-xy="580x470 мм" data-cnc-present="да" data-max-workpiece-weight="1600 кг" data-max-current="75 А" data-machine-weight="3200 кг" data-surface-roughness="0,3 Ra">
+<article class="vmc-card" data-name="p56 znc m копировально-прошивочные станки" data-title="P56 ZNC M" data-sortkey="300.0" data-max-workpiece-dims="1600x1000x650 мм" data-table-size="1000x550 мм" data-travel-xy="580x470 мм" data-cnc-present="да" data-max-workpiece-weight="1600 кг" data-max-current="75 А" data-machine-weight="3200 кг" data-surface-roughness="0,3 Ra" data-max-electrode-weight="300 кг" data-power-consumption="8 кВА">
 <a class="vmc-card-link" href="equipment-edm-p56-znc-m.html" aria-label="P56 ZNC M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/p56-znc-m.png" alt="P56 ZNC M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1616,7 +1627,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="p58 cnc m копировально-прошивочные станки" data-title="P58 CNC M" data-sortkey="300.0" data-max-workpiece-dims="1480х1050х510 мм" data-travel-xy="800x500 мм" data-cnc-present="да" data-max-workpiece-weight="4000 кг" data-max-current="75 А" data-machine-weight="4200 кг" data-surface-roughness="0,3 мкм Ra">
+<article class="vmc-card" data-name="p58 cnc m копировально-прошивочные станки" data-title="P58 CNC M" data-sortkey="300.0" data-max-workpiece-dims="1480х1050х510 мм" data-travel-xy="800x500 мм" data-cnc-present="да" data-max-workpiece-weight="4000 кг" data-max-current="75 А" data-machine-weight="4200 кг" data-surface-roughness="0,3 мкм Ra" data-max-electrode-weight="300 кг" data-power-consumption="8 кВА">
 <a class="vmc-card-link" href="equipment-edm-p58-cnc-m.html" aria-label="P58 CNC M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/p58-cnc-m.png" alt="P58 CNC M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1626,7 +1637,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="p66 cnc m копировально-прошивочные станки" data-title="P66 CNC M" data-sortkey="500.0" data-max-workpiece-dims="2100х1150х630 мм" data-table-size="1600х950 мм" data-travel-xy="1300х700 мм" data-cnc-present="да" data-max-workpiece-weight="8000 кг" data-max-current="100 А" data-machine-weight="8050 кг" data-surface-roughness="0,5 Ra">
+<article class="vmc-card" data-name="p66 cnc m копировально-прошивочные станки" data-title="P66 CNC M" data-sortkey="500.0" data-max-workpiece-dims="2100х1150х630 мм" data-table-size="1600х950 мм" data-travel-xy="1300х700 мм" data-cnc-present="да" data-max-workpiece-weight="8000 кг" data-max-current="100 А" data-machine-weight="8050 кг" data-surface-roughness="0,5 Ra" data-max-electrode-weight="500 кг" data-power-consumption="10 кВА">
 <a class="vmc-card-link" href="equipment-edm-p66-cnc-m.html" aria-label="P66 CNC M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/p66-cnc-m.png" alt="P66 CNC M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1636,7 +1647,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="r26 cnc m копировально-прошивочные станки" data-title="R26 CNC M" data-sortkey="600.0" data-max-workpiece-dims="750х500х240 мм" data-table-size="600х300 мм" data-travel-xy="280x230 мм" data-cnc-present="да" data-max-workpiece-weight="800 кг" data-max-current="30 А" data-machine-weight="1700 кг" data-surface-roughness="0,3 Ra">
+<article class="vmc-card" data-name="r26 cnc m копировально-прошивочные станки" data-title="R26 CNC M" data-sortkey="600.0" data-max-workpiece-dims="750х500х240 мм" data-table-size="600х300 мм" data-travel-xy="280x230 мм" data-cnc-present="да" data-max-workpiece-weight="800 кг" data-max-current="30 А" data-machine-weight="1700 кг" data-surface-roughness="0,3 Ra" data-max-electrode-weight="100 кг" data-power-consumption="3 кВА">
 <a class="vmc-card-link" href="equipment-edm-r26-cnc-m.html" aria-label="R26 CNC M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/r26-cnc-m.png" alt="R26 CNC M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1646,7 +1657,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="r26 znc m копировально-прошивочные станки" data-title="R26 ZNC M" data-sortkey="600.0" data-max-workpiece-dims="750х500х240 мм" data-table-size="600x300 мм" data-travel-xy="300 х 250 мм" data-cnc-present="да" data-max-workpiece-weight="800 кг" data-max-current="30 А" data-machine-weight="1700 кг" data-surface-roughness="0.3 Ra">
+<article class="vmc-card" data-name="r26 znc m копировально-прошивочные станки" data-title="R26 ZNC M" data-sortkey="600.0" data-max-workpiece-dims="750х500х240 мм" data-table-size="600x300 мм" data-travel-xy="300 х 250 мм" data-cnc-present="да" data-max-workpiece-weight="800 кг" data-max-current="30 А" data-machine-weight="1700 кг" data-surface-roughness="0.3 Ra" data-max-electrode-weight="100 кг" data-power-consumption="3 кВА">
 <a class="vmc-card-link" href="equipment-edm-r26-znc-m.html" aria-label="R26 ZNC M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/r26-znc-m.png" alt="R26 ZNC M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1686,7 +1697,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="s26-r26 m копировально-прошивочные станки" data-title="S26-R26 M" data-sortkey="600.0" data-table-size="600×300 мм" data-travel-xy="280×230 мм" data-cnc-present="да" data-max-current="30 А" data-machine-weight="1700 кг" data-surface-roughness="0,3 Ra">
+<article class="vmc-card" data-name="s26-r26 m копировально-прошивочные станки" data-title="S26-R26 M" data-sortkey="600.0" data-table-size="600×300 мм" data-travel-xy="280×230 мм" data-cnc-present="да" data-max-current="30 А" data-machine-weight="1700 кг" data-surface-roughness="0,3 Ra" data-max-electrode-weight="100 кг" data-power-consumption="3,0 кВА">
 <a class="vmc-card-link" href="equipment-edm-s26-r26-m.html" aria-label="S26-R26 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/s26-r26-m.png" alt="S26-R26 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1696,7 +1707,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="s36-r36 m копировально-прошивочные станки" data-title="S36-R36 M" data-sortkey="0"  data-table-size="650×350 мм" data-travel-xy="380×280 мм" data-cnc-present="да" data-max-current="50 А" data-machine-weight="2350 кг" data-surface-roughness="0,3 Ra">
+<article class="vmc-card" data-name="s36-r36 m копировально-прошивочные станки" data-title="S36-R36 M" data-sortkey="0"  data-table-size="650×350 мм" data-travel-xy="380×280 мм" data-cnc-present="да" data-max-current="50 А" data-machine-weight="2350 кг" data-surface-roughness="0,3 Ra" data-max-electrode-weight="120 кг" data-power-consumption="4,5 кВА">
 <a class="vmc-card-link" href="equipment-edm-s36-r36-m.html" aria-label="S36-R36 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/s36-r36-m.png" alt="S36-R36 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1706,7 +1717,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="s54-r54 m копировально-прошивочные станки" data-title="S54-R54 M" data-sortkey="850.0" data-table-size="850×450 мм" data-travel-xy="480×380 мм" data-cnc-present="да" data-max-current="75 А" data-machine-weight="2450 кг" data-surface-roughness="0,3 Ra">
+<article class="vmc-card" data-name="s54-r54 m копировально-прошивочные станки" data-title="S54-R54 M" data-sortkey="850.0" data-table-size="850×450 мм" data-travel-xy="480×380 мм" data-cnc-present="да" data-max-current="75 А" data-machine-weight="2450 кг" data-surface-roughness="0,3 Ra" data-max-electrode-weight="180 кг" data-power-consumption="8 кВА">
 <a class="vmc-card-link" href="equipment-edm-s54-r54-m.html" aria-label="S54-R54 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/s54-r54-m.png" alt="S54-R54 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1716,7 +1727,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="znc-c26 m копировально-прошивочные станки" data-title="ZNC-C26 M" data-sortkey="100.0" data-table-size="600 × 300 мм" data-max-workpiece-weight="800 кг" data-max-current="30 А" data-machine-weight="1700 кг">
+<article class="vmc-card" data-name="znc-c26 m копировально-прошивочные станки" data-title="ZNC-C26 M" data-sortkey="100.0" data-table-size="600 × 300 мм" data-max-workpiece-weight="800 кг" data-max-current="30 А" data-machine-weight="1700 кг" data-max-electrode-weight="100 кг" data-power-consumption="3 кВА">
 <a class="vmc-card-link" href="equipment-edm-znc-c26-m.html" aria-label="ZNC-C26 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/znc-c26-m.png" alt="ZNC-C26 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1726,7 +1737,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="znc-c36 m копировально-прошивочные станки" data-title="ZNC-C36 M" data-sortkey="650.0" data-table-size="650 × 350 мм" data-travel-xy="400 × 300 × 185 мм" data-max-workpiece-weight="1000 кг" data-max-current="50 А" data-machine-weight="2350 кг">
+<article class="vmc-card" data-name="znc-c36 m копировально-прошивочные станки" data-title="ZNC-C36 M" data-sortkey="650.0" data-table-size="650 × 350 мм" data-travel-xy="400 × 300 × 185 мм" data-max-workpiece-weight="1000 кг" data-max-current="50 А" data-machine-weight="2350 кг" data-max-electrode-weight="120 кг" data-power-consumption="4,5 кВА">
 <a class="vmc-card-link" href="equipment-edm-znc-c36-m.html" aria-label="ZNC-C36 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/znc-c36-m.png" alt="ZNC-C36 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1736,7 +1747,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="znc-c54 m копировально-прошивочные станки" data-title="ZNC-C54 M" data-sortkey="850.0" data-max-workpiece-dims="достаточный для стола 850×450 мм" data-table-size="850 × 450 мм" data-travel-xy="500 × 400 × 185 мм" data-max-workpiece-weight="1300 кг" data-max-current="75 А" data-machine-weight="2450 кг">
+<article class="vmc-card" data-name="znc-c54 m копировально-прошивочные станки" data-title="ZNC-C54 M" data-sortkey="850.0" data-max-workpiece-dims="достаточный для стола 850×450 мм" data-table-size="850 × 450 мм" data-travel-xy="500 × 400 × 185 мм" data-max-workpiece-weight="1300 кг" data-max-current="75 А" data-machine-weight="2450 кг" data-max-electrode-weight="180 кг" data-power-consumption="8 кВА">
 <a class="vmc-card-link" href="equipment-edm-znc-c54-m.html" aria-label="ZNC-C54 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/znc-c54-m.png" alt="ZNC-C54 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1746,7 +1757,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="znc-p26 m копировально-прошивочные станки" data-title="ZNC-P26 M" data-sortkey="600.0" data-table-size="600 × 300 мм" data-travel-xy="300 × 250 × 150 мм" data-max-workpiece-weight="800 кг" data-max-current="30 А" data-machine-weight="1700 кг">
+<article class="vmc-card" data-name="znc-p26 m копировально-прошивочные станки" data-title="ZNC-P26 M" data-sortkey="600.0" data-table-size="600 × 300 мм" data-travel-xy="300 × 250 × 150 мм" data-max-workpiece-weight="800 кг" data-max-current="30 А" data-machine-weight="1700 кг" data-power-consumption="3 кВА">
 <a class="vmc-card-link" href="equipment-edm-znc-p26-m.html" aria-label="ZNC-P26 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/znc-p26-m.png" alt="ZNC-P26 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1756,7 +1767,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="znc-p36 m копировально-прошивочные станки" data-title="ZNC-P36 M" data-sortkey="650.0" data-table-size="650 × 350 мм" data-travel-xy="400 × 300 × 185 мм" data-max-workpiece-weight="1000 кг" data-max-current="50 А" data-machine-weight="2350 кг">
+<article class="vmc-card" data-name="znc-p36 m копировально-прошивочные станки" data-title="ZNC-P36 M" data-sortkey="650.0" data-table-size="650 × 350 мм" data-travel-xy="400 × 300 × 185 мм" data-max-workpiece-weight="1000 кг" data-max-current="50 А" data-machine-weight="2350 кг" data-power-consumption="4,5 кВА">
 <a class="vmc-card-link" href="equipment-edm-znc-p36-m.html" aria-label="ZNC-P36 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/znc-p36-m.png" alt="ZNC-P36 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1766,7 +1777,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="znc-p54 m копировально-прошивочные станки" data-title="ZNC-P54 M" data-sortkey="850.0" data-table-size="850 × 450 мм" data-travel-xy="500 × 400 × 185 мм" data-max-workpiece-weight="1300 кг" data-max-current="75 А" data-machine-weight="2450 кг">
+<article class="vmc-card" data-name="znc-p54 m копировально-прошивочные станки" data-title="ZNC-P54 M" data-sortkey="850.0" data-table-size="850 × 450 мм" data-travel-xy="500 × 400 × 185 мм" data-max-workpiece-weight="1300 кг" data-max-current="75 А" data-machine-weight="2450 кг" data-max-electrode-weight="180 кг" data-power-consumption="8 кВА">
 <a class="vmc-card-link" href="equipment-edm-znc-p54-m.html" aria-label="ZNC-P54 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/znc-p54-m.png" alt="ZNC-P54 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1776,7 +1787,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="znc-p56 m копировально-прошивочные станки" data-title="ZNC-P56 M" data-sortkey="1000.0" data-max-workpiece-dims="1600 × 1000 × 650 мм" data-table-size="1000 × 550 мм" data-travel-xy="580 × 470 × 250 мм" data-max-workpiece-weight="1600 кг" data-max-current="75 А" data-machine-weight="3200 кг">
+<article class="vmc-card" data-name="znc-p56 m копировально-прошивочные станки" data-title="ZNC-P56 M" data-sortkey="1000.0" data-max-workpiece-dims="1600 × 1000 × 650 мм" data-table-size="1000 × 550 мм" data-travel-xy="580 × 470 × 250 мм" data-max-workpiece-weight="1600 кг" data-max-current="75 А" data-machine-weight="3200 кг" data-max-electrode-weight="300 кг" data-power-consumption="8 кВА">
 <a class="vmc-card-link" href="equipment-edm-znc-p56-m.html" aria-label="ZNC-P56 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/znc-p56-m.png" alt="ZNC-P56 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1786,7 +1797,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="znc320 f копировально-прошивочные станки" data-title="ZNC320 F" data-sortkey="500.0" data-table-size="500×300 мм" data-travel-xy="300 мм × 200 мм" data-max-current="30 А" data-machine-weight="1200 кг">
+<article class="vmc-card" data-name="znc320 f копировально-прошивочные станки" data-title="ZNC320 F" data-sortkey="500.0" data-table-size="500×300 мм" data-travel-xy="300 мм × 200 мм" data-max-current="30 А" data-machine-weight="1200 кг" data-max-electrode-weight="50 кг" data-table-load-capacity="450 кг т">
 <a class="vmc-card-link" href="equipment-edm-znc320-f.html" aria-label="ZNC320 F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/znc320-f.png" alt="ZNC320 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1796,7 +1807,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="znc320y f копировально-прошивочные станки" data-title="ZNC320Y F" data-sortkey="500.0" data-table-size="500×300 мм" data-travel-xy="300 мм × 200 мм" data-max-current="30 А" data-machine-weight="1200 кг">
+<article class="vmc-card" data-name="znc320y f копировально-прошивочные станки" data-title="ZNC320Y F" data-sortkey="500.0" data-table-size="500×300 мм" data-travel-xy="300 мм × 200 мм" data-max-current="30 А" data-machine-weight="1200 кг" data-max-electrode-weight="50 кг" data-table-load-capacity="450 кг т">
 <a class="vmc-card-link" href="equipment-edm-znc320y-f.html" aria-label="ZNC320Y F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/znc320y-f.png" alt="ZNC320Y F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1806,7 +1817,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="znc350 f копировально-прошивочные станки" data-title="ZNC350 F" data-sortkey="630.0" data-table-size="630×350 мм" data-travel-xy="350 мм × 250 мм" data-max-current="30 А" data-machine-weight="1300 кг">
+<article class="vmc-card" data-name="znc350 f копировально-прошивочные станки" data-title="ZNC350 F" data-sortkey="630.0" data-table-size="630×350 мм" data-travel-xy="350 мм × 250 мм" data-max-current="30 А" data-machine-weight="1300 кг" data-max-electrode-weight="75 кг" data-table-load-capacity="500 кг т">
 <a class="vmc-card-link" href="equipment-edm-znc350-f.html" aria-label="ZNC350 F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/znc350-f.png" alt="ZNC350 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1816,7 +1827,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="znc350y f копировально-прошивочные станки" data-title="ZNC350Y F" data-sortkey="630.0" data-table-size="630×350 мм" data-travel-xy="350 мм × 250 мм" data-max-current="30 А" data-machine-weight="1300 кг">
+<article class="vmc-card" data-name="znc350y f копировально-прошивочные станки" data-title="ZNC350Y F" data-sortkey="630.0" data-table-size="630×350 мм" data-travel-xy="350 мм × 250 мм" data-max-current="30 А" data-machine-weight="1300 кг" data-max-electrode-weight="75 кг" data-table-load-capacity="500 кг т">
 <a class="vmc-card-link" href="equipment-edm-znc350y-f.html" aria-label="ZNC350Y F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/znc350y-f.png" alt="ZNC350Y F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1826,7 +1837,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="znc450 f копировально-прошивочные станки" data-title="ZNC450 F" data-sortkey="700.0" data-table-size="700×450 мм" data-travel-xy="450 мм × 350 мм" data-max-current="30 А" data-machine-weight="1600 кг">
+<article class="vmc-card" data-name="znc450 f копировально-прошивочные станки" data-title="ZNC450 F" data-sortkey="700.0" data-table-size="700×450 мм" data-travel-xy="450 мм × 350 мм" data-max-current="30 А" data-machine-weight="1600 кг" data-max-electrode-weight="75 кг" data-table-load-capacity="700 кг т">
 <a class="vmc-card-link" href="equipment-edm-znc450-f.html" aria-label="ZNC450 F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/znc450-f.png" alt="ZNC450 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1836,7 +1847,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="znc450y f копировально-прошивочные станки" data-title="ZNC450Y F" data-sortkey="700.0" data-table-size="700×450 мм" data-travel-xy="450 мм × 350 мм" data-max-current="30 А" data-machine-weight="1600 кг">
+<article class="vmc-card" data-name="znc450y f копировально-прошивочные станки" data-title="ZNC450Y F" data-sortkey="700.0" data-table-size="700×450 мм" data-travel-xy="450 мм × 350 мм" data-max-current="30 А" data-machine-weight="1600 кг" data-max-electrode-weight="75 кг" data-table-load-capacity="700 кг т">
 <a class="vmc-card-link" href="equipment-edm-znc450y-f.html" aria-label="ZNC450Y F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/znc450y-f.png" alt="ZNC450Y F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1846,7 +1857,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="znc540 f копировально-прошивочные станки" data-title="ZNC540 F" data-sortkey="800.0" data-table-size="800×500 мм" data-travel-xy="500 мм × 400 мм" data-max-current="30 А" data-machine-weight="1900 кг">
+<article class="vmc-card" data-name="znc540 f копировально-прошивочные станки" data-title="ZNC540 F" data-sortkey="800.0" data-table-size="800×500 мм" data-travel-xy="500 мм × 400 мм" data-max-current="30 А" data-machine-weight="1900 кг" data-max-electrode-weight="100 кг" data-table-load-capacity="1000 кг т">
 <a class="vmc-card-link" href="equipment-edm-znc540-f.html" aria-label="ZNC540 F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/znc540-f.png" alt="ZNC540 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1856,7 +1867,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="znc540y f копировально-прошивочные станки" data-title="ZNC540Y F" data-sortkey="800.0" data-table-size="800×500 мм" data-travel-xy="500 мм × 400 мм" data-max-current="30 А" data-machine-weight="1900 кг">
+<article class="vmc-card" data-name="znc540y f копировально-прошивочные станки" data-title="ZNC540Y F" data-sortkey="800.0" data-table-size="800×500 мм" data-travel-xy="500 мм × 400 мм" data-max-current="30 А" data-machine-weight="1900 кг" data-max-electrode-weight="100 кг" data-table-load-capacity="1000 кг т">
 <a class="vmc-card-link" href="equipment-edm-znc540y-f.html" aria-label="ZNC540Y F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/znc540y-f.png" alt="ZNC540Y F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1866,7 +1877,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="znc760 f копировально-прошивочные станки" data-title="ZNC760 F" data-sortkey="1200.0" data-table-size="1200×700 мм" data-travel-xy="700 мм × 600 мм" data-max-current="30 А" data-machine-weight="3500 кг">
+<article class="vmc-card" data-name="znc760 f копировально-прошивочные станки" data-title="ZNC760 F" data-sortkey="1200.0" data-table-size="1200×700 мм" data-travel-xy="700 мм × 600 мм" data-max-current="30 А" data-machine-weight="3500 кг" data-max-electrode-weight="150 кг" data-table-load-capacity="2000 кг т">
 <a class="vmc-card-link" href="equipment-edm-znc760-f.html" aria-label="ZNC760 F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/znc760-f.png" alt="ZNC760 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1891,25 +1902,32 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="electrode-diameter" data-bound="min"/>
 <input type="number" placeholder="До" data-range="electrode-diameter" data-bound="max"/>
-</div></div><div class="g2-field"><strong>Макс. габариты заготовки</strong>
+</div></div><div class="g2-field"><strong>Ход по оси Z</strong>
 <div class="vmc-range-row">
-<input type="number" placeholder="От" data-range="max-workpiece-dims" data-bound="min"/>
-<input type="number" placeholder="До" data-range="max-workpiece-dims" data-bound="max"/>
+<input type="number" placeholder="От" data-range="z-axis-travel" data-bound="min"/>
+<input type="number" placeholder="До" data-range="z-axis-travel" data-bound="max"/>
 </div></div><div class="g2-field"><label class="g2-check"><input type="checkbox" name="cnc-present" value="да"/><span>Наличие ЧПУ</span></label></div></div>
 <details class="g2-group" open><summary>Дополнительные параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Макс. масса заготовки</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="max-workpiece-weight" data-bound="min"/>
 <input type="number" placeholder="До" data-range="max-workpiece-weight" data-bound="max"/>
-</div></div><div class="g2-field"><strong>Макс. ток обработки</strong>
+</div></div><div class="g2-field"><strong>Потребляемая мощность</strong>
 <div class="vmc-range-row">
-<input type="number" placeholder="От" data-range="max-current" data-bound="min"/>
-<input type="number" placeholder="До" data-range="max-current" data-bound="max"/>
+<input type="number" placeholder="От" data-range="power-consumption" data-bound="min"/>
+<input type="number" placeholder="До" data-range="power-consumption" data-bound="max"/>
 </div></div><div class="g2-field"><strong>Масса станка</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="machine-weight" data-bound="min"/>
 <input type="number" placeholder="До" data-range="machine-weight" data-bound="max"/>
-</div></div></div></details>
-<details class="g2-group"><summary>Все параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Габариты станка</strong>
+</div></div><div class="g2-field"><strong>Макс. ток обработки</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="max-current" data-bound="min"/>
+<input type="number" placeholder="До" data-range="max-current" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Макс. габариты заготовки</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="max-workpiece-dims" data-bound="min"/>
+<input type="number" placeholder="До" data-range="max-workpiece-dims" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Габариты станка</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="overall-dimensions" data-bound="min"/>
 <input type="number" placeholder="До" data-range="overall-dimensions" data-bound="max"/>
@@ -1931,7 +1949,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 <div class="g2-fallback-note" data-role="fallback-note" hidden>Точных совпадений не нашлось — показаны ближайшие по параметрам модели.</div>
 <div class="vmc-grid">
-<article class="vmc-card" data-name="bh4030 f супердрели" data-title="BH4030 F" data-sortkey="0.3" data-electrode-diameter="Φ0.3–Φ3.0 мм" data-max-current="30 А" data-machine-weight="500 кг">
+<article class="vmc-card" data-name="bh4030 f супердрели" data-title="BH4030 F" data-sortkey="0.3" data-electrode-diameter="Φ0.3–Φ3.0 мм" data-max-current="30 А" data-machine-weight="500 кг" data-z-axis-travel="400 мм" data-power-consumption="3.5 кВт">
 <a class="vmc-card-link" href="equipment-edm-bh4030-f.html" aria-label="BH4030 F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/bh4030-f.png" alt="BH4030 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1941,7 +1959,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="bh5040 f супердрели" data-title="BH5040 F" data-sortkey="0.3" data-electrode-diameter="Φ0.3–Φ3.0 мм" data-max-current="30 А" data-machine-weight="600 кг">
+<article class="vmc-card" data-name="bh5040 f супердрели" data-title="BH5040 F" data-sortkey="0.3" data-electrode-diameter="Φ0.3–Φ3.0 мм" data-max-current="30 А" data-machine-weight="600 кг" data-z-axis-travel="400 мм" data-power-consumption="3.5 кВт">
 <a class="vmc-card-link" href="equipment-edm-bh5040-f.html" aria-label="BH5040 F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/bh5040-f.png" alt="BH5040 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1951,7 +1969,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="cnc s-26 m супердрели" data-title="CNC S-26 M" data-sortkey="0.3" data-electrode-diameter="Ø0,3–3,0 мм" data-max-workpiece-dims="450 × 300 × 300 мм" data-max-workpiece-weight="150 кг" data-max-current="30 А" data-machine-weight="900 кг" data-overall-dimensions="1370 × 1000 × 2200 мм">
+<article class="vmc-card" data-name="cnc s-26 m супердрели" data-title="CNC S-26 M" data-sortkey="0.3" data-electrode-diameter="Ø0,3–3,0 мм" data-max-workpiece-dims="450 × 300 × 300 мм" data-max-workpiece-weight="150 кг" data-max-current="30 А" data-machine-weight="900 кг" data-overall-dimensions="1370 × 1000 × 2200 мм" data-z-axis-travel="350 мм" data-power-consumption="3,5 кВА">
 <a class="vmc-card-link" href="equipment-edm-cnc-s-26-m.html" aria-label="CNC S-26 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/cnc-s-26-m.png" alt="CNC S-26 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1961,7 +1979,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="cnc s-36 m супердрели" data-title="CNC S-36 M" data-sortkey="0.3" data-electrode-diameter="Ø0,3–3,0 мм" data-max-workpiece-dims="650 × 350 × 300 мм" data-max-workpiece-weight="150 кг" data-max-current="30 А" data-machine-weight="1150 кг" data-overall-dimensions="1490 × 1000 × 2200 мм">
+<article class="vmc-card" data-name="cnc s-36 m супердрели" data-title="CNC S-36 M" data-sortkey="0.3" data-electrode-diameter="Ø0,3–3,0 мм" data-max-workpiece-dims="650 × 350 × 300 мм" data-max-workpiece-weight="150 кг" data-max-current="30 А" data-machine-weight="1150 кг" data-overall-dimensions="1490 × 1000 × 2200 мм" data-z-axis-travel="350 мм" data-power-consumption="3,5 кВА">
 <a class="vmc-card-link" href="equipment-edm-cnc-s-36-m.html" aria-label="CNC S-36 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/cnc-s-36-m.png" alt="CNC S-36 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1971,7 +1989,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="cnc s-46 m супердрели" data-title="CNC S-46 M" data-sortkey="0.3" data-electrode-diameter="Ø0,3–3,0 мм" data-max-workpiece-dims="750 × 400 × 300 мм" data-max-workpiece-weight="1300 кг" data-max-current="30 А" data-machine-weight="1820 кг" data-overall-dimensions="1900 × 1710 × 2325 мм">
+<article class="vmc-card" data-name="cnc s-46 m супердрели" data-title="CNC S-46 M" data-sortkey="0.3" data-electrode-diameter="Ø0,3–3,0 мм" data-max-workpiece-dims="750 × 400 × 300 мм" data-max-workpiece-weight="1300 кг" data-max-current="30 А" data-machine-weight="1820 кг" data-overall-dimensions="1900 × 1710 × 2325 мм" data-z-axis-travel="350 мм" data-power-consumption="3,5 кВА">
 <a class="vmc-card-link" href="equipment-edm-cnc-s-46-m.html" aria-label="CNC S-46 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/cnc-s-46-m.png" alt="CNC S-46 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1981,7 +1999,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="cnc4030 f супердрели" data-title="CNC4030 F" data-sortkey="0.2" data-electrode-diameter="Φ0.2–Φ3.0 мм" data-max-current="30 А" data-machine-weight="800 кг">
+<article class="vmc-card" data-name="cnc4030 f супердрели" data-title="CNC4030 F" data-sortkey="0.2" data-electrode-diameter="Φ0.2–Φ3.0 мм" data-max-current="30 А" data-machine-weight="800 кг" data-z-axis-travel="350 мм" data-power-consumption="3.5 кВт">
 <a class="vmc-card-link" href="equipment-edm-cnc4030-f.html" aria-label="CNC4030 F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/cnc4030-f.png" alt="CNC4030 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1991,7 +2009,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="cnc5040 f супердрели" data-title="CNC5040 F" data-sortkey="0.2" data-electrode-diameter="Φ0.2–Φ3.0 мм" data-max-current="30 А" data-machine-weight="900 кг">
+<article class="vmc-card" data-name="cnc5040 f супердрели" data-title="CNC5040 F" data-sortkey="0.2" data-electrode-diameter="Φ0.2–Φ3.0 мм" data-max-current="30 А" data-machine-weight="900 кг" data-z-axis-travel="350 мм" data-power-consumption="3.5 кВт">
 <a class="vmc-card-link" href="equipment-edm-cnc5040-f.html" aria-label="CNC5040 F — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/cnc5040-f.png" alt="CNC5040 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -2001,7 +2019,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="dznc s26 m супердрели" data-title="DZNC S26 M" data-sortkey="0.3" data-electrode-diameter="Ø0,3–3,0 мм" data-max-workpiece-dims="450 × 300 × 300 мм" data-max-workpiece-weight="500 кг" data-max-current="30 А" data-machine-weight="900 кг" data-overall-dimensions="1900 × 1350 × 2300 мм">
+<article class="vmc-card" data-name="dznc s26 m супердрели" data-title="DZNC S26 M" data-sortkey="0.3" data-electrode-diameter="Ø0,3–3,0 мм" data-max-workpiece-dims="450 × 300 × 300 мм" data-max-workpiece-weight="500 кг" data-max-current="30 А" data-machine-weight="900 кг" data-overall-dimensions="1900 × 1350 × 2300 мм" data-z-axis-travel="350 мм" data-power-consumption="3,5 кВА">
 <a class="vmc-card-link" href="equipment-edm-dznc-s26-m.html" aria-label="DZNC S26 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/dznc-s26-m.png" alt="DZNC S26 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -2011,7 +2029,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="dznc s36 m супердрели" data-title="DZNC S36 M" data-sortkey="0.3" data-electrode-diameter="Ø0,3–3,0 мм" data-max-workpiece-dims="650 × 350 × 300 мм" data-max-workpiece-weight="800 кг" data-max-current="30 А" data-machine-weight="1150 кг" data-overall-dimensions="1900 × 1500 × 2600 мм">
+<article class="vmc-card" data-name="dznc s36 m супердрели" data-title="DZNC S36 M" data-sortkey="0.3" data-electrode-diameter="Ø0,3–3,0 мм" data-max-workpiece-dims="650 × 350 × 300 мм" data-max-workpiece-weight="800 кг" data-max-current="30 А" data-machine-weight="1150 кг" data-overall-dimensions="1900 × 1500 × 2600 мм" data-z-axis-travel="350 мм" data-power-consumption="3,5 кВА">
 <a class="vmc-card-link" href="equipment-edm-dznc-s36-m.html" aria-label="DZNC S36 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/dznc-s36-m.png" alt="DZNC S36 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -2021,7 +2039,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="dznc s46 m супердрели" data-title="DZNC S46 M" data-sortkey="0.3" data-electrode-diameter="Ø0,3–3,0 мм" data-max-workpiece-dims="750 × 400 × 300 мм" data-max-workpiece-weight="1300 кг" data-max-current="30 А" data-machine-weight="1820 кг" data-overall-dimensions="2100 × 2800 × 2500 мм">
+<article class="vmc-card" data-name="dznc s46 m супердрели" data-title="DZNC S46 M" data-sortkey="0.3" data-electrode-diameter="Ø0,3–3,0 мм" data-max-workpiece-dims="750 × 400 × 300 мм" data-max-workpiece-weight="1300 кг" data-max-current="30 А" data-machine-weight="1820 кг" data-overall-dimensions="2100 × 2800 × 2500 мм" data-z-axis-travel="350 мм" data-power-consumption="3,5 кВА">
 <a class="vmc-card-link" href="equipment-edm-dznc-s46-m.html" aria-label="DZNC S46 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/dznc-s46-m.png" alt="DZNC S46 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -2031,7 +2049,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="fx600 m супердрели" data-title="FX600 M" data-sortkey="45.0" data-max-workpiece-dims="Ø520 × 330 мм" data-machine-weight="7000 кг" data-overall-dimensions="1862 × 1380 × 2000 мм">
+<article class="vmc-card" data-name="fx600 m супердрели" data-title="FX600 M" data-sortkey="45.0" data-max-workpiece-dims="Ø520 × 330 мм" data-machine-weight="7000 кг" data-overall-dimensions="1862 × 1380 × 2000 мм" data-z-axis-travel="460 мм" data-power-consumption="45 кВА / 380 В">
 <a class="vmc-card-link" href="equipment-edm-fx600-m.html" aria-label="FX600 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/fx600-m.png" alt="FX600 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -2041,7 +2059,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('edmLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="sdr56 m супердрели" data-title="SDR56 M" data-sortkey="0.3" data-electrode-diameter="0,3–3,0 мм" data-max-workpiece-dims="800 × 750 × 300 мм" data-max-workpiece-weight="1300 кг" data-machine-weight="2000 кг" data-overall-dimensions="2200 × 2500 × 2600 мм">
+<article class="vmc-card" data-name="sdr56 m супердрели" data-title="SDR56 M" data-sortkey="0.3" data-electrode-diameter="0,3–3,0 мм" data-max-workpiece-dims="800 × 750 × 300 мм" data-max-workpiece-weight="1300 кг" data-machine-weight="2000 кг" data-overall-dimensions="2200 × 2500 × 2600 мм" data-z-axis-travel="450 мм">
 <a class="vmc-card-link" href="equipment-edm-sdr56-m.html" aria-label="SDR56 M — подробнее"></a>
 <div class="vmc-photo"><img src="edm-assets/sdr56-m.png" alt="SDR56 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
