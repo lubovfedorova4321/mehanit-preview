@@ -775,16 +775,20 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="spindle-diameter" data-bound="min"/>
 <input type="number" placeholder="До" data-range="spindle-diameter" data-bound="max"/>
-</div></div><div class="g2-field"><strong>Ход по осям X, Y, Z</strong>
+</div></div><div class="g2-field"><strong>Ход по оси X</strong>
 <div class="vmc-range-row">
-<input type="number" placeholder="От" data-range="travel-xyz" data-bound="min"/>
-<input type="number" placeholder="До" data-range="travel-xyz" data-bound="max"/>
-</div></div><div class="g2-field"><strong>Размер стола</strong>
-<div class="vmc-range-row">
-<input type="number" placeholder="От" data-range="table-size" data-bound="min"/>
-<input type="number" placeholder="До" data-range="table-size" data-bound="max"/>
+<input type="number" placeholder="От" data-range="travel-x" data-bound="min"/>
+<input type="number" placeholder="До" data-range="travel-x" data-bound="max"/>
 </div></div></div>
-<details class="g2-group" open><summary>Дополнительные параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Конус шпинделя</strong>
+<details class="g2-group" open><summary>Дополнительные параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Ход по оси Z</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="travel-z" data-bound="min"/>
+<input type="number" placeholder="До" data-range="travel-z" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Грузоподъёмность стола</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="table-load" data-bound="min"/>
+<input type="number" placeholder="До" data-range="table-load" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Конус шпинделя</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="spindle-taper" data-bound="min"/>
 <input type="number" placeholder="До" data-range="spindle-taper" data-bound="max"/>
@@ -793,7 +797,19 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <input type="number" placeholder="От" data-range="spindle-speed" data-bound="min"/>
 <input type="number" placeholder="До" data-range="spindle-speed" data-bound="max"/>
 </div></div></div></details>
-<details class="g2-group"><summary>Все параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Мощность привода</strong>
+<details class="g2-group"><summary>Все параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Ход по оси Y</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="travel-y" data-bound="min"/>
+<input type="number" placeholder="До" data-range="travel-y" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Ход борштанги (W)</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="bar-travel" data-bound="min"/>
+<input type="number" placeholder="До" data-range="bar-travel" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Размер стола</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="table-size" data-bound="min"/>
+<input type="number" placeholder="До" data-range="table-size" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Мощность привода</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="motor-power" data-bound="min"/>
 <input type="number" placeholder="До" data-range="motor-power" data-bound="max"/>
@@ -825,7 +841,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('boringLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="tpx6113f1-manual / tpx6113f2-manual ft горизонтально-расточные станки с уци" data-title="TPX6113F1-Manual / TPX6113F2-Manual Ft" data-sortkey="130.0" data-spindle-diameter="Ø130 мм" data-travel-xyz="1800 мм × 1600 мм × 1500 мм" data-table-size="1600×1400 мм" data-spindle-taper="ISO50 (гидравлический)" data-spindle-speed="1500 об/мин" data-motor-power="серводвигатель 30 кВт">
+<article class="vmc-card" data-name="tpx6113f1-manual / tpx6113f2-manual ft горизонтально-расточные станки с уци" data-title="TPX6113F1-Manual / TPX6113F2-Manual Ft" data-sortkey="130.0" data-spindle-diameter="Ø130 мм" data-travel-x="1800 мм" data-travel-y="1600 мм" data-travel-z="1500 мм" data-table-size="1600×1400 мм" data-spindle-taper="ISO50 (гидравлический)" data-spindle-speed="1500 об/мин" data-motor-power="серводвигатель 30 кВт" data-table-load="8 т" data-bar-travel="800 мм">
 <a class="vmc-card-link" href="equipment-boring-tpx6113f1-manual-tpx6113f2-manual-ft.html" aria-label="TPX6113F1-Manual / TPX6113F2-Manual Ft — подробнее"></a>
 <div class="vmc-photo"><img src="boring-assets/tpx6113f1-manual-tpx6113f2-manual-ft.png" alt="TPX6113F1-Manual / TPX6113F2-Manual Ft" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -850,16 +866,20 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="spindle-diameter" data-bound="min"/>
 <input type="number" placeholder="До" data-range="spindle-diameter" data-bound="max"/>
-</div></div><div class="g2-field"><strong>Ход по осям X, Y, Z</strong>
+</div></div><div class="g2-field"><strong>Ход по оси X</strong>
 <div class="vmc-range-row">
-<input type="number" placeholder="От" data-range="travel-xyz" data-bound="min"/>
-<input type="number" placeholder="До" data-range="travel-xyz" data-bound="max"/>
-</div></div><div class="g2-field"><strong>Размер стола</strong>
-<div class="vmc-range-row">
-<input type="number" placeholder="От" data-range="table-size" data-bound="min"/>
-<input type="number" placeholder="До" data-range="table-size" data-bound="max"/>
+<input type="number" placeholder="От" data-range="travel-x" data-bound="min"/>
+<input type="number" placeholder="До" data-range="travel-x" data-bound="max"/>
 </div></div></div>
-<details class="g2-group" open><summary>Дополнительные параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Конус шпинделя</strong>
+<details class="g2-group" open><summary>Дополнительные параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Ход по оси Z</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="travel-z" data-bound="min"/>
+<input type="number" placeholder="До" data-range="travel-z" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Грузоподъёмность стола</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="table-load" data-bound="min"/>
+<input type="number" placeholder="До" data-range="table-load" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Конус шпинделя</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="spindle-taper" data-bound="min"/>
 <input type="number" placeholder="До" data-range="spindle-taper" data-bound="max"/>
@@ -868,7 +888,19 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <input type="number" placeholder="От" data-range="spindle-speed" data-bound="min"/>
 <input type="number" placeholder="До" data-range="spindle-speed" data-bound="max"/>
 </div></div></div></details>
-<details class="g2-group"><summary>Все параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Мощность привода</strong>
+<details class="g2-group"><summary>Все параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Ход по оси Y</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="travel-y" data-bound="min"/>
+<input type="number" placeholder="До" data-range="travel-y" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Ход борштанги (W)</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="bar-travel" data-bound="min"/>
+<input type="number" placeholder="До" data-range="bar-travel" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Размер стола</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="table-size" data-bound="min"/>
+<input type="number" placeholder="До" data-range="table-size" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Мощность привода</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="motor-power" data-bound="min"/>
 <input type="number" placeholder="До" data-range="motor-power" data-bound="max"/>
@@ -890,7 +922,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 <div class="g2-fallback-note" data-role="fallback-note" hidden>Точных совпадений не нашлось — показаны ближайшие по параметрам модели.</div>
 <div class="vmc-grid">
-<article class="vmc-card" data-name="tk6111-cnc / tk6113-cnc ft горизонтально-расточные станки с чпу" data-title="TK6111-CNC / TK6113-CNC Ft" data-sortkey="110.0" data-spindle-diameter="Ø110 мм" data-travel-xyz="1600 (опц. 2 м) мм × 1400 (опц. 2 м) мм × 1300 мм" data-table-size="1400×1200 мм" data-spindle-taper="ISO50" data-spindle-speed="2000 (опц. 3000) об/мин" data-motor-power="22 кВт">
+<article class="vmc-card" data-name="tk6111-cnc / tk6113-cnc ft горизонтально-расточные станки с чпу" data-title="TK6111-CNC / TK6113-CNC Ft" data-sortkey="110.0" data-spindle-diameter="Ø110 мм" data-travel-x="1600 (опц. 2 м) мм" data-travel-y="1400 (опц. 2 м) мм" data-travel-z="1300 мм" data-table-size="1400×1200 мм" data-spindle-taper="ISO50" data-spindle-speed="2000 (опц. 3000) об/мин" data-motor-power="22 кВт" data-table-load="5 т" data-bar-travel="600 мм">
 <a class="vmc-card-link" href="equipment-boring-tk6111-cnc-tk6113-cnc-ft.html" aria-label="TK6111-CNC / TK6113-CNC Ft — подробнее"></a>
 <div class="vmc-photo"><img src="boring-assets/tk6111-cnc-tk6113-cnc-ft.png" alt="TK6111-CNC / TK6113-CNC Ft" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -900,7 +932,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('boringLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="tk6511 / tk6513 / tk6516 / tk6813 / tk6816 ft горизонтально-расточные станки с чпу" data-title="TK6511 / TK6513 / TK6516 / TK6813 / TK6816 Ft" data-sortkey="110.0" data-spindle-diameter="Ø110 мм" data-travel-xyz="2000 (опц. 3, 4 м) мм × 1500 (опц. 2; 2.5 м) мм × 1200 мм" data-table-size="1400×1250 мм" data-spindle-taper="ISO50" data-spindle-speed="2000 (опц. 3000) об/мин" data-motor-power="22 кВт">
+<article class="vmc-card" data-name="tk6511 / tk6513 / tk6516 / tk6813 / tk6816 ft горизонтально-расточные станки с чпу" data-title="TK6511 / TK6513 / TK6516 / TK6813 / TK6816 Ft" data-sortkey="110.0" data-spindle-diameter="Ø110 мм" data-travel-x="2000 (опц. 3, 4 м) мм" data-travel-y="1500 (опц. 2; 2.5 м) мм" data-travel-z="1200 мм" data-table-size="1400×1250 мм" data-spindle-taper="ISO50" data-spindle-speed="2000 (опц. 3000) об/мин" data-motor-power="22 кВт" data-table-load="5 т" data-bar-travel="600 мм">
 <a class="vmc-card-link" href="equipment-boring-tk6511-tk6513-tk6516-tk6813-tk6816-ft.html" aria-label="TK6511 / TK6513 / TK6516 / TK6813 / TK6816 Ft — подробнее"></a>
 <div class="vmc-photo"><img src="boring-assets/tk6511-tk6513-tk6516-tk6813-tk6816-ft.png" alt="TK6511 / TK6513 / TK6516 / TK6813 / TK6816 Ft" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -910,7 +942,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('boringLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="tk6913 / tk6916 / tk6920 / tk6926 ft горизонтально-расточные станки с чпу" data-title="TK6913 / TK6916 / TK6920 / TK6926 Ft" data-sortkey="130.0" data-spindle-diameter="Ø130 мм" data-travel-xyz="4000 (опц. 5–15 м) мм × 2000 (опц. 3; 3.5 м) мм × 800 мм" data-spindle-taper="ISO50" data-spindle-speed="1500 (опц. 3000) об/мин" data-motor-power="30 кВт">
+<article class="vmc-card" data-name="tk6913 / tk6916 / tk6920 / tk6926 ft горизонтально-расточные станки с чпу" data-title="TK6913 / TK6916 / TK6920 / TK6926 Ft" data-sortkey="130.0" data-spindle-diameter="Ø130 мм" data-travel-x="4000 (опц. 5–15 м) мм" data-travel-y="2000 (опц. 3; 3.5 м) мм" data-travel-z="800 мм" data-spindle-taper="ISO50" data-spindle-speed="1500 (опц. 3000) об/мин" data-motor-power="30 кВт" data-bar-travel="700 мм">
 <a class="vmc-card-link" href="equipment-boring-tk6913-tk6916-tk6920-tk6926-ft.html" aria-label="TK6913 / TK6916 / TK6920 / TK6926 Ft — подробнее"></a>
 <div class="vmc-photo"><img src="boring-assets/tk6913-tk6916-tk6920-tk6926-ft.png" alt="TK6913 / TK6916 / TK6920 / TK6926 Ft" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">

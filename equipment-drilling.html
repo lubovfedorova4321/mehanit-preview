@@ -775,12 +775,16 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="drilling-diam-max" data-bound="min"/>
 <input type="number" placeholder="До" data-range="drilling-diam-max" data-bound="max"/>
-</div></div><div class="g2-field"><strong>Конус шпинделя</strong>
+</div></div><div class="g2-field"><strong>Вылет (радиус)</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="arm-reach" data-bound="min"/>
+<input type="number" placeholder="До" data-range="arm-reach" data-bound="max"/>
+</div></div></div>
+<details class="g2-group" open><summary>Дополнительные параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Конус шпинделя</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="spindle-taper" data-bound="min"/>
 <input type="number" placeholder="До" data-range="spindle-taper" data-bound="max"/>
-</div></div></div>
-<details class="g2-group" open><summary>Дополнительные параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Частота вращения шпинделя (об/мин)</strong>
+</div></div><div class="g2-field"><strong>Частота вращения шпинделя (об/мин)</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="spindle-speed-max" data-bound="min"/>
 <input type="number" placeholder="До" data-range="spindle-speed-max" data-bound="max"/>
@@ -788,11 +792,19 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="spindle-power" data-bound="min"/>
 <input type="number" placeholder="До" data-range="spindle-power" data-bound="max"/>
-</div></div></div></details>
-<details class="g2-group"><summary>Все параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Масса станка (кг)</strong>
+</div></div><div class="g2-field"><strong>Масса станка (кг)</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="machine-weight" data-bound="min"/>
 <input type="number" placeholder="До" data-range="machine-weight" data-bound="max"/>
+</div></div></div></details>
+<details class="g2-group"><summary>Все параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Диаметр колонны</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="column-diameter" data-bound="min"/>
+<input type="number" placeholder="До" data-range="column-diameter" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Макс. диаметр резьбы</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="max-thread" data-bound="min"/>
+<input type="number" placeholder="До" data-range="max-thread" data-bound="max"/>
 </div></div></div></details>
 <div class="g2-apply-wrap">
 <button type="button" class="btn btn-ce g2-apply" data-role="apply">Показать <span data-role="preview">14</span> <span data-role="preview-word">моделей</span></button>
@@ -811,7 +823,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 <div class="g2-fallback-note" data-role="fallback-note" hidden>Точных совпадений не нашлось — показаны ближайшие по параметрам модели.</div>
 <div class="vmc-grid">
-<article class="vmc-card" data-name="rd3210 / rd4010 / rd5016 / rd5020 / rd6320 / rd8025 f радиально-сверлильные станки" data-title="RD3210 / RD4010 / RD5016 / RD5020 / RD6320 / RD8025 F" data-sortkey="32.0" data-drilling-diam-max="32" data-arm-reach="300–1000" data-spindle-taper="МТ4" data-spindle-speed-max="32–2500" data-spindle-power="2,2" data-machine-weight="1600">
+<article class="vmc-card" data-name="rd3210 / rd4010 / rd5016 / rd5020 / rd6320 / rd8025 f радиально-сверлильные станки" data-title="RD3210 / RD4010 / RD5016 / RD5020 / RD6320 / RD8025 F" data-sortkey="32.0" data-drilling-diam-max="32" data-arm-reach="300–1000" data-spindle-taper="МТ4" data-spindle-speed-max="32–2500" data-spindle-power="2,2" data-machine-weight="1600" data-column-diameter="240 мм">
 <a class="vmc-card-link" href="equipment-drilling-rd3210-rd4010-rd5016-rd5020-rd6320-rd8025-f.html" aria-label="RD3210 / RD4010 / RD5016 / RD5020 / RD6320 / RD8025 F — подробнее"></a>
 <div class="vmc-photo"><img src="drilling-assets/rd3210-rd4010-rd5016-rd5020-rd6320-rd8025-f.png" alt="RD3210 / RD4010 / RD5016 / RD5020 / RD6320 / RD8025 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -821,7 +833,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('drillingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="rd4013 / rd5014 / rd6016 / rd8020 / rd8025 f радиально-сверлильные станки" data-title="RD4013 / RD5014 / RD6016 / RD8020 / RD8025 F" data-sortkey="40.0" data-drilling-diam-max="Ø40" data-arm-reach="300–1300" data-spindle-taper="МТ4" data-spindle-speed-max="54–340–2150" data-spindle-power="2,2">
+<article class="vmc-card" data-name="rd4013 / rd5014 / rd6016 / rd8020 / rd8025 f радиально-сверлильные станки" data-title="RD4013 / RD5014 / RD6016 / RD8020 / RD8025 F" data-sortkey="40.0" data-drilling-diam-max="Ø40" data-arm-reach="300–1300" data-spindle-taper="МТ4" data-spindle-speed-max="54–340–2150" data-spindle-power="2,2" data-max-thread="М32">
 <a class="vmc-card-link" href="equipment-drilling-rd4013-rd5014-rd6016-rd8020-rd8025-f.html" aria-label="RD4013 / RD5014 / RD6016 / RD8020 / RD8025 F — подробнее"></a>
 <div class="vmc-photo"><img src="drilling-assets/rd4013-rd5014-rd6016-rd8020-rd8025-f.png" alt="RD4013 / RD5014 / RD6016 / RD8020 / RD8025 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -831,7 +843,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('drillingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="rm4011 / rm4014 / rm5016 f радиально-сверлильные станки" data-title="RM4011 / RM4014 / RM5016 F" data-sortkey="40.0" data-drilling-diam-max="40" data-spindle-taper="МТ4" data-spindle-power="2,2">
+<article class="vmc-card" data-name="rm4011 / rm4014 / rm5016 f радиально-сверлильные станки" data-title="RM4011 / RM4014 / RM5016 F" data-sortkey="40.0" data-drilling-diam-max="40" data-arm-reach="360–1100" data-spindle-taper="МТ4" data-spindle-power="2,2">
 <a class="vmc-card-link" href="equipment-drilling-rm4011-rm4014-rm5016-f.html" aria-label="RM4011 / RM4014 / RM5016 F — подробнее"></a>
 <div class="vmc-photo"><img src="drilling-assets/rm4011-rm4014-rm5016-f.png" alt="RM4011 / RM4014 / RM5016 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -861,7 +873,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('drillingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="z3032x10-1 w радиально-сверлильные станки" data-title="Z3032x10-1 W" data-sortkey="32.0" data-drilling-diam-max="Ø32 мм" data-arm-reach="300–1000 мм" data-spindle-taper="№4" data-spindle-speed-max="32–2500 об/мин" data-spindle-power="2.2 кВт" data-machine-weight="1600 кг">
+<article class="vmc-card" data-name="z3032x10-1 w радиально-сверлильные станки" data-title="Z3032x10-1 W" data-sortkey="32.0" data-drilling-diam-max="Ø32 мм" data-arm-reach="300–1000 мм" data-spindle-taper="№4" data-spindle-speed-max="32–2500 об/мин" data-spindle-power="2.2 кВт" data-machine-weight="1600 кг" data-max-thread="M24 / M24">
 <a class="vmc-card-link" href="equipment-drilling-z3032x10-1-w.html" aria-label="Z3032x10-1 W — подробнее"></a>
 <div class="vmc-photo"><img src="drilling-assets/z3032x10-1-w.png" alt="Z3032x10-1 W" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -881,7 +893,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('drillingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="z3040x13-2 w радиально-сверлильные станки" data-title="Z3040x13-2 W" data-sortkey="40.0" data-drilling-diam-max="Ø40 мм" data-arm-reach="300–1300 мм" data-spindle-taper="№4" data-spindle-speed-max="32–2500 об/мин" data-spindle-power="3 кВт" data-machine-weight="2500 кг">
+<article class="vmc-card" data-name="z3040x13-2 w радиально-сверлильные станки" data-title="Z3040x13-2 W" data-sortkey="40.0" data-drilling-diam-max="Ø40 мм" data-arm-reach="300–1300 мм" data-spindle-taper="№4" data-spindle-speed-max="32–2500 об/мин" data-spindle-power="3 кВт" data-machine-weight="2500 кг" data-max-thread="M27 / M30">
 <a class="vmc-card-link" href="equipment-drilling-z3040x13-2-w.html" aria-label="Z3040x13-2 W — подробнее"></a>
 <div class="vmc-photo"><img src="drilling-assets/z3040x13-2-w.png" alt="Z3040x13-2 W" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -901,7 +913,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('drillingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="z3050x16-1 w радиально-сверлильные станки" data-title="Z3050x16-1 W" data-sortkey="50.0" data-drilling-diam-max="Ø50 мм" data-arm-reach="350–1600 мм" data-spindle-taper="№5" data-spindle-speed-max="25–2000 об/мин" data-spindle-power="4 кВт" data-machine-weight="3500 кг">
+<article class="vmc-card" data-name="z3050x16-1 w радиально-сверлильные станки" data-title="Z3050x16-1 W" data-sortkey="50.0" data-drilling-diam-max="Ø50 мм" data-arm-reach="350–1600 мм" data-spindle-taper="№5" data-spindle-speed-max="25–2000 об/мин" data-spindle-power="4 кВт" data-machine-weight="3500 кг" data-max-thread="M36 / M36">
 <a class="vmc-card-link" href="equipment-drilling-z3050x16-1-w.html" aria-label="Z3050x16-1 W — подробнее"></a>
 <div class="vmc-photo"><img src="drilling-assets/z3050x16-1-w.png" alt="Z3050x16-1 W" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -911,7 +923,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('drillingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="z3063x16-1 w радиально-сверлильные станки" data-title="Z3063x16-1 W" data-sortkey="63.0" data-drilling-diam-max="Ø63 мм" data-arm-reach="400–1600 мм" data-spindle-taper="№5" data-spindle-speed-max="20–1600 об/мин" data-spindle-power="5.5 кВт" data-machine-weight="3700 кг">
+<article class="vmc-card" data-name="z3063x16-1 w радиально-сверлильные станки" data-title="Z3063x16-1 W" data-sortkey="63.0" data-drilling-diam-max="Ø63 мм" data-arm-reach="400–1600 мм" data-spindle-taper="№5" data-spindle-speed-max="20–1600 об/мин" data-spindle-power="5.5 кВт" data-machine-weight="3700 кг" data-max-thread="M36 / M36">
 <a class="vmc-card-link" href="equipment-drilling-z3063x16-1-w.html" aria-label="Z3063x16-1 W — подробнее"></a>
 <div class="vmc-photo"><img src="drilling-assets/z3063x16-1-w.png" alt="Z3063x16-1 W" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -921,7 +933,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('drillingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="z3063x20-1 w радиально-сверлильные станки" data-title="Z3063x20-1 W" data-sortkey="63.0" data-drilling-diam-max="Ø63 мм" data-arm-reach="450–2000 мм" data-spindle-taper="№5" data-spindle-speed-max="20–1600 об/мин" data-spindle-power="5.5 кВт" data-machine-weight="7000 кг">
+<article class="vmc-card" data-name="z3063x20-1 w радиально-сверлильные станки" data-title="Z3063x20-1 W" data-sortkey="63.0" data-drilling-diam-max="Ø63 мм" data-arm-reach="450–2000 мм" data-spindle-taper="№5" data-spindle-speed-max="20–1600 об/мин" data-spindle-power="5.5 кВт" data-machine-weight="7000 кг" data-max-thread="M42 / M42">
 <a class="vmc-card-link" href="equipment-drilling-z3063x20-1-w.html" aria-label="Z3063x20-1 W — подробнее"></a>
 <div class="vmc-photo"><img src="drilling-assets/z3063x20-1-w.png" alt="Z3063x20-1 W" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -931,7 +943,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('drillingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="z3080x25-1 w радиально-сверлильные станки" data-title="Z3080x25-1 W" data-sortkey="80.0" data-drilling-diam-max="Ø80 мм" data-arm-reach="500–2500 мм" data-spindle-taper="№6" data-spindle-speed-max="16–1250 об/мин" data-spindle-power="7.5 кВт" data-machine-weight="11000 кг">
+<article class="vmc-card" data-name="z3080x25-1 w радиально-сверлильные станки" data-title="Z3080x25-1 W" data-sortkey="80.0" data-drilling-diam-max="Ø80 мм" data-arm-reach="500–2500 мм" data-spindle-taper="№6" data-spindle-speed-max="16–1250 об/мин" data-spindle-power="7.5 кВт" data-machine-weight="11000 кг" data-max-thread="M48 / M52">
 <a class="vmc-card-link" href="equipment-drilling-z3080x25-1-w.html" aria-label="Z3080x25-1 W — подробнее"></a>
 <div class="vmc-photo"><img src="drilling-assets/z3080x25-1-w.png" alt="Z3080x25-1 W" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -966,12 +978,16 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="drilling-diam-max" data-bound="min"/>
 <input type="number" placeholder="До" data-range="drilling-diam-max" data-bound="max"/>
-</div></div><div class="g2-field"><strong>Конус шпинделя</strong>
+</div></div><div class="g2-field"><strong>Ход шпинделя</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="spindle-travel" data-bound="min"/>
+<input type="number" placeholder="До" data-range="spindle-travel" data-bound="max"/>
+</div></div></div>
+<details class="g2-group" open><summary>Дополнительные параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Конус шпинделя</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="spindle-taper" data-bound="min"/>
 <input type="number" placeholder="До" data-range="spindle-taper" data-bound="max"/>
-</div></div></div>
-<details class="g2-group" open><summary>Дополнительные параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Частота вращения шпинделя (об/мин)</strong>
+</div></div><div class="g2-field"><strong>Частота вращения шпинделя (об/мин)</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="spindle-speed-max" data-bound="min"/>
 <input type="number" placeholder="До" data-range="spindle-speed-max" data-bound="max"/>
@@ -979,11 +995,23 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="spindle-power" data-bound="min"/>
 <input type="number" placeholder="До" data-range="spindle-power" data-bound="max"/>
-</div></div></div></details>
-<details class="g2-group"><summary>Все параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Масса станка (кг)</strong>
+</div></div><div class="g2-field"><strong>Масса станка (кг)</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="machine-weight" data-bound="min"/>
 <input type="number" placeholder="До" data-range="machine-weight" data-bound="max"/>
+</div></div></div></details>
+<details class="g2-group"><summary>Все параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Размер стола</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="table-size" data-bound="min"/>
+<input type="number" placeholder="До" data-range="table-size" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Шпиндель — стол</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="spindle-to-table" data-bound="min"/>
+<input type="number" placeholder="До" data-range="spindle-to-table" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Макс. диаметр резьбы</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="max-thread" data-bound="min"/>
+<input type="number" placeholder="До" data-range="max-thread" data-bound="max"/>
 </div></div></div></details>
 <div class="g2-apply-wrap">
 <button type="button" class="btn btn-ce g2-apply" data-role="apply">Показать <span data-role="preview">25</span> <span data-role="preview-word">моделей</span></button>
@@ -1002,7 +1030,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 <div class="g2-fallback-note" data-role="fallback-note" hidden>Точных совпадений не нашлось — показаны ближайшие по параметрам модели.</div>
 <div class="vmc-grid">
-<article class="vmc-card" data-name="d320 f вертикально-сверлильные станки" data-title="D320 F" data-sortkey="25.0" data-drilling-diam-max="25 мм" data-spindle-travel="110 мм" data-spindle-taper="МТ3" data-spindle-speed-max="80–1600 об/мин" data-spindle-power="0,70/1,3 кВт" data-machine-weight="245/280 кг">
+<article class="vmc-card" data-name="d320 f вертикально-сверлильные станки" data-title="D320 F" data-sortkey="25.0" data-drilling-diam-max="25 мм" data-spindle-travel="110 мм" data-spindle-taper="МТ3" data-spindle-speed-max="80–1600 об/мин" data-spindle-power="0,70/1,3 кВт" data-machine-weight="245/280 кг" data-table-size="400×320 мм" data-spindle-to-table="690 мм" data-max-thread="М12">
 <a class="vmc-card-link" href="equipment-drilling-d320-f.html" aria-label="D320 F — подробнее"></a>
 <div class="vmc-photo"><img src="drilling-assets/d320-f.png" alt="D320 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1012,7 +1040,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('drillingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="d350 f вертикально-сверлильные станки" data-title="D350 F" data-sortkey="35.0" data-drilling-diam-max="35 мм" data-spindle-travel="160 мм" data-spindle-taper="МТ4" data-spindle-speed-max="85–1800 об/мин" data-spindle-power="1,0/1,7 кВт" data-machine-weight="450/500 кг">
+<article class="vmc-card" data-name="d350 f вертикально-сверлильные станки" data-title="D350 F" data-sortkey="35.0" data-drilling-diam-max="35 мм" data-spindle-travel="160 мм" data-spindle-taper="МТ4" data-spindle-speed-max="85–1800 об/мин" data-spindle-power="1,0/1,7 кВт" data-machine-weight="450/500 кг" data-table-size="500×420 мм" data-spindle-to-table="625 мм" data-max-thread="М20">
 <a class="vmc-card-link" href="equipment-drilling-d350-f.html" aria-label="D350 F — подробнее"></a>
 <div class="vmc-photo"><img src="drilling-assets/d350-f.png" alt="D350 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1042,7 +1070,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('drillingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="dm38h f вертикально-сверлильные станки" data-title="DM38H F" data-sortkey="40.0" data-drilling-diam-max="40 / 35 мм" data-spindle-travel="130 мм" data-spindle-taper="МТ3 / МТ4 / R8 / ISO30" data-spindle-speed-max="75–3200 об/мин" data-spindle-power="1,5 кВт" data-machine-weight="430/480 кг">
+<article class="vmc-card" data-name="dm38h f вертикально-сверлильные станки" data-title="DM38H F" data-sortkey="40.0" data-drilling-diam-max="40 / 35 мм" data-spindle-travel="130 мм" data-spindle-taper="МТ3 / МТ4 / R8 / ISO30" data-spindle-speed-max="75–3200 об/мин" data-spindle-power="1,5 кВт" data-machine-weight="430/480 кг" data-table-size="500×360 мм" data-spindle-to-table="685 мм" data-max-thread="М24 / М22">
 <a class="vmc-card-link" href="equipment-drilling-dm38h-f.html" aria-label="DM38H F — подробнее"></a>
 <div class="vmc-photo"><img src="drilling-assets/dm38h-f.png" alt="DM38H F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1052,7 +1080,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('drillingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="dm5032 f вертикально-сверлильные станки" data-title="DM5032 F" data-sortkey="35.0" data-drilling-diam-max="35 мм" data-spindle-travel="160 мм" data-spindle-taper="МТ4" data-spindle-speed-max="75–3200 об/мин" data-spindle-power="1,5/1,1 кВт" data-machine-weight="350/400 кг">
+<article class="vmc-card" data-name="dm5032 f вертикально-сверлильные станки" data-title="DM5032 F" data-sortkey="35.0" data-drilling-diam-max="35 мм" data-spindle-travel="160 мм" data-spindle-taper="МТ4" data-spindle-speed-max="75–3200 об/мин" data-spindle-power="1,5/1,1 кВт" data-machine-weight="350/400 кг" data-table-size="460×460 мм" data-spindle-to-table="720 мм" data-max-thread="М22 / М20">
 <a class="vmc-card-link" href="equipment-drilling-dm5032-f.html" aria-label="DM5032 F — подробнее"></a>
 <div class="vmc-photo"><img src="drilling-assets/dm5032-f.png" alt="DM5032 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1062,7 +1090,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('drillingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="dm5040 f вертикально-сверлильные станки" data-title="DM5040 F" data-sortkey="40.0" data-drilling-diam-max="40 мм" data-spindle-travel="180 мм" data-spindle-taper="МТ4" data-spindle-speed-max="50–1450 об/мин" data-spindle-power="0,75/1,5 кВт" data-machine-weight="510/650 кг">
+<article class="vmc-card" data-name="dm5040 f вертикально-сверлильные станки" data-title="DM5040 F" data-sortkey="40.0" data-drilling-diam-max="40 мм" data-spindle-travel="180 мм" data-spindle-taper="МТ4" data-spindle-speed-max="50–1450 об/мин" data-spindle-power="0,75/1,5 кВт" data-machine-weight="510/650 кг" data-table-size="560×560 мм" data-spindle-to-table="770 мм" data-max-thread="М20 / М24">
 <a class="vmc-card-link" href="equipment-drilling-dm5040-f.html" aria-label="DM5040 F — подробнее"></a>
 <div class="vmc-photo"><img src="drilling-assets/dm5040-f.png" alt="DM5040 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1072,7 +1100,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('drillingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="dn5030a / dn5035a / dn5040a / dn5050a f вертикально-сверлильные станки" data-title="DN5030A / DN5035A / DN5040A / DN5050A F" data-sortkey="30.0" data-drilling-diam-max="Ø30 / М20" data-spindle-travel="125" data-spindle-taper="МТ3" data-spindle-speed-max="70–249, 249–3500  65–460, 465–3250  60–400, 396–2600  50–316, 316–2200" data-spindle-power="1,1" data-machine-weight="320/400">
+<article class="vmc-card" data-name="dn5030a / dn5035a / dn5040a / dn5050a f вертикально-сверлильные станки" data-title="DN5030A / DN5035A / DN5040A / DN5050A F" data-sortkey="30.0" data-drilling-diam-max="Ø30 / М20" data-spindle-travel="125" data-spindle-taper="МТ3" data-spindle-speed-max="70–249, 249–3500  65–460, 465–3250  60–400, 396–2600  50–316, 316–2200" data-spindle-power="1,1" data-machine-weight="320/400" data-table-size="450×380" data-spindle-to-table="590" data-max-thread="М20">
 <a class="vmc-card-link" href="equipment-drilling-dn5030a-dn5035a-dn5040a-dn5050a-f.html" aria-label="DN5030A / DN5035A / DN5040A / DN5050A F — подробнее"></a>
 <div class="vmc-photo"><img src="drilling-assets/dn5030a-dn5035a-dn5040a-dn5050a-f.png" alt="DN5030A / DN5035A / DN5040A / DN5050A F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1082,7 +1110,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('drillingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="dn4025 f вертикально-сверлильные станки" data-title="DN4025 F" data-sortkey="25.0" data-drilling-diam-max="25 мм" data-spindle-travel="110 мм" data-spindle-taper="МТ3" data-spindle-speed-max="125–2825 об/мин" data-spindle-power="0,75 кВт" data-machine-weight="230/280 кг">
+<article class="vmc-card" data-name="dn4025 f вертикально-сверлильные станки" data-title="DN4025 F" data-sortkey="25.0" data-drilling-diam-max="25 мм" data-spindle-travel="110 мм" data-spindle-taper="МТ3" data-spindle-speed-max="125–2825 об/мин" data-spindle-power="0,75 кВт" data-machine-weight="230/280 кг" data-max-thread="М16">
 <a class="vmc-card-link" href="equipment-drilling-dn4025-f.html" aria-label="DN4025 F — подробнее"></a>
 <div class="vmc-photo"><img src="drilling-assets/dn4025-f.png" alt="DN4025 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1092,7 +1120,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('drillingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="dn5025 f вертикально-сверлильные станки" data-title="DN5025 F" data-sortkey="25.0" data-drilling-diam-max="25 мм" data-spindle-travel="110 мм" data-spindle-taper="МТ3" data-spindle-speed-max="125–2825 об/мин" data-spindle-power="0,75 кВт" data-machine-weight="300/350 кг">
+<article class="vmc-card" data-name="dn5025 f вертикально-сверлильные станки" data-title="DN5025 F" data-sortkey="25.0" data-drilling-diam-max="25 мм" data-spindle-travel="110 мм" data-spindle-taper="МТ3" data-spindle-speed-max="125–2825 об/мин" data-spindle-power="0,75 кВт" data-machine-weight="300/350 кг" data-table-size="350×400 мм" data-spindle-to-table="630 мм" data-max-thread="М16">
 <a class="vmc-card-link" href="equipment-drilling-dn5025-f.html" aria-label="DN5025 F — подробнее"></a>
 <div class="vmc-photo"><img src="drilling-assets/dn5025-f.png" alt="DN5025 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1102,7 +1130,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('drillingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="dwb5030a / dwb5035a / dwb5040a / dwb5050a f вертикально-сверлильные станки" data-title="DWB5030A / DWB5035A / DWB5040A / DWB5050A F" data-sortkey="30.0" data-drilling-diam-max="30" data-spindle-travel="125" data-spindle-taper="МТ3" data-spindle-speed-max="70–249, 249–3500  65–460, 465–3250  60–400, 396–2600  50–316, 316–2200" data-spindle-power="1,1" data-machine-weight="320/400">
+<article class="vmc-card" data-name="dwb5030a / dwb5035a / dwb5040a / dwb5050a f вертикально-сверлильные станки" data-title="DWB5030A / DWB5035A / DWB5040A / DWB5050A F" data-sortkey="30.0" data-drilling-diam-max="30" data-spindle-travel="125" data-spindle-taper="МТ3" data-spindle-speed-max="70–249, 249–3500  65–460, 465–3250  60–400, 396–2600  50–316, 316–2200" data-spindle-power="1,1" data-machine-weight="320/400" data-table-size="450×380" data-spindle-to-table="590" data-max-thread="М20">
 <a class="vmc-card-link" href="equipment-drilling-dwb5030a-dwb5035a-dwb5040a-dwb5050a-f.html" aria-label="DWB5030A / DWB5035A / DWB5040A / DWB5050A F — подробнее"></a>
 <div class="vmc-photo"><img src="drilling-assets/dwb5030a-dwb5035a-dwb5040a-dwb5050a-f.png" alt="DWB5030A / DWB5035A / DWB5040A / DWB5050A F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1112,7 +1140,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('drillingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="dy5030a/b / dy5035a/b / dy5040a/b / dy5050a/b f вертикально-сверлильные станки" data-title="DY5030A/B / DY5035A/B / DY5040A/B / DY5050A/B F" data-sortkey="30.0" data-drilling-diam-max="30" data-spindle-travel="155" data-spindle-taper="МТ4" data-spindle-speed-max="125–3030" data-spindle-power="1,0/1,2" data-machine-weight="545/600">
+<article class="vmc-card" data-name="dy5030a/b / dy5035a/b / dy5040a/b / dy5050a/b f вертикально-сверлильные станки" data-title="DY5030A/B / DY5035A/B / DY5040A/B / DY5050A/B F" data-sortkey="30.0" data-drilling-diam-max="30" data-spindle-travel="155" data-spindle-taper="МТ4" data-spindle-speed-max="125–3030" data-spindle-power="1,0/1,2" data-machine-weight="545/600" data-table-size="500×420" data-spindle-to-table="590" data-max-thread="М20">
 <a class="vmc-card-link" href="equipment-drilling-dy5030a-b-dy5035a-b-dy5040a-b-dy5050a-b-f.html" aria-label="DY5030A/B / DY5035A/B / DY5040A/B / DY5050A/B F — подробнее"></a>
 <div class="vmc-photo"><img src="drilling-assets/dy5030a-b-dy5035a-b-dy5040a-b-dy5050a-b-f.png" alt="DY5030A/B / DY5035A/B / DY5040A/B / DY5050A/B F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1162,7 +1190,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('drillingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="z5025 f вертикально-сверлильные станки" data-title="Z5025 F" data-sortkey="25.0" data-drilling-diam-max="25 мм" data-spindle-taper="Морзе 3" data-spindle-speed-max="1400 об/мин" data-spindle-power="6-8 кВт" data-machine-weight="525 кг">
+<article class="vmc-card" data-name="z5025 f вертикально-сверлильные станки" data-title="Z5025 F" data-sortkey="25.0" data-drilling-diam-max="25 мм" data-spindle-taper="Морзе 3" data-spindle-speed-max="1400 об/мин" data-spindle-power="6-8 кВт" data-machine-weight="525 кг" data-spindle-to-table="650 мм">
 <a class="vmc-card-link" href="equipment-drilling-z5025-f.html" aria-label="Z5025 F — подробнее"></a>
 <div class="vmc-photo"><img src="drilling-assets/z5025-f.png" alt="Z5025 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1172,7 +1200,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('drillingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="z5035 f вертикально-сверлильные станки" data-title="Z5035 F" data-sortkey="35.0" data-drilling-diam-max="35 мм" data-spindle-taper="Морзе 3" data-spindle-speed-max="1400 об/мин" data-spindle-power="9-11 кВт" data-machine-weight="850 кг">
+<article class="vmc-card" data-name="z5035 f вертикально-сверлильные станки" data-title="Z5035 F" data-sortkey="35.0" data-drilling-diam-max="35 мм" data-spindle-taper="Морзе 3" data-spindle-speed-max="1400 об/мин" data-spindle-power="9-11 кВт" data-machine-weight="850 кг" data-spindle-to-table="650 мм">
 <a class="vmc-card-link" href="equipment-drilling-z5035-f.html" aria-label="Z5035 F — подробнее"></a>
 <div class="vmc-photo"><img src="drilling-assets/z5035-f.png" alt="Z5035 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1182,7 +1210,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('drillingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="z5035a w вертикально-сверлильные станки" data-title="Z5035A W" data-sortkey="35.0" data-drilling-diam-max="Ø35 мм" data-spindle-speed-max="70–2600 (12 ступеней) об/мин" data-spindle-power="1.5/2.2 кВт" data-machine-weight="539/621 кг">
+<article class="vmc-card" data-name="z5035a w вертикально-сверлильные станки" data-title="Z5035A W" data-sortkey="35.0" data-drilling-diam-max="Ø35 мм" data-spindle-speed-max="70–2600 (12 ступеней) об/мин" data-spindle-power="1.5/2.2 кВт" data-machine-weight="539/621 кг" data-spindle-to-table="610 мм" data-max-thread="M24">
 <a class="vmc-card-link" href="equipment-drilling-z5035a-w.html" aria-label="Z5035A W — подробнее"></a>
 <div class="vmc-photo"><img src="drilling-assets/z5035a-w.png" alt="Z5035A W" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1192,7 +1220,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('drillingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="z5040 f вертикально-сверлильные станки" data-title="Z5040 F" data-sortkey="40.0" data-drilling-diam-max="40 мм" data-spindle-taper="Морзе 3" data-spindle-speed-max="1400 об/мин" data-spindle-power="5-5.5 кВт" data-machine-weight="980 кг">
+<article class="vmc-card" data-name="z5040 f вертикально-сверлильные станки" data-title="Z5040 F" data-sortkey="40.0" data-drilling-diam-max="40 мм" data-spindle-taper="Морзе 3" data-spindle-speed-max="1400 об/мин" data-spindle-power="5-5.5 кВт" data-machine-weight="980 кг" data-spindle-to-table="650 мм">
 <a class="vmc-card-link" href="equipment-drilling-z5040-f.html" aria-label="Z5040 F — подробнее"></a>
 <div class="vmc-photo"><img src="drilling-assets/z5040-f.png" alt="Z5040 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1202,7 +1230,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('drillingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="z5040a w вертикально-сверлильные станки" data-title="Z5040A W" data-sortkey="40.0" data-drilling-diam-max="Ø40 мм" data-spindle-speed-max="42–2050 (12 ступеней) об/мин" data-spindle-power="2.2/2.8 кВт" data-machine-weight="640/750 кг">
+<article class="vmc-card" data-name="z5040a w вертикально-сверлильные станки" data-title="Z5040A W" data-sortkey="40.0" data-drilling-diam-max="Ø40 мм" data-spindle-speed-max="42–2050 (12 ступеней) об/мин" data-spindle-power="2.2/2.8 кВт" data-machine-weight="640/750 кг" data-spindle-to-table="600 мм" data-max-thread="M30">
 <a class="vmc-card-link" href="equipment-drilling-z5040a-w.html" aria-label="Z5040A W — подробнее"></a>
 <div class="vmc-photo"><img src="drilling-assets/z5040a-w.png" alt="Z5040A W" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1212,7 +1240,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('drillingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="z5045 f вертикально-сверлильные станки" data-title="Z5045 F" data-sortkey="45.0" data-drilling-diam-max="45 мм" data-spindle-taper="Морзе 3" data-spindle-speed-max="1400 об/мин" data-spindle-power="5.5-7.5 кВт" data-machine-weight="1200 кг">
+<article class="vmc-card" data-name="z5045 f вертикально-сверлильные станки" data-title="Z5045 F" data-sortkey="45.0" data-drilling-diam-max="45 мм" data-spindle-taper="Морзе 3" data-spindle-speed-max="1400 об/мин" data-spindle-power="5.5-7.5 кВт" data-machine-weight="1200 кг" data-spindle-to-table="650 мм">
 <a class="vmc-card-link" href="equipment-drilling-z5045-f.html" aria-label="Z5045 F — подробнее"></a>
 <div class="vmc-photo"><img src="drilling-assets/z5045-f.png" alt="Z5045 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1222,7 +1250,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('drillingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="z5050a w вертикально-сверлильные станки" data-title="Z5050A W" data-sortkey="50.0" data-drilling-diam-max="Ø50 мм" data-spindle-speed-max="42–1865 (12 ступеней) об/мин" data-spindle-power="2.2/2.8 кВт" data-machine-weight="745/860 кг">
+<article class="vmc-card" data-name="z5050a w вертикально-сверлильные станки" data-title="Z5050A W" data-sortkey="50.0" data-drilling-diam-max="Ø50 мм" data-spindle-speed-max="42–1865 (12 ступеней) об/мин" data-spindle-power="2.2/2.8 кВт" data-machine-weight="745/860 кг" data-spindle-to-table="600 мм" data-max-thread="M32">
 <a class="vmc-card-link" href="equipment-drilling-z5050a-w.html" aria-label="Z5050A W — подробнее"></a>
 <div class="vmc-photo"><img src="drilling-assets/z5050a-w.png" alt="Z5050A W" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1232,7 +1260,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('drillingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="zx5025 f вертикально-сверлильные станки" data-title="ZX5025 F" data-sortkey="25.0" data-drilling-diam-max="25 мм" data-spindle-taper="Морзе 3" data-spindle-speed-max="1400 об/мин" data-spindle-power="1.5 кВт" data-machine-weight="640 кг">
+<article class="vmc-card" data-name="zx5025 f вертикально-сверлильные станки" data-title="ZX5025 F" data-sortkey="25.0" data-drilling-diam-max="25 мм" data-spindle-taper="Морзе 3" data-spindle-speed-max="1400 об/мин" data-spindle-power="1.5 кВт" data-machine-weight="640 кг" data-spindle-to-table="650 мм">
 <a class="vmc-card-link" href="equipment-drilling-zx5025-f.html" aria-label="ZX5025 F — подробнее"></a>
 <div class="vmc-photo"><img src="drilling-assets/zx5025-f.png" alt="ZX5025 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1242,7 +1270,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('drillingLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="zx5032 f вертикально-сверлильные станки" data-title="ZX5032 F" data-sortkey="32.0" data-drilling-diam-max="32 мм" data-spindle-taper="Морзе 3" data-spindle-speed-max="1400 об/мин" data-spindle-power="1.5 кВт" data-machine-weight="680 кг">
+<article class="vmc-card" data-name="zx5032 f вертикально-сверлильные станки" data-title="ZX5032 F" data-sortkey="32.0" data-drilling-diam-max="32 мм" data-spindle-taper="Морзе 3" data-spindle-speed-max="1400 об/мин" data-spindle-power="1.5 кВт" data-machine-weight="680 кг" data-spindle-to-table="650 мм">
 <a class="vmc-card-link" href="equipment-drilling-zx5032-f.html" aria-label="ZX5032 F — подробнее"></a>
 <div class="vmc-photo"><img src="drilling-assets/zx5032-f.png" alt="ZX5032 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
