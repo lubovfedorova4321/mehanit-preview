@@ -1342,10 +1342,10 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="turning-diameter-max" data-bound="min"/>
 <input type="number" placeholder="До" data-range="turning-diameter-max" data-bound="max"/>
-</div></div><div class="g2-field"><strong>Макс. длина обработки</strong>
+</div></div><div class="g2-field"><strong>Отверстие шпинделя</strong>
 <div class="vmc-range-row">
-<input type="number" placeholder="От" data-range="turning-length-max" data-bound="min"/>
-<input type="number" placeholder="До" data-range="turning-length-max" data-bound="max"/>
+<input type="number" placeholder="От" data-range="spindle-bore" data-bound="min"/>
+<input type="number" placeholder="До" data-range="spindle-bore" data-bound="max"/>
 </div></div></div>
 <details class="g2-group" open><summary>Дополнительные параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Частота вращения шпинделя</strong>
 <div class="vmc-range-row">
@@ -1372,10 +1372,10 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="travel-z" data-bound="min"/>
 <input type="number" placeholder="До" data-range="travel-z" data-bound="max"/>
-</div></div><div class="g2-field"><strong>Конец шпинделя</strong>
+</div></div><div class="g2-field"><strong>Макс. длина обработки</strong>
 <div class="vmc-range-row">
-<input type="number" placeholder="От" data-range="spindle-nose" data-bound="min"/>
-<input type="number" placeholder="До" data-range="spindle-nose" data-bound="max"/>
+<input type="number" placeholder="От" data-range="turning-length-max" data-bound="min"/>
+<input type="number" placeholder="До" data-range="turning-length-max" data-bound="max"/>
 </div></div></div></details>
 <div class="g2-apply-wrap">
 <button type="button" class="btn btn-ce g2-apply" data-role="apply">Показать <span data-role="preview">56</span> <span data-role="preview-word">моделей</span></button>
@@ -1395,7 +1395,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <div class="g2-fallback-note" data-role="fallback-note" hidden>Точных совпадений не нашлось — показаны ближайшие по параметрам модели.</div>
 <div class="vmc-grid">
 
-<article class="vmc-card" data-name="kdck-40 k токарные станки с чпу с наклонной станиной" data-title="KDCK-40 K" data-sortkey="750.0" data-turning-diameter-max="Ø750 мм" data-turning-length-max="870 мм" data-spindle-speed-max="100–2000 об/мин" data-motor-power="15–18.5 кВт" data-turret-positions="12" data-chuck-size="12&amp;quot;" data-travel-x="350 мм" data-travel-z="1050 мм">
+<article class="vmc-card" data-name="kdck-40 k токарные станки с чпу с наклонной станиной" data-title="KDCK-40 K" data-sortkey="750.0" data-turning-diameter-max="Ø750 мм" data-spindle-bore="Ø105 мм" data-turning-length-max="870 мм" data-spindle-speed-max="100–2000 об/мин" data-motor-power="15–18.5 кВт" data-turret-positions="12" data-chuck-size="12&amp;quot;" data-travel-x="350 мм" data-travel-z="1050 мм">
 <a class="vmc-card-link" href="equipment-turning-kdck-40-k.html" aria-label="KDCK-40 K — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/kdck-40-k.png" alt="KDCK-40 K" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1406,7 +1406,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="stl8-550 z токарные станки с чпу с наклонной станиной" data-title="STL8-550 Z" data-sortkey="550.0" data-turning-diameter-max="Ø550 мм" data-turning-length-max="550 мм" data-spindle-speed-max="4000 / 3200 / 2000 / 1600 об/мин" data-motor-power="15/11 / 18.5/15 кВт" data-turret-positions="8 / 12" data-chuck-size="8&amp;quot; / 10&amp;quot;" data-travel-x="250 мм" data-travel-z="550 мм" data-spindle-nose="A2-6 / A2-8">
+<article class="vmc-card" data-name="stl8-550 z токарные станки с чпу с наклонной станиной" data-title="STL8-550 Z" data-sortkey="550.0" data-turning-diameter-max="Ø550 мм" data-spindle-bore="Ø62 / Ø75 мм" data-turning-length-max="550 мм" data-spindle-speed-max="4000 / 3200 / 2000 / 1600 об/мин" data-motor-power="15/11 / 18.5/15 кВт" data-turret-positions="8 / 12" data-chuck-size="8&amp;quot; / 10&amp;quot;" data-travel-x="250 мм" data-travel-z="550 мм" data-spindle-nose="A2-6 / A2-8">
 <a class="vmc-card-link" href="equipment-turning-stl8-550-z.html" aria-label="STL8-550 Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/stl8-550-z.png" alt="STL8-550 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1417,7 +1417,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="stl18-1000 z токарные станки с чпу с наклонной станиной" data-title="STL18-1000 Z" data-sortkey="800.0" data-turning-diameter-max="Ø800 мм" data-spindle-speed-max="1500 / 1000 / 800 об/мин" data-motor-power="40/30/22 кВт" data-turret-positions="8 / 12" data-chuck-size="15&amp;quot;, 18&amp;quot;" data-travel-x="380 мм" data-travel-z="1000 мм" data-spindle-nose="A2-11 / A2-15">
+<article class="vmc-card" data-name="stl18-1000 z токарные станки с чпу с наклонной станиной" data-title="STL18-1000 Z" data-sortkey="800.0" data-turning-diameter-max="Ø800 мм" data-spindle-bore="Ø110 / Ø120 / Ø185 мм" data-spindle-speed-max="1500 / 1000 / 800 об/мин" data-motor-power="40/30/22 кВт" data-turret-positions="8 / 12" data-chuck-size="15&amp;quot;, 18&amp;quot;" data-travel-x="380 мм" data-travel-z="1000 мм" data-spindle-nose="A2-11 / A2-15">
 <a class="vmc-card-link" href="equipment-turning-stl18-1000-z.html" aria-label="STL18-1000 Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/stl18-1000-z.png" alt="STL18-1000 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1428,7 +1428,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="ck7660l b токарные станки с чпу с наклонной станиной" data-title="CK7660L B" data-sortkey="750.0" data-turning-diameter-max="Ø750–830 мм" data-spindle-speed-max="22–2500 об/мин" data-motor-power="30/37–37/45 кВт" data-turret-positions="12">
+<article class="vmc-card" data-name="ck7660l b токарные станки с чпу с наклонной станиной" data-title="CK7660L B" data-sortkey="750.0" data-turning-diameter-max="Ø750–830 мм" data-spindle-bore="Ø87–105 мм" data-spindle-speed-max="22–2500 об/мин" data-motor-power="30/37–37/45 кВт" data-turret-positions="12">
 <a class="vmc-card-link" href="equipment-turning-ck7660l-b.html" aria-label="CK7660L B — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/ck7660l-b.png" alt="CK7660L B" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1439,7 +1439,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="stl8-750 z токарные станки с чпу с наклонной станиной" data-title="STL8-750 Z" data-sortkey="550.0" data-turning-diameter-max="Ø550 мм" data-turning-length-max="750 мм" data-spindle-speed-max="4000 / 3200 / 2000 / 1600 об/мин" data-motor-power="15/11 / 18.5/15 кВт" data-turret-positions="8 / 12" data-chuck-size="8&amp;quot; / 10&amp;quot;" data-travel-x="250 мм" data-travel-z="750 мм" data-spindle-nose="A2-6 / A2-8">
+<article class="vmc-card" data-name="stl8-750 z токарные станки с чпу с наклонной станиной" data-title="STL8-750 Z" data-sortkey="550.0" data-turning-diameter-max="Ø550 мм" data-spindle-bore="Ø62 / Ø75 мм" data-turning-length-max="750 мм" data-spindle-speed-max="4000 / 3200 / 2000 / 1600 об/мин" data-motor-power="15/11 / 18.5/15 кВт" data-turret-positions="8 / 12" data-chuck-size="8&amp;quot; / 10&amp;quot;" data-travel-x="250 мм" data-travel-z="750 мм" data-spindle-nose="A2-6 / A2-8">
 <a class="vmc-card-link" href="equipment-turning-stl8-750-z.html" aria-label="STL8-750 Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/stl8-750-z.png" alt="STL8-750 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1450,7 +1450,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="kdck-25 k токарные станки с чпу с наклонной станиной" data-title="KDCK-25 K" data-sortkey="500.0" data-turning-diameter-max="Ø500 мм" data-turning-length-max="420 мм" data-spindle-speed-max="3000/4200 об/мин" data-motor-power="1.2/1.8 кВт" data-turret-positions="8" data-chuck-size="8&amp;quot;" data-travel-x="160 мм" data-travel-z="500 мм">
+<article class="vmc-card" data-name="kdck-25 k токарные станки с чпу с наклонной станиной" data-title="KDCK-25 K" data-sortkey="500.0" data-turning-diameter-max="Ø500 мм" data-spindle-bore="Ø62/Ø63 мм" data-turning-length-max="420 мм" data-spindle-speed-max="3000/4200 об/мин" data-motor-power="1.2/1.8 кВт" data-turret-positions="8" data-chuck-size="8&amp;quot;" data-travel-x="160 мм" data-travel-z="500 мм">
 <a class="vmc-card-link" href="equipment-turning-kdck-25-k.html" aria-label="KDCK-25 K — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/kdck-25-k.png" alt="KDCK-25 K" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1461,7 +1461,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="kdcl-15d k токарные станки с чпу с наклонной станиной" data-title="KDCL-15D K" data-sortkey="600.0" data-turning-diameter-max="Ø600 мм" data-turning-length-max="500 мм" data-spindle-speed-max="4000 об/мин" data-motor-power="4/4/4 кВт" data-turret-positions="12" data-chuck-size="8&amp;quot;" data-travel-x="220 мм" data-travel-z="500 мм">
+<article class="vmc-card" data-name="kdcl-15d k токарные станки с чпу с наклонной станиной" data-title="KDCL-15D K" data-sortkey="600.0" data-turning-diameter-max="Ø600 мм" data-spindle-bore="Ø65 мм" data-turning-length-max="500 мм" data-spindle-speed-max="4000 об/мин" data-motor-power="4/4/4 кВт" data-turret-positions="12" data-chuck-size="8&amp;quot;" data-travel-x="220 мм" data-travel-z="500 мм">
 <a class="vmc-card-link" href="equipment-turning-kdcl-15d-k.html" aria-label="KDCL-15D K — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/kdcl-15d-k.png" alt="KDCL-15D K" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1472,7 +1472,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="kdcl-32 k токарные станки с чпу с наклонной станиной" data-title="KDCL-32 K" data-sortkey="700.0" data-turning-diameter-max="Ø700 мм" data-turning-length-max="670/1070/1570 мм" data-spindle-speed-max="2800/3200 об/мин" data-motor-power="3/3 кВт" data-turret-positions="12" data-chuck-size="10&amp;quot;" data-travel-x="280 мм" data-travel-z="750/1150/1650 мм">
+<article class="vmc-card" data-name="kdcl-32 k токарные станки с чпу с наклонной станиной" data-title="KDCL-32 K" data-sortkey="700.0" data-turning-diameter-max="Ø700 мм" data-spindle-bore="Ø80/Ø86 мм (гильза)" data-turning-length-max="670/1070/1570 мм" data-spindle-speed-max="2800/3200 об/мин" data-motor-power="3/3 кВт" data-turret-positions="12" data-chuck-size="10&amp;quot;" data-travel-x="280 мм" data-travel-z="750/1150/1650 мм">
 <a class="vmc-card-link" href="equipment-turning-kdcl-32-k.html" aria-label="KDCL-32 K — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/kdcl-32-k.png" alt="KDCL-32 K" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1483,7 +1483,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="stl18-1500 z токарные станки с чпу с наклонной станиной" data-title="STL18-1500 Z" data-sortkey="800.0" data-turning-diameter-max="Ø800 мм" data-spindle-speed-max="1500 / 1000 / 800 об/мин" data-motor-power="40/30/22 кВт" data-turret-positions="8 / 12" data-chuck-size="15&amp;quot;, 18&amp;quot;" data-travel-x="380 мм" data-travel-z="1500 мм" data-spindle-nose="A2-11 / A2-15">
+<article class="vmc-card" data-name="stl18-1500 z токарные станки с чпу с наклонной станиной" data-title="STL18-1500 Z" data-sortkey="800.0" data-turning-diameter-max="Ø800 мм" data-spindle-bore="Ø110 / Ø120 / Ø185 мм" data-spindle-speed-max="1500 / 1000 / 800 об/мин" data-motor-power="40/30/22 кВт" data-turret-positions="8 / 12" data-chuck-size="15&amp;quot;, 18&amp;quot;" data-travel-x="380 мм" data-travel-z="1500 мм" data-spindle-nose="A2-11 / A2-15">
 <a class="vmc-card-link" href="equipment-turning-stl18-1500-z.html" aria-label="STL18-1500 Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/stl18-1500-z.png" alt="STL18-1500 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1494,7 +1494,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="sl8 z токарные станки с чпу с наклонной станиной" data-title="SL8 Z" data-sortkey="450.0" data-turning-diameter-max="Ø450 мм" data-spindle-speed-max="до 4000 об/мин" data-motor-power="11/7,5 кВт" data-turret-positions="8 / 12" data-chuck-size="8&amp;quot;" data-travel-x="250 мм" data-travel-z="300 мм" data-spindle-nose="A2-6">
+<article class="vmc-card" data-name="sl8 z токарные станки с чпу с наклонной станиной" data-title="SL8 Z" data-sortkey="450.0" data-turning-diameter-max="Ø450 мм" data-spindle-bore="Ø62 мм" data-spindle-speed-max="до 4000 об/мин" data-motor-power="11/7,5 кВт" data-turret-positions="8 / 12" data-chuck-size="8&amp;quot;" data-travel-x="250 мм" data-travel-z="300 мм" data-spindle-nose="A2-6">
 <a class="vmc-card-link" href="equipment-turning-sl8-z.html" aria-label="SL8 Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/sl8-z.png" alt="SL8 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1505,7 +1505,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="stl8-1100 z токарные станки с чпу с наклонной станиной" data-title="STL8-1100 Z" data-sortkey="600.0" data-turning-diameter-max="Ø600 мм" data-turning-length-max="1100 мм" data-spindle-speed-max="4000 / 3200 / 2000 / 1600 об/мин" data-motor-power="11/15 / 15/18.5 кВт" data-turret-positions="8 / 12" data-chuck-size="8&amp;quot; / 10&amp;quot;" data-travel-x="250 мм" data-travel-z="1100 мм" data-spindle-nose="A2-6 / A2-8">
+<article class="vmc-card" data-name="stl8-1100 z токарные станки с чпу с наклонной станиной" data-title="STL8-1100 Z" data-sortkey="600.0" data-turning-diameter-max="Ø600 мм" data-spindle-bore="Ø62 / Ø75 мм" data-turning-length-max="1100 мм" data-spindle-speed-max="4000 / 3200 / 2000 / 1600 об/мин" data-motor-power="11/15 / 15/18.5 кВт" data-turret-positions="8 / 12" data-chuck-size="8&amp;quot; / 10&amp;quot;" data-travel-x="250 мм" data-travel-z="1100 мм" data-spindle-nose="A2-6 / A2-8">
 <a class="vmc-card-link" href="equipment-turning-stl8-1100-z.html" aria-label="STL8-1100 Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/stl8-1100-z.png" alt="STL8-1100 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1516,7 +1516,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="kdcl-28 k токарные станки с чпу с наклонной станиной" data-title="KDCL-28 K" data-sortkey="520.0" data-turning-diameter-max="Ø520 мм" data-turning-length-max="500 мм" data-spindle-speed-max="4000/5000 об/мин" data-motor-power="11/15 кВт" data-turret-positions="12" data-chuck-size="8&amp;quot;" data-travel-x="235 мм" data-travel-z="600 мм">
+<article class="vmc-card" data-name="kdcl-28 k токарные станки с чпу с наклонной станиной" data-title="KDCL-28 K" data-sortkey="520.0" data-turning-diameter-max="Ø520 мм" data-spindle-bore="Ø63/Ø65 мм (гильза)" data-turning-length-max="500 мм" data-spindle-speed-max="4000/5000 об/мин" data-motor-power="11/15 кВт" data-turret-positions="12" data-chuck-size="8&amp;quot;" data-travel-x="235 мм" data-travel-z="600 мм">
 <a class="vmc-card-link" href="equipment-turning-kdcl-28-k.html" aria-label="KDCL-28 K — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/kdcl-28-k.png" alt="KDCL-28 K" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1527,7 +1527,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="sl6 z токарные станки с чпу с наклонной станиной" data-title="SL6 Z" data-sortkey="480.0" data-turning-diameter-max="Ø480 мм" data-spindle-speed-max="до 5000 об/мин" data-motor-power="7,5/5,5 – 11/7,5 кВт" data-turret-positions="8 / 12" data-chuck-size="6&amp;quot;, 8&amp;quot;, 10&amp;quot;" data-travel-x="200 мм" data-travel-z="250 / 350 мм" data-spindle-nose="A2-5 / A2-6 / A2-8">
+<article class="vmc-card" data-name="sl6 z токарные станки с чпу с наклонной станиной" data-title="SL6 Z" data-sortkey="480.0" data-turning-diameter-max="Ø480 мм" data-spindle-bore="Ø55 / Ø62 / Ø81 мм" data-spindle-speed-max="до 5000 об/мин" data-motor-power="7,5/5,5 – 11/7,5 кВт" data-turret-positions="8 / 12" data-chuck-size="6&amp;quot;, 8&amp;quot;, 10&amp;quot;" data-travel-x="200 мм" data-travel-z="250 / 350 мм" data-spindle-nose="A2-5 / A2-6 / A2-8">
 <a class="vmc-card-link" href="equipment-turning-sl6-z.html" aria-label="SL6 Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/sl6-z.png" alt="SL6 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1538,7 +1538,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="cbk50 b токарные станки с чпу с наклонной станиной" data-title="CBK50 B" data-sortkey="500.0" data-turning-diameter-max="Ø500 мм" data-turning-length-max="1000 мм" data-spindle-speed-max="21–1620 об/мин (бесступенчато)" data-motor-power="7,5 кВт" data-turret-positions="4" data-travel-x="255 / 1000 мм" data-spindle-nose="A2-8">
+<article class="vmc-card" data-name="cbk50 b токарные станки с чпу с наклонной станиной" data-title="CBK50 B" data-sortkey="500.0" data-turning-diameter-max="Ø500 мм" data-spindle-bore="Ø82 мм" data-turning-length-max="1000 мм" data-spindle-speed-max="21–1620 об/мин (бесступенчато)" data-motor-power="7,5 кВт" data-turret-positions="4" data-travel-x="255 / 1000 мм" data-spindle-nose="A2-8">
 <a class="vmc-card-link" href="equipment-turning-cbk50-b.html" aria-label="CBK50 B — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/cbk50-b.png" alt="CBK50 B" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1549,7 +1549,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="sl12 z токарные станки с чпу с наклонной станиной" data-title="SL12 Z" data-sortkey="550.0" data-turning-diameter-max="Ø550 мм" data-spindle-speed-max="1800 / 1000 об/мин" data-motor-power="11 / 15 кВт" data-turret-positions="8 / 12" data-chuck-size="12&amp;quot;, 15&amp;quot;" data-travel-x="280 мм" data-travel-z="450 / 600 мм" data-spindle-nose="A2-8 / A2-11">
+<article class="vmc-card" data-name="sl12 z токарные станки с чпу с наклонной станиной" data-title="SL12 Z" data-sortkey="550.0" data-turning-diameter-max="Ø550 мм" data-spindle-bore="Ø105 / Ø120 мм" data-spindle-speed-max="1800 / 1000 об/мин" data-motor-power="11 / 15 кВт" data-turret-positions="8 / 12" data-chuck-size="12&amp;quot;, 15&amp;quot;" data-travel-x="280 мм" data-travel-z="450 / 600 мм" data-spindle-nose="A2-8 / A2-11">
 <a class="vmc-card-link" href="equipment-turning-sl12-z.html" aria-label="SL12 Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/sl12-z.png" alt="SL12 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1560,7 +1560,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="ck7525 b токарные станки с чпу с наклонной станиной" data-title="CK7525 B" data-sortkey="550.0" data-turning-diameter-max="Ø550 мм" data-turning-length-max="500/1000/1500 мм" data-spindle-speed-max="30–3000 об/мин" data-motor-power="15/18.5 кВт (пост./30 мин)" data-turret-positions="12/8" data-chuck-size="Ø254 мм" data-travel-x="250 мм" data-travel-z="525–1550 мм">
+<article class="vmc-card" data-name="ck7525 b токарные станки с чпу с наклонной станиной" data-title="CK7525 B" data-sortkey="550.0" data-turning-diameter-max="Ø550 мм" data-spindle-bore="Ø87 мм" data-turning-length-max="500/1000/1500 мм" data-spindle-speed-max="30–3000 об/мин" data-motor-power="15/18.5 кВт (пост./30 мин)" data-turret-positions="12/8" data-chuck-size="Ø254 мм" data-travel-x="250 мм" data-travel-z="525–1550 мм">
 <a class="vmc-card-link" href="equipment-turning-ck7525-b.html" aria-label="CK7525 B — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/ck7525-b.png" alt="CK7525 B" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1571,7 +1571,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="stl24-1000 z токарные станки с чпу с наклонной станиной" data-title="STL24-1000 Z" data-sortkey="980.0" data-turning-diameter-max="Ø980 мм" data-turning-length-max="1000 мм" data-spindle-speed-max="1000 (опц. 800) об/мин" data-motor-power="40/30/22 кВт" data-turret-positions="8 или 12" data-chuck-size="24&amp;quot;" data-travel-x="430 мм" data-travel-z="1000 мм" data-spindle-nose="A2-15">
+<article class="vmc-card" data-name="stl24-1000 z токарные станки с чпу с наклонной станиной" data-title="STL24-1000 Z" data-sortkey="980.0" data-turning-diameter-max="Ø980 мм" data-spindle-bore="Ø135 (опц. Ø162/Ø185) мм" data-turning-length-max="1000 мм" data-spindle-speed-max="1000 (опц. 800) об/мин" data-motor-power="40/30/22 кВт" data-turret-positions="8 или 12" data-chuck-size="24&amp;quot;" data-travel-x="430 мм" data-travel-z="1000 мм" data-spindle-nose="A2-15">
 <a class="vmc-card-link" href="equipment-turning-stl24-1000-z.html" aria-label="STL24-1000 Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/stl24-1000-z.png" alt="STL24-1000 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1582,7 +1582,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="sth12-750b z токарные станки с чпу с наклонной станиной" data-title="STH12-750B Z" data-sortkey="500.0" data-turning-diameter-max="Ø500 мм" data-spindle-speed-max="3000 (опц. 2000) об/мин" data-motor-power="15/11 (опц. 15/18,5) кВт" data-travel-x="220 мм" data-travel-z="750 мм" data-spindle-nose="A2-8">
+<article class="vmc-card" data-name="sth12-750b z токарные станки с чпу с наклонной станиной" data-title="STH12-750B Z" data-sortkey="500.0" data-turning-diameter-max="Ø500 мм" data-spindle-bore="под запрос" data-spindle-speed-max="3000 (опц. 2000) об/мин" data-motor-power="15/11 (опц. 15/18,5) кВт" data-travel-x="220 мм" data-travel-z="750 мм" data-spindle-nose="A2-8">
 <a class="vmc-card-link" href="equipment-turning-sth12-750b-z.html" aria-label="STH12-750B Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/sth12-750b-z.png" alt="STH12-750B Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1593,7 +1593,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="kdcl-35 k токарные станки с чпу с наклонной станиной" data-title="KDCL-35 K" data-sortkey="750.0" data-turning-diameter-max="Ø750 мм" data-turning-length-max="1000/1500/2000/3000 мм" data-spindle-speed-max="1600 об/мин" data-motor-power="3/3 кВт" data-turret-positions="12" data-chuck-size="12&amp;quot;" data-travel-x="350 мм" data-travel-z="1050/1550/2050/3050 мм">
+<article class="vmc-card" data-name="kdcl-35 k токарные станки с чпу с наклонной станиной" data-title="KDCL-35 K" data-sortkey="750.0" data-turning-diameter-max="Ø750 мм" data-spindle-bore="Ø105 мм" data-turning-length-max="1000/1500/2000/3000 мм" data-spindle-speed-max="1600 об/мин" data-motor-power="3/3 кВт" data-turret-positions="12" data-chuck-size="12&amp;quot;" data-travel-x="350 мм" data-travel-z="1050/1550/2050/3050 мм">
 <a class="vmc-card-link" href="equipment-turning-kdcl-35-k.html" aria-label="KDCL-35 K — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/kdcl-35-k.png" alt="KDCL-35 K" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1604,7 +1604,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="kdcl-16p k токарные станки с чпу с наклонной станиной" data-title="KDCL-16P K" data-sortkey="320.0" data-turning-diameter-max="Ø320 мм" data-turning-length-max="260 мм" data-spindle-speed-max="60–5000 об/мин" data-motor-power="3.7 кВт" data-chuck-size="6&amp;quot;" data-travel-x="320 мм" data-travel-z="320 мм">
+<article class="vmc-card" data-name="kdcl-16p k токарные станки с чпу с наклонной станиной" data-title="KDCL-16P K" data-sortkey="320.0" data-turning-diameter-max="Ø320 мм" data-spindle-bore="Ø52 мм" data-turning-length-max="260 мм" data-spindle-speed-max="60–5000 об/мин" data-motor-power="3.7 кВт" data-chuck-size="6&amp;quot;" data-travel-x="320 мм" data-travel-z="320 мм">
 <a class="vmc-card-link" href="equipment-turning-kdcl-16p-k.html" aria-label="KDCL-16P K — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/kdcl-16p-k.png" alt="KDCL-16P K" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1615,7 +1615,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="stl6-sx z токарные станки с чпу с наклонной станиной" data-title="STL6-SX Z" data-sortkey="240.0" data-turning-diameter-max="Ø240 мм" data-turning-length-max="400 мм" data-spindle-speed-max="5000 об/мин" data-motor-power="15/11 кВт" data-spindle-nose="A2-5 / A2-5">
+<article class="vmc-card" data-name="stl6-sx z токарные станки с чпу с наклонной станиной" data-title="STL6-SX Z" data-sortkey="240.0" data-turning-diameter-max="Ø240 мм" data-spindle-bore="55 / 55 мм" data-turning-length-max="400 мм" data-spindle-speed-max="5000 об/мин" data-motor-power="15/11 кВт" data-spindle-nose="A2-5 / A2-5">
 <a class="vmc-card-link" href="equipment-turning-stl6-sx-z.html" aria-label="STL6-SX Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/stl6-sx-z.png" alt="STL6-SX Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1626,7 +1626,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="stl10-1600 z токарные станки с чпу с наклонной станиной" data-title="STL10-1600 Z" data-sortkey="600.0" data-turning-diameter-max="Ø600 мм" data-turning-length-max="1600 мм" data-spindle-speed-max="3000 (опц. 3200) об/мин" data-motor-power="18.5/15 кВт" data-turret-positions="8 (опц. 12)" data-chuck-size="10&amp;quot;" data-travel-x="250 мм" data-travel-z="1600 мм" data-spindle-nose="A2-8">
+<article class="vmc-card" data-name="stl10-1600 z токарные станки с чпу с наклонной станиной" data-title="STL10-1600 Z" data-sortkey="600.0" data-turning-diameter-max="Ø600 мм" data-spindle-bore="Ø86 (опц. Ø75) мм" data-turning-length-max="1600 мм" data-spindle-speed-max="3000 (опц. 3200) об/мин" data-motor-power="18.5/15 кВт" data-turret-positions="8 (опц. 12)" data-chuck-size="10&amp;quot;" data-travel-x="250 мм" data-travel-z="1600 мм" data-spindle-nose="A2-8">
 <a class="vmc-card-link" href="equipment-turning-stl10-1600-z.html" aria-label="STL10-1600 Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/stl10-1600-z.png" alt="STL10-1600 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1637,7 +1637,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="stl12-1600 z токарные станки с чпу с наклонной станиной" data-title="STL12-1600 Z" data-sortkey="600.0" data-turning-diameter-max="Ø600 мм" data-turning-length-max="1600 мм" data-spindle-speed-max="1800 (опц. 1000) об/мин" data-motor-power="15/18.5 кВт" data-turret-positions="8 (опц. 12)" data-chuck-size="12&amp;quot;/15&amp;quot;" data-travel-x="250 мм" data-travel-z="1600 мм" data-spindle-nose="A2-8 (опц. A2-11)">
+<article class="vmc-card" data-name="stl12-1600 z токарные станки с чпу с наклонной станиной" data-title="STL12-1600 Z" data-sortkey="600.0" data-turning-diameter-max="Ø600 мм" data-spindle-bore="Ø105 (опц. Ø120) мм" data-turning-length-max="1600 мм" data-spindle-speed-max="1800 (опц. 1000) об/мин" data-motor-power="15/18.5 кВт" data-turret-positions="8 (опц. 12)" data-chuck-size="12&amp;quot;/15&amp;quot;" data-travel-x="250 мм" data-travel-z="1600 мм" data-spindle-nose="A2-8 (опц. A2-11)">
 <a class="vmc-card-link" href="equipment-turning-stl12-1600-z.html" aria-label="STL12-1600 Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/stl12-1600-z.png" alt="STL12-1600 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1648,7 +1648,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="stl12 z токарные станки с чпу с наклонной станиной" data-title="STL12 Z" data-sortkey="530.0" data-turning-diameter-max="Ø530 мм" data-turning-length-max="750 (опц. 1000) мм" data-spindle-speed-max="1800 (опц. 1000) об/мин" data-motor-power="15/11 кВт" data-turret-positions="8 (опц. 12)" data-chuck-size="12&amp;quot;/15&amp;quot;" data-travel-x="280 мм" data-travel-z="750 (опц. 1000) мм" data-spindle-nose="A2-8 (опц. A2-11)">
+<article class="vmc-card" data-name="stl12 z токарные станки с чпу с наклонной станиной" data-title="STL12 Z" data-sortkey="530.0" data-turning-diameter-max="Ø530 мм" data-spindle-bore="Ø105 (опц. Ø120) мм" data-turning-length-max="750 (опц. 1000) мм" data-spindle-speed-max="1800 (опц. 1000) об/мин" data-motor-power="15/11 кВт" data-turret-positions="8 (опц. 12)" data-chuck-size="12&amp;quot;/15&amp;quot;" data-travel-x="280 мм" data-travel-z="750 (опц. 1000) мм" data-spindle-nose="A2-8 (опц. A2-11)">
 <a class="vmc-card-link" href="equipment-turning-stl12-z.html" aria-label="STL12 Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/stl12-z.png" alt="STL12 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1659,7 +1659,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="sth10-750b z токарные станки с чпу с наклонной станиной" data-title="STH10-750B Z" data-sortkey="500.0" data-turning-diameter-max="Ø500 мм" data-spindle-speed-max="3200 об/мин" data-motor-power="15/11 – 15/18,5 кВт" data-travel-x="220 мм" data-travel-z="750 мм" data-spindle-nose="A2-8">
+<article class="vmc-card" data-name="sth10-750b z токарные станки с чпу с наклонной станиной" data-title="STH10-750B Z" data-sortkey="500.0" data-turning-diameter-max="Ø500 мм" data-spindle-bore="под запрос" data-spindle-speed-max="3200 об/мин" data-motor-power="15/11 – 15/18,5 кВт" data-travel-x="220 мм" data-travel-z="750 мм" data-spindle-nose="A2-8">
 <a class="vmc-card-link" href="equipment-turning-sth10-750b-z.html" aria-label="STH10-750B Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/sth10-750b-z.png" alt="STH10-750B Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1670,7 +1670,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="stl15-2000 z токарные станки с чпу с наклонной станиной" data-title="STL15-2000 Z" data-sortkey="650.0" data-turning-diameter-max="Ø650 мм" data-spindle-speed-max="1800 / 1000 об/мин" data-motor-power="18,5/15 (опц. 22/18,5) кВт" data-turret-positions="8 / 12" data-chuck-size="12&amp;quot;, 15&amp;quot;" data-travel-x="300 мм" data-travel-z="2000 мм" data-spindle-nose="A2-8 / A2-11">
+<article class="vmc-card" data-name="stl15-2000 z токарные станки с чпу с наклонной станиной" data-title="STL15-2000 Z" data-sortkey="650.0" data-turning-diameter-max="Ø650 мм" data-spindle-bore="Ø105 / Ø120 мм" data-spindle-speed-max="1800 / 1000 об/мин" data-motor-power="18,5/15 (опц. 22/18,5) кВт" data-turret-positions="8 / 12" data-chuck-size="12&amp;quot;, 15&amp;quot;" data-travel-x="300 мм" data-travel-z="2000 мм" data-spindle-nose="A2-8 / A2-11">
 <a class="vmc-card-link" href="equipment-turning-stl15-2000-z.html" aria-label="STL15-2000 Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/stl15-2000-z.png" alt="STL15-2000 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1681,7 +1681,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="stl12-3000 z токарные станки с чпу с наклонной станиной" data-title="STL12-3000 Z" data-sortkey="620.0" data-turning-diameter-max="Ø620 мм" data-turning-length-max="3000 мм" data-spindle-speed-max="1800 / 1000 об/мин" data-motor-power="15/18.5 кВт" data-turret-positions="12" data-chuck-size="12&amp;quot;/15&amp;quot;" data-travel-x="320 мм" data-travel-z="3100 мм" data-spindle-nose="A2-8 / A2-11">
+<article class="vmc-card" data-name="stl12-3000 z токарные станки с чпу с наклонной станиной" data-title="STL12-3000 Z" data-sortkey="620.0" data-turning-diameter-max="Ø620 мм" data-spindle-bore="Ø105 / Ø120 мм" data-turning-length-max="3000 мм" data-spindle-speed-max="1800 / 1000 об/мин" data-motor-power="15/18.5 кВт" data-turret-positions="12" data-chuck-size="12&amp;quot;/15&amp;quot;" data-travel-x="320 мм" data-travel-z="3100 мм" data-spindle-nose="A2-8 / A2-11">
 <a class="vmc-card-link" href="equipment-turning-stl12-3000-z.html" aria-label="STL12-3000 Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/stl12-3000-z.png" alt="STL12-3000 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1692,7 +1692,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="sth10-500b z токарные станки с чпу с наклонной станиной" data-title="STH10-500B Z" data-sortkey="500.0" data-turning-diameter-max="Ø500 мм" data-spindle-speed-max="3200 об/мин" data-motor-power="15/18,5 – 15/11 кВт" data-travel-x="220 мм" data-travel-z="500 мм" data-spindle-nose="A2-8">
+<article class="vmc-card" data-name="sth10-500b z токарные станки с чпу с наклонной станиной" data-title="STH10-500B Z" data-sortkey="500.0" data-turning-diameter-max="Ø500 мм" data-spindle-bore="под запрос" data-spindle-speed-max="3200 об/мин" data-motor-power="15/18,5 – 15/11 кВт" data-travel-x="220 мм" data-travel-z="500 мм" data-spindle-nose="A2-8">
 <a class="vmc-card-link" href="equipment-turning-sth10-500b-z.html" aria-label="STH10-500B Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/sth10-500b-z.png" alt="STH10-500B Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1703,7 +1703,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="stl18-750 z токарные станки с чпу с наклонной станиной" data-title="STL18-750 Z" data-sortkey="800.0" data-turning-diameter-max="Ø800 мм" data-spindle-speed-max="1500 (опц. 1000 / 800) об/мин" data-motor-power="40/30/22 кВт" data-turret-positions="8 (опц. 12)" data-chuck-size="15&amp;quot;, 18&amp;quot;" data-travel-x="380 мм" data-travel-z="750 мм" data-spindle-nose="A2-11 (опц. A2-15)">
+<article class="vmc-card" data-name="stl18-750 z токарные станки с чпу с наклонной станиной" data-title="STL18-750 Z" data-sortkey="800.0" data-turning-diameter-max="Ø800 мм" data-spindle-bore="Ø110 (опц. Ø120 / Ø185) мм" data-spindle-speed-max="1500 (опц. 1000 / 800) об/мин" data-motor-power="40/30/22 кВт" data-turret-positions="8 (опц. 12)" data-chuck-size="15&amp;quot;, 18&amp;quot;" data-travel-x="380 мм" data-travel-z="750 мм" data-spindle-nose="A2-11 (опц. A2-15)">
 <a class="vmc-card-link" href="equipment-turning-stl18-750-z.html" aria-label="STL18-750 Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/stl18-750-z.png" alt="STL18-750 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1714,7 +1714,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="stl6 z токарные станки с чпу с наклонной станиной" data-title="STL6 Z" data-sortkey="400.0" data-turning-diameter-max="Ø400 мм" data-turning-length-max="400 мм" data-spindle-speed-max="4500 / 4000 об/мин" data-motor-power="11/7.5 / 15/11 кВт" data-turret-positions="8 / 12" data-chuck-size="6&amp;quot; / 8&amp;quot;" data-travel-x="150 мм" data-travel-z="400 мм" data-spindle-nose="A2-5 / A2-6">
+<article class="vmc-card" data-name="stl6 z токарные станки с чпу с наклонной станиной" data-title="STL6 Z" data-sortkey="400.0" data-turning-diameter-max="Ø400 мм" data-spindle-bore="Ø55 / Ø62 мм" data-turning-length-max="400 мм" data-spindle-speed-max="4500 / 4000 об/мин" data-motor-power="11/7.5 / 15/11 кВт" data-turret-positions="8 / 12" data-chuck-size="6&amp;quot; / 8&amp;quot;" data-travel-x="150 мм" data-travel-z="400 мм" data-spindle-nose="A2-5 / A2-6">
 <a class="vmc-card-link" href="equipment-turning-stl6-z.html" aria-label="STL6 Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/stl6-z.png" alt="STL6 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1725,7 +1725,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="stl10-2000 z токарные станки с чпу с наклонной станиной" data-title="STL10-2000 Z" data-sortkey="620.0" data-turning-diameter-max="Ø620 мм" data-turning-length-max="1800 мм (в центрах 2000 мм)" data-spindle-speed-max="3000 (опц. 3200) об/мин" data-motor-power="18.5/15 кВт" data-turret-positions="8 (опц. 12)" data-chuck-size="10&amp;quot;" data-travel-x="280 мм" data-travel-z="2000 мм" data-spindle-nose="A2-8">
+<article class="vmc-card" data-name="stl10-2000 z токарные станки с чпу с наклонной станиной" data-title="STL10-2000 Z" data-sortkey="620.0" data-turning-diameter-max="Ø620 мм" data-spindle-bore="Ø86 (опц. Ø75) мм" data-turning-length-max="1800 мм (в центрах 2000 мм)" data-spindle-speed-max="3000 (опц. 3200) об/мин" data-motor-power="18.5/15 кВт" data-turret-positions="8 (опц. 12)" data-chuck-size="10&amp;quot;" data-travel-x="280 мм" data-travel-z="2000 мм" data-spindle-nose="A2-8">
 <a class="vmc-card-link" href="equipment-turning-stl10-2000-z.html" aria-label="STL10-2000 Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/stl10-2000-z.png" alt="STL10-2000 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1736,7 +1736,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="kdcl-30 k токарные станки с чпу с наклонной станиной" data-title="KDCL-30 K" data-sortkey="650.0" data-turning-diameter-max="Ø650 мм" data-turning-length-max="900/1400/1900/2900 мм" data-spindle-speed-max="2500 об/мин" data-motor-power="3/3 кВт" data-turret-positions="12" data-chuck-size="12&amp;quot;" data-travel-x="270 мм" data-travel-z="1050/1550/2050/3050 мм">
+<article class="vmc-card" data-name="kdcl-30 k токарные станки с чпу с наклонной станиной" data-title="KDCL-30 K" data-sortkey="650.0" data-turning-diameter-max="Ø650 мм" data-spindle-bore="Ø90 мм" data-turning-length-max="900/1400/1900/2900 мм" data-spindle-speed-max="2500 об/мин" data-motor-power="3/3 кВт" data-turret-positions="12" data-chuck-size="12&amp;quot;" data-travel-x="270 мм" data-travel-z="1050/1550/2050/3050 мм">
 <a class="vmc-card-link" href="equipment-turning-kdcl-30-k.html" aria-label="KDCL-30 K — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/kdcl-30-k.png" alt="KDCL-30 K" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1747,7 +1747,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="cbk63 b токарные станки с чпу с наклонной станиной" data-title="CBK63 B" data-sortkey="630.0" data-turning-diameter-max="Ø630 мм" data-spindle-speed-max="20–210 / 50–525 / 155–1600 об/мин" data-motor-power="11 кВт" data-turret-positions="4 или 8" data-travel-x="350 мм" data-travel-z="1000 / 1980 / 3000 мм">
+<article class="vmc-card" data-name="cbk63 b токарные станки с чпу с наклонной станиной" data-title="CBK63 B" data-sortkey="630.0" data-turning-diameter-max="Ø630 мм" data-spindle-bore="Ø84 мм" data-spindle-speed-max="20–210 / 50–525 / 155–1600 об/мин" data-motor-power="11 кВт" data-turret-positions="4 или 8" data-travel-x="350 мм" data-travel-z="1000 / 1980 / 3000 мм">
 <a class="vmc-card-link" href="equipment-turning-cbk63-b.html" aria-label="CBK63 B — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/cbk63-b.png" alt="CBK63 B" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1758,7 +1758,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="stl8 z токарные станки с чпу с наклонной станиной" data-title="STL8 Z" data-sortkey="450.0" data-turning-diameter-max="Ø450 мм" data-turning-length-max="500 мм" data-spindle-speed-max="4000 / 3200 / 2000 / 1600 об/мин" data-motor-power="11/7.5 / 15/11 кВт" data-turret-positions="8 / 12" data-chuck-size="8&amp;quot; / 10&amp;quot;" data-travel-x="170 мм" data-travel-z="500 мм" data-spindle-nose="A2-6 / A2-8">
+<article class="vmc-card" data-name="stl8 z токарные станки с чпу с наклонной станиной" data-title="STL8 Z" data-sortkey="450.0" data-turning-diameter-max="Ø450 мм" data-spindle-bore="Ø66 / Ø75 мм" data-turning-length-max="500 мм" data-spindle-speed-max="4000 / 3200 / 2000 / 1600 об/мин" data-motor-power="11/7.5 / 15/11 кВт" data-turret-positions="8 / 12" data-chuck-size="8&amp;quot; / 10&amp;quot;" data-travel-x="170 мм" data-travel-z="500 мм" data-spindle-nose="A2-6 / A2-8">
 <a class="vmc-card-link" href="equipment-turning-stl8-z.html" aria-label="STL8 Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/stl8-z.png" alt="STL8 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1769,7 +1769,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="ck7516 b токарные станки с чпу с наклонной станиной" data-title="CK7516 B" data-sortkey="400.0" data-turning-diameter-max="Ø400 мм" data-turning-length-max="400 мм" data-spindle-speed-max="55–5500 об/мин" data-motor-power="11/15 кВт (пост./30 мин)" data-turret-positions="12/8" data-chuck-size="Ø165 мм">
+<article class="vmc-card" data-name="ck7516 b токарные станки с чпу с наклонной станиной" data-title="CK7516 B" data-sortkey="400.0" data-turning-diameter-max="Ø400 мм" data-spindle-bore="Ø57 мм" data-turning-length-max="400 мм" data-spindle-speed-max="55–5500 об/мин" data-motor-power="11/15 кВт (пост./30 мин)" data-turret-positions="12/8" data-chuck-size="Ø165 мм">
 <a class="vmc-card-link" href="equipment-turning-ck7516-b.html" aria-label="CK7516 B — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/ck7516-b.png" alt="CK7516 B" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1780,7 +1780,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="ck40 b токарные станки с чпу с наклонной станиной" data-title="CK40 B" data-sortkey="400.0" data-turning-diameter-max="Ø400 мм" data-turning-length-max="400 мм" data-spindle-speed-max="70–3000 об/мин" data-motor-power="7.5 кВт" data-turret-positions="8/12">
+<article class="vmc-card" data-name="ck40 b токарные станки с чпу с наклонной станиной" data-title="CK40 B" data-sortkey="400.0" data-turning-diameter-max="Ø400 мм" data-spindle-bore="Ø57 мм" data-turning-length-max="400 мм" data-spindle-speed-max="70–3000 об/мин" data-motor-power="7.5 кВт" data-turret-positions="8/12">
 <a class="vmc-card-link" href="equipment-turning-ck40-b.html" aria-label="CK40 B — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/ck40-b.png" alt="CK40 B" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1791,7 +1791,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="kdcl-50b k токарные станки с чпу с наклонной станиной" data-title="KDCL-50B K" data-sortkey="1000.0" data-turning-diameter-max="Ø1000 мм" data-turning-length-max="2000 мм" data-spindle-speed-max="800 об/мин" data-motor-power="22 кВт" data-turret-positions="12" data-travel-x="550 мм" data-travel-z="2100 мм">
+<article class="vmc-card" data-name="kdcl-50b k токарные станки с чпу с наклонной станиной" data-title="KDCL-50B K" data-sortkey="1000.0" data-turning-diameter-max="Ø1000 мм" data-spindle-bore="Ø160 мм" data-turning-length-max="2000 мм" data-spindle-speed-max="800 об/мин" data-motor-power="22 кВт" data-turret-positions="12" data-travel-x="550 мм" data-travel-z="2100 мм">
 <a class="vmc-card-link" href="equipment-turning-kdcl-50b-k.html" aria-label="KDCL-50B K — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/kdcl-50b-k.png" alt="KDCL-50B K" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1802,7 +1802,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="kdcl-15 k токарные станки с чпу с наклонной станиной" data-title="KDCL-15 K" data-sortkey="360.0" data-turning-diameter-max="Ø360 мм" data-turning-length-max="300 мм" data-spindle-speed-max="6000/4000 об/мин" data-motor-power="7.5/11 кВт" data-turret-positions="8" data-chuck-size="6&amp;quot;" data-travel-x="140 мм" data-travel-z="320 мм">
+<article class="vmc-card" data-name="kdcl-15 k токарные станки с чпу с наклонной станиной" data-title="KDCL-15 K" data-sortkey="360.0" data-turning-diameter-max="Ø360 мм" data-spindle-bore="Ø56/Ø38 мм" data-turning-length-max="300 мм" data-spindle-speed-max="6000/4000 об/мин" data-motor-power="7.5/11 кВт" data-turret-positions="8" data-chuck-size="6&amp;quot;" data-travel-x="140 мм" data-travel-z="320 мм">
 <a class="vmc-card-link" href="equipment-turning-kdcl-15-k.html" aria-label="KDCL-15 K — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/kdcl-15-k.png" alt="KDCL-15 K" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1813,7 +1813,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="stl12-750-1000 z токарные станки с чпу с наклонной станиной" data-title="STL12-750-1000 Z" data-sortkey="530.0" data-turning-diameter-max="Ø530 мм" data-turning-length-max="750 / 1000 мм" data-spindle-speed-max="3000 об/мин" data-motor-power="11/15 кВт" data-turret-positions="8 / 12" data-chuck-size="12&amp;quot;" data-travel-x="280 мм" data-travel-z="750 / 1000 мм" data-spindle-nose="A2-8">
+<article class="vmc-card" data-name="stl12-750-1000 z токарные станки с чпу с наклонной станиной" data-title="STL12-750-1000 Z" data-sortkey="530.0" data-turning-diameter-max="Ø530 мм" data-spindle-bore="Ø86 мм" data-turning-length-max="750 / 1000 мм" data-spindle-speed-max="3000 об/мин" data-motor-power="11/15 кВт" data-turret-positions="8 / 12" data-chuck-size="12&amp;quot;" data-travel-x="280 мм" data-travel-z="750 / 1000 мм" data-spindle-nose="A2-8">
 <a class="vmc-card-link" href="equipment-turning-stl12-750-1000-z.html" aria-label="STL12-750-1000 Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/stl12-750-1000-z.png" alt="STL12-750-1000 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1824,7 +1824,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="kdcl-35b k токарные станки с чпу с наклонной станиной" data-title="KDCL-35B K" data-sortkey="700.0" data-turning-diameter-max="Ø700 мм" data-turning-length-max="1500 мм" data-spindle-speed-max="1600 об/мин" data-motor-power="22 кВт" data-turret-positions="12" data-travel-x="325 мм" data-travel-z="1550 мм">
+<article class="vmc-card" data-name="kdcl-35b k токарные станки с чпу с наклонной станиной" data-title="KDCL-35B K" data-sortkey="700.0" data-turning-diameter-max="Ø700 мм" data-spindle-bore="Ø105 мм" data-turning-length-max="1500 мм" data-spindle-speed-max="1600 об/мин" data-motor-power="22 кВт" data-turret-positions="12" data-travel-x="325 мм" data-travel-z="1550 мм">
 <a class="vmc-card-link" href="equipment-turning-kdcl-35b-k.html" aria-label="KDCL-35B K — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/kdcl-35b-k.png" alt="KDCL-35B K" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1835,7 +1835,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="ck50 b токарные станки с чпу с наклонной станиной" data-title="CK50 B" data-sortkey="500.0" data-turning-diameter-max="Ø500 мм" data-turning-length-max="500 мм" data-spindle-speed-max="60–2250 об/мин" data-motor-power="15 кВт" data-turret-positions="8–12">
+<article class="vmc-card" data-name="ck50 b токарные станки с чпу с наклонной станиной" data-title="CK50 B" data-sortkey="500.0" data-turning-diameter-max="Ø500 мм" data-spindle-bore="Ø62 мм" data-turning-length-max="500 мм" data-spindle-speed-max="60–2250 об/мин" data-motor-power="15 кВт" data-turret-positions="8–12">
 <a class="vmc-card-link" href="equipment-turning-ck50-b.html" aria-label="CK50 B — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/ck50-b.png" alt="CK50 B" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1846,7 +1846,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="sl10 z токарные станки с чпу с наклонной станиной" data-title="SL10 Z" data-sortkey="550.0" data-turning-diameter-max="Ø550 мм" data-spindle-speed-max="3000 / 3200 об/мин" data-motor-power="15/11 кВт" data-turret-positions="8 / 12" data-chuck-size="10&amp;quot;" data-travel-x="280 мм" data-travel-z="450 / 600 мм" data-spindle-nose="A2-8">
+<article class="vmc-card" data-name="sl10 z токарные станки с чпу с наклонной станиной" data-title="SL10 Z" data-sortkey="550.0" data-turning-diameter-max="Ø550 мм" data-spindle-bore="Ø86 / Ø75 мм" data-spindle-speed-max="3000 / 3200 об/мин" data-motor-power="15/11 кВт" data-turret-positions="8 / 12" data-chuck-size="10&amp;quot;" data-travel-x="280 мм" data-travel-z="450 / 600 мм" data-spindle-nose="A2-8">
 <a class="vmc-card-link" href="equipment-turning-sl10-z.html" aria-label="SL10 Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/sl10-z.png" alt="SL10 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1857,7 +1857,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="sth12-500b z токарные станки с чпу с наклонной станиной" data-title="STH12-500B Z" data-sortkey="500.0" data-turning-diameter-max="Ø500 мм" data-spindle-speed-max="3000 (опц. 2000) об/мин" data-motor-power="15/18,5 кВт" data-travel-x="220 мм" data-travel-z="500 мм" data-spindle-nose="A2-8">
+<article class="vmc-card" data-name="sth12-500b z токарные станки с чпу с наклонной станиной" data-title="STH12-500B Z" data-sortkey="500.0" data-turning-diameter-max="Ø500 мм" data-spindle-bore="под запрос" data-spindle-speed-max="3000 (опц. 2000) об/мин" data-motor-power="15/18,5 кВт" data-travel-x="220 мм" data-travel-z="500 мм" data-spindle-nose="A2-8">
 <a class="vmc-card-link" href="equipment-turning-sth12-500b-z.html" aria-label="STH12-500B Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/sth12-500b-z.png" alt="STH12-500B Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1868,7 +1868,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="kdcl-30b k токарные станки с чпу с наклонной станиной" data-title="KDCL-30B K" data-sortkey="700.0" data-turning-diameter-max="Ø700 мм" data-turning-length-max="820/1070/1570/2070 мм" data-spindle-speed-max="2800/3200 об/мин" data-motor-power="3/3 кВт" data-turret-positions="12" data-chuck-size="10&amp;quot;" data-travel-x="280 мм" data-travel-z="750/1150/1650/2150 мм">
+<article class="vmc-card" data-name="kdcl-30b k токарные станки с чпу с наклонной станиной" data-title="KDCL-30B K" data-sortkey="700.0" data-turning-diameter-max="Ø700 мм" data-spindle-bore="Ø80/Ø86 мм (гильза)" data-turning-length-max="820/1070/1570/2070 мм" data-spindle-speed-max="2800/3200 об/мин" data-motor-power="3/3 кВт" data-turret-positions="12" data-chuck-size="10&amp;quot;" data-travel-x="280 мм" data-travel-z="750/1150/1650/2150 мм">
 <a class="vmc-card-link" href="equipment-turning-kdcl-30b-k.html" aria-label="KDCL-30B K — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/kdcl-30b-k.png" alt="KDCL-30B K" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1879,7 +1879,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="stl15-1500 z токарные станки с чпу с наклонной станиной" data-title="STL15-1500 Z" data-sortkey="650.0" data-turning-diameter-max="Ø650 мм" data-spindle-speed-max="1800 / 1000 об/мин (с коробкой)" data-motor-power="18,5/15 – 22/18,5 кВт" data-turret-positions="8 / 12" data-chuck-size="12&amp;quot;, 15&amp;quot;" data-travel-x="300 мм" data-travel-z="1500 мм" data-spindle-nose="A2-8 / A2-11">
+<article class="vmc-card" data-name="stl15-1500 z токарные станки с чпу с наклонной станиной" data-title="STL15-1500 Z" data-sortkey="650.0" data-turning-diameter-max="Ø650 мм" data-spindle-bore="Ø105 / Ø120 мм" data-spindle-speed-max="1800 / 1000 об/мин (с коробкой)" data-motor-power="18,5/15 – 22/18,5 кВт" data-turret-positions="8 / 12" data-chuck-size="12&amp;quot;, 15&amp;quot;" data-travel-x="300 мм" data-travel-z="1500 мм" data-spindle-nose="A2-8 / A2-11">
 <a class="vmc-card-link" href="equipment-turning-stl15-1500-z.html" aria-label="STL15-1500 Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/stl15-1500-z.png" alt="STL15-1500 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1890,7 +1890,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="stl12-2000 z токарные станки с чпу с наклонной станиной" data-title="STL12-2000 Z" data-sortkey="620.0" data-turning-diameter-max="Ø620 мм" data-turning-length-max="1820 мм (в центрах 2000 мм)" data-spindle-speed-max="1800 / 1000 об/мин" data-motor-power="15/18.5 кВт" data-turret-positions="8 (опц. 12)" data-chuck-size="12&amp;quot; (опц. 10&amp;quot;/15&amp;quot;)" data-travel-x="280 мм" data-travel-z="2000 мм" data-spindle-nose="A2-8 / A2-11">
+<article class="vmc-card" data-name="stl12-2000 z токарные станки с чпу с наклонной станиной" data-title="STL12-2000 Z" data-sortkey="620.0" data-turning-diameter-max="Ø620 мм" data-spindle-bore="Ø105 / Ø120 мм" data-turning-length-max="1820 мм (в центрах 2000 мм)" data-spindle-speed-max="1800 / 1000 об/мин" data-motor-power="15/18.5 кВт" data-turret-positions="8 (опц. 12)" data-chuck-size="12&amp;quot; (опц. 10&amp;quot;/15&amp;quot;)" data-travel-x="280 мм" data-travel-z="2000 мм" data-spindle-nose="A2-8 / A2-11">
 <a class="vmc-card-link" href="equipment-turning-stl12-2000-z.html" aria-label="STL12-2000 Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/stl12-2000-z.png" alt="STL12-2000 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1901,7 +1901,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="bc37 b токарные станки с чпу с наклонной станиной" data-title="BC37 B" data-sortkey="550.0" data-turning-diameter-max="Ø550 мм" data-turning-length-max="310 / 510 мм" data-spindle-speed-max="50–4500 об/мин" data-motor-power="11/15 кВт" data-turret-positions="8 / 12" data-spindle-nose="A2-6">
+<article class="vmc-card" data-name="bc37 b токарные станки с чпу с наклонной станиной" data-title="BC37 B" data-sortkey="550.0" data-turning-diameter-max="Ø550 мм" data-spindle-bore="Ø66 мм" data-turning-length-max="310 / 510 мм" data-spindle-speed-max="50–4500 об/мин" data-motor-power="11/15 кВт" data-turret-positions="8 / 12" data-spindle-nose="A2-6">
 <a class="vmc-card-link" href="equipment-turning-bc37-b.html" aria-label="BC37 B — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/bc37-b.png" alt="BC37 B" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1912,7 +1912,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="stl5 z токарные станки с чпу с наклонной станиной" data-title="STL5 Z" data-sortkey="300.0" data-turning-diameter-max="Ø300 мм" data-turning-length-max="300 / 400 / 550 мм" data-spindle-speed-max="4500 об/мин" data-motor-power="5.5/7.5 / 11/7.5 кВт" data-turret-positions="8 / 12" data-chuck-size="5&amp;quot; / 6&amp;quot;" data-travel-x="150 мм" data-travel-z="300 / 400 / 550 мм" data-spindle-nose="A2-5">
+<article class="vmc-card" data-name="stl5 z токарные станки с чпу с наклонной станиной" data-title="STL5 Z" data-sortkey="300.0" data-turning-diameter-max="Ø300 мм" data-spindle-bore="Ø48 / Ø55 мм" data-turning-length-max="300 / 400 / 550 мм" data-spindle-speed-max="4500 об/мин" data-motor-power="5.5/7.5 / 11/7.5 кВт" data-turret-positions="8 / 12" data-chuck-size="5&amp;quot; / 6&amp;quot;" data-travel-x="150 мм" data-travel-z="300 / 400 / 550 мм" data-spindle-nose="A2-5">
 <a class="vmc-card-link" href="equipment-turning-stl5-z.html" aria-label="STL5 Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/stl5-z.png" alt="STL5 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1923,7 +1923,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="kdcl-16 k токарные станки с чпу с наклонной станиной" data-title="KDCL-16 K" data-sortkey="470.0" data-turning-diameter-max="Ø470 мм" data-turning-length-max="420 мм" data-spindle-speed-max="5000/6000 об/мин" data-motor-power="1.2/1.4 кВт" data-turret-positions="12" data-chuck-size="6&amp;quot;" data-travel-x="-25…+165 мм" data-travel-z="480 мм">
+<article class="vmc-card" data-name="kdcl-16 k токарные станки с чпу с наклонной станиной" data-title="KDCL-16 K" data-sortkey="470.0" data-turning-diameter-max="Ø470 мм" data-spindle-bore="Ø52/Ø56 мм" data-turning-length-max="420 мм" data-spindle-speed-max="5000/6000 об/мин" data-motor-power="1.2/1.4 кВт" data-turret-positions="12" data-chuck-size="6&amp;quot;" data-travel-x="-25…+165 мм" data-travel-z="480 мм">
 <a class="vmc-card-link" href="equipment-turning-kdcl-16-k.html" aria-label="KDCL-16 K — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/kdcl-16-k.png" alt="KDCL-16 K" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1934,7 +1934,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="ck7530 b токарные станки с чпу с наклонной станиной" data-title="CK7530 B" data-sortkey="670.0" data-turning-diameter-max="Ø670 мм (гидропатрон) / Ø470 мм (приводной револьвер)" data-turning-length-max="1500 (800) мм" data-spindle-speed-max="25–2500 об/мин" data-motor-power="22/30; 22/26 кВт (пост./30 мин)" data-turret-positions="12/8" data-travel-x="325 / 305 мм" data-travel-z="1550 (880) мм">
+<article class="vmc-card" data-name="ck7530 b токарные станки с чпу с наклонной станиной" data-title="CK7530 B" data-sortkey="670.0" data-turning-diameter-max="Ø670 мм (гидропатрон) / Ø470 мм (приводной револьвер)" data-spindle-bore="Ø105 мм" data-turning-length-max="1500 (800) мм" data-spindle-speed-max="25–2500 об/мин" data-motor-power="22/30; 22/26 кВт (пост./30 мин)" data-turret-positions="12/8" data-travel-x="325 / 305 мм" data-travel-z="1550 (880) мм">
 <a class="vmc-card-link" href="equipment-turning-ck7530-b.html" aria-label="CK7530 B — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/ck7530-b.png" alt="CK7530 B" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1945,7 +1945,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="sl10e z токарные станки с чпу с наклонной станиной" data-title="SL10E Z" data-sortkey="500.0" data-turning-diameter-max="Ø500 мм" data-spindle-speed-max="до 4000 об/мин" data-motor-power="11/7,5 – 15/11 кВт" data-turret-positions="8 / 12" data-chuck-size="8&amp;quot;, 10&amp;quot;" data-travel-x="280 мм" data-travel-z="300 / 380 мм" data-spindle-nose="A2-6 / A2-8">
+<article class="vmc-card" data-name="sl10e z токарные станки с чпу с наклонной станиной" data-title="SL10E Z" data-sortkey="500.0" data-turning-diameter-max="Ø500 мм" data-spindle-bore="Ø62 / Ø75 мм" data-spindle-speed-max="до 4000 об/мин" data-motor-power="11/7,5 – 15/11 кВт" data-turret-positions="8 / 12" data-chuck-size="8&amp;quot;, 10&amp;quot;" data-travel-x="280 мм" data-travel-z="300 / 380 мм" data-spindle-nose="A2-6 / A2-8">
 <a class="vmc-card-link" href="equipment-turning-sl10e-z.html" aria-label="SL10E Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/sl10e-z.png" alt="SL10E Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1956,7 +1956,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="stl18-3000 z токарные станки с чпу с наклонной станиной" data-title="STL18-3000 Z" data-sortkey="800.0" data-turning-diameter-max="Ø800 мм" data-spindle-speed-max="1500 / 1000 / 800 об/мин" data-motor-power="40/32/22 кВт" data-turret-positions="8 / 12" data-chuck-size="15&amp;quot;, 18&amp;quot;" data-travel-x="380 мм" data-travel-z="3000 мм">
+<article class="vmc-card" data-name="stl18-3000 z токарные станки с чпу с наклонной станиной" data-title="STL18-3000 Z" data-sortkey="800.0" data-turning-diameter-max="Ø800 мм" data-spindle-bore="Ø110 / Ø120 / Ø185 мм" data-spindle-speed-max="1500 / 1000 / 800 об/мин" data-motor-power="40/32/22 кВт" data-turret-positions="8 / 12" data-chuck-size="15&amp;quot;, 18&amp;quot;" data-travel-x="380 мм" data-travel-z="3000 мм">
 <a class="vmc-card-link" href="equipment-turning-stl18-3000-z.html" aria-label="STL18-3000 Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/stl18-3000-z.png" alt="STL18-3000 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1967,7 +1967,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="stl18-2000 z токарные станки с чпу с наклонной станиной" data-title="STL18-2000 Z" data-sortkey="800.0" data-turning-diameter-max="Ø800 мм" data-spindle-speed-max="1500 / 1000 / 800 об/мин" data-motor-power="40/30/22 кВт" data-turret-positions="8 / 12" data-chuck-size="15&amp;quot;, 18&amp;quot;" data-travel-x="380 мм" data-travel-z="2000 мм" data-spindle-nose="A2-11 / A2-15">
+<article class="vmc-card" data-name="stl18-2000 z токарные станки с чпу с наклонной станиной" data-title="STL18-2000 Z" data-sortkey="800.0" data-turning-diameter-max="Ø800 мм" data-spindle-bore="Ø110 / Ø120 / Ø185 мм" data-spindle-speed-max="1500 / 1000 / 800 об/мин" data-motor-power="40/30/22 кВт" data-turret-positions="8 / 12" data-chuck-size="15&amp;quot;, 18&amp;quot;" data-travel-x="380 мм" data-travel-z="2000 мм" data-spindle-nose="A2-11 / A2-15">
 <a class="vmc-card-link" href="equipment-turning-stl18-2000-z.html" aria-label="STL18-2000 Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/stl18-2000-z.png" alt="STL18-2000 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1978,7 +1978,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="ck7520 b токарные станки с чпу с наклонной станиной" data-title="CK7520 B" data-sortkey="500.0" data-turning-diameter-max="Ø500 мм" data-turning-length-max="500/1000/1500 мм" data-spindle-speed-max="40–4000 об/мин" data-motor-power="11/15 кВт" data-turret-positions="12/8" data-chuck-size="Ø210 мм" data-travel-x="210 мм" data-travel-z="550–1550 мм">
+<article class="vmc-card" data-name="ck7520 b токарные станки с чпу с наклонной станиной" data-title="CK7520 B" data-sortkey="500.0" data-turning-diameter-max="Ø500 мм" data-spindle-bore="Ø62 мм" data-turning-length-max="500/1000/1500 мм" data-spindle-speed-max="40–4000 об/мин" data-motor-power="11/15 кВт" data-turret-positions="12/8" data-chuck-size="Ø210 мм" data-travel-x="210 мм" data-travel-z="550–1550 мм">
 <a class="vmc-card-link" href="equipment-turning-ck7520-b.html" aria-label="CK7520 B — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/ck7520-b.png" alt="CK7520 B" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -1989,7 +1989,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="stl8-s z токарные станки с чпу с наклонной станиной" data-title="STL8-S Z" data-sortkey="600.0" data-turning-diameter-max="Ø600 мм" data-spindle-speed-max="до 4000 об/мин" data-motor-power="27/18,5 кВт" data-chuck-size="8&amp;quot;" data-travel-x="250 мм (20 м/мин)" data-travel-z="620 мм (20 м/мин)" data-spindle-nose="A2-6">
+<article class="vmc-card" data-name="stl8-s z токарные станки с чпу с наклонной станиной" data-title="STL8-S Z" data-sortkey="600.0" data-turning-diameter-max="Ø600 мм" data-spindle-bore="Ø66 мм" data-spindle-speed-max="до 4000 об/мин" data-motor-power="27/18,5 кВт" data-chuck-size="8&amp;quot;" data-travel-x="250 мм (20 м/мин)" data-travel-z="620 мм (20 м/мин)" data-spindle-nose="A2-6">
 <a class="vmc-card-link" href="equipment-turning-stl8-s-z.html" aria-label="STL8-S Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/stl8-s-z.png" alt="STL8-S Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -2000,7 +2000,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="stl10 z токарные станки с чпу с наклонной станиной" data-title="STL10 Z" data-sortkey="520.0" data-turning-diameter-max="Ø520 (опц. Ø620) мм" data-turning-length-max="750 (опц. 1000) мм" data-spindle-speed-max="3000 (опц. 3200) об/мин" data-motor-power="15/18.5 кВт" data-turret-positions="8 (опц. 12)" data-chuck-size="10&amp;quot;" data-travel-x="280 мм" data-travel-z="750 (опц. 1000) мм" data-spindle-nose="A2-8">
+<article class="vmc-card" data-name="stl10 z токарные станки с чпу с наклонной станиной" data-title="STL10 Z" data-sortkey="520.0" data-turning-diameter-max="Ø520 (опц. Ø620) мм" data-spindle-bore="Ø86 (опц. Ø75) мм" data-turning-length-max="750 (опц. 1000) мм" data-spindle-speed-max="3000 (опц. 3200) об/мин" data-motor-power="15/18.5 кВт" data-turret-positions="8 (опц. 12)" data-chuck-size="10&amp;quot;" data-travel-x="280 мм" data-travel-z="750 (опц. 1000) мм" data-spindle-nose="A2-8">
 <a class="vmc-card-link" href="equipment-turning-stl10-z.html" aria-label="STL10 Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/stl10-z.png" alt="STL10 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -2208,10 +2208,10 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="travel-z" data-bound="min"/>
 <input type="number" placeholder="До" data-range="travel-z" data-bound="max"/>
-</div></div><div class="g2-field"><strong>Конец шпинделя</strong>
+</div></div><div class="g2-field"><strong>Мощность привода</strong>
 <div class="vmc-range-row">
-<input type="number" placeholder="От" data-range="spindle-nose" data-bound="min"/>
-<input type="number" placeholder="До" data-range="spindle-nose" data-bound="max"/>
+<input type="number" placeholder="От" data-range="motor-power" data-bound="min"/>
+<input type="number" placeholder="До" data-range="motor-power" data-bound="max"/>
 </div></div></div></details>
 <div class="g2-apply-wrap">
 <button type="button" class="btn btn-ce g2-apply" data-role="apply">Показать <span data-role="preview">35</span> <span data-role="preview-word">моделей</span></button>
@@ -2263,7 +2263,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <button type="button" class="vmc-offer-btn" onclick="openModal('turningLeadModal')">Получить предложение</button>
 </div>
 </article>
-<article class="vmc-card" data-name="dt300e z токарные обрабатывающие центры с приводным инструментом" data-title="DT300E Z" data-sortkey="500.0" data-turning-diameter-max="Ø500 мм" data-spindle-bore="Ø55 мм" data-turning-length-max="250 мм" data-spindle-speed-max="5000 об/мин" data-travel-x="300 мм (+200/-100)" data-travel-z="250 мм">
+<article class="vmc-card" data-name="dt300e z токарные обрабатывающие центры с приводным инструментом" data-title="DT300E Z" data-sortkey="500.0" data-turning-diameter-max="Ø500 мм" data-spindle-bore="Ø55 мм" data-motor-power="15/11 кВт" data-turning-length-max="250 мм" data-spindle-speed-max="5000 об/мин" data-travel-x="300 мм (+200/-100)" data-travel-z="250 мм">
 <a class="vmc-card-link" href="equipment-turning-dt300e-z.html" aria-label="DT300E Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/dt300e-z.png" alt="DT300E Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -2274,7 +2274,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="tn500s-1500 z токарные обрабатывающие центры с приводным инструментом" data-title="TN500S-1500 Z" data-sortkey="600.0" data-turning-diameter-max="Ø600 мм" data-spindle-bore="Ø66 мм" data-turning-length-max="1500 мм" data-spindle-speed-max="4000 об/мин" data-chuck-size="8&amp;quot;" data-travel-x="250 мм" data-travel-z="1500 мм">
+<article class="vmc-card" data-name="tn500s-1500 z токарные обрабатывающие центры с приводным инструментом" data-title="TN500S-1500 Z" data-sortkey="600.0" data-turning-diameter-max="Ø600 мм" data-spindle-bore="Ø66 мм" data-motor-power="27/18,5 кВт" data-turning-length-max="1500 мм" data-spindle-speed-max="4000 об/мин" data-chuck-size="8&amp;quot;" data-travel-x="250 мм" data-travel-z="1500 мм">
 <a class="vmc-card-link" href="equipment-turning-tn500s-1500-z.html" aria-label="TN500S-1500 Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/tn500s-1500-z.png" alt="TN500S-1500 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -2285,7 +2285,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="ts600 z токарные обрабатывающие центры с приводным инструментом" data-title="TS600 Z" data-sortkey="600.0" data-turning-diameter-max="Ø600 мм" data-spindle-bore="Ø86 мм" data-turning-length-max="400 мм" data-spindle-speed-max="3000 об/мин" data-chuck-size="10&amp;quot;" data-turret-positions="12" data-travel-x="280 мм" data-travel-z="400 мм" data-spindle-nose="A2-8">
+<article class="vmc-card" data-name="ts600 z токарные обрабатывающие центры с приводным инструментом" data-title="TS600 Z" data-sortkey="600.0" data-turning-diameter-max="Ø600 мм" data-spindle-bore="Ø86 мм" data-motor-power="18.5/15, 37/45 кВт" data-turning-length-max="400 мм" data-spindle-speed-max="3000 об/мин" data-chuck-size="10&amp;quot;" data-turret-positions="12" data-travel-x="280 мм" data-travel-z="400 мм" data-spindle-nose="A2-8">
 <a class="vmc-card-link" href="equipment-turning-ts600-z.html" aria-label="TS600 Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/ts600-z.png" alt="TS600 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -2296,7 +2296,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="dt350e z токарные обрабатывающие центры с приводным инструментом" data-title="DT350E Z" data-sortkey="500.0" data-turning-diameter-max="Ø500 мм" data-spindle-bore="Ø55 мм" data-turning-length-max="320 мм" data-spindle-speed-max="5000 об/мин" data-travel-x="150 мм" data-travel-z="320 мм">
+<article class="vmc-card" data-name="dt350e z токарные обрабатывающие центры с приводным инструментом" data-title="DT350E Z" data-sortkey="500.0" data-turning-diameter-max="Ø500 мм" data-spindle-bore="Ø55 мм" data-motor-power="15/11 кВт" data-turning-length-max="320 мм" data-spindle-speed-max="5000 об/мин" data-travel-x="150 мм" data-travel-z="320 мм">
 <a class="vmc-card-link" href="equipment-turning-dt350e-z.html" aria-label="DT350E Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/dt350e-z.png" alt="DT350E Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -2307,7 +2307,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="ts400 z токарные обрабатывающие центры с приводным инструментом" data-title="TS400 Z" data-sortkey="400.0" data-turning-diameter-max="Ø400 мм" data-spindle-bore="Ø55 мм" data-turning-length-max="320 мм" data-spindle-speed-max="5000 об/мин" data-chuck-size="6&amp;quot;" data-turret-positions="12" data-travel-x="250 мм" data-travel-z="320 мм" data-spindle-nose="A2-5">
+<article class="vmc-card" data-name="ts400 z токарные обрабатывающие центры с приводным инструментом" data-title="TS400 Z" data-sortkey="400.0" data-turning-diameter-max="Ø400 мм" data-spindle-bore="Ø55 мм" data-motor-power="15/11 кВт" data-turning-length-max="320 мм" data-spindle-speed-max="5000 об/мин" data-chuck-size="6&amp;quot;" data-turret-positions="12" data-travel-x="250 мм" data-travel-z="320 мм" data-spindle-nose="A2-5">
 <a class="vmc-card-link" href="equipment-turning-ts400-z.html" aria-label="TS400 Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/ts400-z.png" alt="TS400 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -2318,7 +2318,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="ts500 z токарные обрабатывающие центры с приводным инструментом" data-title="TS500 Z" data-sortkey="550.0" data-turning-diameter-max="Ø550 мм" data-spindle-bore="Ø66 мм" data-turning-length-max="320 мм" data-spindle-speed-max="4000 об/мин" data-chuck-size="8&amp;quot;" data-turret-positions="12" data-travel-x="250 мм" data-travel-z="320 мм" data-spindle-nose="A2-6">
+<article class="vmc-card" data-name="ts500 z токарные обрабатывающие центры с приводным инструментом" data-title="TS500 Z" data-sortkey="550.0" data-turning-diameter-max="Ø550 мм" data-spindle-bore="Ø66 мм" data-motor-power="27/18.5 кВт (встроенный)" data-turning-length-max="320 мм" data-spindle-speed-max="4000 об/мин" data-chuck-size="8&amp;quot;" data-turret-positions="12" data-travel-x="250 мм" data-travel-z="320 мм" data-spindle-nose="A2-6">
 <a class="vmc-card-link" href="equipment-turning-ts500-z.html" aria-label="TS500 Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/ts500-z.png" alt="TS500 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -2329,7 +2329,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="dt500es-1500 z токарные обрабатывающие центры с приводным инструментом" data-title="DT500ES-1500 Z" data-sortkey="650.0" data-turning-diameter-max="Ø650 мм" data-spindle-bore="Ø66 мм" data-turning-length-max="1500 мм" data-spindle-speed-max="4000 об/мин" data-chuck-size="8&amp;quot;" data-travel-x="200 мм" data-travel-z="1500 мм">
+<article class="vmc-card" data-name="dt500es-1500 z токарные обрабатывающие центры с приводным инструментом" data-title="DT500ES-1500 Z" data-sortkey="650.0" data-turning-diameter-max="Ø650 мм" data-spindle-bore="Ø66 мм" data-motor-power="27/18,5 кВт" data-turning-length-max="1500 мм" data-spindle-speed-max="4000 об/мин" data-chuck-size="8&amp;quot;" data-travel-x="200 мм" data-travel-z="1500 мм">
 <a class="vmc-card-link" href="equipment-turning-dt500es-1500-z.html" aria-label="DT500ES-1500 Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/dt500es-1500-z.png" alt="DT500ES-1500 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -2340,7 +2340,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="tn500-s z токарные обрабатывающие центры с приводным инструментом" data-title="TN500-S Z" data-sortkey="600.0" data-turning-diameter-max="Ø600 мм" data-spindle-bore="Ø66 мм" data-turning-length-max="650 мм" data-spindle-speed-max="4000 об/мин" data-chuck-size="8&amp;quot;" data-travel-x="250 мм" data-travel-z="620 мм">
+<article class="vmc-card" data-name="tn500-s z токарные обрабатывающие центры с приводным инструментом" data-title="TN500-S Z" data-sortkey="600.0" data-turning-diameter-max="Ø600 мм" data-spindle-bore="Ø66 мм" data-motor-power="27/18,5 кВт" data-turning-length-max="650 мм" data-spindle-speed-max="4000 об/мин" data-chuck-size="8&amp;quot;" data-travel-x="250 мм" data-travel-z="620 мм">
 <a class="vmc-card-link" href="equipment-turning-tn500-s-z.html" aria-label="TN500-S Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/tn500-s-z.png" alt="TN500-S Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -2351,7 +2351,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="tn800 z токарные обрабатывающие центры с приводным инструментом" data-title="TN800 Z" data-sortkey="800.0" data-turning-diameter-max="Ø800 мм" data-spindle-bore="Ø110 (опц. Ø120) мм" data-turning-length-max="650 (опц. 900/1400/1900) мм" data-spindle-speed-max="1500 (опц. 1000) об/мин" data-chuck-size="18&amp;quot; (опц. 15&amp;quot;)" data-turret-positions="12" data-travel-x="380 мм" data-travel-z="650 (опц. 900/1400/1900) мм" data-spindle-nose="A2-11">
+<article class="vmc-card" data-name="tn800 z токарные обрабатывающие центры с приводным инструментом" data-title="TN800 Z" data-sortkey="800.0" data-turning-diameter-max="Ø800 мм" data-spindle-bore="Ø110 (опц. Ø120) мм" data-motor-power="15/18.5, опц. 45/37 кВт" data-turning-length-max="650 (опц. 900/1400/1900) мм" data-spindle-speed-max="1500 (опц. 1000) об/мин" data-chuck-size="18&amp;quot; (опц. 15&amp;quot;)" data-turret-positions="12" data-travel-x="380 мм" data-travel-z="650 (опц. 900/1400/1900) мм" data-spindle-nose="A2-11">
 <a class="vmc-card-link" href="equipment-turning-tn800-z.html" aria-label="TN800 Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/tn800-z.png" alt="TN800 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -2362,7 +2362,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="tn500-650 z токарные обрабатывающие центры с приводным инструментом" data-title="TN500-650 Z" data-sortkey="600.0" data-turning-diameter-max="Ø600 мм" data-spindle-bore="Ø66 мм" data-turning-length-max="650 мм" data-spindle-speed-max="4000 об/мин" data-chuck-size="8&amp;quot;" data-turret-positions="12" data-travel-x="250 мм" data-travel-z="650 мм" data-spindle-nose="A2-6">
+<article class="vmc-card" data-name="tn500-650 z токарные обрабатывающие центры с приводным инструментом" data-title="TN500-650 Z" data-sortkey="600.0" data-turning-diameter-max="Ø600 мм" data-spindle-bore="Ø66 мм" data-motor-power="27/18.5 кВт (встроенный)" data-turning-length-max="650 мм" data-spindle-speed-max="4000 об/мин" data-chuck-size="8&amp;quot;" data-turret-positions="12" data-travel-x="250 мм" data-travel-z="650 мм" data-spindle-nose="A2-6">
 <a class="vmc-card-link" href="equipment-turning-tn500-650-z.html" aria-label="TN500-650 Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/tn500-650-z.png" alt="TN500-650 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -2373,7 +2373,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="dt500e z токарные обрабатывающие центры с приводным инструментом" data-title="DT500E Z" data-sortkey="600.0" data-turning-diameter-max="Ø600 мм" data-spindle-bore="Ø66 мм" data-turning-length-max="650 мм" data-spindle-speed-max="4000 об/мин" data-travel-x="230 мм" data-travel-z="650 мм">
+<article class="vmc-card" data-name="dt500e z токарные обрабатывающие центры с приводным инструментом" data-title="DT500E Z" data-sortkey="600.0" data-turning-diameter-max="Ø600 мм" data-spindle-bore="Ø66 мм" data-motor-power="27/18,5 кВт" data-turning-length-max="650 мм" data-spindle-speed-max="4000 об/мин" data-travel-x="230 мм" data-travel-z="650 мм">
 <a class="vmc-card-link" href="equipment-turning-dt500e-z.html" aria-label="DT500E Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/dt500e-z.png" alt="DT500E Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -2384,7 +2384,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="tn500-450 z токарные обрабатывающие центры с приводным инструментом" data-title="TN500-450 Z" data-sortkey="550.0" data-turning-diameter-max="Ø550 мм" data-spindle-bore="Ø66 мм" data-turning-length-max="450 мм" data-spindle-speed-max="4000 об/мин" data-chuck-size="8&amp;quot;" data-turret-positions="12" data-travel-x="250 мм" data-travel-z="450 мм" data-spindle-nose="A2-6">
+<article class="vmc-card" data-name="tn500-450 z токарные обрабатывающие центры с приводным инструментом" data-title="TN500-450 Z" data-sortkey="550.0" data-turning-diameter-max="Ø550 мм" data-spindle-bore="Ø66 мм" data-motor-power="27/18.5 кВт (встроенный)" data-turning-length-max="450 мм" data-spindle-speed-max="4000 об/мин" data-chuck-size="8&amp;quot;" data-turret-positions="12" data-travel-x="250 мм" data-travel-z="450 мм" data-spindle-nose="A2-6">
 <a class="vmc-card-link" href="equipment-turning-tn500-450-z.html" aria-label="TN500-450 Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/tn500-450-z.png" alt="TN500-450 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -2395,7 +2395,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="dt450e z токарные обрабатывающие центры с приводным инструментом" data-title="DT450E Z" data-sortkey="600.0" data-turning-diameter-max="Ø600 мм" data-spindle-bore="Ø66 мм" data-turning-length-max="450 мм" data-spindle-speed-max="4000 об/мин" data-travel-x="220 мм" data-travel-z="450 мм">
+<article class="vmc-card" data-name="dt450e z токарные обрабатывающие центры с приводным инструментом" data-title="DT450E Z" data-sortkey="600.0" data-turning-diameter-max="Ø600 мм" data-spindle-bore="Ø66 мм" data-motor-power="27/18,5 кВт" data-turning-length-max="450 мм" data-spindle-speed-max="4000 об/мин" data-travel-x="220 мм" data-travel-z="450 мм">
 <a class="vmc-card-link" href="equipment-turning-dt450e-z.html" aria-label="DT450E Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/dt450e-z.png" alt="DT450E Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -2406,7 +2406,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="dt400e z токарные обрабатывающие центры с приводным инструментом" data-title="DT400E Z" data-sortkey="500.0" data-turning-diameter-max="Ø500 мм" data-spindle-bore="Ø55 мм" data-turning-length-max="320 мм" data-spindle-speed-max="5000 об/мин" data-travel-x="210 мм" data-travel-z="320 мм">
+<article class="vmc-card" data-name="dt400e z токарные обрабатывающие центры с приводным инструментом" data-title="DT400E Z" data-sortkey="500.0" data-turning-diameter-max="Ø500 мм" data-spindle-bore="Ø55 мм" data-motor-power="15/11 кВт" data-turning-length-max="320 мм" data-spindle-speed-max="5000 об/мин" data-travel-x="210 мм" data-travel-z="320 мм">
 <a class="vmc-card-link" href="equipment-turning-dt400e-z.html" aria-label="DT400E Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/dt400e-z.png" alt="DT400E Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -2417,7 +2417,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="ch7516gs b токарные обрабатывающие центры с приводным инструментом" data-title="CH7516GS B" data-sortkey="450.0" data-turning-diameter-max="Ø450 мм" data-spindle-bore="Ø49 мм" data-turning-length-max="450 мм" data-spindle-speed-max="80–8000 об/мин" data-turret-positions="12/6" data-travel-x="157 мм" data-travel-z="460 мм">
+<article class="vmc-card" data-name="ch7516gs b токарные обрабатывающие центры с приводным инструментом" data-title="CH7516GS B" data-sortkey="450.0" data-turning-diameter-max="Ø450 мм" data-spindle-bore="Ø49 мм" data-motor-power="15/18,7 кВт" data-turning-length-max="450 мм" data-spindle-speed-max="80–8000 об/мин" data-turret-positions="12/6" data-travel-x="157 мм" data-travel-z="460 мм">
 <a class="vmc-card-link" href="equipment-turning-ch7516gs-b.html" aria-label="CH7516GS B — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/ch7516gs-b.png" alt="CH7516GS B" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -2428,7 +2428,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="tn400-sx z токарные обрабатывающие центры с приводным инструментом" data-title="TN400-SX Z" data-sortkey="240.0" data-turning-diameter-max="240 мм" data-spindle-bore="55 мм" data-turning-length-max="400 мм" data-spindle-speed-max="5000 об/мин" data-turret-positions="12">
+<article class="vmc-card" data-name="tn400-sx z токарные обрабатывающие центры с приводным инструментом" data-title="TN400-SX Z" data-sortkey="240.0" data-turning-diameter-max="240 мм" data-spindle-bore="55 мм" data-motor-power="15/11 кВт" data-turning-length-max="400 мм" data-spindle-speed-max="5000 об/мин" data-turret-positions="12">
 <a class="vmc-card-link" href="equipment-turning-tn400-sx-z.html" aria-label="TN400-SX Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/tn400-sx-z.png" alt="TN400-SX Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -2439,7 +2439,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="tc500 z токарные обрабатывающие центры с приводным инструментом" data-title="TC500 Z" data-sortkey="460.0" data-turning-diameter-max="Ø460 мм" data-spindle-bore="Ø66 мм" data-turning-length-max="400 мм" data-spindle-speed-max="4000 об/мин" data-chuck-size="8&amp;quot;" data-travel-x="180 мм" data-travel-z="400 мм">
+<article class="vmc-card" data-name="tc500 z токарные обрабатывающие центры с приводным инструментом" data-title="TC500 Z" data-sortkey="460.0" data-turning-diameter-max="Ø460 мм" data-spindle-bore="Ø66 мм" data-motor-power="27/18,5 кВт" data-turning-length-max="400 мм" data-spindle-speed-max="4000 об/мин" data-chuck-size="8&amp;quot;" data-travel-x="180 мм" data-travel-z="400 мм">
 <a class="vmc-card-link" href="equipment-turning-tc500-z.html" aria-label="TC500 Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/tc500-z.png" alt="TC500 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -2450,7 +2450,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="tn600-3000 z токарные обрабатывающие центры с приводным инструментом" data-title="TN600-3000 Z" data-sortkey="600.0" data-turning-diameter-max="Ø600 мм" data-spindle-bore="Ø86, Ø105 мм" data-turning-length-max="3000 мм" data-spindle-speed-max="3000, 2000 об/мин" data-chuck-size="10, 12&amp;quot;" data-turret-positions="12" data-travel-x="300 мм" data-travel-z="3300 мм" data-spindle-nose="A2-8">
+<article class="vmc-card" data-name="tn600-3000 z токарные обрабатывающие центры с приводным инструментом" data-title="TN600-3000 Z" data-sortkey="600.0" data-turning-diameter-max="Ø600 мм" data-spindle-bore="Ø86, Ø105 мм" data-motor-power="18.5/15, 37/45 кВт" data-turning-length-max="3000 мм" data-spindle-speed-max="3000, 2000 об/мин" data-chuck-size="10, 12&amp;quot;" data-turret-positions="12" data-travel-x="300 мм" data-travel-z="3300 мм" data-spindle-nose="A2-8">
 <a class="vmc-card-link" href="equipment-turning-tn600-3000-z.html" aria-label="TN600-3000 Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/tn600-3000-z.png" alt="TN600-3000 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -2461,7 +2461,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="tn700 z токарные обрабатывающие центры с приводным инструментом" data-title="TN700 Z" data-sortkey="620.0" data-turning-diameter-max="Ø620 мм" data-spindle-bore="Ø105 мм" data-turning-length-max="1250 (опц. 1700) мм" data-spindle-speed-max="2000 об/мин" data-chuck-size="15&amp;quot;" data-turret-positions="12" data-travel-x="300 мм" data-travel-z="1250 (опц. 1700) мм" data-spindle-nose="A2-8">
+<article class="vmc-card" data-name="tn700 z токарные обрабатывающие центры с приводным инструментом" data-title="TN700 Z" data-sortkey="620.0" data-turning-diameter-max="Ø620 мм" data-spindle-bore="Ø105 мм" data-motor-power="18.5/15, опц. 45/37 кВт (встроенный)" data-turning-length-max="1250 (опц. 1700) мм" data-spindle-speed-max="2000 об/мин" data-chuck-size="15&amp;quot;" data-turret-positions="12" data-travel-x="300 мм" data-travel-z="1250 (опц. 1700) мм" data-spindle-nose="A2-8">
 <a class="vmc-card-link" href="equipment-turning-tn700-z.html" aria-label="TN700 Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/tn700-z.png" alt="TN700 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -2472,7 +2472,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="tn600 z токарные обрабатывающие центры с приводным инструментом" data-title="TN600 Z" data-sortkey="620.0" data-turning-diameter-max="Ø620 мм" data-spindle-bore="Ø86 мм" data-turning-length-max="700 (опц. 900/1700) мм" data-spindle-speed-max="3000 об/мин" data-chuck-size="10 (опц. 12)&amp;quot;" data-turret-positions="12" data-travel-x="280 мм" data-travel-z="700 (опц. 900/1800) мм" data-spindle-nose="A2-8">
+<article class="vmc-card" data-name="tn600 z токарные обрабатывающие центры с приводным инструментом" data-title="TN600 Z" data-sortkey="620.0" data-turning-diameter-max="Ø620 мм" data-spindle-bore="Ø86 мм" data-motor-power="18.5/15, опц. 37/45 кВт" data-turning-length-max="700 (опц. 900/1700) мм" data-spindle-speed-max="3000 об/мин" data-chuck-size="10 (опц. 12)&amp;quot;" data-turret-positions="12" data-travel-x="280 мм" data-travel-z="700 (опц. 900/1800) мм" data-spindle-nose="A2-8">
 <a class="vmc-card-link" href="equipment-turning-tn600-z.html" aria-label="TN600 Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/tn600-z.png" alt="TN600 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -2483,7 +2483,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="tn500 z токарные обрабатывающие центры с приводным инструментом" data-title="TN500 Z" data-sortkey="500.0" data-turning-diameter-max="Ø500 мм" data-spindle-bore="Ø66 мм" data-turning-length-max="500 мм" data-spindle-speed-max="4000 об/мин" data-chuck-size="8&amp;quot;" data-turret-positions="12" data-travel-x="260 мм" data-travel-z="400 (опц. 500) мм" data-spindle-nose="A2-6">
+<article class="vmc-card" data-name="tn500 z токарные обрабатывающие центры с приводным инструментом" data-title="TN500 Z" data-sortkey="500.0" data-turning-diameter-max="Ø500 мм" data-spindle-bore="Ø66 мм" data-motor-power="27/18.5 кВт (встроенный)" data-turning-length-max="500 мм" data-spindle-speed-max="4000 об/мин" data-chuck-size="8&amp;quot;" data-turret-positions="12" data-travel-x="260 мм" data-travel-z="400 (опц. 500) мм" data-spindle-nose="A2-6">
 <a class="vmc-card-link" href="equipment-turning-tn500-z.html" aria-label="TN500 Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/tn500-z.png" alt="TN500 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -2494,7 +2494,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="tc500myt-650 z токарные обрабатывающие центры с приводным инструментом" data-title="TC500MYT-650 Z" data-sortkey="460.0" data-turning-diameter-max="Ø460 мм" data-spindle-bore="Ø66 мм" data-turning-length-max="650 мм" data-spindle-speed-max="4000 об/мин" data-chuck-size="8&amp;quot;" data-travel-x="180 мм" data-travel-z="650 мм">
+<article class="vmc-card" data-name="tc500myt-650 z токарные обрабатывающие центры с приводным инструментом" data-title="TC500MYT-650 Z" data-sortkey="460.0" data-turning-diameter-max="Ø460 мм" data-spindle-bore="Ø66 мм" data-motor-power="27/18,5 кВт" data-turning-length-max="650 мм" data-spindle-speed-max="4000 об/мин" data-chuck-size="8&amp;quot;" data-travel-x="180 мм" data-travel-z="650 мм">
 <a class="vmc-card-link" href="equipment-turning-tc500myt-650-z.html" aria-label="TC500MYT-650 Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/tc500myt-650-z.png" alt="TC500MYT-650 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -2505,7 +2505,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="dt500e-1000 z токарные обрабатывающие центры с приводным инструментом" data-title="DT500E-1000 Z" data-sortkey="600.0" data-turning-diameter-max="Ø600 мм" data-spindle-bore="Ø66 мм" data-turning-length-max="1000 мм" data-spindle-speed-max="4000 об/мин" data-travel-x="230 мм" data-travel-z="1000 мм">
+<article class="vmc-card" data-name="dt500e-1000 z токарные обрабатывающие центры с приводным инструментом" data-title="DT500E-1000 Z" data-sortkey="600.0" data-turning-diameter-max="Ø600 мм" data-spindle-bore="Ø66 мм" data-motor-power="27/18,5 кВт" data-turning-length-max="1000 мм" data-spindle-speed-max="4000 об/мин" data-travel-x="230 мм" data-travel-z="1000 мм">
 <a class="vmc-card-link" href="equipment-turning-dt500e-1000-z.html" aria-label="DT500E-1000 Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/dt500e-1000-z.png" alt="DT500E-1000 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -2516,7 +2516,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="mtk20 b токарные обрабатывающие центры с приводным инструментом" data-title="MTK20 B" data-sortkey="0.0" data-turning-length-max="750 мм" data-spindle-speed-max="5000 об/мин" data-chuck-size="210 мм">
+<article class="vmc-card" data-name="mtk20 b токарные обрабатывающие центры с приводным инструментом" data-title="MTK20 B" data-sortkey="0.0" data-turning-length-max="750 мм" data-spindle-speed-max="5000 об/мин" data-chuck-size="210 мм" data-motor-power="18,5/22 кВт (30 мин)">
 <a class="vmc-card-link" href="equipment-turning-mtk20-b.html" aria-label="MTK20 B — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/mtk20-b.png" alt="MTK20 B" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -2527,7 +2527,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="tn500-1000 z токарные обрабатывающие центры с приводным инструментом" data-title="TN500-1000 Z" data-sortkey="600.0" data-turning-diameter-max="Ø600 мм" data-spindle-bore="Ø66 мм" data-turning-length-max="1000 мм" data-spindle-speed-max="4000 об/мин" data-chuck-size="8, 10&amp;quot;" data-turret-positions="12" data-travel-x="250 мм" data-travel-z="1000 мм" data-spindle-nose="A2-6">
+<article class="vmc-card" data-name="tn500-1000 z токарные обрабатывающие центры с приводным инструментом" data-title="TN500-1000 Z" data-sortkey="600.0" data-turning-diameter-max="Ø600 мм" data-spindle-bore="Ø66 мм" data-motor-power="27/18.5 кВт (встроенный)" data-turning-length-max="1000 мм" data-spindle-speed-max="4000 об/мин" data-chuck-size="8, 10&amp;quot;" data-turret-positions="12" data-travel-x="250 мм" data-travel-z="1000 мм" data-spindle-nose="A2-6">
 <a class="vmc-card-link" href="equipment-turning-tn500-1000-z.html" aria-label="TN500-1000 Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/tn500-1000-z.png" alt="TN500-1000 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -2538,7 +2538,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="bl20-hsy b токарные обрабатывающие центры с приводным инструментом" data-title="BL20-HSY B" data-sortkey="695.0" data-turning-diameter-max="695 мм" data-spindle-bore="76 мм" data-turning-length-max="500 мм" data-spindle-speed-max="35–4500 об/мин">
+<article class="vmc-card" data-name="bl20-hsy b токарные обрабатывающие центры с приводным инструментом" data-title="BL20-HSY B" data-sortkey="695.0" data-turning-diameter-max="695 мм" data-spindle-bore="76 мм" data-motor-power="17,2 кВт" data-turning-length-max="500 мм" data-spindle-speed-max="35–4500 об/мин">
 <a class="vmc-card-link" href="equipment-turning-bl20-hsy-b.html" aria-label="BL20-HSY B — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/bl20-hsy-b.png" alt="BL20-HSY B" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -2549,7 +2549,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="dt500e-450 z токарные обрабатывающие центры с приводным инструментом" data-title="DT500E-450 Z" data-sortkey="600.0" data-turning-diameter-max="Ø600 мм" data-spindle-bore="Ø66 мм" data-turning-length-max="450 мм" data-spindle-speed-max="4000 об/мин" data-travel-x="230 мм" data-travel-z="450 мм">
+<article class="vmc-card" data-name="dt500e-450 z токарные обрабатывающие центры с приводным инструментом" data-title="DT500E-450 Z" data-sortkey="600.0" data-turning-diameter-max="Ø600 мм" data-spindle-bore="Ø66 мм" data-motor-power="27/18,5 кВт" data-turning-length-max="450 мм" data-spindle-speed-max="4000 об/мин" data-travel-x="230 мм" data-travel-z="450 мм">
 <a class="vmc-card-link" href="equipment-turning-dt500e-450-z.html" aria-label="DT500E-450 Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/dt500e-450-z.png" alt="DT500E-450 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -2560,7 +2560,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="dt500es-900 z токарные обрабатывающие центры с приводным инструментом" data-title="DT500ES-900 Z" data-sortkey="650.0" data-turning-diameter-max="Ø650 мм" data-spindle-bore="Ø66 мм" data-turning-length-max="900 мм" data-spindle-speed-max="4000 об/мин" data-chuck-size="8&amp;quot;" data-travel-x="200 мм" data-travel-z="900 мм">
+<article class="vmc-card" data-name="dt500es-900 z токарные обрабатывающие центры с приводным инструментом" data-title="DT500ES-900 Z" data-sortkey="650.0" data-turning-diameter-max="Ø650 мм" data-spindle-bore="Ø66 мм" data-motor-power="27/18,5 кВт" data-turning-length-max="900 мм" data-spindle-speed-max="4000 об/мин" data-chuck-size="8&amp;quot;" data-travel-x="200 мм" data-travel-z="900 мм">
 <a class="vmc-card-link" href="equipment-turning-dt500es-900-z.html" aria-label="DT500ES-900 Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/dt500es-900-z.png" alt="DT500ES-900 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -2571,7 +2571,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="dt500e-s z токарные обрабатывающие центры с приводным инструментом" data-title="DT500E-S Z" data-sortkey="650.0" data-turning-diameter-max="Ø650 мм" data-spindle-bore="Ø66 мм" data-turning-length-max="550 мм" data-spindle-speed-max="4000 об/мин" data-chuck-size="8&amp;quot;" data-travel-x="200 мм" data-travel-z="550 мм">
+<article class="vmc-card" data-name="dt500e-s z токарные обрабатывающие центры с приводным инструментом" data-title="DT500E-S Z" data-sortkey="650.0" data-turning-diameter-max="Ø650 мм" data-spindle-bore="Ø66 мм" data-motor-power="27/18,5 кВт" data-turning-length-max="550 мм" data-spindle-speed-max="4000 об/мин" data-chuck-size="8&amp;quot;" data-travel-x="200 мм" data-travel-z="550 мм">
 <a class="vmc-card-link" href="equipment-turning-dt500e-s-z.html" aria-label="DT500E-S Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/dt500e-s-z.png" alt="DT500E-S Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -2582,7 +2582,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="dt500e-1500 z токарные обрабатывающие центры с приводным инструментом" data-title="DT500E-1500 Z" data-sortkey="600.0" data-turning-diameter-max="Ø600 мм" data-spindle-bore="Ø66 мм" data-turning-length-max="1500 мм" data-spindle-speed-max="4000 об/мин" data-travel-x="230 мм" data-travel-z="1500 мм">
+<article class="vmc-card" data-name="dt500e-1500 z токарные обрабатывающие центры с приводным инструментом" data-title="DT500E-1500 Z" data-sortkey="600.0" data-turning-diameter-max="Ø600 мм" data-spindle-bore="Ø66 мм" data-motor-power="27/18,5 кВт" data-turning-length-max="1500 мм" data-spindle-speed-max="4000 об/мин" data-travel-x="230 мм" data-travel-z="1500 мм">
 <a class="vmc-card-link" href="equipment-turning-dt500e-1500-z.html" aria-label="DT500E-1500 Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/dt500e-1500-z.png" alt="DT500E-1500 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -2593,7 +2593,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="tn500s-900 z токарные обрабатывающие центры с приводным инструментом" data-title="TN500S-900 Z" data-sortkey="600.0" data-turning-diameter-max="Ø600 мм" data-spindle-bore="Ø66 мм" data-turning-length-max="900 мм" data-spindle-speed-max="4000 об/мин" data-chuck-size="8&amp;quot;" data-travel-x="250 мм" data-travel-z="900 мм">
+<article class="vmc-card" data-name="tn500s-900 z токарные обрабатывающие центры с приводным инструментом" data-title="TN500S-900 Z" data-sortkey="600.0" data-turning-diameter-max="Ø600 мм" data-spindle-bore="Ø66 мм" data-motor-power="27/18,5 кВт" data-turning-length-max="900 мм" data-spindle-speed-max="4000 об/мин" data-chuck-size="8&amp;quot;" data-travel-x="250 мм" data-travel-z="900 мм">
 <a class="vmc-card-link" href="equipment-turning-tn500s-900-z.html" aria-label="TN500S-900 Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/tn500s-900-z.png" alt="TN500S-900 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -2604,7 +2604,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="tn500-1600 z токарные обрабатывающие центры с приводным инструментом" data-title="TN500-1600 Z" data-sortkey="600.0" data-turning-diameter-max="Ø600 мм" data-spindle-bore="Ø66 мм" data-turning-length-max="1600 мм" data-spindle-speed-max="4000 об/мин" data-chuck-size="8, 10&amp;quot;" data-turret-positions="12" data-travel-x="250 мм" data-travel-z="1600 мм" data-spindle-nose="A2-6">
+<article class="vmc-card" data-name="tn500-1600 z токарные обрабатывающие центры с приводным инструментом" data-title="TN500-1600 Z" data-sortkey="600.0" data-turning-diameter-max="Ø600 мм" data-spindle-bore="Ø66 мм" data-motor-power="27/18.5 кВт" data-turning-length-max="1600 мм" data-spindle-speed-max="4000 об/мин" data-chuck-size="8, 10&amp;quot;" data-turret-positions="12" data-travel-x="250 мм" data-travel-z="1600 мм" data-spindle-nose="A2-6">
 <a class="vmc-card-link" href="equipment-turning-tn500-1600-z.html" aria-label="TN500-1600 Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/tn500-1600-z.png" alt="TN500-1600 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -2630,20 +2630,15 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="swing-diameter" data-bound="min"/>
 <input type="number" placeholder="До" data-range="swing-diameter" data-bound="max"/>
-</div></div><div class="g2-field"><strong>Расстояние между центрами</strong>
+</div></div><div class="g2-field"><strong>Ход по оси X</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="travel-x" data-bound="min"/>
+<input type="number" placeholder="До" data-range="travel-x" data-bound="max"/>
+</div></div></div>
+<details class="g2-group" open><summary>Дополнительные параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Расстояние между центрами</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="distance-between-centers" data-bound="min"/>
 <input type="number" placeholder="До" data-range="distance-between-centers" data-bound="max"/>
-</div></div></div>
-<details class="g2-group" open><summary>Дополнительные параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Ускоренные перемещения</strong>
-<div class="vmc-range-row">
-<input type="number" placeholder="От" data-range="rapid-traverse" data-bound="min"/>
-<input type="number" placeholder="До" data-range="rapid-traverse" data-bound="max"/>
-</div></div></div></details>
-<details class="g2-group"><summary>Все параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Частота вращения шпинделя</strong>
-<div class="vmc-range-row">
-<input type="number" placeholder="От" data-range="spindle-speed-max" data-bound="min"/>
-<input type="number" placeholder="До" data-range="spindle-speed-max" data-bound="max"/>
 </div></div></div></details>
 <div class="g2-apply-wrap">
 <button type="button" class="btn btn-ce g2-apply" data-role="apply">Показать <span data-role="preview">8</span> <span data-role="preview-word">моделей</span></button>
@@ -2663,7 +2658,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <div class="g2-fallback-note" data-role="fallback-note" hidden>Точных совпадений не нашлось — показаны ближайшие по параметрам модели.</div>
 <div class="vmc-grid">
 
-<article class="vmc-card" data-name="bhr1000v b токарно-фрезерные обрабатывающие центра" data-title="BHR1000V B" data-sortkey="1020.0" data-swing-diameter="Ø1020 мм" data-distance-between-centers="2000–6000 мм">
+<article class="vmc-card" data-name="bhr1000v b токарно-фрезерные обрабатывающие центра" data-title="BHR1000V B" data-sortkey="1020.0" data-swing-diameter="Ø1020 мм" data-travel-x="1130 мм" data-distance-between-centers="2000–6000 мм">
 <a class="vmc-card-link" href="equipment-turning-bhr1000v-b.html" aria-label="BHR1000V B — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/bhr1000v-b.png" alt="BHR1000V B" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -2674,7 +2669,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="bhr700v b токарно-фрезерные обрабатывающие центра" data-title="BHR700V B" data-sortkey="700.0" data-swing-diameter="Ø700 мм" data-distance-between-centers="2500 мм" data-rapid-traverse="36 м/мин">
+<article class="vmc-card" data-name="bhr700v b токарно-фрезерные обрабатывающие центра" data-title="BHR700V B" data-sortkey="700.0" data-swing-diameter="Ø700 мм" data-travel-x="845 мм" data-distance-between-centers="2500 мм" data-rapid-traverse="36 м/мин">
 <a class="vmc-card-link" href="equipment-turning-bhr700v-b.html" aria-label="BHR700V B — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/bhr700v-b.png" alt="BHR700V B" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -2685,7 +2680,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="bhr800v b токарно-фрезерные обрабатывающие центра" data-title="BHR800V B" data-sortkey="820.0" data-swing-diameter="Ø820 мм" data-distance-between-centers="2000–6000 мм">
+<article class="vmc-card" data-name="bhr800v b токарно-фрезерные обрабатывающие центра" data-title="BHR800V B" data-sortkey="820.0" data-swing-diameter="Ø820 мм" data-travel-x="930 мм" data-distance-between-centers="2000–6000 мм">
 <a class="vmc-card-link" href="equipment-turning-bhr800v-b.html" aria-label="BHR800V B — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/bhr800v-b.png" alt="BHR800V B" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -2707,7 +2702,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="bhr1500v b токарно-фрезерные обрабатывающие центра" data-title="BHR1500V B" data-sortkey="1520.0" data-swing-diameter="Ø1520 мм" data-distance-between-centers="2000–6000 мм">
+<article class="vmc-card" data-name="bhr1500v b токарно-фрезерные обрабатывающие центра" data-title="BHR1500V B" data-sortkey="1520.0" data-swing-diameter="Ø1520 мм" data-travel-x="1300 мм" data-distance-between-centers="2000–6000 мм">
 <a class="vmc-card-link" href="equipment-turning-bhr1500v-b.html" aria-label="BHR1500V B — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/bhr1500v-b.png" alt="BHR1500V B" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -2718,7 +2713,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="bhr500v b токарно-фрезерные обрабатывающие центра" data-title="BHR500V B" data-sortkey="600.0" data-swing-diameter="Ø600 мм" data-distance-between-centers="1000 мм" data-rapid-traverse="40 м/мин">
+<article class="vmc-card" data-name="bhr500v b токарно-фрезерные обрабатывающие центра" data-title="BHR500V B" data-sortkey="600.0" data-swing-diameter="Ø600 мм" data-travel-x="535 мм" data-distance-between-centers="1000 мм" data-rapid-traverse="40 м/мин">
 <a class="vmc-card-link" href="equipment-turning-bhr500v-b.html" aria-label="BHR500V B — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/bhr500v-b.png" alt="BHR500V B" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -2729,7 +2724,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="bhr1200v b токарно-фрезерные обрабатывающие центра" data-title="BHR1200V B" data-sortkey="1220.0" data-swing-diameter="Ø1220 мм" data-distance-between-centers="2000–6000 мм">
+<article class="vmc-card" data-name="bhr1200v b токарно-фрезерные обрабатывающие центра" data-title="BHR1200V B" data-sortkey="1220.0" data-swing-diameter="Ø1220 мм" data-travel-x="1230 мм" data-distance-between-centers="2000–6000 мм">
 <a class="vmc-card-link" href="equipment-turning-bhr1200v-b.html" aria-label="BHR1200V B — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/bhr1200v-b.png" alt="BHR1200V B" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -2740,7 +2735,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="bhr300v b токарно-фрезерные обрабатывающие центра" data-title="BHR300V B" data-sortkey="400.0" data-swing-diameter="Ø400 мм" data-rapid-traverse="32 м/мин">
+<article class="vmc-card" data-name="bhr300v b токарно-фрезерные обрабатывающие центра" data-title="BHR300V B" data-sortkey="400.0" data-swing-diameter="Ø400 мм" data-travel-x="500 мм" data-rapid-traverse="32 м/мин">
 <a class="vmc-card-link" href="equipment-turning-bhr300v-b.html" aria-label="BHR300V B — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/bhr300v-b.png" alt="BHR300V B" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -3425,14 +3420,14 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <div class="eqcat-filter-backdrop" data-role="filter-backdrop"></div>
 <div class="g2-filter-head"><span>Фильтр</span><button type="button" class="g2-reset" data-role="reset"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg>Сбросить всё</button><button type="button" class="eqcat-filter-close" data-role="filter-close" aria-label="Закрыть фильтр">×</button></div>
 <label class="g2-search"><span class="g2-search-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span><input type="search" data-role="search" placeholder="Поиск по модели"/></label>
-<div class="g2-direct"><div class="g2-field"><strong>Макс. диаметр прутка</strong>
+<div class="g2-direct"><div class="g2-field"><strong>Диаметр над станиной</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="turning-diameter-max" data-bound="min"/>
+<input type="number" placeholder="До" data-range="turning-diameter-max" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Макс. диаметр прутка</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="bar-capacity" data-bound="min"/>
 <input type="number" placeholder="До" data-range="bar-capacity" data-bound="max"/>
-</div></div><div class="g2-field"><strong>Макс. длина обработки</strong>
-<div class="vmc-range-row">
-<input type="number" placeholder="От" data-range="turning-length-max" data-bound="min"/>
-<input type="number" placeholder="До" data-range="turning-length-max" data-bound="max"/>
 </div></div></div>
 <details class="g2-group" open><summary>Дополнительные параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Отверстие шпинделя</strong>
 <div class="vmc-range-row">
@@ -3442,6 +3437,10 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="spindle-speed-max" data-bound="min"/>
 <input type="number" placeholder="До" data-range="spindle-speed-max" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Макс. длина обработки</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="turning-length-max" data-bound="min"/>
+<input type="number" placeholder="До" data-range="turning-length-max" data-bound="max"/>
 </div></div></div></details>
 <details class="g2-group"><summary>Все параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Ход по оси X</strong>
 <div class="vmc-range-row">
@@ -3474,7 +3473,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <div class="g2-fallback-note" data-role="fallback-note" hidden>Точных совпадений не нашлось — показаны ближайшие по параметрам модели.</div>
 <div class="vmc-grid">
 
-<article class="vmc-card" data-name="sp28 z прутковые автоматы" data-title="SP28 Z" data-sortkey="300.0" data-bar-capacity="Ø29 мм (опц. Ø40 мм)" data-spindle-bore="Ø37 мм (опц. Ø48 мм)" data-spindle-speed-max="5000 об/мин" data-machine-weight="2200 кг">
+<article class="vmc-card" data-name="sp28 z прутковые автоматы" data-title="SP28 Z" data-sortkey="300.0" data-turning-diameter-max="Ø300 мм" data-bar-capacity="Ø29 мм (опц. Ø40 мм)" data-spindle-bore="Ø37 мм (опц. Ø48 мм)" data-spindle-speed-max="5000 об/мин" data-machine-weight="2200 кг">
 <a class="vmc-card-link" href="equipment-turning-sp28-z.html" aria-label="SP28 Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/sp28-z.png" alt="SP28 Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -3485,7 +3484,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="p30h z прутковые автоматы" data-title="P30H Z" data-sortkey="300.0" data-bar-capacity="Ø30 мм" data-spindle-bore="Ø36 мм" data-spindle-speed-max="5000 об/мин" data-travel-x="250 мм" data-travel-z="180 мм" data-machine-weight="1500 кг">
+<article class="vmc-card" data-name="p30h z прутковые автоматы" data-title="P30H Z" data-sortkey="300.0" data-turning-diameter-max="Ø300 мм" data-bar-capacity="Ø30 мм" data-spindle-bore="Ø36 мм" data-spindle-speed-max="5000 об/мин" data-travel-x="250 мм" data-travel-z="180 мм" data-machine-weight="1500 кг">
 <a class="vmc-card-link" href="equipment-turning-p30h-z.html" aria-label="P30H Z — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/p30h-z.png" alt="P30H Z" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -3496,7 +3495,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="xpd35 n прутковые автоматы" data-title="XPD35 N" data-sortkey="320.0" data-bar-capacity="Ø35 мм" data-turning-length-max="200 мм" data-spindle-bore="Ø36 мм" data-spindle-speed-max="5000 об/мин" data-travel-x="360 мм" data-travel-z="250 мм" data-machine-weight="2000 кг">
+<article class="vmc-card" data-name="xpd35 n прутковые автоматы" data-title="XPD35 N" data-sortkey="320.0" data-turning-diameter-max="Ø320 мм" data-bar-capacity="Ø35 мм" data-turning-length-max="200 мм" data-spindle-bore="Ø36 мм" data-spindle-speed-max="5000 об/мин" data-travel-x="360 мм" data-travel-z="250 мм" data-machine-weight="2000 кг">
 <a class="vmc-card-link" href="equipment-turning-xpd35-n.html" aria-label="XPD35 N — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/xpd35-n.png" alt="XPD35 N" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -3507,7 +3506,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="pd30 n прутковые автоматы" data-title="PD30 N" data-sortkey="240.0" data-bar-capacity="Ø30 мм" data-turning-length-max="100 мм" data-spindle-speed-max="6000 об/мин" data-travel-x="320 мм" data-travel-z="180 мм" data-machine-weight="1400 кг">
+<article class="vmc-card" data-name="pd30 n прутковые автоматы" data-title="PD30 N" data-sortkey="240.0" data-turning-diameter-max="Ø240 мм" data-bar-capacity="Ø30 мм" data-turning-length-max="100 мм" data-spindle-speed-max="6000 об/мин" data-travel-x="320 мм" data-travel-z="180 мм" data-machine-weight="1400 кг">
 <a class="vmc-card-link" href="equipment-turning-pd30-n.html" aria-label="PD30 N — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/pd30-n.png" alt="PD30 N" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -3518,7 +3517,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="sd-32-32y s прутковые автоматы" data-title="SD-32-32Y S" data-sortkey="500.0" data-turning-length-max="100 мм" data-spindle-bore="Ø32 мм" data-spindle-speed-max="50–6000 об/мин" data-machine-weight="1700 кг (SD-32) / 1750 кг (SD-32Y)">
+<article class="vmc-card" data-name="sd-32-32y s прутковые автоматы" data-title="SD-32-32Y S" data-sortkey="500.0" data-turning-diameter-max="500 мм" data-turning-length-max="100 мм" data-spindle-bore="Ø32 мм" data-spindle-speed-max="50–6000 об/мин" data-machine-weight="1700 кг (SD-32) / 1750 кг (SD-32Y)">
 <a class="vmc-card-link" href="equipment-turning-sd-32-32y-s.html" aria-label="SD-32-32Y S — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/sd-32-32y-s.png" alt="SD-32-32Y S" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -3529,7 +3528,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="sc-32-42t s прутковые автоматы" data-title="SC-32-42T S" data-sortkey="320.0" data-bar-capacity="Ø32 мм (SC-32T) / Ø42 мм (SC-42T)" data-turning-length-max="140 мм (SC-32T/42T); 117 мм (SC-32/42)" data-spindle-bore="Ø34 мм (SC-32T) / Ø44 мм (SC-42T)" data-spindle-speed-max="45–3500 об/мин" data-machine-weight="2200 кг">
+<article class="vmc-card" data-name="sc-32-42t s прутковые автоматы" data-title="SC-32-42T S" data-sortkey="320.0" data-turning-diameter-max="320 мм" data-bar-capacity="Ø32 мм (SC-32T) / Ø42 мм (SC-42T)" data-turning-length-max="140 мм (SC-32T/42T); 117 мм (SC-32/42)" data-spindle-bore="Ø34 мм (SC-32T) / Ø44 мм (SC-42T)" data-spindle-speed-max="45–3500 об/мин" data-machine-weight="2200 кг">
 <a class="vmc-card-link" href="equipment-turning-sc-32-42t-s.html" aria-label="SC-32-42T S — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/sc-32-42t-s.png" alt="SC-32-42T S" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -3540,7 +3539,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="pd30ii n прутковые автоматы" data-title="PD30II N" data-sortkey="300.0" data-bar-capacity="Ø30 мм" data-turning-length-max="100 мм" data-spindle-speed-max="6000 об/мин" data-travel-x="320 мм" data-travel-z="270 мм" data-machine-weight="1400 кг">
+<article class="vmc-card" data-name="pd30ii n прутковые автоматы" data-title="PD30II N" data-sortkey="300.0" data-turning-diameter-max="Ø300 мм" data-bar-capacity="Ø30 мм" data-turning-length-max="100 мм" data-spindle-speed-max="6000 об/мин" data-travel-x="320 мм" data-travel-z="270 мм" data-machine-weight="1400 кг">
 <a class="vmc-card-link" href="equipment-turning-pd30ii-n.html" aria-label="PD30II N — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/pd30ii-n.png" alt="PD30II N" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -3551,7 +3550,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="pm35 n прутковые автоматы" data-title="PM35 N" data-sortkey="300.0" data-bar-capacity="Ø35 мм" data-turning-length-max="100 мм" data-spindle-bore="Ø36 мм" data-spindle-speed-max="5000 об/мин" data-travel-x="300 мм" data-travel-z="200 мм" data-machine-weight="1080 кг">
+<article class="vmc-card" data-name="pm35 n прутковые автоматы" data-title="PM35 N" data-sortkey="300.0" data-turning-diameter-max="Ø300 мм" data-bar-capacity="Ø35 мм" data-turning-length-max="100 мм" data-spindle-bore="Ø36 мм" data-spindle-speed-max="5000 об/мин" data-travel-x="300 мм" data-travel-z="200 мм" data-machine-weight="1080 кг">
 <a class="vmc-card-link" href="equipment-turning-pm35-n.html" aria-label="PM35 N — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/pm35-n.png" alt="PM35 N" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -3562,7 +3561,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="pm25 n прутковые автоматы" data-title="PM25 N" data-sortkey="300.0" data-bar-capacity="Ø25 мм" data-turning-length-max="100 мм" data-spindle-bore="Ø26 мм" data-spindle-speed-max="5000 об/мин" data-travel-x="300 мм" data-travel-z="200 мм" data-machine-weight="1050 кг">
+<article class="vmc-card" data-name="pm25 n прутковые автоматы" data-title="PM25 N" data-sortkey="300.0" data-turning-diameter-max="Ø300 мм" data-bar-capacity="Ø25 мм" data-turning-length-max="100 мм" data-spindle-bore="Ø26 мм" data-spindle-speed-max="5000 об/мин" data-travel-x="300 мм" data-travel-z="200 мм" data-machine-weight="1050 кг">
 <a class="vmc-card-link" href="equipment-turning-pm25-n.html" aria-label="PM25 N — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/pm25-n.png" alt="PM25 N" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -3573,7 +3572,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="pd20 n прутковые автоматы" data-title="PD20 N" data-sortkey="240.0" data-bar-capacity="Ø20 мм" data-turning-length-max="100 мм" data-spindle-speed-max="8000 об/мин" data-travel-x="220 мм" data-travel-z="180 мм" data-machine-weight="1300 кг">
+<article class="vmc-card" data-name="pd20 n прутковые автоматы" data-title="PD20 N" data-sortkey="240.0" data-turning-diameter-max="Ø240 мм" data-bar-capacity="Ø20 мм" data-turning-length-max="100 мм" data-spindle-speed-max="8000 об/мин" data-travel-x="220 мм" data-travel-z="180 мм" data-machine-weight="1300 кг">
 <a class="vmc-card-link" href="equipment-turning-pd20-n.html" aria-label="PD20 N — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/pd20-n.png" alt="PD20 N" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -3584,7 +3583,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="ybk25ii n прутковые автоматы" data-title="YBK25II N" data-sortkey="330.0" data-bar-capacity="Ø25 мм" data-turning-length-max="100 мм" data-spindle-bore="Ø26 мм" data-spindle-speed-max="3500 об/мин" data-travel-x="220 мм" data-travel-z="180 мм" data-machine-weight="850 кг">
+<article class="vmc-card" data-name="ybk25ii n прутковые автоматы" data-title="YBK25II N" data-sortkey="330.0" data-turning-diameter-max="Ø330 мм" data-bar-capacity="Ø25 мм" data-turning-length-max="100 мм" data-spindle-bore="Ø26 мм" data-spindle-speed-max="3500 об/мин" data-travel-x="220 мм" data-travel-z="180 мм" data-machine-weight="850 кг">
 <a class="vmc-card-link" href="equipment-turning-ybk25ii-n.html" aria-label="YBK25II N — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/ybk25ii-n.png" alt="YBK25II N" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -3595,7 +3594,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="sl-42-52-60-60l s прутковые автоматы" data-title="SL-42-52-60-60L S" data-sortkey="510.0" data-bar-capacity="Ø42 мм (SL-42) / Ø50 мм (SL-52) / Ø60 мм (SL-60/60L)" data-turning-length-max="320 мм (SL-42/52/60) / 500 мм (SL-60L)" data-spindle-bore="Ø56 мм (SL-42) / Ø70 мм (SL-52) / Ø75 мм (SL-60/60L)" data-spindle-speed-max="45–3500 об/мин" data-machine-weight="3100 кг">
+<article class="vmc-card" data-name="sl-42-52-60-60l s прутковые автоматы" data-title="SL-42-52-60-60L S" data-sortkey="510.0" data-turning-diameter-max="510 мм (все модели)" data-bar-capacity="Ø42 мм (SL-42) / Ø50 мм (SL-52) / Ø60 мм (SL-60/60L)" data-turning-length-max="320 мм (SL-42/52/60) / 500 мм (SL-60L)" data-spindle-bore="Ø56 мм (SL-42) / Ø70 мм (SL-52) / Ø75 мм (SL-60/60L)" data-spindle-speed-max="45–3500 об/мин" data-machine-weight="3100 кг">
 <a class="vmc-card-link" href="equipment-turning-sl-42-52-60-60l-s.html" aria-label="SL-42-52-60-60L S — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/sl-42-52-60-60l-s.png" alt="SL-42-52-60-60L S" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -3606,7 +3605,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="pdj30ii n прутковые автоматы" data-title="PDJ30II N" data-sortkey="300.0" data-bar-capacity="Ø30 мм" data-turning-length-max="100 мм" data-spindle-speed-max="6000 об/мин" data-travel-x="320 мм" data-travel-z="270 мм" data-machine-weight="1400 кг">
+<article class="vmc-card" data-name="pdj30ii n прутковые автоматы" data-title="PDJ30II N" data-sortkey="300.0" data-turning-diameter-max="Ø300 мм" data-bar-capacity="Ø30 мм" data-turning-length-max="100 мм" data-spindle-speed-max="6000 об/мин" data-travel-x="320 мм" data-travel-z="270 мм" data-machine-weight="1400 кг">
 <a class="vmc-card-link" href="equipment-turning-pdj30ii-n.html" aria-label="PDJ30II N — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/pdj30ii-n.png" alt="PDJ30II N" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -3617,7 +3616,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="ybk35ii n прутковые автоматы" data-title="YBK35II N" data-sortkey="330.0" data-bar-capacity="Ø35 мм" data-turning-length-max="100 мм" data-spindle-bore="Ø36 мм" data-spindle-speed-max="3500 об/мин" data-travel-x="220 мм" data-travel-z="180 мм" data-machine-weight="900 кг">
+<article class="vmc-card" data-name="ybk35ii n прутковые автоматы" data-title="YBK35II N" data-sortkey="330.0" data-turning-diameter-max="Ø330 мм" data-bar-capacity="Ø35 мм" data-turning-length-max="100 мм" data-spindle-bore="Ø36 мм" data-spindle-speed-max="3500 об/мин" data-travel-x="220 мм" data-travel-z="180 мм" data-machine-weight="900 кг">
 <a class="vmc-card-link" href="equipment-turning-ybk35ii-n.html" aria-label="YBK35II N — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/ybk35ii-n.png" alt="YBK35II N" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -3628,7 +3627,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="pdj20 n прутковые автоматы" data-title="PDJ20 N" data-sortkey="240.0" data-bar-capacity="Ø20 мм" data-turning-length-max="100 мм" data-spindle-speed-max="6000 об/мин" data-travel-x="220 мм" data-travel-z="180 мм" data-machine-weight="1300 кг">
+<article class="vmc-card" data-name="pdj20 n прутковые автоматы" data-title="PDJ20 N" data-sortkey="240.0" data-turning-diameter-max="Ø240 мм" data-bar-capacity="Ø20 мм" data-turning-length-max="100 мм" data-spindle-speed-max="6000 об/мин" data-travel-x="220 мм" data-travel-z="180 мм" data-machine-weight="1300 кг">
 <a class="vmc-card-link" href="equipment-turning-pdj20-n.html" aria-label="PDJ20 N — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/pdj20-n.png" alt="PDJ20 N" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -3639,7 +3638,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="pdj30 n прутковые автоматы" data-title="PDJ30 N" data-sortkey="240.0" data-bar-capacity="Ø30 мм" data-turning-length-max="100 мм" data-spindle-speed-max="6000 об/мин" data-travel-x="320 мм" data-travel-z="180 мм" data-machine-weight="1400 кг">
+<article class="vmc-card" data-name="pdj30 n прутковые автоматы" data-title="PDJ30 N" data-sortkey="240.0" data-turning-diameter-max="Ø240 мм" data-bar-capacity="Ø30 мм" data-turning-length-max="100 мм" data-spindle-speed-max="6000 об/мин" data-travel-x="320 мм" data-travel-z="180 мм" data-machine-weight="1400 кг">
 <a class="vmc-card-link" href="equipment-turning-pdj30-n.html" aria-label="PDJ30 N — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/pdj30-n.png" alt="PDJ30 N" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -3665,19 +3664,19 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="bar-capacity" data-bound="min"/>
 <input type="number" placeholder="До" data-range="bar-capacity" data-bound="max"/>
-</div></div><div class="g2-field"><strong>Частота вращения шпинделя</strong>
+</div></div><div class="g2-field"><strong>Отверстие шпинделя</strong>
 <div class="vmc-range-row">
-<input type="number" placeholder="От" data-range="spindle-speed-max" data-bound="min"/>
-<input type="number" placeholder="До" data-range="spindle-speed-max" data-bound="max"/>
+<input type="number" placeholder="От" data-range="spindle-bore" data-bound="min"/>
+<input type="number" placeholder="До" data-range="spindle-bore" data-bound="max"/>
 </div></div><div class="g2-field"><label class="g2-check"><input type="checkbox" name="counter-spindle-present" value="да"/><span>Наличие противошпинделя</span></label></div></div>
 <details class="g2-group" open><summary>Дополнительные параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Макс. длина обработки</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="turning-length-max" data-bound="min"/>
 <input type="number" placeholder="До" data-range="turning-length-max" data-bound="max"/>
-</div></div><div class="g2-field"><strong>Частота контршпинделя</strong>
+</div></div><div class="g2-field"><strong>Частота вращения шпинделя</strong>
 <div class="vmc-range-row">
-<input type="number" placeholder="От" data-range="counter-spindle-speed" data-bound="min"/>
-<input type="number" placeholder="До" data-range="counter-spindle-speed" data-bound="max"/>
+<input type="number" placeholder="От" data-range="spindle-speed-max" data-bound="min"/>
+<input type="number" placeholder="До" data-range="spindle-speed-max" data-bound="max"/>
 </div></div><div class="g2-field"><strong>Мощность привода</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="motor-power" data-bound="min"/>
@@ -3687,7 +3686,11 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <input type="number" placeholder="От" data-range="counter-spindle-power" data-bound="min"/>
 <input type="number" placeholder="До" data-range="counter-spindle-power" data-bound="max"/>
 </div></div></div></details>
-<details class="g2-group"><summary>Все параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Частота приводного инструмента</strong>
+<details class="g2-group"><summary>Все параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Частота контршпинделя</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="counter-spindle-speed" data-bound="min"/>
+<input type="number" placeholder="До" data-range="counter-spindle-speed" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Частота приводного инструмента</strong>
 <div class="vmc-range-row">
 <input type="number" placeholder="От" data-range="live-tooling-speed" data-bound="min"/>
 <input type="number" placeholder="До" data-range="live-tooling-speed" data-bound="max"/>
@@ -3714,7 +3717,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <div class="g2-fallback-note" data-role="fallback-note" hidden>Точных совпадений не нашлось — показаны ближайшие по параметрам модели.</div>
 <div class="vmc-grid">
 
-<article class="vmc-card" data-name="s266 n автоматы продольного точения" data-title="S266 N" data-sortkey="26.0" data-bar-capacity="Ø26 мм" data-spindle-speed-max="10000 об/мин (8000 с вращ. втулкой)" data-turning-length-max="2.5D (макс. 50 мм)" data-counter-spindle-speed="10000 об/мин" data-motor-power="4.2 кВт" data-counter-spindle-power="4.2 кВт" data-live-tooling-speed="6000 об/мин" data-positioning-repeat="≤0.003 мм">
+<article class="vmc-card" data-name="s266 n автоматы продольного точения" data-title="S266 N" data-sortkey="26.0" data-bar-capacity="Ø26 мм" data-spindle-bore="Ø30 мм" data-spindle-speed-max="10000 об/мин (8000 с вращ. втулкой)" data-turning-length-max="2.5D (макс. 50 мм)" data-counter-spindle-speed="10000 об/мин" data-motor-power="4.2 кВт" data-counter-spindle-power="4.2 кВт" data-live-tooling-speed="6000 об/мин" data-positioning-repeat="≤0.003 мм">
 <a class="vmc-card-link" href="equipment-turning-s266-n.html" aria-label="S266 N — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/s266-n.png" alt="S266 N" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -3758,7 +3761,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="sl265 n автоматы продольного точения" data-title="SL265 N" data-sortkey="26.0" data-bar-capacity="Ø26 мм" data-spindle-speed-max="10000 об/мин (8000 с вращ. втулкой)" data-turning-length-max="2.5D (макс. 50 мм)" data-counter-spindle-speed="10000 об/мин" data-motor-power="4.2 кВт" data-counter-spindle-power="3.1 кВт" data-live-tooling-speed="5000 об/мин" data-positioning-repeat="≤0.003 мм">
+<article class="vmc-card" data-name="sl265 n автоматы продольного точения" data-title="SL265 N" data-sortkey="26.0" data-bar-capacity="Ø26 мм" data-spindle-bore="Ø30 мм" data-spindle-speed-max="10000 об/мин (8000 с вращ. втулкой)" data-turning-length-max="2.5D (макс. 50 мм)" data-counter-spindle-speed="10000 об/мин" data-motor-power="4.2 кВт" data-counter-spindle-power="3.1 кВт" data-live-tooling-speed="5000 об/мин" data-positioning-repeat="≤0.003 мм">
 <a class="vmc-card-link" href="equipment-turning-sl265-n.html" aria-label="SL265 N — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/sl265-n.png" alt="SL265 N" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -3769,7 +3772,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="sl125 n автоматы продольного точения" data-title="SL125 N" data-sortkey="12.0" data-bar-capacity="Ø12 мм" data-spindle-speed-max="12000 об/мин (8000 с вращ. втулкой)" data-turning-length-max="2.5D (макс. 30 мм)" data-counter-spindle-speed="12000 об/мин" data-motor-power="1.5 кВт" data-counter-spindle-power="1.5 кВт" data-live-tooling-speed="6000 об/мин" data-positioning-repeat="≤0.003 мм">
+<article class="vmc-card" data-name="sl125 n автоматы продольного точения" data-title="SL125 N" data-sortkey="12.0" data-bar-capacity="Ø12 мм" data-spindle-bore="Ø16 мм" data-spindle-speed-max="12000 об/мин (8000 с вращ. втулкой)" data-turning-length-max="2.5D (макс. 30 мм)" data-counter-spindle-speed="12000 об/мин" data-motor-power="1.5 кВт" data-counter-spindle-power="1.5 кВт" data-live-tooling-speed="6000 об/мин" data-positioning-repeat="≤0.003 мм">
 <a class="vmc-card-link" href="equipment-turning-sl125-n.html" aria-label="SL125 N — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/sl125-n.png" alt="SL125 N" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -3780,7 +3783,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="sl325 n автоматы продольного точения" data-title="SL325 N" data-sortkey="32.0" data-bar-capacity="Ø32 мм" data-spindle-speed-max="8000 об/мин (6000 с вращ. втулкой)" data-turning-length-max="2.5D (макс. 80 мм)" data-counter-spindle-speed="8000 об/мин" data-motor-power="6.3 кВт" data-counter-spindle-power="4.2 кВт" data-live-tooling-speed="6000 об/мин" data-positioning-repeat="≤0.003 мм">
+<article class="vmc-card" data-name="sl325 n автоматы продольного точения" data-title="SL325 N" data-sortkey="32.0" data-bar-capacity="Ø32 мм" data-spindle-bore="Ø36 мм" data-spindle-speed-max="8000 об/мин (6000 с вращ. втулкой)" data-turning-length-max="2.5D (макс. 80 мм)" data-counter-spindle-speed="8000 об/мин" data-motor-power="6.3 кВт" data-counter-spindle-power="4.2 кВт" data-live-tooling-speed="6000 об/мин" data-positioning-repeat="≤0.003 мм">
 <a class="vmc-card-link" href="equipment-turning-sl325-n.html" aria-label="SL325 N — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/sl325-n.png" alt="SL325 N" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -3802,7 +3805,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="sl386 n автоматы продольного точения" data-title="SL386 N" data-sortkey="38.0" data-bar-capacity="Ø38 мм" data-spindle-speed-max="6000 об/мин" data-turning-length-max="2.5D (макс. 90 мм)" data-counter-spindle-speed="8000 об/мин" data-motor-power="6.3 кВт" data-counter-spindle-power="4.2 кВт" data-live-tooling-speed="6000 об/мин" data-positioning-repeat="≤0.003 мм">
+<article class="vmc-card" data-name="sl386 n автоматы продольного точения" data-title="SL386 N" data-sortkey="38.0" data-bar-capacity="Ø38 мм" data-spindle-bore="Ø39 мм" data-spindle-speed-max="6000 об/мин" data-turning-length-max="2.5D (макс. 90 мм)" data-counter-spindle-speed="8000 об/мин" data-motor-power="6.3 кВт" data-counter-spindle-power="4.2 кВт" data-live-tooling-speed="6000 об/мин" data-positioning-repeat="≤0.003 мм">
 <a class="vmc-card-link" href="equipment-turning-sl386-n.html" aria-label="SL386 N — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/sl386-n.png" alt="SL386 N" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -3813,7 +3816,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="s265 n автоматы продольного точения" data-title="S265 N" data-sortkey="26.0" data-bar-capacity="Ø26 мм" data-spindle-speed-max="10000 об/мин (8000 с вращ. втулкой)" data-turning-length-max="2.5D (макс. 50 мм)" data-counter-spindle-speed="10000 об/мин" data-motor-power="4.2 кВт" data-counter-spindle-power="4.2 кВт" data-live-tooling-speed="6000 об/мин" data-positioning-repeat="≤0.003 мм">
+<article class="vmc-card" data-name="s265 n автоматы продольного точения" data-title="S265 N" data-sortkey="26.0" data-bar-capacity="Ø26 мм" data-spindle-bore="Ø30 мм" data-spindle-speed-max="10000 об/мин (8000 с вращ. втулкой)" data-turning-length-max="2.5D (макс. 50 мм)" data-counter-spindle-speed="10000 об/мин" data-motor-power="4.2 кВт" data-counter-spindle-power="4.2 кВт" data-live-tooling-speed="6000 об/мин" data-positioning-repeat="≤0.003 мм">
 <a class="vmc-card-link" href="equipment-turning-s265-n.html" aria-label="S265 N — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/s265-n.png" alt="S265 N" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -3824,7 +3827,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="sl385 n автоматы продольного точения" data-title="SL385 N" data-sortkey="38.0" data-bar-capacity="Ø38 мм" data-spindle-speed-max="6000 об/мин" data-turning-length-max="2.5D (макс. 90 мм)" data-counter-spindle-speed="8000 об/мин" data-motor-power="6.3 кВт" data-counter-spindle-power="4.2 кВт" data-positioning-repeat="≤0.003 мм">
+<article class="vmc-card" data-name="sl385 n автоматы продольного точения" data-title="SL385 N" data-sortkey="38.0" data-bar-capacity="Ø38 мм" data-spindle-bore="Ø39 мм" data-spindle-speed-max="6000 об/мин" data-turning-length-max="2.5D (макс. 90 мм)" data-counter-spindle-speed="8000 об/мин" data-motor-power="6.3 кВт" data-counter-spindle-power="4.2 кВт" data-positioning-repeat="≤0.003 мм">
 <a class="vmc-card-link" href="equipment-turning-sl385-n.html" aria-label="SL385 N — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/sl385-n.png" alt="SL385 N" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -3835,7 +3838,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="sl203 n автоматы продольного точения" data-title="SL203 N" data-sortkey="20.0" data-bar-capacity="Ø20 мм" data-spindle-speed-max="10000 об/мин (8000 с вращ. втулкой)" data-turning-length-max="2.5D (макс. 50 мм)" data-motor-power="4.2 кВт" data-live-tooling-speed="6000 об/мин" data-positioning-repeat="≤0.003 мм">
+<article class="vmc-card" data-name="sl203 n автоматы продольного точения" data-title="SL203 N" data-sortkey="20.0" data-bar-capacity="Ø20 мм" data-spindle-bore="Ø25 мм" data-spindle-speed-max="10000 об/мин (8000 с вращ. втулкой)" data-turning-length-max="2.5D (макс. 50 мм)" data-motor-power="4.2 кВт" data-live-tooling-speed="6000 об/мин" data-positioning-repeat="≤0.003 мм">
 <a class="vmc-card-link" href="equipment-turning-sl203-n.html" aria-label="SL203 N — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/sl203-n.png" alt="SL203 N" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -3846,7 +3849,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="csl1203ii n автоматы продольного точения" data-title="CSL1203II N" data-sortkey="12.0" data-bar-capacity="Ø12 мм" data-spindle-speed-max="8000 об/мин (6000 с вращ. втулкой)" data-turning-length-max="140 мм" data-motor-power="3.7 кВт" data-live-tooling-speed="5000 об/мин (опция)" data-positioning-repeat="≤0.003 мм">
+<article class="vmc-card" data-name="csl1203ii n автоматы продольного точения" data-title="CSL1203II N" data-sortkey="12.0" data-bar-capacity="Ø12 мм" data-spindle-bore="Ø16 мм" data-spindle-speed-max="8000 об/мин (6000 с вращ. втулкой)" data-turning-length-max="140 мм" data-motor-power="3.7 кВт" data-live-tooling-speed="5000 об/мин (опция)" data-positioning-repeat="≤0.003 мм">
 <a class="vmc-card-link" href="equipment-turning-csl1203ii-n.html" aria-label="CSL1203II N — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/csl1203ii-n.png" alt="CSL1203II N" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -3868,7 +3871,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="sl326 n автоматы продольного точения" data-title="SL326 N" data-sortkey="32.0" data-bar-capacity="Ø32 мм" data-spindle-speed-max="8000 об/мин (6000 с вращ. втулкой)" data-turning-length-max="2.5D (макс. 80 мм)" data-counter-spindle-speed="8000 об/мин" data-motor-power="6.3 кВт" data-counter-spindle-power="4.2 кВт" data-live-tooling-speed="6000 об/мин" data-positioning-repeat="≤0.003 мм">
+<article class="vmc-card" data-name="sl326 n автоматы продольного точения" data-title="SL326 N" data-sortkey="32.0" data-bar-capacity="Ø32 мм" data-spindle-bore="Ø36 мм" data-spindle-speed-max="8000 об/мин (6000 с вращ. втулкой)" data-turning-length-max="2.5D (макс. 80 мм)" data-counter-spindle-speed="8000 об/мин" data-motor-power="6.3 кВт" data-counter-spindle-power="4.2 кВт" data-live-tooling-speed="6000 об/мин" data-positioning-repeat="≤0.003 мм">
 <a class="vmc-card-link" href="equipment-turning-sl326-n.html" aria-label="SL326 N — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/sl326-n.png" alt="SL326 N" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -3879,7 +3882,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="s205 n автоматы продольного точения" data-title="S205 N" data-sortkey="20.0" data-bar-capacity="Ø20 мм" data-spindle-speed-max="10000 об/мин (8000 с вращ. втулкой)" data-turning-length-max="2.5D (макс. 50 мм)" data-counter-spindle-speed="10000 об/мин" data-motor-power="4.2 кВт" data-counter-spindle-power="4.2 кВт" data-live-tooling-speed="6000 об/мин" data-positioning-repeat="≤0.003 мм">
+<article class="vmc-card" data-name="s205 n автоматы продольного точения" data-title="S205 N" data-sortkey="20.0" data-bar-capacity="Ø20 мм" data-spindle-bore="Ø25 мм" data-spindle-speed-max="10000 об/мин (8000 с вращ. втулкой)" data-turning-length-max="2.5D (макс. 50 мм)" data-counter-spindle-speed="10000 об/мин" data-motor-power="4.2 кВт" data-counter-spindle-power="4.2 кВт" data-live-tooling-speed="6000 об/мин" data-positioning-repeat="≤0.003 мм">
 <a class="vmc-card-link" href="equipment-turning-s205-n.html" aria-label="S205 N — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/s205-n.png" alt="S205 N" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -3901,7 +3904,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="sl263 n автоматы продольного точения" data-title="SL263 N" data-sortkey="26.0" data-bar-capacity="Ø26 мм" data-spindle-speed-max="10000 об/мин (8000 с вращ. втулкой)" data-turning-length-max="2.5D (макс. 50 мм)" data-motor-power="4.2 кВт" data-live-tooling-speed="6000 об/мин" data-positioning-repeat="≤0.003 мм">
+<article class="vmc-card" data-name="sl263 n автоматы продольного точения" data-title="SL263 N" data-sortkey="26.0" data-bar-capacity="Ø26 мм" data-spindle-bore="Ø30 мм" data-spindle-speed-max="10000 об/мин (8000 с вращ. втулкой)" data-turning-length-max="2.5D (макс. 50 мм)" data-motor-power="4.2 кВт" data-live-tooling-speed="6000 об/мин" data-positioning-repeat="≤0.003 мм">
 <a class="vmc-card-link" href="equipment-turning-sl263-n.html" aria-label="SL263 N — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/sl263-n.png" alt="SL263 N" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -3923,7 +3926,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="s206 n автоматы продольного точения" data-title="S206 N" data-sortkey="20.0" data-bar-capacity="Ø20 мм" data-spindle-speed-max="10000 об/мин (8000 с вращ. втулкой)" data-turning-length-max="2.5D (макс. 50 мм)" data-counter-spindle-speed="10000 об/мин" data-motor-power="4.2 кВт" data-counter-spindle-power="4.2 кВт" data-live-tooling-speed="6000 об/мин" data-positioning-repeat="≤0.003 мм">
+<article class="vmc-card" data-name="s206 n автоматы продольного точения" data-title="S206 N" data-sortkey="20.0" data-bar-capacity="Ø20 мм" data-spindle-bore="Ø25 мм" data-spindle-speed-max="10000 об/мин (8000 с вращ. втулкой)" data-turning-length-max="2.5D (макс. 50 мм)" data-counter-spindle-speed="10000 об/мин" data-motor-power="4.2 кВт" data-counter-spindle-power="4.2 кВт" data-live-tooling-speed="6000 об/мин" data-positioning-repeat="≤0.003 мм">
 <a class="vmc-card-link" href="equipment-turning-s206-n.html" aria-label="S206 N — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/s206-n.png" alt="S206 N" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
@@ -3956,7 +3959,7 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 </div>
 </article>
 
-<article class="vmc-card" data-name="sl205 n автоматы продольного точения" data-title="SL205 N" data-sortkey="20.0" data-bar-capacity="Ø20 мм" data-spindle-speed-max="10000 об/мин (8000 с вращ. втулкой)" data-turning-length-max="2.5D (макс. 50 мм)" data-counter-spindle-speed="10000 об/мин" data-motor-power="4.2 кВт" data-counter-spindle-power="3.1 кВт" data-live-tooling-speed="5000 об/мин" data-positioning-repeat="≤0.003 мм">
+<article class="vmc-card" data-name="sl205 n автоматы продольного точения" data-title="SL205 N" data-sortkey="20.0" data-bar-capacity="Ø20 мм" data-spindle-bore="Ø25 мм" data-spindle-speed-max="10000 об/мин (8000 с вращ. втулкой)" data-turning-length-max="2.5D (макс. 50 мм)" data-counter-spindle-speed="10000 об/мин" data-motor-power="4.2 кВт" data-counter-spindle-power="3.1 кВт" data-live-tooling-speed="5000 об/мин" data-positioning-repeat="≤0.003 мм">
 <a class="vmc-card-link" href="equipment-turning-sl205-n.html" aria-label="SL205 N — подробнее"></a>
 <div class="vmc-photo"><img src="turning-assets/sl205-n.png" alt="SL205 N" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
 <div class="vmc-body">
