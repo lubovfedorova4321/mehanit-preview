@@ -1,0 +1,1830 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"/><meta name="robots" content="noindex, nofollow"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Шлифовальные станки — Механит</title>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<meta name="description" content="Круглошлифовальные, плоскошлифовальные и бесцентровошлифовальные станки для финишной обработки — точность по размеру, форме и шероховатости поверхности."/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "В чём разница между круглошлифовальным, плоскошлифовальным и бесцентровошлифовальным станком?", "acceptedAnswer": {"@type": "Answer", "text": "Круглошлифовальный станок обрабатывает тела вращения в центрах, плоскошлифовальный — плоские поверхности на магнитной плите, бесцентровошлифовальный — наружный диаметр тел вращения без закрепления в центрах, методом сквозной или врезной подачи."}}, {"@type": "Question", "name": "Какая точность достижима на шлифовальном станке?", "acceptedAnswer": {"@type": "Answer", "text": "Зависит от модели и жёсткости системы СПИД — обычно круглость и цилиндричность в пределах 2–5 мкм, шероховатость Ra0,16–0,32. Точные параметры указаны в характеристиках каждой модели."}}, {"@type": "Question", "name": "Можно ли подобрать станок под конкретную деталь?", "acceptedAnswer": {"@type": "Answer", "text": "Да, передайте чертёж и требования по допускам и шероховатости — подберём типоразмер, диаметр круга и тип подачи под вашу деталь."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://mehanit.ru/"}, {"@type": "ListItem", "position": 2, "name": "Оборудование", "item": "https://mehanit.ru/equipment.html"}, {"@type": "ListItem", "position": 3, "name": "Шлифовальные станки"}]}</script>
+<style>*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bm:#1A1A1A;--sg:#3D3D3D;--sg2:#2B2E31;--mid:#696D71;--muted:#8A9096;
+  --ce:#6B2D8B;--ce2:rgba(107,45,139,.10);--ce3:rgba(107,45,139,.20);--ceHover:#7d3aa0;
+  --gold:#C9A227;
+  --tl:#EAEAE6;--tl2:#F5F5F3;--paper:#EDEEF0;--paper2:#E4E5E8;--white:#fff;
+  --line:rgba(26,26,26,.10);--line2:rgba(234,234,230,.08);
+  --max:1400px;--shadow:0 24px 70px rgba(26,26,26,.10);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Golos Text',sans-serif;background:var(--paper);color:var(--bm);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
+.mono{font-family:'Golos Text',monospace}.disp{font-family:'Magistral',sans-serif}
+
+/* extracted from equipment-milling.html */
+.wrap{width:min(calc(100% - clamp(24px,4.4vw,84px) - 24px),var(--max));margin-left:clamp(24px,4.4vw,84px);margin-right:auto}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:'Golos Text',monospace;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--ce);margin-bottom:.85rem}
+.eyebrow::before{content:'';width:22px;height:1.5px;background:var(--ce)}
+.h2{font-family:'Magistral',sans-serif;font-size:clamp(26px,3.4vw,46px);font-weight:600;letter-spacing:-.018em;line-height:1.08;text-transform:uppercase}
+.h2 .lt{font-weight:300;color:var(--mid)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:1.5px solid transparent;min-height:48px;padding:0 26px;font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;font-family:'Golos Text',sans-serif;transition:.22s;border-radius:2px}
+.btn-ce{background:var(--ce);color:#fff;box-shadow:0 10px 28px rgba(107,45,139,.2)}
+.btn-ce:hover{background:var(--ceHover);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--bm);border-color:rgba(26,26,26,.2)}
+.btn-ghost:hover{border-color:var(--bm)}
+.btn-gold{background:var(--gold);color:var(--bm);border-color:var(--gold);box-shadow:0 12px 28px rgba(201,162,39,.22)}
+.btn-gold:hover{transform:translateY(-2px);filter:brightness(1.04);box-shadow:0 16px 36px rgba(201,162,39,.3)}
+.hdr{position:sticky;top:0;z-index:100;background:rgba(237,238,240,.9);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand img{height:52px;width:auto;display:block}
+.crumbbar{border-bottom:1px solid rgba(26,26,26,.06);background:rgba(255,255,255,.55)}
+.crumbs{min-height:44px;display:flex;align-items:center;gap:8px;font-family:'Golos Text',sans-serif;font-size:13px;font-weight:500;letter-spacing:.04em;line-height:1.45;color:var(--muted);flex-wrap:wrap}
+.crumbs a{color:var(--muted);transition:color .15s ease}
+.crumbs a:hover,.crumbs a:focus-visible{color:var(--ce);text-decoration:underline;text-underline-offset:3px}
+.crumbs a:focus-visible{outline:2px solid var(--ce);outline-offset:2px;border-radius:2px}
+.crumbs .crumb-sep{color:rgba(138,141,150,.55);font-size:12px}
+.crumbs .current{color:var(--mid);font-weight:500}
+@media(max-width:640px){.crumbs{font-size:12px;gap:6px}}
+.hero-cta .btn{width:100%;padding-left:16px;padding-right:16px;text-align:center;min-height:44px}
+.tools .wrap{position:relative;z-index:1}
+.tools .h2,.tools .eyebrow{color:var(--tl)}
+.tools .h2 .lt{color:rgba(234,234,230,.48)}
+.stock-page .wrap{position:relative;z-index:1}
+.stock-actions .btn{padding:11px 13px;font-size:11px}
+.system .wrap{position:relative;z-index:1}
+.system .wrap::before{content:'';position:absolute;right:5%;top:26px;width:260px;height:120px;border-top:1px solid rgba(201,162,39,.32);border-right:1px solid rgba(201,162,39,.22);opacity:.55;pointer-events:none}
+.system .wrap::after{content:'';position:absolute;right:calc(5% + 258px);top:142px;width:120px;height:1px;background:rgba(201,162,39,.28);transform:rotate(-18deg);transform-origin:right center;pointer-events:none}
+.system .h2{color:var(--tl)}
+.system .eyebrow{color:var(--gold)}
+.cases .h2{color:var(--tl)}
+.cases .h2 .lt{color:rgba(234,234,230,.4)}
+.leasing .h2{color:var(--tl)}
+.leasing .eyebrow{color:rgba(107,45,139,.9)}
+.quiz-l .h2{color:var(--tl)}
+.qfield{width:100%;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);padding:13px 15px;color:var(--tl);font-size:13px;font-family:'Golos Text',sans-serif;margin-bottom:11px}
+.qfield::placeholder{color:rgba(234,234,230,.4)}
+.qfield:focus{outline:none;border-color:var(--ce)}
+.qfield.area{min-height:86px;resize:vertical}
+.lead-modal{position:fixed;inset:0;z-index:200;display:grid;place-items:center;padding:24px;background:rgba(26,26,26,.58);backdrop-filter:blur(10px);opacity:0;pointer-events:none;transition:opacity .2s ease}
+.lead-modal.is-open{opacity:1;pointer-events:auto}
+.lead-dialog{width:min(760px,100%);max-height:min(92vh,820px);background:var(--paper) url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='760' height='820' viewBox='0 0 760 820'><defs><pattern id='sm' width='20' height='20' patternUnits='userSpaceOnUse'><path d='M20,0L0,0L0,20' fill='none' stroke='%236B2D8B' stroke-width='0.45' opacity='0.13'/></pattern><pattern id='lg' width='100' height='100' patternUnits='userSpaceOnUse'><rect width='100' height='100' fill='url(%23sm)'/><path d='M100,0L0,0L0,100' fill='none' stroke='%236B2D8B' stroke-width='0.9' opacity='0.17'/></pattern></defs><rect width='760' height='820' fill='url(%23lg)' opacity='0.75'/><circle cx='660' cy='660' r='155' fill='none' stroke='%236B2D8B' stroke-width='0.8' opacity='0.10'/><circle cx='660' cy='660' r='108' fill='none' stroke='%236B2D8B' stroke-width='0.6' opacity='0.08'/><circle cx='660' cy='660' r='22' fill='none' stroke='%236B2D8B' stroke-width='0.6' opacity='0.12'/><line x1='635' y1='660' x2='685' y2='660' stroke='%236B2D8B' stroke-width='0.7' opacity='0.15'/><line x1='660' y1='635' x2='660' y2='685' stroke='%236B2D8B' stroke-width='0.7' opacity='0.15'/><circle cx='660' cy='88' r='30' fill='none' stroke='%236B2D8B' stroke-width='0.6' opacity='0.09'/><circle cx='660' cy='88' r='8' fill='none' stroke='%236B2D8B' stroke-width='0.5' opacity='0.11'/><line x1='635' y1='88' x2='685' y2='88' stroke='%236B2D8B' stroke-width='0.5' opacity='0.12'/><line x1='660' y1='63' x2='660' y2='113' stroke='%236B2D8B' stroke-width='0.5' opacity='0.12'/><circle cx='590' cy='200' r='42' fill='none' stroke='%236B2D8B' stroke-width='0.6' opacity='0.08'/><circle cx='590' cy='200' r='26' fill='none' stroke='%236B2D8B' stroke-width='0.5' opacity='0.07'/><line x1='570' y1='200' x2='610' y2='200' stroke='%236B2D8B' stroke-width='0.5' opacity='0.10'/><line x1='590' y1='180' x2='590' y2='220' stroke='%236B2D8B' stroke-width='0.5' opacity='0.10'/><line x1='632' y1='200' x2='690' y2='200' stroke='%236B2D8B' stroke-width='0.4' opacity='0.09' stroke-dasharray='5,3'/><line x1='590' y1='158' x2='590' y2='80' stroke='%236B2D8B' stroke-width='0.4' opacity='0.09' stroke-dasharray='5,3'/><line x1='520' y1='440' x2='745' y2='440' stroke='%236B2D8B' stroke-width='0.65' opacity='0.11'/><line x1='520' y1='433' x2='520' y2='447' stroke='%236B2D8B' stroke-width='0.65' opacity='0.11'/><line x1='745' y1='433' x2='745' y2='447' stroke='%236B2D8B' stroke-width='0.65' opacity='0.11'/><line x1='750' y1='490' x2='750' y2='720' stroke='%236B2D8B' stroke-width='0.65' opacity='0.11'/><line x1='743' y1='490' x2='757' y2='490' stroke='%236B2D8B' stroke-width='0.65' opacity='0.11'/><line x1='743' y1='720' x2='757' y2='720' stroke='%236B2D8B' stroke-width='0.65' opacity='0.11'/><line x1='520' y1='450' x2='520' y2='600' stroke='%236B2D8B' stroke-width='0.4' opacity='0.08' stroke-dasharray='4,4'/><line x1='745' y1='450' x2='745' y2='510' stroke='%236B2D8B' stroke-width='0.4' opacity='0.08' stroke-dasharray='4,4'/><path d='M660,540 A120,120 0 0,0 780,660' fill='none' stroke='%236B2D8B' stroke-width='0.5' opacity='0.08'/><line x1='700' y1='770' x2='740' y2='730' stroke='%236B2D8B' stroke-width='0.5' opacity='0.09'/><line x1='715' y1='780' x2='755' y2='740' stroke='%236B2D8B' stroke-width='0.5' opacity='0.09'/><line x1='720' y1='800' x2='760' y2='760' stroke='%236B2D8B' stroke-width='0.5' opacity='0.09'/><line x1='685' y1='775' x2='720' y2='740' stroke='%236B2D8B' stroke-width='0.5' opacity='0.09'/><circle cx='470' cy='300' r='15' fill='none' stroke='%236B2D8B' stroke-width='0.5' opacity='0.09'/><circle cx='470' cy='300' r='4' fill='none' stroke='%236B2D8B' stroke-width='0.5' opacity='0.10'/><line x1='455' y1='300' x2='485' y2='300' stroke='%236B2D8B' stroke-width='0.45' opacity='0.10'/><line x1='470' y1='285' x2='470' y2='315' stroke='%236B2D8B' stroke-width='0.45' opacity='0.10'/><line x1='485' y1='300' x2='520' y2='300' stroke='%236B2D8B' stroke-width='0.4' opacity='0.08' stroke-dasharray='3,3'/></svg>") 0 0/100% 100% no-repeat;border:1px solid rgba(255,255,255,.72);box-shadow:0 34px 100px rgba(0,0,0,.32);position:relative;overflow:auto;clip-path:polygon(0 0,calc(100% - 18px) 0,100% 18px,100% 100%,18px 100%,0 calc(100% - 18px));transform:translateY(10px) scale(.98);transition:transform .2s ease}
+.lead-modal.is-open .lead-dialog{transform:translateY(0) scale(1)}
+.catalog-dialog .lead-content{padding:32px 36px}
+.lead-dialog::before{content:'';position:absolute;inset:0;background:linear-gradient(var(--ce),var(--ce)) top left/44px 1px no-repeat,linear-gradient(var(--ce),var(--ce)) top left/1px 28px no-repeat,linear-gradient(var(--ce),var(--ce)) bottom right/44px 1px no-repeat,linear-gradient(var(--ce),var(--ce)) bottom right/1px 28px no-repeat;opacity:.34;pointer-events:none}
+.lead-dialog::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.72) 0%,rgba(255,255,255,.5) 48%,rgba(255,255,255,.18) 100%),linear-gradient(90deg,rgba(26,26,26,.11) 0 1px,transparent 1px 100%) 0 48%/100% 1px no-repeat,linear-gradient(rgba(26,26,26,.1),rgba(26,26,26,.1)) 68% 8%/1px 84% no-repeat,linear-gradient(135deg,transparent 47%,rgba(107,45,139,.12) 48% 52%,transparent 53%) 0 0/42px 42px repeat;opacity:.46;pointer-events:none;transform:skewX(-3deg);transform-origin:center}
+.lead-close{position:absolute;top:14px;right:14px;z-index:3;width:38px;height:38px;border:1px solid var(--line);background:rgba(255,255,255,.72);color:var(--bm);font-size:24px;line-height:1;display:grid;place-items:center;transition:.18s}
+.lead-close:hover{border-color:var(--ce);color:var(--ce);transform:scale(1.04)}
+.lead-content{position:relative;z-index:2;padding:38px}
+.lead-content .eyebrow{margin-bottom:14px}
+.lead-content h3{font-family:'Magistral',sans-serif;font-size:clamp(24px,3.2vw,34px);line-height:1.08;letter-spacing:-.035em;text-transform:uppercase;margin-bottom:14px}
+.lead-content h3 span{font-weight:300;color:var(--mid)}
+.lead-content p{font-size:14px;line-height:1.7;color:var(--mid);max-width:430px;margin-bottom:22px}
+.lead-form{display:grid;grid-template-columns:repeat(2,1fr);gap:10px 12px;margin-top:18px}
+.lead-form .qfield{background:rgba(255,255,255,.84);border:1px solid rgba(26,26,26,.12);color:var(--bm);margin:0;backdrop-filter:blur(7px)}
+.lead-form .qfield::placeholder{color:rgba(26,26,26,.42)}
+.lead-form .qfield:focus{border-color:var(--ce);background:#fff}
+.lead-form .wide{grid-column:1/-1}
+.lead-form .area{min-height:96px}
+.lead-form .upload{color:var(--sg)}
+.lead-form .upload span{color:var(--muted)}
+.lead-form .btn{grid-column:1/-1;margin-top:4px}
+.lead-form .qfield[readonly]{background:rgba(107,45,139,.055);color:var(--bm);font-weight:600;cursor:default}
+.faq{background:var(--tl2)}
+.lead-consent{display:flex;align-items:flex-start;gap:9px;margin:2px 0;cursor:pointer;font-family:'Golos Text',sans-serif;font-weight:400;font-size:12px;line-height:1.4;color:var(--sg)}
+.lead-consent input{accent-color:var(--ce);width:16px;height:16px;min-width:16px;margin-top:1px;cursor:pointer}
+.lead-consent a{color:var(--ce);text-decoration:underline;text-underline-offset:2px}
+.lead-consent a:hover{color:var(--ceHover)}
+.lead-err{display:none;color:#b3261e;font-family:'Golos Text',sans-serif;font-size:11.5px;margin:-2px 0 0;grid-column:1/-1}
+.lead-err.is-shown{display:block}
+.mill-lede{font-size:15.5px;line-height:1.65;color:var(--mid);max-width:760px;margin:0}
+.mill-links-row{display:flex;flex-wrap:wrap;gap:1px;background:var(--line);border:1px solid var(--line)}
+.btn,.menu-trigger,.mega a,.nav-tile,.equipment-card,.taskc,.tax-card,.stock-card,.tool-card,.svcc,.casec,.indc,.final-h,.proof-item{transition-duration:.18s!important;transition-timing-function:cubic-bezier(.2,.7,.2,1)!important}
+.btn:hover{transform:translateY(-1px)!important}
+.hero-cta-two .btn{min-height:50px}
+.hero-cta .btn{
+  min-height:52px!important;
+  border-radius:8px!important;
+  font-weight:800!important;
+  position:relative;
+  overflow:hidden;
+}
+.hero-cta .btn::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(120deg,transparent 0 35%,rgba(255,255,255,.28) 45%,transparent 58% 100%);
+  transform:translateX(-120%);
+  animation:heroBtnShine 4.5s ease-in-out infinite;
+  pointer-events:none;
+}
+.btn-ce{
+  background:linear-gradient(145deg,#7c3aa0,#6B2D8B 52%,#4d2066)!important;
+  box-shadow:0 16px 38px rgba(107,45,139,.28), inset 0 1px 0 rgba(255,255,255,.18)!important;
+}
+.btn-gold{
+  background:linear-gradient(145deg,#e0bb5a,#C9A227 52%,#9c7c1e)!important;
+  box-shadow:0 16px 38px rgba(201,162,39,.27), inset 0 1px 0 rgba(255,255,255,.28)!important;
+}
+.solutions-block .h2{
+  font-size:clamp(30px,3.8vw,54px)!important;
+}
+.product-section.dark .h2,.product-section.dark .eyebrow{color:var(--tl)}
+.product-section.dark .h2 .lt{color:rgba(234,234,230,.5)}
+.floating-action-panel .btn{width:100%;justify-content:center;min-height:44px;font-size:10px;padding:0 16px;box-shadow:0 16px 42px rgba(26,26,26,.12)}
+.eqcat-hero {
+  padding: 40px 0 32px;
+  background-image:
+    linear-gradient(rgba(107,45,139,.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(107,45,139,.055) 1px, transparent 1px);
+  background-size: 38px 38px;
+  background-position: center top;
+}
+.eqcat-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: 48px;
+  align-items: center;
+}
+.eqcat-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  color: #8f62c8;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+.eqcat-kicker::before {
+  content: "";
+  width: 34px;
+  height: 1px;
+  background: linear-gradient(90deg, #8f62c8, rgba(143, 98, 200, .15));
+}
+.eqcat-title {
+  margin: 0;
+  max-width: 880px;
+  font-family: 'Magistral', sans-serif;
+  font-weight: 700;
+  font-size: clamp(32px, 4.4vw, 58px);
+  line-height: 1.05;
+  letter-spacing: -.015em;
+  text-transform: none;
+}
+.eqcat-title span {
+  display: block;
+  margin-top: 10px;
+  color: #8d939e;
+  font-size: clamp(20px, 2vw, 31px);
+  font-weight: 500;
+  letter-spacing: .02em;
+  text-transform: none;
+}
+.eqcat-lead {
+  margin: 0;
+  max-width: 480px;
+  color: #666d78;
+  font-size: 17px;
+  line-height: 1.55;
+}
+.eqcat-assist .btn {
+  margin-top: 18px;
+  width: 100%;
+  justify-content: center;
+}
+.mill-hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.mill-hero-media{border-radius:18px;overflow:visible;background:transparent;border:0;display:flex;align-items:center;justify-content:center;min-height:280px}
+.mill-hero-media img{max-width:92%;max-height:94%;width:auto;height:auto;object-fit:contain;filter:drop-shadow(0 30px 34px rgba(26,26,26,.22))}
+.eqcat-subnav-wrap {
+  padding: 10px 0 28px;
+}
+.eqcat-subnav-grid{
+  display:grid;
+  grid-template-columns:minmax(260px,400px) minmax(0,1fr);
+  gap:48px;
+  align-items:center;
+}
+.eqcat-subnav-media{display:flex;align-items:center;justify-content:center;min-height:260px}
+.eqcat-subnav-media img{max-width:100%;max-height:340px;width:auto;height:auto;object-fit:contain;filter:drop-shadow(0 26px 30px rgba(26,26,26,.2))}
+.eqcat-subnav {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+}
+.eqcat-subnav-head{margin-bottom:16px}
+.eqcat-subcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.eqcat-subcards.is-scroll{display:flex;gap:16px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x proximity;padding-bottom:8px;margin-bottom:-8px;-webkit-overflow-scrolling:touch}
+.eqcat-subcards.is-scroll .eqcat-subcard{flex:0 0 300px;scroll-snap-align:start}
+.eqcat-subcards.is-scroll::-webkit-scrollbar{height:6px}
+.eqcat-subcards.is-scroll::-webkit-scrollbar-thumb{background:rgba(107,45,139,.28);border-radius:6px}
+.eqcat-subcards.is-scroll::-webkit-scrollbar-track{background:rgba(26,26,26,.05)}
+.eqcat-subcard{position:relative;display:flex;align-items:center;gap:16px;text-align:left;background:#fff;border:1px solid rgba(26,26,26,.09);border-radius:14px;padding:16px 18px;cursor:pointer;font:inherit;color:inherit;width:100%;transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease,background .2s ease;overflow:hidden}
+.eqcat-subcard:hover{transform:translateY(-2px);border-color:rgba(107,45,139,.35);box-shadow:0 16px 34px rgba(26,26,26,.08)}
+.eqcat-subcard:focus-visible{outline:2px solid var(--ce);outline-offset:2px}
+.eqcat-subcard::before{content:'';position:absolute;left:0;top:0;bottom:0;width:0;background:var(--ce);transition:width .2s ease}
+.eqcat-subcard.is-active{border-color:rgba(107,45,139,.45);background:linear-gradient(120deg,rgba(107,45,139,.06),rgba(107,45,139,.02));box-shadow:0 16px 34px rgba(107,45,139,.12)}
+.eqcat-subcard.is-active::before{width:4px}
+.eqcat-subcard-badge{position:absolute;left:14px;top:14px;width:22px;height:22px;border-radius:50%;background:var(--ce);color:#fff;display:none;align-items:center;justify-content:center;font-size:11px;font-weight:900;box-shadow:0 6px 14px rgba(107,45,139,.35)}
+.eqcat-subcard.is-active .eqcat-subcard-badge{display:flex}
+.eqcat-subcard-media{flex:0 0 auto;width:104px;height:88px;display:flex;align-items:center;justify-content:center;background:var(--tl2);border-radius:10px;overflow:hidden}
+.eqcat-subcard-media img{max-width:86%;max-height:86%;width:auto;height:auto;object-fit:contain}
+.eqcat-subcard-media .ph{font-family:'Golos Text',monospace;font-size:8px;letter-spacing:.6px;text-transform:uppercase;color:rgba(82,86,90,.4);text-align:center;padding:0 6px}
+.eqcat-subcard-body{flex:1;min-width:0}
+.eqcat-subcard-body h3{font-family:'Golos Text',sans-serif;font-size:15.5px;font-weight:800;letter-spacing:-.01em;color:var(--bm);margin:0 0 4px;line-height:1.25}
+.eqcat-subcard-body p{margin:0 0 8px;font-size:12.5px;line-height:1.45;color:var(--mid);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.eqcat-subcard-count{display:block;font-family:'Golos Text',monospace;font-size:10.5px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;color:var(--ce)}
+.eqcat-subcard.is-active .eqcat-subcard-count{color:var(--ceHover)}
+.eqcat-subcard-arrow{flex:0 0 auto;width:30px;height:30px;border-radius:50%;border:1px solid rgba(26,26,26,.12);display:flex;align-items:center;justify-content:center;color:var(--mid);font-size:14px;transition:.2s}
+.eqcat-subcard:hover .eqcat-subcard-arrow,.eqcat-subcard.is-active .eqcat-subcard-arrow{border-color:var(--ce);color:var(--ce);background:rgba(107,45,139,.06)}
+.eqcat-catalog-title{font-size:clamp(22px,2.6vw,32px);text-transform:none}
+.eqcat-catalog-count{font-family:'Golos Text',monospace;font-size:12px;font-weight:700;letter-spacing:.4px;color:var(--mid)}
+.eqcat-sort{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--mid);white-space:nowrap}
+.eqcat-sort select{border:1px solid rgba(26,26,26,.14);background:#fff;padding:9px 12px;font-size:12.5px;font-family:inherit;color:var(--bm);border-radius:2px;cursor:pointer}
+.eqcat-empty{border:1px dashed rgba(26,26,26,.16);background:rgba(255,255,255,.6);padding:56px 32px;text-align:center;border-radius:14px}
+.eqcat-empty-inner{max-width:520px;margin:0 auto}
+.eqcat-empty h3{font-family:'Magistral',sans-serif;font-size:22px;margin-bottom:12px}
+.eqcat-empty p{color:var(--mid);font-size:14px;line-height:1.6;margin-bottom:22px}
+.eqcat-empty-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.vmc-catalog-layout{display:grid;grid-template-columns:286px minmax(0,1fr);gap:24px;align-items:start}
+.vmc-filter-panel{position:sticky;top:92px;max-height:calc(100vh - 112px);overflow-y:auto;overscroll-behavior:contain;background:rgba(255,255,255,.62);border:1px solid rgba(26,26,26,.08);box-shadow:0 24px 62px rgba(26,26,26,.075);backdrop-filter:blur(18px);padding:18px;clip-path:polygon(0 0,calc(100% - 16px) 0,100% 16px,100% 100%,16px 100%,0 calc(100% - 16px))}
+.vmc-filter-panel::-webkit-scrollbar{width:6px}
+.vmc-filter-panel::-webkit-scrollbar-thumb{background:rgba(107,45,139,.28);border-radius:6px}
+.vmc-filter-panel::-webkit-scrollbar-track{background:transparent}
+.vmc-filter-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px;padding-bottom:14px;border-bottom:1px solid rgba(26,26,26,.08)}
+.vmc-filter-head span,.vmc-filter-group strong,.vmc-search span{font-family:'Golos Text',monospace;font-size:10px;font-weight:800;letter-spacing:1.15px;text-transform:uppercase;color:rgba(58,62,68,.72)}
+.vmc-reset{appearance:none;border:0;background:transparent;color:var(--ce);font-family:'Golos Text',monospace;font-size:9px;font-weight:800;letter-spacing:1px;text-transform:uppercase;cursor:pointer;padding:0}
+.vmc-search{display:block;margin-bottom:16px}
+.vmc-search span{display:block;margin-bottom:8px}
+.vmc-search input,.vmc-range-row input{width:100%;border:1px solid rgba(26,26,26,.10);background:rgba(255,255,255,.68);color:var(--bm);font-family:inherit;font-size:13px;padding:11px 12px;outline:none;transition:.18s}
+.vmc-search input:focus,.vmc-range-row input:focus{border-color:rgba(107,45,139,.38);box-shadow:0 0 0 3px rgba(107,45,139,.08)}
+.vmc-filter-apply{margin-top:18px;padding-top:16px;border-top:1px solid rgba(26,26,26,.07);display:grid;gap:10px}
+.vmc-filter-apply .btn{width:100%;justify-content:center;min-height:44px}
+.vmc-filter-preview{text-align:center;font-size:12px;color:rgba(82,86,90,.72)}
+.vmc-filter-preview b{color:var(--ce);font-weight:800}
+.vmc-filter-group{display:grid;gap:10px;margin-top:18px;padding-top:16px;border-top:1px solid rgba(26,26,26,.07)}
+.vmc-tier-label{margin-top:18px;padding-top:16px;border-top:1px solid rgba(26,26,26,.07);font-family:'Golos Text',monospace;font-size:9.5px;font-weight:800;letter-spacing:1.3px;text-transform:uppercase;color:rgba(107,45,139,.62)}
+.vmc-tier-label+.vmc-filter-group{margin-top:12px;padding-top:0;border-top:0}
+.vmc-filter-group label{display:flex;align-items:center;gap:9px;color:rgba(42,45,50,.74);font-size:13px;font-weight:650;line-height:1.35;cursor:pointer}
+.vmc-filter-group input[type="checkbox"]{width:15px;height:15px;accent-color:var(--ce)}
+.vmc-range-row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.vmc-filter-note{margin-top:18px;padding-top:14px;border-top:1px solid rgba(26,26,26,.07);color:rgba(82,86,90,.68);font-size:12px;line-height:1.6}
+.vmc-advanced{margin-top:4px;border-top:1px solid rgba(26,26,26,.07);padding-top:10px}
+.vmc-advanced summary{cursor:pointer;font-family:'Golos Text',monospace;font-size:10.5px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#8f62c8;padding:6px 0}
+.vmc-advanced[open] summary{margin-bottom:4px}
+.vmc-toolbar-actions .btn{width:100%;justify-content:center;min-height:42px}
+.vmc-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.vmc-actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:16px}
+.vmc-actions .btn{min-height:40px;padding:0 10px;font-size:9px;letter-spacing:.85px;text-align:center}
+.vmc-actions .btn-ghost{background:rgba(255,255,255,.38);border-color:rgba(26,26,26,.16)}
+.vmc-actions .btn-ghost:hover{background:var(--bm);border-color:var(--bm);color:#fff}
+.vmc-body{display:flex;flex-direction:column;height:calc(100% - 210px)}
+.vmc-specs{margin-top:auto}
+.milling-tabs-page .eqcat-subnav-wrap{padding:56px 0 18px;background:linear-gradient(180deg,#f7f8fb 0%,#fff 100%)}
+.eqcat-subnav-head{margin-bottom:28px}
+.milling-tabs-page .eqcat-subnav{grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.mill-subtab{position:relative;appearance:none;border:1px solid rgba(120,128,142,.18);background:linear-gradient(150deg,#fff 0%,#fbfaff 100%);box-shadow:0 12px 28px rgba(26,28,36,.05);color:#20242c;text-align:left;cursor:pointer;font:inherit;min-height:150px;padding:22px 22px 20px 26px;display:flex;flex-direction:column;justify-content:space-between;gap:14px;transition:transform .24s cubic-bezier(.2,.7,.2,1),border-color .24s,box-shadow .24s,background .24s;border-radius:14px;overflow:hidden}
+.mill-subtab::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,var(--ce),var(--gold));opacity:.4;transition:opacity .24s ease,width .24s ease}
+.mill-subtab:hover{transform:translateY(-4px);border-color:rgba(143,98,200,.42);background:#fff;box-shadow:0 22px 50px rgba(31,24,45,.12)}
+.mill-subtab:hover::before{opacity:.75}
+.mill-subtab.is-active{transform:translateY(-4px);border-color:rgba(107,45,139,.5);background:linear-gradient(150deg,rgba(107,45,139,.07),rgba(201,162,39,.05) 120%);box-shadow:0 24px 56px rgba(107,45,139,.18)}
+.mill-subtab.is-active::before{opacity:1;width:5px}
+.mill-subtab h3{font-family:'Golos Text',sans-serif;font-size:15.5px;font-weight:800;line-height:1.26;margin:0 0 6px;color:#181b22;letter-spacing:-.005em}
+.mill-subtab p{margin:0;font-size:12px;line-height:1.5;color:#6b7178}
+.mill-subtab-foot{display:flex;flex-direction:column;gap:4px}
+.mill-subtab-link{font-family:'Golos Text',monospace;font-size:10px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;color:#8a8f97;transition:color .2s}
+.mill-subtab-foot small{font-family:'Golos Text',monospace;font-size:10.5px;font-weight:700;letter-spacing:.4px;color:var(--gold)}
+.mill-subtab:hover .mill-subtab-link{color:var(--ce)}
+.mill-subtab.is-active .mill-subtab-link{color:#6B2D8B}
+.mill-subtab.is-active .mill-subtab-foot small{color:var(--ce)}
+.milling-tab-panel{display:none}
+.milling-tab-panel.is-active{display:block}
+.milling-empty-section{padding:28px 0 86px}
+.mill-empty-intro{margin-bottom:26px;max-width:720px}
+.mill-empty-intro p{margin:10px 0 0;color:#68707c;font-size:15.5px;line-height:1.6}
+.mill-sub-note{max-width:420px;border:1px dashed rgba(120,128,142,.35);background:rgba(255,255,255,.6);padding:14px 16px;font-size:12.5px;line-height:1.55;color:#6b7178;margin-top:16px}
+.milling-tabs-page .vmc-grid.vmc-grid-single{grid-template-columns:minmax(0,420px);justify-content:center}
+.milling-tabs-page .vmc-model-section{
+  padding:46px 0 92px;
+  background:radial-gradient(ellipse at 72% 6%,rgba(143,98,200,.12),transparent 30%),linear-gradient(180deg,#f4f5f8 0%,#ffffff 56%,#f1f2f5 100%);
+}
+.milling-tabs-page .vmc-catalog-layout{
+  display:grid;
+  grid-template-columns:286px minmax(0,1fr);
+  gap:30px;
+  align-items:start;
+}
+.milling-tabs-page .vmc-filter-panel{
+  background:rgba(255,255,255,.74);
+  border:1px solid rgba(26,26,26,.08);
+  box-shadow:0 24px 62px rgba(26,26,26,.075);
+  backdrop-filter:blur(18px);
+}
+.milling-tabs-page .vmc-toolbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:16px 28px;
+  margin-bottom:28px;
+}
+.milling-tabs-page .vmc-toolbar h2{margin:0}
+.vmc-toolbar-head{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.milling-tabs-page .vmc-result-line{
+  margin-top:18px;
+  color:rgba(82,86,90,.72);
+  font-size:15px;
+}
+.milling-tabs-page .vmc-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:20px;
+}
+.milling-tabs-page .vmc-card{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  min-height:auto;
+  background:#fff;
+  border:1px solid rgba(26,26,26,.09);
+  border-radius:14px;
+  box-shadow:0 12px 30px rgba(26,26,26,.06);
+  overflow:hidden;
+  transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;
+}
+.vmc-card-link{position:absolute;inset:0;z-index:3}
+.milling-tabs-page .vmc-card:hover{
+  transform:translateY(-4px);
+  border-color:rgba(143,98,200,.3);
+  box-shadow:0 22px 48px rgba(143,98,200,.15),0 14px 34px rgba(26,26,26,.08);
+}
+.milling-tabs-page .vmc-card::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:50%;
+  z-index:3;
+  width:52px;
+  height:2px;
+  transform:translateX(-50%);
+  background:linear-gradient(90deg,var(--ce),var(--gold));
+}
+.milling-tabs-page .vmc-photo{
+  height:196px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:var(--tl2);
+  border-bottom:1px solid rgba(26,26,26,.06);
+  color:rgba(82,86,90,.46);
+  font-family:'Golos Text',monospace;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  position:relative;
+  overflow:hidden;
+}
+.vmc-photo img{transition:transform .3s ease}
+.milling-tabs-page .vmc-card:hover .vmc-photo img{transform:scale(1.05)}
+.vmc-photo-cta{
+  position:absolute;
+  inset:0;
+  z-index:2;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(20,18,26,.36);
+  opacity:0;
+  transition:opacity .2s ease;
+  pointer-events:none;
+}
+.milling-tabs-page .vmc-card:hover .vmc-photo-cta{opacity:1}
+.vmc-photo-cta span{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:9px 20px;
+  background:#fff;
+  color:var(--bm);
+  border-radius:999px;
+  font-family:'Golos Text',monospace;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:1.1px;
+  text-transform:uppercase;
+  box-shadow:0 12px 26px rgba(26,26,26,.28);
+  transform:translateY(6px);
+  transition:transform .2s ease;
+}
+.milling-tabs-page .vmc-card:hover .vmc-photo-cta span{transform:translateY(0)}
+.milling-tabs-page .vmc-body{
+  display:flex;
+  flex-direction:column;
+  flex:1;
+  height:auto;
+  padding:14px 16px 16px;
+}
+.milling-tabs-page .vmc-body small{
+  display:block;
+  margin-bottom:6px;
+  color:var(--ce);
+  font-family:'Golos Text',monospace;
+  font-size:8.5px;
+  font-weight:900;
+  letter-spacing:1.4px;
+  text-transform:uppercase;
+}
+.milling-tabs-page .vmc-body h3{
+  margin:0 0 10px;
+  color:var(--bm);
+  font-size:15.5px;
+  line-height:1.22;
+  letter-spacing:-.012em;
+}
+.milling-tabs-page .vmc-body p{
+  margin:0 0 22px;
+  color:rgba(82,86,90,.78);
+  font-size:16px;
+  line-height:1.58;
+}
+.vmc-offer-btn{
+  position:relative;
+  z-index:4;
+  margin-top:auto;
+  width:100%;
+  min-height:42px;
+  border:1.5px solid var(--ce);
+  background:transparent;
+  color:var(--ce);
+  font-family:'Golos Text',monospace;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  cursor:pointer;
+  transition:background .18s ease,color .18s ease;
+}
+.vmc-offer-btn:hover{background:var(--ce);color:#fff}
+.milling-tabs-page .vmc-specs{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:1px;
+  margin-top:0;
+  background:rgba(26,26,26,.06);
+  border:1px solid rgba(26,26,26,.06);
+}
+.milling-tabs-page .vmc-specs div{
+  min-height:auto;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  background:#fff;
+  border:0;
+  padding:7px 9px;
+}
+.milling-tabs-page .vmc-specs span{
+  margin-bottom:2px;
+  color:rgba(82,86,90,.48);
+  font-family:'Golos Text',monospace;
+  font-size:7.5px;
+  font-weight:800;
+  letter-spacing:.9px;
+  text-transform:uppercase;
+}
+.milling-tabs-page .vmc-specs b{
+  color:rgba(32,36,44,.92);
+  font-size:12px;
+  line-height:1.2;
+}
+.milling-tabs-page .vmc-actions{
+  position:relative;
+  z-index:2;
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:10px;
+  margin-top:auto;
+  padding-top:24px;
+}
+.milling-tabs-page .vmc-actions .btn{
+  min-height:54px;
+  padding:0 12px;
+  border-radius:0;
+  font-family:'Golos Text',monospace;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:1.4px;
+  text-align:center;
+  text-transform:uppercase;
+}
+.milling-tabs-page .vmc-actions .btn-ce{
+  background:linear-gradient(135deg,#7f35ad,#9b54c8);
+  color:#fff;
+  border-color:transparent;
+  box-shadow:0 16px 34px rgba(127,53,173,.22);
+}
+.milling-tabs-page .vmc-actions .btn-gold{
+  background:linear-gradient(135deg,#c7a12f,#e1bd47);
+  color:#1d1d20;
+  border-color:rgba(151,118,19,.22);
+}
+.milling-tabs-page .vmc-card.is-hidden{display:none!important}
+/* responsive */
+@media(max-width:1080px){
+  .menu{display:none}.burger{display:flex;align-items:center;justify-content:center}
+  .proofline-in{grid-template-columns:repeat(2,1fr)}
+  .proof-item.dark{grid-column:1/-1}
+  .tool-photo{width:150px;height:104px}.tool-photo-track{gap:24px;padding:16px 24px}
+  .nav-tile{padding:7px 9px}.nav-tile b{font-size:11.5px}.nav-tile.chat b{font-size:9px}.msg-ic{width:19px;height:19px;font-size:6px}.msg-ic.max{width:auto;min-width:58px;height:23px;font-size:15px}.msg-ic.max::before{width:22px;height:19px;flex-basis:22px}.msg-ic.max::after{left:7px;bottom:4px;width:8px;height:7px}.msg-ic.tg svg{width:11px;height:11px}
+  .pm-widget{right:14px;bottom:14px;padding:10px 11px 10px 12px;gap:10px}.pm-widget b{font-size:11px}.pm-widget small{font-size:6.8px}.pm-widget .msg-ic{width:20px;height:20px}.pm-widget .msg-ic.max{width:auto;min-width:56px;height:23px;font-size:15px}.pm-widget .msg-ic.tg svg{width:11px;height:11px}
+  .hero{grid-template-columns:1fr}.hero-l{width:100%;padding:1.6rem 0 2.3rem}.hero-r{min-height:380px}.hero-r::after{background:linear-gradient(90deg,rgba(237,238,240,.98) 0%,rgba(237,238,240,.82) 62%,rgba(237,238,240,.22) 100%)}
+  .equipment-grid{grid-template-columns:repeat(2,1fr)}
+  .tools-layout{grid-template-columns:1fr}.tools-grid{grid-template-columns:repeat(2,1fr)}.tools-points{grid-template-columns:repeat(2,1fr)}
+  .eqcards,.task-grid{grid-template-columns:repeat(2,1fr)}
+  .sys-layout{grid-template-columns:1fr;gap:28px}
+  .sys-proof{max-width:680px}
+  .system::before{background:linear-gradient(90deg,rgba(26,26,26,.98) 0%,rgba(26,26,26,.9) 100%),url('equipment-part-milling.jpg') left 20%/360px auto no-repeat,url('mehanit-hero-machine.png') right center/72% auto no-repeat}
+  .case-grid,.lz-layout,.quiz-panel,.final-grid{grid-template-columns:1fr}
+  .stock-hero,.stock-grid,.stock-seo{grid-template-columns:1fr}
+  .stock-feature{min-height:360px}
+  .stock-process{grid-template-columns:repeat(2,1fr)}
+  .stock-process div:nth-child(3){border-left:none}
+  .svc-grid,.ind-grid{grid-template-columns:repeat(2,1fr)}
+  .cat-layout{grid-template-columns:1fr}.filters{position:static}
+  .tax-grid{grid-template-columns:1fr}
+  .catalog-detail{grid-template-columns:1fr}
+  .machine-placeholders{grid-template-columns:repeat(2,1fr)}
+  .foot-top{grid-template-columns:1fr 1fr}
+}
+@media(max-width:680px){
+  .wrap{width:min(calc(100% - 32px),var(--max))}
+  .proofline-in{grid-template-columns:1fr}
+  .proof-item{min-height:auto;padding:16px}
+  .tool-photo-strip{margin:-1rem 0 1.6rem}
+  .tool-photo{width:126px;height:88px}.tool-photo-track{gap:18px;padding:14px 18px;animation-duration:36s}
+  .catalog-backline{display:block}.catalog-backline span{display:block;margin-top:8px}
+  .nav-contact{display:none}
+  .pm-widget{left:16px;right:16px;bottom:14px;justify-content:space-between}.pm-widget b{white-space:normal;line-height:1.15}
+  .lead-modal{padding:14px}.lead-content{padding:28px 20px}.lead-form{grid-template-columns:1fr}.lead-close{top:10px;right:10px}
+  .hero-l{min-height:auto;width:100%;padding:1.5rem 0 2rem}.hero-h1{font-size:clamp(31px,8.6vw,42px);margin-bottom:.82rem}.hero-r::after{background:linear-gradient(180deg,rgba(237,238,240,.99) 0%,rgba(237,238,240,.9) 62%,rgba(237,238,240,.34) 100%)}.hero-video,.hero-video-fallback{object-position:center;filter:saturate(1.06) contrast(1.12) brightness(1.14)}
+  .hero-cta{grid-template-columns:1fr;max-width:100%}
+  .hero-stats{grid-template-columns:repeat(2,1fr)}.hs:nth-child(2n){border-right:none}
+  .trust-logos{width:100%;margin-left:0;transform:none}.client-logos{min-height:140px;max-height:190px}
+  .tech-card,.live-badge{display:none}
+  .eqcards,.task-grid,.svc-grid,.ind-grid,.equipment-grid,.tools-grid,.tools-points,.tool-brand-list{grid-template-columns:1fr}
+  .tools-hero{min-height:auto;padding:26px}
+  .catalog-detail{padding:18px}.machine-placeholders{grid-template-columns:1fr}.stock-strip{display:block}.stock-pill{display:inline-flex;margin-top:14px}
+  .stock-copy{padding:24px}.stock-metrics{grid-template-columns:1fr}
+  .stock-toolbar{display:block}.stock-note{margin-top:12px}
+  .stock-card{grid-template-columns:1fr;min-height:0}.stock-card-media{height:300px}.stock-card-body{padding:20px}
+  .stock-specs{grid-template-columns:1fr}.stock-seo-box,.stock-process{padding:22px}
+  .stock-process{grid-template-columns:1fr}.stock-process div{border-left:none;border-top:1px solid var(--line);padding:14px 0}.stock-process div:first-child{border-top:none;padding-top:0}
+  .sys-proof{grid-template-columns:1fr}.sys-proof div{border-right:none;border-bottom:1px solid rgba(234,234,230,.1)}.sys-proof div:last-child{border-bottom:none}
+  .system .wrap::before,.system .wrap::after{display:none}
+  .sys-result-photo{min-height:230px}.sys-result-caption{min-height:230px;padding:20px}.sys-result-photo img{object-position:center}
+  .sys-map{padding:22px 18px}.sys-map::before{display:none}.sys-step{grid-template-columns:48px 1fr;gap:14px}.sys-num{width:38px;height:38px}.sys-step::before{left:19px}
+  .stock-strip{display:block}.stock-pill{display:inline-block;margin-top:14px}
+  .hero-h1{font-size:38px}section{padding:3.6rem 0}
+  .foot-top{grid-template-columns:1fr}
+}
+@media(max-width:900px){
+    .equipment-subgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .equipment-detail-result{display:block}
+    .equipment-detail-result .btn{margin-top:18px}
+}
+@media(max-width:980px){.mill-hero-media{min-height:220px;order:-1}}
+@media (max-width: 980px) {
+  .eqcat-head,
+  .eqcat-layout { grid-template-columns: 1fr; }
+  .eqcat-filter { position: static; }
+  .eqcat-model-grid { grid-template-columns: 1fr; }
+  .eqcat-subnav-grid { grid-template-columns: 1fr; }
+  .eqcat-subnav-media { order: -1; min-height: 200px; }
+}
+@media (max-width: 640px) {
+  .eqcat-hero { padding-top: 54px; }
+  .eqcat-subnav { grid-template-columns: 1fr 1fr; }
+  .eqcat-subitem { min-height: 94px; padding: 14px; }
+  .eqcat-model-actions { flex-direction: column; align-items: stretch; }
+  .eqcat-subcards{display:flex;flex-wrap:nowrap;overflow-x:auto;scroll-snap-type:x proximity;padding-bottom:8px;margin-bottom:-8px}
+  .eqcat-subcards .eqcat-subcard{flex:0 0 84%;scroll-snap-align:start}
+  .eqcat-subcard-media{width:80px;height:70px}
+  .eqcat-sort{width:100%;justify-content:space-between}
+  .eqcat-sort select{flex:1}
+}
+@media(max-width:1180px){.vmc-catalog-layout{grid-template-columns:1fr}.vmc-filter-panel{position:relative;top:auto}.vmc-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.vmc-toolbar-actions{margin-top:18px}.vmc-toolbar{display:block}}
+@media(max-width:720px){.vmc-grid{grid-template-columns:1fr}.vmc-check-grid{grid-template-columns:1fr}.vmc-filter-panel{padding:16px}}
+@media(max-width:1180px){.vmc-actions{grid-template-columns:1fr}}
+@media(max-width:1080px){.milling-tabs-page .eqcat-subnav{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:640px){.milling-tabs-page .eqcat-subnav{grid-template-columns:1fr}.mill-subtab{min-height:auto}}
+@media(max-width:1180px){
+  .milling-tabs-page .vmc-catalog-layout{grid-template-columns:1fr}
+  .milling-tabs-page .vmc-filter-panel{position:relative;top:auto;max-height:none}
+  .milling-tabs-page .vmc-toolbar{display:block}
+}
+@media(max-width:560px){
+  .milling-tabs-page .vmc-grid{grid-template-columns:1fr}
+  .milling-tabs-page .vmc-card{min-height:auto}
+  .milling-tabs-page .vmc-specs,.milling-tabs-page .vmc-actions{grid-template-columns:1fr}
+}
+.eqcat-filter-toggle{display:none;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 20px;border:1.5px solid var(--ce);background:#fff;color:var(--ce);font-family:'Golos Text',monospace;font-size:11px;font-weight:800;letter-spacing:1px;text-transform:uppercase;border-radius:2px;cursor:pointer}
+.eqcat-filter-close{display:none;border:0;background:transparent;color:var(--mid);font-size:22px;line-height:1;cursor:pointer;padding:0 0 0 10px}
+.eqcat-filter-backdrop{display:none}
+@media(max-width:1180px){
+  .eqcat-filter-toggle{display:inline-flex;order:3;width:100%}
+  .milling-tabs-page .vmc-toolbar{display:flex;flex-direction:column;align-items:stretch}
+  .milling-tabs-page .vmc-filter-panel{
+    position:fixed;left:0;right:0;bottom:0;top:auto;
+    max-height:82vh;
+    width:auto;
+    border-radius:16px 16px 0 0;
+    box-shadow:0 -20px 60px rgba(26,26,26,.28);
+    transform:translateY(105%);
+    transition:transform .28s ease;
+    z-index:150;
+  }
+  .milling-tabs-page .vmc-filter-panel.is-open{transform:translateY(0)}
+  .eqcat-filter-close{display:block}
+  .eqcat-filter-backdrop{display:block;position:fixed;inset:0;background:rgba(26,26,26,.5);z-index:149;opacity:0;pointer-events:none;transition:opacity .28s ease}
+  .eqcat-filter-backdrop.is-open{opacity:1;pointer-events:auto}
+}
+:root{--max:1640px}
+.mill-types-line{margin:16px 0 0;font-family:'Golos Text',monospace;font-size:12.5px;letter-spacing:.4px;color:#8f929a}
+.vmc-photo img{max-width:84%;max-height:82%;width:auto;height:auto;object-fit:contain;filter:drop-shadow(0 8px 14px rgba(26,26,26,.14))}
+.media img{max-width:94%;max-height:94%;width:auto;height:auto;object-fit:contain;filter:drop-shadow(0 14px 22px rgba(26,26,26,.16))}
+.vmc-model-section{padding:46px 0 92px;background:radial-gradient(ellipse at 72% 6%,rgba(143,98,200,.12),transparent 30%),linear-gradient(180deg,#f4f5f8 0%,#ffffff 56%,#f1f2f5 100%)}
+.mill-links-row a{display:flex;align-items:center;gap:8px;padding:16px 20px;background:rgba(255,255,255,.7);color:var(--bm);font-size:13px;font-weight:650}
+.mill-links-row a:hover{color:var(--ce)}
+.faq{padding:52px 0}
+.faq-item{border-bottom:1px solid var(--line);padding:18px 0}
+.faq-item summary{cursor:pointer;font-weight:700;font-size:15px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:'+';font-size:20px;color:var(--ce)}
+.faq-item[open] summary::after{content:'–'}
+.faq-item p{margin-top:12px;color:var(--mid);font-size:14px;line-height:1.6;max-width:800px}
+.final-cta{padding:64px 0;background:var(--bm);color:var(--tl);text-align:center}
+.final-cta h2{color:var(--tl)}
+.final-cta p{color:rgba(234,234,230,.72);max-width:560px;margin:14px auto 26px;font-size:15px;line-height:1.6}
+.final-cta-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.mini-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.mini{border:1px solid var(--line);background:rgba(255,255,255,.58);padding:17px;min-height:120px}
+.mini b{display:block;font-family:'Magistral',sans-serif;font-size:15px;margin-bottom:8px}
+.mini span{font-size:13px;line-height:1.55;color:var(--mid)}
+.submodel-table{margin-bottom:22px}
+.submodel-table h4{font-family:'Magistral',sans-serif;font-size:16px;margin-bottom:10px;color:var(--bm)}
+.call-card{margin-top:10px;padding:18px 20px;border:1px solid rgba(107,45,139,.18);background:rgba(255,255,255,.82);backdrop-filter:blur(8px)}
+.call-card small{display:block;font-family:'Golos Text',monospace;font-size:9px;letter-spacing:1.8px;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+.call-card a{font-family:'Magistral',sans-serif;font-size:clamp(26px,4vw,42px);font-weight:700;letter-spacing:-.04em;color:var(--bm)}
+.call-card p{margin-top:10px!important;margin-bottom:0!important}
+@media(max-width:640px){.mini-grid{grid-template-columns:1fr}}
+
+.g2-page .eqcat-hero{padding-bottom:34px}
+.g2-hero-top{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:48px;align-items:start}
+.g2-hero-left{display:flex;flex-direction:column}
+.g2-hero-right{display:flex;flex-direction:column;gap:14px}
+.g2-feature-row{display:flex;flex-wrap:nowrap;gap:16px;margin-top:24px}
+.g2-feature{display:flex;align-items:center;gap:9px;min-width:0;flex:1 1 0}
+.g2-feature-ic{flex:0 0 auto;width:32px;height:32px;border-radius:50%;background:linear-gradient(150deg,rgba(107,45,139,.1),rgba(201,162,39,.08));display:flex;align-items:center;justify-content:center;color:var(--ce)}
+.g2-feature-ic svg{width:18px;height:18px}
+.g2-feature-body{min-width:0}
+.g2-feature b{display:block;font-size:12px;font-weight:800;color:var(--bm);line-height:1.3;margin-bottom:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.g2-feature small{display:block;font-size:11px;color:var(--mid);line-height:1.3}
+.g2-subnav-title{margin-top:6px;text-transform:none;font-size:clamp(24px,2.8vw,34px)}
+.g2-toolbar-head{display:flex;flex-direction:column;gap:6px}
+.g2-toolbar-title-row{display:flex;align-items:baseline;gap:8px 18px;flex-wrap:wrap}
+.g2-catalog-desc{flex:1 1 260px;min-width:220px;color:var(--mid);font-size:13.5px;line-height:1.5;font-weight:400}
+.g2-toolbar-tools{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.g2-fallback-note{margin:-8px 0 18px;padding:10px 14px;background:rgba(201,162,39,.08);border:1px dashed rgba(201,162,39,.4);color:#8a6d10;font-size:12.5px;line-height:1.5;border-radius:6px}
+.g2-filter-panel{padding:20px}
+.g2-filter-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:16px;padding-bottom:14px;border-bottom:1px solid rgba(26,26,26,.08)}
+.g2-filter-head>span{font-family:'Golos Text',monospace;font-size:10px;font-weight:800;letter-spacing:1.15px;text-transform:uppercase;color:rgba(58,62,68,.72)}
+.g2-reset{display:inline-flex;align-items:center;gap:6px;appearance:none;border:0;background:transparent;color:var(--ce);font-family:'Golos Text',monospace;font-size:9px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;cursor:pointer;padding:0}
+.g2-search{position:relative;display:block;margin-bottom:18px}
+.g2-search-ic{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:rgba(82,86,90,.5)}
+.g2-search input{width:100%;border:1px solid rgba(26,26,26,.10);background:rgba(255,255,255,.68);color:var(--bm);font-family:inherit;font-size:13px;padding:11px 12px 11px 34px;outline:none;transition:.18s}
+.g2-search input:focus{border-color:rgba(107,45,139,.38);box-shadow:0 0 0 3px rgba(107,45,139,.08)}
+.g2-direct{display:grid;gap:14px;padding-top:14px;border-top:1px solid rgba(26,26,26,.07)}
+.g2-field strong{display:block;margin-bottom:8px;font-family:'Golos Text',monospace;font-size:10px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;color:rgba(42,45,50,.72)}.g2-check{display:flex;align-items:center;gap:9px;cursor:pointer;font-family:'Golos Text',monospace;font-size:10px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;color:rgba(42,45,50,.72)}.g2-check input{width:16px;height:16px;accent-color:var(--ce);cursor:pointer;flex:0 0 auto}
+.g2-group{margin-top:14px;padding-top:14px;border-top:1px solid rgba(26,26,26,.07)}
+.g2-group summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;font-family:'Golos Text',monospace;font-size:10.5px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;color:rgba(42,45,50,.8);padding:2px 0}
+.g2-group summary::-webkit-details-marker{display:none}
+.g2-group summary::after{content:'+';font-size:15px;color:var(--ce)}
+.g2-group[open] summary::after{content:'–'}
+.g2-group-body{display:grid;gap:14px;margin-top:14px}
+.g2-apply-wrap{margin-top:18px;padding-top:16px;border-top:1px solid rgba(26,26,26,.07)}
+.g2-apply{width:100%;justify-content:center;min-height:46px}
+@media(min-width:1181px){
+  .g2-page .vmc-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+}
+@media(max-width:980px){
+  .g2-hero-top{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .g2-page .eqcat-subcards{display:grid!important;grid-template-columns:1fr!important;overflow:visible!important}
+  .g2-page .eqcat-subcards .eqcat-subcard{flex:1 1 auto!important}
+  .g2-toolbar-tools{width:100%}
+}
+.vmc-stock-badge{position:absolute;top:10px;left:10px;z-index:5;pointer-events:none;display:inline-flex;align-items:center;gap:5px;background:#1c8a4c;color:#fff;font-family:'Golos Text',monospace;font-size:9.5px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;padding:5px 10px 5px 8px;border-radius:20px;box-shadow:0 4px 10px rgba(28,138,76,.35)}.vmc-stock-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:#fff}</style>
+<link rel="stylesheet" href="site-shell.css"/>
+</head>
+<body class="premium-v3 milling-tabs-page g2-page">
+<header></header>
+<nav class="crumbbar" aria-label="Хлебные крошки"><div class="wrap crumbs"><a href="index.html">Главная</a><span class="crumb-sep" aria-hidden="true">/</span><a href="equipment.html">Оборудование</a><span class="crumb-sep" aria-hidden="true">/</span><span class="current" aria-current="page">Шлифовальные станки</span></div></nav>
+<main class="eqcat-page">
+<section class="eqcat-hero"><div class="wrap">
+<div class="g2-hero-top">
+<div class="g2-hero-left">
+<h1 class="eqcat-title">Шлифовальные станки</h1>
+<div class="g2-feature-row"><div class="g2-feature"><span class="g2-feature-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.2"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3"/></svg></span><div class="g2-feature-body"><b>Высокая точность обработки</b><small>Точность до 0,001 мм</small></div></div><div class="g2-feature"><span class="g2-feature-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 15c2-3 4-3 6 0s4 3 6 0 4-3 6 0"/><path d="M3 9c2-3 4-3 6 0s4 3 6 0 4-3 6 0"/></svg></span><div class="g2-feature-body"><b>Идеальная шероховатость</b><small>Ra до 0,05 мкм</small></div></div><div class="g2-feature"><span class="g2-feature-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l7 3v5c0 4.5-3 7.8-7 9-4-1.2-7-4.5-7-9V6l7-3z"/><path d="M8.8 12.2l2.1 2.1 4.3-4.3"/></svg></span><div class="g2-feature-body"><b>Стабильное качество</b><small>Надёжность в серийном производстве</small></div></div></div>
+</div>
+<div class="g2-hero-right">
+<p class="eqcat-lead">Круглошлифовальные, плоскошлифовальные и бесцентровошлифовальные станки для финишной обработки — точность по размеру, форме и шероховатости поверхности.</p>
+</div>
+</div>
+</div></section>
+
+<section class="eqcat-subnav-wrap" id="subcats"><div class="wrap">
+<div class="eqcat-subnav-head"><div class="eyebrow">Подкатегории</div><h2 class="h2 g2-subnav-title">Выберите тип оборудования</h2></div>
+<nav class="eqcat-subcards">
+<button type="button" class="eqcat-subcard is-active" data-milling-tab="round" aria-current="true">
+<span class="eqcat-subcard-badge" aria-hidden="true">✓</span>
+<span class="eqcat-subcard-media"><img src="grinding-assets/bsm75-bsm150l-f.png" alt="Круглошлифовальные станки" loading="lazy"/></span>
+<span class="eqcat-subcard-body">
+<h3>Круглошлифовальные станки</h3>
+
+</span>
+<span class="eqcat-subcard-arrow" aria-hidden="true">→</span>
+</button><button type="button" class="eqcat-subcard" data-milling-tab="surface" aria-current="false">
+<span class="eqcat-subcard-badge" aria-hidden="true">✓</span>
+<span class="eqcat-subcard-media"><img src="grinding-assets/m7130a-m7140-m7140ax1600-m7140ax2200-m7150a-m7150ax1600-m7150ax2200-m7170ax1250-m7170ax1600-m7170ax2200-m7180x1600-m7180x2200-m7180x3000-h.png" alt="Плоскошлифовальные станки" loading="lazy"/></span>
+<span class="eqcat-subcard-body">
+<h3>Плоскошлифовальные станки</h3>
+
+</span>
+<span class="eqcat-subcard-arrow" aria-hidden="true">→</span>
+</button><button type="button" class="eqcat-subcard" data-milling-tab="centerless" aria-current="false">
+<span class="eqcat-subcard-badge" aria-hidden="true">✓</span>
+<span class="eqcat-subcard-media"><img src="grinding-assets/hcgm-h6060-f.png" alt="Бесцентровошлифовальные станки" loading="lazy"/></span>
+<span class="eqcat-subcard-body">
+<h3>Бесцентровошлифовальные станки</h3>
+
+</span>
+<span class="eqcat-subcard-arrow" aria-hidden="true">→</span>
+</button>
+</nav>
+</div></section>
+
+<section class="milling-tab-panel is-active" data-milling-panel="round">
+<section class="vmc-model-section"><div class="wrap">
+<div class="vmc-catalog-layout" data-vmc-scope>
+<aside class="vmc-filter-panel g2-filter-panel">
+<div class="eqcat-filter-backdrop" data-role="filter-backdrop"></div>
+<div class="g2-filter-head"><span>Фильтр</span><button type="button" class="g2-reset" data-role="reset"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg>Сбросить всё</button><button type="button" class="eqcat-filter-close" data-role="filter-close" aria-label="Закрыть фильтр">×</button></div>
+<label class="g2-search"><span class="g2-search-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span><input type="search" data-role="search" placeholder="Поиск по модели"/></label>
+<div class="g2-direct"><div class="g2-field"><strong>Диаметр шлифования (мм)</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="od-diameter" data-bound="min"/>
+<input type="number" placeholder="До" data-range="od-diameter" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Расстояние между центрами (мм)</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="distance-between-centers" data-bound="min"/>
+<input type="number" placeholder="До" data-range="distance-between-centers" data-bound="max"/>
+</div></div><div class="g2-field"><label class="g2-check"><input type="checkbox" name="cnc-present" value="да"/><span>Наличие ЧПУ</span></label></div></div>
+<details class="g2-group" open><summary>Дополнительные параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Частота вращения передней бабки</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="workhead-speed" data-bound="min"/>
+<input type="number" placeholder="До" data-range="workhead-speed" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Размер круга</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="wheel-size" data-bound="min"/>
+<input type="number" placeholder="До" data-range="wheel-size" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Частота вращения шлифовальной бабки</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="wheel-speed" data-bound="min"/>
+<input type="number" placeholder="До" data-range="wheel-speed" data-bound="max"/>
+</div></div></div></details>
+<details class="g2-group"><summary>Все параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Макс. масса заготовки (кг)</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="max-workpiece-weight" data-bound="min"/>
+<input type="number" placeholder="До" data-range="max-workpiece-weight" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Конус шпинделя передней бабки</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="headstock-taper" data-bound="min"/>
+<input type="number" placeholder="До" data-range="headstock-taper" data-bound="max"/>
+</div></div></div></details>
+<div class="g2-apply-wrap">
+<button type="button" class="btn btn-ce g2-apply" data-role="apply">Показать <span data-role="preview">18</span> <span data-role="preview-word">моделей</span></button>
+</div>
+<p class="vmc-filter-note">Не нашли нужный параметр в фильтре — характеристики каждой модели указаны в карточке и на странице станка.</p>
+</aside>
+<div>
+<div class="vmc-toolbar g2-toolbar">
+<div class="vmc-toolbar-head g2-toolbar-head">
+<div class="eyebrow">Модельный ряд</div>
+<div class="g2-toolbar-title-row"><h2 class="h2 eqcat-catalog-title">Круглошлифовальные станки</h2><span class="g2-catalog-desc">Для наружного и внутреннего цилиндрического шлифования в центрах.</span></div>
+</div>
+<div class="g2-toolbar-tools">
+<button type="button" class="eqcat-filter-toggle" data-role="filter-toggle">Все фильтры</button>
+</div>
+</div>
+<div class="g2-fallback-note" data-role="fallback-note" hidden>Точных совпадений не нашлось — показаны ближайшие по параметрам модели.</div>
+<div class="vmc-grid">
+<article class="vmc-card" data-name="bsm75 / bsm150l f круглошлифовальные станки" data-title="BSM75 / BSM150L F" data-sortkey="0" >
+<a class="vmc-card-link" href="equipment-grinding-bsm75-bsm150l-f.html" aria-label="BSM75 / BSM150L F — подробнее"></a>
+<div class="vmc-photo"><img src="grinding-assets/bsm75-bsm150l-f.png" alt="BSM75 / BSM150L F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Круглошлифовальные</small>
+<h3>BSM75 / BSM150L F</h3>
+<div class="vmc-specs"><div><span>Диаметр шлифования (мм)</span><b>—</b></div><div><span>Расстояние между центрами (мм)</span><b>—</b></div><div><span>Наличие ЧПУ</span><b>—</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="dbs75 / md150 / b686 f круглошлифовальные станки" data-title="DBS75 / MD150 / B686 F" data-sortkey="0"  data-wheel-size="150">
+<a class="vmc-card-link" href="equipment-grinding-dbs75-md150-b686-f.html" aria-label="DBS75 / MD150 / B686 F — подробнее"></a>
+<div class="vmc-photo"><img src="grinding-assets/dbs75-md150-b686-f.png" alt="DBS75 / MD150 / B686 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Круглошлифовальные</small>
+<h3>DBS75 / MD150 / B686 F</h3>
+<div class="vmc-specs"><div><span>Диаметр шлифования (мм)</span><b>—</b></div><div><span>Расстояние между центрами (мм)</span><b>—</b></div><div><span>Наличие ЧПУ</span><b>—</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="hd-010 h круглошлифовальные станки" data-title="HD-010 H" data-sortkey="500.0" data-od-diameter="500" data-distance-between-centers="3000" data-workhead-speed="15~150" data-wheel-size="900|305" data-wheel-speed="45" data-max-workpiece-weight="1000" data-headstock-taper="6">
+<a class="vmc-card-link" href="equipment-grinding-hd-010-h.html" aria-label="HD-010 H — подробнее"></a>
+<div class="vmc-photo"><img src="grinding-assets/hd-010-h.png" alt="HD-010 H" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Круглошлифовальные</small>
+<h3>HD-010 H</h3>
+<div class="vmc-specs"><div><span>Диаметр шлифования (мм)</span><b>Ø500 мм</b></div><div><span>Расстояние между центрами (мм)</span><b>≥3000 мм</b></div><div><span>Наличие ЧПУ</span><b>—</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="hdgie2010 h круглошлифовальные станки" data-title="HDGie2010 H" data-sortkey="0" data-od-diameter="200" data-workhead-speed="0~1000" data-wheel-size="400" data-wheel-speed="35|30000" data-max-workpiece-weight="50">
+<a class="vmc-card-link" href="equipment-grinding-hdgie2010-h.html" aria-label="HDGie2010 H — подробнее"></a>
+<div class="vmc-photo"><img src="grinding-assets/hdgie2010-h.png" alt="HDGie2010 H" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Круглошлифовальные</small>
+<h3>HDGie2010 H</h3>
+<div class="vmc-specs"><div><span>Диаметр шлифования (мм)</span><b>200 мм</b></div><div><span>Расстояние между центрами (мм)</span><b>—</b></div><div><span>Наличие ЧПУ</span><b>—</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="m1420 / m1432b / m1432h / m1450 / m1463 h круглошлифовальные станки" data-title="M1420 / M1432B / M1432H / M1450 / M1463 H" data-sortkey="0" data-od-diameter="5~200|8~320|25~500|30" data-distance-between-centers="2000" data-workhead-speed="125|250|500|26~260|20~224" data-wheel-size="400|500|600" data-wheel-speed="35" data-max-workpiece-weight="50|150|500|1000|3000" data-headstock-taper="4|5|6|80">
+<a class="vmc-card-link" href="equipment-grinding-m1420-m1432b-m1432h-m1450-m1463-h.html" aria-label="M1420 / M1432B / M1432H / M1450 / M1463 H — подробнее"></a>
+<div class="vmc-photo"><img src="grinding-assets/m1420-m1432b-m1432h-m1450-m1463-h.png" alt="M1420 / M1432B / M1432H / M1450 / M1463 H" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Круглошлифовальные</small>
+<h3>M1420 / M1432B / M1432H / M1450 / M1463 H</h3>
+<div class="vmc-specs"><div><span>Диаметр шлифования (мм)</span><b>5-200 / 8-320 / 25-500 / 30～630</b></div><div><span>Расстояние между центрами (мм)</span><b>2000、3000、4000、5000</b></div><div><span>Наличие ЧПУ</span><b>—</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="m1420 / mw1420 / m1432b / m1450 f круглошлифовальные станки" data-title="M1420 / MW1420 / M1432B / M1450 F" data-sortkey="8.0" data-od-diameter="8~200|5~200|8~320|25~500" data-distance-between-centers="520|750|500|1000~3000|1500~3000" data-wheel-size="400|500" data-wheel-speed="35">
+<a class="vmc-card-link" href="equipment-grinding-m1420-mw1420-m1432b-m1450-f.html" aria-label="M1420 / MW1420 / M1432B / M1450 F — подробнее"></a>
+<div class="vmc-photo"><img src="grinding-assets/m1420-mw1420-m1432b-m1450-f.png" alt="M1420 / MW1420 / M1432B / M1450 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Круглошлифовальные</small>
+<h3>M1420 / MW1420 / M1432B / M1450 F</h3>
+<div class="vmc-specs"><div><span>Диаметр шлифования (мм)</span><b>Ø8~200 / Ø5~200 / Ø8~320 / Ø25~500 мм</b></div><div><span>Расстояние между центрами (мм)</span><b>520, 750 / 500, 750 / 1000–3000 / 1500–3000 мм</b></div><div><span>Наличие ЧПУ</span><b>—</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="mg1432 / mg1350 / mg1363 h круглошлифовальные станки" data-title="MG1432 / MG1350 / MG1363 H" data-sortkey="0" data-od-diameter="8~320|25~500|30~630" data-workhead-speed="26~260|10~100|6~60" data-wheel-size="400|750" data-wheel-speed="35" data-max-workpiece-weight="150|2000|3000" data-headstock-taper="4|6|80">
+<a class="vmc-card-link" href="equipment-grinding-mg1432-mg1350-mg1363-h.html" aria-label="MG1432 / MG1350 / MG1363 H — подробнее"></a>
+<div class="vmc-photo"><img src="grinding-assets/mg1432-mg1350-mg1363-h.png" alt="MG1432 / MG1350 / MG1363 H" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Круглошлифовальные</small>
+<h3>MG1432 / MG1350 / MG1363 H</h3>
+<div class="vmc-specs"><div><span>Диаметр шлифования (мм)</span><b>8-320 / 25-500 / 30-630</b></div><div><span>Расстояние между центрами (мм)</span><b>—</b></div><div><span>Наличие ЧПУ</span><b>—</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="mgk1450x2000 / mgk1463x3000 h круглошлифовальные станки" data-title="MGK1450x2000 / MGK1463x3000 H" data-sortkey="0" data-od-diameter="25~500|630" data-distance-between-centers="1500|2000|3000" data-workhead-speed="20~224|10~100" data-wheel-size="500|600" data-wheel-speed="35" data-max-workpiece-weight="1000|3000" data-headstock-taper="6|80">
+<a class="vmc-card-link" href="equipment-grinding-mgk1450x2000-mgk1463x3000-h.html" aria-label="MGK1450x2000 / MGK1463x3000 H — подробнее"></a>
+<div class="vmc-photo"><img src="grinding-assets/mgk1450x2000-mgk1463x3000-h.png" alt="MGK1450x2000 / MGK1463x3000 H" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Круглошлифовальные</small>
+<h3>MGK1450x2000 / MGK1463x3000 H</h3>
+<div class="vmc-specs"><div><span>Диаметр шлифования (мм)</span><b>25–500 / 630</b></div><div><span>Расстояние между центрами (мм)</span><b>1500 / 2000 / 2000 / 3000</b></div><div><span>Наличие ЧПУ</span><b>—</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="mgk84 h круглошлифовальные станки" data-title="MGK84 H" data-sortkey="1000.0" data-od-diameter="1000|1250|1600" data-cnc-present="да" data-workhead-speed="5~60" data-wheel-size="915" data-wheel-speed="320~1600" data-max-workpiece-weight="20000">
+<a class="vmc-card-link" href="equipment-grinding-mgk84-h.html" aria-label="MGK84 H — подробнее"></a>
+<div class="vmc-photo"><img src="grinding-assets/mgk84-h.png" alt="MGK84 H" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Круглошлифовальные</small>
+<h3>MGK84 H</h3>
+<div class="vmc-specs"><div><span>Диаметр шлифования (мм)</span><b>1000/1250/1600 мм</b></div><div><span>Расстояние между центрами (мм)</span><b>—</b></div><div><span>Наличие ЧПУ</span><b>есть</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="mgkw8250 h круглошлифовальные станки" data-title="MGKW8250 H" data-sortkey="0" data-od-diameter="8" data-distance-between-centers="1000|1500|2000|3000" data-cnc-present="да" data-workhead-speed="0~200" data-wheel-size="750" data-wheel-speed="80" data-max-workpiece-weight="500" data-headstock-taper="6">
+<a class="vmc-card-link" href="equipment-grinding-mgkw8250-h.html" aria-label="MGKW8250 H — подробнее"></a>
+<div class="vmc-photo"><img src="grinding-assets/mgkw8250-h.png" alt="MGKW8250 H" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Круглошлифовальные</small>
+<h3>MGKW8250 H</h3>
+<div class="vmc-specs"><div><span>Диаметр шлифования (мм)</span><b>Ø8–Ø320 мм</b></div><div><span>Расстояние между центрами (мм)</span><b>1000/1500/2000/3000 мм</b></div><div><span>Наличие ЧПУ</span><b>есть</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="mk-end-face h круглошлифовальные станки" data-title="MK-End-Face H" data-sortkey="0" data-od-diameter="8~200|8~320" data-distance-between-centers="500|750|1000|1500|2000|3000" data-cnc-present="да" data-workhead-speed="26~260|19~190|10~100|63|125|250|500" data-wheel-size="400|600" data-wheel-speed="35" data-max-workpiece-weight="50|150|300" data-headstock-taper="4|5">
+<a class="vmc-card-link" href="equipment-grinding-mk-end-face-h.html" aria-label="MK-End-Face H — подробнее"></a>
+<div class="vmc-photo"><img src="grinding-assets/mk-end-face-h.png" alt="MK-End-Face H" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Круглошлифовальные</small>
+<h3>MK-End-Face H</h3>
+<div class="vmc-specs"><div><span>Диаметр шлифования (мм)</span><b>8–200 / 8–320 / 8(5)–200 мм</b></div><div><span>Расстояние между центрами (мм)</span><b>500, 750, 1000 / 1000, 1500 / 2000, 3000 мм</b></div><div><span>Наличие ЧПУ</span><b>есть</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="mk1320b / mk1332 / mk1620b / mk1632 / mke1350 f круглошлифовальные станки" data-title="MK1320B / MK1332 / MK1620B / MK1632 / MKE1350 F" data-sortkey="8.0" data-od-diameter="8|200|320|25|500" data-distance-between-centers="500|750|1000|1500|1500~4000" data-cnc-present="да" data-workhead-speed="26~260|19~190|10~100" data-wheel-size="400|600|500|750" data-max-workpiece-weight="50|150|1000" data-headstock-taper="4|5|6">
+<a class="vmc-card-link" href="equipment-grinding-mk1320b-mk1332-mk1620b-mk1632-mke1350-f.html" aria-label="MK1320B / MK1332 / MK1620B / MK1632 / MKE1350 F — подробнее"></a>
+<div class="vmc-photo"><img src="grinding-assets/mk1320b-mk1332-mk1620b-mk1632-mke1350-f.png" alt="MK1320B / MK1332 / MK1620B / MK1632 / MKE1350 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Круглошлифовальные</small>
+<h3>MK1320B / MK1332 / MK1620B / MK1632 / MKE1350 F</h3>
+<div class="vmc-specs"><div><span>Диаметр шлифования (мм)</span><b>Ø8, 200 / Ø8, 320 / Ø25, 500 мм</b></div><div><span>Расстояние между центрами (мм)</span><b>500, 750 / 1000, 1500 / 1500–4000 мм</b></div><div><span>Наличие ЧПУ</span><b>есть</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="mks2720x500 / mks2732x1000 h круглошлифовальные станки" data-title="MKS2720x500 / MKS2732x1000 H" data-sortkey="0" data-od-diameter="8" data-wheel-size="500" data-wheel-speed="50">
+<a class="vmc-card-link" href="equipment-grinding-mks2720x500-mks2732x1000-h.html" aria-label="MKS2720x500 / MKS2732x1000 H — подробнее"></a>
+<div class="vmc-photo"><img src="grinding-assets/mks2720x500-mks2732x1000-h.png" alt="MKS2720x500 / MKS2732x1000 H" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Круглошлифовальные</small>
+<h3>MKS2720x500 / MKS2732x1000 H</h3>
+<div class="vmc-specs"><div><span>Диаметр шлифования (мм)</span><b>Ø8–Ø200 / Ø8–Ø320 мм</b></div><div><span>Расстояние между центрами (мм)</span><b>—</b></div><div><span>Наличие ЧПУ</span><b>—</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="mks8320x500 h круглошлифовальные станки" data-title="MKS8320x500 H" data-sortkey="0" data-od-diameter="8" data-cnc-present="да" data-workhead-speed="60~600" data-wheel-size="350" data-wheel-speed="60" data-max-workpiece-weight="50" data-headstock-taper="4">
+<a class="vmc-card-link" href="equipment-grinding-mks8320x500-h.html" aria-label="MKS8320x500 H — подробнее"></a>
+<div class="vmc-photo"><img src="grinding-assets/mks8320x500-h.png" alt="MKS8320x500 H" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Круглошлифовальные</small>
+<h3>MKS8320x500 H</h3>
+<div class="vmc-specs"><div><span>Диаметр шлифования (мм)</span><b>Ø8–Ø200 мм</b></div><div><span>Расстояние между центрами (мм)</span><b>—</b></div><div><span>Наличие ЧПУ</span><b>есть</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="mkw1350ta / mkw1363 h круглошлифовальные станки" data-title="MKW1350TA / MKW1363 H" data-sortkey="0" data-od-diameter="40~500|40~630" data-distance-between-centers="4000|5000|6000|8000|10000|12000|14000|16000" data-wheel-size="750" data-wheel-speed="35" data-max-workpiece-weight="1500" data-headstock-taper="140|80">
+<a class="vmc-card-link" href="equipment-grinding-mkw1350ta-mkw1363-h.html" aria-label="MKW1350TA / MKW1363 H — подробнее"></a>
+<div class="vmc-photo"><img src="grinding-assets/mkw1350ta-mkw1363-h.png" alt="MKW1350TA / MKW1363 H" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Круглошлифовальные</small>
+<h3>MKW1350TA / MKW1363 H</h3>
+<div class="vmc-specs"><div><span>Диаметр шлифования (мм)</span><b>40–500 / 40–630 мм</b></div><div><span>Расстояние между центрами (мм)</span><b>4000 / 5000 / 6000 / 8000 / 10000 / 12000 / 14000 / 16000 мм</b></div><div><span>Наличие ЧПУ</span><b>—</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="mmks1312x350 h круглошлифовальные станки" data-title="MMKS1312x350 H" data-sortkey="0" data-od-diameter="5~125" data-distance-between-centers="370" data-cnc-present="да" data-workhead-speed="0~1000" data-wheel-size="400" data-wheel-speed="60|80" data-max-workpiece-weight="50" data-headstock-taper="4">
+<a class="vmc-card-link" href="equipment-grinding-mmks1312x350-h.html" aria-label="MMKS1312x350 H — подробнее"></a>
+<div class="vmc-photo"><img src="grinding-assets/mmks1312x350-h.png" alt="MMKS1312x350 H" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Круглошлифовальные</small>
+<h3>MMKS1312x350 H</h3>
+<div class="vmc-specs"><div><span>Диаметр шлифования (мм)</span><b>5–125 мм</b></div><div><span>Расстояние между центрами (мм)</span><b>370 мм</b></div><div><span>Наличие ЧПУ</span><b>есть</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="mw1320 / m1332 / m1350 / m1363 / m1380 f круглошлифовальные станки" data-title="MW1320 / M1332 / M1350 / M1363 / M1380 F" data-sortkey="5.0" data-od-diameter="5~200|8~320|25~500|30~630|50~800" data-distance-between-centers="500|750|1000~3000|1500~3000|3000~5000" data-wheel-size="500|600|750|900" data-wheel-speed="35">
+<a class="vmc-card-link" href="equipment-grinding-mw1320-m1332-m1350-m1363-m1380-f.html" aria-label="MW1320 / M1332 / M1350 / M1363 / M1380 F — подробнее"></a>
+<div class="vmc-photo"><img src="grinding-assets/mw1320-m1332-m1350-m1363-m1380-f.png" alt="MW1320 / M1332 / M1350 / M1363 / M1380 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Круглошлифовальные</small>
+<h3>MW1320 / M1332 / M1350 / M1363 / M1380 F</h3>
+<div class="vmc-specs"><div><span>Диаметр шлифования (мм)</span><b>Ø5~200 / Ø8~320 / Ø25~500 / Ø30~630 / Ø50~800 мм</b></div><div><span>Расстояние между центрами (мм)</span><b>500, 750 / 1000–3000 / 1500–3000 / 3000–5000 мм</b></div><div><span>Наличие ЧПУ</span><b>—</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="mw1320 / m1332x1000 / m1332x1500 / m1332hx2000 / m1332hx3000 / m1350 / m1363 / mq1380a h круглошлифовальные станки" data-title="MW1320 / M1332x1000 / M1332x1500 / M1332Hx2000 / M1332Hx3000 / M1350 / M1363 / MQ1380A H" data-sortkey="0" data-od-diameter="8~200|8~320|25~500|30~630|50~800" data-workhead-speed="26~260|19~190|10~100|6~60|5~50" data-wheel-size="500|600|750|900" data-wheel-speed="35" data-max-workpiece-weight="100|150|500|2000|3000" data-headstock-taper="4|5|6|80">
+<a class="vmc-card-link" href="equipment-grinding-mw1320-m1332x1000-m1332x1500-m1332hx2000-m1332hx3000-m1350-m1363-mq1380a-h.html" aria-label="MW1320 / M1332x1000 / M1332x1500 / M1332Hx2000 / M1332Hx3000 / M1350 / M1363 / MQ1380A H — подробнее"></a>
+<div class="vmc-photo"><img src="grinding-assets/mw1320-m1332x1000-m1332x1500-m1332hx2000-m1332hx3000-m1350-m1363-mq1380a-h.png" alt="MW1320 / M1332x1000 / M1332x1500 / M1332Hx2000 / M1332Hx3000 / M1350 / M1363 / MQ1380A H" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Круглошлифовальные</small>
+<h3>MW1320 / M1332x1000 / M1332x1500 / M1332Hx2000 / M1332Hx3000 / M1350 / M1363 / MQ1380A H</h3>
+<div class="vmc-specs"><div><span>Диаметр шлифования (мм)</span><b>8-200 / 8-320 / 25-500 / 30-630 / 50-800</b></div><div><span>Расстояние между центрами (мм)</span><b>—</b></div><div><span>Наличие ЧПУ</span><b>—</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+</div>
+</div>
+</div>
+</div></section>
+</section><section class="milling-tab-panel" data-milling-panel="surface">
+<section class="vmc-model-section"><div class="wrap">
+<div class="vmc-catalog-layout" data-vmc-scope>
+<aside class="vmc-filter-panel g2-filter-panel">
+<div class="eqcat-filter-backdrop" data-role="filter-backdrop"></div>
+<div class="g2-filter-head"><span>Фильтр</span><button type="button" class="g2-reset" data-role="reset"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg>Сбросить всё</button><button type="button" class="eqcat-filter-close" data-role="filter-close" aria-label="Закрыть фильтр">×</button></div>
+<label class="g2-search"><span class="g2-search-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span><input type="search" data-role="search" placeholder="Поиск по модели"/></label>
+<div class="g2-direct"><div class="g2-field"><strong>Размер стола</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="table-size" data-bound="min"/>
+<input type="number" placeholder="До" data-range="table-size" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Размер шлифовального круга</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="wheel-size" data-bound="min"/>
+<input type="number" placeholder="До" data-range="wheel-size" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Макс. вес заготовки</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="max-workpiece-weight" data-bound="min"/>
+<input type="number" placeholder="До" data-range="max-workpiece-weight" data-bound="max"/>
+</div></div></div>
+<details class="g2-group" open><summary>Дополнительные параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Частота вращения круга (об/мин)</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="wheel-speed" data-bound="min"/>
+<input type="number" placeholder="До" data-range="wheel-speed" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Мощность привода (кВт)</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="motor-power" data-bound="min"/>
+<input type="number" placeholder="До" data-range="motor-power" data-bound="max"/>
+</div></div></div></details>
+<div class="g2-apply-wrap">
+<button type="button" class="btn btn-ce g2-apply" data-role="apply">Показать <span data-role="preview">24</span> <span data-role="preview-word">моделей</span></button>
+</div>
+<p class="vmc-filter-note">Не нашли нужный параметр в фильтре — характеристики каждой модели указаны в карточке и на странице станка.</p>
+</aside>
+<div>
+<div class="vmc-toolbar g2-toolbar">
+<div class="vmc-toolbar-head g2-toolbar-head">
+<div class="eyebrow">Модельный ряд</div>
+<div class="g2-toolbar-title-row"><h2 class="h2 eqcat-catalog-title">Плоскошлифовальные станки</h2><span class="g2-catalog-desc">Для обработки плоских поверхностей с высокой точностью.</span></div>
+</div>
+<div class="g2-toolbar-tools">
+<button type="button" class="eqcat-filter-toggle" data-role="filter-toggle">Все фильтры</button>
+</div>
+</div>
+<div class="g2-fallback-note" data-role="fallback-note" hidden>Точных совпадений не нашлось — показаны ближайшие по параметрам модели.</div>
+<div class="vmc-grid">
+<article class="vmc-card" data-name="плоскошлифовальный станок macro line gs-ahd4080" data-title="Плоскошлифовальный станок Macro Line GS-AHD4080" data-sortkey="-1" data-table-size="813" data-wheel-size="350" data-max-workpiece-weight="500">
+<a class="vmc-card-link" href="stock-grinding-gs-ahd4080.html" aria-label="Плоскошлифовальный станок Macro Line GS-AHD4080 — подробнее"></a>
+<span class="vmc-stock-badge">В наличии</span>
+<div class="vmc-photo"><img src="stock-assets/cutout/grinding-gs-ahd4080.png" alt="Плоскошлифовальный станок Macro Line GS-AHD4080" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Плоскошлифовальные</small>
+<h3>Плоскошлифовальный станок Macro Line GS-AHD4080</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>813х406 мм</b></div><div><span>Размер шлифовального круга</span><b>350х40х127 мм</b></div><div><span>Макс. вес заготовки</span><b>500 кг</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="m7130a / m7140 / m7140ax1600 / m7140ax2200 / m7150a / m7150ax1600 / m7150ax2200 / m7170ax1250 / m7170ax1600 / m7170ax2200 / m7180x1600 / m7180x2200 / m7180x3000 h плоскошлифовальные станки" data-title="M7130A / M7140 / M7140Ax1600 / M7140Ax2200 / M7150A / M7150Ax1600 / M7150Ax2200 / M7170Ax1250 / M7170Ax1600 / M7170Ax2200 / M7180x1600 / M7180x2200 / M7180x3000 H" data-sortkey="1000.0" data-table-size="1000|1600|2200|1250|3000" data-wheel-size="400|450" data-max-workpiece-weight="470|630|1000|1380|700|1240|1410|1100|1400|1800|1600|2000|3000" data-wheel-speed="1440" data-motor-power="7.5|11|15">
+<a class="vmc-card-link" href="equipment-grinding-m7130a-m7140-m7140ax1600-m7140ax2200-m7150a-m7150ax1600-m7150ax2200-m7170ax1250-m7170ax1600-m7170ax2200-m7180x1600-m7180x2200-m7180x3000-h.html" aria-label="M7130A / M7140 / M7140Ax1600 / M7140Ax2200 / M7150A / M7150Ax1600 / M7150Ax2200 / M7170Ax1250 / M7170Ax1600 / M7170Ax2200 / M7180x1600 / M7180x2200 / M7180x3000 H — подробнее"></a>
+<div class="vmc-photo"><img src="grinding-assets/m7130a-m7140-m7140ax1600-m7140ax2200-m7150a-m7150ax1600-m7150ax2200-m7170ax1250-m7170ax1600-m7170ax2200-m7180x1600-m7180x2200-m7180x3000-h.png" alt="M7130A / M7140 / M7140Ax1600 / M7140Ax2200 / M7150A / M7150Ax1600 / M7150Ax2200 / M7170Ax1250 / M7170Ax1600 / M7170Ax2200 / M7180x1600 / M7180x2200 / M7180x3000 H" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Плоскошлифовальные</small>
+<h3>M7130A / M7140 / M7140Ax1600 / M7140Ax2200 / M7150A / M7150Ax1600 / M7150Ax2200 / M7170Ax1250 / M7170Ax1600 / M7170Ax2200 / M7180x1600 / M7180x2200 / M7180x3000 H</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>1000*300 / 1000*400 / 1600*400 / 2200*400 / 1000*500 / 1600*500 / 2200*500 / 1250*700 / 1600*700 / 2200*700 / 1600*800 / 2200*800 / 3000*800</b></div><div><span>Размер шлифовального круга</span><b>400*40*127 / 400*40*203 / 400*50*203 / 450*63*203</b></div><div><span>Макс. вес заготовки</span><b>470 / 630 / 1000 / 1380 / 700 / 1240 / 1410 / 1100 / 1400 / 1800 / 1600 / 2000 / 3000 кг</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="m7140ax2200 / m7150a / m7150ax1600 / m7150ax2200 / m7163a / m7163x1600 / m7163x2200 f плоскошлифовальные станки" data-title="M7140Ax2200 / M7150A / M7150Ax1600 / M7150Ax2200 / M7163A / M7163x1600 / M7163x2200 F" data-sortkey="400.0" data-table-size="400|500|630" data-wheel-size="400" data-wheel-speed="1440" data-motor-power="7.5">
+<a class="vmc-card-link" href="equipment-grinding-m7140ax2200-m7150a-m7150ax1600-m7150ax2200-m7163a-m7163x1600-m7163x2200-f.html" aria-label="M7140Ax2200 / M7150A / M7150Ax1600 / M7150Ax2200 / M7163A / M7163x1600 / M7163x2200 F — подробнее"></a>
+<div class="vmc-photo"><img src="grinding-assets/m7140ax2200-m7150a-m7150ax1600-m7150ax2200-m7163a-m7163x1600-m7163x2200-f.png" alt="M7140Ax2200 / M7150A / M7150Ax1600 / M7150Ax2200 / M7163A / M7163x1600 / M7163x2200 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Плоскошлифовальные</small>
+<h3>M7140Ax2200 / M7150A / M7150Ax1600 / M7150Ax2200 / M7163A / M7163x1600 / M7163x2200 F</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>400×2200 / 500×1000 / 500×1600 / 500×2200 / 630×1250 / 630×1600 / 630×2200 мм</b></div><div><span>Размер шлифовального круга</span><b>400×40×127 / 400×40×203 мм</b></div><div><span>Макс. вес заготовки</span><b>—</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="mg-nc-saddle h плоскошлифовальные станки" data-title="MG-NC-Saddle H" data-sortkey="210.0" data-table-size="210" data-wheel-size="200" data-max-workpiece-weight="120" data-wheel-speed="0~3600" data-motor-power="2.2">
+<a class="vmc-card-link" href="equipment-grinding-mg-nc-saddle-h.html" aria-label="MG-NC-Saddle H — подробнее"></a>
+<div class="vmc-photo"><img src="grinding-assets/mg-nc-saddle-h.png" alt="MG-NC-Saddle H" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Плоскошлифовальные</small>
+<h3>MG-NC-Saddle H</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>210×480 мм</b></div><div><span>Размер шлифовального круга</span><b>200×13×31,75 мм</b></div><div><span>Макс. вес заготовки</span><b>120 кг</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="mg2050 / mg40100 h плоскошлифовальные станки" data-title="MG2050 / MG40100 H" data-sortkey="210.0" data-table-size="210|406" data-wheel-size="200|400" data-max-workpiece-weight="120|500" data-wheel-speed="0~3600|100~3000" data-motor-power="2.2|5.5">
+<a class="vmc-card-link" href="equipment-grinding-mg2050-mg40100-h.html" aria-label="MG2050 / MG40100 H — подробнее"></a>
+<div class="vmc-photo"><img src="grinding-assets/mg2050-mg40100-h.png" alt="MG2050 / MG40100 H" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Плоскошлифовальные</small>
+<h3>MG2050 / MG40100 H</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>210*480 / 406*1020</b></div><div><span>Размер шлифовального круга</span><b>200*13* 31.75 / 400*40*127</b></div><div><span>Макс. вес заготовки</span><b>120 / 500 кг</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="mg50100 / mg60220 h плоскошлифовальные станки" data-title="MG50100 / MG60220 H" data-sortkey="500.0" data-table-size="500|2200" data-wheel-size="355|500" data-max-workpiece-weight="700|1230">
+<a class="vmc-card-link" href="equipment-grinding-mg50100-mg60220-h.html" aria-label="MG50100 / MG60220 H — подробнее"></a>
+<div class="vmc-photo"><img src="grinding-assets/mg50100-mg60220-h.png" alt="MG50100 / MG60220 H" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Плоскошлифовальные</small>
+<h3>MG50100 / MG60220 H</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>500*1200 / 2200*610</b></div><div><span>Размер шлифовального круга</span><b>355*50*127 / 500*75*305</b></div><div><span>Макс. вес заготовки</span><b>700 / 1230 кг</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="mg618a h плоскошлифовальные станки" data-title="MG618A H" data-sortkey="460.0" data-table-size="460" data-wheel-size="200" data-wheel-speed="2850" data-motor-power="1.1">
+<a class="vmc-card-link" href="equipment-grinding-mg618a-h.html" aria-label="MG618A H — подробнее"></a>
+<div class="vmc-photo"><img src="grinding-assets/mg618a-h.png" alt="MG618A H" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Плоскошлифовальные</small>
+<h3>MG618A H</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>460*180</b></div><div><span>Размер шлифовального круга</span><b>200*13*31.75</b></div><div><span>Макс. вес заготовки</span><b>—</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="mg73120 h плоскошлифовальные станки" data-title="MG73120 H" data-sortkey="0"  data-wheel-size="500" data-motor-power="18.5">
+<a class="vmc-card-link" href="equipment-grinding-mg73120-h.html" aria-label="MG73120 H — подробнее"></a>
+<div class="vmc-photo"><img src="grinding-assets/mg73120-h.png" alt="MG73120 H" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Плоскошлифовальные</small>
+<h3>MG73120 H</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>—</b></div><div><span>Размер шлифовального круга</span><b>500×75×305 мм</b></div><div><span>Макс. вес заготовки</span><b>—</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="mg7330 / mg7340 / mg7350 h плоскошлифовальные станки" data-title="MG7330 / MG7340 / MG7350 H" data-sortkey="0"  data-wheel-size="350" data-wheel-speed="1000~1500">
+<a class="vmc-card-link" href="equipment-grinding-mg7330-mg7340-mg7350-h.html" aria-label="MG7330 / MG7340 / MG7350 H — подробнее"></a>
+<div class="vmc-photo"><img src="grinding-assets/mg7330-mg7340-mg7350-h.png" alt="MG7330 / MG7340 / MG7350 H" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Плоскошлифовальные</small>
+<h3>MG7330 / MG7340 / MG7350 H</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>—</b></div><div><span>Размер шлифовального круга</span><b>350×40×127 мм</b></div><div><span>Макс. вес заготовки</span><b>—</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="mgk7160x120 h плоскошлифовальные станки" data-title="MGK7160x120 H" data-sortkey="600.0" data-table-size="600" data-wheel-size="400|203" data-max-workpiece-weight="1200" data-wheel-speed="3000" data-motor-power="44|54">
+<a class="vmc-card-link" href="equipment-grinding-mgk7160x120-h.html" aria-label="MGK7160x120 H — подробнее"></a>
+<div class="vmc-photo"><img src="grinding-assets/mgk7160x120-h.png" alt="MGK7160x120 H" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Плоскошлифовальные</small>
+<h3>MGK7160x120 H</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>600 x 1600</b></div><div><span>Размер шлифовального круга</span><b>400 x (50–120) x 203</b></div><div><span>Макс. вес заготовки</span><b>1200 кг</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="mprg7360nc h плоскошлифовальные станки" data-title="MPRG7360NC H" data-sortkey="0"  data-wheel-size="355" data-max-workpiece-weight="150" data-wheel-speed="500~1800" data-motor-power="7.5">
+<a class="vmc-card-link" href="equipment-grinding-mprg7360nc-h.html" aria-label="MPRG7360NC H — подробнее"></a>
+<div class="vmc-photo"><img src="grinding-assets/mprg7360nc-h.png" alt="MPRG7360NC H" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Плоскошлифовальные</small>
+<h3>MPRG7360NC H</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>—</b></div><div><span>Размер шлифовального круга</span><b>∅355×38×∅127 мм</b></div><div><span>Макс. вес заготовки</span><b>150 кг</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="mygk7370 h плоскошлифовальные станки" data-title="MYGK7370 H" data-sortkey="800.0" data-table-size="800" data-max-workpiece-weight="1230" data-motor-power="11|15">
+<a class="vmc-card-link" href="equipment-grinding-mygk7370-h.html" aria-label="MYGK7370 H — подробнее"></a>
+<div class="vmc-photo"><img src="grinding-assets/mygk7370-h.png" alt="MYGK7370 H" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Плоскошлифовальные</small>
+<h3>MYGK7370 H</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>800×1600</b></div><div><span>Размер шлифовального круга</span><b>—</b></div><div><span>Макс. вес заготовки</span><b>1230 кг</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="psg103dnc h плоскошлифовальные станки" data-title="PSG103DNC H" data-sortkey="0"  data-table-size="305" data-wheel-size="350" data-max-workpiece-weight="400" data-motor-power="7.5|100~3000">
+<a class="vmc-card-link" href="equipment-grinding-psg103dnc-h.html" aria-label="PSG103DNC H — подробнее"></a>
+<div class="vmc-photo"><img src="grinding-assets/psg103dnc-h.png" alt="PSG103DNC H" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Плоскошлифовальные</small>
+<h3>PSG103DNC H</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>305×1020 мм</b></div><div><span>Размер шлифовального круга</span><b>350×40×127 мм</b></div><div><span>Макс. вес заготовки</span><b>400 кг</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="sg50100pc2 / sg50120pc2 / sg60120pc2 / sg60160pc2 / sg60220pc2 h плоскошлифовальные станки" data-title="SG50100PC2 / SG50120PC2 / SG60120PC2 / SG60160PC2 / SG60220PC2 H" data-sortkey="1000.0" data-table-size="1000|500|1250|1600|2200" data-wheel-size="355" data-max-workpiece-weight="800|1200|1230|1690|6000">
+<a class="vmc-card-link" href="equipment-grinding-sg50100pc2-sg50120pc2-sg60120pc2-sg60160pc2-sg60220pc2-h.html" aria-label="SG50100PC2 / SG50120PC2 / SG60120PC2 / SG60160PC2 / SG60220PC2 H — подробнее"></a>
+<div class="vmc-photo"><img src="grinding-assets/sg50100pc2-sg50120pc2-sg60120pc2-sg60160pc2-sg60220pc2-h.png" alt="SG50100PC2 / SG50120PC2 / SG60120PC2 / SG60160PC2 / SG60220PC2 H" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Плоскошлифовальные</small>
+<h3>SG50100PC2 / SG50120PC2 / SG60120PC2 / SG60160PC2 / SG60220PC2 H</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>1000*500 / 500*1200 / 1250*610 / 1600*610 / 2200*610</b></div><div><span>Размер шлифовального круга</span><b>355*50*127</b></div><div><span>Макс. вес заготовки</span><b>800 / 1200 / 1230 / 1690 / 6000 кг</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="sg60160sd / sg60220sd / sg60600sd / sg80160sd / sg80220sd / sg80300sd / sg80400sd h плоскошлифовальные станки" data-title="SG60160SD / SG60220SD / SG60600SD / SG80160SD / SG80220SD / SG80300SD / SG80400SD H" data-sortkey="1600.0" data-table-size="1600|2200|6000|3000|4000" data-wheel-size="500" data-max-workpiece-weight="1230|1690|6000|1630|2240|3060" data-wheel-speed="960">
+<a class="vmc-card-link" href="equipment-grinding-sg60160sd-sg60220sd-sg60600sd-sg80160sd-sg80220sd-sg80300sd-sg80400sd-h.html" aria-label="SG60160SD / SG60220SD / SG60600SD / SG80160SD / SG80220SD / SG80300SD / SG80400SD H — подробнее"></a>
+<div class="vmc-photo"><img src="grinding-assets/sg60160sd-sg60220sd-sg60600sd-sg80160sd-sg80220sd-sg80300sd-sg80400sd-h.png" alt="SG60160SD / SG60220SD / SG60600SD / SG80160SD / SG80220SD / SG80300SD / SG80400SD H" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Плоскошлифовальные</small>
+<h3>SG60160SD / SG60220SD / SG60600SD / SG80160SD / SG80220SD / SG80300SD / SG80400SD H</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>1600*610 / 2200*610 / 6000*610 / 1600*810 / 2200*810 / 3000*810 / 4000*810</b></div><div><span>Размер шлифовального круга</span><b>500*75*305 / 500*100*305</b></div><div><span>Макс. вес заготовки</span><b>1230 / 1690 / 6000 / 1630 / 2240 / 3060 кг</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="sg618 / sg618a / sg818a f плоскошлифовальные станки" data-title="SG618 / SG618A / SG818A F" data-sortkey="500.0" data-table-size="500|155|210" data-wheel-size="180|200" data-max-workpiece-weight="100|97|128" data-wheel-speed="2850|3450" data-motor-power="1.1|1.5">
+<a class="vmc-card-link" href="equipment-grinding-sg618-sg618a-sg818a-f.html" aria-label="SG618 / SG618A / SG818A F — подробнее"></a>
+<div class="vmc-photo"><img src="grinding-assets/sg618-sg618a-sg818a-f.png" alt="SG618 / SG618A / SG818A F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Плоскошлифовальные</small>
+<h3>SG618 / SG618A / SG818A F</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>500×190 / 155×460 / 210×450 мм</b></div><div><span>Размер шлифовального круга</span><b>180×12×31.75 / 200×13×31.75 мм</b></div><div><span>Макс. вес заготовки</span><b>100 / 97 / 128 кг</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="sg618 / sg820 f плоскошлифовальные станки" data-title="SG618 / SG820 F" data-sortkey="500.0" data-table-size="500|530" data-wheel-size="180|200" data-max-workpiece-weight="100|200" data-wheel-speed="2850" data-motor-power="1.1">
+<a class="vmc-card-link" href="equipment-grinding-sg618-sg820-f.html" aria-label="SG618 / SG820 F — подробнее"></a>
+<div class="vmc-photo"><img src="grinding-assets/sg618-sg820-f.png" alt="SG618 / SG820 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Плоскошлифовальные</small>
+<h3>SG618 / SG820 F</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>500×190 / 530×220 мм</b></div><div><span>Размер шлифовального круга</span><b>180×12×31.75 / 200×16×31.75 мм</b></div><div><span>Макс. вес заготовки</span><b>100 / 200 кг</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="sga-100220znc / sga-100300znc / sga-100400znc / sga-50450znc / sga-60600znc f плоскошлифовальные станки" data-title="SGA-100220ZNC / SGA-100300ZNC / SGA-100400ZNC / SGA-50450ZNC / SGA-60600ZNC F" data-sortkey="1000.0" data-table-size="1000|500|600" data-wheel-size="500|450" data-wheel-speed="960|1150" data-motor-power="18.5|22">
+<a class="vmc-card-link" href="equipment-grinding-sga-100220znc-sga-100300znc-sga-100400znc-sga-50450znc-sga-60600znc-f.html" aria-label="SGA-100220ZNC / SGA-100300ZNC / SGA-100400ZNC / SGA-50450ZNC / SGA-60600ZNC F — подробнее"></a>
+<div class="vmc-photo"><img src="grinding-assets/sga-100220znc-sga-100300znc-sga-100400znc-sga-50450znc-sga-60600znc-f.png" alt="SGA-100220ZNC / SGA-100300ZNC / SGA-100400ZNC / SGA-50450ZNC / SGA-60600ZNC F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Плоскошлифовальные</small>
+<h3>SGA-100220ZNC / SGA-100300ZNC / SGA-100400ZNC / SGA-50450ZNC / SGA-60600ZNC F</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>1000×2200 / 1000×3000 / 1000×4000 / 500×4500 / 600×6000 мм</b></div><div><span>Размер шлифовального круга</span><b>500×100×203 / 450×75×203 мм</b></div><div><span>Макс. вес заготовки</span><b>—</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="sga-2050cnc / sga-2550cnc / sga-3063cnc / sga-40100cnc f плоскошлифовальные станки" data-title="SGA-2050CNC / SGA-2550CNC / SGA-3063CNC / SGA-40100CNC F" data-sortkey="200.0" data-table-size="200|250|305|406" data-wheel-size="200|350" data-wheel-speed="2850|3450|1450|1750" data-motor-power="2.2|4">
+<a class="vmc-card-link" href="equipment-grinding-sga-2050cnc-sga-2550cnc-sga-3063cnc-sga-40100cnc-f.html" aria-label="SGA-2050CNC / SGA-2550CNC / SGA-3063CNC / SGA-40100CNC F — подробнее"></a>
+<div class="vmc-photo"><img src="grinding-assets/sga-2050cnc-sga-2550cnc-sga-3063cnc-sga-40100cnc-f.png" alt="SGA-2050CNC / SGA-2550CNC / SGA-3063CNC / SGA-40100CNC F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Плоскошлифовальные</small>
+<h3>SGA-2050CNC / SGA-2550CNC / SGA-3063CNC / SGA-40100CNC F</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>200×500 / 250×500 / 305×635 / 406×1020 мм</b></div><div><span>Размер шлифовального круга</span><b>200×20×31.75 / 350×40×127 мм</b></div><div><span>Макс. вес заготовки</span><b>—</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="sga-3063ahr / sga-3063ahd / sga-30100ah / sga-30100ahr / sga-30100ahd / sga-4080ah / sga-4080ahr / sga-4080ahd / sga-40100ah / sga-40100ahr / sga-40100ahd f плоскошлифовальные станки" data-title="SGA-3063AHR / SGA-3063AHD / SGA-30100AH / SGA-30100AHR / SGA-30100AHD / SGA-4080AH / SGA-4080AHR / SGA-4080AHD / SGA-40100AH / SGA-40100AHR / SGA-40100AHD F" data-sortkey="305.0" data-table-size="305|406" data-wheel-size="350" data-wheel-speed="1450|1750" data-motor-power="4">
+<a class="vmc-card-link" href="equipment-grinding-sga-3063ahr-sga-3063ahd-sga-30100ah-sga-30100ahr-sga-30100ahd-sga-4080ah-sga-4080ahr-sga-4080ahd-sga-40100ah-sga-40100ahr-sga-40100ahd-f.html" aria-label="SGA-3063AHR / SGA-3063AHD / SGA-30100AH / SGA-30100AHR / SGA-30100AHD / SGA-4080AH / SGA-4080AHR / SGA-4080AHD / SGA-40100AH / SGA-40100AHR / SGA-40100AHD F — подробнее"></a>
+<div class="vmc-photo"><img src="grinding-assets/sga-3063ahr-sga-3063ahd-sga-30100ah-sga-30100ahr-sga-30100ahd-sga-4080ah-sga-4080ahr-sga-4080ahd-sga-40100ah-sga-40100ahr-sga-40100ahd-f.png" alt="SGA-3063AHR / SGA-3063AHD / SGA-30100AH / SGA-30100AHR / SGA-30100AHD / SGA-4080AH / SGA-4080AHR / SGA-4080AHD / SGA-40100AH / SGA-40100AHR / SGA-40100AHD F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Плоскошлифовальные</small>
+<h3>SGA-3063AHR / SGA-3063AHD / SGA-30100AH / SGA-30100AHR / SGA-30100AHD / SGA-4080AH / SGA-4080AHR / SGA-4080AHD / SGA-40100AH / SGA-40100AHR / SGA-40100AHD F</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>305×635 / 305×1020 / 406×813 / 406×1020 мм</b></div><div><span>Размер шлифовального круга</span><b>350×40×127 мм</b></div><div><span>Макс. вес заготовки</span><b>—</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="sga-50100nc / sga-50160nc / sga-60120nc / sga-60160nc / sga-60220nc f плоскошлифовальные станки" data-title="SGA-50100NC / SGA-50160NC / SGA-60120NC / SGA-60160NC / SGA-60220NC F" data-sortkey="500.0" data-table-size="500|630" data-wheel-size="350" data-wheel-speed="1450|1750" data-motor-power="7.5">
+<a class="vmc-card-link" href="equipment-grinding-sga-50100nc-sga-50160nc-sga-60120nc-sga-60160nc-sga-60220nc-f.html" aria-label="SGA-50100NC / SGA-50160NC / SGA-60120NC / SGA-60160NC / SGA-60220NC F — подробнее"></a>
+<div class="vmc-photo"><img src="grinding-assets/sga-50100nc-sga-50160nc-sga-60120nc-sga-60160nc-sga-60220nc-f.png" alt="SGA-50100NC / SGA-50160NC / SGA-60120NC / SGA-60160NC / SGA-60220NC F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Плоскошлифовальные</small>
+<h3>SGA-50100NC / SGA-50160NC / SGA-60120NC / SGA-60160NC / SGA-60220NC F</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>500×1000 / 500×1600 / 630×1250 / 630×1600 / 630×2200 мм</b></div><div><span>Размер шлифовального круга</span><b>350×40×127 мм</b></div><div><span>Макс. вес заготовки</span><b>—</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="sga-80160nc / sga-80220nc / sga-80300nc / sga-85250nc f плоскошлифовальные станки" data-title="SGA-80160NC / SGA-80220NC / SGA-80300NC / SGA-85250NC F" data-sortkey="810.0" data-table-size="810|850" data-wheel-size="500" data-wheel-speed="960|1150" data-motor-power="18.5">
+<a class="vmc-card-link" href="equipment-grinding-sga-80160nc-sga-80220nc-sga-80300nc-sga-85250nc-f.html" aria-label="SGA-80160NC / SGA-80220NC / SGA-80300NC / SGA-85250NC F — подробнее"></a>
+<div class="vmc-photo"><img src="grinding-assets/sga-80160nc-sga-80220nc-sga-80300nc-sga-85250nc-f.png" alt="SGA-80160NC / SGA-80220NC / SGA-80300NC / SGA-85250NC F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Плоскошлифовальные</small>
+<h3>SGA-80160NC / SGA-80220NC / SGA-80300NC / SGA-85250NC F</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>810×1600 / 810×2200 / 810×3000 / 850×2500 мм</b></div><div><span>Размер шлифовального круга</span><b>500×75×203 мм</b></div><div><span>Макс. вес заготовки</span><b>—</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="sga2050 / sga2550 / sga3063 / sga30100 / sga4080 / sga40100 h плоскошлифовальные станки" data-title="SGA2050 / SGA2550 / SGA3063 / SGA30100 / SGA4080 / SGA40100 H" data-sortkey="200.0" data-table-size="200|250|635|305|406" data-wheel-size="200|350" data-max-workpiece-weight="120|180|270|400|500|600" data-wheel-speed="2850|1450" data-motor-power="1.5|2.2|5.5">
+<a class="vmc-card-link" href="equipment-grinding-sga2050-sga2550-sga3063-sga30100-sga4080-sga40100-h.html" aria-label="SGA2050 / SGA2550 / SGA3063 / SGA30100 / SGA4080 / SGA40100 H — подробнее"></a>
+<div class="vmc-photo"><img src="grinding-assets/sga2050-sga2550-sga3063-sga30100-sga4080-sga40100-h.png" alt="SGA2050 / SGA2550 / SGA3063 / SGA30100 / SGA4080 / SGA40100 H" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Плоскошлифовальные</small>
+<h3>SGA2050 / SGA2550 / SGA3063 / SGA30100 / SGA4080 / SGA40100 H</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>200*460 / 250*500 / 635*305 / 305*1050 / 406*813 / 406*1020</b></div><div><span>Размер шлифовального круга</span><b>200*20*31.75 / 350*40*127</b></div><div><span>Макс. вес заготовки</span><b>120 / 180 / 270 / 400 / 500 / 600 кг</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="sgt60160sd / sgt60220sd / sgt80160sd / sgt80220sd / sgt80300sd h плоскошлифовальные станки" data-title="SGT60160SD / SGT60220SD / SGT80160SD / SGT80220SD / SGT80300SD H" data-sortkey="1600.0" data-table-size="1600|2200|3000" data-max-workpiece-weight="1230|1690|1630|2240|3060">
+<a class="vmc-card-link" href="equipment-grinding-sgt60160sd-sgt60220sd-sgt80160sd-sgt80220sd-sgt80300sd-h.html" aria-label="SGT60160SD / SGT60220SD / SGT80160SD / SGT80220SD / SGT80300SD H — подробнее"></a>
+<div class="vmc-photo"><img src="grinding-assets/sgt60160sd-sgt60220sd-sgt80160sd-sgt80220sd-sgt80300sd-h.png" alt="SGT60160SD / SGT60220SD / SGT80160SD / SGT80220SD / SGT80300SD H" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Плоскошлифовальные</small>
+<h3>SGT60160SD / SGT60220SD / SGT80160SD / SGT80220SD / SGT80300SD H</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>1600*610 / 2200*610 / 1600*810 / 2200*810 / 3000*810</b></div><div><span>Размер шлифовального круга</span><b>According to process requirements</b></div><div><span>Макс. вес заготовки</span><b>1230 / 1690 / 1630 / 2240 / 3060 кг</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="fsg2550hv f плоскошлифовальные станки" data-title="FSG2550HV F" data-sortkey="0" >
+<a class="vmc-card-link" href="equipment-grinding-fsg2550hv-f.html" aria-label="FSG2550HV F — подробнее"></a>
+<div class="vmc-photo"><img src="grinding-assets/fsg2550hv-f.png" alt="FSG2550HV F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Плоскошлифовальные</small>
+<h3>FSG2550HV F</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>—</b></div><div><span>Размер шлифовального круга</span><b>—</b></div><div><span>Макс. вес заготовки</span><b>—</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+</div>
+</div>
+</div>
+</div></section>
+</section><section class="milling-tab-panel" data-milling-panel="centerless">
+<section class="vmc-model-section"><div class="wrap">
+<div class="vmc-catalog-layout" data-vmc-scope>
+<aside class="vmc-filter-panel g2-filter-panel">
+<div class="eqcat-filter-backdrop" data-role="filter-backdrop"></div>
+<div class="g2-filter-head"><span>Фильтр</span><button type="button" class="g2-reset" data-role="reset"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg>Сбросить всё</button><button type="button" class="eqcat-filter-close" data-role="filter-close" aria-label="Закрыть фильтр">×</button></div>
+<label class="g2-search"><span class="g2-search-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span><input type="search" data-role="search" placeholder="Поиск по модели"/></label>
+<div class="g2-direct"><div class="g2-field"><strong>Диаметр шлифовки</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="od-diameter" data-bound="min"/>
+<input type="number" placeholder="До" data-range="od-diameter" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Размер шлифовального круга</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="wheel-size" data-bound="min"/>
+<input type="number" placeholder="До" data-range="wheel-size" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Размер подающего круга</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="regulating-wheel-size" data-bound="min"/>
+<input type="number" placeholder="До" data-range="regulating-wheel-size" data-bound="max"/>
+</div></div></div>
+<details class="g2-group" open><summary>Дополнительные параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Частота вращения подающего круга</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="regulating-wheel-speed" data-bound="min"/>
+<input type="number" placeholder="До" data-range="regulating-wheel-speed" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Частота вращения шлифовального круга</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="wheel-speed" data-bound="min"/>
+<input type="number" placeholder="До" data-range="wheel-speed" data-bound="max"/>
+</div></div></div></details>
+<div class="g2-apply-wrap">
+<button type="button" class="btn btn-ce g2-apply" data-role="apply">Показать <span data-role="preview">17</span> <span data-role="preview-word">моделей</span></button>
+</div>
+<p class="vmc-filter-note">Не нашли нужный параметр в фильтре — характеристики каждой модели указаны в карточке и на странице станка.</p>
+</aside>
+<div>
+<div class="vmc-toolbar g2-toolbar">
+<div class="vmc-toolbar-head g2-toolbar-head">
+<div class="eyebrow">Модельный ряд</div>
+<div class="g2-toolbar-title-row"><h2 class="h2 eqcat-catalog-title">Бесцентровошлифовальные станки</h2><span class="g2-catalog-desc">Для высокопроизводительной обработки тел вращения без установки в центрах.</span></div>
+</div>
+<div class="g2-toolbar-tools">
+<button type="button" class="eqcat-filter-toggle" data-role="filter-toggle">Все фильтры</button>
+</div>
+</div>
+<div class="g2-fallback-note" data-role="fallback-note" hidden>Точных совпадений не нашлось — показаны ближайшие по параметрам модели.</div>
+<div class="vmc-grid">
+<article class="vmc-card" data-name="hcgm-h6060 f бесцентровошлифовальные станки" data-title="HCGM-H6060 F" data-sortkey="1950.0" data-od-diameter="10~300" data-wheel-size="600" data-regulating-wheel-size="350" data-regulating-wheel-speed="10~200" data-wheel-speed="1950">
+<a class="vmc-card-link" href="equipment-grinding-hcgm-h6060-f.html" aria-label="HCGM-H6060 F — подробнее"></a>
+<div class="vmc-photo"><img src="grinding-assets/hcgm-h6060-f.png" alt="HCGM-H6060 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Бесцентровошлифовальные</small>
+<h3>HCGM-H6060 F</h3>
+<div class="vmc-specs"><div><span>Диаметр шлифовки</span><b>10–300 мм</b></div><div><span>Размер шлифовального круга</span><b>Ø600×600×305 мм</b></div><div><span>Размер подающего круга</span><b>Ø350×600×203 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="hcgm-l6060 f бесцентровошлифовальные станки" data-title="HCGM-L6060 F" data-sortkey="1100.0" data-od-diameter="10~250" data-wheel-size="600" data-regulating-wheel-size="350" data-regulating-wheel-speed="10~200" data-wheel-speed="1100">
+<a class="vmc-card-link" href="equipment-grinding-hcgm-l6060-f.html" aria-label="HCGM-L6060 F — подробнее"></a>
+<div class="vmc-photo"><img src="grinding-assets/hcgm-l6060-f.png" alt="HCGM-L6060 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Бесцентровошлифовальные</small>
+<h3>HCGM-L6060 F</h3>
+<div class="vmc-specs"><div><span>Диаметр шлифовки</span><b>10-250 мм</b></div><div><span>Размер шлифовального круга</span><b>Ø600×600×305 мм</b></div><div><span>Размер подающего круга</span><b>Ø350×600×203 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="hcgm-m6020 f бесцентровошлифовальные станки" data-title="HCGM-M6020 F" data-sortkey="1100.0" data-od-diameter="5~100" data-wheel-size="600" data-regulating-wheel-size="350" data-regulating-wheel-speed="10~200" data-wheel-speed="1100">
+<a class="vmc-card-link" href="equipment-grinding-hcgm-m6020-f.html" aria-label="HCGM-M6020 F — подробнее"></a>
+<div class="vmc-photo"><img src="grinding-assets/hcgm-m6020-f.png" alt="HCGM-M6020 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Бесцентровошлифовальные</small>
+<h3>HCGM-M6020 F</h3>
+<div class="vmc-specs"><div><span>Диаметр шлифовки</span><b>5-100 мм</b></div><div><span>Размер шлифовального круга</span><b>Ø600×200(250)×305 мм</b></div><div><span>Размер подающего круга</span><b>Ø350×200(300)×203 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="hcgm-m6040 f бесцентровошлифовальные станки" data-title="HCGM-M6040 F" data-sortkey="1100.0" data-od-diameter="5~200" data-wheel-size="600" data-regulating-wheel-size="350" data-regulating-wheel-speed="10~200" data-wheel-speed="1100">
+<a class="vmc-card-link" href="equipment-grinding-hcgm-m6040-f.html" aria-label="HCGM-M6040 F — подробнее"></a>
+<div class="vmc-photo"><img src="grinding-assets/hcgm-m6040-f.png" alt="HCGM-M6040 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Бесцентровошлифовальные</small>
+<h3>HCGM-M6040 F</h3>
+<div class="vmc-specs"><div><span>Диаметр шлифовки</span><b>5-200 мм</b></div><div><span>Размер шлифовального круга</span><b>Ø600×400×305 мм</b></div><div><span>Размер подающего круга</span><b>Ø350×400×203 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="hcgm-s4020 f бесцентровошлифовальные станки" data-title="HCGM-S4020 F" data-sortkey="1625.0" data-od-diameter="2~45" data-wheel-size="400" data-regulating-wheel-size="250" data-wheel-speed="1625">
+<a class="vmc-card-link" href="equipment-grinding-hcgm-s4020-f.html" aria-label="HCGM-S4020 F — подробнее"></a>
+<div class="vmc-photo"><img src="grinding-assets/hcgm-s4020-f.png" alt="HCGM-S4020 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Бесцентровошлифовальные</small>
+<h3>HCGM-S4020 F</h3>
+<div class="vmc-specs"><div><span>Диаметр шлифовки</span><b>2-45 мм</b></div><div><span>Размер шлифовального круга</span><b>PSA400×150(200)×203 мм</b></div><div><span>Размер подающего круга</span><b>Ø250×150(200)×127 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="hcgm-s5020 f бесцентровошлифовальные станки" data-title="HCGM-S5020 F" data-sortkey="1338.0" data-od-diameter="2~60" data-wheel-size="500" data-regulating-wheel-size="350" data-regulating-wheel-speed="10~200" data-wheel-speed="1338">
+<a class="vmc-card-link" href="equipment-grinding-hcgm-s5020-f.html" aria-label="HCGM-S5020 F — подробнее"></a>
+<div class="vmc-photo"><img src="grinding-assets/hcgm-s5020-f.png" alt="HCGM-S5020 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Бесцентровошлифовальные</small>
+<h3>HCGM-S5020 F</h3>
+<div class="vmc-specs"><div><span>Диаметр шлифовки</span><b>2-60 мм</b></div><div><span>Размер шлифовального круга</span><b>Ø500×200×305 мм</b></div><div><span>Размер подающего круга</span><b>Ø350×200×203 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="hcgm-s5025 f бесцентровошлифовальные станки" data-title="HCGM-S5025 F" data-sortkey="1338.0" data-od-diameter="2~60" data-wheel-size="500" data-regulating-wheel-size="350" data-regulating-wheel-speed="10~200" data-wheel-speed="1338">
+<a class="vmc-card-link" href="equipment-grinding-hcgm-s5025-f.html" aria-label="HCGM-S5025 F — подробнее"></a>
+<div class="vmc-photo"><img src="grinding-assets/hcgm-s5025-f.png" alt="HCGM-S5025 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Бесцентровошлифовальные</small>
+<h3>HCGM-S5025 F</h3>
+<div class="vmc-specs"><div><span>Диаметр шлифовки</span><b>2-60 мм</b></div><div><span>Размер шлифовального круга</span><b>Ø500×250×305 мм</b></div><div><span>Размер подающего круга</span><b>Ø350×250×203 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="m10100 f бесцентровошлифовальные станки" data-title="M10100 F" data-sortkey="195.0" data-od-diameter="10~100" data-wheel-size="500" data-regulating-wheel-size="350" data-regulating-wheel-speed="10~200" data-wheel-speed="1338">
+<a class="vmc-card-link" href="equipment-grinding-m10100-f.html" aria-label="M10100 F — подробнее"></a>
+<div class="vmc-photo"><img src="grinding-assets/m10100-f.png" alt="M10100 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Бесцентровошлифовальные</small>
+<h3>M10100 F</h3>
+<div class="vmc-specs"><div><span>Диаметр шлифовки</span><b>10-100 мм</b></div><div><span>Размер шлифовального круга</span><b>Ø500×200×305 мм</b></div><div><span>Размер подающего круга</span><b>PDA350×200×203 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="m10200 f бесцентровошлифовальные станки" data-title="M10200 F" data-sortkey="1110.0" data-od-diameter="10~200" data-wheel-size="600" data-regulating-wheel-size="350" data-regulating-wheel-speed="10~200" data-wheel-speed="1110">
+<a class="vmc-card-link" href="equipment-grinding-m10200-f.html" aria-label="M10200 F — подробнее"></a>
+<div class="vmc-photo"><img src="grinding-assets/m10200-f.png" alt="M10200 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Бесцентровошлифовальные</small>
+<h3>M10200 F</h3>
+<div class="vmc-specs"><div><span>Диаметр шлифовки</span><b>10-200 мм</b></div><div><span>Размер шлифовального круга</span><b>Ø600×400×305 мм</b></div><div><span>Размер подающего круга</span><b>Ø350×400×203 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="m1040b f бесцентровошлифовальные станки" data-title="M1040B F" data-sortkey="1870.0" data-od-diameter="2~40" data-wheel-size="350" data-regulating-wheel-size="250" data-regulating-wheel-speed="10~200" data-wheel-speed="1870">
+<a class="vmc-card-link" href="equipment-grinding-m1040b-f.html" aria-label="M1040B F — подробнее"></a>
+<div class="vmc-photo"><img src="grinding-assets/m1040b-f.png" alt="M1040B F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Бесцентровошлифовальные</small>
+<h3>M1040B F</h3>
+<div class="vmc-specs"><div><span>Диаметр шлифовки</span><b>2-40 мм</b></div><div><span>Размер шлифовального круга</span><b>PSA350×125×127 мм</b></div><div><span>Размер подающего круга</span><b>PSA250×125×75 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="m1050a f бесцентровошлифовальные станки" data-title="M1050A F" data-sortkey="1668.0" data-od-diameter="5~50" data-wheel-size="400" data-regulating-wheel-size="300" data-regulating-wheel-speed="10~200" data-wheel-speed="1668">
+<a class="vmc-card-link" href="equipment-grinding-m1050a-f.html" aria-label="M1050A F — подробнее"></a>
+<div class="vmc-photo"><img src="grinding-assets/m1050a-f.png" alt="M1050A F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Бесцентровошлифовальные</small>
+<h3>M1050A F</h3>
+<div class="vmc-specs"><div><span>Диаметр шлифовки</span><b>5-50 мм</b></div><div><span>Размер шлифовального круга</span><b>Ø400×150×203 мм</b></div><div><span>Размер подающего круга</span><b>PSA300×150×127 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="m1080b f бесцентровошлифовальные станки" data-title="M1080B F" data-sortkey="140.0" data-od-diameter="5~80" data-wheel-size="500" data-regulating-wheel-size="300" data-regulating-wheel-speed="10~200" data-wheel-speed="1300">
+<a class="vmc-card-link" href="equipment-grinding-m1080b-f.html" aria-label="M1080B F — подробнее"></a>
+<div class="vmc-photo"><img src="grinding-assets/m1080b-f.png" alt="M1080B F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Бесцентровошлифовальные</small>
+<h3>M1080B F</h3>
+<div class="vmc-specs"><div><span>Диаметр шлифовки</span><b>5-80 мм</b></div><div><span>Размер шлифовального круга</span><b>Ø500×150×305 мм</b></div><div><span>Размер подающего круга</span><b>PSA300×150×127 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="m1083b f бесцентровошлифовальные станки" data-title="M1083B F" data-sortkey="1115.0" data-od-diameter="10~150" data-wheel-size="600" data-regulating-wheel-size="350" data-regulating-wheel-speed="10~200" data-wheel-speed="1115">
+<a class="vmc-card-link" href="equipment-grinding-m1083b-f.html" aria-label="M1083B F — подробнее"></a>
+<div class="vmc-photo"><img src="grinding-assets/m1083b-f.png" alt="M1083B F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Бесцентровошлифовальные</small>
+<h3>M1083B F</h3>
+<div class="vmc-specs"><div><span>Диаметр шлифовки</span><b>10-150 мм</b></div><div><span>Размер шлифовального круга</span><b>Ø600×200×305 мм</b></div><div><span>Размер подающего круга</span><b>PDA350×200×203 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="m11100 f бесцентровошлифовальные станки" data-title="M11100 F" data-sortkey="1330.0" data-od-diameter="10~100" data-wheel-size="500" data-regulating-wheel-size="350" data-regulating-wheel-speed="10~200" data-wheel-speed="1330">
+<a class="vmc-card-link" href="equipment-grinding-m11100-f.html" aria-label="M11100 F — подробнее"></a>
+<div class="vmc-photo"><img src="grinding-assets/m11100-f.png" alt="M11100 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Бесцентровошлифовальные</small>
+<h3>M11100 F</h3>
+<div class="vmc-specs"><div><span>Диаметр шлифовки</span><b>10-100 мм</b></div><div><span>Размер шлифовального круга</span><b>Ø500×400×305 мм</b></div><div><span>Размер подающего круга</span><b>Ø350×400×203 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="m11200 f бесцентровошлифовальные станки" data-title="M11200 F" data-sortkey="1330.0" data-od-diameter="10~200" data-wheel-size="500" data-regulating-wheel-size="350" data-regulating-wheel-speed="10~200" data-wheel-speed="1330">
+<a class="vmc-card-link" href="equipment-grinding-m11200-f.html" aria-label="M11200 F — подробнее"></a>
+<div class="vmc-photo"><img src="grinding-assets/m11200-f.png" alt="M11200 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Бесцентровошлифовальные</small>
+<h3>M11200 F</h3>
+<div class="vmc-specs"><div><span>Диаметр шлифовки</span><b>10-200 мм</b></div><div><span>Размер шлифовального круга</span><b>Ø500×600×305 мм</b></div><div><span>Размер подающего круга</span><b>Ø350×600×203 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="mk1060 f бесцентровошлифовальные станки" data-title="MK1060 F" data-sortkey="1318.0" data-od-diameter="5~60" data-wheel-size="500" data-regulating-wheel-size="350" data-regulating-wheel-speed="10~200" data-wheel-speed="1318">
+<a class="vmc-card-link" href="equipment-grinding-mk1060-f.html" aria-label="MK1060 F — подробнее"></a>
+<div class="vmc-photo"><img src="grinding-assets/mk1060-f.png" alt="MK1060 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Бесцентровошлифовальные</small>
+<h3>MK1060 F</h3>
+<div class="vmc-specs"><div><span>Диаметр шлифовки</span><b>5-60 мм</b></div><div><span>Размер шлифовального круга</span><b>Ø500×200（250）×305 мм</b></div><div><span>Размер подающего круга</span><b>PSA350×200×127 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="mk11250 f бесцентровошлифовальные станки" data-title="MK11250 F" data-sortkey="1110.0" data-od-diameter="10~250" data-wheel-size="600" data-regulating-wheel-size="350" data-regulating-wheel-speed="10~200" data-wheel-speed="1110">
+<a class="vmc-card-link" href="equipment-grinding-mk11250-f.html" aria-label="MK11250 F — подробнее"></a>
+<div class="vmc-photo"><img src="grinding-assets/mk11250-f.png" alt="MK11250 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Бесцентровошлифовальные</small>
+<h3>MK11250 F</h3>
+<div class="vmc-specs"><div><span>Диаметр шлифовки</span><b>10-250 мм</b></div><div><span>Размер шлифовального круга</span><b>Ø600×600×305 мм</b></div><div><span>Размер подающего круга</span><b>Ø350×600×203 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+</div>
+</div>
+</div>
+</div></section>
+</section>
+
+<div class="wrap" style="padding:8px 0 40px"><p class="mill-lede">Итого 59 моделей в каталоге. Не нашли нужный типоразмер или нужна помощь с подбором — передайте чертёж технологу, подберём станок под деталь, материал и партию.</p></div>
+
+<div class="mill-links-row wrap" style="display:flex;gap:1px;background:var(--line);border:1px solid var(--line);margin:0 auto">
+<a href="stock.html">Станки в наличии на складе →</a>
+<a href="production-equipment.html">Инструмент и оснастка →</a>
+<a href="leasing.html">Лизинг оборудования →</a>
+</div>
+
+<section class="faq"><div class="wrap">
+<div class="eyebrow">Вопросы</div><h2 class="h2">Частые вопросы</h2>
+<div style="margin-top:24px"><details class="faq-item"><summary>В чём разница между круглошлифовальным, плоскошлифовальным и бесцентровошлифовальным станком?</summary><p>Круглошлифовальный станок обрабатывает тела вращения в центрах, плоскошлифовальный — плоские поверхности на магнитной плите, бесцентровошлифовальный — наружный диаметр тел вращения без закрепления в центрах, методом сквозной или врезной подачи.</p></details><details class="faq-item"><summary>Какая точность достижима на шлифовальном станке?</summary><p>Зависит от модели и жёсткости системы СПИД — обычно круглость и цилиндричность в пределах 2–5 мкм, шероховатость Ra0,16–0,32. Точные параметры указаны в характеристиках каждой модели.</p></details><details class="faq-item"><summary>Можно ли подобрать станок под конкретную деталь?</summary><p>Да, передайте чертёж и требования по допускам и шероховатости — подберём типоразмер, диаметр круга и тип подачи под вашу деталь.</p></details></div>
+</div></section>
+
+<section class="final-cta"><div class="wrap">
+<h2 class="h2">Не нашли подходящую модель?</h2>
+<p>Передайте чертёж и требования — технолог подберёт станок, соберёт КП и предложит сценарий запуска на площадке.</p>
+<div class="final-cta-actions">
+<button type="button" class="btn btn-ce" onclick="openModal('grindingLeadModal')">Обсудить задачу с технологом</button>
+<a class="btn btn-ghost" href="tel:88005511206">Позвонить: 8 800 55 11 206</a>
+</div>
+</div></section>
+</main>
+
+<div class="lead-modal" id="grindingLeadModal" aria-hidden="true">
+<div class="lead-dialog" role="dialog" aria-modal="true" aria-labelledby="grindingLeadModalTitle">
+<button class="lead-close" type="button" onclick="closeModal('grindingLeadModal')" aria-label="Закрыть окно">×</button>
+<div class="lead-content">
+<div class="eyebrow">Шлифовальные станки</div>
+<h3 id="grindingLeadModalTitle">Запросить КП</h3>
+<p>Оставьте номер телефона — менеджер свяжется с вами и подготовит коммерческое предложение.</p>
+<form class="lead-form" onsubmit="return false">
+<input class="qfield" id="grindingLeadModalPhone" type="tel" placeholder="Номер телефона*" required/>
+<input class="qfield" id="grindingLeadModalName" placeholder="Имя (необязательно)"/>
+<label class="lead-consent wide"><input type="checkbox" id="grindingLeadModalConsent" required/><span>Принимаю условия <a href="privacy.html" data-legal="privacy">Политики конфиденциальности</a> и даю согласие на обработку персональных данных</span></label>
+<div class="lead-err" id="grindingLeadModalConsentErr" role="alert"></div>
+<button class="btn btn-ce" type="button" onclick="submitLeadForm('grindingLeadModal','grindingLeadModalConsent','grindingLeadModalConsentErr')">Отправить</button>
+<button class="btn btn-ghost" type="button" onclick="closeModal('grindingLeadModal');openModal('callModal')">Позвонить</button>
+</form>
+</div>
+</div>
+</div>
+<div class="lead-modal" id="callModal" aria-hidden="true">
+<div class="lead-dialog" role="dialog" aria-modal="true" aria-labelledby="callModalTitle">
+<button class="lead-close" type="button" onclick="closeModal('callModal')" aria-label="Закрыть окно">×</button>
+<div class="lead-content">
+<div class="eyebrow">Контакт с менеджером</div>
+<h3 id="callModalTitle">Позвонить <span>в Механит</span></h3>
+<p>Менеджер уточнит цену, комплектацию и сроки поставки по интересующей модели.</p>
+<div class="call-card">
+<small>Телефон компании</small>
+<a href="tel:88005511206">8 800 55 11 206</a>
+<p>Нажмите на номер, чтобы начать звонок, или закройте окно и продолжите просмотр каталога.</p>
+</div>
+</div>
+</div>
+</div>
+
+<footer></footer>
+<script>(function(){
+  var tabs=Array.from(document.querySelectorAll('[data-milling-tab]'));
+  var panels=Array.from(document.querySelectorAll('[data-milling-panel]'));
+  function activate(id,updateHash){
+    if(!id){return;}
+    var found=false;
+    tabs.forEach(function(item){
+      var on=item.getAttribute('data-milling-tab')===id;
+      item.classList.toggle('is-active',on);
+      item.setAttribute('aria-current',on?'true':'false');
+      if(on){found=true;}
+    });
+    if(!found){return;}
+    panels.forEach(function(panel){panel.classList.toggle('is-active',panel.getAttribute('data-milling-panel')===id);});
+    if(updateHash){history.replaceState(null,'','#'+id);}
+  }
+  tabs.forEach(function(tab){
+    tab.addEventListener('click',function(){activate(tab.getAttribute('data-milling-tab'),true);});
+  });
+  var initial=(location.hash||'').replace('#','');
+  if(initial){activate(initial,false);}
+})();</script>
+<script>(function(){
+  function num(v){var n=parseFloat(v);return isNaN(n)?0:n;}
+  function inRange(value,min,max){
+    if(!value||(!min&&!max)){return true;}
+    return String(value).split('|').some(function(tok){
+      var p=tok.split('~'),lo=num(p[0]),hi=p.length>1?num(p[1]):lo;
+      if(min&&hi<num(min)){return false;}
+      if(max&&lo>num(max)){return false;}
+      return true;
+    });
+  }
+  document.querySelectorAll('[data-vmc-scope]').forEach(function(scope){
+    var grid=scope.querySelector('.vmc-grid');
+    if(!grid){return;}
+    var cards=Array.prototype.slice.call(grid.querySelectorAll('.vmc-card'));
+    var panel=scope.querySelector('.vmc-filter-panel');
+    if(!panel){return;}
+    var search=panel.querySelector('[data-role="search"]');
+    var applyBtn=panel.querySelector('[data-role="apply"]');
+    var resetBtn=panel.querySelector('[data-role="reset"]');
+    var previewEl=panel.querySelector('[data-role="preview"]');
+    var rangeInputs=Array.prototype.slice.call(panel.querySelectorAll('[data-range]'));
+    function rangeVals(name){
+      var minEl=panel.querySelector('[data-range="'+name+'"][data-bound="min"]');
+      var maxEl=panel.querySelector('[data-range="'+name+'"][data-bound="max"]');
+      return [minEl&&minEl.value, maxEl&&maxEl.value];
+    }
+    var rangeNames=[];
+    rangeInputs.forEach(function(inp){
+      var n=inp.getAttribute('data-range');
+      if(rangeNames.indexOf(n)<0){rangeNames.push(n);}
+    });
+    function checkedValues(name){
+      return Array.prototype.slice.call(panel.querySelectorAll('input[name="'+name+'"]:checked')).map(function(i){return i.value;});
+    }
+    var checkGroups=[];
+    panel.querySelectorAll('input[type="checkbox"][name]').forEach(function(inp){
+      var n=inp.getAttribute('name');
+      if(checkGroups.indexOf(n)<0){checkGroups.push(n);}
+    });
+    function computeMatches(){
+      var q=(search&&search.value||'').trim().toLowerCase();
+      return cards.filter(function(card){
+        var ok=true;
+        if(q && (card.dataset.name||'').indexOf(q)<0){ok=false;}
+        if(ok){
+          checkGroups.forEach(function(name){
+            if(!ok){return;}
+            var selected=checkedValues(name);
+            if(selected.length){
+              var val=card.dataset[name.replace(/-([a-z])/g,function(m,c){return c.toUpperCase();})]||'';
+              var toks=val.split('|');if(!selected.some(function(s){return toks.indexOf(s)>=0;})){ok=false;}
+            }
+          });
+        }
+        if(ok){
+          rangeNames.forEach(function(name){
+            if(!ok){return;}
+            var key=name.replace(/-([a-z])/g,function(m,c){return c.toUpperCase();});
+            var value=card.dataset[key];
+            var mm=rangeVals(name);
+            if(!inRange(value,mm[0],mm[1])){ok=false;}
+          });
+        }
+        return ok;
+      });
+    }
+    function updatePreview(){
+      var m=computeMatches();
+      if(previewEl){previewEl.textContent=m.length;}
+      return m;
+    }
+    function renderMatches(){
+      var m=updatePreview();
+      cards.forEach(function(card){card.classList.toggle('is-hidden',m.indexOf(card)<0);});
+    }
+    panel.querySelectorAll('input').forEach(function(inp){
+      inp.addEventListener('input',updatePreview);
+      inp.addEventListener('change',updatePreview);
+    });
+    if(search){search.addEventListener('input',updatePreview);}
+    var filterToggle=scope.querySelector('[data-role="filter-toggle"]');
+    var filterClose=panel.querySelector('[data-role="filter-close"]');
+    var backdrop=scope.querySelector('[data-role="filter-backdrop"]');
+    function openFilter(){panel.classList.add('is-open');if(backdrop){backdrop.classList.add('is-open');}document.body.style.overflow='hidden';}
+    function closeFilter(){panel.classList.remove('is-open');if(backdrop){backdrop.classList.remove('is-open');}document.body.style.overflow='';}
+    if(filterToggle){filterToggle.addEventListener('click',openFilter);}
+    if(filterClose){filterClose.addEventListener('click',closeFilter);}
+    if(backdrop){backdrop.addEventListener('click',closeFilter);}
+    if(applyBtn){applyBtn.addEventListener('click',function(){renderMatches();closeFilter();});}
+    if(resetBtn){resetBtn.addEventListener('click',function(){
+      panel.querySelectorAll('input[type="checkbox"]').forEach(function(inp){inp.checked=false;});
+      panel.querySelectorAll('input[type="number"],input[type="search"]').forEach(function(inp){inp.value='';});
+      renderMatches();
+    });}
+    cards.sort(function(a,b){return num(a.dataset.sortkey)-num(b.dataset.sortkey);});
+    cards.forEach(function(card){grid.appendChild(card);});
+    updatePreview();
+    var defaultOrder=cards.slice();
+    var sortSelect=scope.querySelector('[data-role="sort"]');
+    if(sortSelect){
+      sortSelect.addEventListener('change',function(){
+        var ordered=defaultOrder;
+        if(sortSelect.value==='name'){
+          ordered=cards.slice().sort(function(a,b){return (a.dataset.title||'').localeCompare(b.dataset.title||'','ru');});
+        }
+        ordered.forEach(function(card){grid.appendChild(card);});
+      });
+    }
+  });
+})();</script>
+<script>function toggleFaq(b){b.parentElement.classList.toggle('open')}
+function openModal(id){
+  var m=document.getElementById(id);
+  m.classList.add('is-open');
+  m.setAttribute('aria-hidden','false');
+  document.body.style.overflow='hidden';
+}
+function closeModal(id){
+  var m=document.getElementById(id);
+  m.classList.remove('is-open');
+  m.setAttribute('aria-hidden','true');
+  document.body.style.overflow='';
+}
+document.addEventListener('click',function(e){
+  if(e.target.classList && e.target.classList.contains('lead-modal')){closeModal(e.target.id);}
+});
+document.addEventListener('keydown',function(e){
+  if(e.key==='Escape'){document.querySelectorAll('.lead-modal.is-open').forEach(function(m){closeModal(m.id);});}
+});
+function submitLeadForm(modalId, consentId, errId){
+  var phone=document.getElementById(modalId+'Phone');
+  var consent=document.getElementById(consentId);
+  var err=document.getElementById(errId);
+  if(phone && !phone.value.trim()){
+    err.textContent='Укажите номер телефона';
+    err.classList.add('is-shown');
+    phone.focus();
+    return;
+  }
+  if(!consent.checked){
+    err.textContent='Нужно принять условия обработки данных';
+    err.classList.add('is-shown');
+    consent.focus();
+    return;
+  }
+  err.textContent='';
+  err.classList.remove('is-shown');
+  closeModal(modalId);
+}</script>
+<script>
+(function(){
+  function ruWord(n, forms){var n2=n%100;if(n2>=11&&n2<=14)return forms[2];var n1=n%10;if(n1===1)return forms[0];if(n1>=2&&n1<=4)return forms[1];return forms[2];}
+  document.querySelectorAll('[data-role="preview"]').forEach(function(numEl){
+    var wordEl = numEl.parentElement.querySelector('[data-role="preview-word"]');
+    if(!wordEl) return;
+    function sync(){var n=parseInt(numEl.textContent,10)||0;wordEl.textContent=ruWord(n,['модель','модели','моделей']);}
+    sync();
+    new MutationObserver(sync).observe(numEl,{childList:true,characterData:true,subtree:true});
+  });
+  // never show an empty grid: if the exact filters (already applied by the shared
+  // filter script) leave zero visible cards, fall back to the closest models by
+  // numeric distance from the requested ranges, so the customer always sees options.
+  document.querySelectorAll('[data-vmc-scope]').forEach(function(scope){
+    var grid = scope.querySelector('.vmc-grid');
+    if(!grid) return;
+    var cards = Array.prototype.slice.call(grid.querySelectorAll('.vmc-card'));
+    var panel = scope.querySelector('.vmc-filter-panel');
+    if(!panel) return;
+    var applyBtn = panel.querySelector('[data-role="apply"]');
+    var resetBtn = panel.querySelector('[data-role="reset"]');
+    var note = scope.querySelector('[data-role="fallback-note"]');
+    var rangeNames = [];
+    Array.prototype.slice.call(panel.querySelectorAll('[data-range]')).forEach(function(inp){
+      var n = inp.getAttribute('data-range');
+      if(rangeNames.indexOf(n) < 0){rangeNames.push(n);}
+    });
+    function num(v){var n=parseFloat(v);return isNaN(n)?null:n;}
+    function rangeVals(name){
+      var minEl = panel.querySelector('[data-range="'+name+'"][data-bound="min"]');
+      var maxEl = panel.querySelector('[data-range="'+name+'"][data-bound="max"]');
+      return [minEl && minEl.value, maxEl && maxEl.value];
+    }
+    function applyFallback(){
+      var visible = cards.filter(function(c){return !c.classList.contains('is-hidden');});
+      if(visible.length){ if(note){note.hidden = true;} return; }
+      var activeRanges = rangeNames.filter(function(name){var mm = rangeVals(name); return mm[0] || mm[1];});
+      if(!activeRanges.length){ return; }
+      var scored = cards.map(function(card){
+        var score = 0;
+        activeRanges.forEach(function(name){
+          var key = name.replace(/-([a-z])/g, function(m,c){return c.toUpperCase();});
+          var n = card.dataset[key] ? num(card.dataset[key]) : null;
+          if(n === null){ score += 1e5; return; }
+          var mm = rangeVals(name);
+          var min = mm[0] ? num(mm[0]) : null;
+          var max = mm[1] ? num(mm[1]) : null;
+          if(min !== null && n < min){ score += (min - n); }
+          if(max !== null && n > max){ score += (n - max); }
+        });
+        return {card: card, score: score};
+      });
+      scored.sort(function(a,b){return a.score - b.score;});
+      var showN = Math.min(4, scored.length);
+      scored.forEach(function(s, i){ s.card.classList.toggle('is-hidden', i >= showN); });
+      if(note){ note.hidden = false; }
+    }
+    if(applyBtn){ applyBtn.addEventListener('click', applyFallback); }
+    if(resetBtn){ resetBtn.addEventListener('click', function(){ if(note){note.hidden = true;} }); }
+  });
+})();
+</script>
+<script src="site-shell.js?v=search-20260914"></script>
+</body></html>

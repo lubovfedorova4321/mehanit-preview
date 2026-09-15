@@ -1,0 +1,1222 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"/><meta name="robots" content="noindex, nofollow"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Горизонтально-расточные станки — Механит</title>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<meta name="description" content="Растачивание, сверление, фрезерование и торцевание крупногабаритных корпусных деталей с УЦИ или ЧПУ. Точность и жёсткость для деталей, которые не переустан"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Чем горизонтально-расточной станок отличается от обрабатывающего центра?", "acceptedAnswer": {"@type": "Answer", "text": "Горизонтально-расточной станок специализируется на точном растачивании отверстий и торцевании в крупногабаритных корпусных деталях — станина, шпиндельная бабка и стол рассчитаны на тяжёлые заготовки и большие вылеты борштанги."}}, {"@type": "Question", "name": "Что выбрать — станок с УЦИ или с ЧПУ?", "acceptedAnswer": {"@type": "Answer", "text": "УЦИ (устройство цифровой индикации) подходит для мелкосерийного и ремонтного производства с ручным управлением подачами. ЧПУ нужен для серийной обработки, работы по программе и повторяемости на сложных деталях."}}, {"@type": "Question", "name": "Можно ли получить чертёж по конкретной детали?", "acceptedAnswer": {"@type": "Answer", "text": "Да, передайте чертёж и требования по точности — подберём диаметр шпинделя, ход осей и тип стола под вашу деталь."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://mehanit.ru/"}, {"@type": "ListItem", "position": 2, "name": "Оборудование", "item": "https://mehanit.ru/equipment.html"}, {"@type": "ListItem", "position": 3, "name": "Горизонтально-расточные станки"}]}</script>
+<style>*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bm:#1A1A1A;--sg:#3D3D3D;--sg2:#2B2E31;--mid:#696D71;--muted:#8A9096;
+  --ce:#6B2D8B;--ce2:rgba(107,45,139,.10);--ce3:rgba(107,45,139,.20);--ceHover:#7d3aa0;
+  --gold:#C9A227;
+  --tl:#EAEAE6;--tl2:#F5F5F3;--paper:#EDEEF0;--paper2:#E4E5E8;--white:#fff;
+  --line:rgba(26,26,26,.10);--line2:rgba(234,234,230,.08);
+  --max:1400px;--shadow:0 24px 70px rgba(26,26,26,.10);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Golos Text',sans-serif;background:var(--paper);color:var(--bm);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
+.mono{font-family:'Golos Text',monospace}.disp{font-family:'Magistral',sans-serif}
+
+/* extracted from equipment-milling.html */
+.wrap{width:min(calc(100% - clamp(24px,4.4vw,84px) - 24px),var(--max));margin-left:clamp(24px,4.4vw,84px);margin-right:auto}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:'Golos Text',monospace;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--ce);margin-bottom:.85rem}
+.eyebrow::before{content:'';width:22px;height:1.5px;background:var(--ce)}
+.h2{font-family:'Magistral',sans-serif;font-size:clamp(26px,3.4vw,46px);font-weight:600;letter-spacing:-.018em;line-height:1.08;text-transform:uppercase}
+.h2 .lt{font-weight:300;color:var(--mid)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:1.5px solid transparent;min-height:48px;padding:0 26px;font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;font-family:'Golos Text',sans-serif;transition:.22s;border-radius:2px}
+.btn-ce{background:var(--ce);color:#fff;box-shadow:0 10px 28px rgba(107,45,139,.2)}
+.btn-ce:hover{background:var(--ceHover);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--bm);border-color:rgba(26,26,26,.2)}
+.btn-ghost:hover{border-color:var(--bm)}
+.btn-gold{background:var(--gold);color:var(--bm);border-color:var(--gold);box-shadow:0 12px 28px rgba(201,162,39,.22)}
+.btn-gold:hover{transform:translateY(-2px);filter:brightness(1.04);box-shadow:0 16px 36px rgba(201,162,39,.3)}
+.hdr{position:sticky;top:0;z-index:100;background:rgba(237,238,240,.9);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand img{height:52px;width:auto;display:block}
+.crumbbar{border-bottom:1px solid rgba(26,26,26,.06);background:rgba(255,255,255,.55)}
+.crumbs{min-height:44px;display:flex;align-items:center;gap:8px;font-family:'Golos Text',sans-serif;font-size:13px;font-weight:500;letter-spacing:.04em;line-height:1.45;color:var(--muted);flex-wrap:wrap}
+.crumbs a{color:var(--muted);transition:color .15s ease}
+.crumbs a:hover,.crumbs a:focus-visible{color:var(--ce);text-decoration:underline;text-underline-offset:3px}
+.crumbs a:focus-visible{outline:2px solid var(--ce);outline-offset:2px;border-radius:2px}
+.crumbs .crumb-sep{color:rgba(138,141,150,.55);font-size:12px}
+.crumbs .current{color:var(--mid);font-weight:500}
+@media(max-width:640px){.crumbs{font-size:12px;gap:6px}}
+.hero-cta .btn{width:100%;padding-left:16px;padding-right:16px;text-align:center;min-height:44px}
+.tools .wrap{position:relative;z-index:1}
+.tools .h2,.tools .eyebrow{color:var(--tl)}
+.tools .h2 .lt{color:rgba(234,234,230,.48)}
+.stock-page .wrap{position:relative;z-index:1}
+.stock-actions .btn{padding:11px 13px;font-size:11px}
+.system .wrap{position:relative;z-index:1}
+.system .wrap::before{content:'';position:absolute;right:5%;top:26px;width:260px;height:120px;border-top:1px solid rgba(201,162,39,.32);border-right:1px solid rgba(201,162,39,.22);opacity:.55;pointer-events:none}
+.system .wrap::after{content:'';position:absolute;right:calc(5% + 258px);top:142px;width:120px;height:1px;background:rgba(201,162,39,.28);transform:rotate(-18deg);transform-origin:right center;pointer-events:none}
+.system .h2{color:var(--tl)}
+.system .eyebrow{color:var(--gold)}
+.cases .h2{color:var(--tl)}
+.cases .h2 .lt{color:rgba(234,234,230,.4)}
+.leasing .h2{color:var(--tl)}
+.leasing .eyebrow{color:rgba(107,45,139,.9)}
+.quiz-l .h2{color:var(--tl)}
+.qfield{width:100%;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);padding:13px 15px;color:var(--tl);font-size:13px;font-family:'Golos Text',sans-serif;margin-bottom:11px}
+.qfield::placeholder{color:rgba(234,234,230,.4)}
+.qfield:focus{outline:none;border-color:var(--ce)}
+.qfield.area{min-height:86px;resize:vertical}
+.lead-modal{position:fixed;inset:0;z-index:200;display:grid;place-items:center;padding:24px;background:rgba(26,26,26,.58);backdrop-filter:blur(10px);opacity:0;pointer-events:none;transition:opacity .2s ease}
+.lead-modal.is-open{opacity:1;pointer-events:auto}
+.lead-dialog{width:min(760px,100%);max-height:min(92vh,820px);background:var(--paper) url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='760' height='820' viewBox='0 0 760 820'><defs><pattern id='sm' width='20' height='20' patternUnits='userSpaceOnUse'><path d='M20,0L0,0L0,20' fill='none' stroke='%236B2D8B' stroke-width='0.45' opacity='0.13'/></pattern><pattern id='lg' width='100' height='100' patternUnits='userSpaceOnUse'><rect width='100' height='100' fill='url(%23sm)'/><path d='M100,0L0,0L0,100' fill='none' stroke='%236B2D8B' stroke-width='0.9' opacity='0.17'/></pattern></defs><rect width='760' height='820' fill='url(%23lg)' opacity='0.75'/><circle cx='660' cy='660' r='155' fill='none' stroke='%236B2D8B' stroke-width='0.8' opacity='0.10'/><circle cx='660' cy='660' r='108' fill='none' stroke='%236B2D8B' stroke-width='0.6' opacity='0.08'/><circle cx='660' cy='660' r='22' fill='none' stroke='%236B2D8B' stroke-width='0.6' opacity='0.12'/><line x1='635' y1='660' x2='685' y2='660' stroke='%236B2D8B' stroke-width='0.7' opacity='0.15'/><line x1='660' y1='635' x2='660' y2='685' stroke='%236B2D8B' stroke-width='0.7' opacity='0.15'/><circle cx='660' cy='88' r='30' fill='none' stroke='%236B2D8B' stroke-width='0.6' opacity='0.09'/><circle cx='660' cy='88' r='8' fill='none' stroke='%236B2D8B' stroke-width='0.5' opacity='0.11'/><line x1='635' y1='88' x2='685' y2='88' stroke='%236B2D8B' stroke-width='0.5' opacity='0.12'/><line x1='660' y1='63' x2='660' y2='113' stroke='%236B2D8B' stroke-width='0.5' opacity='0.12'/><circle cx='590' cy='200' r='42' fill='none' stroke='%236B2D8B' stroke-width='0.6' opacity='0.08'/><circle cx='590' cy='200' r='26' fill='none' stroke='%236B2D8B' stroke-width='0.5' opacity='0.07'/><line x1='570' y1='200' x2='610' y2='200' stroke='%236B2D8B' stroke-width='0.5' opacity='0.10'/><line x1='590' y1='180' x2='590' y2='220' stroke='%236B2D8B' stroke-width='0.5' opacity='0.10'/><line x1='632' y1='200' x2='690' y2='200' stroke='%236B2D8B' stroke-width='0.4' opacity='0.09' stroke-dasharray='5,3'/><line x1='590' y1='158' x2='590' y2='80' stroke='%236B2D8B' stroke-width='0.4' opacity='0.09' stroke-dasharray='5,3'/><line x1='520' y1='440' x2='745' y2='440' stroke='%236B2D8B' stroke-width='0.65' opacity='0.11'/><line x1='520' y1='433' x2='520' y2='447' stroke='%236B2D8B' stroke-width='0.65' opacity='0.11'/><line x1='745' y1='433' x2='745' y2='447' stroke='%236B2D8B' stroke-width='0.65' opacity='0.11'/><line x1='750' y1='490' x2='750' y2='720' stroke='%236B2D8B' stroke-width='0.65' opacity='0.11'/><line x1='743' y1='490' x2='757' y2='490' stroke='%236B2D8B' stroke-width='0.65' opacity='0.11'/><line x1='743' y1='720' x2='757' y2='720' stroke='%236B2D8B' stroke-width='0.65' opacity='0.11'/><line x1='520' y1='450' x2='520' y2='600' stroke='%236B2D8B' stroke-width='0.4' opacity='0.08' stroke-dasharray='4,4'/><line x1='745' y1='450' x2='745' y2='510' stroke='%236B2D8B' stroke-width='0.4' opacity='0.08' stroke-dasharray='4,4'/><path d='M660,540 A120,120 0 0,0 780,660' fill='none' stroke='%236B2D8B' stroke-width='0.5' opacity='0.08'/><line x1='700' y1='770' x2='740' y2='730' stroke='%236B2D8B' stroke-width='0.5' opacity='0.09'/><line x1='715' y1='780' x2='755' y2='740' stroke='%236B2D8B' stroke-width='0.5' opacity='0.09'/><line x1='720' y1='800' x2='760' y2='760' stroke='%236B2D8B' stroke-width='0.5' opacity='0.09'/><line x1='685' y1='775' x2='720' y2='740' stroke='%236B2D8B' stroke-width='0.5' opacity='0.09'/><circle cx='470' cy='300' r='15' fill='none' stroke='%236B2D8B' stroke-width='0.5' opacity='0.09'/><circle cx='470' cy='300' r='4' fill='none' stroke='%236B2D8B' stroke-width='0.5' opacity='0.10'/><line x1='455' y1='300' x2='485' y2='300' stroke='%236B2D8B' stroke-width='0.45' opacity='0.10'/><line x1='470' y1='285' x2='470' y2='315' stroke='%236B2D8B' stroke-width='0.45' opacity='0.10'/><line x1='485' y1='300' x2='520' y2='300' stroke='%236B2D8B' stroke-width='0.4' opacity='0.08' stroke-dasharray='3,3'/></svg>") 0 0/100% 100% no-repeat;border:1px solid rgba(255,255,255,.72);box-shadow:0 34px 100px rgba(0,0,0,.32);position:relative;overflow:auto;clip-path:polygon(0 0,calc(100% - 18px) 0,100% 18px,100% 100%,18px 100%,0 calc(100% - 18px));transform:translateY(10px) scale(.98);transition:transform .2s ease}
+.lead-modal.is-open .lead-dialog{transform:translateY(0) scale(1)}
+.catalog-dialog .lead-content{padding:32px 36px}
+.lead-dialog::before{content:'';position:absolute;inset:0;background:linear-gradient(var(--ce),var(--ce)) top left/44px 1px no-repeat,linear-gradient(var(--ce),var(--ce)) top left/1px 28px no-repeat,linear-gradient(var(--ce),var(--ce)) bottom right/44px 1px no-repeat,linear-gradient(var(--ce),var(--ce)) bottom right/1px 28px no-repeat;opacity:.34;pointer-events:none}
+.lead-dialog::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.72) 0%,rgba(255,255,255,.5) 48%,rgba(255,255,255,.18) 100%),linear-gradient(90deg,rgba(26,26,26,.11) 0 1px,transparent 1px 100%) 0 48%/100% 1px no-repeat,linear-gradient(rgba(26,26,26,.1),rgba(26,26,26,.1)) 68% 8%/1px 84% no-repeat,linear-gradient(135deg,transparent 47%,rgba(107,45,139,.12) 48% 52%,transparent 53%) 0 0/42px 42px repeat;opacity:.46;pointer-events:none;transform:skewX(-3deg);transform-origin:center}
+.lead-close{position:absolute;top:14px;right:14px;z-index:3;width:38px;height:38px;border:1px solid var(--line);background:rgba(255,255,255,.72);color:var(--bm);font-size:24px;line-height:1;display:grid;place-items:center;transition:.18s}
+.lead-close:hover{border-color:var(--ce);color:var(--ce);transform:scale(1.04)}
+.lead-content{position:relative;z-index:2;padding:38px}
+.lead-content .eyebrow{margin-bottom:14px}
+.lead-content h3{font-family:'Magistral',sans-serif;font-size:clamp(24px,3.2vw,34px);line-height:1.08;letter-spacing:-.035em;text-transform:uppercase;margin-bottom:14px}
+.lead-content h3 span{font-weight:300;color:var(--mid)}
+.lead-content p{font-size:14px;line-height:1.7;color:var(--mid);max-width:430px;margin-bottom:22px}
+.lead-form{display:grid;grid-template-columns:repeat(2,1fr);gap:10px 12px;margin-top:18px}
+.lead-form .qfield{background:rgba(255,255,255,.84);border:1px solid rgba(26,26,26,.12);color:var(--bm);margin:0;backdrop-filter:blur(7px)}
+.lead-form .qfield::placeholder{color:rgba(26,26,26,.42)}
+.lead-form .qfield:focus{border-color:var(--ce);background:#fff}
+.lead-form .wide{grid-column:1/-1}
+.lead-form .area{min-height:96px}
+.lead-form .upload{color:var(--sg)}
+.lead-form .upload span{color:var(--muted)}
+.lead-form .btn{grid-column:1/-1;margin-top:4px}
+.lead-form .qfield[readonly]{background:rgba(107,45,139,.055);color:var(--bm);font-weight:600;cursor:default}
+.faq{background:var(--tl2)}
+.lead-consent{display:flex;align-items:flex-start;gap:9px;margin:2px 0;cursor:pointer;font-family:'Golos Text',sans-serif;font-weight:400;font-size:12px;line-height:1.4;color:var(--sg)}
+.lead-consent input{accent-color:var(--ce);width:16px;height:16px;min-width:16px;margin-top:1px;cursor:pointer}
+.lead-consent a{color:var(--ce);text-decoration:underline;text-underline-offset:2px}
+.lead-consent a:hover{color:var(--ceHover)}
+.lead-err{display:none;color:#b3261e;font-family:'Golos Text',sans-serif;font-size:11.5px;margin:-2px 0 0;grid-column:1/-1}
+.lead-err.is-shown{display:block}
+.mill-lede{font-size:15.5px;line-height:1.65;color:var(--mid);max-width:760px;margin:0}
+.mill-links-row{display:flex;flex-wrap:wrap;gap:1px;background:var(--line);border:1px solid var(--line)}
+.btn,.menu-trigger,.mega a,.nav-tile,.equipment-card,.taskc,.tax-card,.stock-card,.tool-card,.svcc,.casec,.indc,.final-h,.proof-item{transition-duration:.18s!important;transition-timing-function:cubic-bezier(.2,.7,.2,1)!important}
+.btn:hover{transform:translateY(-1px)!important}
+.hero-cta-two .btn{min-height:50px}
+.hero-cta .btn{
+  min-height:52px!important;
+  border-radius:8px!important;
+  font-weight:800!important;
+  position:relative;
+  overflow:hidden;
+}
+.hero-cta .btn::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(120deg,transparent 0 35%,rgba(255,255,255,.28) 45%,transparent 58% 100%);
+  transform:translateX(-120%);
+  animation:heroBtnShine 4.5s ease-in-out infinite;
+  pointer-events:none;
+}
+.btn-ce{
+  background:linear-gradient(145deg,#7c3aa0,#6B2D8B 52%,#4d2066)!important;
+  box-shadow:0 16px 38px rgba(107,45,139,.28), inset 0 1px 0 rgba(255,255,255,.18)!important;
+}
+.btn-gold{
+  background:linear-gradient(145deg,#e0bb5a,#C9A227 52%,#9c7c1e)!important;
+  box-shadow:0 16px 38px rgba(201,162,39,.27), inset 0 1px 0 rgba(255,255,255,.28)!important;
+}
+.solutions-block .h2{
+  font-size:clamp(30px,3.8vw,54px)!important;
+}
+.product-section.dark .h2,.product-section.dark .eyebrow{color:var(--tl)}
+.product-section.dark .h2 .lt{color:rgba(234,234,230,.5)}
+.floating-action-panel .btn{width:100%;justify-content:center;min-height:44px;font-size:10px;padding:0 16px;box-shadow:0 16px 42px rgba(26,26,26,.12)}
+.eqcat-hero {
+  padding: 40px 0 32px;
+  background-image:
+    linear-gradient(rgba(107,45,139,.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(107,45,139,.055) 1px, transparent 1px);
+  background-size: 38px 38px;
+  background-position: center top;
+}
+.eqcat-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: 48px;
+  align-items: center;
+}
+.eqcat-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  color: #8f62c8;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+.eqcat-kicker::before {
+  content: "";
+  width: 34px;
+  height: 1px;
+  background: linear-gradient(90deg, #8f62c8, rgba(143, 98, 200, .15));
+}
+.eqcat-title {
+  margin: 0;
+  max-width: 880px;
+  font-family: 'Magistral', sans-serif;
+  font-weight: 700;
+  font-size: clamp(32px, 4.4vw, 58px);
+  line-height: 1.05;
+  letter-spacing: -.015em;
+  text-transform: none;
+}
+.eqcat-title span {
+  display: block;
+  margin-top: 10px;
+  color: #8d939e;
+  font-size: clamp(20px, 2vw, 31px);
+  font-weight: 500;
+  letter-spacing: .02em;
+  text-transform: none;
+}
+.eqcat-lead {
+  margin: 0;
+  max-width: 480px;
+  color: #666d78;
+  font-size: 17px;
+  line-height: 1.55;
+}
+.eqcat-assist .btn {
+  margin-top: 18px;
+  width: 100%;
+  justify-content: center;
+}
+.mill-hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.mill-hero-media{border-radius:18px;overflow:visible;background:transparent;border:0;display:flex;align-items:center;justify-content:center;min-height:280px}
+.mill-hero-media img{max-width:92%;max-height:94%;width:auto;height:auto;object-fit:contain;filter:drop-shadow(0 30px 34px rgba(26,26,26,.22))}
+.eqcat-subnav-wrap {
+  padding: 10px 0 28px;
+}
+.eqcat-subnav-grid{
+  display:grid;
+  grid-template-columns:minmax(260px,400px) minmax(0,1fr);
+  gap:48px;
+  align-items:center;
+}
+.eqcat-subnav-media{display:flex;align-items:center;justify-content:center;min-height:260px}
+.eqcat-subnav-media img{max-width:100%;max-height:340px;width:auto;height:auto;object-fit:contain;filter:drop-shadow(0 26px 30px rgba(26,26,26,.2))}
+.eqcat-subnav {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+}
+.eqcat-subnav-head{margin-bottom:16px}
+.eqcat-subcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.eqcat-subcards.is-scroll{display:flex;gap:16px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x proximity;padding-bottom:8px;margin-bottom:-8px;-webkit-overflow-scrolling:touch}
+.eqcat-subcards.is-scroll .eqcat-subcard{flex:0 0 300px;scroll-snap-align:start}
+.eqcat-subcards.is-scroll::-webkit-scrollbar{height:6px}
+.eqcat-subcards.is-scroll::-webkit-scrollbar-thumb{background:rgba(107,45,139,.28);border-radius:6px}
+.eqcat-subcards.is-scroll::-webkit-scrollbar-track{background:rgba(26,26,26,.05)}
+.eqcat-subcard{position:relative;display:flex;align-items:center;gap:16px;text-align:left;background:#fff;border:1px solid rgba(26,26,26,.09);border-radius:14px;padding:16px 18px;cursor:pointer;font:inherit;color:inherit;width:100%;transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease,background .2s ease;overflow:hidden}
+.eqcat-subcard:hover{transform:translateY(-2px);border-color:rgba(107,45,139,.35);box-shadow:0 16px 34px rgba(26,26,26,.08)}
+.eqcat-subcard:focus-visible{outline:2px solid var(--ce);outline-offset:2px}
+.eqcat-subcard::before{content:'';position:absolute;left:0;top:0;bottom:0;width:0;background:var(--ce);transition:width .2s ease}
+.eqcat-subcard.is-active{border-color:rgba(107,45,139,.45);background:linear-gradient(120deg,rgba(107,45,139,.06),rgba(107,45,139,.02));box-shadow:0 16px 34px rgba(107,45,139,.12)}
+.eqcat-subcard.is-active::before{width:4px}
+.eqcat-subcard-badge{position:absolute;left:14px;top:14px;width:22px;height:22px;border-radius:50%;background:var(--ce);color:#fff;display:none;align-items:center;justify-content:center;font-size:11px;font-weight:900;box-shadow:0 6px 14px rgba(107,45,139,.35)}
+.eqcat-subcard.is-active .eqcat-subcard-badge{display:flex}
+.eqcat-subcard-media{flex:0 0 auto;width:104px;height:88px;display:flex;align-items:center;justify-content:center;background:var(--tl2);border-radius:10px;overflow:hidden}
+.eqcat-subcard-media img{max-width:86%;max-height:86%;width:auto;height:auto;object-fit:contain}
+.eqcat-subcard-media .ph{font-family:'Golos Text',monospace;font-size:8px;letter-spacing:.6px;text-transform:uppercase;color:rgba(82,86,90,.4);text-align:center;padding:0 6px}
+.eqcat-subcard-body{flex:1;min-width:0}
+.eqcat-subcard-body h3{font-family:'Golos Text',sans-serif;font-size:15.5px;font-weight:800;letter-spacing:-.01em;color:var(--bm);margin:0 0 4px;line-height:1.25}
+.eqcat-subcard-body p{margin:0 0 8px;font-size:12.5px;line-height:1.45;color:var(--mid);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.eqcat-subcard-count{display:block;font-family:'Golos Text',monospace;font-size:10.5px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;color:var(--ce)}
+.eqcat-subcard.is-active .eqcat-subcard-count{color:var(--ceHover)}
+.eqcat-subcard-arrow{flex:0 0 auto;width:30px;height:30px;border-radius:50%;border:1px solid rgba(26,26,26,.12);display:flex;align-items:center;justify-content:center;color:var(--mid);font-size:14px;transition:.2s}
+.eqcat-subcard:hover .eqcat-subcard-arrow,.eqcat-subcard.is-active .eqcat-subcard-arrow{border-color:var(--ce);color:var(--ce);background:rgba(107,45,139,.06)}
+.eqcat-catalog-title{font-size:clamp(22px,2.6vw,32px);text-transform:none}
+.eqcat-catalog-count{font-family:'Golos Text',monospace;font-size:12px;font-weight:700;letter-spacing:.4px;color:var(--mid)}
+.eqcat-sort{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--mid);white-space:nowrap}
+.eqcat-sort select{border:1px solid rgba(26,26,26,.14);background:#fff;padding:9px 12px;font-size:12.5px;font-family:inherit;color:var(--bm);border-radius:2px;cursor:pointer}
+.eqcat-empty{border:1px dashed rgba(26,26,26,.16);background:rgba(255,255,255,.6);padding:56px 32px;text-align:center;border-radius:14px}
+.eqcat-empty-inner{max-width:520px;margin:0 auto}
+.eqcat-empty h3{font-family:'Magistral',sans-serif;font-size:22px;margin-bottom:12px}
+.eqcat-empty p{color:var(--mid);font-size:14px;line-height:1.6;margin-bottom:22px}
+.eqcat-empty-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.vmc-catalog-layout{display:grid;grid-template-columns:286px minmax(0,1fr);gap:24px;align-items:start}
+.vmc-filter-panel{position:sticky;top:92px;max-height:calc(100vh - 112px);overflow-y:auto;overscroll-behavior:contain;background:rgba(255,255,255,.62);border:1px solid rgba(26,26,26,.08);box-shadow:0 24px 62px rgba(26,26,26,.075);backdrop-filter:blur(18px);padding:18px;clip-path:polygon(0 0,calc(100% - 16px) 0,100% 16px,100% 100%,16px 100%,0 calc(100% - 16px))}
+.vmc-filter-panel::-webkit-scrollbar{width:6px}
+.vmc-filter-panel::-webkit-scrollbar-thumb{background:rgba(107,45,139,.28);border-radius:6px}
+.vmc-filter-panel::-webkit-scrollbar-track{background:transparent}
+.vmc-filter-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px;padding-bottom:14px;border-bottom:1px solid rgba(26,26,26,.08)}
+.vmc-filter-head span,.vmc-filter-group strong,.vmc-search span{font-family:'Golos Text',monospace;font-size:10px;font-weight:800;letter-spacing:1.15px;text-transform:uppercase;color:rgba(58,62,68,.72)}
+.vmc-reset{appearance:none;border:0;background:transparent;color:var(--ce);font-family:'Golos Text',monospace;font-size:9px;font-weight:800;letter-spacing:1px;text-transform:uppercase;cursor:pointer;padding:0}
+.vmc-search{display:block;margin-bottom:16px}
+.vmc-search span{display:block;margin-bottom:8px}
+.vmc-search input,.vmc-range-row input{width:100%;border:1px solid rgba(26,26,26,.10);background:rgba(255,255,255,.68);color:var(--bm);font-family:inherit;font-size:13px;padding:11px 12px;outline:none;transition:.18s}
+.vmc-search input:focus,.vmc-range-row input:focus{border-color:rgba(107,45,139,.38);box-shadow:0 0 0 3px rgba(107,45,139,.08)}
+.vmc-filter-apply{margin-top:18px;padding-top:16px;border-top:1px solid rgba(26,26,26,.07);display:grid;gap:10px}
+.vmc-filter-apply .btn{width:100%;justify-content:center;min-height:44px}
+.vmc-filter-preview{text-align:center;font-size:12px;color:rgba(82,86,90,.72)}
+.vmc-filter-preview b{color:var(--ce);font-weight:800}
+.vmc-filter-group{display:grid;gap:10px;margin-top:18px;padding-top:16px;border-top:1px solid rgba(26,26,26,.07)}
+.vmc-tier-label{margin-top:18px;padding-top:16px;border-top:1px solid rgba(26,26,26,.07);font-family:'Golos Text',monospace;font-size:9.5px;font-weight:800;letter-spacing:1.3px;text-transform:uppercase;color:rgba(107,45,139,.62)}
+.vmc-tier-label+.vmc-filter-group{margin-top:12px;padding-top:0;border-top:0}
+.vmc-filter-group label{display:flex;align-items:center;gap:9px;color:rgba(42,45,50,.74);font-size:13px;font-weight:650;line-height:1.35;cursor:pointer}
+.vmc-filter-group input[type="checkbox"]{width:15px;height:15px;accent-color:var(--ce)}
+.vmc-range-row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.vmc-filter-note{margin-top:18px;padding-top:14px;border-top:1px solid rgba(26,26,26,.07);color:rgba(82,86,90,.68);font-size:12px;line-height:1.6}
+.vmc-advanced{margin-top:4px;border-top:1px solid rgba(26,26,26,.07);padding-top:10px}
+.vmc-advanced summary{cursor:pointer;font-family:'Golos Text',monospace;font-size:10.5px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#8f62c8;padding:6px 0}
+.vmc-advanced[open] summary{margin-bottom:4px}
+.vmc-toolbar-actions .btn{width:100%;justify-content:center;min-height:42px}
+.vmc-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.vmc-actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:16px}
+.vmc-actions .btn{min-height:40px;padding:0 10px;font-size:9px;letter-spacing:.85px;text-align:center}
+.vmc-actions .btn-ghost{background:rgba(255,255,255,.38);border-color:rgba(26,26,26,.16)}
+.vmc-actions .btn-ghost:hover{background:var(--bm);border-color:var(--bm);color:#fff}
+.vmc-body{display:flex;flex-direction:column;height:calc(100% - 210px)}
+.vmc-specs{margin-top:auto}
+.milling-tabs-page .eqcat-subnav-wrap{padding:56px 0 18px;background:linear-gradient(180deg,#f7f8fb 0%,#fff 100%)}
+.eqcat-subnav-head{margin-bottom:28px}
+.milling-tabs-page .eqcat-subnav{grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.mill-subtab{position:relative;appearance:none;border:1px solid rgba(120,128,142,.18);background:linear-gradient(150deg,#fff 0%,#fbfaff 100%);box-shadow:0 12px 28px rgba(26,28,36,.05);color:#20242c;text-align:left;cursor:pointer;font:inherit;min-height:150px;padding:22px 22px 20px 26px;display:flex;flex-direction:column;justify-content:space-between;gap:14px;transition:transform .24s cubic-bezier(.2,.7,.2,1),border-color .24s,box-shadow .24s,background .24s;border-radius:14px;overflow:hidden}
+.mill-subtab::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,var(--ce),var(--gold));opacity:.4;transition:opacity .24s ease,width .24s ease}
+.mill-subtab:hover{transform:translateY(-4px);border-color:rgba(143,98,200,.42);background:#fff;box-shadow:0 22px 50px rgba(31,24,45,.12)}
+.mill-subtab:hover::before{opacity:.75}
+.mill-subtab.is-active{transform:translateY(-4px);border-color:rgba(107,45,139,.5);background:linear-gradient(150deg,rgba(107,45,139,.07),rgba(201,162,39,.05) 120%);box-shadow:0 24px 56px rgba(107,45,139,.18)}
+.mill-subtab.is-active::before{opacity:1;width:5px}
+.mill-subtab h3{font-family:'Golos Text',sans-serif;font-size:15.5px;font-weight:800;line-height:1.26;margin:0 0 6px;color:#181b22;letter-spacing:-.005em}
+.mill-subtab p{margin:0;font-size:12px;line-height:1.5;color:#6b7178}
+.mill-subtab-foot{display:flex;flex-direction:column;gap:4px}
+.mill-subtab-link{font-family:'Golos Text',monospace;font-size:10px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;color:#8a8f97;transition:color .2s}
+.mill-subtab-foot small{font-family:'Golos Text',monospace;font-size:10.5px;font-weight:700;letter-spacing:.4px;color:var(--gold)}
+.mill-subtab:hover .mill-subtab-link{color:var(--ce)}
+.mill-subtab.is-active .mill-subtab-link{color:#6B2D8B}
+.mill-subtab.is-active .mill-subtab-foot small{color:var(--ce)}
+.milling-tab-panel{display:none}
+.milling-tab-panel.is-active{display:block}
+.milling-empty-section{padding:28px 0 86px}
+.mill-empty-intro{margin-bottom:26px;max-width:720px}
+.mill-empty-intro p{margin:10px 0 0;color:#68707c;font-size:15.5px;line-height:1.6}
+.mill-sub-note{max-width:420px;border:1px dashed rgba(120,128,142,.35);background:rgba(255,255,255,.6);padding:14px 16px;font-size:12.5px;line-height:1.55;color:#6b7178;margin-top:16px}
+.milling-tabs-page .vmc-grid.vmc-grid-single{grid-template-columns:minmax(0,420px);justify-content:center}
+.milling-tabs-page .vmc-model-section{
+  padding:46px 0 92px;
+  background:radial-gradient(ellipse at 72% 6%,rgba(143,98,200,.12),transparent 30%),linear-gradient(180deg,#f4f5f8 0%,#ffffff 56%,#f1f2f5 100%);
+}
+.milling-tabs-page .vmc-catalog-layout{
+  display:grid;
+  grid-template-columns:286px minmax(0,1fr);
+  gap:30px;
+  align-items:start;
+}
+.milling-tabs-page .vmc-filter-panel{
+  background:rgba(255,255,255,.74);
+  border:1px solid rgba(26,26,26,.08);
+  box-shadow:0 24px 62px rgba(26,26,26,.075);
+  backdrop-filter:blur(18px);
+}
+.milling-tabs-page .vmc-toolbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:16px 28px;
+  margin-bottom:28px;
+}
+.milling-tabs-page .vmc-toolbar h2{margin:0}
+.vmc-toolbar-head{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.milling-tabs-page .vmc-result-line{
+  margin-top:18px;
+  color:rgba(82,86,90,.72);
+  font-size:15px;
+}
+.milling-tabs-page .vmc-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:20px;
+}
+.milling-tabs-page .vmc-card{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  min-height:auto;
+  background:#fff;
+  border:1px solid rgba(26,26,26,.09);
+  border-radius:14px;
+  box-shadow:0 12px 30px rgba(26,26,26,.06);
+  overflow:hidden;
+  transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;
+}
+.vmc-card-link{position:absolute;inset:0;z-index:3}
+.milling-tabs-page .vmc-card:hover{
+  transform:translateY(-4px);
+  border-color:rgba(143,98,200,.3);
+  box-shadow:0 22px 48px rgba(143,98,200,.15),0 14px 34px rgba(26,26,26,.08);
+}
+.milling-tabs-page .vmc-card::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:50%;
+  z-index:3;
+  width:52px;
+  height:2px;
+  transform:translateX(-50%);
+  background:linear-gradient(90deg,var(--ce),var(--gold));
+}
+.milling-tabs-page .vmc-photo{
+  height:196px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:var(--tl2);
+  border-bottom:1px solid rgba(26,26,26,.06);
+  color:rgba(82,86,90,.46);
+  font-family:'Golos Text',monospace;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  position:relative;
+  overflow:hidden;
+}
+.vmc-photo img{transition:transform .3s ease}
+.milling-tabs-page .vmc-card:hover .vmc-photo img{transform:scale(1.05)}
+.vmc-photo-cta{
+  position:absolute;
+  inset:0;
+  z-index:2;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(20,18,26,.36);
+  opacity:0;
+  transition:opacity .2s ease;
+  pointer-events:none;
+}
+.milling-tabs-page .vmc-card:hover .vmc-photo-cta{opacity:1}
+.vmc-photo-cta span{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:9px 20px;
+  background:#fff;
+  color:var(--bm);
+  border-radius:999px;
+  font-family:'Golos Text',monospace;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:1.1px;
+  text-transform:uppercase;
+  box-shadow:0 12px 26px rgba(26,26,26,.28);
+  transform:translateY(6px);
+  transition:transform .2s ease;
+}
+.milling-tabs-page .vmc-card:hover .vmc-photo-cta span{transform:translateY(0)}
+.milling-tabs-page .vmc-body{
+  display:flex;
+  flex-direction:column;
+  flex:1;
+  height:auto;
+  padding:14px 16px 16px;
+}
+.milling-tabs-page .vmc-body small{
+  display:block;
+  margin-bottom:6px;
+  color:var(--ce);
+  font-family:'Golos Text',monospace;
+  font-size:8.5px;
+  font-weight:900;
+  letter-spacing:1.4px;
+  text-transform:uppercase;
+}
+.milling-tabs-page .vmc-body h3{
+  margin:0 0 10px;
+  color:var(--bm);
+  font-size:15.5px;
+  line-height:1.22;
+  letter-spacing:-.012em;
+}
+.milling-tabs-page .vmc-body p{
+  margin:0 0 22px;
+  color:rgba(82,86,90,.78);
+  font-size:16px;
+  line-height:1.58;
+}
+.vmc-offer-btn{
+  position:relative;
+  z-index:4;
+  margin-top:auto;
+  width:100%;
+  min-height:42px;
+  border:1.5px solid var(--ce);
+  background:transparent;
+  color:var(--ce);
+  font-family:'Golos Text',monospace;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  cursor:pointer;
+  transition:background .18s ease,color .18s ease;
+}
+.vmc-offer-btn:hover{background:var(--ce);color:#fff}
+.milling-tabs-page .vmc-specs{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:1px;
+  margin-top:0;
+  background:rgba(26,26,26,.06);
+  border:1px solid rgba(26,26,26,.06);
+}
+.milling-tabs-page .vmc-specs div{
+  min-height:auto;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  background:#fff;
+  border:0;
+  padding:7px 9px;
+}
+.milling-tabs-page .vmc-specs span{
+  margin-bottom:2px;
+  color:rgba(82,86,90,.48);
+  font-family:'Golos Text',monospace;
+  font-size:7.5px;
+  font-weight:800;
+  letter-spacing:.9px;
+  text-transform:uppercase;
+}
+.milling-tabs-page .vmc-specs b{
+  color:rgba(32,36,44,.92);
+  font-size:12px;
+  line-height:1.2;
+}
+.milling-tabs-page .vmc-actions{
+  position:relative;
+  z-index:2;
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:10px;
+  margin-top:auto;
+  padding-top:24px;
+}
+.milling-tabs-page .vmc-actions .btn{
+  min-height:54px;
+  padding:0 12px;
+  border-radius:0;
+  font-family:'Golos Text',monospace;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:1.4px;
+  text-align:center;
+  text-transform:uppercase;
+}
+.milling-tabs-page .vmc-actions .btn-ce{
+  background:linear-gradient(135deg,#7f35ad,#9b54c8);
+  color:#fff;
+  border-color:transparent;
+  box-shadow:0 16px 34px rgba(127,53,173,.22);
+}
+.milling-tabs-page .vmc-actions .btn-gold{
+  background:linear-gradient(135deg,#c7a12f,#e1bd47);
+  color:#1d1d20;
+  border-color:rgba(151,118,19,.22);
+}
+.milling-tabs-page .vmc-card.is-hidden{display:none!important}
+/* responsive */
+@media(max-width:1080px){
+  .menu{display:none}.burger{display:flex;align-items:center;justify-content:center}
+  .proofline-in{grid-template-columns:repeat(2,1fr)}
+  .proof-item.dark{grid-column:1/-1}
+  .tool-photo{width:150px;height:104px}.tool-photo-track{gap:24px;padding:16px 24px}
+  .nav-tile{padding:7px 9px}.nav-tile b{font-size:11.5px}.nav-tile.chat b{font-size:9px}.msg-ic{width:19px;height:19px;font-size:6px}.msg-ic.max{width:auto;min-width:58px;height:23px;font-size:15px}.msg-ic.max::before{width:22px;height:19px;flex-basis:22px}.msg-ic.max::after{left:7px;bottom:4px;width:8px;height:7px}.msg-ic.tg svg{width:11px;height:11px}
+  .pm-widget{right:14px;bottom:14px;padding:10px 11px 10px 12px;gap:10px}.pm-widget b{font-size:11px}.pm-widget small{font-size:6.8px}.pm-widget .msg-ic{width:20px;height:20px}.pm-widget .msg-ic.max{width:auto;min-width:56px;height:23px;font-size:15px}.pm-widget .msg-ic.tg svg{width:11px;height:11px}
+  .hero{grid-template-columns:1fr}.hero-l{width:100%;padding:1.6rem 0 2.3rem}.hero-r{min-height:380px}.hero-r::after{background:linear-gradient(90deg,rgba(237,238,240,.98) 0%,rgba(237,238,240,.82) 62%,rgba(237,238,240,.22) 100%)}
+  .equipment-grid{grid-template-columns:repeat(2,1fr)}
+  .tools-layout{grid-template-columns:1fr}.tools-grid{grid-template-columns:repeat(2,1fr)}.tools-points{grid-template-columns:repeat(2,1fr)}
+  .eqcards,.task-grid{grid-template-columns:repeat(2,1fr)}
+  .sys-layout{grid-template-columns:1fr;gap:28px}
+  .sys-proof{max-width:680px}
+  .system::before{background:linear-gradient(90deg,rgba(26,26,26,.98) 0%,rgba(26,26,26,.9) 100%),url('equipment-part-milling.jpg') left 20%/360px auto no-repeat,url('mehanit-hero-machine.png') right center/72% auto no-repeat}
+  .case-grid,.lz-layout,.quiz-panel,.final-grid{grid-template-columns:1fr}
+  .stock-hero,.stock-grid,.stock-seo{grid-template-columns:1fr}
+  .stock-feature{min-height:360px}
+  .stock-process{grid-template-columns:repeat(2,1fr)}
+  .stock-process div:nth-child(3){border-left:none}
+  .svc-grid,.ind-grid{grid-template-columns:repeat(2,1fr)}
+  .cat-layout{grid-template-columns:1fr}.filters{position:static}
+  .tax-grid{grid-template-columns:1fr}
+  .catalog-detail{grid-template-columns:1fr}
+  .machine-placeholders{grid-template-columns:repeat(2,1fr)}
+  .foot-top{grid-template-columns:1fr 1fr}
+}
+@media(max-width:680px){
+  .wrap{width:min(calc(100% - 32px),var(--max))}
+  .proofline-in{grid-template-columns:1fr}
+  .proof-item{min-height:auto;padding:16px}
+  .tool-photo-strip{margin:-1rem 0 1.6rem}
+  .tool-photo{width:126px;height:88px}.tool-photo-track{gap:18px;padding:14px 18px;animation-duration:36s}
+  .catalog-backline{display:block}.catalog-backline span{display:block;margin-top:8px}
+  .nav-contact{display:none}
+  .pm-widget{left:16px;right:16px;bottom:14px;justify-content:space-between}.pm-widget b{white-space:normal;line-height:1.15}
+  .lead-modal{padding:14px}.lead-content{padding:28px 20px}.lead-form{grid-template-columns:1fr}.lead-close{top:10px;right:10px}
+  .hero-l{min-height:auto;width:100%;padding:1.5rem 0 2rem}.hero-h1{font-size:clamp(31px,8.6vw,42px);margin-bottom:.82rem}.hero-r::after{background:linear-gradient(180deg,rgba(237,238,240,.99) 0%,rgba(237,238,240,.9) 62%,rgba(237,238,240,.34) 100%)}.hero-video,.hero-video-fallback{object-position:center;filter:saturate(1.06) contrast(1.12) brightness(1.14)}
+  .hero-cta{grid-template-columns:1fr;max-width:100%}
+  .hero-stats{grid-template-columns:repeat(2,1fr)}.hs:nth-child(2n){border-right:none}
+  .trust-logos{width:100%;margin-left:0;transform:none}.client-logos{min-height:140px;max-height:190px}
+  .tech-card,.live-badge{display:none}
+  .eqcards,.task-grid,.svc-grid,.ind-grid,.equipment-grid,.tools-grid,.tools-points,.tool-brand-list{grid-template-columns:1fr}
+  .tools-hero{min-height:auto;padding:26px}
+  .catalog-detail{padding:18px}.machine-placeholders{grid-template-columns:1fr}.stock-strip{display:block}.stock-pill{display:inline-flex;margin-top:14px}
+  .stock-copy{padding:24px}.stock-metrics{grid-template-columns:1fr}
+  .stock-toolbar{display:block}.stock-note{margin-top:12px}
+  .stock-card{grid-template-columns:1fr;min-height:0}.stock-card-media{height:300px}.stock-card-body{padding:20px}
+  .stock-specs{grid-template-columns:1fr}.stock-seo-box,.stock-process{padding:22px}
+  .stock-process{grid-template-columns:1fr}.stock-process div{border-left:none;border-top:1px solid var(--line);padding:14px 0}.stock-process div:first-child{border-top:none;padding-top:0}
+  .sys-proof{grid-template-columns:1fr}.sys-proof div{border-right:none;border-bottom:1px solid rgba(234,234,230,.1)}.sys-proof div:last-child{border-bottom:none}
+  .system .wrap::before,.system .wrap::after{display:none}
+  .sys-result-photo{min-height:230px}.sys-result-caption{min-height:230px;padding:20px}.sys-result-photo img{object-position:center}
+  .sys-map{padding:22px 18px}.sys-map::before{display:none}.sys-step{grid-template-columns:48px 1fr;gap:14px}.sys-num{width:38px;height:38px}.sys-step::before{left:19px}
+  .stock-strip{display:block}.stock-pill{display:inline-block;margin-top:14px}
+  .hero-h1{font-size:38px}section{padding:3.6rem 0}
+  .foot-top{grid-template-columns:1fr}
+}
+@media(max-width:900px){
+    .equipment-subgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .equipment-detail-result{display:block}
+    .equipment-detail-result .btn{margin-top:18px}
+}
+@media(max-width:980px){.mill-hero-media{min-height:220px;order:-1}}
+@media (max-width: 980px) {
+  .eqcat-head,
+  .eqcat-layout { grid-template-columns: 1fr; }
+  .eqcat-filter { position: static; }
+  .eqcat-model-grid { grid-template-columns: 1fr; }
+  .eqcat-subnav-grid { grid-template-columns: 1fr; }
+  .eqcat-subnav-media { order: -1; min-height: 200px; }
+}
+@media (max-width: 640px) {
+  .eqcat-hero { padding-top: 54px; }
+  .eqcat-subnav { grid-template-columns: 1fr 1fr; }
+  .eqcat-subitem { min-height: 94px; padding: 14px; }
+  .eqcat-model-actions { flex-direction: column; align-items: stretch; }
+  .eqcat-subcards{display:flex;flex-wrap:nowrap;overflow-x:auto;scroll-snap-type:x proximity;padding-bottom:8px;margin-bottom:-8px}
+  .eqcat-subcards .eqcat-subcard{flex:0 0 84%;scroll-snap-align:start}
+  .eqcat-subcard-media{width:80px;height:70px}
+  .eqcat-sort{width:100%;justify-content:space-between}
+  .eqcat-sort select{flex:1}
+}
+@media(max-width:1180px){.vmc-catalog-layout{grid-template-columns:1fr}.vmc-filter-panel{position:relative;top:auto}.vmc-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.vmc-toolbar-actions{margin-top:18px}.vmc-toolbar{display:block}}
+@media(max-width:720px){.vmc-grid{grid-template-columns:1fr}.vmc-check-grid{grid-template-columns:1fr}.vmc-filter-panel{padding:16px}}
+@media(max-width:1180px){.vmc-actions{grid-template-columns:1fr}}
+@media(max-width:1080px){.milling-tabs-page .eqcat-subnav{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:640px){.milling-tabs-page .eqcat-subnav{grid-template-columns:1fr}.mill-subtab{min-height:auto}}
+@media(max-width:1180px){
+  .milling-tabs-page .vmc-catalog-layout{grid-template-columns:1fr}
+  .milling-tabs-page .vmc-filter-panel{position:relative;top:auto;max-height:none}
+  .milling-tabs-page .vmc-toolbar{display:block}
+}
+@media(max-width:560px){
+  .milling-tabs-page .vmc-grid{grid-template-columns:1fr}
+  .milling-tabs-page .vmc-card{min-height:auto}
+  .milling-tabs-page .vmc-specs,.milling-tabs-page .vmc-actions{grid-template-columns:1fr}
+}
+.eqcat-filter-toggle{display:none;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 20px;border:1.5px solid var(--ce);background:#fff;color:var(--ce);font-family:'Golos Text',monospace;font-size:11px;font-weight:800;letter-spacing:1px;text-transform:uppercase;border-radius:2px;cursor:pointer}
+.eqcat-filter-close{display:none;border:0;background:transparent;color:var(--mid);font-size:22px;line-height:1;cursor:pointer;padding:0 0 0 10px}
+.eqcat-filter-backdrop{display:none}
+@media(max-width:1180px){
+  .eqcat-filter-toggle{display:inline-flex;order:3;width:100%}
+  .milling-tabs-page .vmc-toolbar{display:flex;flex-direction:column;align-items:stretch}
+  .milling-tabs-page .vmc-filter-panel{
+    position:fixed;left:0;right:0;bottom:0;top:auto;
+    max-height:82vh;
+    width:auto;
+    border-radius:16px 16px 0 0;
+    box-shadow:0 -20px 60px rgba(26,26,26,.28);
+    transform:translateY(105%);
+    transition:transform .28s ease;
+    z-index:150;
+  }
+  .milling-tabs-page .vmc-filter-panel.is-open{transform:translateY(0)}
+  .eqcat-filter-close{display:block}
+  .eqcat-filter-backdrop{display:block;position:fixed;inset:0;background:rgba(26,26,26,.5);z-index:149;opacity:0;pointer-events:none;transition:opacity .28s ease}
+  .eqcat-filter-backdrop.is-open{opacity:1;pointer-events:auto}
+}
+:root{--max:1640px}
+.mill-types-line{margin:16px 0 0;font-family:'Golos Text',monospace;font-size:12.5px;letter-spacing:.4px;color:#8f929a}
+.vmc-photo img{max-width:84%;max-height:82%;width:auto;height:auto;object-fit:contain;filter:drop-shadow(0 8px 14px rgba(26,26,26,.14))}
+.media img{max-width:94%;max-height:94%;width:auto;height:auto;object-fit:contain;filter:drop-shadow(0 14px 22px rgba(26,26,26,.16))}
+.vmc-model-section{padding:46px 0 92px;background:radial-gradient(ellipse at 72% 6%,rgba(143,98,200,.12),transparent 30%),linear-gradient(180deg,#f4f5f8 0%,#ffffff 56%,#f1f2f5 100%)}
+.mill-links-row a{display:flex;align-items:center;gap:8px;padding:16px 20px;background:rgba(255,255,255,.7);color:var(--bm);font-size:13px;font-weight:650}
+.mill-links-row a:hover{color:var(--ce)}
+.faq{padding:52px 0}
+.faq-item{border-bottom:1px solid var(--line);padding:18px 0}
+.faq-item summary{cursor:pointer;font-weight:700;font-size:15px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:'+';font-size:20px;color:var(--ce)}
+.faq-item[open] summary::after{content:'–'}
+.faq-item p{margin-top:12px;color:var(--mid);font-size:14px;line-height:1.6;max-width:800px}
+.final-cta{padding:64px 0;background:var(--bm);color:var(--tl);text-align:center}
+.final-cta h2{color:var(--tl)}
+.final-cta p{color:rgba(234,234,230,.72);max-width:560px;margin:14px auto 26px;font-size:15px;line-height:1.6}
+.final-cta-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.mini-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.mini{border:1px solid var(--line);background:rgba(255,255,255,.58);padding:17px;min-height:120px}
+.mini b{display:block;font-family:'Magistral',sans-serif;font-size:15px;margin-bottom:8px}
+.mini span{font-size:13px;line-height:1.55;color:var(--mid)}
+.submodel-table{margin-bottom:22px}
+.submodel-table h4{font-family:'Magistral',sans-serif;font-size:16px;margin-bottom:10px;color:var(--bm)}
+.call-card{margin-top:10px;padding:18px 20px;border:1px solid rgba(107,45,139,.18);background:rgba(255,255,255,.82);backdrop-filter:blur(8px)}
+.call-card small{display:block;font-family:'Golos Text',monospace;font-size:9px;letter-spacing:1.8px;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+.call-card a{font-family:'Magistral',sans-serif;font-size:clamp(26px,4vw,42px);font-weight:700;letter-spacing:-.04em;color:var(--bm)}
+.call-card p{margin-top:10px!important;margin-bottom:0!important}
+@media(max-width:640px){.mini-grid{grid-template-columns:1fr}}
+
+.g2-page .eqcat-hero{padding-bottom:34px}
+.g2-hero-top{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:48px;align-items:start}
+.g2-hero-left{display:flex;flex-direction:column}
+.g2-hero-right{display:flex;flex-direction:column;gap:14px}
+.g2-feature-row{display:flex;flex-wrap:nowrap;gap:16px;margin-top:24px}
+.g2-feature{display:flex;align-items:center;gap:9px;min-width:0;flex:1 1 0}
+.g2-feature-ic{flex:0 0 auto;width:32px;height:32px;border-radius:50%;background:linear-gradient(150deg,rgba(107,45,139,.1),rgba(201,162,39,.08));display:flex;align-items:center;justify-content:center;color:var(--ce)}
+.g2-feature-ic svg{width:18px;height:18px}
+.g2-feature-body{min-width:0}
+.g2-feature b{display:block;font-size:12px;font-weight:800;color:var(--bm);line-height:1.3;margin-bottom:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.g2-feature small{display:block;font-size:11px;color:var(--mid);line-height:1.3}
+.g2-subnav-title{margin-top:6px;text-transform:none;font-size:clamp(24px,2.8vw,34px)}
+.g2-toolbar-head{display:flex;flex-direction:column;gap:6px}
+.g2-toolbar-title-row{display:flex;align-items:baseline;gap:8px 18px;flex-wrap:wrap}
+.g2-catalog-desc{flex:1 1 260px;min-width:220px;color:var(--mid);font-size:13.5px;line-height:1.5;font-weight:400}
+.g2-toolbar-tools{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.g2-fallback-note{margin:-8px 0 18px;padding:10px 14px;background:rgba(201,162,39,.08);border:1px dashed rgba(201,162,39,.4);color:#8a6d10;font-size:12.5px;line-height:1.5;border-radius:6px}
+.g2-filter-panel{padding:20px}
+.g2-filter-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:16px;padding-bottom:14px;border-bottom:1px solid rgba(26,26,26,.08)}
+.g2-filter-head>span{font-family:'Golos Text',monospace;font-size:10px;font-weight:800;letter-spacing:1.15px;text-transform:uppercase;color:rgba(58,62,68,.72)}
+.g2-reset{display:inline-flex;align-items:center;gap:6px;appearance:none;border:0;background:transparent;color:var(--ce);font-family:'Golos Text',monospace;font-size:9px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;cursor:pointer;padding:0}
+.g2-search{position:relative;display:block;margin-bottom:18px}
+.g2-search-ic{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:rgba(82,86,90,.5)}
+.g2-search input{width:100%;border:1px solid rgba(26,26,26,.10);background:rgba(255,255,255,.68);color:var(--bm);font-family:inherit;font-size:13px;padding:11px 12px 11px 34px;outline:none;transition:.18s}
+.g2-search input:focus{border-color:rgba(107,45,139,.38);box-shadow:0 0 0 3px rgba(107,45,139,.08)}
+.g2-direct{display:grid;gap:14px;padding-top:14px;border-top:1px solid rgba(26,26,26,.07)}
+.g2-field strong{display:block;margin-bottom:8px;font-family:'Golos Text',monospace;font-size:10px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;color:rgba(42,45,50,.72)}.g2-check{display:flex;align-items:center;gap:9px;cursor:pointer;font-family:'Golos Text',monospace;font-size:10px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;color:rgba(42,45,50,.72)}.g2-check input{width:16px;height:16px;accent-color:var(--ce);cursor:pointer;flex:0 0 auto}
+.g2-group{margin-top:14px;padding-top:14px;border-top:1px solid rgba(26,26,26,.07)}
+.g2-group summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;font-family:'Golos Text',monospace;font-size:10.5px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;color:rgba(42,45,50,.8);padding:2px 0}
+.g2-group summary::-webkit-details-marker{display:none}
+.g2-group summary::after{content:'+';font-size:15px;color:var(--ce)}
+.g2-group[open] summary::after{content:'–'}
+.g2-group-body{display:grid;gap:14px;margin-top:14px}
+.g2-apply-wrap{margin-top:18px;padding-top:16px;border-top:1px solid rgba(26,26,26,.07)}
+.g2-apply{width:100%;justify-content:center;min-height:46px}
+@media(min-width:1181px){
+  .g2-page .vmc-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+}
+@media(max-width:980px){
+  .g2-hero-top{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .g2-page .eqcat-subcards{display:grid!important;grid-template-columns:1fr!important;overflow:visible!important}
+  .g2-page .eqcat-subcards .eqcat-subcard{flex:1 1 auto!important}
+  .g2-toolbar-tools{width:100%}
+}
+</style>
+<link rel="stylesheet" href="site-shell.css"/>
+</head>
+<body class="premium-v3 milling-tabs-page g2-page">
+<header></header>
+<nav class="crumbbar" aria-label="Хлебные крошки"><div class="wrap crumbs"><a href="index.html">Главная</a><span class="crumb-sep" aria-hidden="true">/</span><a href="equipment.html">Оборудование</a><span class="crumb-sep" aria-hidden="true">/</span><span class="current" aria-current="page">Горизонтально-расточные станки</span></div></nav>
+<main class="eqcat-page">
+<section class="eqcat-hero"><div class="wrap">
+<div class="g2-hero-top">
+<div class="g2-hero-left">
+<h1 class="eqcat-title">Горизонтально-расточные станки</h1>
+<div class="g2-feature-row"><div class="g2-feature"><span class="g2-feature-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.2"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3"/></svg></span><div class="g2-feature-body"><b>Точность растачивания</b><small>Допуски в сотые доли миллиметра</small></div></div><div class="g2-feature"><span class="g2-feature-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l7 3v5c0 4.5-3 7.8-7 9-4-1.2-7-4.5-7-9V6l7-3z"/><path d="M8.8 12.2l2.1 2.1 4.3-4.3"/></svg></span><div class="g2-feature-body"><b>Жёсткость конструкции</b><small>Для тяжёлых корпусных деталей</small></div></div><div class="g2-feature"><span class="g2-feature-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 15c2-3 4-3 6 0s4 3 6 0 4-3 6 0"/><path d="M3 9c2-3 4-3 6 0s4 3 6 0 4-3 6 0"/></svg></span><div class="g2-feature-body"><b>Многофункциональность</b><small>Расточка, фрезерование, торцевание за установ</small></div></div></div>
+</div>
+<div class="g2-hero-right">
+<p class="eqcat-lead">Растачивание, сверление, фрезерование и торцевание крупногабаритных корпусных деталей с УЦИ или ЧПУ. Точность и жёсткость для деталей, которые не переустановить на обычном станке.</p>
+</div>
+</div>
+</div></section>
+
+<section class="eqcat-subnav-wrap" id="subcats"><div class="wrap">
+<div class="eqcat-subnav-head"><div class="eyebrow">Подкатегории</div><h2 class="h2 g2-subnav-title">Выберите тип оборудования</h2></div>
+<nav class="eqcat-subcards">
+<button type="button" class="eqcat-subcard is-active" data-milling-tab="uci" aria-current="true">
+<span class="eqcat-subcard-badge" aria-hidden="true">✓</span>
+<span class="eqcat-subcard-media"><img src="boring-assets/tpx6111b-3-f.png" alt="Горизонтально-расточные станки с УЦИ" loading="lazy"/></span>
+<span class="eqcat-subcard-body">
+<h3>Горизонтально-расточные станки с УЦИ</h3>
+
+</span>
+<span class="eqcat-subcard-arrow" aria-hidden="true">→</span>
+</button><button type="button" class="eqcat-subcard" data-milling-tab="chpu" aria-current="false">
+<span class="eqcat-subcard-badge" aria-hidden="true">✓</span>
+<span class="eqcat-subcard-media"><img src="boring-assets/tk6111-cnc-tk6113-cnc-ft.png" alt="Горизонтально-расточные станки с ЧПУ" loading="lazy"/></span>
+<span class="eqcat-subcard-body">
+<h3>Горизонтально-расточные станки с ЧПУ</h3>
+
+</span>
+<span class="eqcat-subcard-arrow" aria-hidden="true">→</span>
+</button>
+</nav>
+</div></section>
+
+<section class="milling-tab-panel is-active" data-milling-panel="uci">
+<section class="vmc-model-section"><div class="wrap">
+<div class="vmc-catalog-layout" data-vmc-scope>
+<aside class="vmc-filter-panel g2-filter-panel">
+<div class="eqcat-filter-backdrop" data-role="filter-backdrop"></div>
+<div class="g2-filter-head"><span>Фильтр</span><button type="button" class="g2-reset" data-role="reset"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg>Сбросить всё</button><button type="button" class="eqcat-filter-close" data-role="filter-close" aria-label="Закрыть фильтр">×</button></div>
+<label class="g2-search"><span class="g2-search-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span><input type="search" data-role="search" placeholder="Поиск по модели"/></label>
+<div class="g2-direct"><div class="g2-field"><strong>Диаметр шпинделя (мм)</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="spindle-diameter" data-bound="min"/>
+<input type="number" placeholder="До" data-range="spindle-diameter" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Ход по оси X, Y, Z</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="travel-xyz" data-bound="min"/>
+<input type="number" placeholder="До" data-range="travel-xyz" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Размер стола</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="table-size" data-bound="min"/>
+<input type="number" placeholder="До" data-range="table-size" data-bound="max"/>
+</div></div></div>
+<details class="g2-group" open><summary>Дополнительные параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Конус шпинделя</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="spindle-taper" data-bound="min"/>
+<input type="number" placeholder="До" data-range="spindle-taper" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Частота вращения шпинделя (об/мин)</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="spindle-speed" data-bound="min"/>
+<input type="number" placeholder="До" data-range="spindle-speed" data-bound="max"/>
+</div></div></div></details>
+<details class="g2-group"><summary>Все параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Мощность привода (кВт)</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="motor-power" data-bound="min"/>
+<input type="number" placeholder="До" data-range="motor-power" data-bound="max"/>
+</div></div></div></details>
+<div class="g2-apply-wrap">
+<button type="button" class="btn btn-ce g2-apply" data-role="apply">Показать <span data-role="preview">2</span> <span data-role="preview-word">моделей</span></button>
+</div>
+<p class="vmc-filter-note">Не нашли нужный параметр в фильтре — характеристики каждой модели указаны в карточке и на странице станка.</p>
+</aside>
+<div>
+<div class="vmc-toolbar g2-toolbar">
+<div class="vmc-toolbar-head g2-toolbar-head">
+<div class="eyebrow">Модельный ряд</div>
+<div class="g2-toolbar-title-row"><h2 class="h2 eqcat-catalog-title">Горизонтально-расточные станки с УЦИ</h2><span class="g2-catalog-desc">Ручное позиционирование с цифровой индикацией — для мелкосерийного и ремонтного производства.</span></div>
+</div>
+<div class="g2-toolbar-tools">
+<button type="button" class="eqcat-filter-toggle" data-role="filter-toggle">Все фильтры</button>
+</div>
+</div>
+<div class="g2-fallback-note" data-role="fallback-note" hidden>Точных совпадений не нашлось — показаны ближайшие по параметрам модели.</div>
+<div class="vmc-grid">
+<article class="vmc-card" data-name="tpx6111b-3 f горизонтально-расточные станки с уци" data-title="TPX6111B-3 F" data-sortkey="110.0" data-spindle-diameter="110" data-spindle-taper="50">
+<a class="vmc-card-link" href="equipment-boring-tpx6111b-3-f.html" aria-label="TPX6111B-3 F — подробнее"></a>
+<div class="vmc-photo"><img src="boring-assets/tpx6111b-3-f.png" alt="TPX6111B-3 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>С УЦИ</small>
+<h3>TPX6111B-3 F</h3>
+<div class="vmc-specs"><div><span>Диаметр шпинделя (мм)</span><b>Ø110 мм</b></div><div><span>Ход по оси X, Y, Z</span><b>—</b></div><div><span>Размер стола</span><b>—</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="tpx6113f1-manual / tpx6113f2-manual ft горизонтально-расточные станки с уци" data-title="TPX6113F1-Manual / TPX6113F2-Manual Ft" data-sortkey="130.0" data-spindle-diameter="130" data-travel-xyz="1800|2000" data-table-size="1600|1800" data-spindle-taper="50" data-spindle-speed="1500" data-motor-power="30">
+<a class="vmc-card-link" href="equipment-boring-tpx6113f1-manual-tpx6113f2-manual-ft.html" aria-label="TPX6113F1-Manual / TPX6113F2-Manual Ft — подробнее"></a>
+<div class="vmc-photo"><img src="boring-assets/tpx6113f1-manual-tpx6113f2-manual-ft.png" alt="TPX6113F1-Manual / TPX6113F2-Manual Ft" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>С УЦИ</small>
+<h3>TPX6113F1-Manual / TPX6113F2-Manual Ft</h3>
+<div class="vmc-specs"><div><span>Диаметр шпинделя (мм)</span><b>Ø130 мм</b></div><div><span>Ход по оси X, Y, Z</span><b>1800 мм × 1600 мм × 1500 / 2000 мм × 1800 мм × 1500 мм</b></div><div><span>Размер стола</span><b>1600×1400 / 1800×1600 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+</div>
+</div>
+</div>
+</div></section>
+</section><section class="milling-tab-panel" data-milling-panel="chpu">
+<section class="vmc-model-section"><div class="wrap">
+<div class="vmc-catalog-layout" data-vmc-scope>
+<aside class="vmc-filter-panel g2-filter-panel">
+<div class="eqcat-filter-backdrop" data-role="filter-backdrop"></div>
+<div class="g2-filter-head"><span>Фильтр</span><button type="button" class="g2-reset" data-role="reset"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg>Сбросить всё</button><button type="button" class="eqcat-filter-close" data-role="filter-close" aria-label="Закрыть фильтр">×</button></div>
+<label class="g2-search"><span class="g2-search-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span><input type="search" data-role="search" placeholder="Поиск по модели"/></label>
+<div class="g2-direct"><div class="g2-field"><strong>Диаметр шпинделя (мм)</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="spindle-diameter" data-bound="min"/>
+<input type="number" placeholder="До" data-range="spindle-diameter" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Ход по оси X, Y, Z</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="travel-xyz" data-bound="min"/>
+<input type="number" placeholder="До" data-range="travel-xyz" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Размер стола</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="table-size" data-bound="min"/>
+<input type="number" placeholder="До" data-range="table-size" data-bound="max"/>
+</div></div></div>
+<details class="g2-group" open><summary>Дополнительные параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Конус шпинделя</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="spindle-taper" data-bound="min"/>
+<input type="number" placeholder="До" data-range="spindle-taper" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Частота вращения шпинделя (об/мин)</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="spindle-speed" data-bound="min"/>
+<input type="number" placeholder="До" data-range="spindle-speed" data-bound="max"/>
+</div></div></div></details>
+<details class="g2-group"><summary>Все параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Мощность привода (кВт)</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="motor-power" data-bound="min"/>
+<input type="number" placeholder="До" data-range="motor-power" data-bound="max"/>
+</div></div></div></details>
+<div class="g2-apply-wrap">
+<button type="button" class="btn btn-ce g2-apply" data-role="apply">Показать <span data-role="preview">3</span> <span data-role="preview-word">моделей</span></button>
+</div>
+<p class="vmc-filter-note">Не нашли нужный параметр в фильтре — характеристики каждой модели указаны в карточке и на странице станка.</p>
+</aside>
+<div>
+<div class="vmc-toolbar g2-toolbar">
+<div class="vmc-toolbar-head g2-toolbar-head">
+<div class="eyebrow">Модельный ряд</div>
+<div class="g2-toolbar-title-row"><h2 class="h2 eqcat-catalog-title">Горизонтально-расточные станки с ЧПУ</h2><span class="g2-catalog-desc">Программное управление для серийной обработки и повторяемых сложных деталей.</span></div>
+</div>
+<div class="g2-toolbar-tools">
+<button type="button" class="eqcat-filter-toggle" data-role="filter-toggle">Все фильтры</button>
+</div>
+</div>
+<div class="g2-fallback-note" data-role="fallback-note" hidden>Точных совпадений не нашлось — показаны ближайшие по параметрам модели.</div>
+<div class="vmc-grid">
+<article class="vmc-card" data-name="tk6111-cnc / tk6113-cnc ft горизонтально-расточные станки с чпу" data-title="TK6111-CNC / TK6113-CNC Ft" data-sortkey="110.0" data-spindle-diameter="110|130" data-travel-xyz="1600|1400|1300|1800" data-table-size="1400|1800" data-spindle-taper="50" data-spindle-speed="2000|1500" data-motor-power="22|30">
+<a class="vmc-card-link" href="equipment-boring-tk6111-cnc-tk6113-cnc-ft.html" aria-label="TK6111-CNC / TK6113-CNC Ft — подробнее"></a>
+<div class="vmc-photo"><img src="boring-assets/tk6111-cnc-tk6113-cnc-ft.png" alt="TK6111-CNC / TK6113-CNC Ft" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>С ЧПУ</small>
+<h3>TK6111-CNC / TK6113-CNC Ft</h3>
+<div class="vmc-specs"><div><span>Диаметр шпинделя (мм)</span><b>Ø110 / Ø130 мм</b></div><div><span>Ход по оси X, Y, Z</span><b>1600 (опц. 2 м) мм × 1400 (опц. 2 м) мм × 1300 / 1800 (опц. 2; 3 м) мм × 1600 (опц. 2 м) мм × 1600 мм</b></div><div><span>Размер стола</span><b>1400×1200 / 1800×1600 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="tk6511 / tk6513 / tk6516 / tk6813 / tk6816 ft горизонтально-расточные станки с чпу" data-title="TK6511 / TK6513 / TK6516 / TK6813 / TK6816 Ft" data-sortkey="110.0" data-spindle-diameter="110|130|160" data-travel-xyz="2000|1500|1200|3000|1600" data-table-size="1400|1800|2200|2000|2500" data-spindle-taper="50" data-spindle-speed="2000|1500|1200" data-motor-power="22|30|37|51">
+<a class="vmc-card-link" href="equipment-boring-tk6511-tk6513-tk6516-tk6813-tk6816-ft.html" aria-label="TK6511 / TK6513 / TK6516 / TK6813 / TK6816 Ft — подробнее"></a>
+<div class="vmc-photo"><img src="boring-assets/tk6511-tk6513-tk6516-tk6813-tk6816-ft.png" alt="TK6511 / TK6513 / TK6516 / TK6813 / TK6816 Ft" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>С ЧПУ</small>
+<h3>TK6511 / TK6513 / TK6516 / TK6813 / TK6816 Ft</h3>
+<div class="vmc-specs"><div><span>Диаметр шпинделя (мм)</span><b>Ø110 / Ø130 / Ø160 мм</b></div><div><span>Ход по оси X, Y, Z</span><b>2000 (опц. 3, 4 м) мм × 1500 (опц. 2; 2.5 м) мм × 1200 / 3000 (опц. 3, 4, 5 м) мм × 1600 (опц. 2; 2.5; 3 м) мм × 1600 / 3000 (опц. 3, 4, 5 м) мм × 2000 (опц. 2.5; 3; 3.5 м) мм × 1600 / 3000 (опц. 4, 5 м) мм × 2000 (опц. 3, 4 м) мм × 1600 мм</b></div><div><span>Размер стола</span><b>1400×1250 / 1800×1600 / 2200×1800 / 2000×2000 / 2500×2000 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="tk6913 / tk6916 / tk6920 / tk6926 ft горизонтально-расточные станки с чпу" data-title="TK6913 / TK6916 / TK6920 / TK6926 Ft" data-sortkey="130.0" data-spindle-diameter="130|160|200|260" data-travel-xyz="4000|2000|800|6000|3000|1200|8000|12000|5000|1600" data-spindle-taper="50|60" data-spindle-speed="1500|1200|1000" data-motor-power="30|51|71|90">
+<a class="vmc-card-link" href="equipment-boring-tk6913-tk6916-tk6920-tk6926-ft.html" aria-label="TK6913 / TK6916 / TK6920 / TK6926 Ft — подробнее"></a>
+<div class="vmc-photo"><img src="boring-assets/tk6913-tk6916-tk6920-tk6926-ft.png" alt="TK6913 / TK6916 / TK6920 / TK6926 Ft" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>С ЧПУ</small>
+<h3>TK6913 / TK6916 / TK6920 / TK6926 Ft</h3>
+<div class="vmc-specs"><div><span>Диаметр шпинделя (мм)</span><b>Ø130 / Ø160 / Ø200 / Ø260 мм</b></div><div><span>Ход по оси X, Y, Z</span><b>4000 (опц. 5–15 м) мм × 2000 (опц. 3; 3.5 м) мм × 800 / 6000 (опц. 7–25 м) мм × 3000 (опц. 4; 4.5 м) мм × 1200 / 8000 (опц. 9–25 м) мм × 4000 (опц. 5; 6 м) мм × 1200 / 12000 (опц. 13–25 м) мм × 5000 (опц. 6; 7; 8 м) мм × 1600 мм</b></div><div><span>Размер стола</span><b>—</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+</div>
+</div>
+</div>
+</div></section>
+</section>
+
+<div class="wrap" style="padding:8px 0 40px"><p class="mill-lede">Итого 5 моделей в каталоге. Не нашли нужный типоразмер или нужна помощь с подбором — передайте чертёж технологу, подберём станок под деталь, материал и партию.</p></div>
+
+<div class="mill-links-row wrap" style="display:flex;gap:1px;background:var(--line);border:1px solid var(--line);margin:0 auto">
+<a href="stock.html">Станки в наличии на складе →</a>
+<a href="production-equipment.html">Инструмент и оснастка →</a>
+<a href="leasing.html">Лизинг оборудования →</a>
+</div>
+
+<section class="faq"><div class="wrap">
+<div class="eyebrow">Вопросы</div><h2 class="h2">Частые вопросы</h2>
+<div style="margin-top:24px"><details class="faq-item"><summary>Чем горизонтально-расточной станок отличается от обрабатывающего центра?</summary><p>Горизонтально-расточной станок специализируется на точном растачивании отверстий и торцевании в крупногабаритных корпусных деталях — станина, шпиндельная бабка и стол рассчитаны на тяжёлые заготовки и большие вылеты борштанги.</p></details><details class="faq-item"><summary>Что выбрать — станок с УЦИ или с ЧПУ?</summary><p>УЦИ (устройство цифровой индикации) подходит для мелкосерийного и ремонтного производства с ручным управлением подачами. ЧПУ нужен для серийной обработки, работы по программе и повторяемости на сложных деталях.</p></details><details class="faq-item"><summary>Можно ли получить чертёж по конкретной детали?</summary><p>Да, передайте чертёж и требования по точности — подберём диаметр шпинделя, ход осей и тип стола под вашу деталь.</p></details></div>
+</div></section>
+
+<section class="final-cta"><div class="wrap">
+<h2 class="h2">Не нашли подходящую модель?</h2>
+<p>Передайте чертёж и требования — технолог подберёт станок, соберёт КП и предложит сценарий запуска на площадке.</p>
+<div class="final-cta-actions">
+<button type="button" class="btn btn-ce" onclick="openModal('boringLeadModal')">Обсудить задачу с технологом</button>
+<a class="btn btn-ghost" href="tel:88005511206">Позвонить: 8 800 55 11 206</a>
+</div>
+</div></section>
+</main>
+
+<div class="lead-modal" id="boringLeadModal" aria-hidden="true">
+<div class="lead-dialog" role="dialog" aria-modal="true" aria-labelledby="boringLeadModalTitle">
+<button class="lead-close" type="button" onclick="closeModal('boringLeadModal')" aria-label="Закрыть окно">×</button>
+<div class="lead-content">
+<div class="eyebrow">Горизонтально-расточные станки</div>
+<h3 id="boringLeadModalTitle">Запросить КП</h3>
+<p>Оставьте номер телефона — менеджер свяжется с вами и подготовит коммерческое предложение.</p>
+<form class="lead-form" onsubmit="return false">
+<input class="qfield" id="boringLeadModalPhone" type="tel" placeholder="Номер телефона*" required/>
+<input class="qfield" id="boringLeadModalName" placeholder="Имя (необязательно)"/>
+<label class="lead-consent wide"><input type="checkbox" id="boringLeadModalConsent" required/><span>Принимаю условия <a href="privacy.html" data-legal="privacy">Политики конфиденциальности</a> и даю согласие на обработку персональных данных</span></label>
+<div class="lead-err" id="boringLeadModalConsentErr" role="alert"></div>
+<button class="btn btn-ce" type="button" onclick="submitLeadForm('boringLeadModal','boringLeadModalConsent','boringLeadModalConsentErr')">Отправить</button>
+<button class="btn btn-ghost" type="button" onclick="closeModal('boringLeadModal');openModal('callModal')">Позвонить</button>
+</form>
+</div>
+</div>
+</div>
+<div class="lead-modal" id="callModal" aria-hidden="true">
+<div class="lead-dialog" role="dialog" aria-modal="true" aria-labelledby="callModalTitle">
+<button class="lead-close" type="button" onclick="closeModal('callModal')" aria-label="Закрыть окно">×</button>
+<div class="lead-content">
+<div class="eyebrow">Контакт с менеджером</div>
+<h3 id="callModalTitle">Позвонить <span>в Механит</span></h3>
+<p>Менеджер уточнит цену, комплектацию и сроки поставки по интересующей модели.</p>
+<div class="call-card">
+<small>Телефон компании</small>
+<a href="tel:88005511206">8 800 55 11 206</a>
+<p>Нажмите на номер, чтобы начать звонок, или закройте окно и продолжите просмотр каталога.</p>
+</div>
+</div>
+</div>
+</div>
+
+<footer></footer>
+<script>(function(){
+  var tabs=Array.from(document.querySelectorAll('[data-milling-tab]'));
+  var panels=Array.from(document.querySelectorAll('[data-milling-panel]'));
+  function activate(id,updateHash){
+    if(!id){return;}
+    var found=false;
+    tabs.forEach(function(item){
+      var on=item.getAttribute('data-milling-tab')===id;
+      item.classList.toggle('is-active',on);
+      item.setAttribute('aria-current',on?'true':'false');
+      if(on){found=true;}
+    });
+    if(!found){return;}
+    panels.forEach(function(panel){panel.classList.toggle('is-active',panel.getAttribute('data-milling-panel')===id);});
+    if(updateHash){history.replaceState(null,'','#'+id);}
+  }
+  tabs.forEach(function(tab){
+    tab.addEventListener('click',function(){activate(tab.getAttribute('data-milling-tab'),true);});
+  });
+  var initial=(location.hash||'').replace('#','');
+  if(initial){activate(initial,false);}
+})();</script>
+<script>(function(){
+  function num(v){var n=parseFloat(v);return isNaN(n)?0:n;}
+  function inRange(value,min,max){
+    if(!value||(!min&&!max)){return true;}
+    return String(value).split('|').some(function(tok){
+      var p=tok.split('~'),lo=num(p[0]),hi=p.length>1?num(p[1]):lo;
+      if(min&&hi<num(min)){return false;}
+      if(max&&lo>num(max)){return false;}
+      return true;
+    });
+  }
+  document.querySelectorAll('[data-vmc-scope]').forEach(function(scope){
+    var grid=scope.querySelector('.vmc-grid');
+    if(!grid){return;}
+    var cards=Array.prototype.slice.call(grid.querySelectorAll('.vmc-card'));
+    var panel=scope.querySelector('.vmc-filter-panel');
+    if(!panel){return;}
+    var search=panel.querySelector('[data-role="search"]');
+    var applyBtn=panel.querySelector('[data-role="apply"]');
+    var resetBtn=panel.querySelector('[data-role="reset"]');
+    var previewEl=panel.querySelector('[data-role="preview"]');
+    var rangeInputs=Array.prototype.slice.call(panel.querySelectorAll('[data-range]'));
+    function rangeVals(name){
+      var minEl=panel.querySelector('[data-range="'+name+'"][data-bound="min"]');
+      var maxEl=panel.querySelector('[data-range="'+name+'"][data-bound="max"]');
+      return [minEl&&minEl.value, maxEl&&maxEl.value];
+    }
+    var rangeNames=[];
+    rangeInputs.forEach(function(inp){
+      var n=inp.getAttribute('data-range');
+      if(rangeNames.indexOf(n)<0){rangeNames.push(n);}
+    });
+    function checkedValues(name){
+      return Array.prototype.slice.call(panel.querySelectorAll('input[name="'+name+'"]:checked')).map(function(i){return i.value;});
+    }
+    var checkGroups=[];
+    panel.querySelectorAll('input[type="checkbox"][name]').forEach(function(inp){
+      var n=inp.getAttribute('name');
+      if(checkGroups.indexOf(n)<0){checkGroups.push(n);}
+    });
+    function computeMatches(){
+      var q=(search&&search.value||'').trim().toLowerCase();
+      return cards.filter(function(card){
+        var ok=true;
+        if(q && (card.dataset.name||'').indexOf(q)<0){ok=false;}
+        if(ok){
+          checkGroups.forEach(function(name){
+            if(!ok){return;}
+            var selected=checkedValues(name);
+            if(selected.length){
+              var val=card.dataset[name.replace(/-([a-z])/g,function(m,c){return c.toUpperCase();})]||'';
+              var toks=val.split('|');if(!selected.some(function(s){return toks.indexOf(s)>=0;})){ok=false;}
+            }
+          });
+        }
+        if(ok){
+          rangeNames.forEach(function(name){
+            if(!ok){return;}
+            var key=name.replace(/-([a-z])/g,function(m,c){return c.toUpperCase();});
+            var value=card.dataset[key];
+            var mm=rangeVals(name);
+            if(!inRange(value,mm[0],mm[1])){ok=false;}
+          });
+        }
+        return ok;
+      });
+    }
+    function updatePreview(){
+      var m=computeMatches();
+      if(previewEl){previewEl.textContent=m.length;}
+      return m;
+    }
+    function renderMatches(){
+      var m=updatePreview();
+      cards.forEach(function(card){card.classList.toggle('is-hidden',m.indexOf(card)<0);});
+    }
+    panel.querySelectorAll('input').forEach(function(inp){
+      inp.addEventListener('input',updatePreview);
+      inp.addEventListener('change',updatePreview);
+    });
+    if(search){search.addEventListener('input',updatePreview);}
+    var filterToggle=scope.querySelector('[data-role="filter-toggle"]');
+    var filterClose=panel.querySelector('[data-role="filter-close"]');
+    var backdrop=scope.querySelector('[data-role="filter-backdrop"]');
+    function openFilter(){panel.classList.add('is-open');if(backdrop){backdrop.classList.add('is-open');}document.body.style.overflow='hidden';}
+    function closeFilter(){panel.classList.remove('is-open');if(backdrop){backdrop.classList.remove('is-open');}document.body.style.overflow='';}
+    if(filterToggle){filterToggle.addEventListener('click',openFilter);}
+    if(filterClose){filterClose.addEventListener('click',closeFilter);}
+    if(backdrop){backdrop.addEventListener('click',closeFilter);}
+    if(applyBtn){applyBtn.addEventListener('click',function(){renderMatches();closeFilter();});}
+    if(resetBtn){resetBtn.addEventListener('click',function(){
+      panel.querySelectorAll('input[type="checkbox"]').forEach(function(inp){inp.checked=false;});
+      panel.querySelectorAll('input[type="number"],input[type="search"]').forEach(function(inp){inp.value='';});
+      renderMatches();
+    });}
+    cards.sort(function(a,b){return num(a.dataset.sortkey)-num(b.dataset.sortkey);});
+    cards.forEach(function(card){grid.appendChild(card);});
+    updatePreview();
+    var defaultOrder=cards.slice();
+    var sortSelect=scope.querySelector('[data-role="sort"]');
+    if(sortSelect){
+      sortSelect.addEventListener('change',function(){
+        var ordered=defaultOrder;
+        if(sortSelect.value==='name'){
+          ordered=cards.slice().sort(function(a,b){return (a.dataset.title||'').localeCompare(b.dataset.title||'','ru');});
+        }
+        ordered.forEach(function(card){grid.appendChild(card);});
+      });
+    }
+  });
+})();</script>
+<script>function toggleFaq(b){b.parentElement.classList.toggle('open')}
+function openModal(id){
+  var m=document.getElementById(id);
+  m.classList.add('is-open');
+  m.setAttribute('aria-hidden','false');
+  document.body.style.overflow='hidden';
+}
+function closeModal(id){
+  var m=document.getElementById(id);
+  m.classList.remove('is-open');
+  m.setAttribute('aria-hidden','true');
+  document.body.style.overflow='';
+}
+document.addEventListener('click',function(e){
+  if(e.target.classList && e.target.classList.contains('lead-modal')){closeModal(e.target.id);}
+});
+document.addEventListener('keydown',function(e){
+  if(e.key==='Escape'){document.querySelectorAll('.lead-modal.is-open').forEach(function(m){closeModal(m.id);});}
+});
+function submitLeadForm(modalId, consentId, errId){
+  var phone=document.getElementById(modalId+'Phone');
+  var consent=document.getElementById(consentId);
+  var err=document.getElementById(errId);
+  if(phone && !phone.value.trim()){
+    err.textContent='Укажите номер телефона';
+    err.classList.add('is-shown');
+    phone.focus();
+    return;
+  }
+  if(!consent.checked){
+    err.textContent='Нужно принять условия обработки данных';
+    err.classList.add('is-shown');
+    consent.focus();
+    return;
+  }
+  err.textContent='';
+  err.classList.remove('is-shown');
+  closeModal(modalId);
+}</script>
+<script>
+(function(){
+  function ruWord(n, forms){var n2=n%100;if(n2>=11&&n2<=14)return forms[2];var n1=n%10;if(n1===1)return forms[0];if(n1>=2&&n1<=4)return forms[1];return forms[2];}
+  document.querySelectorAll('[data-role="preview"]').forEach(function(numEl){
+    var wordEl = numEl.parentElement.querySelector('[data-role="preview-word"]');
+    if(!wordEl) return;
+    function sync(){var n=parseInt(numEl.textContent,10)||0;wordEl.textContent=ruWord(n,['модель','модели','моделей']);}
+    sync();
+    new MutationObserver(sync).observe(numEl,{childList:true,characterData:true,subtree:true});
+  });
+  // never show an empty grid: if the exact filters (already applied by the shared
+  // filter script) leave zero visible cards, fall back to the closest models by
+  // numeric distance from the requested ranges, so the customer always sees options.
+  document.querySelectorAll('[data-vmc-scope]').forEach(function(scope){
+    var grid = scope.querySelector('.vmc-grid');
+    if(!grid) return;
+    var cards = Array.prototype.slice.call(grid.querySelectorAll('.vmc-card'));
+    var panel = scope.querySelector('.vmc-filter-panel');
+    if(!panel) return;
+    var applyBtn = panel.querySelector('[data-role="apply"]');
+    var resetBtn = panel.querySelector('[data-role="reset"]');
+    var note = scope.querySelector('[data-role="fallback-note"]');
+    var rangeNames = [];
+    Array.prototype.slice.call(panel.querySelectorAll('[data-range]')).forEach(function(inp){
+      var n = inp.getAttribute('data-range');
+      if(rangeNames.indexOf(n) < 0){rangeNames.push(n);}
+    });
+    function num(v){var n=parseFloat(v);return isNaN(n)?null:n;}
+    function rangeVals(name){
+      var minEl = panel.querySelector('[data-range="'+name+'"][data-bound="min"]');
+      var maxEl = panel.querySelector('[data-range="'+name+'"][data-bound="max"]');
+      return [minEl && minEl.value, maxEl && maxEl.value];
+    }
+    function applyFallback(){
+      var visible = cards.filter(function(c){return !c.classList.contains('is-hidden');});
+      if(visible.length){ if(note){note.hidden = true;} return; }
+      var activeRanges = rangeNames.filter(function(name){var mm = rangeVals(name); return mm[0] || mm[1];});
+      if(!activeRanges.length){ return; }
+      var scored = cards.map(function(card){
+        var score = 0;
+        activeRanges.forEach(function(name){
+          var key = name.replace(/-([a-z])/g, function(m,c){return c.toUpperCase();});
+          var n = card.dataset[key] ? num(card.dataset[key]) : null;
+          if(n === null){ score += 1e5; return; }
+          var mm = rangeVals(name);
+          var min = mm[0] ? num(mm[0]) : null;
+          var max = mm[1] ? num(mm[1]) : null;
+          if(min !== null && n < min){ score += (min - n); }
+          if(max !== null && n > max){ score += (n - max); }
+        });
+        return {card: card, score: score};
+      });
+      scored.sort(function(a,b){return a.score - b.score;});
+      var showN = Math.min(4, scored.length);
+      scored.forEach(function(s, i){ s.card.classList.toggle('is-hidden', i >= showN); });
+      if(note){ note.hidden = false; }
+    }
+    if(applyBtn){ applyBtn.addEventListener('click', applyFallback); }
+    if(resetBtn){ resetBtn.addEventListener('click', function(){ if(note){note.hidden = true;} }); }
+  });
+})();
+</script>
+<script src="site-shell.js?v=search-20260914"></script>
+</body></html>

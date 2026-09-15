@@ -1,0 +1,2353 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"/><meta name="robots" content="noindex, nofollow"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Электроэрозионные станки — Механит</title>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<meta name="description" content="Проволочно-вырезные, копировально-прошивочные станки и супердрели для обработки токопроводящих материалов любой твёрдости без механического воздействия на "/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "В чём разница между проволочно-вырезным и копировально-прошивочным станком?", "acceptedAnswer": {"@type": "Answer", "text": "Проволочно-вырезной станок режет деталь тонкой проволокой по контуру. Копировально-прошивочный формирует полость или отверстие, повторяя форму фасонного электрода, — применяется для пресс-форм и штампов."}}, {"@type": "Question", "name": "Можно ли обрабатывать закалённую сталь и твёрдый сплав?", "acceptedAnswer": {"@type": "Answer", "text": "Да, электроэрозионная обработка не зависит от твёрдости материала — режется любой токопроводящий металл, включая закалённые стали, твёрдые сплавы и жаропрочные сплавы."}}, {"@type": "Question", "name": "Как подобрать станок под задачу?", "acceptedAnswer": {"@type": "Answer", "text": "Нужны материал и твёрдость заготовки, требуемая точность и шероховатость, максимальные габариты детали — передайте эти параметры технологу для подбора модели."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://mehanit.ru/"}, {"@type": "ListItem", "position": 2, "name": "Оборудование", "item": "https://mehanit.ru/equipment.html"}, {"@type": "ListItem", "position": 3, "name": "Электроэрозионные станки"}]}</script>
+<style>*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bm:#1A1A1A;--sg:#3D3D3D;--sg2:#2B2E31;--mid:#696D71;--muted:#8A9096;
+  --ce:#6B2D8B;--ce2:rgba(107,45,139,.10);--ce3:rgba(107,45,139,.20);--ceHover:#7d3aa0;
+  --gold:#C9A227;
+  --tl:#EAEAE6;--tl2:#F5F5F3;--paper:#EDEEF0;--paper2:#E4E5E8;--white:#fff;
+  --line:rgba(26,26,26,.10);--line2:rgba(234,234,230,.08);
+  --max:1400px;--shadow:0 24px 70px rgba(26,26,26,.10);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Golos Text',sans-serif;background:var(--paper);color:var(--bm);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
+.mono{font-family:'Golos Text',monospace}.disp{font-family:'Magistral',sans-serif}
+
+/* extracted from equipment-milling.html */
+.wrap{width:min(calc(100% - clamp(24px,4.4vw,84px) - 24px),var(--max));margin-left:clamp(24px,4.4vw,84px);margin-right:auto}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:'Golos Text',monospace;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--ce);margin-bottom:.85rem}
+.eyebrow::before{content:'';width:22px;height:1.5px;background:var(--ce)}
+.h2{font-family:'Magistral',sans-serif;font-size:clamp(26px,3.4vw,46px);font-weight:600;letter-spacing:-.018em;line-height:1.08;text-transform:uppercase}
+.h2 .lt{font-weight:300;color:var(--mid)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:1.5px solid transparent;min-height:48px;padding:0 26px;font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;font-family:'Golos Text',sans-serif;transition:.22s;border-radius:2px}
+.btn-ce{background:var(--ce);color:#fff;box-shadow:0 10px 28px rgba(107,45,139,.2)}
+.btn-ce:hover{background:var(--ceHover);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--bm);border-color:rgba(26,26,26,.2)}
+.btn-ghost:hover{border-color:var(--bm)}
+.btn-gold{background:var(--gold);color:var(--bm);border-color:var(--gold);box-shadow:0 12px 28px rgba(201,162,39,.22)}
+.btn-gold:hover{transform:translateY(-2px);filter:brightness(1.04);box-shadow:0 16px 36px rgba(201,162,39,.3)}
+.hdr{position:sticky;top:0;z-index:100;background:rgba(237,238,240,.9);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand img{height:52px;width:auto;display:block}
+.crumbbar{border-bottom:1px solid rgba(26,26,26,.06);background:rgba(255,255,255,.55)}
+.crumbs{min-height:44px;display:flex;align-items:center;gap:8px;font-family:'Golos Text',sans-serif;font-size:13px;font-weight:500;letter-spacing:.04em;line-height:1.45;color:var(--muted);flex-wrap:wrap}
+.crumbs a{color:var(--muted);transition:color .15s ease}
+.crumbs a:hover,.crumbs a:focus-visible{color:var(--ce);text-decoration:underline;text-underline-offset:3px}
+.crumbs a:focus-visible{outline:2px solid var(--ce);outline-offset:2px;border-radius:2px}
+.crumbs .crumb-sep{color:rgba(138,141,150,.55);font-size:12px}
+.crumbs .current{color:var(--mid);font-weight:500}
+@media(max-width:640px){.crumbs{font-size:12px;gap:6px}}
+.hero-cta .btn{width:100%;padding-left:16px;padding-right:16px;text-align:center;min-height:44px}
+.tools .wrap{position:relative;z-index:1}
+.tools .h2,.tools .eyebrow{color:var(--tl)}
+.tools .h2 .lt{color:rgba(234,234,230,.48)}
+.stock-page .wrap{position:relative;z-index:1}
+.stock-actions .btn{padding:11px 13px;font-size:11px}
+.system .wrap{position:relative;z-index:1}
+.system .wrap::before{content:'';position:absolute;right:5%;top:26px;width:260px;height:120px;border-top:1px solid rgba(201,162,39,.32);border-right:1px solid rgba(201,162,39,.22);opacity:.55;pointer-events:none}
+.system .wrap::after{content:'';position:absolute;right:calc(5% + 258px);top:142px;width:120px;height:1px;background:rgba(201,162,39,.28);transform:rotate(-18deg);transform-origin:right center;pointer-events:none}
+.system .h2{color:var(--tl)}
+.system .eyebrow{color:var(--gold)}
+.cases .h2{color:var(--tl)}
+.cases .h2 .lt{color:rgba(234,234,230,.4)}
+.leasing .h2{color:var(--tl)}
+.leasing .eyebrow{color:rgba(107,45,139,.9)}
+.quiz-l .h2{color:var(--tl)}
+.qfield{width:100%;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);padding:13px 15px;color:var(--tl);font-size:13px;font-family:'Golos Text',sans-serif;margin-bottom:11px}
+.qfield::placeholder{color:rgba(234,234,230,.4)}
+.qfield:focus{outline:none;border-color:var(--ce)}
+.qfield.area{min-height:86px;resize:vertical}
+.lead-modal{position:fixed;inset:0;z-index:200;display:grid;place-items:center;padding:24px;background:rgba(26,26,26,.58);backdrop-filter:blur(10px);opacity:0;pointer-events:none;transition:opacity .2s ease}
+.lead-modal.is-open{opacity:1;pointer-events:auto}
+.lead-dialog{width:min(760px,100%);max-height:min(92vh,820px);background:var(--paper) url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='760' height='820' viewBox='0 0 760 820'><defs><pattern id='sm' width='20' height='20' patternUnits='userSpaceOnUse'><path d='M20,0L0,0L0,20' fill='none' stroke='%236B2D8B' stroke-width='0.45' opacity='0.13'/></pattern><pattern id='lg' width='100' height='100' patternUnits='userSpaceOnUse'><rect width='100' height='100' fill='url(%23sm)'/><path d='M100,0L0,0L0,100' fill='none' stroke='%236B2D8B' stroke-width='0.9' opacity='0.17'/></pattern></defs><rect width='760' height='820' fill='url(%23lg)' opacity='0.75'/><circle cx='660' cy='660' r='155' fill='none' stroke='%236B2D8B' stroke-width='0.8' opacity='0.10'/><circle cx='660' cy='660' r='108' fill='none' stroke='%236B2D8B' stroke-width='0.6' opacity='0.08'/><circle cx='660' cy='660' r='22' fill='none' stroke='%236B2D8B' stroke-width='0.6' opacity='0.12'/><line x1='635' y1='660' x2='685' y2='660' stroke='%236B2D8B' stroke-width='0.7' opacity='0.15'/><line x1='660' y1='635' x2='660' y2='685' stroke='%236B2D8B' stroke-width='0.7' opacity='0.15'/><circle cx='660' cy='88' r='30' fill='none' stroke='%236B2D8B' stroke-width='0.6' opacity='0.09'/><circle cx='660' cy='88' r='8' fill='none' stroke='%236B2D8B' stroke-width='0.5' opacity='0.11'/><line x1='635' y1='88' x2='685' y2='88' stroke='%236B2D8B' stroke-width='0.5' opacity='0.12'/><line x1='660' y1='63' x2='660' y2='113' stroke='%236B2D8B' stroke-width='0.5' opacity='0.12'/><circle cx='590' cy='200' r='42' fill='none' stroke='%236B2D8B' stroke-width='0.6' opacity='0.08'/><circle cx='590' cy='200' r='26' fill='none' stroke='%236B2D8B' stroke-width='0.5' opacity='0.07'/><line x1='570' y1='200' x2='610' y2='200' stroke='%236B2D8B' stroke-width='0.5' opacity='0.10'/><line x1='590' y1='180' x2='590' y2='220' stroke='%236B2D8B' stroke-width='0.5' opacity='0.10'/><line x1='632' y1='200' x2='690' y2='200' stroke='%236B2D8B' stroke-width='0.4' opacity='0.09' stroke-dasharray='5,3'/><line x1='590' y1='158' x2='590' y2='80' stroke='%236B2D8B' stroke-width='0.4' opacity='0.09' stroke-dasharray='5,3'/><line x1='520' y1='440' x2='745' y2='440' stroke='%236B2D8B' stroke-width='0.65' opacity='0.11'/><line x1='520' y1='433' x2='520' y2='447' stroke='%236B2D8B' stroke-width='0.65' opacity='0.11'/><line x1='745' y1='433' x2='745' y2='447' stroke='%236B2D8B' stroke-width='0.65' opacity='0.11'/><line x1='750' y1='490' x2='750' y2='720' stroke='%236B2D8B' stroke-width='0.65' opacity='0.11'/><line x1='743' y1='490' x2='757' y2='490' stroke='%236B2D8B' stroke-width='0.65' opacity='0.11'/><line x1='743' y1='720' x2='757' y2='720' stroke='%236B2D8B' stroke-width='0.65' opacity='0.11'/><line x1='520' y1='450' x2='520' y2='600' stroke='%236B2D8B' stroke-width='0.4' opacity='0.08' stroke-dasharray='4,4'/><line x1='745' y1='450' x2='745' y2='510' stroke='%236B2D8B' stroke-width='0.4' opacity='0.08' stroke-dasharray='4,4'/><path d='M660,540 A120,120 0 0,0 780,660' fill='none' stroke='%236B2D8B' stroke-width='0.5' opacity='0.08'/><line x1='700' y1='770' x2='740' y2='730' stroke='%236B2D8B' stroke-width='0.5' opacity='0.09'/><line x1='715' y1='780' x2='755' y2='740' stroke='%236B2D8B' stroke-width='0.5' opacity='0.09'/><line x1='720' y1='800' x2='760' y2='760' stroke='%236B2D8B' stroke-width='0.5' opacity='0.09'/><line x1='685' y1='775' x2='720' y2='740' stroke='%236B2D8B' stroke-width='0.5' opacity='0.09'/><circle cx='470' cy='300' r='15' fill='none' stroke='%236B2D8B' stroke-width='0.5' opacity='0.09'/><circle cx='470' cy='300' r='4' fill='none' stroke='%236B2D8B' stroke-width='0.5' opacity='0.10'/><line x1='455' y1='300' x2='485' y2='300' stroke='%236B2D8B' stroke-width='0.45' opacity='0.10'/><line x1='470' y1='285' x2='470' y2='315' stroke='%236B2D8B' stroke-width='0.45' opacity='0.10'/><line x1='485' y1='300' x2='520' y2='300' stroke='%236B2D8B' stroke-width='0.4' opacity='0.08' stroke-dasharray='3,3'/></svg>") 0 0/100% 100% no-repeat;border:1px solid rgba(255,255,255,.72);box-shadow:0 34px 100px rgba(0,0,0,.32);position:relative;overflow:auto;clip-path:polygon(0 0,calc(100% - 18px) 0,100% 18px,100% 100%,18px 100%,0 calc(100% - 18px));transform:translateY(10px) scale(.98);transition:transform .2s ease}
+.lead-modal.is-open .lead-dialog{transform:translateY(0) scale(1)}
+.catalog-dialog .lead-content{padding:32px 36px}
+.lead-dialog::before{content:'';position:absolute;inset:0;background:linear-gradient(var(--ce),var(--ce)) top left/44px 1px no-repeat,linear-gradient(var(--ce),var(--ce)) top left/1px 28px no-repeat,linear-gradient(var(--ce),var(--ce)) bottom right/44px 1px no-repeat,linear-gradient(var(--ce),var(--ce)) bottom right/1px 28px no-repeat;opacity:.34;pointer-events:none}
+.lead-dialog::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.72) 0%,rgba(255,255,255,.5) 48%,rgba(255,255,255,.18) 100%),linear-gradient(90deg,rgba(26,26,26,.11) 0 1px,transparent 1px 100%) 0 48%/100% 1px no-repeat,linear-gradient(rgba(26,26,26,.1),rgba(26,26,26,.1)) 68% 8%/1px 84% no-repeat,linear-gradient(135deg,transparent 47%,rgba(107,45,139,.12) 48% 52%,transparent 53%) 0 0/42px 42px repeat;opacity:.46;pointer-events:none;transform:skewX(-3deg);transform-origin:center}
+.lead-close{position:absolute;top:14px;right:14px;z-index:3;width:38px;height:38px;border:1px solid var(--line);background:rgba(255,255,255,.72);color:var(--bm);font-size:24px;line-height:1;display:grid;place-items:center;transition:.18s}
+.lead-close:hover{border-color:var(--ce);color:var(--ce);transform:scale(1.04)}
+.lead-content{position:relative;z-index:2;padding:38px}
+.lead-content .eyebrow{margin-bottom:14px}
+.lead-content h3{font-family:'Magistral',sans-serif;font-size:clamp(24px,3.2vw,34px);line-height:1.08;letter-spacing:-.035em;text-transform:uppercase;margin-bottom:14px}
+.lead-content h3 span{font-weight:300;color:var(--mid)}
+.lead-content p{font-size:14px;line-height:1.7;color:var(--mid);max-width:430px;margin-bottom:22px}
+.lead-form{display:grid;grid-template-columns:repeat(2,1fr);gap:10px 12px;margin-top:18px}
+.lead-form .qfield{background:rgba(255,255,255,.84);border:1px solid rgba(26,26,26,.12);color:var(--bm);margin:0;backdrop-filter:blur(7px)}
+.lead-form .qfield::placeholder{color:rgba(26,26,26,.42)}
+.lead-form .qfield:focus{border-color:var(--ce);background:#fff}
+.lead-form .wide{grid-column:1/-1}
+.lead-form .area{min-height:96px}
+.lead-form .upload{color:var(--sg)}
+.lead-form .upload span{color:var(--muted)}
+.lead-form .btn{grid-column:1/-1;margin-top:4px}
+.lead-form .qfield[readonly]{background:rgba(107,45,139,.055);color:var(--bm);font-weight:600;cursor:default}
+.faq{background:var(--tl2)}
+.lead-consent{display:flex;align-items:flex-start;gap:9px;margin:2px 0;cursor:pointer;font-family:'Golos Text',sans-serif;font-weight:400;font-size:12px;line-height:1.4;color:var(--sg)}
+.lead-consent input{accent-color:var(--ce);width:16px;height:16px;min-width:16px;margin-top:1px;cursor:pointer}
+.lead-consent a{color:var(--ce);text-decoration:underline;text-underline-offset:2px}
+.lead-consent a:hover{color:var(--ceHover)}
+.lead-err{display:none;color:#b3261e;font-family:'Golos Text',sans-serif;font-size:11.5px;margin:-2px 0 0;grid-column:1/-1}
+.lead-err.is-shown{display:block}
+.mill-lede{font-size:15.5px;line-height:1.65;color:var(--mid);max-width:760px;margin:0}
+.mill-links-row{display:flex;flex-wrap:wrap;gap:1px;background:var(--line);border:1px solid var(--line)}
+.btn,.menu-trigger,.mega a,.nav-tile,.equipment-card,.taskc,.tax-card,.stock-card,.tool-card,.svcc,.casec,.indc,.final-h,.proof-item{transition-duration:.18s!important;transition-timing-function:cubic-bezier(.2,.7,.2,1)!important}
+.btn:hover{transform:translateY(-1px)!important}
+.hero-cta-two .btn{min-height:50px}
+.hero-cta .btn{
+  min-height:52px!important;
+  border-radius:8px!important;
+  font-weight:800!important;
+  position:relative;
+  overflow:hidden;
+}
+.hero-cta .btn::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(120deg,transparent 0 35%,rgba(255,255,255,.28) 45%,transparent 58% 100%);
+  transform:translateX(-120%);
+  animation:heroBtnShine 4.5s ease-in-out infinite;
+  pointer-events:none;
+}
+.btn-ce{
+  background:linear-gradient(145deg,#7c3aa0,#6B2D8B 52%,#4d2066)!important;
+  box-shadow:0 16px 38px rgba(107,45,139,.28), inset 0 1px 0 rgba(255,255,255,.18)!important;
+}
+.btn-gold{
+  background:linear-gradient(145deg,#e0bb5a,#C9A227 52%,#9c7c1e)!important;
+  box-shadow:0 16px 38px rgba(201,162,39,.27), inset 0 1px 0 rgba(255,255,255,.28)!important;
+}
+.solutions-block .h2{
+  font-size:clamp(30px,3.8vw,54px)!important;
+}
+.product-section.dark .h2,.product-section.dark .eyebrow{color:var(--tl)}
+.product-section.dark .h2 .lt{color:rgba(234,234,230,.5)}
+.floating-action-panel .btn{width:100%;justify-content:center;min-height:44px;font-size:10px;padding:0 16px;box-shadow:0 16px 42px rgba(26,26,26,.12)}
+.eqcat-hero {
+  padding: 40px 0 32px;
+  background-image:
+    linear-gradient(rgba(107,45,139,.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(107,45,139,.055) 1px, transparent 1px);
+  background-size: 38px 38px;
+  background-position: center top;
+}
+.eqcat-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: 48px;
+  align-items: center;
+}
+.eqcat-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  color: #8f62c8;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+.eqcat-kicker::before {
+  content: "";
+  width: 34px;
+  height: 1px;
+  background: linear-gradient(90deg, #8f62c8, rgba(143, 98, 200, .15));
+}
+.eqcat-title {
+  margin: 0;
+  max-width: 880px;
+  font-family: 'Magistral', sans-serif;
+  font-weight: 700;
+  font-size: clamp(32px, 4.4vw, 58px);
+  line-height: 1.05;
+  letter-spacing: -.015em;
+  text-transform: none;
+}
+.eqcat-title span {
+  display: block;
+  margin-top: 10px;
+  color: #8d939e;
+  font-size: clamp(20px, 2vw, 31px);
+  font-weight: 500;
+  letter-spacing: .02em;
+  text-transform: none;
+}
+.eqcat-lead {
+  margin: 0;
+  max-width: 480px;
+  color: #666d78;
+  font-size: 17px;
+  line-height: 1.55;
+}
+.eqcat-assist .btn {
+  margin-top: 18px;
+  width: 100%;
+  justify-content: center;
+}
+.mill-hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.mill-hero-media{border-radius:18px;overflow:visible;background:transparent;border:0;display:flex;align-items:center;justify-content:center;min-height:280px}
+.mill-hero-media img{max-width:92%;max-height:94%;width:auto;height:auto;object-fit:contain;filter:drop-shadow(0 30px 34px rgba(26,26,26,.22))}
+.eqcat-subnav-wrap {
+  padding: 10px 0 28px;
+}
+.eqcat-subnav-grid{
+  display:grid;
+  grid-template-columns:minmax(260px,400px) minmax(0,1fr);
+  gap:48px;
+  align-items:center;
+}
+.eqcat-subnav-media{display:flex;align-items:center;justify-content:center;min-height:260px}
+.eqcat-subnav-media img{max-width:100%;max-height:340px;width:auto;height:auto;object-fit:contain;filter:drop-shadow(0 26px 30px rgba(26,26,26,.2))}
+.eqcat-subnav {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+}
+.eqcat-subnav-head{margin-bottom:16px}
+.eqcat-subcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.eqcat-subcards.is-scroll{display:flex;gap:16px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x proximity;padding-bottom:8px;margin-bottom:-8px;-webkit-overflow-scrolling:touch}
+.eqcat-subcards.is-scroll .eqcat-subcard{flex:0 0 300px;scroll-snap-align:start}
+.eqcat-subcards.is-scroll::-webkit-scrollbar{height:6px}
+.eqcat-subcards.is-scroll::-webkit-scrollbar-thumb{background:rgba(107,45,139,.28);border-radius:6px}
+.eqcat-subcards.is-scroll::-webkit-scrollbar-track{background:rgba(26,26,26,.05)}
+.eqcat-subcard{position:relative;display:flex;align-items:center;gap:16px;text-align:left;background:#fff;border:1px solid rgba(26,26,26,.09);border-radius:14px;padding:16px 18px;cursor:pointer;font:inherit;color:inherit;width:100%;transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease,background .2s ease;overflow:hidden}
+.eqcat-subcard:hover{transform:translateY(-2px);border-color:rgba(107,45,139,.35);box-shadow:0 16px 34px rgba(26,26,26,.08)}
+.eqcat-subcard:focus-visible{outline:2px solid var(--ce);outline-offset:2px}
+.eqcat-subcard::before{content:'';position:absolute;left:0;top:0;bottom:0;width:0;background:var(--ce);transition:width .2s ease}
+.eqcat-subcard.is-active{border-color:rgba(107,45,139,.45);background:linear-gradient(120deg,rgba(107,45,139,.06),rgba(107,45,139,.02));box-shadow:0 16px 34px rgba(107,45,139,.12)}
+.eqcat-subcard.is-active::before{width:4px}
+.eqcat-subcard-badge{position:absolute;left:14px;top:14px;width:22px;height:22px;border-radius:50%;background:var(--ce);color:#fff;display:none;align-items:center;justify-content:center;font-size:11px;font-weight:900;box-shadow:0 6px 14px rgba(107,45,139,.35)}
+.eqcat-subcard.is-active .eqcat-subcard-badge{display:flex}
+.eqcat-subcard-media{flex:0 0 auto;width:104px;height:88px;display:flex;align-items:center;justify-content:center;background:var(--tl2);border-radius:10px;overflow:hidden}
+.eqcat-subcard-media img{max-width:86%;max-height:86%;width:auto;height:auto;object-fit:contain}
+.eqcat-subcard-media .ph{font-family:'Golos Text',monospace;font-size:8px;letter-spacing:.6px;text-transform:uppercase;color:rgba(82,86,90,.4);text-align:center;padding:0 6px}
+.eqcat-subcard-body{flex:1;min-width:0}
+.eqcat-subcard-body h3{font-family:'Golos Text',sans-serif;font-size:15.5px;font-weight:800;letter-spacing:-.01em;color:var(--bm);margin:0 0 4px;line-height:1.25}
+.eqcat-subcard-body p{margin:0 0 8px;font-size:12.5px;line-height:1.45;color:var(--mid);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.eqcat-subcard-count{display:block;font-family:'Golos Text',monospace;font-size:10.5px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;color:var(--ce)}
+.eqcat-subcard.is-active .eqcat-subcard-count{color:var(--ceHover)}
+.eqcat-subcard-arrow{flex:0 0 auto;width:30px;height:30px;border-radius:50%;border:1px solid rgba(26,26,26,.12);display:flex;align-items:center;justify-content:center;color:var(--mid);font-size:14px;transition:.2s}
+.eqcat-subcard:hover .eqcat-subcard-arrow,.eqcat-subcard.is-active .eqcat-subcard-arrow{border-color:var(--ce);color:var(--ce);background:rgba(107,45,139,.06)}
+.eqcat-catalog-title{font-size:clamp(22px,2.6vw,32px);text-transform:none}
+.eqcat-catalog-count{font-family:'Golos Text',monospace;font-size:12px;font-weight:700;letter-spacing:.4px;color:var(--mid)}
+.eqcat-sort{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--mid);white-space:nowrap}
+.eqcat-sort select{border:1px solid rgba(26,26,26,.14);background:#fff;padding:9px 12px;font-size:12.5px;font-family:inherit;color:var(--bm);border-radius:2px;cursor:pointer}
+.eqcat-empty{border:1px dashed rgba(26,26,26,.16);background:rgba(255,255,255,.6);padding:56px 32px;text-align:center;border-radius:14px}
+.eqcat-empty-inner{max-width:520px;margin:0 auto}
+.eqcat-empty h3{font-family:'Magistral',sans-serif;font-size:22px;margin-bottom:12px}
+.eqcat-empty p{color:var(--mid);font-size:14px;line-height:1.6;margin-bottom:22px}
+.eqcat-empty-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.vmc-catalog-layout{display:grid;grid-template-columns:286px minmax(0,1fr);gap:24px;align-items:start}
+.vmc-filter-panel{position:sticky;top:92px;max-height:calc(100vh - 112px);overflow-y:auto;overscroll-behavior:contain;background:rgba(255,255,255,.62);border:1px solid rgba(26,26,26,.08);box-shadow:0 24px 62px rgba(26,26,26,.075);backdrop-filter:blur(18px);padding:18px;clip-path:polygon(0 0,calc(100% - 16px) 0,100% 16px,100% 100%,16px 100%,0 calc(100% - 16px))}
+.vmc-filter-panel::-webkit-scrollbar{width:6px}
+.vmc-filter-panel::-webkit-scrollbar-thumb{background:rgba(107,45,139,.28);border-radius:6px}
+.vmc-filter-panel::-webkit-scrollbar-track{background:transparent}
+.vmc-filter-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px;padding-bottom:14px;border-bottom:1px solid rgba(26,26,26,.08)}
+.vmc-filter-head span,.vmc-filter-group strong,.vmc-search span{font-family:'Golos Text',monospace;font-size:10px;font-weight:800;letter-spacing:1.15px;text-transform:uppercase;color:rgba(58,62,68,.72)}
+.vmc-reset{appearance:none;border:0;background:transparent;color:var(--ce);font-family:'Golos Text',monospace;font-size:9px;font-weight:800;letter-spacing:1px;text-transform:uppercase;cursor:pointer;padding:0}
+.vmc-search{display:block;margin-bottom:16px}
+.vmc-search span{display:block;margin-bottom:8px}
+.vmc-search input,.vmc-range-row input{width:100%;border:1px solid rgba(26,26,26,.10);background:rgba(255,255,255,.68);color:var(--bm);font-family:inherit;font-size:13px;padding:11px 12px;outline:none;transition:.18s}
+.vmc-search input:focus,.vmc-range-row input:focus{border-color:rgba(107,45,139,.38);box-shadow:0 0 0 3px rgba(107,45,139,.08)}
+.vmc-filter-apply{margin-top:18px;padding-top:16px;border-top:1px solid rgba(26,26,26,.07);display:grid;gap:10px}
+.vmc-filter-apply .btn{width:100%;justify-content:center;min-height:44px}
+.vmc-filter-preview{text-align:center;font-size:12px;color:rgba(82,86,90,.72)}
+.vmc-filter-preview b{color:var(--ce);font-weight:800}
+.vmc-filter-group{display:grid;gap:10px;margin-top:18px;padding-top:16px;border-top:1px solid rgba(26,26,26,.07)}
+.vmc-tier-label{margin-top:18px;padding-top:16px;border-top:1px solid rgba(26,26,26,.07);font-family:'Golos Text',monospace;font-size:9.5px;font-weight:800;letter-spacing:1.3px;text-transform:uppercase;color:rgba(107,45,139,.62)}
+.vmc-tier-label+.vmc-filter-group{margin-top:12px;padding-top:0;border-top:0}
+.vmc-filter-group label{display:flex;align-items:center;gap:9px;color:rgba(42,45,50,.74);font-size:13px;font-weight:650;line-height:1.35;cursor:pointer}
+.vmc-filter-group input[type="checkbox"]{width:15px;height:15px;accent-color:var(--ce)}
+.vmc-range-row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.vmc-filter-note{margin-top:18px;padding-top:14px;border-top:1px solid rgba(26,26,26,.07);color:rgba(82,86,90,.68);font-size:12px;line-height:1.6}
+.vmc-advanced{margin-top:4px;border-top:1px solid rgba(26,26,26,.07);padding-top:10px}
+.vmc-advanced summary{cursor:pointer;font-family:'Golos Text',monospace;font-size:10.5px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#8f62c8;padding:6px 0}
+.vmc-advanced[open] summary{margin-bottom:4px}
+.vmc-toolbar-actions .btn{width:100%;justify-content:center;min-height:42px}
+.vmc-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.vmc-actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:16px}
+.vmc-actions .btn{min-height:40px;padding:0 10px;font-size:9px;letter-spacing:.85px;text-align:center}
+.vmc-actions .btn-ghost{background:rgba(255,255,255,.38);border-color:rgba(26,26,26,.16)}
+.vmc-actions .btn-ghost:hover{background:var(--bm);border-color:var(--bm);color:#fff}
+.vmc-body{display:flex;flex-direction:column;height:calc(100% - 210px)}
+.vmc-specs{margin-top:auto}
+.milling-tabs-page .eqcat-subnav-wrap{padding:56px 0 18px;background:linear-gradient(180deg,#f7f8fb 0%,#fff 100%)}
+.eqcat-subnav-head{margin-bottom:28px}
+.milling-tabs-page .eqcat-subnav{grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.mill-subtab{position:relative;appearance:none;border:1px solid rgba(120,128,142,.18);background:linear-gradient(150deg,#fff 0%,#fbfaff 100%);box-shadow:0 12px 28px rgba(26,28,36,.05);color:#20242c;text-align:left;cursor:pointer;font:inherit;min-height:150px;padding:22px 22px 20px 26px;display:flex;flex-direction:column;justify-content:space-between;gap:14px;transition:transform .24s cubic-bezier(.2,.7,.2,1),border-color .24s,box-shadow .24s,background .24s;border-radius:14px;overflow:hidden}
+.mill-subtab::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,var(--ce),var(--gold));opacity:.4;transition:opacity .24s ease,width .24s ease}
+.mill-subtab:hover{transform:translateY(-4px);border-color:rgba(143,98,200,.42);background:#fff;box-shadow:0 22px 50px rgba(31,24,45,.12)}
+.mill-subtab:hover::before{opacity:.75}
+.mill-subtab.is-active{transform:translateY(-4px);border-color:rgba(107,45,139,.5);background:linear-gradient(150deg,rgba(107,45,139,.07),rgba(201,162,39,.05) 120%);box-shadow:0 24px 56px rgba(107,45,139,.18)}
+.mill-subtab.is-active::before{opacity:1;width:5px}
+.mill-subtab h3{font-family:'Golos Text',sans-serif;font-size:15.5px;font-weight:800;line-height:1.26;margin:0 0 6px;color:#181b22;letter-spacing:-.005em}
+.mill-subtab p{margin:0;font-size:12px;line-height:1.5;color:#6b7178}
+.mill-subtab-foot{display:flex;flex-direction:column;gap:4px}
+.mill-subtab-link{font-family:'Golos Text',monospace;font-size:10px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;color:#8a8f97;transition:color .2s}
+.mill-subtab-foot small{font-family:'Golos Text',monospace;font-size:10.5px;font-weight:700;letter-spacing:.4px;color:var(--gold)}
+.mill-subtab:hover .mill-subtab-link{color:var(--ce)}
+.mill-subtab.is-active .mill-subtab-link{color:#6B2D8B}
+.mill-subtab.is-active .mill-subtab-foot small{color:var(--ce)}
+.milling-tab-panel{display:none}
+.milling-tab-panel.is-active{display:block}
+.milling-empty-section{padding:28px 0 86px}
+.mill-empty-intro{margin-bottom:26px;max-width:720px}
+.mill-empty-intro p{margin:10px 0 0;color:#68707c;font-size:15.5px;line-height:1.6}
+.mill-sub-note{max-width:420px;border:1px dashed rgba(120,128,142,.35);background:rgba(255,255,255,.6);padding:14px 16px;font-size:12.5px;line-height:1.55;color:#6b7178;margin-top:16px}
+.milling-tabs-page .vmc-grid.vmc-grid-single{grid-template-columns:minmax(0,420px);justify-content:center}
+.milling-tabs-page .vmc-model-section{
+  padding:46px 0 92px;
+  background:radial-gradient(ellipse at 72% 6%,rgba(143,98,200,.12),transparent 30%),linear-gradient(180deg,#f4f5f8 0%,#ffffff 56%,#f1f2f5 100%);
+}
+.milling-tabs-page .vmc-catalog-layout{
+  display:grid;
+  grid-template-columns:286px minmax(0,1fr);
+  gap:30px;
+  align-items:start;
+}
+.milling-tabs-page .vmc-filter-panel{
+  background:rgba(255,255,255,.74);
+  border:1px solid rgba(26,26,26,.08);
+  box-shadow:0 24px 62px rgba(26,26,26,.075);
+  backdrop-filter:blur(18px);
+}
+.milling-tabs-page .vmc-toolbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:16px 28px;
+  margin-bottom:28px;
+}
+.milling-tabs-page .vmc-toolbar h2{margin:0}
+.vmc-toolbar-head{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.milling-tabs-page .vmc-result-line{
+  margin-top:18px;
+  color:rgba(82,86,90,.72);
+  font-size:15px;
+}
+.milling-tabs-page .vmc-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:20px;
+}
+.milling-tabs-page .vmc-card{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  min-height:auto;
+  background:#fff;
+  border:1px solid rgba(26,26,26,.09);
+  border-radius:14px;
+  box-shadow:0 12px 30px rgba(26,26,26,.06);
+  overflow:hidden;
+  transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;
+}
+.vmc-card-link{position:absolute;inset:0;z-index:3}
+.milling-tabs-page .vmc-card:hover{
+  transform:translateY(-4px);
+  border-color:rgba(143,98,200,.3);
+  box-shadow:0 22px 48px rgba(143,98,200,.15),0 14px 34px rgba(26,26,26,.08);
+}
+.milling-tabs-page .vmc-card::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:50%;
+  z-index:3;
+  width:52px;
+  height:2px;
+  transform:translateX(-50%);
+  background:linear-gradient(90deg,var(--ce),var(--gold));
+}
+.milling-tabs-page .vmc-photo{
+  height:196px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:var(--tl2);
+  border-bottom:1px solid rgba(26,26,26,.06);
+  color:rgba(82,86,90,.46);
+  font-family:'Golos Text',monospace;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  position:relative;
+  overflow:hidden;
+}
+.vmc-photo img{transition:transform .3s ease}
+.milling-tabs-page .vmc-card:hover .vmc-photo img{transform:scale(1.05)}
+.vmc-photo-cta{
+  position:absolute;
+  inset:0;
+  z-index:2;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(20,18,26,.36);
+  opacity:0;
+  transition:opacity .2s ease;
+  pointer-events:none;
+}
+.milling-tabs-page .vmc-card:hover .vmc-photo-cta{opacity:1}
+.vmc-photo-cta span{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:9px 20px;
+  background:#fff;
+  color:var(--bm);
+  border-radius:999px;
+  font-family:'Golos Text',monospace;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:1.1px;
+  text-transform:uppercase;
+  box-shadow:0 12px 26px rgba(26,26,26,.28);
+  transform:translateY(6px);
+  transition:transform .2s ease;
+}
+.milling-tabs-page .vmc-card:hover .vmc-photo-cta span{transform:translateY(0)}
+.milling-tabs-page .vmc-body{
+  display:flex;
+  flex-direction:column;
+  flex:1;
+  height:auto;
+  padding:14px 16px 16px;
+}
+.milling-tabs-page .vmc-body small{
+  display:block;
+  margin-bottom:6px;
+  color:var(--ce);
+  font-family:'Golos Text',monospace;
+  font-size:8.5px;
+  font-weight:900;
+  letter-spacing:1.4px;
+  text-transform:uppercase;
+}
+.milling-tabs-page .vmc-body h3{
+  margin:0 0 10px;
+  color:var(--bm);
+  font-size:15.5px;
+  line-height:1.22;
+  letter-spacing:-.012em;
+}
+.milling-tabs-page .vmc-body p{
+  margin:0 0 22px;
+  color:rgba(82,86,90,.78);
+  font-size:16px;
+  line-height:1.58;
+}
+.vmc-offer-btn{
+  position:relative;
+  z-index:4;
+  margin-top:auto;
+  width:100%;
+  min-height:42px;
+  border:1.5px solid var(--ce);
+  background:transparent;
+  color:var(--ce);
+  font-family:'Golos Text',monospace;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  cursor:pointer;
+  transition:background .18s ease,color .18s ease;
+}
+.vmc-offer-btn:hover{background:var(--ce);color:#fff}
+.milling-tabs-page .vmc-specs{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:1px;
+  margin-top:0;
+  background:rgba(26,26,26,.06);
+  border:1px solid rgba(26,26,26,.06);
+}
+.milling-tabs-page .vmc-specs div{
+  min-height:auto;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  background:#fff;
+  border:0;
+  padding:7px 9px;
+}
+.milling-tabs-page .vmc-specs span{
+  margin-bottom:2px;
+  color:rgba(82,86,90,.48);
+  font-family:'Golos Text',monospace;
+  font-size:7.5px;
+  font-weight:800;
+  letter-spacing:.9px;
+  text-transform:uppercase;
+}
+.milling-tabs-page .vmc-specs b{
+  color:rgba(32,36,44,.92);
+  font-size:12px;
+  line-height:1.2;
+}
+.milling-tabs-page .vmc-actions{
+  position:relative;
+  z-index:2;
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:10px;
+  margin-top:auto;
+  padding-top:24px;
+}
+.milling-tabs-page .vmc-actions .btn{
+  min-height:54px;
+  padding:0 12px;
+  border-radius:0;
+  font-family:'Golos Text',monospace;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:1.4px;
+  text-align:center;
+  text-transform:uppercase;
+}
+.milling-tabs-page .vmc-actions .btn-ce{
+  background:linear-gradient(135deg,#7f35ad,#9b54c8);
+  color:#fff;
+  border-color:transparent;
+  box-shadow:0 16px 34px rgba(127,53,173,.22);
+}
+.milling-tabs-page .vmc-actions .btn-gold{
+  background:linear-gradient(135deg,#c7a12f,#e1bd47);
+  color:#1d1d20;
+  border-color:rgba(151,118,19,.22);
+}
+.milling-tabs-page .vmc-card.is-hidden{display:none!important}
+/* responsive */
+@media(max-width:1080px){
+  .menu{display:none}.burger{display:flex;align-items:center;justify-content:center}
+  .proofline-in{grid-template-columns:repeat(2,1fr)}
+  .proof-item.dark{grid-column:1/-1}
+  .tool-photo{width:150px;height:104px}.tool-photo-track{gap:24px;padding:16px 24px}
+  .nav-tile{padding:7px 9px}.nav-tile b{font-size:11.5px}.nav-tile.chat b{font-size:9px}.msg-ic{width:19px;height:19px;font-size:6px}.msg-ic.max{width:auto;min-width:58px;height:23px;font-size:15px}.msg-ic.max::before{width:22px;height:19px;flex-basis:22px}.msg-ic.max::after{left:7px;bottom:4px;width:8px;height:7px}.msg-ic.tg svg{width:11px;height:11px}
+  .pm-widget{right:14px;bottom:14px;padding:10px 11px 10px 12px;gap:10px}.pm-widget b{font-size:11px}.pm-widget small{font-size:6.8px}.pm-widget .msg-ic{width:20px;height:20px}.pm-widget .msg-ic.max{width:auto;min-width:56px;height:23px;font-size:15px}.pm-widget .msg-ic.tg svg{width:11px;height:11px}
+  .hero{grid-template-columns:1fr}.hero-l{width:100%;padding:1.6rem 0 2.3rem}.hero-r{min-height:380px}.hero-r::after{background:linear-gradient(90deg,rgba(237,238,240,.98) 0%,rgba(237,238,240,.82) 62%,rgba(237,238,240,.22) 100%)}
+  .equipment-grid{grid-template-columns:repeat(2,1fr)}
+  .tools-layout{grid-template-columns:1fr}.tools-grid{grid-template-columns:repeat(2,1fr)}.tools-points{grid-template-columns:repeat(2,1fr)}
+  .eqcards,.task-grid{grid-template-columns:repeat(2,1fr)}
+  .sys-layout{grid-template-columns:1fr;gap:28px}
+  .sys-proof{max-width:680px}
+  .system::before{background:linear-gradient(90deg,rgba(26,26,26,.98) 0%,rgba(26,26,26,.9) 100%),url('equipment-part-milling.jpg') left 20%/360px auto no-repeat,url('mehanit-hero-machine.png') right center/72% auto no-repeat}
+  .case-grid,.lz-layout,.quiz-panel,.final-grid{grid-template-columns:1fr}
+  .stock-hero,.stock-grid,.stock-seo{grid-template-columns:1fr}
+  .stock-feature{min-height:360px}
+  .stock-process{grid-template-columns:repeat(2,1fr)}
+  .stock-process div:nth-child(3){border-left:none}
+  .svc-grid,.ind-grid{grid-template-columns:repeat(2,1fr)}
+  .cat-layout{grid-template-columns:1fr}.filters{position:static}
+  .tax-grid{grid-template-columns:1fr}
+  .catalog-detail{grid-template-columns:1fr}
+  .machine-placeholders{grid-template-columns:repeat(2,1fr)}
+  .foot-top{grid-template-columns:1fr 1fr}
+}
+@media(max-width:680px){
+  .wrap{width:min(calc(100% - 32px),var(--max))}
+  .proofline-in{grid-template-columns:1fr}
+  .proof-item{min-height:auto;padding:16px}
+  .tool-photo-strip{margin:-1rem 0 1.6rem}
+  .tool-photo{width:126px;height:88px}.tool-photo-track{gap:18px;padding:14px 18px;animation-duration:36s}
+  .catalog-backline{display:block}.catalog-backline span{display:block;margin-top:8px}
+  .nav-contact{display:none}
+  .pm-widget{left:16px;right:16px;bottom:14px;justify-content:space-between}.pm-widget b{white-space:normal;line-height:1.15}
+  .lead-modal{padding:14px}.lead-content{padding:28px 20px}.lead-form{grid-template-columns:1fr}.lead-close{top:10px;right:10px}
+  .hero-l{min-height:auto;width:100%;padding:1.5rem 0 2rem}.hero-h1{font-size:clamp(31px,8.6vw,42px);margin-bottom:.82rem}.hero-r::after{background:linear-gradient(180deg,rgba(237,238,240,.99) 0%,rgba(237,238,240,.9) 62%,rgba(237,238,240,.34) 100%)}.hero-video,.hero-video-fallback{object-position:center;filter:saturate(1.06) contrast(1.12) brightness(1.14)}
+  .hero-cta{grid-template-columns:1fr;max-width:100%}
+  .hero-stats{grid-template-columns:repeat(2,1fr)}.hs:nth-child(2n){border-right:none}
+  .trust-logos{width:100%;margin-left:0;transform:none}.client-logos{min-height:140px;max-height:190px}
+  .tech-card,.live-badge{display:none}
+  .eqcards,.task-grid,.svc-grid,.ind-grid,.equipment-grid,.tools-grid,.tools-points,.tool-brand-list{grid-template-columns:1fr}
+  .tools-hero{min-height:auto;padding:26px}
+  .catalog-detail{padding:18px}.machine-placeholders{grid-template-columns:1fr}.stock-strip{display:block}.stock-pill{display:inline-flex;margin-top:14px}
+  .stock-copy{padding:24px}.stock-metrics{grid-template-columns:1fr}
+  .stock-toolbar{display:block}.stock-note{margin-top:12px}
+  .stock-card{grid-template-columns:1fr;min-height:0}.stock-card-media{height:300px}.stock-card-body{padding:20px}
+  .stock-specs{grid-template-columns:1fr}.stock-seo-box,.stock-process{padding:22px}
+  .stock-process{grid-template-columns:1fr}.stock-process div{border-left:none;border-top:1px solid var(--line);padding:14px 0}.stock-process div:first-child{border-top:none;padding-top:0}
+  .sys-proof{grid-template-columns:1fr}.sys-proof div{border-right:none;border-bottom:1px solid rgba(234,234,230,.1)}.sys-proof div:last-child{border-bottom:none}
+  .system .wrap::before,.system .wrap::after{display:none}
+  .sys-result-photo{min-height:230px}.sys-result-caption{min-height:230px;padding:20px}.sys-result-photo img{object-position:center}
+  .sys-map{padding:22px 18px}.sys-map::before{display:none}.sys-step{grid-template-columns:48px 1fr;gap:14px}.sys-num{width:38px;height:38px}.sys-step::before{left:19px}
+  .stock-strip{display:block}.stock-pill{display:inline-block;margin-top:14px}
+  .hero-h1{font-size:38px}section{padding:3.6rem 0}
+  .foot-top{grid-template-columns:1fr}
+}
+@media(max-width:900px){
+    .equipment-subgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .equipment-detail-result{display:block}
+    .equipment-detail-result .btn{margin-top:18px}
+}
+@media(max-width:980px){.mill-hero-media{min-height:220px;order:-1}}
+@media (max-width: 980px) {
+  .eqcat-head,
+  .eqcat-layout { grid-template-columns: 1fr; }
+  .eqcat-filter { position: static; }
+  .eqcat-model-grid { grid-template-columns: 1fr; }
+  .eqcat-subnav-grid { grid-template-columns: 1fr; }
+  .eqcat-subnav-media { order: -1; min-height: 200px; }
+}
+@media (max-width: 640px) {
+  .eqcat-hero { padding-top: 54px; }
+  .eqcat-subnav { grid-template-columns: 1fr 1fr; }
+  .eqcat-subitem { min-height: 94px; padding: 14px; }
+  .eqcat-model-actions { flex-direction: column; align-items: stretch; }
+  .eqcat-subcards{display:flex;flex-wrap:nowrap;overflow-x:auto;scroll-snap-type:x proximity;padding-bottom:8px;margin-bottom:-8px}
+  .eqcat-subcards .eqcat-subcard{flex:0 0 84%;scroll-snap-align:start}
+  .eqcat-subcard-media{width:80px;height:70px}
+  .eqcat-sort{width:100%;justify-content:space-between}
+  .eqcat-sort select{flex:1}
+}
+@media(max-width:1180px){.vmc-catalog-layout{grid-template-columns:1fr}.vmc-filter-panel{position:relative;top:auto}.vmc-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.vmc-toolbar-actions{margin-top:18px}.vmc-toolbar{display:block}}
+@media(max-width:720px){.vmc-grid{grid-template-columns:1fr}.vmc-check-grid{grid-template-columns:1fr}.vmc-filter-panel{padding:16px}}
+@media(max-width:1180px){.vmc-actions{grid-template-columns:1fr}}
+@media(max-width:1080px){.milling-tabs-page .eqcat-subnav{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:640px){.milling-tabs-page .eqcat-subnav{grid-template-columns:1fr}.mill-subtab{min-height:auto}}
+@media(max-width:1180px){
+  .milling-tabs-page .vmc-catalog-layout{grid-template-columns:1fr}
+  .milling-tabs-page .vmc-filter-panel{position:relative;top:auto;max-height:none}
+  .milling-tabs-page .vmc-toolbar{display:block}
+}
+@media(max-width:560px){
+  .milling-tabs-page .vmc-grid{grid-template-columns:1fr}
+  .milling-tabs-page .vmc-card{min-height:auto}
+  .milling-tabs-page .vmc-specs,.milling-tabs-page .vmc-actions{grid-template-columns:1fr}
+}
+.eqcat-filter-toggle{display:none;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 20px;border:1.5px solid var(--ce);background:#fff;color:var(--ce);font-family:'Golos Text',monospace;font-size:11px;font-weight:800;letter-spacing:1px;text-transform:uppercase;border-radius:2px;cursor:pointer}
+.eqcat-filter-close{display:none;border:0;background:transparent;color:var(--mid);font-size:22px;line-height:1;cursor:pointer;padding:0 0 0 10px}
+.eqcat-filter-backdrop{display:none}
+@media(max-width:1180px){
+  .eqcat-filter-toggle{display:inline-flex;order:3;width:100%}
+  .milling-tabs-page .vmc-toolbar{display:flex;flex-direction:column;align-items:stretch}
+  .milling-tabs-page .vmc-filter-panel{
+    position:fixed;left:0;right:0;bottom:0;top:auto;
+    max-height:82vh;
+    width:auto;
+    border-radius:16px 16px 0 0;
+    box-shadow:0 -20px 60px rgba(26,26,26,.28);
+    transform:translateY(105%);
+    transition:transform .28s ease;
+    z-index:150;
+  }
+  .milling-tabs-page .vmc-filter-panel.is-open{transform:translateY(0)}
+  .eqcat-filter-close{display:block}
+  .eqcat-filter-backdrop{display:block;position:fixed;inset:0;background:rgba(26,26,26,.5);z-index:149;opacity:0;pointer-events:none;transition:opacity .28s ease}
+  .eqcat-filter-backdrop.is-open{opacity:1;pointer-events:auto}
+}
+:root{--max:1640px}
+.mill-types-line{margin:16px 0 0;font-family:'Golos Text',monospace;font-size:12.5px;letter-spacing:.4px;color:#8f929a}
+.vmc-photo img{max-width:84%;max-height:82%;width:auto;height:auto;object-fit:contain;filter:drop-shadow(0 8px 14px rgba(26,26,26,.14))}
+.media img{max-width:94%;max-height:94%;width:auto;height:auto;object-fit:contain;filter:drop-shadow(0 14px 22px rgba(26,26,26,.16))}
+.vmc-model-section{padding:46px 0 92px;background:radial-gradient(ellipse at 72% 6%,rgba(143,98,200,.12),transparent 30%),linear-gradient(180deg,#f4f5f8 0%,#ffffff 56%,#f1f2f5 100%)}
+.mill-links-row a{display:flex;align-items:center;gap:8px;padding:16px 20px;background:rgba(255,255,255,.7);color:var(--bm);font-size:13px;font-weight:650}
+.mill-links-row a:hover{color:var(--ce)}
+.faq{padding:52px 0}
+.faq-item{border-bottom:1px solid var(--line);padding:18px 0}
+.faq-item summary{cursor:pointer;font-weight:700;font-size:15px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:'+';font-size:20px;color:var(--ce)}
+.faq-item[open] summary::after{content:'–'}
+.faq-item p{margin-top:12px;color:var(--mid);font-size:14px;line-height:1.6;max-width:800px}
+.final-cta{padding:64px 0;background:var(--bm);color:var(--tl);text-align:center}
+.final-cta h2{color:var(--tl)}
+.final-cta p{color:rgba(234,234,230,.72);max-width:560px;margin:14px auto 26px;font-size:15px;line-height:1.6}
+.final-cta-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.mini-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.mini{border:1px solid var(--line);background:rgba(255,255,255,.58);padding:17px;min-height:120px}
+.mini b{display:block;font-family:'Magistral',sans-serif;font-size:15px;margin-bottom:8px}
+.mini span{font-size:13px;line-height:1.55;color:var(--mid)}
+.submodel-table{margin-bottom:22px}
+.submodel-table h4{font-family:'Magistral',sans-serif;font-size:16px;margin-bottom:10px;color:var(--bm)}
+.call-card{margin-top:10px;padding:18px 20px;border:1px solid rgba(107,45,139,.18);background:rgba(255,255,255,.82);backdrop-filter:blur(8px)}
+.call-card small{display:block;font-family:'Golos Text',monospace;font-size:9px;letter-spacing:1.8px;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+.call-card a{font-family:'Magistral',sans-serif;font-size:clamp(26px,4vw,42px);font-weight:700;letter-spacing:-.04em;color:var(--bm)}
+.call-card p{margin-top:10px!important;margin-bottom:0!important}
+@media(max-width:640px){.mini-grid{grid-template-columns:1fr}}
+
+.g2-page .eqcat-hero{padding-bottom:34px}
+.g2-hero-top{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:48px;align-items:start}
+.g2-hero-left{display:flex;flex-direction:column}
+.g2-hero-right{display:flex;flex-direction:column;gap:14px}
+.g2-feature-row{display:flex;flex-wrap:nowrap;gap:16px;margin-top:24px}
+.g2-feature{display:flex;align-items:center;gap:9px;min-width:0;flex:1 1 0}
+.g2-feature-ic{flex:0 0 auto;width:32px;height:32px;border-radius:50%;background:linear-gradient(150deg,rgba(107,45,139,.1),rgba(201,162,39,.08));display:flex;align-items:center;justify-content:center;color:var(--ce)}
+.g2-feature-ic svg{width:18px;height:18px}
+.g2-feature-body{min-width:0}
+.g2-feature b{display:block;font-size:12px;font-weight:800;color:var(--bm);line-height:1.3;margin-bottom:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.g2-feature small{display:block;font-size:11px;color:var(--mid);line-height:1.3}
+.g2-subnav-title{margin-top:6px;text-transform:none;font-size:clamp(24px,2.8vw,34px)}
+.g2-toolbar-head{display:flex;flex-direction:column;gap:6px}
+.g2-toolbar-title-row{display:flex;align-items:baseline;gap:8px 18px;flex-wrap:wrap}
+.g2-catalog-desc{flex:1 1 260px;min-width:220px;color:var(--mid);font-size:13.5px;line-height:1.5;font-weight:400}
+.g2-toolbar-tools{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.g2-fallback-note{margin:-8px 0 18px;padding:10px 14px;background:rgba(201,162,39,.08);border:1px dashed rgba(201,162,39,.4);color:#8a6d10;font-size:12.5px;line-height:1.5;border-radius:6px}
+.g2-filter-panel{padding:20px}
+.g2-filter-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:16px;padding-bottom:14px;border-bottom:1px solid rgba(26,26,26,.08)}
+.g2-filter-head>span{font-family:'Golos Text',monospace;font-size:10px;font-weight:800;letter-spacing:1.15px;text-transform:uppercase;color:rgba(58,62,68,.72)}
+.g2-reset{display:inline-flex;align-items:center;gap:6px;appearance:none;border:0;background:transparent;color:var(--ce);font-family:'Golos Text',monospace;font-size:9px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;cursor:pointer;padding:0}
+.g2-search{position:relative;display:block;margin-bottom:18px}
+.g2-search-ic{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:rgba(82,86,90,.5)}
+.g2-search input{width:100%;border:1px solid rgba(26,26,26,.10);background:rgba(255,255,255,.68);color:var(--bm);font-family:inherit;font-size:13px;padding:11px 12px 11px 34px;outline:none;transition:.18s}
+.g2-search input:focus{border-color:rgba(107,45,139,.38);box-shadow:0 0 0 3px rgba(107,45,139,.08)}
+.g2-direct{display:grid;gap:14px;padding-top:14px;border-top:1px solid rgba(26,26,26,.07)}
+.g2-field strong{display:block;margin-bottom:8px;font-family:'Golos Text',monospace;font-size:10px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;color:rgba(42,45,50,.72)}.g2-check{display:flex;align-items:center;gap:9px;cursor:pointer;font-family:'Golos Text',monospace;font-size:10px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;color:rgba(42,45,50,.72)}.g2-check input{width:16px;height:16px;accent-color:var(--ce);cursor:pointer;flex:0 0 auto}
+.g2-group{margin-top:14px;padding-top:14px;border-top:1px solid rgba(26,26,26,.07)}
+.g2-group summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;font-family:'Golos Text',monospace;font-size:10.5px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;color:rgba(42,45,50,.8);padding:2px 0}
+.g2-group summary::-webkit-details-marker{display:none}
+.g2-group summary::after{content:'+';font-size:15px;color:var(--ce)}
+.g2-group[open] summary::after{content:'–'}
+.g2-group-body{display:grid;gap:14px;margin-top:14px}
+.g2-apply-wrap{margin-top:18px;padding-top:16px;border-top:1px solid rgba(26,26,26,.07)}
+.g2-apply{width:100%;justify-content:center;min-height:46px}
+@media(min-width:1181px){
+  .g2-page .vmc-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+}
+@media(max-width:980px){
+  .g2-hero-top{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .g2-page .eqcat-subcards{display:grid!important;grid-template-columns:1fr!important;overflow:visible!important}
+  .g2-page .eqcat-subcards .eqcat-subcard{flex:1 1 auto!important}
+  .g2-toolbar-tools{width:100%}
+}
+</style>
+<link rel="stylesheet" href="site-shell.css"/>
+</head>
+<body class="premium-v3 milling-tabs-page g2-page">
+<header></header>
+<nav class="crumbbar" aria-label="Хлебные крошки"><div class="wrap crumbs"><a href="index.html">Главная</a><span class="crumb-sep" aria-hidden="true">/</span><a href="equipment.html">Оборудование</a><span class="crumb-sep" aria-hidden="true">/</span><span class="current" aria-current="page">Электроэрозионные станки</span></div></nav>
+<main class="eqcat-page">
+<section class="eqcat-hero"><div class="wrap">
+<div class="g2-hero-top">
+<div class="g2-hero-left">
+<h1 class="eqcat-title">Электроэрозионные станки</h1>
+<div class="g2-feature-row"><div class="g2-feature"><span class="g2-feature-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.2"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3"/></svg></span><div class="g2-feature-body"><b>Любая твёрдость материала</b><small>Без механического воздействия</small></div></div><div class="g2-feature"><span class="g2-feature-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 15c2-3 4-3 6 0s4 3 6 0 4-3 6 0"/><path d="M3 9c2-3 4-3 6 0s4 3 6 0 4-3 6 0"/></svg></span><div class="g2-feature-body"><b>Точная геометрия</b><small>Повторяемость контура и профиля</small></div></div><div class="g2-feature"><span class="g2-feature-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l7 3v5c0 4.5-3 7.8-7 9-4-1.2-7-4.5-7-9V6l7-3z"/><path d="M8.8 12.2l2.1 2.1 4.3-4.3"/></svg></span><div class="g2-feature-body"><b>Чистая поверхность</b><small>Минимум ручной доводки</small></div></div></div>
+</div>
+<div class="g2-hero-right">
+<p class="eqcat-lead">Проволочно-вырезные, копировально-прошивочные станки и супердрели для обработки токопроводящих материалов любой твёрдости без механического воздействия на деталь.</p>
+</div>
+</div>
+</div></section>
+
+<section class="eqcat-subnav-wrap" id="subcats"><div class="wrap">
+<div class="eqcat-subnav-head"><div class="eyebrow">Подкатегории</div><h2 class="h2 g2-subnav-title">Выберите тип оборудования</h2></div>
+<nav class="eqcat-subcards">
+<button type="button" class="eqcat-subcard is-active" data-milling-tab="wire" aria-current="true">
+<span class="eqcat-subcard-badge" aria-hidden="true">✓</span>
+<span class="eqcat-subcard-media"><img src="edm-assets/bh-320-f.png" alt="Проволочно-вырезные станки" loading="lazy"/></span>
+<span class="eqcat-subcard-body">
+<h3>Проволочно-вырезные станки</h3>
+
+</span>
+<span class="eqcat-subcard-arrow" aria-hidden="true">→</span>
+</button><button type="button" class="eqcat-subcard" data-milling-tab="sinker" aria-current="false">
+<span class="eqcat-subcard-badge" aria-hidden="true">✓</span>
+<span class="eqcat-subcard-media"><img src="edm-assets/cnc-c26-m.png" alt="Копировально-прошивочные станки" loading="lazy"/></span>
+<span class="eqcat-subcard-body">
+<h3>Копировально-прошивочные станки</h3>
+
+</span>
+<span class="eqcat-subcard-arrow" aria-hidden="true">→</span>
+</button><button type="button" class="eqcat-subcard" data-milling-tab="superdrill" aria-current="false">
+<span class="eqcat-subcard-badge" aria-hidden="true">✓</span>
+<span class="eqcat-subcard-media"><img src="edm-assets/bh4030-f.png" alt="Супердрели" loading="lazy"/></span>
+<span class="eqcat-subcard-body">
+<h3>Супердрели</h3>
+
+</span>
+<span class="eqcat-subcard-arrow" aria-hidden="true">→</span>
+</button>
+</nav>
+</div></section>
+
+<section class="milling-tab-panel is-active" data-milling-panel="wire">
+<section class="vmc-model-section"><div class="wrap">
+<div class="vmc-catalog-layout" data-vmc-scope>
+<aside class="vmc-filter-panel g2-filter-panel">
+<div class="eqcat-filter-backdrop" data-role="filter-backdrop"></div>
+<div class="g2-filter-head"><span>Фильтр</span><button type="button" class="g2-reset" data-role="reset"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg>Сбросить всё</button><button type="button" class="eqcat-filter-close" data-role="filter-close" aria-label="Закрыть фильтр">×</button></div>
+<label class="g2-search"><span class="g2-search-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span><input type="search" data-role="search" placeholder="Поиск по модели"/></label>
+<div class="g2-direct"><div class="g2-field"><strong>Макс. габариты заготовки</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="max-workpiece-dims" data-bound="min"/>
+<input type="number" placeholder="До" data-range="max-workpiece-dims" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Размер стола</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="table-size" data-bound="min"/>
+<input type="number" placeholder="До" data-range="table-size" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Перемещение по осям X и Y</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="travel-xy" data-bound="min"/>
+<input type="number" placeholder="До" data-range="travel-xy" data-bound="max"/>
+</div></div></div>
+<details class="g2-group" open><summary>Дополнительные параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Диаметр проволоки</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="wire-diameter" data-bound="min"/>
+<input type="number" placeholder="До" data-range="wire-diameter" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Скорость реза / подачи</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="cut-speed" data-bound="min"/>
+<input type="number" placeholder="До" data-range="cut-speed" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Макс. масса заготовки</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="max-workpiece-weight" data-bound="min"/>
+<input type="number" placeholder="До" data-range="max-workpiece-weight" data-bound="max"/>
+</div></div></div></details>
+<details class="g2-group"><summary>Все параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Масса станка (кг)</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="machine-weight" data-bound="min"/>
+<input type="number" placeholder="До" data-range="machine-weight" data-bound="max"/>
+</div></div></div></details>
+<div class="g2-apply-wrap">
+<button type="button" class="btn btn-ce g2-apply" data-role="apply">Показать <span data-role="preview">38</span> <span data-role="preview-word">моделей</span></button>
+</div>
+<p class="vmc-filter-note">Не нашли нужный параметр в фильтре — характеристики каждой модели указаны в карточке и на странице станка.</p>
+</aside>
+<div>
+<div class="vmc-toolbar g2-toolbar">
+<div class="vmc-toolbar-head g2-toolbar-head">
+<div class="eyebrow">Модельный ряд</div>
+<div class="g2-toolbar-title-row"><h2 class="h2 eqcat-catalog-title">Проволочно-вырезные станки</h2><span class="g2-catalog-desc">Точный рез контуров и сложных профилей проволокой в диэлектрике.</span></div>
+</div>
+<div class="g2-toolbar-tools">
+<button type="button" class="eqcat-filter-toggle" data-role="filter-toggle">Все фильтры</button>
+</div>
+</div>
+<div class="g2-fallback-note" data-role="fallback-note" hidden>Точных совпадений не нашлось — показаны ближайшие по параметрам модели.</div>
+<div class="vmc-grid">
+<article class="vmc-card" data-name="bh-320 f проволочно-вырезные станки" data-title="BH-320 F" data-sortkey="760.0" data-table-size="760" data-travel-xy="400" data-wire-diameter="0.12~0.25" data-cut-speed="180" data-max-workpiece-weight="300" data-machine-weight="1860">
+<a class="vmc-card-link" href="equipment-edm-bh-320-f.html" aria-label="BH-320 F — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/bh-320-f.png" alt="BH-320 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Проволочно-вырезные</small>
+<h3>BH-320 F</h3>
+<div class="vmc-specs"><div><span>Макс. габариты заготовки</span><b>—</b></div><div><span>Размер стола</span><b>760×520 мм</b></div><div><span>Перемещение по осям X и Y</span><b>400×320 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="bh-400 f проволочно-вырезные станки" data-title="BH-400 F" data-sortkey="850.0" data-table-size="850" data-travel-xy="500" data-wire-diameter="0.12~0.25" data-cut-speed="180" data-max-workpiece-weight="500" data-machine-weight="2160">
+<a class="vmc-card-link" href="equipment-edm-bh-400-f.html" aria-label="BH-400 F — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/bh-400-f.png" alt="BH-400 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Проволочно-вырезные</small>
+<h3>BH-400 F</h3>
+<div class="vmc-specs"><div><span>Макс. габариты заготовки</span><b>—</b></div><div><span>Размер стола</span><b>850×600 мм</b></div><div><span>Перемещение по осям X и Y</span><b>500×400 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="bh-500 f проволочно-вырезные станки" data-title="BH-500 F" data-sortkey="1000.0" data-table-size="1000" data-travel-xy="630" data-wire-diameter="0.12~0.25" data-cut-speed="180" data-max-workpiece-weight="800" data-machine-weight="2750">
+<a class="vmc-card-link" href="equipment-edm-bh-500-f.html" aria-label="BH-500 F — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/bh-500-f.png" alt="BH-500 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Проволочно-вырезные</small>
+<h3>BH-500 F</h3>
+<div class="vmc-specs"><div><span>Макс. габариты заготовки</span><b>—</b></div><div><span>Размер стола</span><b>1000×750 мм</b></div><div><span>Перемещение по осям X и Y</span><b>630×500 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="bh-630 f проволочно-вырезные станки" data-title="BH-630 F" data-sortkey="1170.0" data-table-size="1170" data-travel-xy="800" data-wire-diameter="0.12~0.25" data-cut-speed="180" data-max-workpiece-weight="1000" data-machine-weight="3450">
+<a class="vmc-card-link" href="equipment-edm-bh-630-f.html" aria-label="BH-630 F — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/bh-630-f.png" alt="BH-630 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Проволочно-вырезные</small>
+<h3>BH-630 F</h3>
+<div class="vmc-specs"><div><span>Макс. габариты заготовки</span><b>—</b></div><div><span>Размер стола</span><b>1170×830 мм</b></div><div><span>Перемещение по осям X и Y</span><b>800×630 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="bsw1270 m проволочно-вырезные станки" data-title="BSW1270 M" data-sortkey="1530.0" data-max-workpiece-dims="1600" data-table-size="1530" data-travel-xy="1200" data-wire-diameter="0.15~0.3" data-cut-speed="400" data-max-workpiece-weight="1500" data-machine-weight="7000">
+<a class="vmc-card-link" href="equipment-edm-bsw1270-m.html" aria-label="BSW1270 M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/bsw1270-m.png" alt="BSW1270 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Проволочно-вырезные</small>
+<h3>BSW1270 M</h3>
+<div class="vmc-specs"><div><span>Макс. габариты заготовки</span><b>1600 × 1000 × 310 мм</b></div><div><span>Размер стола</span><b>1530 × 970 мм</b></div><div><span>Перемещение по осям X и Y</span><b>1200 × 700 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="bsw325 m проволочно-вырезные станки" data-title="BSW325 M" data-sortkey="560.0" data-max-workpiece-dims="700" data-table-size="560" data-travel-xy="350" data-wire-diameter="0.15~0.3" data-cut-speed="400" data-max-workpiece-weight="350" data-machine-weight="2000">
+<a class="vmc-card-link" href="equipment-edm-bsw325-m.html" aria-label="BSW325 M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/bsw325-m.png" alt="BSW325 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Проволочно-вырезные</small>
+<h3>BSW325 M</h3>
+<div class="vmc-specs"><div><span>Макс. габариты заготовки</span><b>700 × 450 × 200 мм</b></div><div><span>Размер стола</span><b>560 × 410 мм</b></div><div><span>Перемещение по осям X и Y</span><b>350 × 250 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="bsw530 m проволочно-вырезные станки" data-title="BSW530 M" data-sortkey="710.0" data-max-workpiece-dims="850" data-table-size="710" data-travel-xy="500" data-wire-diameter="0.15~0.3" data-cut-speed="400" data-max-workpiece-weight="350" data-machine-weight="2800">
+<a class="vmc-card-link" href="equipment-edm-bsw530-m.html" aria-label="BSW530 M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/bsw530-m.png" alt="BSW530 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Проволочно-вырезные</small>
+<h3>BSW530 M</h3>
+<div class="vmc-specs"><div><span>Макс. габариты заготовки</span><b>850 × 500 × 200 мм</b></div><div><span>Размер стола</span><b>710 × 460 мм</b></div><div><span>Перемещение по осям X и Y</span><b>500 × 300 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="bsw645 m проволочно-вырезные станки" data-title="BSW645 M" data-sortkey="868.0" data-max-workpiece-dims="1100" data-table-size="868" data-travel-xy="600" data-wire-diameter="0.15~0.3" data-cut-speed="400" data-max-workpiece-weight="500" data-machine-weight="3800">
+<a class="vmc-card-link" href="equipment-edm-bsw645-m.html" aria-label="BSW645 M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/bsw645-m.png" alt="BSW645 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Проволочно-вырезные</small>
+<h3>BSW645 M</h3>
+<div class="vmc-specs"><div><span>Макс. габариты заготовки</span><b>1100 × 800 × 250 мм</b></div><div><span>Размер стола</span><b>868 × 668 мм</b></div><div><span>Перемещение по осям X и Y</span><b>600 × 450 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="dk77100h f проволочно-вырезные станки" data-title="DK77100H F" data-sortkey="1220.0" data-table-size="1220" data-travel-xy="1000" data-wire-diameter="0.12~0.25" data-cut-speed="200" data-max-workpiece-weight="3000" data-machine-weight="5500">
+<a class="vmc-card-link" href="equipment-edm-dk77100h-f.html" aria-label="DK77100H F — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/dk77100h-f.png" alt="DK77100H F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Проволочно-вырезные</small>
+<h3>DK77100H F</h3>
+<div class="vmc-specs"><div><span>Макс. габариты заготовки</span><b>—</b></div><div><span>Размер стола</span><b>1220×1550 мм</b></div><div><span>Перемещение по осям X и Y</span><b>1000×1200 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="dk7732h f проволочно-вырезные станки" data-title="DK7732H F" data-sortkey="500.0" data-table-size="500" data-travel-xy="320" data-wire-diameter="0.12~0.25" data-cut-speed="200" data-max-workpiece-weight="450" data-machine-weight="1650">
+<a class="vmc-card-link" href="equipment-edm-dk7732h-f.html" aria-label="DK7732H F — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/dk7732h-f.png" alt="DK7732H F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Проволочно-вырезные</small>
+<h3>DK7732H F</h3>
+<div class="vmc-specs"><div><span>Макс. габариты заготовки</span><b>—</b></div><div><span>Размер стола</span><b>500×720 мм</b></div><div><span>Перемещение по осям X и Y</span><b>320×400 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="dk7735 f проволочно-вырезные станки" data-title="DK7735 F" data-sortkey="750.0" data-table-size="750" data-travel-xy="350" data-wire-diameter="0.1~0.3" data-cut-speed="90" data-max-workpiece-weight="300" data-machine-weight="1200">
+<a class="vmc-card-link" href="equipment-edm-dk7735-f.html" aria-label="DK7735 F — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/dk7735-f.png" alt="DK7735 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Проволочно-вырезные</small>
+<h3>DK7735 F</h3>
+<div class="vmc-specs"><div><span>Макс. габариты заготовки</span><b>—</b></div><div><span>Размер стола</span><b>750×510 мм</b></div><div><span>Перемещение по осям X и Y</span><b>350×450 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="dk7740f f проволочно-вырезные станки" data-title="DK7740F F" data-sortkey="1060.0" data-table-size="1060" data-travel-xy="400" data-wire-diameter="0.1~0.2" data-cut-speed="90" data-max-workpiece-weight="350" data-machine-weight="2200">
+<a class="vmc-card-link" href="equipment-edm-dk7740f-f.html" aria-label="DK7740F F — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/dk7740f-f.png" alt="DK7740F F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Проволочно-вырезные</small>
+<h3>DK7740F F</h3>
+<div class="vmc-specs"><div><span>Макс. габариты заготовки</span><b>—</b></div><div><span>Размер стола</span><b>1060×600 мм</b></div><div><span>Перемещение по осям X и Y</span><b>400×600 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="dk7740h f проволочно-вырезные станки" data-title="DK7740H F" data-sortkey="600.0" data-table-size="600" data-travel-xy="400" data-wire-diameter="0.12~0.25" data-cut-speed="200" data-max-workpiece-weight="600" data-machine-weight="1850">
+<a class="vmc-card-link" href="equipment-edm-dk7740h-f.html" aria-label="DK7740H F — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/dk7740h-f.png" alt="DK7740H F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Проволочно-вырезные</small>
+<h3>DK7740H F</h3>
+<div class="vmc-specs"><div><span>Макс. габариты заготовки</span><b>—</b></div><div><span>Размер стола</span><b>600×820 мм</b></div><div><span>Перемещение по осям X и Y</span><b>400×500 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="dk7745 f проволочно-вырезные станки" data-title="DK7745 F" data-sortkey="820.0" data-table-size="820" data-travel-xy="450" data-wire-diameter="0.1~0.3" data-cut-speed="90" data-max-workpiece-weight="450" data-machine-weight="1350">
+<a class="vmc-card-link" href="equipment-edm-dk7745-f.html" aria-label="DK7745 F — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/dk7745-f.png" alt="DK7745 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Проволочно-вырезные</small>
+<h3>DK7745 F</h3>
+<div class="vmc-specs"><div><span>Макс. габариты заготовки</span><b>—</b></div><div><span>Размер стола</span><b>820×580 мм</b></div><div><span>Перемещение по осям X и Y</span><b>450×550 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="dk7750 f проволочно-вырезные станки" data-title="DK7750 F" data-sortkey="1000.0" data-table-size="1000" data-travel-xy="500" data-wire-diameter="0.1~0.3" data-cut-speed="90" data-max-workpiece-weight="700" data-machine-weight="2100">
+<a class="vmc-card-link" href="equipment-edm-dk7750-f.html" aria-label="DK7750 F — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/dk7750-f.png" alt="DK7750 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Проволочно-вырезные</small>
+<h3>DK7750 F</h3>
+<div class="vmc-specs"><div><span>Макс. габариты заготовки</span><b>—</b></div><div><span>Размер стола</span><b>1000×690 мм</b></div><div><span>Перемещение по осям X и Y</span><b>500×630 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="dk7750f f проволочно-вырезные станки" data-title="DK7750F F" data-sortkey="1060.0" data-table-size="1060" data-travel-xy="500" data-wire-diameter="0.1~0.2" data-cut-speed="90" data-max-workpiece-weight="500" data-machine-weight="2900">
+<a class="vmc-card-link" href="equipment-edm-dk7750f-f.html" aria-label="DK7750F F — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/dk7750f-f.png" alt="DK7750F F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Проволочно-вырезные</small>
+<h3>DK7750F F</h3>
+<div class="vmc-specs"><div><span>Макс. габариты заготовки</span><b>—</b></div><div><span>Размер стола</span><b>1060×660 мм</b></div><div><span>Перемещение по осям X и Y</span><b>500×700 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="dk7750h f проволочно-вырезные станки" data-title="DK7750H F" data-sortkey="700.0" data-table-size="700" data-travel-xy="500" data-wire-diameter="0.12~0.25" data-cut-speed="200" data-max-workpiece-weight="1000" data-machine-weight="2600">
+<a class="vmc-card-link" href="equipment-edm-dk7750h-f.html" aria-label="DK7750H F — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/dk7750h-f.png" alt="DK7750H F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Проволочно-вырезные</small>
+<h3>DK7750H F</h3>
+<div class="vmc-specs"><div><span>Макс. габариты заготовки</span><b>—</b></div><div><span>Размер стола</span><b>700×1000 мм</b></div><div><span>Перемещение по осям X и Y</span><b>500×630 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="dk7763 f проволочно-вырезные станки" data-title="DK7763 F" data-sortkey="1140.0" data-table-size="1140" data-travel-xy="630" data-wire-diameter="0.1~0.3" data-cut-speed="90" data-max-workpiece-weight="1000" data-machine-weight="3000">
+<a class="vmc-card-link" href="equipment-edm-dk7763-f.html" aria-label="DK7763 F — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/dk7763-f.png" alt="DK7763 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Проволочно-вырезные</small>
+<h3>DK7763 F</h3>
+<div class="vmc-specs"><div><span>Макс. габариты заготовки</span><b>—</b></div><div><span>Размер стола</span><b>1140×770 мм</b></div><div><span>Перемещение по осям X и Y</span><b>630×800 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="dk7763f f проволочно-вырезные станки" data-title="DK7763F F" data-sortkey="1360.0" data-table-size="1360" data-travel-xy="630" data-wire-diameter="0.1~0.2" data-cut-speed="90" data-max-workpiece-weight="800" data-machine-weight="3200">
+<a class="vmc-card-link" href="equipment-edm-dk7763f-f.html" aria-label="DK7763F F — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/dk7763f-f.png" alt="DK7763F F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Проволочно-вырезные</small>
+<h3>DK7763F F</h3>
+<div class="vmc-specs"><div><span>Макс. габариты заготовки</span><b>—</b></div><div><span>Размер стола</span><b>1360×770 мм</b></div><div><span>Перемещение по осям X и Y</span><b>630×1000 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="dk7763h f проволочно-вырезные станки" data-title="DK7763H F" data-sortkey="800.0" data-table-size="800" data-travel-xy="630" data-wire-diameter="0.12~0.25" data-cut-speed="200" data-max-workpiece-weight="1200" data-machine-weight="3000">
+<a class="vmc-card-link" href="equipment-edm-dk7763h-f.html" aria-label="DK7763H F — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/dk7763h-f.png" alt="DK7763H F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Проволочно-вырезные</small>
+<h3>DK7763H F</h3>
+<div class="vmc-specs"><div><span>Макс. габариты заготовки</span><b>—</b></div><div><span>Размер стола</span><b>800×1200 мм</b></div><div><span>Перемещение по осям X и Y</span><b>630×800 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="dk7780 f проволочно-вырезные станки" data-title="DK7780 F" data-sortkey="1350.0" data-table-size="1350" data-travel-xy="800" data-wire-diameter="0.1~0.3" data-cut-speed="90" data-max-workpiece-weight="2000" data-machine-weight="4000">
+<a class="vmc-card-link" href="equipment-edm-dk7780-f.html" aria-label="DK7780 F — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/dk7780-f.png" alt="DK7780 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Проволочно-вырезные</small>
+<h3>DK7780 F</h3>
+<div class="vmc-specs"><div><span>Макс. габариты заготовки</span><b>—</b></div><div><span>Размер стола</span><b>1350×1000 мм</b></div><div><span>Перемещение по осям X и Y</span><b>800×1000 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="dk7780h f проволочно-вырезные станки" data-title="DK7780H F" data-sortkey="1000.0" data-table-size="1000" data-travel-xy="800" data-wire-diameter="0.12~0.25" data-cut-speed="200" data-max-workpiece-weight="2000" data-machine-weight="4000">
+<a class="vmc-card-link" href="equipment-edm-dk7780h-f.html" aria-label="DK7780H F — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/dk7780h-f.png" alt="DK7780H F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Проволочно-вырезные</small>
+<h3>DK7780H F</h3>
+<div class="vmc-specs"><div><span>Макс. габариты заготовки</span><b>—</b></div><div><span>Размер стола</span><b>1000×1350 мм</b></div><div><span>Перемещение по осям X и Y</span><b>800×1000 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="fw-bfw 1270 m проволочно-вырезные станки" data-title="FW-BFW 1270 M" data-sortkey="1500.0" data-max-workpiece-dims="1600" data-table-size="1530" data-travel-xy="1200" data-wire-diameter="0.15~0.3" data-cut-speed="400" data-max-workpiece-weight="1500" data-machine-weight="6500">
+<a class="vmc-card-link" href="equipment-edm-fw-bfw-1270-m.html" aria-label="FW-BFW 1270 M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/fw-bfw-1270-m.png" alt="FW-BFW 1270 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Проволочно-вырезные</small>
+<h3>FW-BFW 1270 M</h3>
+<div class="vmc-specs"><div><span>Макс. габариты заготовки</span><b>1600 x 1000 x 350 мм</b></div><div><span>Размер стола</span><b>1530×970 мм</b></div><div><span>Перемещение по осям X и Y</span><b>1200 x 700 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="fw-bfw 325 m проволочно-вырезные станки" data-title="FW-BFW 325 M" data-sortkey="350.0" data-max-workpiece-dims="800" data-table-size="560" data-travel-xy="350" data-wire-diameter="0.15~0.3" data-cut-speed="400" data-max-workpiece-weight="350" data-machine-weight="1800">
+<a class="vmc-card-link" href="equipment-edm-fw-bfw-325-m.html" aria-label="FW-BFW 325 M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/fw-bfw-325-m.png" alt="FW-BFW 325 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Проволочно-вырезные</small>
+<h3>FW-BFW 325 M</h3>
+<div class="vmc-specs"><div><span>Макс. габариты заготовки</span><b>800x550x200 мм</b></div><div><span>Размер стола</span><b>560×410 мм</b></div><div><span>Перемещение по осям X и Y</span><b>350x250 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="fw-bfw 530 m проволочно-вырезные станки" data-title="FW-BFW 530 M" data-sortkey="710.0" data-max-workpiece-dims="850" data-table-size="710" data-travel-xy="500" data-wire-diameter="0.15~0.3" data-cut-speed="400" data-max-workpiece-weight="350" data-machine-weight="2500">
+<a class="vmc-card-link" href="equipment-edm-fw-bfw-530-m.html" aria-label="FW-BFW 530 M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/fw-bfw-530-m.png" alt="FW-BFW 530 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Проволочно-вырезные</small>
+<h3>FW-BFW 530 M</h3>
+<div class="vmc-specs"><div><span>Макс. габариты заготовки</span><b>850x550x250 мм</b></div><div><span>Размер стола</span><b>710х460 мм</b></div><div><span>Перемещение по осям X и Y</span><b>500x300 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="fw-bfw 645 m проволочно-вырезные станки" data-title="FW-BFW 645 M" data-sortkey="600.0" data-max-workpiece-dims="1250" data-table-size="868" data-travel-xy="600" data-wire-diameter="0.15~0.3" data-cut-speed="400" data-max-workpiece-weight="600" data-machine-weight="3600">
+<a class="vmc-card-link" href="equipment-edm-fw-bfw-645-m.html" aria-label="FW-BFW 645 M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/fw-bfw-645-m.png" alt="FW-BFW 645 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Проволочно-вырезные</small>
+<h3>FW-BFW 645 M</h3>
+<div class="vmc-specs"><div><span>Макс. габариты заготовки</span><b>1250x850x300 мм</b></div><div><span>Размер стола</span><b>868x668 мм</b></div><div><span>Перемещение по осям X и Y</span><b>600x450 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="fw-bfw 845 m проволочно-вырезные станки" data-title="FW-BFW 845 M" data-sortkey="600.0" data-max-workpiece-dims="1350" data-table-size="1068" data-travel-xy="800" data-wire-diameter="0.15~0.3" data-cut-speed="400" data-max-workpiece-weight="600" data-machine-weight="4000">
+<a class="vmc-card-link" href="equipment-edm-fw-bfw-845-m.html" aria-label="FW-BFW 845 M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/fw-bfw-845-m.png" alt="FW-BFW 845 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Проволочно-вырезные</small>
+<h3>FW-BFW 845 M</h3>
+<div class="vmc-specs"><div><span>Макс. габариты заготовки</span><b>1350x850x300 мм</b></div><div><span>Размер стола</span><b>1068x670 мм</b></div><div><span>Перемещение по осям X и Y</span><b>800x450 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="fw1270 m проволочно-вырезные станки" data-title="FW1270 M" data-sortkey="1530.0" data-max-workpiece-dims="1600" data-table-size="1530" data-travel-xy="1200" data-wire-diameter="0.15~0.3" data-cut-speed="400" data-max-workpiece-weight="1500" data-machine-weight="6500">
+<a class="vmc-card-link" href="equipment-edm-fw1270-m.html" aria-label="FW1270 M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/fw1270-m.png" alt="FW1270 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Проволочно-вырезные</small>
+<h3>FW1270 M</h3>
+<div class="vmc-specs"><div><span>Макс. габариты заготовки</span><b>1600 × 1000 × 310 мм (ориент.)</b></div><div><span>Размер стола</span><b>1530 × 970 мм</b></div><div><span>Перемещение по осям X и Y</span><b>1200 × 700 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="fw325 m проволочно-вырезные станки" data-title="FW325 M" data-sortkey="560.0" data-max-workpiece-dims="800" data-table-size="560" data-travel-xy="350" data-wire-diameter="0.15~0.3" data-cut-speed="400" data-max-workpiece-weight="350" data-machine-weight="1800">
+<a class="vmc-card-link" href="equipment-edm-fw325-m.html" aria-label="FW325 M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/fw325-m.png" alt="FW325 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Проволочно-вырезные</small>
+<h3>FW325 M</h3>
+<div class="vmc-specs"><div><span>Макс. габариты заготовки</span><b>800 × 550 × 200 мм</b></div><div><span>Размер стола</span><b>560 × 410 мм</b></div><div><span>Перемещение по осям X и Y</span><b>350 × 250 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="fw530 m проволочно-вырезные станки" data-title="FW530 M" data-sortkey="710.0" data-max-workpiece-dims="850" data-table-size="710" data-travel-xy="500" data-wire-diameter="0.15~0.3" data-cut-speed="400" data-max-workpiece-weight="350" data-machine-weight="2500">
+<a class="vmc-card-link" href="equipment-edm-fw530-m.html" aria-label="FW530 M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/fw530-m.png" alt="FW530 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Проволочно-вырезные</small>
+<h3>FW530 M</h3>
+<div class="vmc-specs"><div><span>Макс. габариты заготовки</span><b>850 × 550 × 250 мм</b></div><div><span>Размер стола</span><b>710 × 460 мм</b></div><div><span>Перемещение по осям X и Y</span><b>500 × 300 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="fw645 m проволочно-вырезные станки" data-title="FW645 M" data-sortkey="868.0" data-max-workpiece-dims="1250" data-table-size="868" data-travel-xy="600" data-wire-diameter="0.15~0.3" data-cut-speed="400" data-max-workpiece-weight="600" data-machine-weight="3600">
+<a class="vmc-card-link" href="equipment-edm-fw645-m.html" aria-label="FW645 M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/fw645-m.png" alt="FW645 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Проволочно-вырезные</small>
+<h3>FW645 M</h3>
+<div class="vmc-specs"><div><span>Макс. габариты заготовки</span><b>1250 × 850 × 300 мм</b></div><div><span>Размер стола</span><b>868 × 668 мм</b></div><div><span>Перемещение по осям X и Y</span><b>600 × 450 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="fw845 m проволочно-вырезные станки" data-title="FW845 M" data-sortkey="1068.0" data-max-workpiece-dims="1350" data-table-size="1068" data-travel-xy="800" data-wire-diameter="0.15~0.3" data-cut-speed="400" data-max-workpiece-weight="600" data-machine-weight="4000">
+<a class="vmc-card-link" href="equipment-edm-fw845-m.html" aria-label="FW845 M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/fw845-m.png" alt="FW845 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Проволочно-вырезные</small>
+<h3>FW845 M</h3>
+<div class="vmc-specs"><div><span>Макс. габариты заготовки</span><b>1350 × 850 × 300 мм</b></div><div><span>Размер стола</span><b>1068 × 670 мм</b></div><div><span>Перемещение по осям X и Y</span><b>800 × 450 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="sw-bsw 1270 m проволочно-вырезные станки" data-title="SW-BSW 1270 M" data-sortkey="1500.0" data-max-workpiece-dims="1600" data-table-size="1530" data-travel-xy="1200" data-wire-diameter="0.15~0.3" data-cut-speed="400" data-max-workpiece-weight="1500" data-machine-weight="7000">
+<a class="vmc-card-link" href="equipment-edm-sw-bsw-1270-m.html" aria-label="SW-BSW 1270 M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/sw-bsw-1270-m.png" alt="SW-BSW 1270 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Проволочно-вырезные</small>
+<h3>SW-BSW 1270 M</h3>
+<div class="vmc-specs"><div><span>Макс. габариты заготовки</span><b>1600 x 1000 x 310 мм</b></div><div><span>Размер стола</span><b>1530x970 мм</b></div><div><span>Перемещение по осям X и Y</span><b>1200 x 700 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="sw-bsw 325 m проволочно-вырезные станки" data-title="SW-BSW 325 M" data-sortkey="350.0" data-max-workpiece-dims="700" data-table-size="560" data-travel-xy="350" data-wire-diameter="0.15~0.3" data-cut-speed="400" data-max-workpiece-weight="350" data-machine-weight="2000">
+<a class="vmc-card-link" href="equipment-edm-sw-bsw-325-m.html" aria-label="SW-BSW 325 M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/sw-bsw-325-m.png" alt="SW-BSW 325 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Проволочно-вырезные</small>
+<h3>SW-BSW 325 M</h3>
+<div class="vmc-specs"><div><span>Макс. габариты заготовки</span><b>700 x 450 x 180 мм</b></div><div><span>Размер стола</span><b>560х410 мм</b></div><div><span>Перемещение по осям X и Y</span><b>350 х 250 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="sw-bsw 530 m проволочно-вырезные станки" data-title="SW-BSW 530 M" data-sortkey="350.0" data-max-workpiece-dims="850" data-table-size="710" data-travel-xy="500" data-wire-diameter="0.15~0.3" data-cut-speed="400" data-max-workpiece-weight="350" data-machine-weight="2800">
+<a class="vmc-card-link" href="equipment-edm-sw-bsw-530-m.html" aria-label="SW-BSW 530 M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/sw-bsw-530-m.png" alt="SW-BSW 530 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Проволочно-вырезные</small>
+<h3>SW-BSW 530 M</h3>
+<div class="vmc-specs"><div><span>Макс. габариты заготовки</span><b>850x500x200 мм</b></div><div><span>Размер стола</span><b>710x460 мм</b></div><div><span>Перемещение по осям X и Y</span><b>500x300 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="sw-bsw 645 m проволочно-вырезные станки" data-title="SW-BSW 645 M" data-sortkey="500.0" data-max-workpiece-dims="1100" data-table-size="868" data-travel-xy="600" data-wire-diameter="0.15~0.3" data-max-workpiece-weight="500" data-machine-weight="3800">
+<a class="vmc-card-link" href="equipment-edm-sw-bsw-645-m.html" aria-label="SW-BSW 645 M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/sw-bsw-645-m.png" alt="SW-BSW 645 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Проволочно-вырезные</small>
+<h3>SW-BSW 645 M</h3>
+<div class="vmc-specs"><div><span>Макс. габариты заготовки</span><b>1100 x 800 x 250 мм</b></div><div><span>Размер стола</span><b>868х668 мм</b></div><div><span>Перемещение по осям X и Y</span><b>600 x 450 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="sw1270 m проволочно-вырезные станки" data-title="SW1270 M" data-sortkey="1530.0" data-max-workpiece-dims="1600" data-table-size="1530" data-travel-xy="1200" data-wire-diameter="0.15~0.3" data-cut-speed="400" data-max-workpiece-weight="1500" data-machine-weight="7000">
+<a class="vmc-card-link" href="equipment-edm-sw1270-m.html" aria-label="SW1270 M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/sw1270-m.png" alt="SW1270 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Проволочно-вырезные</small>
+<h3>SW1270 M</h3>
+<div class="vmc-specs"><div><span>Макс. габариты заготовки</span><b>1600 × 1000 × 310 мм</b></div><div><span>Размер стола</span><b>1530 × 970 мм</b></div><div><span>Перемещение по осям X и Y</span><b>1200 × 700 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="sw645 m проволочно-вырезные станки" data-title="SW645 M" data-sortkey="868.0" data-max-workpiece-dims="1100" data-table-size="868" data-travel-xy="600" data-wire-diameter="0.15~0.3" data-cut-speed="400" data-max-workpiece-weight="500" data-machine-weight="3800">
+<a class="vmc-card-link" href="equipment-edm-sw645-m.html" aria-label="SW645 M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/sw645-m.png" alt="SW645 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Проволочно-вырезные</small>
+<h3>SW645 M</h3>
+<div class="vmc-specs"><div><span>Макс. габариты заготовки</span><b>1100 × 800 × 250 мм</b></div><div><span>Размер стола</span><b>868 × 668 мм</b></div><div><span>Перемещение по осям X и Y</span><b>600 × 450 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+</div>
+</div>
+</div>
+</div></section>
+</section><section class="milling-tab-panel" data-milling-panel="sinker">
+<section class="vmc-model-section"><div class="wrap">
+<div class="vmc-catalog-layout" data-vmc-scope>
+<aside class="vmc-filter-panel g2-filter-panel">
+<div class="eqcat-filter-backdrop" data-role="filter-backdrop"></div>
+<div class="g2-filter-head"><span>Фильтр</span><button type="button" class="g2-reset" data-role="reset"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg>Сбросить всё</button><button type="button" class="eqcat-filter-close" data-role="filter-close" aria-label="Закрыть фильтр">×</button></div>
+<label class="g2-search"><span class="g2-search-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span><input type="search" data-role="search" placeholder="Поиск по модели"/></label>
+<div class="g2-direct"><div class="g2-field"><strong>Макс. габариты заготовки</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="max-workpiece-dims" data-bound="min"/>
+<input type="number" placeholder="До" data-range="max-workpiece-dims" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Размер стола</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="table-size" data-bound="min"/>
+<input type="number" placeholder="До" data-range="table-size" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Перемещение по осям X и Y</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="travel-xy" data-bound="min"/>
+<input type="number" placeholder="До" data-range="travel-xy" data-bound="max"/>
+</div></div><div class="g2-field"><label class="g2-check"><input type="checkbox" name="cnc-present" value="да"/><span>Наличие ЧПУ</span></label></div></div>
+<details class="g2-group" open><summary>Дополнительные параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Макс. масса заготовки (кг)</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="max-workpiece-weight" data-bound="min"/>
+<input type="number" placeholder="До" data-range="max-workpiece-weight" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Макс. ток обработки</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="max-current" data-bound="min"/>
+<input type="number" placeholder="До" data-range="max-current" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Масса станка (кг)</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="machine-weight" data-bound="min"/>
+<input type="number" placeholder="До" data-range="machine-weight" data-bound="max"/>
+</div></div></div></details>
+<details class="g2-group"><summary>Все параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Достигаемая шероховатость</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="surface-roughness" data-bound="min"/>
+<input type="number" placeholder="До" data-range="surface-roughness" data-bound="max"/>
+</div></div></div></details>
+<div class="g2-apply-wrap">
+<button type="button" class="btn btn-ce g2-apply" data-role="apply">Показать <span data-role="preview">61</span> <span data-role="preview-word">моделей</span></button>
+</div>
+<p class="vmc-filter-note">Не нашли нужный параметр в фильтре — характеристики каждой модели указаны в карточке и на странице станка.</p>
+</aside>
+<div>
+<div class="vmc-toolbar g2-toolbar">
+<div class="vmc-toolbar-head g2-toolbar-head">
+<div class="eyebrow">Модельный ряд</div>
+<div class="g2-toolbar-title-row"><h2 class="h2 eqcat-catalog-title">Копировально-прошивочные станки</h2><span class="g2-catalog-desc">Копирование формы электрода в детали — для пресс-форм, штампов и глубоких полостей.</span></div>
+</div>
+<div class="g2-toolbar-tools">
+<button type="button" class="eqcat-filter-toggle" data-role="filter-toggle">Все фильтры</button>
+</div>
+</div>
+<div class="g2-fallback-note" data-role="fallback-note" hidden>Точных совпадений не нашлось — показаны ближайшие по параметрам модели.</div>
+<div class="vmc-grid">
+<article class="vmc-card" data-name="cnc-c26 m копировально-прошивочные станки" data-title="CNC-C26 M" data-sortkey="600.0" data-table-size="600" data-travel-xy="280" data-cnc-present="да" data-max-workpiece-weight="800" data-max-current="30" data-machine-weight="1700">
+<a class="vmc-card-link" href="equipment-edm-cnc-c26-m.html" aria-label="CNC-C26 M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/cnc-c26-m.png" alt="CNC-C26 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>CNC-C26 M</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>600 × 300 мм</b></div><div><span>Макс. масса заготовки</span><b>800 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>280 × 230 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="cnc-c36 m копировально-прошивочные станки" data-title="CNC-C36 M" data-sortkey="650.0" data-max-workpiece-dims="1000" data-table-size="650" data-travel-xy="380" data-cnc-present="да" data-max-workpiece-weight="1000" data-max-current="50" data-machine-weight="2350">
+<a class="vmc-card-link" href="equipment-edm-cnc-c36-m.html" aria-label="CNC-C36 M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/cnc-c36-m.png" alt="CNC-C36 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>CNC-C36 M</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>650 × 350 мм</b></div><div><span>Макс. масса заготовки</span><b>1000 кг</b></div><div><span>Макс. ток обработки</span><b>50 А</b></div><div><span>Ход по осям X/Y/Z</span><b>380 × 280 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="cnc-c54 m копировально-прошивочные станки" data-title="CNC-C54 M" data-sortkey="850.0" data-table-size="850" data-travel-xy="480" data-cnc-present="да" data-max-workpiece-weight="1300" data-max-current="75" data-machine-weight="2450">
+<a class="vmc-card-link" href="equipment-edm-cnc-c54-m.html" aria-label="CNC-C54 M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/cnc-c54-m.png" alt="CNC-C54 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>CNC-C54 M</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>850 × 450 мм</b></div><div><span>Макс. масса заготовки</span><b>1300 кг</b></div><div><span>Макс. ток обработки</span><b>75 А</b></div><div><span>Ход по осям X/Y/Z</span><b>480 × 380 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="cnc-p26 m копировально-прошивочные станки" data-title="CNC-P26 M" data-sortkey="600.0" data-max-workpiece-dims="750" data-table-size="600" data-travel-xy="280" data-cnc-present="да" data-max-workpiece-weight="800" data-max-current="30" data-machine-weight="1700" data-surface-roughness="0.3">
+<a class="vmc-card-link" href="equipment-edm-cnc-p26-m.html" aria-label="CNC-P26 M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/cnc-p26-m.png" alt="CNC-P26 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>CNC-P26 M</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>600 × 300 мм</b></div><div><span>Макс. масса заготовки</span><b>800 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>280 × 230 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="cnc-p36 m копировально-прошивочные станки" data-title="CNC-P36 M" data-sortkey="650.0" data-max-workpiece-dims="1000" data-table-size="650" data-travel-xy="380" data-cnc-present="да" data-max-workpiece-weight="1000" data-max-current="50" data-machine-weight="2350" data-surface-roughness="0.3">
+<a class="vmc-card-link" href="equipment-edm-cnc-p36-m.html" aria-label="CNC-P36 M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/cnc-p36-m.png" alt="CNC-P36 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>CNC-P36 M</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>650 × 350 мм</b></div><div><span>Макс. масса заготовки</span><b>1000 кг</b></div><div><span>Макс. ток обработки</span><b>50 А</b></div><div><span>Ход по осям X/Y/Z</span><b>380 × 280 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="cnc-p54 m копировально-прошивочные станки" data-title="CNC-P54 M" data-sortkey="850.0" data-max-workpiece-dims="1200" data-table-size="850" data-travel-xy="480" data-cnc-present="да" data-max-workpiece-weight="1300" data-max-current="75" data-machine-weight="2450" data-surface-roughness="0.3">
+<a class="vmc-card-link" href="equipment-edm-cnc-p54-m.html" aria-label="CNC-P54 M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/cnc-p54-m.png" alt="CNC-P54 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>CNC-P54 M</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>850 × 450 мм</b></div><div><span>Макс. масса заготовки</span><b>1300 кг</b></div><div><span>Макс. ток обработки</span><b>75 А</b></div><div><span>Ход по осям X/Y/Z</span><b>480 × 380 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="cnc-p56 m копировально-прошивочные станки" data-title="CNC-P56 M" data-sortkey="1000.0" data-max-workpiece-dims="1600" data-table-size="1000" data-travel-xy="580" data-cnc-present="да" data-max-workpiece-weight="1600" data-max-current="75" data-machine-weight="3200" data-surface-roughness="0.3">
+<a class="vmc-card-link" href="equipment-edm-cnc-p56-m.html" aria-label="CNC-P56 M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/cnc-p56-m.png" alt="CNC-P56 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>CNC-P56 M</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>1000 × 550 мм</b></div><div><span>Макс. масса заготовки</span><b>1600 кг</b></div><div><span>Макс. ток обработки</span><b>75 А</b></div><div><span>Ход по осям X/Y/Z</span><b>580 × 470 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="cnc1260 f копировально-прошивочные станки" data-title="CNC1260 F" data-sortkey="1250.0" data-table-size="1250" data-travel-xy="1200|600" data-cnc-present="да" data-max-workpiece-weight="3500" data-max-current="30" data-machine-weight="5500">
+<a class="vmc-card-link" href="equipment-edm-cnc1260-f.html" aria-label="CNC1260 F — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/cnc1260-f.png" alt="CNC1260 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>CNC1260 F</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>1250×800 мм</b></div><div><span>Макс. масса заготовки</span><b>3500 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>1200 (одинарн.) / 600 × 600 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="cnc1470 f копировально-прошивочные станки" data-title="CNC1470 F" data-sortkey="1500.0" data-table-size="1500" data-travel-xy="1400|850" data-cnc-present="да" data-max-workpiece-weight="5000" data-max-current="30" data-machine-weight="9000|11000">
+<a class="vmc-card-link" href="equipment-edm-cnc1470-f.html" aria-label="CNC1470 F — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/cnc1470-f.png" alt="CNC1470 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>CNC1470 F</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>1500×900 мм</b></div><div><span>Макс. масса заготовки</span><b>5000 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>1400 (одинарн.) / 850 × 700 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="cnc1880 f копировально-прошивочные станки" data-title="CNC1880 F" data-sortkey="2000.0" data-table-size="2000" data-travel-xy="1800|1200" data-cnc-present="да" data-max-workpiece-weight="6500" data-max-current="30" data-machine-weight="13000|15000">
+<a class="vmc-card-link" href="equipment-edm-cnc1880-f.html" aria-label="CNC1880 F — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/cnc1880-f.png" alt="CNC1880 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>CNC1880 F</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>2000×1000 мм</b></div><div><span>Макс. масса заготовки</span><b>6500 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>1800 (одинарн.) / 1200 × 800 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="cnc2110 f копировально-прошивочные станки" data-title="CNC2110 F" data-sortkey="2500.0" data-table-size="2500" data-travel-xy="2300|1450" data-cnc-present="да" data-max-workpiece-weight="8000" data-max-current="30" data-machine-weight="15000|17000">
+<a class="vmc-card-link" href="equipment-edm-cnc2110-f.html" aria-label="CNC2110 F — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/cnc2110-f.png" alt="CNC2110 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>CNC2110 F</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>2500×1200 мм</b></div><div><span>Макс. масса заготовки</span><b>8000 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>2300 (одинарн.) / 1450 × 900 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="cnc2510 f копировально-прошивочные станки" data-title="CNC2510 F" data-sortkey="2700.0" data-table-size="2700" data-travel-xy="1750" data-cnc-present="да" data-max-workpiece-weight="10000" data-max-current="30" data-machine-weight="17000">
+<a class="vmc-card-link" href="equipment-edm-cnc2510-f.html" aria-label="CNC2510 F — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/cnc2510-f.png" alt="CNC2510 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>CNC2510 F</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>2700×1200 мм</b></div><div><span>Макс. масса заготовки</span><b>10000 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>1750 × 900 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="cnc3110 f копировально-прошивочные станки" data-title="CNC3110 F" data-sortkey="3200.0" data-table-size="3200" data-travel-xy="2400" data-cnc-present="да" data-max-workpiece-weight="15000" data-max-current="30" data-machine-weight="25000">
+<a class="vmc-card-link" href="equipment-edm-cnc3110-f.html" aria-label="CNC3110 F — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/cnc3110-f.png" alt="CNC3110 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>CNC3110 F</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>3200×1200 мм</b></div><div><span>Макс. масса заготовки</span><b>15000 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>2400 × 900 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="cnc320j f копировально-прошивочные станки" data-title="CNC320J F" data-sortkey="500.0" data-table-size="500" data-travel-xy="300" data-cnc-present="да" data-max-workpiece-weight="400" data-max-current="30" data-machine-weight="1350">
+<a class="vmc-card-link" href="equipment-edm-cnc320j-f.html" aria-label="CNC320J F — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/cnc320j-f.png" alt="CNC320J F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>CNC320J F</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>500×300 мм</b></div><div><span>Макс. масса заготовки</span><b>400 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>300 × 200 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="cnc430 f копировально-прошивочные станки" data-title="CNC430 F" data-sortkey="600.0" data-table-size="600" data-travel-xy="400" data-cnc-present="да" data-max-workpiece-weight="400" data-max-current="30" data-machine-weight="1600">
+<a class="vmc-card-link" href="equipment-edm-cnc430-f.html" aria-label="CNC430 F — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/cnc430-f.png" alt="CNC430 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>CNC430 F</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>600×400 мм</b></div><div><span>Макс. масса заготовки</span><b>400 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>400 × 300 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="cnc430-s f копировально-прошивочные станки" data-title="CNC430-S F" data-sortkey="560.0" data-table-size="560" data-travel-xy="400" data-cnc-present="да" data-max-workpiece-weight="1200" data-max-current="30" data-machine-weight="3500">
+<a class="vmc-card-link" href="equipment-edm-cnc430-s-f.html" aria-label="CNC430-S F — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/cnc430-s-f.png" alt="CNC430-S F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>CNC430-S F</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>560×420 мм</b></div><div><span>Макс. масса заготовки</span><b>1200 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>400 × 300 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="cnc450 f копировально-прошивочные станки" data-title="CNC450 F" data-sortkey="700.0" data-table-size="700" data-travel-xy="450" data-cnc-present="да" data-max-workpiece-weight="500" data-max-current="30" data-machine-weight="2100">
+<a class="vmc-card-link" href="equipment-edm-cnc450-f.html" aria-label="CNC450 F — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/cnc450-f.png" alt="CNC450 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>CNC450 F</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>700×450 мм</b></div><div><span>Макс. масса заготовки</span><b>500 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>450 × 350 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="cnc450j f копировально-прошивочные станки" data-title="CNC450J F" data-sortkey="700.0" data-table-size="700" data-travel-xy="450" data-cnc-present="да" data-max-workpiece-weight="600" data-max-current="30" data-machine-weight="1600">
+<a class="vmc-card-link" href="equipment-edm-cnc450j-f.html" aria-label="CNC450J F — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/cnc450j-f.png" alt="CNC450J F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>CNC450J F</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>700×450 мм</b></div><div><span>Макс. масса заготовки</span><b>600 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>450 × 350 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="cnc540 f копировально-прошивочные станки" data-title="CNC540 F" data-sortkey="800.0" data-table-size="800" data-travel-xy="500" data-cnc-present="да" data-max-workpiece-weight="1800" data-max-current="30" data-machine-weight="3000">
+<a class="vmc-card-link" href="equipment-edm-cnc540-f.html" aria-label="CNC540 F — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/cnc540-f.png" alt="CNC540 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>CNC540 F</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>800×500 мм</b></div><div><span>Макс. масса заготовки</span><b>1800 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>500 × 400 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="cnc540-s f копировально-прошивочные станки" data-title="CNC540-S F" data-sortkey="700.0" data-table-size="700" data-travel-xy="500" data-cnc-present="да" data-max-workpiece-weight="1500" data-max-current="30" data-machine-weight="3300">
+<a class="vmc-card-link" href="equipment-edm-cnc540-s-f.html" aria-label="CNC540-S F — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/cnc540-s-f.png" alt="CNC540-S F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>CNC540-S F</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>700×400 мм</b></div><div><span>Макс. масса заготовки</span><b>1500 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>500 × 400 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="cnc540j f копировально-прошивочные станки" data-title="CNC540J F" data-sortkey="800.0" data-table-size="800" data-travel-xy="500" data-cnc-present="да" data-max-workpiece-weight="800" data-max-current="30" data-machine-weight="2200">
+<a class="vmc-card-link" href="equipment-edm-cnc540j-f.html" aria-label="CNC540J F — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/cnc540j-f.png" alt="CNC540J F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>CNC540J F</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>800×500 мм</b></div><div><span>Макс. масса заготовки</span><b>800 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>500 × 400 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="cnc640 f копировально-прошивочные станки" data-title="CNC640 F" data-sortkey="900.0" data-table-size="900" data-travel-xy="600" data-cnc-present="да" data-max-workpiece-weight="2000" data-max-current="30" data-machine-weight="3700">
+<a class="vmc-card-link" href="equipment-edm-cnc640-f.html" aria-label="CNC640 F — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/cnc640-f.png" alt="CNC640 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>CNC640 F</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>900×500 мм</b></div><div><span>Макс. масса заготовки</span><b>2000 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>600 × 400 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="cnc640-s f копировально-прошивочные станки" data-title="CNC640-S F" data-sortkey="800.0" data-table-size="800" data-travel-xy="600" data-cnc-present="да" data-max-workpiece-weight="1500" data-max-current="30" data-machine-weight="4800">
+<a class="vmc-card-link" href="equipment-edm-cnc640-s-f.html" aria-label="CNC640-S F — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/cnc640-s-f.png" alt="CNC640-S F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>CNC640-S F</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>800×550 мм</b></div><div><span>Макс. масса заготовки</span><b>1500 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>600 × 500 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="cnc850 f копировально-прошивочные станки" data-title="CNC850 F" data-sortkey="1050.0" data-table-size="1050" data-travel-xy="800" data-cnc-present="да" data-max-workpiece-weight="3000" data-max-current="30" data-machine-weight="4500">
+<a class="vmc-card-link" href="equipment-edm-cnc850-f.html" aria-label="CNC850 F — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/cnc850-f.png" alt="CNC850 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>CNC850 F</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>1050×600 мм</b></div><div><span>Макс. масса заготовки</span><b>3000 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>800 × 500 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="cnc850-s f копировально-прошивочные станки" data-title="CNC850-S F" data-sortkey="1000.0" data-table-size="1000" data-travel-xy="800" data-cnc-present="да" data-max-workpiece-weight="1800" data-max-current="30" data-machine-weight="6000">
+<a class="vmc-card-link" href="equipment-edm-cnc850-s-f.html" aria-label="CNC850-S F — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/cnc850-s-f.png" alt="CNC850-S F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>CNC850-S F</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>1000×600 мм</b></div><div><span>Макс. масса заготовки</span><b>1800 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>800 × 500 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="p207 cnc m копировально-прошивочные станки" data-title="P207 CNC M" data-sortkey="1600.0" data-max-workpiece-dims="3100" data-table-size="1600" data-travel-xy="2000" data-cnc-present="да" data-max-workpiece-weight="8000" data-max-current="150" data-machine-weight="8800" data-surface-roughness="0.7">
+<a class="vmc-card-link" href="equipment-edm-p207-cnc-m.html" aria-label="P207 CNC M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/p207-cnc-m.png" alt="P207 CNC M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>P207 CNC M</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>1600х950 мм</b></div><div><span>Макс. масса заготовки</span><b>8000 кг</b></div><div><span>Макс. ток обработки</span><b>150 А</b></div><div><span>Ход по осям X/Y/Z</span><b>2000х700 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="p307 cnc m копировально-прошивочные станки" data-title="P307 CNC M" data-sortkey="500.0" data-max-workpiece-dims="4000" data-table-size="3100" data-travel-xy="3000" data-cnc-present="да" data-max-workpiece-weight="16000" data-max-current="150" data-machine-weight="16050|18550" data-surface-roughness="0.7">
+<a class="vmc-card-link" href="equipment-edm-p307-cnc-m.html" aria-label="P307 CNC M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/p307-cnc-m.png" alt="P307 CNC M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>P307 CNC M</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>3100х1000 мм</b></div><div><span>Макс. масса заготовки</span><b>16000 кг</b></div><div><span>Макс. ток обработки</span><b>150 А</b></div><div><span>Ход по осям X/Y/Z</span><b>3000х700 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="p36 cnc m копировально-прошивочные станки" data-title="P36 CNC M" data-sortkey="120.0" data-max-workpiece-dims="1000" data-table-size="650" data-travel-xy="380" data-cnc-present="да" data-max-workpiece-weight="1000" data-max-current="50" data-machine-weight="2350" data-surface-roughness="0.3">
+<a class="vmc-card-link" href="equipment-edm-p36-cnc-m.html" aria-label="P36 CNC M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/p36-cnc-m.png" alt="P36 CNC M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>P36 CNC M</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>650х350 мм</b></div><div><span>Макс. масса заготовки</span><b>1000 кг</b></div><div><span>Макс. ток обработки</span><b>50 А</b></div><div><span>Ход по осям X/Y/Z</span><b>380x280 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="p36 znc m копировально-прошивочные станки" data-title="P36 ZNC M" data-sortkey="120.0" data-max-workpiece-dims="1000" data-table-size="650" data-travel-xy="400" data-cnc-present="да" data-max-workpiece-weight="1000" data-max-current="50" data-machine-weight="2350" data-surface-roughness="0.3">
+<a class="vmc-card-link" href="equipment-edm-p36-znc-m.html" aria-label="P36 ZNC M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/p36-znc-m.png" alt="P36 ZNC M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>P36 ZNC M</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>650х350 мм</b></div><div><span>Макс. масса заготовки</span><b>1000 кг</b></div><div><span>Макс. ток обработки</span><b>50 А</b></div><div><span>Ход по осям X/Y/Z</span><b>400x300 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="p40 cnc m копировально-прошивочные станки" data-title="P40 CNC M" data-sortkey="300.0" data-max-workpiece-dims="1200" data-table-size="750" data-travel-xy="400" data-cnc-present="да" data-max-workpiece-weight="2000" data-max-current="75" data-machine-weight="2000" data-surface-roughness="0.3">
+<a class="vmc-card-link" href="equipment-edm-p40-cnc-m.html" aria-label="P40 CNC M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/p40-cnc-m.png" alt="P40 CNC M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>P40 CNC M</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>750х400 мм</b></div><div><span>Макс. масса заготовки</span><b>2000 кг</b></div><div><span>Макс. ток обработки</span><b>75 А</b></div><div><span>Ход по осям X/Y/Z</span><b>400х300 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="p50 cnc m копировально-прошивочные станки" data-title="P50 CNC M" data-sortkey="300.0" data-max-workpiece-dims="1400" data-table-size="800" data-travel-xy="600" data-cnc-present="да" data-max-workpiece-weight="2500" data-max-current="75" data-machine-weight="3200" data-surface-roughness="0.3">
+<a class="vmc-card-link" href="equipment-edm-p50-cnc-m.html" aria-label="P50 CNC M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/p50-cnc-m.png" alt="P50 CNC M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>P50 CNC M</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>800х650 мм</b></div><div><span>Макс. масса заготовки</span><b>2500 кг</b></div><div><span>Макс. ток обработки</span><b>75 А</b></div><div><span>Ход по осям X/Y/Z</span><b>600х500 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="p54 cnc m копировально-прошивочные станки" data-title="P54 CNC M" data-sortkey="850.0" data-max-workpiece-dims="1200" data-table-size="850" data-travel-xy="480" data-cnc-present="да" data-max-workpiece-weight="1300" data-max-current="75" data-machine-weight="2450" data-surface-roughness="0.3">
+<a class="vmc-card-link" href="equipment-edm-p54-cnc-m.html" aria-label="P54 CNC M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/p54-cnc-m.png" alt="P54 CNC M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>P54 CNC M</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>850x450 мм</b></div><div><span>Макс. масса заготовки</span><b>1300 кг</b></div><div><span>Макс. ток обработки</span><b>75 А</b></div><div><span>Ход по осям X/Y/Z</span><b>480x380 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="p54 znc m копировально-прошивочные станки" data-title="P54 ZNC M" data-sortkey="850.0" data-max-workpiece-dims="1200" data-table-size="850" data-travel-xy="500" data-cnc-present="да" data-max-workpiece-weight="1300" data-max-current="75" data-machine-weight="2450" data-surface-roughness="0.3">
+<a class="vmc-card-link" href="equipment-edm-p54-znc-m.html" aria-label="P54 ZNC M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/p54-znc-m.png" alt="P54 ZNC M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>P54 ZNC M</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>850x450 мм</b></div><div><span>Макс. масса заготовки</span><b>1300 кг</b></div><div><span>Макс. ток обработки</span><b>75 А</b></div><div><span>Ход по осям X/Y/Z</span><b>500x400 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="p56 cnc m копировально-прошивочные станки" data-title="P56 CNC M" data-sortkey="300.0" data-max-workpiece-dims="1600" data-table-size="1000" data-travel-xy="580" data-cnc-present="да" data-max-workpiece-weight="1600" data-max-current="75" data-machine-weight="3200" data-surface-roughness="0.3">
+<a class="vmc-card-link" href="equipment-edm-p56-cnc-m.html" aria-label="P56 CNC M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/p56-cnc-m.png" alt="P56 CNC M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>P56 CNC M</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>1000x550 мм</b></div><div><span>Макс. масса заготовки</span><b>1600 кг</b></div><div><span>Макс. ток обработки</span><b>75 А</b></div><div><span>Ход по осям X/Y/Z</span><b>580x470 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="p56 znc m копировально-прошивочные станки" data-title="P56 ZNC M" data-sortkey="300.0" data-max-workpiece-dims="1600" data-table-size="1000" data-travel-xy="580" data-cnc-present="да" data-max-workpiece-weight="1600" data-max-current="75" data-machine-weight="3200" data-surface-roughness="0.3">
+<a class="vmc-card-link" href="equipment-edm-p56-znc-m.html" aria-label="P56 ZNC M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/p56-znc-m.png" alt="P56 ZNC M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>P56 ZNC M</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>1000x550 мм</b></div><div><span>Макс. масса заготовки</span><b>1600 кг</b></div><div><span>Макс. ток обработки</span><b>75 А</b></div><div><span>Ход по осям X/Y/Z</span><b>580x470 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="p58 cnc m копировально-прошивочные станки" data-title="P58 CNC M" data-sortkey="300.0" data-max-workpiece-dims="1480" data-table-size="900" data-travel-xy="800" data-cnc-present="да" data-max-workpiece-weight="4000" data-max-current="75" data-machine-weight="4200" data-surface-roughness="0.3">
+<a class="vmc-card-link" href="equipment-edm-p58-cnc-m.html" aria-label="P58 CNC M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/p58-cnc-m.png" alt="P58 CNC M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>P58 CNC M</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>900х800 мм</b></div><div><span>Макс. масса заготовки</span><b>4000 кг</b></div><div><span>Макс. ток обработки</span><b>75 А</b></div><div><span>Ход по осям X/Y/Z</span><b>800x500 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="p66 cnc m копировально-прошивочные станки" data-title="P66 CNC M" data-sortkey="500.0" data-max-workpiece-dims="2100" data-table-size="1600" data-travel-xy="1300" data-cnc-present="да" data-max-workpiece-weight="8000" data-max-current="100" data-machine-weight="8050" data-surface-roughness="0.5">
+<a class="vmc-card-link" href="equipment-edm-p66-cnc-m.html" aria-label="P66 CNC M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/p66-cnc-m.png" alt="P66 CNC M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>P66 CNC M</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>1600х950 мм</b></div><div><span>Макс. масса заготовки</span><b>8000 кг</b></div><div><span>Макс. ток обработки</span><b>100 А</b></div><div><span>Ход по осям X/Y/Z</span><b>1300х700 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="r26 cnc m копировально-прошивочные станки" data-title="R26 CNC M" data-sortkey="600.0" data-max-workpiece-dims="750" data-table-size="600" data-travel-xy="280" data-cnc-present="да" data-max-workpiece-weight="800" data-max-current="30" data-machine-weight="1700" data-surface-roughness="0.3">
+<a class="vmc-card-link" href="equipment-edm-r26-cnc-m.html" aria-label="R26 CNC M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/r26-cnc-m.png" alt="R26 CNC M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>R26 CNC M</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>600х300 мм</b></div><div><span>Макс. масса заготовки</span><b>800 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>280x230 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="r26 znc m копировально-прошивочные станки" data-title="R26 ZNC M" data-sortkey="600.0" data-max-workpiece-dims="750" data-table-size="600" data-travel-xy="300" data-cnc-present="да" data-max-workpiece-weight="800" data-max-current="30" data-machine-weight="1700" data-surface-roughness="0.3">
+<a class="vmc-card-link" href="equipment-edm-r26-znc-m.html" aria-label="R26 ZNC M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/r26-znc-m.png" alt="R26 ZNC M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>R26 ZNC M</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>600x300 мм</b></div><div><span>Макс. масса заготовки</span><b>800 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>300 х 250 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="rta40 m копировально-прошивочные станки" data-title="RTA40 M" data-sortkey="740.0" data-max-workpiece-dims="800" data-table-size="740" data-travel-xy="400" data-max-workpiece-weight="800" data-machine-weight="3500">
+<a class="vmc-card-link" href="equipment-edm-rta40-m.html" aria-label="RTA40 M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/rta40-m.png" alt="RTA40 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>RTA40 M</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>740 × 390 мм</b></div><div><span>Макс. масса заготовки</span><b>800 кг</b></div><div><span>Макс. ток обработки</span><b>—</b></div><div><span>Ход по осям X/Y/Z</span><b>400 × 300 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="rta50 m копировально-прошивочные станки" data-title="RTA50 M" data-sortkey="800.0" data-max-workpiece-dims="1000" data-table-size="800" data-travel-xy="600" data-max-workpiece-weight="2000" data-machine-weight="4500">
+<a class="vmc-card-link" href="equipment-edm-rta50-m.html" aria-label="RTA50 M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/rta50-m.png" alt="RTA50 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>RTA50 M</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>800 × 700 мм</b></div><div><span>Макс. масса заготовки</span><b>2000 кг</b></div><div><span>Макс. ток обработки</span><b>—</b></div><div><span>Ход по осям X/Y/Z</span><b>600 × 500 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="rta58 m копировально-прошивочные станки" data-title="RTA58 M" data-sortkey="900.0" data-max-workpiece-dims="1100" data-table-size="900" data-travel-xy="800" data-max-workpiece-weight="3000" data-machine-weight="5000">
+<a class="vmc-card-link" href="equipment-edm-rta58-m.html" aria-label="RTA58 M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/rta58-m.png" alt="RTA58 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>RTA58 M</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>900 × 800 мм</b></div><div><span>Макс. масса заготовки</span><b>3000 кг</b></div><div><span>Макс. ток обработки</span><b>—</b></div><div><span>Ход по осям X/Y/Z</span><b>800 × 500 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="s26-r26 m копировально-прошивочные станки" data-title="S26-R26 M" data-sortkey="600.0" data-max-workpiece-dims="750" data-table-size="600" data-travel-xy="280" data-cnc-present="да" data-max-workpiece-weight="800" data-max-current="30" data-machine-weight="1700" data-surface-roughness="0.3">
+<a class="vmc-card-link" href="equipment-edm-s26-r26-m.html" aria-label="S26-R26 M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/s26-r26-m.png" alt="S26-R26 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>S26-R26 M</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>600×300 мм</b></div><div><span>Макс. масса заготовки</span><b>800 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>280×230 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="s36-r36 m копировально-прошивочные станки" data-title="S36-R36 M" data-sortkey="0"  data-max-workpiece-dims="1000" data-table-size="650" data-travel-xy="380" data-cnc-present="да" data-max-workpiece-weight="1000" data-max-current="50" data-machine-weight="2350" data-surface-roughness="0.3">
+<a class="vmc-card-link" href="equipment-edm-s36-r36-m.html" aria-label="S36-R36 M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/s36-r36-m.png" alt="S36-R36 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>S36-R36 M</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>650×350 мм</b></div><div><span>Макс. масса заготовки</span><b>1000 кг</b></div><div><span>Макс. ток обработки</span><b>50 А</b></div><div><span>Ход по осям X/Y/Z</span><b>380×280 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="s54-r54 m копировально-прошивочные станки" data-title="S54-R54 M" data-sortkey="850.0" data-max-workpiece-dims="1200" data-table-size="850" data-travel-xy="480" data-cnc-present="да" data-max-workpiece-weight="1300" data-max-current="75" data-machine-weight="2450" data-surface-roughness="0.3">
+<a class="vmc-card-link" href="equipment-edm-s54-r54-m.html" aria-label="S54-R54 M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/s54-r54-m.png" alt="S54-R54 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>S54-R54 M</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>850×450 мм</b></div><div><span>Макс. масса заготовки</span><b>1300 кг</b></div><div><span>Макс. ток обработки</span><b>75 А</b></div><div><span>Ход по осям X/Y/Z</span><b>480×380 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="znc-c26 m копировально-прошивочные станки" data-title="ZNC-C26 M" data-sortkey="100.0" data-max-workpiece-dims="750" data-table-size="600" data-travel-xy="300" data-max-workpiece-weight="800" data-max-current="30" data-machine-weight="1700">
+<a class="vmc-card-link" href="equipment-edm-znc-c26-m.html" aria-label="ZNC-C26 M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/znc-c26-m.png" alt="ZNC-C26 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>ZNC-C26 M</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>600 × 300 мм</b></div><div><span>Макс. масса заготовки</span><b>800 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>300 × 250 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="znc-c36 m копировально-прошивочные станки" data-title="ZNC-C36 M" data-sortkey="650.0" data-table-size="650" data-travel-xy="400" data-max-workpiece-weight="1000" data-max-current="50" data-machine-weight="2350">
+<a class="vmc-card-link" href="equipment-edm-znc-c36-m.html" aria-label="ZNC-C36 M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/znc-c36-m.png" alt="ZNC-C36 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>ZNC-C36 M</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>650 × 350 мм</b></div><div><span>Макс. масса заготовки</span><b>1000 кг</b></div><div><span>Макс. ток обработки</span><b>50 А</b></div><div><span>Ход по осям X/Y/Z</span><b>400 × 300 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="znc-c54 m копировально-прошивочные станки" data-title="ZNC-C54 M" data-sortkey="850.0" data-max-workpiece-dims="850" data-table-size="850" data-travel-xy="500" data-max-workpiece-weight="1300" data-max-current="75" data-machine-weight="2450">
+<a class="vmc-card-link" href="equipment-edm-znc-c54-m.html" aria-label="ZNC-C54 M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/znc-c54-m.png" alt="ZNC-C54 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>ZNC-C54 M</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>850 × 450 мм</b></div><div><span>Макс. масса заготовки</span><b>1300 кг</b></div><div><span>Макс. ток обработки</span><b>75 А</b></div><div><span>Ход по осям X/Y/Z</span><b>500 × 400 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="znc-p26 m копировально-прошивочные станки" data-title="ZNC-P26 M" data-sortkey="600.0" data-table-size="600" data-travel-xy="300" data-max-workpiece-weight="800" data-max-current="30" data-machine-weight="1700">
+<a class="vmc-card-link" href="equipment-edm-znc-p26-m.html" aria-label="ZNC-P26 M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/znc-p26-m.png" alt="ZNC-P26 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>ZNC-P26 M</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>600 × 300 мм</b></div><div><span>Макс. масса заготовки</span><b>800 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>300 × 250 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="znc-p36 m копировально-прошивочные станки" data-title="ZNC-P36 M" data-sortkey="650.0" data-table-size="650" data-travel-xy="400" data-max-workpiece-weight="1000" data-max-current="50" data-machine-weight="2350">
+<a class="vmc-card-link" href="equipment-edm-znc-p36-m.html" aria-label="ZNC-P36 M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/znc-p36-m.png" alt="ZNC-P36 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>ZNC-P36 M</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>650 × 350 мм</b></div><div><span>Макс. масса заготовки</span><b>1000 кг</b></div><div><span>Макс. ток обработки</span><b>50 А</b></div><div><span>Ход по осям X/Y/Z</span><b>400 × 300 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="znc-p54 m копировально-прошивочные станки" data-title="ZNC-P54 M" data-sortkey="850.0" data-table-size="850" data-travel-xy="500" data-max-workpiece-weight="1300" data-max-current="75" data-machine-weight="2450">
+<a class="vmc-card-link" href="equipment-edm-znc-p54-m.html" aria-label="ZNC-P54 M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/znc-p54-m.png" alt="ZNC-P54 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>ZNC-P54 M</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>850 × 450 мм</b></div><div><span>Макс. масса заготовки</span><b>1300 кг</b></div><div><span>Макс. ток обработки</span><b>75 А</b></div><div><span>Ход по осям X/Y/Z</span><b>500 × 400 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="znc-p56 m копировально-прошивочные станки" data-title="ZNC-P56 M" data-sortkey="1000.0" data-max-workpiece-dims="1600" data-table-size="1000" data-travel-xy="580" data-max-workpiece-weight="1600" data-max-current="75" data-machine-weight="3200">
+<a class="vmc-card-link" href="equipment-edm-znc-p56-m.html" aria-label="ZNC-P56 M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/znc-p56-m.png" alt="ZNC-P56 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>ZNC-P56 M</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>1000 × 550 мм</b></div><div><span>Макс. масса заготовки</span><b>1600 кг</b></div><div><span>Макс. ток обработки</span><b>75 А</b></div><div><span>Ход по осям X/Y/Z</span><b>580 × 470 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="znc320 f копировально-прошивочные станки" data-title="ZNC320 F" data-sortkey="500.0" data-table-size="500" data-travel-xy="300" data-max-workpiece-weight="450" data-max-current="30" data-machine-weight="1200">
+<a class="vmc-card-link" href="equipment-edm-znc320-f.html" aria-label="ZNC320 F — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/znc320-f.png" alt="ZNC320 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>ZNC320 F</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>500×300 мм</b></div><div><span>Макс. масса заготовки</span><b>450 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>300 × 200 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="znc320y f копировально-прошивочные станки" data-title="ZNC320Y F" data-sortkey="500.0" data-table-size="500" data-travel-xy="300" data-max-workpiece-weight="450" data-max-current="30" data-machine-weight="1200">
+<a class="vmc-card-link" href="equipment-edm-znc320y-f.html" aria-label="ZNC320Y F — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/znc320y-f.png" alt="ZNC320Y F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>ZNC320Y F</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>500×300 мм</b></div><div><span>Макс. масса заготовки</span><b>450 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>300 × 200 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="znc350 f копировально-прошивочные станки" data-title="ZNC350 F" data-sortkey="630.0" data-table-size="630" data-travel-xy="350" data-max-workpiece-weight="500" data-max-current="30" data-machine-weight="1300">
+<a class="vmc-card-link" href="equipment-edm-znc350-f.html" aria-label="ZNC350 F — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/znc350-f.png" alt="ZNC350 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>ZNC350 F</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>630×350 мм</b></div><div><span>Макс. масса заготовки</span><b>500 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>350 × 250 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="znc350y f копировально-прошивочные станки" data-title="ZNC350Y F" data-sortkey="630.0" data-table-size="630" data-travel-xy="350" data-max-workpiece-weight="500" data-max-current="30" data-machine-weight="1300">
+<a class="vmc-card-link" href="equipment-edm-znc350y-f.html" aria-label="ZNC350Y F — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/znc350y-f.png" alt="ZNC350Y F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>ZNC350Y F</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>630×350 мм</b></div><div><span>Макс. масса заготовки</span><b>500 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>350 × 250 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="znc450 f копировально-прошивочные станки" data-title="ZNC450 F" data-sortkey="700.0" data-table-size="700" data-travel-xy="450" data-max-workpiece-weight="700" data-max-current="30" data-machine-weight="1600">
+<a class="vmc-card-link" href="equipment-edm-znc450-f.html" aria-label="ZNC450 F — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/znc450-f.png" alt="ZNC450 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>ZNC450 F</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>700×450 мм</b></div><div><span>Макс. масса заготовки</span><b>700 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>450 × 350 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="znc450y f копировально-прошивочные станки" data-title="ZNC450Y F" data-sortkey="700.0" data-table-size="700" data-travel-xy="450" data-max-workpiece-weight="700" data-max-current="30" data-machine-weight="1600">
+<a class="vmc-card-link" href="equipment-edm-znc450y-f.html" aria-label="ZNC450Y F — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/znc450y-f.png" alt="ZNC450Y F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>ZNC450Y F</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>700×450 мм</b></div><div><span>Макс. масса заготовки</span><b>700 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>450 × 350 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="znc540 f копировально-прошивочные станки" data-title="ZNC540 F" data-sortkey="800.0" data-table-size="800" data-travel-xy="500" data-max-workpiece-weight="1000" data-max-current="30" data-machine-weight="1900">
+<a class="vmc-card-link" href="equipment-edm-znc540-f.html" aria-label="ZNC540 F — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/znc540-f.png" alt="ZNC540 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>ZNC540 F</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>800×500 мм</b></div><div><span>Макс. масса заготовки</span><b>1000 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>500 × 400 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="znc540y f копировально-прошивочные станки" data-title="ZNC540Y F" data-sortkey="800.0" data-table-size="800" data-travel-xy="500" data-max-workpiece-weight="1000" data-max-current="30" data-machine-weight="1900">
+<a class="vmc-card-link" href="equipment-edm-znc540y-f.html" aria-label="ZNC540Y F — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/znc540y-f.png" alt="ZNC540Y F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>ZNC540Y F</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>800×500 мм</b></div><div><span>Макс. масса заготовки</span><b>1000 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>500 × 400 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="znc760 f копировально-прошивочные станки" data-title="ZNC760 F" data-sortkey="1200.0" data-table-size="1200" data-travel-xy="700" data-max-workpiece-weight="2000" data-max-current="30" data-machine-weight="3500">
+<a class="vmc-card-link" href="equipment-edm-znc760-f.html" aria-label="ZNC760 F — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/znc760-f.png" alt="ZNC760 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Копир.-прошивочные</small>
+<h3>ZNC760 F</h3>
+<div class="vmc-specs"><div><span>Размер стола</span><b>1200×700 мм</b></div><div><span>Макс. масса заготовки</span><b>2000 кг</b></div><div><span>Макс. ток обработки</span><b>30 А</b></div><div><span>Ход по осям X/Y/Z</span><b>700 × 600 мм</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+</div>
+</div>
+</div>
+</div></section>
+</section><section class="milling-tab-panel" data-milling-panel="superdrill">
+<section class="vmc-model-section"><div class="wrap">
+<div class="vmc-catalog-layout" data-vmc-scope>
+<aside class="vmc-filter-panel g2-filter-panel">
+<div class="eqcat-filter-backdrop" data-role="filter-backdrop"></div>
+<div class="g2-filter-head"><span>Фильтр</span><button type="button" class="g2-reset" data-role="reset"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg>Сбросить всё</button><button type="button" class="eqcat-filter-close" data-role="filter-close" aria-label="Закрыть фильтр">×</button></div>
+<label class="g2-search"><span class="g2-search-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span><input type="search" data-role="search" placeholder="Поиск по модели"/></label>
+<div class="g2-direct"><div class="g2-field"><strong>Диаметр электрода</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="electrode-diameter" data-bound="min"/>
+<input type="number" placeholder="До" data-range="electrode-diameter" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Макс. габариты заготовки</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="max-workpiece-dims" data-bound="min"/>
+<input type="number" placeholder="До" data-range="max-workpiece-dims" data-bound="max"/>
+</div></div><div class="g2-field"><label class="g2-check"><input type="checkbox" name="cnc-present" value="да"/><span>Наличие ЧПУ</span></label></div></div>
+<details class="g2-group" open><summary>Дополнительные параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Макс. масса заготовки (кг)</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="max-workpiece-weight" data-bound="min"/>
+<input type="number" placeholder="До" data-range="max-workpiece-weight" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Макс. ток обработки</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="max-current" data-bound="min"/>
+<input type="number" placeholder="До" data-range="max-current" data-bound="max"/>
+</div></div><div class="g2-field"><strong>Масса станка (кг)</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="machine-weight" data-bound="min"/>
+<input type="number" placeholder="До" data-range="machine-weight" data-bound="max"/>
+</div></div></div></details>
+<details class="g2-group"><summary>Все параметры</summary><div class="g2-group-body"><div class="g2-field"><strong>Габариты станка</strong>
+<div class="vmc-range-row">
+<input type="number" placeholder="От" data-range="overall-dimensions" data-bound="min"/>
+<input type="number" placeholder="До" data-range="overall-dimensions" data-bound="max"/>
+</div></div></div></details>
+<div class="g2-apply-wrap">
+<button type="button" class="btn btn-ce g2-apply" data-role="apply">Показать <span data-role="preview">12</span> <span data-role="preview-word">моделей</span></button>
+</div>
+<p class="vmc-filter-note">Не нашли нужный параметр в фильтре — характеристики каждой модели указаны в карточке и на странице станка.</p>
+</aside>
+<div>
+<div class="vmc-toolbar g2-toolbar">
+<div class="vmc-toolbar-head g2-toolbar-head">
+<div class="eyebrow">Модельный ряд</div>
+<div class="g2-toolbar-title-row"><h2 class="h2 eqcat-catalog-title">Супердрели</h2><span class="g2-catalog-desc">Быстрое прошивание отверстий малого диаметра в закалённых и твёрдых материалах.</span></div>
+</div>
+<div class="g2-toolbar-tools">
+<button type="button" class="eqcat-filter-toggle" data-role="filter-toggle">Все фильтры</button>
+</div>
+</div>
+<div class="g2-fallback-note" data-role="fallback-note" hidden>Точных совпадений не нашлось — показаны ближайшие по параметрам модели.</div>
+<div class="vmc-grid">
+<article class="vmc-card" data-name="bh4030 f супердрели" data-title="BH4030 F" data-sortkey="0.3" data-electrode-diameter="0.3" data-max-workpiece-weight="200" data-max-current="30" data-machine-weight="500" data-overall-dimensions="1060">
+<a class="vmc-card-link" href="equipment-edm-bh4030-f.html" aria-label="BH4030 F — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/bh4030-f.png" alt="BH4030 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Супердрели</small>
+<h3>BH4030 F</h3>
+<div class="vmc-specs"><div><span>Диаметр электрода</span><b>Φ0.3–Φ3.0 мм</b></div><div><span>Макс. габариты заготовки</span><b>—</b></div><div><span>Наличие ЧПУ</span><b>—</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="bh5040 f супердрели" data-title="BH5040 F" data-sortkey="0.3" data-electrode-diameter="0.3" data-max-workpiece-weight="300" data-max-current="30" data-machine-weight="600" data-overall-dimensions="1250">
+<a class="vmc-card-link" href="equipment-edm-bh5040-f.html" aria-label="BH5040 F — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/bh5040-f.png" alt="BH5040 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Супердрели</small>
+<h3>BH5040 F</h3>
+<div class="vmc-specs"><div><span>Диаметр электрода</span><b>Φ0.3–Φ3.0 мм</b></div><div><span>Макс. габариты заготовки</span><b>—</b></div><div><span>Наличие ЧПУ</span><b>—</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="cnc s-26 m супердрели" data-title="CNC S-26 M" data-sortkey="0.3" data-electrode-diameter="0.3~3" data-max-workpiece-dims="450" data-cnc-present="да" data-max-workpiece-weight="150" data-max-current="30" data-machine-weight="900" data-overall-dimensions="1370">
+<a class="vmc-card-link" href="equipment-edm-cnc-s-26-m.html" aria-label="CNC S-26 M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/cnc-s-26-m.png" alt="CNC S-26 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Супердрели</small>
+<h3>CNC S-26 M</h3>
+<div class="vmc-specs"><div><span>Диаметр электрода</span><b>Ø0,3–3,0 мм</b></div><div><span>Макс. габариты заготовки</span><b>450 × 300 × 300 мм</b></div><div><span>Наличие ЧПУ</span><b>есть</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="cnc s-36 m супердрели" data-title="CNC S-36 M" data-sortkey="0.3" data-electrode-diameter="0.3~3" data-max-workpiece-dims="650" data-cnc-present="да" data-max-workpiece-weight="150" data-max-current="30" data-machine-weight="1150" data-overall-dimensions="1490">
+<a class="vmc-card-link" href="equipment-edm-cnc-s-36-m.html" aria-label="CNC S-36 M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/cnc-s-36-m.png" alt="CNC S-36 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Супердрели</small>
+<h3>CNC S-36 M</h3>
+<div class="vmc-specs"><div><span>Диаметр электрода</span><b>Ø0,3–3,0 мм</b></div><div><span>Макс. габариты заготовки</span><b>650 × 350 × 300 мм</b></div><div><span>Наличие ЧПУ</span><b>есть</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="cnc s-46 m супердрели" data-title="CNC S-46 M" data-sortkey="0.3" data-electrode-diameter="0.3~3" data-max-workpiece-dims="750" data-cnc-present="да" data-max-workpiece-weight="1300" data-max-current="30" data-machine-weight="1820" data-overall-dimensions="1900">
+<a class="vmc-card-link" href="equipment-edm-cnc-s-46-m.html" aria-label="CNC S-46 M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/cnc-s-46-m.png" alt="CNC S-46 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Супердрели</small>
+<h3>CNC S-46 M</h3>
+<div class="vmc-specs"><div><span>Диаметр электрода</span><b>Ø0,3–3,0 мм</b></div><div><span>Макс. габариты заготовки</span><b>750 × 400 × 300 мм</b></div><div><span>Наличие ЧПУ</span><b>есть</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="cnc4030 f супердрели" data-title="CNC4030 F" data-sortkey="0.2" data-electrode-diameter="0.2" data-cnc-present="да" data-max-workpiece-weight="200" data-max-current="30" data-machine-weight="800" data-overall-dimensions="1200">
+<a class="vmc-card-link" href="equipment-edm-cnc4030-f.html" aria-label="CNC4030 F — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/cnc4030-f.png" alt="CNC4030 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Супердрели</small>
+<h3>CNC4030 F</h3>
+<div class="vmc-specs"><div><span>Диаметр электрода</span><b>Φ0.2–Φ3.0 мм</b></div><div><span>Макс. габариты заготовки</span><b>—</b></div><div><span>Наличие ЧПУ</span><b>есть</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="cnc5040 f супердрели" data-title="CNC5040 F" data-sortkey="0.2" data-electrode-diameter="0.2" data-cnc-present="да" data-max-workpiece-weight="200" data-max-current="30" data-machine-weight="900" data-overall-dimensions="1300">
+<a class="vmc-card-link" href="equipment-edm-cnc5040-f.html" aria-label="CNC5040 F — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/cnc5040-f.png" alt="CNC5040 F" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Супердрели</small>
+<h3>CNC5040 F</h3>
+<div class="vmc-specs"><div><span>Диаметр электрода</span><b>Φ0.2–Φ3.0 мм</b></div><div><span>Макс. габариты заготовки</span><b>—</b></div><div><span>Наличие ЧПУ</span><b>есть</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="dznc s26 m супердрели" data-title="DZNC S26 M" data-sortkey="0.3" data-electrode-diameter="0.3~3" data-max-workpiece-dims="450" data-max-workpiece-weight="500" data-max-current="30" data-machine-weight="900" data-overall-dimensions="1900">
+<a class="vmc-card-link" href="equipment-edm-dznc-s26-m.html" aria-label="DZNC S26 M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/dznc-s26-m.png" alt="DZNC S26 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Супердрели</small>
+<h3>DZNC S26 M</h3>
+<div class="vmc-specs"><div><span>Диаметр электрода</span><b>Ø0,3–3,0 мм</b></div><div><span>Макс. габариты заготовки</span><b>450 × 300 × 300 мм</b></div><div><span>Наличие ЧПУ</span><b>—</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="dznc s36 m супердрели" data-title="DZNC S36 M" data-sortkey="0.3" data-electrode-diameter="0.3~3" data-max-workpiece-dims="650" data-max-workpiece-weight="800" data-max-current="30" data-machine-weight="1150" data-overall-dimensions="1900">
+<a class="vmc-card-link" href="equipment-edm-dznc-s36-m.html" aria-label="DZNC S36 M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/dznc-s36-m.png" alt="DZNC S36 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Супердрели</small>
+<h3>DZNC S36 M</h3>
+<div class="vmc-specs"><div><span>Диаметр электрода</span><b>Ø0,3–3,0 мм</b></div><div><span>Макс. габариты заготовки</span><b>650 × 350 × 300 мм</b></div><div><span>Наличие ЧПУ</span><b>—</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="dznc s46 m супердрели" data-title="DZNC S46 M" data-sortkey="0.3" data-electrode-diameter="0.3~3" data-max-workpiece-dims="750" data-max-workpiece-weight="1300" data-max-current="30" data-machine-weight="1820" data-overall-dimensions="2100">
+<a class="vmc-card-link" href="equipment-edm-dznc-s46-m.html" aria-label="DZNC S46 M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/dznc-s46-m.png" alt="DZNC S46 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Супердрели</small>
+<h3>DZNC S46 M</h3>
+<div class="vmc-specs"><div><span>Диаметр электрода</span><b>Ø0,3–3,0 мм</b></div><div><span>Макс. габариты заготовки</span><b>750 × 400 × 300 мм</b></div><div><span>Наличие ЧПУ</span><b>—</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="fx600 m супердрели" data-title="FX600 M" data-sortkey="45.0" data-max-workpiece-dims="520" data-machine-weight="7000" data-overall-dimensions="1862">
+<a class="vmc-card-link" href="equipment-edm-fx600-m.html" aria-label="FX600 M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/fx600-m.png" alt="FX600 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Супердрели</small>
+<h3>FX600 M</h3>
+<div class="vmc-specs"><div><span>Диаметр электрода</span><b>—</b></div><div><span>Макс. габариты заготовки</span><b>Ø520 × 330 мм</b></div><div><span>Наличие ЧПУ</span><b>—</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+<article class="vmc-card" data-name="sdr56 m супердрели" data-title="SDR56 M" data-sortkey="0.3" data-electrode-diameter="0.3~3" data-max-workpiece-dims="800" data-max-workpiece-weight="1300" data-machine-weight="2000" data-overall-dimensions="2200">
+<a class="vmc-card-link" href="equipment-edm-sdr56-m.html" aria-label="SDR56 M — подробнее"></a>
+<div class="vmc-photo"><img src="edm-assets/sdr56-m.png" alt="SDR56 M" loading="lazy"/><div class="vmc-photo-cta"><span>Подробнее →</span></div></div>
+<div class="vmc-body">
+<small>Супердрели</small>
+<h3>SDR56 M</h3>
+<div class="vmc-specs"><div><span>Диаметр электрода</span><b>0,3–3,0 мм</b></div><div><span>Макс. габариты заготовки</span><b>800 × 750 × 300 мм</b></div><div><span>Наличие ЧПУ</span><b>—</b></div></div>
+<span class="vmc-offer-btn vmc-more" aria-hidden="true">Подробнее →</span>
+</div>
+</article>
+</div>
+</div>
+</div>
+</div></section>
+</section>
+
+<div class="wrap" style="padding:8px 0 40px"><p class="mill-lede">Итого 111 моделей в каталоге. Не нашли нужный типоразмер или нужна помощь с подбором — передайте чертёж технологу, подберём станок под деталь, материал и партию.</p></div>
+
+<div class="mill-links-row wrap" style="display:flex;gap:1px;background:var(--line);border:1px solid var(--line);margin:0 auto">
+<a href="stock.html">Станки в наличии на складе →</a>
+<a href="production-equipment.html">Инструмент и оснастка →</a>
+<a href="leasing.html">Лизинг оборудования →</a>
+</div>
+
+<section class="faq"><div class="wrap">
+<div class="eyebrow">Вопросы</div><h2 class="h2">Частые вопросы</h2>
+<div style="margin-top:24px"><details class="faq-item"><summary>В чём разница между проволочно-вырезным и копировально-прошивочным станком?</summary><p>Проволочно-вырезной станок режет деталь тонкой проволокой по контуру. Копировально-прошивочный формирует полость или отверстие, повторяя форму фасонного электрода, — применяется для пресс-форм и штампов.</p></details><details class="faq-item"><summary>Можно ли обрабатывать закалённую сталь и твёрдый сплав?</summary><p>Да, электроэрозионная обработка не зависит от твёрдости материала — режется любой токопроводящий металл, включая закалённые стали, твёрдые сплавы и жаропрочные сплавы.</p></details><details class="faq-item"><summary>Как подобрать станок под задачу?</summary><p>Нужны материал и твёрдость заготовки, требуемая точность и шероховатость, максимальные габариты детали — передайте эти параметры технологу для подбора модели.</p></details></div>
+</div></section>
+
+<section class="final-cta"><div class="wrap">
+<h2 class="h2">Не нашли подходящую модель?</h2>
+<p>Передайте чертёж и требования — технолог подберёт станок, соберёт КП и предложит сценарий запуска на площадке.</p>
+<div class="final-cta-actions">
+<button type="button" class="btn btn-ce" onclick="openModal('edmLeadModal')">Обсудить задачу с технологом</button>
+<a class="btn btn-ghost" href="tel:88005511206">Позвонить: 8 800 55 11 206</a>
+</div>
+</div></section>
+</main>
+
+<div class="lead-modal" id="edmLeadModal" aria-hidden="true">
+<div class="lead-dialog" role="dialog" aria-modal="true" aria-labelledby="edmLeadModalTitle">
+<button class="lead-close" type="button" onclick="closeModal('edmLeadModal')" aria-label="Закрыть окно">×</button>
+<div class="lead-content">
+<div class="eyebrow">Электроэрозионные станки</div>
+<h3 id="edmLeadModalTitle">Запросить КП</h3>
+<p>Оставьте номер телефона — менеджер свяжется с вами и подготовит коммерческое предложение.</p>
+<form class="lead-form" onsubmit="return false">
+<input class="qfield" id="edmLeadModalPhone" type="tel" placeholder="Номер телефона*" required/>
+<input class="qfield" id="edmLeadModalName" placeholder="Имя (необязательно)"/>
+<label class="lead-consent wide"><input type="checkbox" id="edmLeadModalConsent" required/><span>Принимаю условия <a href="privacy.html" data-legal="privacy">Политики конфиденциальности</a> и даю согласие на обработку персональных данных</span></label>
+<div class="lead-err" id="edmLeadModalConsentErr" role="alert"></div>
+<button class="btn btn-ce" type="button" onclick="submitLeadForm('edmLeadModal','edmLeadModalConsent','edmLeadModalConsentErr')">Отправить</button>
+<button class="btn btn-ghost" type="button" onclick="closeModal('edmLeadModal');openModal('callModal')">Позвонить</button>
+</form>
+</div>
+</div>
+</div>
+<div class="lead-modal" id="callModal" aria-hidden="true">
+<div class="lead-dialog" role="dialog" aria-modal="true" aria-labelledby="callModalTitle">
+<button class="lead-close" type="button" onclick="closeModal('callModal')" aria-label="Закрыть окно">×</button>
+<div class="lead-content">
+<div class="eyebrow">Контакт с менеджером</div>
+<h3 id="callModalTitle">Позвонить <span>в Механит</span></h3>
+<p>Менеджер уточнит цену, комплектацию и сроки поставки по интересующей модели.</p>
+<div class="call-card">
+<small>Телефон компании</small>
+<a href="tel:88005511206">8 800 55 11 206</a>
+<p>Нажмите на номер, чтобы начать звонок, или закройте окно и продолжите просмотр каталога.</p>
+</div>
+</div>
+</div>
+</div>
+
+<footer></footer>
+<script>(function(){
+  var tabs=Array.from(document.querySelectorAll('[data-milling-tab]'));
+  var panels=Array.from(document.querySelectorAll('[data-milling-panel]'));
+  function activate(id,updateHash){
+    if(!id){return;}
+    var found=false;
+    tabs.forEach(function(item){
+      var on=item.getAttribute('data-milling-tab')===id;
+      item.classList.toggle('is-active',on);
+      item.setAttribute('aria-current',on?'true':'false');
+      if(on){found=true;}
+    });
+    if(!found){return;}
+    panels.forEach(function(panel){panel.classList.toggle('is-active',panel.getAttribute('data-milling-panel')===id);});
+    if(updateHash){history.replaceState(null,'','#'+id);}
+  }
+  tabs.forEach(function(tab){
+    tab.addEventListener('click',function(){activate(tab.getAttribute('data-milling-tab'),true);});
+  });
+  var initial=(location.hash||'').replace('#','');
+  if(initial){activate(initial,false);}
+})();</script>
+<script>(function(){
+  function num(v){var n=parseFloat(v);return isNaN(n)?0:n;}
+  function inRange(value,min,max){
+    if(!value||(!min&&!max)){return true;}
+    return String(value).split('|').some(function(tok){
+      var p=tok.split('~'),lo=num(p[0]),hi=p.length>1?num(p[1]):lo;
+      if(min&&hi<num(min)){return false;}
+      if(max&&lo>num(max)){return false;}
+      return true;
+    });
+  }
+  document.querySelectorAll('[data-vmc-scope]').forEach(function(scope){
+    var grid=scope.querySelector('.vmc-grid');
+    if(!grid){return;}
+    var cards=Array.prototype.slice.call(grid.querySelectorAll('.vmc-card'));
+    var panel=scope.querySelector('.vmc-filter-panel');
+    if(!panel){return;}
+    var search=panel.querySelector('[data-role="search"]');
+    var applyBtn=panel.querySelector('[data-role="apply"]');
+    var resetBtn=panel.querySelector('[data-role="reset"]');
+    var previewEl=panel.querySelector('[data-role="preview"]');
+    var rangeInputs=Array.prototype.slice.call(panel.querySelectorAll('[data-range]'));
+    function rangeVals(name){
+      var minEl=panel.querySelector('[data-range="'+name+'"][data-bound="min"]');
+      var maxEl=panel.querySelector('[data-range="'+name+'"][data-bound="max"]');
+      return [minEl&&minEl.value, maxEl&&maxEl.value];
+    }
+    var rangeNames=[];
+    rangeInputs.forEach(function(inp){
+      var n=inp.getAttribute('data-range');
+      if(rangeNames.indexOf(n)<0){rangeNames.push(n);}
+    });
+    function checkedValues(name){
+      return Array.prototype.slice.call(panel.querySelectorAll('input[name="'+name+'"]:checked')).map(function(i){return i.value;});
+    }
+    var checkGroups=[];
+    panel.querySelectorAll('input[type="checkbox"][name]').forEach(function(inp){
+      var n=inp.getAttribute('name');
+      if(checkGroups.indexOf(n)<0){checkGroups.push(n);}
+    });
+    function computeMatches(){
+      var q=(search&&search.value||'').trim().toLowerCase();
+      return cards.filter(function(card){
+        var ok=true;
+        if(q && (card.dataset.name||'').indexOf(q)<0){ok=false;}
+        if(ok){
+          checkGroups.forEach(function(name){
+            if(!ok){return;}
+            var selected=checkedValues(name);
+            if(selected.length){
+              var val=card.dataset[name.replace(/-([a-z])/g,function(m,c){return c.toUpperCase();})]||'';
+              var toks=val.split('|');if(!selected.some(function(s){return toks.indexOf(s)>=0;})){ok=false;}
+            }
+          });
+        }
+        if(ok){
+          rangeNames.forEach(function(name){
+            if(!ok){return;}
+            var key=name.replace(/-([a-z])/g,function(m,c){return c.toUpperCase();});
+            var value=card.dataset[key];
+            var mm=rangeVals(name);
+            if(!inRange(value,mm[0],mm[1])){ok=false;}
+          });
+        }
+        return ok;
+      });
+    }
+    function updatePreview(){
+      var m=computeMatches();
+      if(previewEl){previewEl.textContent=m.length;}
+      return m;
+    }
+    function renderMatches(){
+      var m=updatePreview();
+      cards.forEach(function(card){card.classList.toggle('is-hidden',m.indexOf(card)<0);});
+    }
+    panel.querySelectorAll('input').forEach(function(inp){
+      inp.addEventListener('input',updatePreview);
+      inp.addEventListener('change',updatePreview);
+    });
+    if(search){search.addEventListener('input',updatePreview);}
+    var filterToggle=scope.querySelector('[data-role="filter-toggle"]');
+    var filterClose=panel.querySelector('[data-role="filter-close"]');
+    var backdrop=scope.querySelector('[data-role="filter-backdrop"]');
+    function openFilter(){panel.classList.add('is-open');if(backdrop){backdrop.classList.add('is-open');}document.body.style.overflow='hidden';}
+    function closeFilter(){panel.classList.remove('is-open');if(backdrop){backdrop.classList.remove('is-open');}document.body.style.overflow='';}
+    if(filterToggle){filterToggle.addEventListener('click',openFilter);}
+    if(filterClose){filterClose.addEventListener('click',closeFilter);}
+    if(backdrop){backdrop.addEventListener('click',closeFilter);}
+    if(applyBtn){applyBtn.addEventListener('click',function(){renderMatches();closeFilter();});}
+    if(resetBtn){resetBtn.addEventListener('click',function(){
+      panel.querySelectorAll('input[type="checkbox"]').forEach(function(inp){inp.checked=false;});
+      panel.querySelectorAll('input[type="number"],input[type="search"]').forEach(function(inp){inp.value='';});
+      renderMatches();
+    });}
+    cards.sort(function(a,b){return num(a.dataset.sortkey)-num(b.dataset.sortkey);});
+    cards.forEach(function(card){grid.appendChild(card);});
+    updatePreview();
+    var defaultOrder=cards.slice();
+    var sortSelect=scope.querySelector('[data-role="sort"]');
+    if(sortSelect){
+      sortSelect.addEventListener('change',function(){
+        var ordered=defaultOrder;
+        if(sortSelect.value==='name'){
+          ordered=cards.slice().sort(function(a,b){return (a.dataset.title||'').localeCompare(b.dataset.title||'','ru');});
+        }
+        ordered.forEach(function(card){grid.appendChild(card);});
+      });
+    }
+  });
+})();</script>
+<script>function toggleFaq(b){b.parentElement.classList.toggle('open')}
+function openModal(id){
+  var m=document.getElementById(id);
+  m.classList.add('is-open');
+  m.setAttribute('aria-hidden','false');
+  document.body.style.overflow='hidden';
+}
+function closeModal(id){
+  var m=document.getElementById(id);
+  m.classList.remove('is-open');
+  m.setAttribute('aria-hidden','true');
+  document.body.style.overflow='';
+}
+document.addEventListener('click',function(e){
+  if(e.target.classList && e.target.classList.contains('lead-modal')){closeModal(e.target.id);}
+});
+document.addEventListener('keydown',function(e){
+  if(e.key==='Escape'){document.querySelectorAll('.lead-modal.is-open').forEach(function(m){closeModal(m.id);});}
+});
+function submitLeadForm(modalId, consentId, errId){
+  var phone=document.getElementById(modalId+'Phone');
+  var consent=document.getElementById(consentId);
+  var err=document.getElementById(errId);
+  if(phone && !phone.value.trim()){
+    err.textContent='Укажите номер телефона';
+    err.classList.add('is-shown');
+    phone.focus();
+    return;
+  }
+  if(!consent.checked){
+    err.textContent='Нужно принять условия обработки данных';
+    err.classList.add('is-shown');
+    consent.focus();
+    return;
+  }
+  err.textContent='';
+  err.classList.remove('is-shown');
+  closeModal(modalId);
+}</script>
+<script>
+(function(){
+  function ruWord(n, forms){var n2=n%100;if(n2>=11&&n2<=14)return forms[2];var n1=n%10;if(n1===1)return forms[0];if(n1>=2&&n1<=4)return forms[1];return forms[2];}
+  document.querySelectorAll('[data-role="preview"]').forEach(function(numEl){
+    var wordEl = numEl.parentElement.querySelector('[data-role="preview-word"]');
+    if(!wordEl) return;
+    function sync(){var n=parseInt(numEl.textContent,10)||0;wordEl.textContent=ruWord(n,['модель','модели','моделей']);}
+    sync();
+    new MutationObserver(sync).observe(numEl,{childList:true,characterData:true,subtree:true});
+  });
+  // never show an empty grid: if the exact filters (already applied by the shared
+  // filter script) leave zero visible cards, fall back to the closest models by
+  // numeric distance from the requested ranges, so the customer always sees options.
+  document.querySelectorAll('[data-vmc-scope]').forEach(function(scope){
+    var grid = scope.querySelector('.vmc-grid');
+    if(!grid) return;
+    var cards = Array.prototype.slice.call(grid.querySelectorAll('.vmc-card'));
+    var panel = scope.querySelector('.vmc-filter-panel');
+    if(!panel) return;
+    var applyBtn = panel.querySelector('[data-role="apply"]');
+    var resetBtn = panel.querySelector('[data-role="reset"]');
+    var note = scope.querySelector('[data-role="fallback-note"]');
+    var rangeNames = [];
+    Array.prototype.slice.call(panel.querySelectorAll('[data-range]')).forEach(function(inp){
+      var n = inp.getAttribute('data-range');
+      if(rangeNames.indexOf(n) < 0){rangeNames.push(n);}
+    });
+    function num(v){var n=parseFloat(v);return isNaN(n)?null:n;}
+    function rangeVals(name){
+      var minEl = panel.querySelector('[data-range="'+name+'"][data-bound="min"]');
+      var maxEl = panel.querySelector('[data-range="'+name+'"][data-bound="max"]');
+      return [minEl && minEl.value, maxEl && maxEl.value];
+    }
+    function applyFallback(){
+      var visible = cards.filter(function(c){return !c.classList.contains('is-hidden');});
+      if(visible.length){ if(note){note.hidden = true;} return; }
+      var activeRanges = rangeNames.filter(function(name){var mm = rangeVals(name); return mm[0] || mm[1];});
+      if(!activeRanges.length){ return; }
+      var scored = cards.map(function(card){
+        var score = 0;
+        activeRanges.forEach(function(name){
+          var key = name.replace(/-([a-z])/g, function(m,c){return c.toUpperCase();});
+          var n = card.dataset[key] ? num(card.dataset[key]) : null;
+          if(n === null){ score += 1e5; return; }
+          var mm = rangeVals(name);
+          var min = mm[0] ? num(mm[0]) : null;
+          var max = mm[1] ? num(mm[1]) : null;
+          if(min !== null && n < min){ score += (min - n); }
+          if(max !== null && n > max){ score += (n - max); }
+        });
+        return {card: card, score: score};
+      });
+      scored.sort(function(a,b){return a.score - b.score;});
+      var showN = Math.min(4, scored.length);
+      scored.forEach(function(s, i){ s.card.classList.toggle('is-hidden', i >= showN); });
+      if(note){ note.hidden = false; }
+    }
+    if(applyBtn){ applyBtn.addEventListener('click', applyFallback); }
+    if(resetBtn){ resetBtn.addEventListener('click', function(){ if(note){note.hidden = true;} }); }
+  });
+})();
+</script>
+<script src="site-shell.js?v=search-20260914"></script>
+</body></html>

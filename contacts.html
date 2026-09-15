@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta name="robots" content="noindex, nofollow"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Контакты — Механит</title>
+<meta name="description" content="Контакты ГК «Механит»: телефоны, email, адрес головного офиса в Нижнем Новгороде, реквизиты компании и форма обратной связи. Схема проезда на Яндекс Картах."/>
+<link rel="canonical" href="https://mehanit.ru/contacts.html"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Контакты — Механит"/>
+<meta property="og:description" content="Телефоны, email, адрес головного офиса и реквизиты ГК «Механит». Схема проезда на Яндекс Картах."/>
+<meta property="og:url" content="https://mehanit.ru/contacts.html"/>
+<meta property="og:image" content="https://mehanit.ru/mehanit-logo-cropped.png"/>
+<meta name="twitter:card" content="summary"/>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "ГК «Механит»",
+  "url": "https://mehanit.ru/",
+  "telephone": ["+7-800-551-12-06", "+7-831-282-05-00"],
+  "email": "info@mehanit.ru",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Южное шоссе, д. 16 «В»",
+    "addressLocality": "Нижний Новгород",
+    "postalCode": "603123",
+    "addressCountry": "RU"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens": "08:30",
+    "closes": "17:30"
+  }
+}
+</script>
+<style>
+/* Фирменная типографика Механит: Magistral (заголовки) + Golos Text (текст) + PT Root UI (интерфейс) */
+@font-face{font-family:'Magistral';src:url('fonts/Magistral-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Magistral';src:url('fonts/Magistral-Bold.woff2') format('woff2');font-weight:600 700;font-style:normal;font-display:swap}
+@font-face{font-family:'PT Root UI';src:url('fonts/PT-Root-UI_Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'PT Root UI';src:url('fonts/PT-Root-UI_Medium.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:'PT Root UI';src:url('fonts/PT-Root-UI_Bold.woff2') format('woff2');font-weight:600 700;font-style:normal;font-display:swap}
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bm:#1A1A1A;--sg:#3D3D3D;--sg2:#2B2E31;--mid:#696D71;--muted:#8A9096;
+  --ce:#6B2D8B;--ce2:rgba(107,45,139,.10);--ce3:rgba(107,45,139,.20);--ceHover:#7d3aa0;
+  --gold:#C9A227;
+  --tl:#EAEAE6;--tl2:#F5F5F3;--paper:#EDEEF0;--paper2:#E4E5E8;--white:#fff;
+  --line:rgba(26,26,26,.10);--line2:rgba(234,234,230,.08);
+  --max:1600px;--shadow:0 24px 70px rgba(26,26,26,.10);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Golos Text',sans-serif;background:var(--paper);color:var(--bm);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding-inline:clamp(24px,4.4vw,84px)}
+
+/* buttons (реиспользованный компонент) */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:1.5px solid transparent;min-height:48px;padding:0 26px;font-family:'PT Root UI',sans-serif;font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;transition:.22s;border-radius:10px}
+.btn-dark{background:var(--bm);color:var(--tl2);border-color:var(--bm)}.btn-dark:hover{background:var(--sg)}
+.btn-ce{background:linear-gradient(120deg,#7a3c9c 0%,#6B2D8B 50%,#63297e 100%);color:#fff;border-color:transparent}
+.btn-ce:hover{filter:brightness(1.12)}
+.btn:focus-visible{outline:2px solid var(--ce);outline-offset:3px}
+
+.contacts-page{padding:clamp(12px,1.4vw,18px) 0}
+.contacts-hero{padding:clamp(4px,1vw,14px) 0 clamp(18px,2.2vw,28px)}
+.eq-hero-top{display:grid;grid-template-columns:minmax(0,1.8fr) minmax(0,1fr);gap:40px;align-items:center}
+.sol-title{font-family:'Magistral',sans-serif;font-weight:700;font-size:clamp(32px,4.4vw,58px);line-height:1.05;letter-spacing:-.015em;color:var(--bm);margin:0;max-width:900px}
+.title-row{display:flex;align-items:center;gap:16px;min-width:0}
+.title-dash{flex:0 0 auto;width:40px;height:3px;background:linear-gradient(90deg,var(--gold),var(--ce))}
+.title-text{min-width:0;overflow-wrap:break-word}
+.sol-intro{font-family:'Golos Text',sans-serif;font-weight:400;font-size:15.5px;line-height:1.65;color:var(--mid);max-width:480px;margin:0}
+@media(max-width:1180px){.eq-hero-top{grid-template-columns:1fr;gap:16px}}
+@media(max-width:560px){.sol-title{font-size:clamp(20px,6.2vw,34px)}.title-row{flex-direction:column;align-items:flex-start;gap:10px}}
+.contacts-page::before{content:'';display:none}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+.contacts-grid{display:flex;flex-direction:column;gap:clamp(14px,1.3vw,18px)}
+.contacts-row{display:grid;gap:clamp(14px,1.3vw,18px)}
+.contacts-row--3col{grid-template-columns:repeat(3,1fr)}
+.contacts-row--2col{grid-template-columns:1fr 1fr}
+.contact-card{position:relative;background:#fff;border:1px solid rgba(26,26,26,.08);border-radius:24px;box-shadow:0 14px 36px rgba(26,26,26,.05);padding:clamp(18px,1.7vw,24px);display:flex;flex-direction:column;align-items:flex-start}
+.contact-card h2{font-family:'Magistral',sans-serif;font-weight:600;font-size:clamp(17px,1.15vw,20px);letter-spacing:-.02em;line-height:1.15;color:var(--bm)}
+
+/* иконка-плашка (переиспользуется во всех карточках) */
+.cc-card-head{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.cc-icon{width:44px;height:44px;flex:0 0 auto;display:grid;place-items:center;border-radius:13px;background:rgba(107,45,139,.09);color:var(--ce)}
+.cc-icon svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.7}
+.cc-icon--sm{width:36px;height:36px;border-radius:11px}
+.cc-icon--sm svg{width:17px;height:17px}
+
+/* служебные подписи (PT Root UI) */
+.cc-label{display:block;font-family:'PT Root UI',sans-serif;font-weight:600;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ce);margin-bottom:2px}
+.cc-note{display:block;font-family:'PT Root UI',sans-serif;font-weight:500;font-size:12px;color:var(--muted);margin-top:3px}
+.cc-divider{width:100%;height:1px;background:var(--line);margin:14px 0}
+
+/* Карточка «Связаться с нами» (широкая, ряд 1) */
+.cc-wide-title{font-family:'Magistral',sans-serif;font-weight:600;font-size:clamp(21px,1.7vw,27px);letter-spacing:-.02em;color:var(--bm);margin-bottom:18px}
+.cc-phone-main{display:block;font-family:'Golos Text',sans-serif;font-weight:600;font-size:clamp(19px,1.3vw,22px);line-height:1.2;color:var(--bm);transition:color .18s}
+.cc-phone-main:hover{color:var(--ce)}
+.cc-phone-main:focus-visible{outline:2px solid var(--ce);outline-offset:3px;border-radius:4px}
+.cc-phone-second{display:block;font-family:'Golos Text',sans-serif;font-weight:500;font-size:clamp(16px,1.05vw,18px);line-height:1.2;color:var(--bm);margin-top:10px;transition:color .18s}
+.cc-phone-second:hover{color:var(--ce)}
+.cc-phone-second:focus-visible{outline:2px solid var(--ce);outline-offset:3px;border-radius:4px}
+.cc-mail{display:block;font-family:'Golos Text',sans-serif;font-weight:600;font-size:clamp(17px,1.15vw,19px);color:var(--bm);transition:color .18s}
+.cc-mail:hover{color:var(--ce)}
+.cc-mail:focus-visible{outline:2px solid var(--ce);outline-offset:3px;border-radius:4px}
+.cc-mail-list{display:flex;flex-direction:column;gap:11px}
+.cc-mail-item{display:block}
+.cc-mail-dept{display:block;font-family:'PT Root UI',sans-serif;font-weight:500;font-size:11.5px;color:var(--muted);margin-bottom:2px}
+.cc-mail-list .cc-mail{font-size:clamp(14.5px,1vw,15.5px)}
+
+/* Карточка «Главный офис» */
+.cc-address{font-family:'Golos Text',sans-serif;font-style:normal;font-weight:500;font-size:clamp(14px,.9vw,15.5px);line-height:1.5;color:var(--sg);transition:color .18s}
+.cc-address:hover{color:var(--ce)}
+.cc-address:focus-visible{outline:2px solid var(--ce);outline-offset:3px;border-radius:4px}
+.cc-hours{font-family:'Golos Text',sans-serif;font-weight:500;font-size:clamp(14px,.9vw,15.5px);color:var(--bm)}
+.cc-subhead{display:flex;align-items:center;gap:9px;margin-bottom:8px}
+
+/* Карточка «Реквизиты» */
+.cc-dl{width:100%;margin:0}
+.cc-dl div{display:grid;grid-template-columns:38% 1fr;gap:10px;padding:7px 0;border-bottom:1px solid var(--line)}
+.cc-dl div:last-child{border-bottom:0}
+.cc-dl dt{font-family:'PT Root UI',sans-serif;font-weight:500;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0}
+.cc-dl dd{font-family:'Golos Text',sans-serif;font-weight:600;font-size:clamp(13px,.85vw,14.5px);color:var(--bm);margin:0;align-self:center}
+
+/* Карточка «Возникли вопросы?» — форма */
+.contact-card--form{background:#fff}
+.cc-form{width:100%;display:flex;flex-direction:column;flex:1 1 auto}
+.cc-form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.cc-field{margin-bottom:12px}
+.cc-field label{display:block;font-family:'PT Root UI',sans-serif;font-weight:500;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.cc-input{width:100%;height:44px;background:#fff;border:1px solid rgba(26,26,26,.14);border-radius:10px;padding:0 14px;color:var(--bm);font-family:'Golos Text',sans-serif;font-weight:400;font-size:14px;transition:border-color .18s ease,background .18s ease}
+.cc-input::placeholder{color:var(--muted)}
+.cc-input:focus{outline:none;border-color:var(--ce);background:#fff}
+.cc-input:focus-visible{outline:2px solid var(--ce);outline-offset:2px}
+.cc-input[aria-invalid="true"]{border-color:#b3261e}
+.cc-err{display:none;margin-top:6px;font-family:'PT Root UI',sans-serif;font-weight:500;font-size:12px;color:#b3261e}
+.cc-err.is-shown{display:block}
+.cc-consent{display:flex;align-items:flex-start;gap:9px;margin:2px 0 14px;cursor:pointer;font-family:'PT Root UI',sans-serif;font-weight:400;font-size:12px;line-height:1.4;color:var(--sg)}
+.cc-consent input{accent-color:var(--ce);width:16px;height:16px;min-width:16px;margin-top:1px;cursor:pointer}
+.cc-consent a{color:var(--ce);text-decoration:underline;text-underline-offset:2px}
+.cc-consent a:hover{color:var(--ceHover)}
+.cc-consent a:focus-visible{outline:2px solid var(--ce);outline-offset:2px}
+.cc-form-bottom{margin-top:auto}
+.cc-form .btn{width:100%;min-height:46px}
+.cc-form .btn svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:2.2}
+.cc-form-status{display:none;margin-top:12px;padding:10px 14px;border-radius:10px;font-family:'PT Root UI',sans-serif;font-weight:500;font-size:12.5px;line-height:1.4}
+.cc-form-status.is-shown{display:block}
+.cc-form-status.ok{background:rgba(43,138,62,.1);color:#1e6b34}
+.cc-form-status.fail{background:rgba(179,38,30,.08);color:#b3261e}
+
+/* Карта */
+.contacts-map{grid-column:1 / -1;display:flex;flex-direction:column;background:#fff;border:1px solid rgba(26,26,26,.08);border-radius:24px;box-shadow:0 14px 36px rgba(26,26,26,.05);padding:14px}
+.contacts-map-frame{position:relative;width:100%;height:clamp(180px,15vw,216px);border-radius:14px;overflow:hidden;background:var(--paper2)}
+.contacts-map-frame ymaps,.contacts-map-frame [class*="ymaps"]{border-radius:14px}
+.contacts-map-placeholder{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;color:var(--muted);font-family:'PT Root UI',sans-serif;font-size:12px;text-align:center;padding:16px}
+.contacts-map-placeholder b{font-family:'Golos Text',sans-serif;font-size:13px;color:var(--sg)}
+.contacts-map-foot{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;padding:12px 4px 2px}
+.contacts-map-addr{font-family:'Golos Text',sans-serif;font-size:13px;color:var(--sg)}
+.contacts-map-addr b{color:var(--bm);font-weight:600}
+.contacts-map-link{display:inline-flex;align-items:center;gap:7px;font-family:'PT Root UI',sans-serif;font-weight:600;font-size:11.5px;letter-spacing:.5px;text-transform:uppercase;color:var(--ce);transition:color .18s}
+.contacts-map-link:hover{color:var(--ceHover)}
+.contacts-map-link:focus-visible{outline:2px solid var(--ce);outline-offset:3px;border-radius:4px}
+.contacts-map-link svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:2}
+
+@media(max-width:900px){
+  .contacts-row--3col,.contacts-row--2col{grid-template-columns:1fr}
+  .cc-form-row{grid-template-columns:1fr}
+}
+
+</style>
+<link rel="stylesheet" href="site-shell.css"/>
+<link rel="stylesheet" href="industry-solutions.css"/>
+</head>
+<body>
+<header></header>
+<main class="contacts-page">
+<nav class="ind-crumbs" aria-label="Хлебные крошки"><div class="wrap"><ol>
+  <li><a href="index.html">Главная</a></li>
+  <li aria-current="page">Контакты</li>
+</ol></div></nav>
+<div class="wrap">
+<section class="contacts-hero">
+  <h1 class="sol-title"><span class="title-row"><span class="title-dash"></span><span class="title-text">Контакты ГК «Механит»</span></span></h1>
+</section>
+
+<section class="contacts-page__cards" aria-label="Контактная информация">
+<div class="contacts-grid">
+
+<div class="contacts-row contacts-row--3col">
+
+<article class="contact-card" aria-labelledby="cc-h-communication">
+<div class="cc-card-head">
+<span class="cc-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2.5"></rect><path d="M11 18h2"></path></svg></span>
+<span class="cc-label">Связаться с нами</span>
+</div>
+<h2 class="cc-wide-title" id="cc-h-communication">ООО ГК «Механит»</h2>
+<a class="cc-phone-main" href="tel:88005511206">8 800 55 11 206</a>
+<span class="cc-note">многоканальный</span>
+<a class="cc-phone-second" href="tel:+78312820500">8 (831) 282 05 00</a>
+</article>
+
+<article class="contact-card" aria-labelledby="cc-h-email">
+<div class="cc-card-head">
+<span class="cc-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m4 7 8 6 8-6"></path></svg></span>
+<span class="cc-label" id="cc-h-email">Электронная почта</span>
+</div>
+<div class="cc-mail-list">
+<div class="cc-mail-item"><span class="cc-mail-dept">Общая</span><a class="cc-mail" href="mailto:info@mehanit.ru">info@mehanit.ru</a></div>
+<div class="cc-mail-item"><span class="cc-mail-dept">Отдел продаж</span><a class="cc-mail" href="mailto:mehanit.direct@yandex.ru">mehanit.direct@yandex.ru</a></div>
+<div class="cc-mail-item"><span class="cc-mail-dept">Отдел персонала</span><a class="cc-mail" href="mailto:lk@mehanit.ru">lk@mehanit.ru</a></div>
+<div class="cc-mail-item"><span class="cc-mail-dept">Бухгалтерия</span><a class="cc-mail" href="mailto:buh@mehanit.ru">buh@mehanit.ru</a></div>
+</div>
+</article>
+
+<article class="contact-card contact-card--details" aria-labelledby="cc-h-details">
+<div class="cc-subhead">
+<span class="cc-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 3h7l4 4v14a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"></path><path d="M14 3v4h4"></path><path d="M9 13h6M9 16h6"></path></svg></span>
+<h2 id="cc-h-details">Реквизиты</h2>
+</div>
+<dl class="cc-dl">
+<div><dt>ИНН</dt><dd>5256089670</dd></div>
+<div><dt>КПП</dt><dd>525601001</dd></div>
+<div><dt>ОГРН</dt><dd>1095256004370</dd></div>
+</dl>
+</article>
+
+</div>
+
+<div class="contacts-row contacts-row--2col">
+
+<article class="contact-card contact-card--office" aria-labelledby="cc-h-office">
+<div class="cc-subhead">
+<span class="cc-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="1"></rect><path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2"></path></svg></span>
+<h2 id="cc-h-office">Главный офис</h2>
+</div>
+<a class="cc-address" href="#contacts-map">603123, Россия, г. Нижний Новгород,<br/>Южное шоссе, д. 16 «В»</a>
+<div class="cc-divider" role="presentation"></div>
+<div class="cc-subhead">
+<span class="cc-icon cc-icon--sm" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3.5 2"></path></svg></span>
+<span class="cc-label" style="margin:0">Режим работы</span>
+</div>
+<div class="cc-hours">Пн. – Пт.: 8:30 – 17:30</div>
+<span class="cc-note">по МСК времени</span>
+</article>
+
+<article class="contact-card contact-card--form" aria-labelledby="cc-h-form">
+<div class="cc-card-head">
+<span class="cc-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H10l-4 4z"></path><path d="M9.3 9.6c0-1.5 1.3-2.6 2.7-2.6s2.7 1 2.7 2.3c0 1.7-2 1.8-2.5 3.3"></path></svg></span>
+<h2 id="cc-h-form">Возникли вопросы?</h2>
+</div>
+<form class="cc-form" id="ccForm" novalidate="">
+<div class="cc-form-row">
+<div class="cc-field">
+<label for="ccName">Имя</label>
+<input autocomplete="name" class="cc-input" id="ccName" name="name" placeholder="Введите ваше имя" required="" type="text"/>
+<div class="cc-err" data-err-for="ccName" id="ccNameErr" role="alert"></div>
+</div>
+<div class="cc-field">
+<label for="ccPhone">Телефон</label>
+<input autocomplete="tel" class="cc-input" id="ccPhone" inputmode="tel" name="phone" placeholder="Введите ваш телефон" required="" type="tel"/>
+<div class="cc-err" data-err-for="ccPhone" id="ccPhoneErr" role="alert"></div>
+</div>
+</div>
+<div class="cc-form-bottom">
+<label class="cc-consent" for="ccConsent">
+<input id="ccConsent" name="consent" required="" type="checkbox"/>
+<span>Принимаю условия <a href="privacy.html" data-legal="privacy">Политики конфиденциальности</a> и даю согласие на обработку персональных данных</span>
+</label>
+<div class="cc-err" data-err-for="ccConsent" id="ccConsentErr" role="alert"></div>
+<button class="btn btn-ce" type="submit">Отправить<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
+<div class="cc-form-status" id="ccStatus" role="status"></div>
+</div>
+</form>
+</article>
+
+</div>
+
+<div class="contacts-map" id="contacts-map" role="region" aria-label="Расположение офиса на карте">
+<div class="contacts-map-frame" id="ccMapFrame">
+<div class="contacts-map-placeholder" id="ccMapPlaceholder"><b>Карта загружается…</b><span>Южное шоссе, д. 16 «В», Нижний Новгород</span></div>
+</div>
+<div class="contacts-map-foot">
+<div class="contacts-map-addr"><b>Южное шоссе, д. 16 «В»</b> · Нижний Новгород, 603123</div>
+<a class="contacts-map-link" href="https://yandex.ru/maps/?text=Нижний%20Новгород%2C%20Южное%20шоссе%2C%2016%D0%92" rel="noopener" target="_blank">Открыть в Яндекс Картах <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"></path></svg></a>
+</div>
+</div>
+
+</div>
+</section>
+
+</div>
+</main>
+<footer></footer>
+<script src="site-shell.js?v=search-20260914"></script>
+<script>
+(function(){
+  var form=document.getElementById('ccForm');
+  if(!form){return;}
+  var status=document.getElementById('ccStatus');
+  function setErr(id,msg){
+    var input=document.getElementById(id);
+    var err=document.getElementById(id+'Err');
+    if(msg){
+      if(input){input.setAttribute('aria-invalid','true');input.setAttribute('aria-describedby',id+'Err');}
+      if(err){err.textContent=msg;err.classList.add('is-shown');}
+    }else{
+      if(input){input.removeAttribute('aria-invalid');}
+      if(err){err.textContent='';err.classList.remove('is-shown');}
+    }
+  }
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    status.className='cc-form-status';
+    var name=document.getElementById('ccName');
+    var phone=document.getElementById('ccPhone');
+    var consent=document.getElementById('ccConsent');
+    var valid=true;
+    if(!name.value.trim()){setErr('ccName','Укажите ваше имя');valid=false;}else{setErr('ccName',null);}
+    var phoneDigits=phone.value.replace(/\D/g,'');
+    if(phoneDigits.length<10){setErr('ccPhone','Проверьте номер телефона');valid=false;}else{setErr('ccPhone',null);}
+    if(!consent.checked){setErr('ccConsent','Нужно принять условия обработки данных');valid=false;}else{setErr('ccConsent',null);}
+    if(!valid){return;}
+    var btn=form.querySelector('button[type="submit"]');
+    btn.disabled=true;
+    status.textContent='Отправляем заявку…';
+    status.classList.add('is-shown');
+    setTimeout(function(){
+      btn.disabled=false;
+      status.classList.add('ok');
+      status.textContent='Заявка отправлена. Ответим в течение рабочего дня.';
+      form.reset();
+    },600);
+  });
+})();
+</script>
+<script>
+(function(){
+  var YANDEX_MAPS_API_KEY='8c60c397-8316-4ac1-8d42-347e9013aa2a';
+  var OFFICE_COORDS=[56.2228288,43.8616049];
+  var frame=document.getElementById('ccMapFrame');
+  var placeholder=document.getElementById('ccMapPlaceholder');
+  if(!frame){return;}
+  function showError(msg){
+    if(placeholder){placeholder.innerHTML='<b>Карта временно недоступна</b><span>'+msg+'</span>';}
+  }
+  function loadScript(src){
+    return new Promise(function(resolve,reject){
+      var s=document.createElement('script');
+      s.src=src;s.onload=resolve;s.onerror=reject;
+      document.head.appendChild(s);
+    });
+  }
+  function initMap(){
+    if(!window.ymaps){showError('Не удалось загрузить Яндекс Карты.');return;}
+    ymaps.ready(function(){
+      if(placeholder){placeholder.remove();}
+      var map=new ymaps.Map(frame,{center:OFFICE_COORDS,zoom:16,controls:['zoomControl','geolocationControl']},{suppressMapOpenBlock:true});
+      var pinSvg='<svg xmlns="http://www.w3.org/2000/svg" width="40" height="54" viewBox="0 0 40 54">'+
+        '<ellipse cx="20" cy="48" rx="7" ry="2.5" fill="#000" opacity="0.16"/>'+
+        '<path d="M20 2C11.16 2 4 9.16 4 18c0 12 16 30 16 30s16-18 16-30C36 9.16 28.84 2 20 2Z" fill="#6B2D8B"/>'+
+        '<circle cx="20" cy="18" r="9" fill="#fff"/>'+
+        '<circle cx="20" cy="18" r="5.5" fill="#C9A227"/>'+
+        '</svg>';
+      var placemark=new ymaps.Placemark(OFFICE_COORDS,{
+        balloonContentHeader:'ГК «Механит»',
+        balloonContentBody:'603123, Россия, г. Нижний Новгород, Южное шоссе, д. 16 «В»',
+        hintContent:'ГК «Механит»'
+      },{
+        iconLayout:'default#image',
+        iconImageHref:'data:image/svg+xml;charset=UTF-8,'+encodeURIComponent(pinSvg),
+        iconImageSize:[40,54],
+        iconImageOffset:[-20,-48]
+      });
+      map.geoObjects.add(placemark);
+    });
+  }
+  function loadMap(){
+    if(!YANDEX_MAPS_API_KEY||YANDEX_MAPS_API_KEY==='ВАШ_API_KEY_ЗДЕСЬ'){
+      showError('Укажите YANDEX_MAPS_API_KEY в скрипте страницы.');
+      return;
+    }
+    loadScript('https://api-maps.yandex.ru/2.1/?apikey='+encodeURIComponent(YANDEX_MAPS_API_KEY)+'&lang=ru_RU')
+      .then(initMap)
+      .catch(function(){showError('Не удалось загрузить Яндекс Карты.');});
+  }
+  if('IntersectionObserver' in window){
+    var obs=new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){loadMap();obs.disconnect();}
+      });
+    },{rootMargin:'200px 0px'});
+    obs.observe(frame);
+  }else{
+    loadMap();
+  }
+})();
+</script>
+</body>
+</html>

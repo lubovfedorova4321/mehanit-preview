@@ -1,0 +1,101 @@
+/* ===== Шаблон страницы технологического решения (деталь отрасли) =====
+   Используется вместе с industry-solutions.css (хлебные крошки .ind-crumbs общие). */
+
+.det-hero{padding:clamp(16px,2vw,26px) 0;background:linear-gradient(180deg,#fbfbfa,var(--paper) 85%)}
+.det-hero-grid{display:grid;grid-template-columns:.72fr 1.28fr;gap:clamp(22px,3vw,42px);align-items:center}
+.det-hero-media{display:flex;align-items:center;justify-content:center;min-height:190px}
+.det-hero-media img{max-width:88%;max-height:255px;width:auto;height:auto;object-fit:contain;filter:drop-shadow(0 18px 22px rgba(26,26,26,.2))}
+.det-hero-placeholder{width:min(100%,340px);min-height:190px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;border:1px dashed rgba(107,45,139,.3);border-radius:16px;background:linear-gradient(135deg,rgba(255,255,255,.82),rgba(234,234,230,.66));box-shadow:0 14px 32px rgba(26,26,26,.05);color:var(--muted)}
+.det-hero-placeholder span{font-family:'PT Root UI',sans-serif;font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--ce)}
+.det-hero-placeholder small{font-family:'Golos Text',sans-serif;font-size:12px;line-height:1.4;color:var(--muted);text-align:center}
+.det-eyebrow{font-family:'PT Root UI',sans-serif;font-weight:600;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--ce);margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.det-eyebrow::before{content:'';width:20px;height:2px;background:var(--ce)}
+.det-title{font-family:'Magistral',sans-serif;font-weight:700;font-size:clamp(30px,3.2vw,44px);line-height:1.02;letter-spacing:0;color:var(--bm);margin-bottom:10px}
+.det-task{font-family:'Golos Text',sans-serif;font-size:clamp(14px,.95vw,16px);line-height:1.48;color:var(--sg);max-width:620px;margin-bottom:16px}
+.det-specs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:18px;max-width:660px}
+.det-spec{padding:10px 12px;background:#fff;border:1px solid var(--line);border-radius:10px}
+.det-spec span{display:block;font-family:'PT Root UI',sans-serif;font-weight:600;font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
+.det-spec b{display:block;font-family:'Golos Text',sans-serif;font-weight:600;font-size:13px;line-height:1.3;color:var(--bm)}
+.det-spec-note{font-family:'PT Root UI',sans-serif;font-size:11px;color:var(--muted);margin:-8px 0 14px}
+
+/* ===== Технологический маршрут ===== */
+.det-section{padding:clamp(22px,2.6vw,34px) 0;border-top:1px solid var(--line)}
+.det-h2{font-family:'Magistral',sans-serif;font-weight:600;font-size:clamp(22px,1.7vw,28px);letter-spacing:0;color:var(--bm);margin-bottom:16px}
+.det-steps{display:flex;flex-direction:column;gap:0}
+.det-step{position:relative;display:grid;grid-template-columns:46px 1fr;gap:16px;padding:15px 0;border-bottom:1px solid var(--line)}
+.det-step:last-child{border-bottom:0}
+.det-step-num{display:flex;align-items:flex-start;justify-content:center;padding-top:2px}
+.det-step-num span{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:8px;background:var(--ce);color:#fff;font-family:'Magistral',sans-serif;font-weight:700;font-size:13px}
+.det-step-body h3{font-family:'Golos Text',sans-serif;font-weight:600;font-size:16px;color:var(--bm);margin-bottom:5px}
+.det-step-body p{font-family:'Golos Text',sans-serif;font-size:13.5px;line-height:1.48;color:var(--sg);max-width:760px;margin-bottom:10px}
+.det-step-equip{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.det-equip-chip{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid rgba(107,45,139,.22);border-radius:9px;background:rgba(107,45,139,.03);text-decoration:none;transition:background .16s,border-color .16s}
+.det-equip-chip:hover{background:rgba(107,45,139,.08);border-color:var(--ce)}
+.det-equip-chip b{font-family:'Golos Text',sans-serif;font-weight:600;font-size:13px;color:var(--bm)}
+.det-role{font-family:'PT Root UI',sans-serif;font-weight:600;font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;padding:2px 7px;border-radius:5px}
+.det-role--main{background:rgba(107,45,139,.12);color:var(--ce)}
+.det-role--extra{background:rgba(201,162,39,.14);color:#8a6c14}
+.det-role--finish{background:rgba(26,26,26,.07);color:var(--sg)}
+.det-role--alt{background:rgba(26,26,26,.05);color:var(--muted)}
+
+/* ===== Рекомендуемая конфигурация + станки ===== */
+.det-config-text{display:none}
+.det-machines{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(280px,340px);gap:16px;overflow-x:auto;overflow-y:hidden;padding:2px 2px 16px;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:rgba(107,45,139,.45) rgba(26,26,26,.08)}
+.det-machines::-webkit-scrollbar{height:8px}
+.det-machines::-webkit-scrollbar-track{background:rgba(26,26,26,.07);border-radius:999px}
+.det-machines::-webkit-scrollbar-thumb{background:rgba(107,45,139,.42);border-radius:999px}
+.det-machine-card{position:relative;display:flex;flex-direction:column;background:#fff;border:1px solid rgba(26,26,26,.09);border-radius:14px;box-shadow:0 12px 30px rgba(26,26,26,.06);overflow:hidden;text-decoration:none;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease;scroll-snap-align:start}
+.det-machine-card::before{content:'';position:absolute;top:0;left:50%;z-index:3;width:52px;height:2px;transform:translateX(-50%);background:linear-gradient(90deg,var(--ce),var(--gold))}
+.det-machine-card:hover{transform:translateY(-3px);border-color:rgba(143,98,200,.3);box-shadow:0 18px 42px rgba(143,98,200,.13),0 12px 28px rgba(26,26,26,.08)}
+.det-machine-media{position:relative;height:160px;display:flex;align-items:center;justify-content:center;background:var(--tl2);border-bottom:1px solid rgba(26,26,26,.06);padding:14px;overflow:hidden}
+.det-machine-media img{max-width:86%;max-height:82%;width:auto;height:auto;object-fit:contain;filter:drop-shadow(0 8px 14px rgba(26,26,26,.14));transition:transform .24s ease}
+.det-machine-card:hover .det-machine-media img{transform:scale(1.04)}
+.det-machine-noimage{font-family:'PT Root UI',sans-serif;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(82,86,90,.46)}
+.det-machine-photo-cta{position:absolute;inset:0;z-index:2;display:flex;align-items:center;justify-content:center;background:rgba(20,18,26,.34);opacity:0;transition:opacity .18s ease;pointer-events:none}
+.det-machine-card:hover .det-machine-photo-cta{opacity:1}
+.det-machine-photo-cta span{display:inline-flex;align-items:center;gap:6px;padding:8px 18px;background:#fff;color:var(--bm);border-radius:999px;font-family:'PT Root UI',sans-serif;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;box-shadow:0 12px 26px rgba(26,26,26,.24)}
+.det-stock-badge{position:absolute;left:10px;top:10px;z-index:4;display:inline-flex;align-items:center;gap:5px;padding:5px 10px 5px 8px;border-radius:20px;background:#1c8a4c;color:#fff;font-family:'PT Root UI',sans-serif;font-weight:700;font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;box-shadow:0 4px 10px rgba(28,138,76,.28);pointer-events:none}
+.det-stock-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:#fff}
+.det-machine-body{padding:14px 16px 16px}
+.det-machine-body small{display:block;font-family:'PT Root UI',sans-serif;font-weight:700;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--ce);margin-bottom:6px}
+.det-machine-body h4{font-family:'Golos Text',sans-serif;font-weight:700;font-size:15px;line-height:1.28;color:var(--bm);margin-bottom:8px}
+.det-machine-body span.more{font-family:'PT Root UI',sans-serif;font-weight:700;font-size:12px;color:var(--ce)}
+
+.det-cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin-top:8px}
+.det-back{padding:22px 0 clamp(40px,5vw,60px)}
+.det-back a{display:inline-flex;align-items:center;gap:8px;font-family:'PT Root UI',sans-serif;font-weight:600;font-size:13.5px;color:var(--ce);text-decoration:none}
+.det-back a:hover{color:var(--ceHover)}
+
+@media(max-width:1024px){
+  .det-hero-grid{grid-template-columns:1fr;text-align:left}
+  .det-hero-media{order:-1;min-height:170px}
+}
+@media(max-width:640px){
+  .det-hero{padding:10px 0 14px}
+  .det-hero-grid{gap:10px}
+  .det-hero-media{min-height:110px}
+  .det-hero-media img{max-height:118px}
+  .det-hero-placeholder{min-height:110px}
+  .det-eyebrow{font-size:11px;margin-bottom:8px}
+  .det-title{font-size:clamp(26px,7.4vw,34px);margin-bottom:7px}
+  .det-task{font-size:13.5px;line-height:1.45;margin-bottom:12px}
+  .det-specs{grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px}
+  .det-spec{padding:9px 10px}
+  .det-spec b{font-size:12.5px}
+  .det-spec-note{display:none}
+  .det-cta-row{margin-top:4px}
+  .det-section{padding:16px 0}
+  .det-h2{margin-bottom:10px}
+  .det-step{grid-template-columns:32px 1fr;gap:8px;padding:9px 0}
+  .det-step-num span{width:28px;height:28px;border-radius:7px;font-size:12px}
+  .det-step-body h3{font-size:15px;margin-bottom:4px}
+  .det-step-body p{font-size:12.8px;line-height:1.38;margin-bottom:8px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .det-equip-chip{align-items:center;flex-direction:row;flex-wrap:wrap;gap:5px;padding:7px 9px}
+  .det-equip-chip b{font-size:12px}
+  .det-role{font-size:8.5px}
+  .det-machines{grid-auto-columns:minmax(248px,82vw);gap:12px;margin-inline:-2px}
+  .det-machine-media{height:132px}
+  .det-machine-body{padding:12px 14px 14px}
+  .det-machine-body h4{font-size:14px}
+}
+@media(prefers-reduced-motion:reduce){.det-machine-card{transition:none}}
