@@ -1005,10 +1005,11 @@ html body .mh-more{display:none!important}
   html body .eq-fit-actions .btn{width:100%!important}
 
   html body .eq-scenario{border-radius:14px!important}
-  html body .eq-scenario-media{position:relative!important;display:block!important;min-height:0!important;aspect-ratio:16/9!important;background:#F5F5F3!important;overflow:hidden!important}
+  html body .eq-scenario-media{position:relative!important;display:block!important;min-height:0!important;aspect-ratio:2/1!important;background:#F5F5F3!important;overflow:hidden!important}
   html body .eq-scenario-media img{display:block!important;width:100%!important;height:100%!important;object-fit:cover!important;position:relative!important}
   html body .eq-scenario-media::after{background:linear-gradient(180deg,rgba(255,255,255,0) 46%,#fff 100%)!important}
-  html body .eq-scenario-body{padding:18px 20px 22px!important}
+  html body .eq-scenario-body{padding:14px 18px 18px!important;gap:6px!important}
+  html body .eq-scenario-link{margin-top:8px!important}
 
   html body main.page{padding:14px 0 36px!important}
   html body main.page>.wrap{width:min(calc(100% - 28px),var(--max,1240px))!important}
