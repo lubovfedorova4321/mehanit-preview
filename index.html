@@ -3110,6 +3110,7 @@ function getSiteSearchResults(query,limit){
     return normalizeSearchText(item.title+' '+item.category+' '+item.text).indexOf(q)>-1;
   }).slice(0,limit||8);
 }
+var siteSearchIndexWaiting=false;
 function renderSiteSearch(query){
   var grid=document.getElementById('siteSearchResults');
   var empty=document.getElementById('siteSearchEmpty');
@@ -3118,7 +3119,23 @@ function renderSiteSearch(query){
   grid.innerHTML=items.map(function(item){
     return '<a class="site-search-item" href="'+escapeSiteSearchHtml(item.url)+'" onclick="closeSiteSearch()"><small>'+escapeSiteSearchHtml(item.category)+'</small><b>'+escapeSiteSearchHtml(item.title)+'</b><span>'+escapeSiteSearchHtml(item.text)+'</span></a>';
   }).join('');
-  if(empty){empty.classList.toggle('is-visible',items.length===0);}
+  /* каталог страниц (search-index.json) грузится отдельно: пока он не пришёл,
+     поиск видит только станки из шапки — показываем это, а не «ничего не нашли» */
+  var indexReady=!!window.MEHANIT_SEARCH_INDEX;
+  if(empty){
+    empty.textContent=indexReady
+      ?'Ничего не нашли. Попробуйте другой запрос или отправьте задачу технологу.'
+      :'Загружаем каталог, секунду…';
+    empty.classList.toggle('is-visible',items.length===0);
+  }
+  if(!indexReady&&!siteSearchIndexWaiting&&window.MEHANIT_SEARCH&&typeof window.MEHANIT_SEARCH.load==='function'){
+    siteSearchIndexWaiting=true;
+    window.MEHANIT_SEARCH.load().then(function(){
+      siteSearchIndexWaiting=false;
+      var input=document.getElementById('siteSearchInput');
+      renderSiteSearch(input?input.value:'');
+    });
+  }
 }
 function openSiteSearch(){
   var modal=document.getElementById('siteSearchModal');

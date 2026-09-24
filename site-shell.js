@@ -253,6 +253,8 @@
       })
       .catch(function(){
         SEARCH_INDEX_ITEMS=[];
+        /* отмечаем и неудачу тоже: иначе поиск бесконечно считает индекс «ещё не пришедшим» */
+        window.MEHANIT_SEARCH_INDEX=SEARCH_INDEX_ITEMS;
         return SEARCH_INDEX_ITEMS;
       });
     return SEARCH_INDEX_PROMISE;
@@ -434,8 +436,18 @@
       }
       var items=searchSiteItems(q,10);
       if(!items.length){
-        searchResults.innerHTML='<div class="hsp-empty">Ничего не нашли. Попробуйте другой запрос.</div>';
+        /* каталог страниц подгружается отдельным файлом: пока он не пришёл,
+           поиск знает только станки из HEADER_SEARCH_ITEMS — не выдаём «ничего не нашли» */
+        var indexReady=!!window.MEHANIT_SEARCH_INDEX;
+        searchResults.innerHTML='<div class="hsp-empty">'+(indexReady
+          ?'Ничего не нашли. Попробуйте другой запрос.'
+          :'Загружаем каталог, секунду…')+'</div>';
         searchResults.classList.add('is-visible');
+        if(!indexReady){
+          loadSearchIndex().then(function(){
+            if(searchOpen&&searchInput.value===query){renderSearch(query)}
+          });
+        }
         return;
       }
       searchResults.innerHTML=items.map(function(item,i){
