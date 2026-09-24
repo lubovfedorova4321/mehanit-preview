@@ -12,7 +12,7 @@
 <meta property="og:title" content="Оснастка для станков — зажим детали, оправки, спецприспособления | Механит"/>
 <meta property="og:description" content="Технологическая оснастка: зажим детали, оснастка инструмента, оснастка для токарных станков, 4-й и 5-й оси, специальные приспособления под деталь и установ."/>
 <meta property="og:url" content="https://mehanit.ru/production-tooling.html"/>
-<meta property="og:image" content="https://mehanit.ru/module-banners/tooling.jpeg"/>
+<meta property="og:image" content="https://mehanit.ru/instrument-assets/tooling-hero.jpg"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <script type="application/ld+json">
@@ -139,6 +139,7 @@ main{padding-bottom:clamp(20px,3vw,32px)}
 </style>
 <link rel="stylesheet" href="site-shell.css"/>
 <link rel="stylesheet" href="industry-solutions.css"/>
+<link rel="stylesheet" href="instrument-block.css"/>
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -154,34 +155,10 @@ main{padding-bottom:clamp(20px,3vw,32px)}
   },
   {
    "@type": "Question",
-   "name": "Проектируете оснастку под нестандартную деталь?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "Да, специальную оснастку проектируем и изготавливаем под конкретную деталь, маршрут обработки и партию."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "Как быстро подобрать оснастку под задачу?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "После получения детали, материала, допусков и партии технолог формирует состав оснастки под станок и операцию."
-   }
-  },
-  {
-   "@type": "Question",
    "name": "Чем термозажимной патрон отличается от гидропластового?",
    "acceptedAnswer": {
     "@type": "Answer",
     "text": "Термозажим даёт максимальную жёсткость и минимальный вылет — он хорош на высоких оборотах и в глубоких карманах, но требует термоустановки и подходит только под цилиндрический хвостовик своего диаметра. Гидропластовый зажимает без нагрева, лучше гасит вибрацию и удобнее на чистовых операциях и развёртывании."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "Нужна ли балансировка оправок?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "Она нужна с ростом оборотов: чем выше обороты, тем сильнее дисбаланс нагружает шпиндель и портит поверхность. Для высокооборотной обработки берут оправки в сбалансированном исполнении и следят за тем, чтобы сборка не нарушала баланс."
    }
   },
   {
@@ -199,47 +176,31 @@ main{padding-bottom:clamp(20px,3vw,32px)}
 <body>
 <header></header>
 <main>
-<nav class="ind-crumbs" aria-label="Хлебные крошки"><div class="wrap"><ol>
-  <li><a href="index.html">Главная</a></li>
-  <li><a href="production-equipment.html">Инструмент и оснастка</a></li>
-  <li aria-current="page">Оснастка</li>
-</ol></div></nav>
-
-<section class="sol-hero">
-<div class="wrap">
-<div class="eq-hero-top">
-  <h1 class="sol-title"><span class="title-row"><span class="title-dash"></span><span class="title-text">Оснастка под станок, деталь и установ</span></span></h1>
-  <p class="sol-intro">Зажим, инструментальные оправки, элементы базирования и специальные приспособления — жёсткость, повторяемость, скорость переналадки и стабильная первая партия.</p>
-</div>
-</div>
+<section class="ib-hero">
+  <div class="ib-hero-media"><img src="instrument-assets/tooling-hero-wide.jpg" alt="Станочные тиски с корпусными деталями на столе обрабатывающего центра" fetchpriority="high"/></div>
+  <div class="wrap ib-hero-inner">
+    <nav class="ind-crumbs" aria-label="Хлебные крошки"><div class="wrap"><ol><li><a href="index.html">Главная</a></li><li><a href="production-equipment.html">Инструмент и оснастка</a></li><li aria-current="page">Станочная оснастка</li></ol></div></nav>
+    <h1>Станочная оснастка для станков с ЧПУ</h1>
+    <p class="ib-sub">Зажим детали, инструментальные оправки и специальные приспособления — жёсткость, повторяемость и быстрая переналадка.</p>
+    <div class="ib-actions"><button type="button" class="btn btn-ce" onclick="openEqLeadModal()">Обсудить задачу с технологом</button><a class="ib-textlink" href="#runout">Биение патронов</a></div>
+  </div>
 </section>
 
-<section class="eq-section" id="catalog">
+<section class="ib-section" id="catalog">
 <div class="wrap">
 <h2 class="eq-h2">Что входит в поставку</h2>
-<p class="eq-lede">Каждый модуль можно подобрать отдельно или собрать в комплект под станок, деталь, операцию и требования к точности.</p>
-
-<div class="tf-row" role="tablist" aria-label="Категории оснастки">
-<button class="tf-btn on" type="button" data-tp-tab="part-clamp">Зажим детали</button>
-<button class="tf-btn" type="button" data-tp-tab="tool-holding">Оснастка инструмента</button>
-<button class="tf-btn" type="button" data-tp-tab="turning-tooling">Токарные станки</button>
-<button class="tf-btn" type="button" data-tp-tab="axis-tooling">4-я и 5-я ось</button>
-<button class="tf-btn" type="button" data-tp-tab="special-tooling">Специальная оснастка</button>
-</div>
-
-<div class="tp-panel">
-<div class="tp-media"><img id="tpImg" src="tooling-assets/machine-vise.jpeg" alt="Зажимная оснастка и машинные тиски"/></div>
-<div class="tp-body">
-<small id="tpKicker">Зажим детали</small>
-<h3 id="tpTitle">Зажим детали</h3>
-<p id="tpText">Решения для надёжной фиксации заготовки, сохранения базы и повторяемости при единичной, мелкосерийной и серийной обработке.</p>
-<div class="tp-tags" id="tpTags"></div>
-</div>
+<p class="eq-lede">Каждый модуль подбираем отдельно или собираем в комплект под станок, деталь и требования к точности.</p>
+<div class="ib-kits">
+  <div class="ib-kit"><img src="tooling-assets/machine-vise.jpeg" alt="Зажим детали" loading="lazy"/><div class="ib-kit-body"><h3>Зажим детали</h3><p>Решения для надёжной фиксации заготовки, сохранения базы и повторяемости при единичной, мелкосерийной и серийной обработке.</p><div class="ib-tags"><span>Токарные патроны</span><span>Цанговые системы</span><span>Гидравлические патроны</span><span>Пневматические патроны</span><span>Машинные тиски</span><span>Делительные столы</span><span>Поворотные столы</span><span>Специальные приспособления</span></div></div></div>
+  <div class="ib-kit"><img src="instrument-assets/tooling-holders.jpg" alt="Оснастка инструмента" loading="lazy"/><div class="ib-kit-body"><h3>Оснастка инструмента</h3><p>Оправки и системы крепления инструмента под жёсткость, биение, вылет, обороты шпинделя и требования к чистоте поверхности.</p><div class="ib-tags"><span>BT-оправки</span><span>HSK-оправки</span><span>Термооправки</span><span>Гидропластовые оправки</span><span>Цанговые патроны ER</span><span>Расточные системы</span><span>Удлинители и переходники</span></div></div></div>
+  <div class="ib-kit"><img src="instrument-assets/tooling-turning.jpg" alt="Оснастка для токарных станков" loading="lazy"/><div class="ib-kit-body"><h3>Оснастка для токарных станков</h3><p>Комплектуем токарную обработку под диаметр, длину детали, прутковую подачу, противошпиндель и требования к биению.</p><div class="ib-tags"><span>Приводной инструмент</span><span>Револьверные блоки</span><span>Люнеты</span><span>Центры</span><span>Кулачки</span><span>Цанги</span><span>Барфидеры</span></div></div></div>
+  <div class="ib-kit"><img src="tooling-assets/five-axis-table.jpeg" alt="Оснастка для 4-й и 5-й оси" loading="lazy"/><div class="ib-kit-body"><h3>Оснастка для 4-й и 5-й оси</h3><p>Решения для сложной геометрии, минимизации переустановов и стабильного доступа инструмента к детали.</p><div class="ib-tags"><span>Поворотные столы</span><span>Наклонно-поворотные столы</span><span>Трёхкулачковые патроны для 4-й оси</span><span>Центры</span><span>Спутники</span></div></div></div>
+  <div class="ib-kit"><img src="instrument-assets/tooling-special.jpg" alt="Специальная оснастка" loading="lazy"/><div class="ib-kit-body"><h3>Специальная оснастка</h3><p>Проектируем и подбираем приспособления под конкретную деталь, маршрут обработки, партию и условия запуска на производстве.</p><div class="ib-tags"><span>Проектирование приспособлений</span><span>Специальные зажимные устройства</span><span>Гидравлические приспособления</span><span>Пневматические приспособления</span><span>Оснастка под конкретную деталь</span></div></div></div>
 </div>
 </div>
 </section>
 
-<section class="eq-section" id="task">
+<section class="ib-section tight" id="task">
 <div class="wrap">
 <h2 class="eq-h2">Не позиция из каталога, а рабочий комплект</h2>
 <p class="eq-lede">Отталкиваемся от детали и операции: что нужно удержать, как базировать, где риски деформации и какая переналадка нужна участку.</p>
@@ -251,53 +212,59 @@ main{padding-bottom:clamp(20px,3vw,32px)}
 </div>
 </section>
 
-
-<!-- prod-deep:start -->
-<section class="eq-section">
+<section class="ib-section tight" id="runout">
 <div class="wrap">
-<h2 class="eq-h2">Патроны и оправки: чем отличаются</h2>
-<p class="eq-lede">Биение оснастки напрямую забирает стойкость инструмента — кромки нагружаются неравномерно.</p>
-<div class="op-table-wrap"><table class="op-table"><thead><tr><th>Тип</th><th>Типичное биение</th><th>Когда применять</th></tr></thead><tbody><tr><td>Цанговый ER</td><td>5–15 мкм</td><td>Универсальный вариант: черновая и получистовая, быстрая смена инструмента</td></tr><tr><td>Цанговый прецизионный</td><td>3–5 мкм</td><td>Чистовые операции, где важна шероховатость и размер</td></tr><tr><td>Гидропластовый</td><td>до 3 мкм</td><td>Чистовое фрезерование, развёртывание — хорошо гасит вибрацию</td></tr><tr><td>Термозажимной</td><td>до 3 мкм</td><td>Высокие обороты, глубокие карманы, пятиосевая обработка</td></tr><tr><td>Силовой фрезерный, Weldon</td><td>10–20 мкм</td><td>Тяжёлая черновая: держит момент, не даёт провернуть инструмент</td></tr><tr><td>Патрон для насадных фрез</td><td>—</td><td>Торцевое фрезерование плоскостей</td></tr><tr><td>Резьбонарезной с компенсацией</td><td>—</td><td>Метчик на станке без синхронизации шпинделя с подачей</td></tr></tbody></table></div><p class="pg-note">Значения — ориентиры для типовых исполнений. Рабочие цифры по конкретной позиции берутся из каталога производителя, окончательные — после проверки на вашем станке.</p>
+<h2 class="eq-h2">Биение патронов и оправок</h2>
+<p class="eq-lede">Биение забирает стойкость инструмента: кромки нагружаются неравномерно. Чем точнее операция, тем меньше биения допустимо.</p>
+<div class="ib-split"><div class="ib-split-media"><img src="instrument-assets/tooling-cutaway.jpg" alt="Разрез гидропластового патрона с закреплённой фрезой" loading="lazy"/></div>
+<div class="ib-runout" role="img" aria-label="Типичное биение, мкм: прецизионный цанговый 3–5, гидропластовый до 3, термозажимной до 3, цанговый ER 5–15, силовой и Weldon 10–20">
+<div class="ib-run-row"><b>Цанговый прецизионный<small>чистовые операции</small></b><div class="ib-run-track"><i style="left:15.0%;right:75.0%"></i></div><div class="ib-run-val">3–5 мкм</div></div>
+<div class="ib-run-row"><b>Гидропластовый<small>чистовое фрезерование, развёртывание</small></b><div class="ib-run-track"><i style="left:0.0%;right:85.0%"></i></div><div class="ib-run-val">до 3 мкм</div></div>
+<div class="ib-run-row"><b>Термозажимной<small>высокие обороты, глубокие карманы</small></b><div class="ib-run-track"><i style="left:0.0%;right:85.0%"></i></div><div class="ib-run-val">до 3 мкм</div></div>
+<div class="ib-run-row"><b>Цанговый ER<small>черновая и получистовая</small></b><div class="ib-run-track"><i style="left:25.0%;right:25.0%"></i></div><div class="ib-run-val">5–15 мкм</div></div>
+<div class="ib-run-row"><b>Силовой фрезерный, Weldon<small>тяжёлая черновая</small></b><div class="ib-run-track"><i style="left:50.0%;right:0.0%"></i></div><div class="ib-run-val">10–20 мкм</div></div>
+<div class="ib-run-axis"><span></span><span><i>0</i><i>5</i><i>10</i><i>15</i><i>20 мкм</i></span><span></span></div>
+<p class="ib-note" style="margin:0">Патрон для насадных фрез — для торцевого фрезерования; резьбонарезной патрон с компенсацией — для метчика без синхронизации шпинделя с подачей. Значения — ориентиры для типовых исполнений; рабочие цифры — по каталогу производителя.</p>
+</div></div>
 </div>
 </section>
 
-<section class="eq-section">
+<section class="ib-section tight" id="interfaces">
 <div class="wrap">
 <h2 class="eq-h2">Интерфейсы станка</h2>
-<div class="op-table-wrap"><table class="op-table"><thead><tr><th>Интерфейс</th><th>Где встречается</th></tr></thead><tbody><tr><td>BT (MAS 403)</td><td>Фрезерные обрабатывающие центры азиатского производства</td></tr><tr><td>SK (DIN 69871)</td><td>Фрезерные центры европейского производства</td></tr><tr><td>HSK</td><td>Высокие обороты и пятиосевая обработка — контакт по конусу и по торцу</td></tr><tr><td>Capto</td><td>Модульные системы, токарно-фрезерные центры</td></tr><tr><td>VDI (DIN 69880)</td><td>Токарные станки с револьверной головкой VDI</td></tr><tr><td>BMT</td><td>Токарные центры с приводным инструментом</td></tr><tr><td>Конус Морзе</td><td>Сверлильные и универсальные станки</td></tr></tbody></table></div>
+<p class="eq-lede">Интерфейс задан шпинделем или револьверной головкой. Оснастку подбираем под него.</p>
+<div class="ib-ifaces">
+  <div class="ib-iface"><svg viewBox="0 0 120 96" aria-hidden="true"><path d="M6 44h12v8H6z"/><path class="f" d="M18 38 66 31v34l-48-7z"/><path class="f" d="M66 22h18v52H66z"/><path d="M71 22v52M79 22v52"/><path class="f" d="M84 34h28v28H84z"/></svg><b>BT</b><small>MAS 403</small><p>Фрезерные обрабатывающие центры азиатского производства. Есть двухконтактное исполнение BBT — контакт по конусу и торцу.</p></div>
+  <div class="ib-iface"><svg viewBox="0 0 120 96" aria-hidden="true"><path d="M6 45h12v6H6z"/><path class="f" d="M18 38 66 31v34l-48-7z"/><path class="f" d="M66 24h20v48H66z"/><path d="M76 24v48"/><path class="f" d="M86 34h26v28H86z"/></svg><b>SK</b><small>DIN 69871</small><p>Фрезерные центры европейского производства.</p></div>
+  <div class="ib-iface"><svg viewBox="0 0 120 96" aria-hidden="true"><path class="f" d="M24 36 52 32v32l-28-4z"/><path d="M28 42h22M28 54h22"/><path class="f" d="M52 20h14v56H52z"/><path class="f" d="M66 34h46v28H66z"/></svg><b>HSK</b><small>&nbsp;</small><p>Высокие обороты и пятиосевая обработка — контакт по конусу и по торцу.</p></div>
+  <div class="ib-iface"><svg viewBox="0 0 120 96" aria-hidden="true"><path class="f" d="M20 34 58 29v38l-38-5z"/><path d="M20 48h38"/><path class="f" d="M58 22h14v52H58z"/><path class="f" d="M72 34h40v28H72z"/></svg><b>Capto</b><small>&nbsp;</small><p>Модульные системы, токарно-фрезерные центры.</p></div>
+  <div class="ib-iface"><svg viewBox="0 0 120 96" aria-hidden="true"><path class="f" d="M10 38h50v20H10z"/><path d="M14 58v5M20 58v5M26 58v5M32 58v5M38 58v5M44 58v5M50 58v5"/><path class="f" d="M60 20h48v56H60z"/><circle cx="84" cy="48" r="9"/></svg><b>VDI</b><small>DIN 69880</small><p>Токарные станки с револьверной головкой VDI.</p></div>
+  <div class="ib-iface"><svg viewBox="0 0 120 96" aria-hidden="true"><path class="f" d="M18 14h12v68H18z"/><circle cx="24" cy="24" r="3"/><circle cx="24" cy="72" r="3"/><path class="f" d="M30 26h56v44H30z"/><path class="f" d="M86 38h26v20H86z"/></svg><b>BMT</b><small>&nbsp;</small><p>Токарные центры с приводным инструментом.</p></div>
+  <div class="ib-iface"><svg viewBox="0 0 120 96" aria-hidden="true"><path d="M4 45h10v6H4z"/><path class="f" d="M14 42 76 36v24l-62-6z"/><path class="f" d="M76 30h36v36H76z"/></svg><b>Конус Морзе</b><small>&nbsp;</small><p>Сверлильные и универсальные станки.</p></div>
+</div>
 </div>
 </section>
 
-<section class="eq-section">
-<div class="wrap">
-<h2 class="eq-h2">Зажим и базирование детали</h2>
-<div class="pg-cards"><div><h3>Станочные тиски</h3><p>Основной вариант для корпусных деталей: важны усилие, повторяемость и отсутствие подъёма губок под нагрузкой.</p></div><div><h3>Системы нулевой точки</h3><p>Повторная установка приспособления без выверки. Окупаются тактом переналадки, а не ценой комплекта.</p></div><div><h3>Токарные патроны и кулачки</h3><p>Мягкие кулачки растачиваются под конкретную деталь — это даёт соосность и сохраняет поверхность.</p></div><div><h3>Люнеты и центры</h3><p>Длинномерные валы: без поддержки деталь уводит, и вибрацию потом ищут в инструменте.</p></div><div><h3>Магнитные и вакуумные столы</h3><p>Тонкие и плоские детали, которые нельзя зажать с торца без деформации.</p></div><div><h3>Специальные приспособления</h3><p>Проектируются под деталь, маршрут и партию — когда каталожный зажим не даёт ни доступа, ни жёсткости.</p></div></div>
+<section class="ib-section tight" id="mistakes">
+<div class="wrap ib-two">
+<div><h2 class="eq-h2">Типовые ошибки</h2><p class="eq-lede">Причину брака часто ищут в инструменте и режимах, а она в установе.</p></div>
+<div class="ib-acc">
+<details><summary>Дорогая фреза в изношенном цанговом патроне</summary><p>Стойкость теряется на биении — инструмент не отрабатывает свою цену</p></details>
+<details><summary>Цанга не под точный диаметр хвостовика</summary><p>Падает усилие зажима, инструмент проворачивается или вырывается</p></details>
+<details><summary>Вылет больше необходимого</summary><p>Вибрация, ограничение по глубине и подаче, следы на поверхности</p></details>
+<details><summary>Перетянутая гайка цанги</summary><p>Деформация цанги и рост биения вместо его уменьшения</p></details>
+<details><summary>Биение при сборке не контролируют</summary><p>Причину брака ищут в инструменте и режимах, а она в установе</p></details>
+<details><summary>Переналадку выверяют индикатором каждый раз</summary><p>Время переналадки умножается на число партий за год</p></details>
+</div>
 </div>
 </section>
 
-<section class="eq-section">
-<div class="wrap">
-<h2 class="eq-h2">Типовые ошибки</h2>
-<div class="op-table-wrap"><table class="op-table"><thead><tr><th>Ошибка</th><th>Чем оборачивается</th></tr></thead><tbody><tr><td>Дорогая фреза в изношенном цанговом патроне</td><td>Стойкость теряется на биении — инструмент не отрабатывает свою цену</td></tr><tr><td>Цанга не под точный диаметр хвостовика</td><td>Падает усилие зажима, инструмент проворачивается или вырывается</td></tr><tr><td>Вылет больше необходимого</td><td>Вибрация, ограничение по глубине и подаче, следы на поверхности</td></tr><tr><td>Перетянутая гайка цанги</td><td>Деформация цанги и рост биения вместо его уменьшения</td></tr><tr><td>Биение при сборке не контролируют</td><td>Причину брака ищут в инструменте и режимах, а она в установе</td></tr><tr><td>Переналадку выверяют индикатором каждый раз</td><td>Время переналадки умножается на число партий за год</td></tr></tbody></table></div>
-</div>
-</section>
-
-<section class="eq-section">
-<div class="wrap">
-<h2 class="eq-h2">Куда дальше</h2>
-<div class="op-links"><a href="instrument-tochenie.html"><b>Точение</b><span>Инструмент, режимы, типовые проблемы</span></a><a href="instrument-frezerovanie.html"><b>Фрезерование</b><span>Инструмент, режимы, типовые проблемы</span></a><a href="instrument-sverlenie.html"><b>Сверление</b><span>Инструмент, режимы, типовые проблемы</span></a><a href="instrument-rezba.html"><b>Резьбообработка</b><span>Инструмент, режимы, типовые проблемы</span></a><a href="instrument-rastachivanie.html"><b>Растачивание</b><span>Инструмент, режимы, типовые проблемы</span></a><a href="production-calculators.html"><b>Калькуляторы режимов</b><span>Обороты, подача, мощность, стоимость детали</span></a></div>
-</div>
-</section>
-<!-- prod-deep:end -->
-<section class="eq-section" id="faq">
-<div class="wrap">
+<section class="ib-section tight" id="faq">
+<div class="wrap ib-faq">
 <h2 class="eq-h2">Частые вопросы</h2>
 <div class="faq-list">
 <div class="faqi"><button class="faqq" onclick="toggleFaq(this)">Можно ли подобрать оснастку без покупки станка?<span class="ic">+</span></button><div class="faqa"><p>Да, оснастку можно заказать отдельно под уже имеющийся станок и деталь.</p></div></div>
-<div class="faqi"><button class="faqq" onclick="toggleFaq(this)">Проектируете оснастку под нестандартную деталь?<span class="ic">+</span></button><div class="faqa"><p>Да, специальную оснастку проектируем и изготавливаем под конкретную деталь, маршрут обработки и партию.</p></div></div>
-<div class="faqi"><button class="faqq" onclick="toggleFaq(this)">Как быстро подобрать оснастку под задачу?<span class="ic">+</span></button><div class="faqa"><p>После получения детали, материала, допусков и партии технолог формирует состав оснастки под станок и операцию.</p></div></div>
 <div class="faqi"><button class="faqq" onclick="toggleFaq(this)">Чем термозажимной патрон отличается от гидропластового?<span class="ic">+</span></button><div class="faqa"><p>Термозажим даёт максимальную жёсткость и минимальный вылет — он хорош на высоких оборотах и в глубоких карманах, но требует термоустановки и подходит только под цилиндрический хвостовик своего диаметра. Гидропластовый зажимает без нагрева, лучше гасит вибрацию и удобнее на чистовых операциях и развёртывании.</p></div></div>
-<div class="faqi"><button class="faqq" onclick="toggleFaq(this)">Нужна ли балансировка оправок?<span class="ic">+</span></button><div class="faqa"><p>Она нужна с ростом оборотов: чем выше обороты, тем сильнее дисбаланс нагружает шпиндель и портит поверхность. Для высокооборотной обработки берут оправки в сбалансированном исполнении и следят за тем, чтобы сборка не нарушала баланс.</p></div></div>
 <div class="faqi"><button class="faqq" onclick="toggleFaq(this)">Можно ли перейти с одного интерфейса на другой на имеющемся станке?<span class="ic">+</span></button><div class="faqa"><p>Интерфейс задан шпинделем станка, поэтому сменить его нельзя. Можно подобрать оснастку под существующий конус или применить модульную систему, где сменной остаётся только рабочая часть.</p></div></div>
 </div>
 </div>
@@ -345,31 +312,7 @@ function submitEqLeadForm(){
 document.getElementById('eqLeadModal').addEventListener('click',function(e){if(e.target.id==='eqLeadModal'){closeEqLeadModal();}});
 document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeEqLeadModal();}});
 
-var tpData={
- 'part-clamp':{kicker:'Зажим детали',title:'Зажим детали',img:'tooling-assets/machine-vise.jpeg',alt:'Зажимная оснастка и машинные тиски',text:'Решения для надёжной фиксации заготовки, сохранения базы и повторяемости при единичной, мелкосерийной и серийной обработке.',tags:['Токарные патроны','Цанговые системы','Гидравлические патроны','Пневматические патроны','Машинные тиски','Делительные столы','Поворотные столы','Специальные приспособления']},
- 'tool-holding':{kicker:'Оснастка инструмента',title:'Оснастка инструмента',img:'tooling-assets/tool-holders.jpeg',alt:'Инструментальные оправки и держатели',text:'Оправки и системы крепления инструмента под жёсткость, биение, вылет, обороты шпинделя и требования к чистоте поверхности.',tags:['BT-оправки','HSK-оправки','Термооправки','Гидравлические оправки','Цанговые патроны ER','Расточные системы','Удлинители и переходники']},
- 'turning-tooling':{kicker:'Токарные станки',title:'Оснастка для токарных станков',img:'tooling-assets/process-clamping.jpeg',alt:'Оснастка для токарного станка',text:'Комплектуем токарную обработку под диаметр, длину детали, прутковую подачу, противошпиндель и требования к биению.',tags:['Приводной инструмент','Револьверные блоки','Люнеты','Центры','Кулачки','Цанги','Барфидеры']},
- 'axis-tooling':{kicker:'4-я и 5-я ось',title:'Оснастка для 4-й и 5-й оси',img:'tooling-assets/five-axis-table.jpeg',alt:'Оснастка для 4-й и 5-й оси',text:'Решения для сложной геометрии, минимизации переустановов и стабильного доступа инструмента к детали.',tags:['Поворотные столы','Наклонно-поворотные столы','Трёхкулачковые патроны для 4-й оси','Центры','Спутники']},
- 'special-tooling':{kicker:'Инженерная экспертиза',title:'Специальная оснастка',img:'tooling-assets/special-fixture.jpeg',alt:'Специальное зажимное приспособление',text:'Проектируем и подбираем приспособления под конкретную деталь, маршрут обработки, партию и условия запуска на производстве.',tags:['Проектирование приспособлений','Специальные зажимные устройства','Гидравлические приспособления','Пневматические приспособления','Оснастка под конкретную деталь']}
-};
-function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
-function renderTp(key){
-  var d=tpData[key];
-  document.getElementById('tpImg').src=d.img;
-  document.getElementById('tpImg').alt=d.alt;
-  document.getElementById('tpKicker').textContent=d.kicker;
-  document.getElementById('tpTitle').textContent=d.title;
-  document.getElementById('tpText').textContent=d.text;
-  document.getElementById('tpTags').innerHTML=d.tags.map(function(t){return '<span class="tp-tag">'+esc(t)+'</span>';}).join('');
-}
-document.addEventListener('click',function(e){
-  var t=e.target.closest('[data-tp-tab]');
-  if(t){
-    document.querySelectorAll('[data-tp-tab]').forEach(function(b){b.classList.toggle('on',b===t)});
-    renderTp(t.dataset.tpTab);
-  }
-});
-renderTp('part-clamp');
+
 </script>
 </body>
 </html>

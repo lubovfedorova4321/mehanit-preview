@@ -12,7 +12,7 @@
 <meta property="og:title" content="Режущий инструмент — пластины, фрезы, свёрла под задачу | Механит"/>
 <meta property="og:description" content="Режущий инструмент для металлообработки: пластины, фрезы, свёрла, резьбовой и специальный инструмент под материал, станок и технологию."/>
 <meta property="og:url" content="https://mehanit.ru/production-cutting-tools.html"/>
-<meta property="og:image" content="https://mehanit.ru/module-banners/cutting-tools.jpeg"/>
+<meta property="og:image" content="https://mehanit.ru/instrument-assets/cutting-hero.jpg"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <script type="application/ld+json">
@@ -142,6 +142,7 @@ main{padding-bottom:clamp(20px,3vw,32px)}
 </style>
 <link rel="stylesheet" href="site-shell.css"/>
 <link rel="stylesheet" href="industry-solutions.css"/>
+<link rel="stylesheet" href="instrument-block.css"/>
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -165,14 +166,6 @@ main{padding-bottom:clamp(20px,3vw,32px)}
   },
   {
    "@type": "Question",
-   "name": "Можно ли получить рекомендации по режимам резания?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "Да, вместе с подбором инструмента даём рекомендации по скорости резания, подаче и глубине под материал и оборудование."
-   }
-  },
-  {
-   "@type": "Question",
    "name": "Чем отличается инструмент под серию от инструмента под единичную деталь?",
    "acceptedAnswer": {
     "@type": "Answer",
@@ -186,14 +179,6 @@ main{padding-bottom:clamp(20px,3vw,32px)}
     "@type": "Answer",
     "text": "Да. Для этого нужны обозначение старой позиции, материал детали, станок и режимы, на которых она работала. Подбираем аналог по геометрии, сплаву и посадочным размерам и проверяем на пробной детали."
    }
-  },
-  {
-   "@type": "Question",
-   "name": "Как понять, что инструмент выбран правильно?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "По характеру износа и по стоимости обработки детали. Нормальный износ — равномерный по задней поверхности, а не скол, не выкрашивание и не лунка. Считать стоимость детали можно в наших калькуляторах."
-   }
   }
  ]
 }
@@ -202,103 +187,107 @@ main{padding-bottom:clamp(20px,3vw,32px)}
 <body>
 <header></header>
 <main>
-<nav class="ind-crumbs" aria-label="Хлебные крошки"><div class="wrap"><ol>
-  <li><a href="index.html">Главная</a></li>
-  <li><a href="production-equipment.html">Инструмент и оснастка</a></li>
-  <li aria-current="page">Режущий инструмент</li>
-</ol></div></nav>
+<section class="ib-hero">
+  <div class="ib-hero-media"><img src="instrument-assets/cutting-hero-wide.jpg" alt="Торцевая фреза со сменными пластинами фрезерует плоскость" fetchpriority="high"/></div>
+  <div class="wrap ib-hero-inner">
+    <nav class="ind-crumbs" aria-label="Хлебные крошки"><div class="wrap"><ol><li><a href="index.html">Главная</a></li><li><a href="production-equipment.html">Инструмент и оснастка</a></li><li aria-current="page">Режущий инструмент</li></ol></div></nav>
+    <h1>Режущий инструмент для металлообработки</h1>
+    <p class="ib-sub">Пластины, фрезы, свёрла, резьбовой и специальный инструмент — под материал, станок и стабильность серии.</p>
+    <div class="ib-actions"><button type="button" class="btn btn-ce" onclick="openEqLeadModal()">Обсудить задачу с технологом</button><a class="ib-textlink" href="#brands">17 брендов</a></div>
+  </div>
+</section>
 
-<section class="sol-hero">
+<section class="ib-section" id="brands">
 <div class="wrap">
-<div class="eq-hero-top">
-  <h1 class="sol-title"><span class="title-row"><span class="title-dash"></span><span class="title-text">Режущий инструмент для металлообработки</span></span></h1>
-  <p class="sol-intro">Пластины, фрезы, свёрла, резьбовой и специальный инструмент под материал, станок, ЧПУ, допуски и стабильность серии.</p>
+<div class="ib-head"><div><h2 class="eq-h2">Бренды по видам обработки</h2><p class="eq-lede">17 брендов инструмента и оснастки. Выберите операцию — останутся бренды, которые её закрывают.</p></div></div>
+<div class="ib-filter" role="group" aria-label="Фильтр по операции"><button type="button" data-f="all" aria-pressed="true">Все бренды</button><button type="button" data-f="turning" aria-pressed="false">Точение</button><button type="button" data-f="milling" aria-pressed="false">Фрезерование</button><button type="button" data-f="drilling" aria-pressed="false">Сверление</button><button type="button" data-f="threading" aria-pressed="false">Резьбообработка</button><button type="button" data-f="boring" aria-pressed="false">Расточные системы</button><button type="button" data-f="special" aria-pressed="false">Специальный инструмент</button></div>
+<ul class="ib-logos">
+  <li data-dir="turning milling drilling threading boring special"><a href="brand-macro-tools.html"><img src="tool-logos/macro-tools.png" alt="MACRO TOOLS" loading="lazy"/><span>Собственная марка Механита: подбор под деталь</span></a></li>
+  <li data-dir="turning milling drilling"><a href="brand-derek.html"><img src="tool-logos/derek.png" alt="Derek" loading="lazy"/><span>Инструментальная оснастка и режущий инструмент</span></a></li>
+  <li data-dir="turning milling drilling"><a href="brand-brice.html"><img src="tool-logos/brice.png" alt="Brice" loading="lazy"/><span>Российский твердосплавный инструмент и оснастка</span></a></li>
+  <li data-dir="turning milling boring special"><a href="brand-palbit.html"><img src="tool-logos/palbit.png" alt="Palbit" loading="lazy"/><span>Твердосплавный инструмент и пластины</span></a></li>
+  <li data-dir="turning threading special"><a href="brand-vargus.html"><img src="tool-logos/vargus.png" alt="Vargus" loading="lazy"/><span>Резьба, канавки и отрезка</span></a></li>
+  <li data-dir="turning milling"><a href="brand-likon.html"><img src="tool-logos/likon.png" alt="Likon" loading="lazy"/><span>Инструмент и оснастка российской марки</span></a></li>
+  <li data-dir="threading drilling"><a href="brand-vergnano.html"><img src="tool-logos/vergnano.png" alt="Vergnano" loading="lazy"/><span>Метчики, резьбовые фрезы, протяжной инструмент</span></a></li>
+  <li data-dir="turning milling special"><a href="brand-nanoloy.html"><img src="tool-logos/nanoloy.png" alt="Nanoloy" loading="lazy"/><span>Пластины и фрезы для сложных материалов</span></a></li>
+  <li data-dir="milling"><a href="brand-fresal.html"><img src="tool-logos/fresal.png" alt="Fresal" loading="lazy"/><span>Монолитные фрезы, свёрла и развёртки</span></a></li>
+  <li data-dir="milling drilling"><a href="brand-helion.html"><img src="tool-logos/helion.png" alt="Helion" loading="lazy"/><span>Фрезы, свёрла и резьбовой инструмент</span></a></li>
+  <li data-dir="drilling threading"><a href="brand-ilix.html"><img src="tool-logos/ilix.png" alt="ILIX" loading="lazy"/><span>Свёрла, развёртки, зенкеры и метчики</span></a></li>
+  <li data-dir="drilling boring special"><a href="brand-telcon.html"><img src="tool-logos/telcon.png" alt="Telcon" loading="lazy"/><span>Алмазный инструмент PCD</span></a></li>
+  <li data-dir="drilling milling special"><a href="brand-gabriel-mauvais.html"><img src="tool-logos/gabriel-mauvais.png" alt="Gabriel Mauvais" loading="lazy"/><span>Микросвёрла для миниатюрных деталей</span></a></li>
+  <li data-dir="boring special"><a href="brand-annway.html"><img src="tool-logos/annway.png" alt="Ann Way" loading="lazy"/><span>Инструментальная оснастка и расточные системы</span></a></li>
+  <li data-dir="turning milling"><a href="brand-omap.html"><img src="tool-logos/omap.png" alt="OMAP" loading="lazy"/><span>Приводные блоки и угловые головки</span></a></li>
+  <li data-dir="turning boring special"><a href="brand-sauter.html"><img src="tool-logos/sauter.png" alt="Sauter" loading="lazy"/><span>Револьверные головки и приводные блоки</span></a></li>
+  <li data-dir="turning special"><a href="brand-ami-hanei.html"><img src="tool-logos/ami-hanei.png" alt="AMI-Han’ei" loading="lazy"/><span>Цанги и направляющие втулки</span></a></li>
+</ul>
+</div>
+</section>
+
+<section class="ib-section tight" id="iso">
+<div class="wrap">
+<div class="ib-head"><div><h2 class="eq-h2">Группы материалов ISO</h2><p class="eq-lede">С группы начинается подбор: она задаёт геометрию, сплав и покрытие раньше, чем бренд.</p></div><a class="ib-more" href="obrabotka-materialov-iso.html">Все группы подробно →</a></div>
+<div class="ib-isocards">
+  <a class="ib-isocard" href="obrabotka-materialov-iso.html#p"><img src="instrument-assets/iso-p-steel.jpg" alt="Образец: Стали углеродистые, конструкционные, легированные" loading="lazy"/><span class="ib-isocard-body"><span class="ib-isocard-top"><b class="iso-p">P</b><span>Стали</span></span><p>Длинная сливная стружка — нужен работающий стружколом и стойкость к лунке износа</p></span></a>
+  <a class="ib-isocard" href="obrabotka-materialov-iso.html#m"><img src="instrument-assets/iso-m-stainless.jpg" alt="Образец: Нержавеющие и жаропрочные аустенитные стали" loading="lazy"/><span class="ib-isocard-body"><span class="ib-isocard-top"><b class="iso-m">M</b><span>Нержавеющие</span></span><p>Наклёп и налипание — острая геометрия и подача без выхаживания на месте</p></span></a>
+  <a class="ib-isocard" href="obrabotka-materialov-iso.html#k"><img src="instrument-assets/iso-k-cast-iron.jpg" alt="Образец: Серый и высокопрочный чугун" loading="lazy"/><span class="ib-isocard-body"><span class="ib-isocard-top"><b class="iso-k">K</b><span>Чугун</span></span><p>Стружка надлома, абразивный износ — прочная кромка и теплостойкое покрытие</p></span></a>
+  <a class="ib-isocard" href="obrabotka-materialov-iso.html#n"><img src="instrument-assets/iso-n-aluminium.jpg" alt="Образец: Алюминиевые и медные сплавы, пластики" loading="lazy"/><span class="ib-isocard-body"><span class="ib-isocard-top"><b class="iso-n">N</b><span>Цветные</span></span><p>Налипание — полированные канавки, большой передний угол, иногда алмазный инструмент</p></span></a>
+  <a class="ib-isocard" href="obrabotka-materialov-iso.html#s"><img src="instrument-assets/iso-s-titanium.jpg" alt="Образец: Титановые и никелевые жаропрочные сплавы" loading="lazy"/><span class="ib-isocard-body"><span class="ib-isocard-top"><b class="iso-s">S</b><span>Жаропрочные</span></span><p>Низкая теплопроводность — пониженная скорость и обильная подача СОЖ в зону</p></span></a>
+  <a class="ib-isocard" href="obrabotka-materialov-iso.html#h"><img src="instrument-assets/iso-h-hardened.jpg" alt="Образец: Закалённые стали 45–65 HRC" loading="lazy"/><span class="ib-isocard-body"><span class="ib-isocard-top"><b class="iso-h">H</b><span>Закалённые</span></span><p>Только прочная кромка: твёрдый сплав с фаской, CBN или керамика</p></span></a>
 </div>
 </div>
 </section>
 
-<section class="eq-section" id="catalog">
-<div class="wrap">
-<h2 class="eq-h2">Бренды и направления</h2>
-<p class="eq-lede">17 брендов режущего инструмента. Выберите направление обработки — список брендов и описание отфильтруются под задачу.</p>
-
-<div class="tool-strip"><div class="tool-track">
-<img src="tool-cut-01.png" alt=""/><img src="tool-cut-02.png" alt=""/><img src="tool-cut-03.png" alt=""/><img src="tool-cut-04.png" alt=""/><img src="tool-cut-05.png" alt=""/><img src="tool-cut-06.png" alt=""/><img src="tool-cut-07.png" alt=""/><img src="tool-cut-08.png" alt=""/><img src="tool-cut-01.png" alt=""/><img src="tool-cut-02.png" alt=""/><img src="tool-cut-03.png" alt=""/><img src="tool-cut-04.png" alt=""/>
-</div></div>
-
-<div class="tf-row" role="tablist" aria-label="Направления обработки">
-<button class="tf-btn on" type="button" data-tool-filter="all">Все бренды</button>
-<button class="tf-btn" type="button" data-tool-filter="turning">Точение</button>
-<button class="tf-btn" type="button" data-tool-filter="milling">Фрезерование</button>
-<button class="tf-btn" type="button" data-tool-filter="drilling">Сверление</button>
-<button class="tf-btn" type="button" data-tool-filter="threading">Резьбообработка</button>
-<button class="tf-btn" type="button" data-tool-filter="boring">Расточные системы</button>
-<button class="tf-btn" type="button" data-tool-filter="special">Специальный инструмент</button>
-</div>
-<p class="tf-caption" id="toolFilterCaption">Вся инструментальная линейка для подбора под задачу.</p>
-
-<div class="tb-grid" id="toolBrandGrid"></div>
-
-<h2 class="eq-h2" style="margin-top:clamp(36px,4vw,56px)">Что получает производство</h2>
-<div class="tb-benefits">
-<div class="tb-benefit"><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><span>Подбор инструмента под конкретную задачу</span></div>
-<div class="tb-benefit"><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><span>Рекомендации по режимам резания</span></div>
-<div class="tb-benefit"><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><span>Снижение затрат на инструмент</span></div>
-<div class="tb-benefit"><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><span>Повышение стойкости и ресурса</span></div>
-<div class="tb-benefit"><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><span>Стабильное качество обработки</span></div>
-<div class="tb-benefit"><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><span>Техническое сопровождение специалистов Механит</span></div>
-</div>
-</div>
-</section>
-
-
-<!-- prod-deep:start -->
-<section class="eq-section">
-<div class="wrap">
-<h2 class="eq-h2">Группы обрабатываемых материалов ISO</h2>
-<p class="eq-lede">С группы начинается подбор: она задаёт геометрию, сплав и покрытие раньше, чем бренд.</p>
-<div class="op-table-wrap"><table class="op-table"><thead><tr><th>Группа</th><th>Материалы</th><th>Что определяет выбор</th></tr></thead><tbody><tr><td>P</td><td>Стали углеродистые, конструкционные, легированные</td><td>Длинная сливная стружка — нужен работающий стружколом и стойкость к лунке износа</td></tr><tr><td>M</td><td>Нержавеющие и жаропрочные аустенитные стали</td><td>Наклёп и налипание — острая геометрия и подача без выхаживания на месте</td></tr><tr><td>K</td><td>Серый и высокопрочный чугун</td><td>Стружка надлома, абразивный износ — прочная кромка и теплостойкое покрытие</td></tr><tr><td>N</td><td>Алюминиевые и медные сплавы, пластики</td><td>Налипание — полированные канавки, большой передний угол, иногда алмазный инструмент</td></tr><tr><td>S</td><td>Титановые и никелевые жаропрочные сплавы</td><td>Низкая теплопроводность — пониженная скорость и обильная подача СОЖ в зону</td></tr><tr><td>H</td><td>Закалённые стали 45–65 HRC</td><td>Только прочная кромка: твёрдый сплав с фаской, CBN или керамика</td></tr></tbody></table></div>
-</div>
-</section>
-
-<section class="eq-section">
-<div class="wrap">
-<h2 class="eq-h2">Из чего складывается выбор инструмента</h2>
-<div class="pg-cards"><div><h3>Материал и его состояние</h3><p>Марка, твёрдость, вид заготовки: прокат, поковка или литьё с коркой. Корка и окалина меняют требования к кромке сильнее, чем сама марка.</p></div><div><h3>Операция и геометрия детали</h3><p>Доступ, вылет, толщина стенки, глубина кармана. Деталь часто ограничивает инструмент жёстче, чем материал.</p></div><div><h3>Станок</h3><p>Мощность и момент на рабочих оборотах, конус шпинделя, максимальные обороты, наличие СОЖ через инструмент, общая жёсткость.</p></div><div><h3>Партия и такт</h3><p>Под единичную деталь и под серию выгоден разный инструмент: в серии окупается дорогая кромка, в единичной — универсальная.</p></div><div><h3>Точность и шероховатость</h3><p>Определяют, где в маршруте чистовой проход и каким инструментом он делается.</p></div><div><h3>Стоимость обработки детали</h3><p>Цена кромки, стойкость и время цикла считаются вместе. Цена позиции сама по себе ничего не говорит.</p></div></div>
-</div>
-</section>
-
-<section class="eq-section">
+<section class="ib-section tight" id="coatings">
 <div class="wrap">
 <h2 class="eq-h2">Покрытия и когда они работают</h2>
-<div class="op-table-wrap"><table class="op-table"><thead><tr><th>Покрытие</th><th>Где применяют</th><th>Ограничение</th></tr></thead><tbody><tr><td>TiN</td><td>Универсальное, стали на умеренных скоростях</td><td>Уступает современным покрытиям по теплостойкости</td></tr><tr><td>TiCN</td><td>Абразивные материалы, сверление, чугун</td><td>Ниже теплостойкость — не для высоких скоростей</td></tr><tr><td>TiAlN / AlTiN</td><td>Стали и нержавеющие на высоких скоростях, сухая обработка и с СОЖ</td><td>Плохо работает по алюминию</td></tr><tr><td>AlCrN</td><td>Высокие температуры в зоне резания, чугун, закалённые стали</td><td>Дороже, избыточно для простых задач</td></tr><tr><td>Без покрытия, полированная канавка</td><td>Алюминиевые и медные сплавы, вязкие цветные металлы</td><td>Не для сталей</td></tr><tr><td>Алмазное: PCD, CVD</td><td>Композиты, графит, цветные металлы</td><td>Не применяют по чёрным металлам — углерод диффундирует в железо</td></tr></tbody></table></div><p class="pg-note">Значения — ориентиры для типовых исполнений. Рабочие цифры по конкретной позиции берутся из каталога производителя, окончательные — после проверки на вашем станке.</p>
+<div class="ib-split wide-table"><div class="ib-split-media"><img src="instrument-assets/cutting-coatings.jpg" alt="Шесть концевых фрез с разными покрытиями" loading="lazy"/></div>
+<div class="ib-modes"><table><thead><tr><th>Покрытие</th><th>Где применяют</th><th>Ограничение</th></tr></thead><tbody>
+<tr><td><span class="ib-swatch" style="background:#d9b44a"></span>TiN</td><td>Универсальное, стали на умеренных скоростях</td><td>Уступает современным покрытиям по теплостойкости</td></tr>
+<tr><td><span class="ib-swatch" style="background:#7d7690"></span>TiCN</td><td>Абразивные материалы, сверление, чугун</td><td>Ниже теплостойкость — не для высоких скоростей</td></tr>
+<tr><td><span class="ib-swatch" style="background:#2f2d38"></span>TiAlN / AlTiN</td><td>Стали и нержавеющие на высоких скоростях, сухая обработка и с СОЖ</td><td>Плохо работает по алюминию</td></tr>
+<tr><td><span class="ib-swatch" style="background:#6f8494"></span>AlCrN</td><td>Высокие температуры в зоне резания, чугун, закалённые стали</td><td>Дороже, избыточно для простых задач</td></tr>
+<tr><td><span class="ib-swatch" style="background:#e9eaec"></span>Без покрытия, полированная канавка</td><td>Алюминиевые и медные сплавы, вязкие цветные металлы</td><td>Не для сталей</td></tr>
+<tr><td><span class="ib-swatch" style="background:#4a4d52"></span>Алмазное: PCD, CVD</td><td>Композиты, графит, цветные металлы</td><td>Не применяют по чёрным металлам — углерод диффундирует в железо</td></tr>
+</tbody></table></div></div>
+<p class="ib-note">Значения — ориентиры для типовых исполнений. Рабочие цифры по конкретной позиции берутся из каталога производителя, окончательные — после проверки на вашем станке.</p>
 </div>
 </section>
 
-<section class="eq-section">
+<section class="ib-section tight" id="by-operation">
 <div class="wrap">
-<h2 class="eq-h2">Типовые ошибки при выборе</h2>
-<div class="op-table-wrap"><table class="op-table"><thead><tr><th>Ошибка</th><th>Чем оборачивается</th></tr></thead><tbody><tr><td>Выбирают по цене позиции, а не по стоимости обработки детали</td><td>Пластина вдвое дешевле при вдвое меньшей стойкости выходит дороже на партии</td></tr><tr><td>Не проверяют мощность станка под выбранный режим</td><td>Просадка оборотов, вибрация, скол кромки вместо нормального износа</td></tr><tr><td>Одна геометрия на черновую и чистовую</td><td>Либо не держит припуск, либо не даёт нужную шероховатость</td></tr><tr><td>Меняют инструмент, не меняя режимы</td><td>Новый инструмент работает на чужих режимах и не показывает свой ресурс</td></tr><tr><td>Не учитывают вылет и жёсткость установа</td><td>Вибрацию списывают на инструмент, хотя причина в оснастке</td></tr><tr><td>Нет учёта стойкости</td><td>Момент замены определяют на глаз, брак обнаруживают по факту</td></tr></tbody></table></div>
+<div class="ib-head"><div><h2 class="eq-h2">Подбор по операции</h2><p class="eq-lede">Стартовые режимы, типовые проблемы и их причины — для каждой операции.</p></div><a class="ib-more" href="production-calculators.html">Калькуляторы режимов →</a></div>
+<div class="ib-ops">
+  <a class="ib-op" href="instrument-tochenie.html"><img src="instrument-assets/op-turning-tile.jpg" alt="Точение на станке с ЧПУ" loading="lazy"/><span class="ib-op-body"><h3>Точение</h3><span>Пластины, державки, стружка</span></span></a>
+  <a class="ib-op" href="instrument-frezerovanie.html"><img src="instrument-assets/op-milling-tile.jpg" alt="Фрезерование на станке с ЧПУ" loading="lazy"/><span class="ib-op-body"><h3>Фрезерование</h3><span>Фрезы, вылет, стратегия</span></span></a>
+  <a class="ib-op" href="instrument-sverlenie.html"><img src="instrument-assets/op-drilling-tile.jpg" alt="Сверление на станке с ЧПУ" loading="lazy"/><span class="ib-op-body"><h3>Сверление</h3><span>Свёрла, глубина, СОЖ</span></span></a>
+  <a class="ib-op" href="instrument-rezba.html"><img src="instrument-assets/op-threading-tile.jpg" alt="Резьбообработка на станке с ЧПУ" loading="lazy"/><span class="ib-op-body"><h3>Резьбообработка</h3><span>Метчик, резьбофреза, пластина</span></span></a>
+  <a class="ib-op" href="instrument-rastachivanie.html"><img src="instrument-assets/op-boring-tile.jpg" alt="Растачивание на станке с ЧПУ" loading="lazy"/><span class="ib-op-body"><h3>Растачивание</h3><span>Борштанги, вылет, вибрации</span></span></a>
+</div>
 </div>
 </section>
 
-<section class="eq-section">
-<div class="wrap">
-<h2 class="eq-h2">Куда дальше</h2>
-<div class="op-links"><a href="instrument-tochenie.html"><b>Точение</b><span>Инструмент, режимы, типовые проблемы</span></a><a href="instrument-frezerovanie.html"><b>Фрезерование</b><span>Инструмент, режимы, типовые проблемы</span></a><a href="instrument-sverlenie.html"><b>Сверление</b><span>Инструмент, режимы, типовые проблемы</span></a><a href="instrument-rezba.html"><b>Резьбообработка</b><span>Инструмент, режимы, типовые проблемы</span></a><a href="instrument-rastachivanie.html"><b>Растачивание</b><span>Инструмент, режимы, типовые проблемы</span></a><a href="production-calculators.html"><b>Калькуляторы режимов</b><span>Обороты, подача, мощность, стоимость детали</span></a><a href="production-equipment.html"><b>Все бренды инструмента</b><span>17 производителей в портфеле</span></a></div>
+<section class="ib-section tight" id="mistakes">
+<div class="wrap ib-two">
+<div><h2 class="eq-h2">Ошибки при выборе инструмента</h2><p class="eq-lede">Шесть решений, которые чаще всего обходятся дороже экономии.</p></div>
+<div class="ib-acc">
+<details><summary>Выбирают по цене позиции, а не по стоимости обработки детали</summary><p>Пластина вдвое дешевле при вдвое меньшей стойкости выходит дороже на партии</p></details>
+<details><summary>Не проверяют мощность станка под выбранный режим</summary><p>Просадка оборотов, вибрация, скол кромки вместо нормального износа</p></details>
+<details><summary>Одна геометрия на черновую и чистовую</summary><p>Либо не держит припуск, либо не даёт нужную шероховатость</p></details>
+<details><summary>Меняют инструмент, не меняя режимы</summary><p>Новый инструмент работает на чужих режимах и не показывает свой ресурс</p></details>
+<details><summary>Не учитывают вылет и жёсткость установа</summary><p>Вибрацию списывают на инструмент, хотя причина в оснастке</p></details>
+<details><summary>Нет учёта стойкости</summary><p>Момент замены определяют на глаз, брак обнаруживают по факту</p></details>
+</div>
 </div>
 </section>
-<!-- prod-deep:end -->
-<section class="eq-section" id="faq">
-<div class="wrap">
+
+<section class="ib-section tight" id="faq">
+<div class="wrap ib-faq">
 <h2 class="eq-h2">Частые вопросы</h2>
 <div class="faq-list">
 <div class="faqi"><button class="faqq" onclick="toggleFaq(this)">Как подобрать инструмент под конкретную деталь?<span class="ic">+</span></button><div class="faqa"><p>Нужны материал заготовки, операция, станок и требования к точности и шероховатости — по ним технолог подберёт пластины, геометрию и режимы резания.</p></div></div>
 <div class="faqi"><button class="faqq" onclick="toggleFaq(this)">Поставляете специальный инструмент под нестандартную деталь?<span class="ic">+</span></button><div class="faqa"><p>Да, специальный инструмент разрабатывается и поставляется под конкретную деталь или технологическую операцию.</p></div></div>
-<div class="faqi"><button class="faqq" onclick="toggleFaq(this)">Можно ли получить рекомендации по режимам резания?<span class="ic">+</span></button><div class="faqa"><p>Да, вместе с подбором инструмента даём рекомендации по скорости резания, подаче и глубине под материал и оборудование.</p></div></div>
 <div class="faqi"><button class="faqq" onclick="toggleFaq(this)">Чем отличается инструмент под серию от инструмента под единичную деталь?<span class="ic">+</span></button><div class="faqa"><p>В серии считается стоимость обработки детали: там окупается дорогая кромка с большей стойкостью и специальный инструмент, который закрывает несколько переходов сразу. На единичной детали выгоднее универсальный инструмент со склада — он не должен окупаться, он должен быть завтра.</p></div></div>
 <div class="faqi"><button class="faqq" onclick="toggleFaq(this)">Можно ли подобрать аналог инструмента, которого больше нет в поставке?<span class="ic">+</span></button><div class="faqa"><p>Да. Для этого нужны обозначение старой позиции, материал детали, станок и режимы, на которых она работала. Подбираем аналог по геометрии, сплаву и посадочным размерам и проверяем на пробной детали.</p></div></div>
-<div class="faqi"><button class="faqq" onclick="toggleFaq(this)">Как понять, что инструмент выбран правильно?<span class="ic">+</span></button><div class="faqa"><p>По характеру износа и по стоимости обработки детали. Нормальный износ — равномерный по задней поверхности, а не скол, не выкрашивание и не лунка. Считать стоимость детали можно в наших калькуляторах.</p></div></div>
 </div>
 </div>
 </section>
@@ -345,59 +334,16 @@ function submitEqLeadForm(){
 document.getElementById('eqLeadModal').addEventListener('click',function(e){if(e.target.id==='eqLeadModal'){closeEqLeadModal();}});
 document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeEqLeadModal();}});
 
-var toolLogos={'MACRO TOOLS':'tool-logos/macro-tools.png',Derek:'tool-logos/derek.png',Brice:'tool-logos/brice.png',Palbit:'tool-logos/palbit.png',Vargus:'tool-logos/vargus.png',Likon:'tool-logos/likon.png',Vergnano:'tool-logos/vergnano.png',Nanoloy:'tool-logos/nanoloy.png',Fresal:'tool-logos/fresal.png',Helion:'tool-logos/helion.png',ILIX:'tool-logos/ilix.png',Telcon:'tool-logos/telcon.png','Gabriel Mauvais':'tool-logos/gabriel-mauvais.png','Ann Way':'tool-logos/annway.png',OMAP:'tool-logos/omap.png',Sauter:'tool-logos/sauter.png','AMI-Hanei':'tool-logos/ami-hanei.png'};
-var toolBrandLinks={'MACRO TOOLS':'brand-macro-tools.html','Derek':'brand-derek.html','Palbit':'brand-palbit.html','Vargus':'brand-vargus.html','Likon':'brand-likon.html','Vergnano':'brand-vergnano.html','Nanoloy':'brand-nanoloy.html','Telcon':'brand-telcon.html','OMAP':'brand-omap.html','ILIX':'brand-ilix.html','Fresal':'brand-fresal.html','Helion':'brand-helion.html','Sauter':'brand-sauter.html','AMI-Han’ei':'brand-ami-hanei.html','Brice':'brand-brice.html','Ann Way':'brand-annway.html','Gabriel Mauvais':'brand-gabriel-mauvais.html','AMI-Hanei':'brand-ami-hanei.html'};
-var toolBrands=[
- ['MACRO TOOLS','turning milling drilling threading boring special','Ключевая инструментальная программа Механит: подбор номенклатуры, режимов и оснастки под конкретную деталь.'],
- ['Derek','turning milling drilling','Инструмент для серийных токарных, фрезерных и отверстийных операций на станках с ЧПУ.'],
- ['Brice','turning milling drilling','Металлорежущий инструмент и оснастка производства РФ.'],
- ['Palbit','turning milling boring special','Решения для сталей, нержавеющих и труднообрабатываемых материалов.'],
- ['Vargus','turning threading special','Резьбообработка, канавочные операции и точение, где важна стабильность профиля.'],
- ['Likon','turning milling','Токарный, фрезерный и измерительный инструмент, оправки и блоки.'],
- ['Vergnano','threading drilling','Резьбообразующий, резьбонарезной и отверстийный инструмент.'],
- ['Nanoloy','turning milling special','Твердосплавный инструмент и пластины для серийного производства.'],
- ['Fresal','milling','Фрезерный инструмент для черновой и чистовой обработки.'],
- ['Helion','milling drilling','Инструментальные решения для участков с несколькими операциями.'],
- ['ILIX','drilling threading','Сверление, зенкерование, развёртывание и точные отверстия.'],
- ['Telcon','drilling boring special','Специальный инструмент и решения для сложных материалов.'],
- ['Gabriel Mauvais','drilling milling special','Микроинструмент: свёрла и фрезы для миниатюрных деталей.'],
- ['Ann Way','boring special','Инструментальная оснастка и расточные решения для повышения жёсткости и точности.'],
- ['OMAP','turning milling','Инструментальная оснастка для фрезерных и токарных станков.'],
- ['Sauter','turning boring special','Револьверные головки, приводной инструмент и решения для токарных центров.'],
- ['AMI-Hanei','turning special','Цанги шпинделя, люнетные и барфидерные патроны.']
-];
-var toolFilterCaptions={
-  all:'Вся инструментальная линейка для подбора под задачу.',
-  turning:'Токарные державки, пластины, канавочный и отрезной инструмент для наружной и внутренней обработки.',
-  milling:'Концевые, торцевые и дисковые фрезы для обработки стали, нержавеющих сплавов, чугуна и цветных металлов.',
-  drilling:'Свёрла со сменными пластинами и цельные твердосплавные решения для высокопроизводительной обработки отверстий.',
-  threading:'Метчики, резьбовые фрезы и инструмент для формирования внутренней и наружной резьбы.',
-  boring:'Инструмент для чернового и чистового растачивания с высокой точностью позиционирования.',
-  special:'Разработка и поставка инструмента под конкретную деталь или технологическую операцию.'
-};
-function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
-function renderTools(filter){
-  var grid=document.getElementById('toolBrandGrid');
-  grid.innerHTML=toolBrands.map(function(b){
-    var hidden=filter&&filter!=='all'&&!b[1].split(' ').includes(filter);
-    var logo=toolLogos[b[0]]?'<img src="'+toolLogos[b[0]]+'" alt="'+esc(b[0])+'">':'<span class="wordmark">'+esc(b[0])+'</span>';
-    var href=toolBrandLinks[b[0]];
-    var body='<div class="tb-logo">'+logo+'</div><p>'+esc(b[2])+'</p>'+(href?'<span class="tb-more">Страница бренда →</span>':'');
-    return href
-      ? '<a class="tb-card '+(hidden?'is-hidden':'')+'" href="'+href+'">'+body+'</a>'
-      : '<div class="tb-card '+(hidden?'is-hidden':'')+'">'+body+'</div>';
-  }).join('');
-}
-document.addEventListener('click',function(e){
-  var f=e.target.closest('[data-tool-filter]');
-  if(f){
-    document.querySelectorAll('[data-tool-filter]').forEach(function(b){b.classList.toggle('on',b===f)});
-    renderTools(f.dataset.toolFilter);
-    document.getElementById('toolFilterCaption').textContent=toolFilterCaptions[f.dataset.toolFilter]||'';
-    return;
-  }
-});
-renderTools('all');
+
+</script>
+<script>
+(function(){
+  var fb=[].slice.call(document.querySelectorAll('.ib-filter button')),items=[].slice.call(document.querySelectorAll('.ib-logos li[data-dir]'));
+  fb.forEach(function(b){b.addEventListener('click',function(){var f=b.dataset.f;fb.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});items.forEach(function(li){li.hidden=!(f==='all'||li.dataset.dir.split(' ').indexOf(f)>-1)});});});
+  var tabs=[].slice.call(document.querySelectorAll('.ib-sym-tab'));
+  function sel(t){tabs.forEach(function(x){var on=x===t;x.setAttribute('aria-selected',on?'true':'false');x.tabIndex=on?0:-1;document.getElementById(x.getAttribute('aria-controls')).hidden=!on;});}
+  tabs.forEach(function(t,i){t.addEventListener('click',function(){sel(t)});t.addEventListener('keydown',function(e){var k=e.key==='ArrowDown'||e.key==='ArrowRight'?1:e.key==='ArrowUp'||e.key==='ArrowLeft'?-1:0;if(k){e.preventDefault();var n=tabs[(i+k+tabs.length)%tabs.length];n.focus();sel(n);}});});
+})();
 </script>
 </body>
 </html>

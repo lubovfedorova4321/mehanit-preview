@@ -194,3 +194,115 @@
 
 @media(prefers-reduced-motion:reduce){.ib-card,.ib-op,.ib-card-media img,.ib-op img{transition:none}.ib-card:hover,.ib-op:hover{transform:none}}
 @media(max-width:640px){.ib-logos-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.ib-logos-row a{width:auto;height:76px}}
+
+/* --- Карточки групп ISO с образцом-вырезкой (приём каталога) --- */
+.ib-isocards{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px;margin-top:clamp(28px,3vw,40px)}
+.ib-isocard{position:relative;display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:transform .35s cubic-bezier(.22,1.5,.36,1),box-shadow .35s ease}
+.ib-isocard:hover{transform:translateY(-4px);box-shadow:0 22px 50px rgba(26,26,26,.12)}
+.ib-isocard img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;background:#fff}
+.ib-isocard-body{padding:14px 16px 18px;display:flex;flex-direction:column;gap:6px;flex:1}
+.ib-isocard-top{display:flex;align-items:center;gap:8px}
+.ib-isocard-top b{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;font-size:12px;font-weight:700;color:#fff}
+.ib-isocard-top span{font-family:'Magistral',sans-serif;font-weight:700;font-size:16px;line-height:1.15;color:var(--bm)}
+.ib-isocard p{font-size:12.5px;line-height:1.45;color:var(--mid);margin:0}
+@media(max-width:1180px){.ib-isocards{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:560px){.ib-isocards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* --- Фильтр брендов --- */
+.ib-filter{display:flex;flex-wrap:wrap;gap:8px;margin-top:clamp(24px,2.6vw,34px)}
+.ib-filter button{min-height:40px;padding:0 16px;border:1px solid var(--line);border-radius:999px;background:#fff;font-family:'Golos Text',sans-serif;font-size:13.5px;font-weight:600;color:var(--sg);transition:.2s}
+.ib-filter button:hover{border-color:rgba(107,45,139,.4)}
+.ib-filter button[aria-pressed="true"]{background:var(--ce);border-color:var(--ce);color:#fff}
+.ib-logos li[hidden]{display:none}
+
+/* --- Две колонки: фото + таблица --- */
+.ib-split{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(20px,2.6vw,36px);align-items:stretch;margin-top:clamp(28px,3vw,40px)}
+.ib-split-media{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;align-items:center}
+.ib-split-media img{width:100%;height:100%;object-fit:cover;display:block}
+.ib-split .ib-modes{margin-top:0}
+.ib-swatch{display:inline-block;width:14px;height:14px;border-radius:4px;margin-right:10px;vertical-align:-2px;border:1px solid rgba(26,26,26,.12)}
+@media(max-width:980px){.ib-split{grid-template-columns:1fr}.ib-split-media{max-height:360px}}
+
+/* --- Аккордеон ошибок --- */
+.ib-acc{display:grid;gap:10px;margin-top:clamp(24px,2.6vw,34px)}
+.ib-acc details{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.ib-acc summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 22px;font-size:15px;font-weight:700;color:var(--bm)}
+.ib-acc summary::-webkit-details-marker{display:none}
+.ib-acc summary::after{content:'+';flex:0 0 auto;font-size:20px;font-weight:400;color:var(--ce);transition:transform .2s}
+.ib-acc details[open] summary::after{transform:rotate(45deg)}
+.ib-acc details p{margin:0;padding:0 22px 18px;font-size:14.5px;line-height:1.6;color:var(--mid)}
+.ib-acc details p b{color:var(--sg);font-weight:600}
+.ib-two{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.4fr);gap:clamp(24px,4vw,64px);align-items:start}
+.ib-two .ib-acc{margin-top:0}
+@media(max-width:900px){.ib-two{grid-template-columns:1fr}}
+
+/* --- Диаграмма биения --- */
+.ib-runout{background:#fff;border:1px solid var(--line);border-radius:20px;padding:clamp(22px,2.6vw,34px);display:grid;gap:16px}
+.ib-run-row{display:grid;grid-template-columns:minmax(150px,1.1fr) minmax(0,2fr) 76px;gap:14px;align-items:center}
+.ib-run-row b{font-size:14.5px;color:var(--bm)}
+.ib-run-row small{display:block;font-size:12px;font-weight:400;color:var(--mid);margin-top:2px}
+.ib-run-track{position:relative;height:12px;border-radius:6px;background:var(--tl2)}
+.ib-run-track i{position:absolute;top:0;bottom:0;border-radius:6px;background:linear-gradient(90deg,var(--ce),#9b5bbd)}
+.ib-run-val{font-family:'Magistral',sans-serif;font-weight:700;font-size:16px;color:var(--bm);text-align:right;white-space:nowrap}
+.ib-run-axis{display:grid;grid-template-columns:minmax(150px,1.1fr) minmax(0,2fr) 76px;gap:14px;font-size:11px;color:var(--muted)}
+.ib-run-axis span:nth-child(2){display:flex;justify-content:space-between}
+@media(max-width:640px){.ib-run-row,.ib-run-axis{grid-template-columns:1fr 64px}.ib-run-row .ib-run-track{grid-column:1/-1;order:3}.ib-run-axis{display:none}}
+
+/* --- Интерфейсы станка: силуэты хвостовиков --- */
+.ib-ifaces{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:12px;margin-top:clamp(24px,2.6vw,34px)}
+.ib-iface{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px 16px;display:flex;flex-direction:column;gap:8px}
+.ib-iface svg{width:100%;height:96px;display:block}
+.ib-iface svg *{fill:none;stroke:var(--sg);stroke-width:1.6;stroke-linejoin:round}
+.ib-iface svg .f{fill:var(--tl2)}
+.ib-iface b{font-family:'Magistral',sans-serif;font-size:17px;color:var(--bm)}
+.ib-iface small{font-size:11px;color:var(--muted)}
+.ib-iface p{margin:0;font-size:12.5px;line-height:1.45;color:var(--mid)}
+@media(max-width:1180px){.ib-ifaces{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:640px){.ib-ifaces{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* --- Плитки «что входит» с метками --- */
+.ib-kits{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;margin-top:clamp(28px,3vw,40px)}
+.ib-kit{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.ib-kit img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
+.ib-kit-body{padding:16px 18px 20px;display:flex;flex-direction:column;gap:8px}
+.ib-kit-body h3{font-family:'Magistral',sans-serif;font-weight:700;font-size:18px;line-height:1.2;color:var(--bm);margin:0}
+.ib-kit-body p{margin:0;font-size:13px;line-height:1.5;color:var(--mid)}
+.ib-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:4px}
+.ib-tags span{font-size:11.5px;line-height:1;padding:6px 8px;border-radius:6px;background:var(--tl2);color:var(--sg)}
+@media(max-width:1180px){.ib-kits{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:640px){.ib-kits{grid-template-columns:1fr}}
+
+/* --- Страница ISO: навигация и группы --- */
+.ib-isonav{position:sticky;top:74px;z-index:20;background:rgba(237,238,240,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.ib-isonav .wrap{display:flex;gap:8px;overflow-x:auto;padding-block:12px;scrollbar-width:none}
+.ib-isonav a{flex:0 0 auto;display:inline-flex;align-items:center;gap:8px;min-height:38px;padding:0 14px;background:#fff;border:1px solid var(--line);border-radius:999px;font-size:13px;color:var(--sg)}
+.ib-isonav b{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;font-size:10.5px;color:#fff}
+.ib-group{display:grid;grid-template-columns:minmax(0,.62fr) minmax(0,1.38fr);gap:clamp(20px,3vw,48px);background:#fff;border:1px solid var(--line);border-radius:24px;padding:clamp(22px,3vw,44px);scroll-margin-top:140px}
+.ib-group+.ib-group{margin-top:20px}
+.ib-group-media img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:16px;display:block}
+.ib-group-head{display:flex;align-items:center;gap:14px}
+.ib-group-head b{display:inline-grid;place-items:center;width:44px;height:44px;border-radius:12px;font-family:'Magistral',sans-serif;font-size:22px;color:#fff;flex:0 0 auto}
+.ib-group-head h2{font-family:'Magistral',sans-serif;font-weight:700;font-size:clamp(22px,2.2vw,32px);line-height:1.1;color:var(--bm);margin:0}
+.ib-group-lead{font-size:15px;line-height:1.6;color:var(--sg);margin:16px 0 0}
+.ib-props{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:20px}
+.ib-props div{padding:12px 14px;border-radius:12px;background:var(--tl2)}
+.ib-props small{display:block;font-size:11px;color:var(--muted)}
+.ib-props span{display:block;margin-top:4px;font-size:13.5px;font-weight:700;color:var(--bm)}
+.ib-group-cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:22px}
+.ib-group-cols h3{font-family:'Golos Text',monospace;font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--mid);margin:0 0 10px}
+.ib-group-cols ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.ib-group-cols li{position:relative;padding-left:16px;font-size:14px;line-height:1.5;color:var(--sg)}
+.ib-group-cols li::before{content:'';position:absolute;left:0;top:.6em;width:6px;height:6px;background:var(--gold)}
+.ib-group-cols li b{color:var(--bm)}
+.ib-group-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px;padding-top:18px;border-top:1px solid var(--line)}
+.ib-group-links span{font-size:12.5px;color:var(--muted);align-self:center;margin-right:4px}
+.ib-group-links a{display:inline-flex;align-items:center;min-height:34px;padding:0 13px;border:1px solid var(--line);border-radius:999px;font-size:13px;font-weight:600;color:var(--bm)}
+.ib-group-links a:hover{border-color:rgba(107,45,139,.4);color:var(--ce)}
+@media(max-width:980px){.ib-group{grid-template-columns:1fr}.ib-group-media img{max-width:280px}.ib-props{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:640px){.ib-group-cols{grid-template-columns:1fr}}
+
+/* --- Страницы брендов: каталог крупной кнопкой --- */
+.br-cats-links a{display:inline-flex;align-items:center;gap:14px;min-height:64px;padding:0 24px 0 20px;background:#fff;border:1px solid var(--line);border-radius:14px;font-family:'PT Root UI',sans-serif;font-weight:700;font-size:16px;color:var(--bm);transition:border-color .2s,box-shadow .2s}
+.br-cats-links a::before{content:'PDF';display:inline-grid;place-items:center;width:40px;height:40px;border-radius:10px;background:var(--ce2);color:var(--ce);font-size:11px;letter-spacing:.06em}
+.br-cats-links a:hover{border-color:rgba(107,45,139,.4);box-shadow:0 14px 34px rgba(26,26,26,.08)}
+.ib-split.wide-table{grid-template-columns:minmax(0,.65fr) minmax(0,1.35fr)}@media(max-width:980px){.ib-split.wide-table{grid-template-columns:1fr}}
