@@ -30,6 +30,9 @@ TAGS = re.compile(r'<[^>]*>')
 DROP = re.compile(r'<(script|style)\b[^>]*>.*?</\1>', re.S | re.I)
 COMMENT = re.compile(r'<!--.*?-->', re.S)
 INDEX = 'search-index.json'
+# копия каталога в виде обычного скрипта: нужна, когда сайт открывают файлом
+# с диска (file://) — там браузер запрещает fetch соседнего файла
+INDEX_JS = 'search-index.js'
 
 
 def flatten(x):
@@ -93,7 +96,13 @@ def main():
     else:
         with open(INDEX, 'w', encoding='utf-8') as fh:
             json.dump(index, fh, ensure_ascii=False, separators=(',', ':'))
-        print('search-index.json пересобран: %d записей' % len(index))
+        payload = json.dumps(index, ensure_ascii=False, separators=(',', ':'))
+        with open(INDEX_JS, 'w', encoding='utf-8') as fh:
+            fh.write('/* Каталог страниц для поиска. Пересобирается tools/build-search-index.py\n'
+                     '   вместе с search-index.json. Подключается только при открытии сайта\n'
+                     '   файлом с диска (file://), где fetch соседнего файла запрещён. */\n')
+            fh.write('window.MEHANIT_SEARCH_INDEX_DATA=' + payload + ';\n')
+        print('search-index.json и search-index.js пересобраны: %d записей' % len(index))
 
     if gone:
         print('  выпали (страниц нет на диске): %d — %s' % (len(gone), ', '.join(gone[:8])))

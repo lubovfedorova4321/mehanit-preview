@@ -239,6 +239,24 @@
   var SEARCH_INDEX_PROMISE=null;
   function loadSearchIndex(){
     if(SEARCH_INDEX_PROMISE)return SEARCH_INDEX_PROMISE;
+    /* Сайт, открытый файлом с диска (file://): браузер запрещает fetch соседнего
+       файла, поэтому каталог подключаем обычным <script> — на него запрет не
+       распространяется. На боевом сайте этот путь не используется. */
+    if(location.protocol==='file:'){
+      SEARCH_INDEX_PROMISE=new Promise(function(resolve){
+        if(window.MEHANIT_SEARCH_INDEX_DATA){return resolve(window.MEHANIT_SEARCH_INDEX_DATA)}
+        var tag=document.createElement('script');
+        tag.src='search-index.js';
+        tag.onload=function(){resolve(window.MEHANIT_SEARCH_INDEX_DATA||[])};
+        tag.onerror=function(){resolve([])};
+        document.head.appendChild(tag);
+      }).then(function(items){
+        SEARCH_INDEX_ITEMS=Array.isArray(items)?items:[];
+        window.MEHANIT_SEARCH_INDEX=SEARCH_INDEX_ITEMS;
+        return SEARCH_INDEX_ITEMS;
+      });
+      return SEARCH_INDEX_PROMISE;
+    }
     if(!window.fetch){
       SEARCH_INDEX_ITEMS=[];
       SEARCH_INDEX_PROMISE=Promise.resolve([]);
