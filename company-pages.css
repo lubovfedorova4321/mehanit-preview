@@ -4,6 +4,7 @@
 
 .ib-hero-media img.cp-left{object-position:40% center}
 .ib-hero.cp-hero-photo .ib-hero-media{width:min(62%,1100px)}
+@media(max-width:980px){.ib-hero.cp-hero-photo .ib-hero-media{width:100%}}
 
 /* --- Шаги процесса: чередование фото и списка --- */
 .cp-steps{display:grid;gap:clamp(18px,2vw,28px);margin-top:clamp(28px,3vw,40px)}
