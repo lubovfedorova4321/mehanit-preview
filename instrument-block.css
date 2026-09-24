@@ -148,8 +148,8 @@
 
 /* --- Фото-полоса «к новому станку» --- */
 .ib-band{position:relative;min-height:clamp(320px,26vw,420px);background:#fff;border:1px solid var(--line);border-radius:24px;overflow:hidden}
-.ib-band-media{position:absolute;inset:0 0 0 45%}
-.ib-band-media img{width:100%;height:100%;object-fit:cover;display:block}
+.ib-band-media{position:absolute;inset:0 0 0 40%}
+.ib-band-media img{width:100%;height:100%;object-fit:cover;object-position:right center;display:block}
 .ib-band-media::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#fff 0%,rgba(255,255,255,.7) 14%,rgba(255,255,255,0) 36%)}
 .ib-band-body{position:relative;z-index:1;width:55%;padding:clamp(28px,3.4vw,52px);display:flex;flex-direction:column;gap:14px}
 .ib-band-body h2{font-family:'Magistral',sans-serif;font-weight:700;font-size:clamp(24px,2.4vw,36px);line-height:1.1;letter-spacing:-.015em;color:var(--bm);margin:0}
