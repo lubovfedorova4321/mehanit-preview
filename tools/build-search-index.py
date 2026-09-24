@@ -13,8 +13,8 @@
              автоматически их не вывести; для новых страниц — «Страница»
   url      — имя файла
   text     — meta description; если его нет — видимый текст страницы
-  keywords — title + h1 + description + слова из url + видимый текст,
-             обрезано до 1050 символов
+  keywords — title + h1 + description + слова из url + видимый текст
+             страницы целиком (по нему идёт поиск)
 
 Страницы, удалённые из репозитория, выпадают из индекса автоматически.
 """
@@ -24,7 +24,8 @@ import os
 import re
 import sys
 
-KW_LIMIT = 1050
+TEXT_LIMIT = 1050   # «text» показывается в выдаче — держим коротким
+KW_LIMIT = None     # «keywords» ищется — индексируем страницу целиком
 SUFFIX = re.compile(r'\s*[—|]\s*Механит\s*$')
 TAGS = re.compile(r'<[^>]*>')
 DROP = re.compile(r'<(script|style)\b[^>]*>.*?</\1>', re.S | re.I)
@@ -71,8 +72,8 @@ def build(url, category):
         'title': title,
         'category': category,
         'url': url,
-        'text': (desc or body)[:KW_LIMIT],
-        'keywords': keywords[:KW_LIMIT],
+        'text': (desc or body)[:TEXT_LIMIT],
+        'keywords': keywords[:KW_LIMIT] if KW_LIMIT else keywords,
     }
 
 
