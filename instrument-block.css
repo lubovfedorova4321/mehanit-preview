@@ -307,17 +307,20 @@
 .br-cats-links a:hover{border-color:rgba(107,45,139,.4);box-shadow:0 14px 34px rgba(26,26,26,.08)}
 .ib-split.wide-table{grid-template-columns:minmax(0,.65fr) minmax(0,1.35fr)}@media(max-width:980px){.ib-split.wide-table{grid-template-columns:1fr}}
 
-/* --- «Для технолога»: три крупные карточки --- */
-.ib-tools{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:clamp(24px,2.6vw,34px)}
-.ib-tools a{position:relative;display:flex;flex-direction:column;gap:10px;min-height:220px;padding:clamp(22px,2.2vw,30px);background:#fff;border:1px solid var(--line);border-radius:20px;transition:transform .35s cubic-bezier(.22,1.5,.36,1),box-shadow .35s ease}
-.ib-tools a:hover{transform:translateY(-4px);box-shadow:0 22px 50px rgba(26,26,26,.12)}
-.ib-tools a small{font-family:'Golos Text',monospace;font-size:10.5px;font-weight:700;letter-spacing:.14em;color:var(--gold)}
-.ib-tools a b{font-family:'Magistral',sans-serif;font-weight:700;font-size:clamp(20px,1.7vw,24px);line-height:1.15;color:var(--bm)}
-.ib-tools a span{font-size:14px;line-height:1.55;color:var(--mid)}
-.ib-tools a em{margin-top:auto;padding-top:12px;font-style:normal;font-family:'PT Root UI',sans-serif;font-size:12.5px;font-weight:700;letter-spacing:.3px;text-transform:uppercase;color:var(--ce)}
-.ib-tools a em i{font-style:normal;display:inline-block;transition:transform .2s}
-.ib-tools a:hover em i{transform:translateX(4px)}
-@media(max-width:900px){.ib-tools{grid-template-columns:1fr}.ib-tools a{min-height:0}}
+/* --- «Для технолога»: одна карточка, три колонки --- */
+.ib-toolbar{display:grid;grid-template-columns:minmax(0,1.15fr) repeat(3,minmax(0,1fr));background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden}
+.ib-toolbar>*{padding:clamp(20px,2.2vw,28px) clamp(18px,2vw,26px);border-left:1px solid var(--line)}
+.ib-toolbar>:first-child{border-left:0}
+.ib-toolbar-head{display:flex;flex-direction:column;justify-content:center;gap:6px}
+.ib-toolbar-head small{font-family:'Golos Text',monospace;font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.ib-toolbar-head b{font-family:'Magistral',sans-serif;font-weight:700;font-size:clamp(19px,1.6vw,23px);line-height:1.15;color:var(--bm)}
+.ib-toolbar a{display:flex;flex-direction:column;justify-content:center;gap:5px;transition:background .2s}
+.ib-toolbar a:hover{background:var(--tl2)}
+.ib-toolbar a b{font-family:'PT Root UI',sans-serif;font-weight:700;font-size:15.5px;color:var(--bm)}
+.ib-toolbar a b::after{content:' →';color:var(--ce)}
+.ib-toolbar a span{font-size:13px;line-height:1.45;color:var(--mid)}
+@media(max-width:1080px){.ib-toolbar{grid-template-columns:repeat(3,minmax(0,1fr))}.ib-toolbar-head{grid-column:1/-1;border-bottom:1px solid var(--line)}.ib-toolbar>a:first-of-type{border-left:0}}
+@media(max-width:640px){.ib-toolbar{grid-template-columns:1fr}.ib-toolbar>*{border-left:0}.ib-toolbar>a{border-top:1px solid var(--line)}}
 
 /* --- «С чем приходят»: компактнее --- */
 .ib-sym{margin-top:clamp(22px,2.4vw,30px)}
