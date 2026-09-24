@@ -75,7 +75,11 @@
 .cp-team img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover}
 .cp-team figcaption{padding:14px 16px 16px;font-size:13px;line-height:1.45;color:var(--mid)}
 .cp-team figcaption b{display:block;font-size:14px;color:var(--bm);margin-bottom:2px}
-@media(max-width:900px){.cp-team{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.cp-team.wide{grid-template-columns:repeat(2,minmax(0,1fr))}
+.cp-team.wide img{aspect-ratio:3/2}
+.cp-team.three{grid-template-columns:repeat(3,minmax(0,1fr));margin-top:18px}
+@media(max-width:900px){.cp-team{grid-template-columns:repeat(2,minmax(0,1fr))}.cp-team.wide{grid-template-columns:1fr}}
+@media(max-width:560px){.cp-team.three{grid-template-columns:1fr}}
 
 /* --- Фото-полоса с текстом (широкая) --- */
 .cp-wide{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);background:#fff;border:1px solid var(--line);border-radius:24px;overflow:hidden;margin-top:clamp(28px,3vw,40px)}
