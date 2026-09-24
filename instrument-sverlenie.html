@@ -12,7 +12,7 @@
 <meta property="og:title" content="Сверление на станках с ЧПУ: подбор свёрл и режимы | Механит"/>
 <meta property="og:description" content="Выбор свёрл под глубину и материал: цельнотвердосплавные и со сменными пластинами, подвод СОЖ, стартовые режимы, причины увода и поломок."/>
 <meta property="og:url" content="https://mehanit.ru/instrument-sverlenie.html"/>
-<meta property="og:image" content="https://mehanit.ru/module-banners/complex.jpeg"/>
+<meta property="og:image" content="https://mehanit.ru/instrument-assets/op-drilling.jpg"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <script type="application/ld+json">
@@ -233,6 +233,7 @@ button.eq-scenario{border:1px solid var(--line);text-align:left;width:100%;font:
 </style>
 <link rel="stylesheet" href="site-shell.css"/>
 <link rel="stylesheet" href="industry-solutions.css"/>
+<link rel="stylesheet" href="instrument-block.css"/>
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -269,17 +270,109 @@ button.eq-scenario{border:1px solid var(--line);text-align:left;width:100%;font:
 <body>
 <header></header>
 <main>
-<nav class="ind-crumbs" aria-label="Хлебные крошки"><div class="wrap"><ol><li><a href="index.html">Главная</a></li><li><a href="production-equipment.html">Инструмент и оснастка</a></li><li aria-current="page">Сверление</li></ol></div></nav>
-<section class="sol-hero tl-hero"><div class="wrap"><div class="eq-hero-top tl-hero-grid"><div class="tl-hero-copy"><div class="tl-eyebrow">Сверление</div><h1 class="sol-title"><span class="title-row"><span class="title-dash"></span><span class="title-text">Инструмент и режимы для сверления на станках с ЧПУ</span></span></h1><p class="tl-lead">Сверление — операция, где ошибка обходится дороже всего: поломка сверла в отверстии часто означает брак детали. Ключевые факторы — отвод стружки и жёсткость на глубине.</p><div class="tl-actions"><button type="button" class="btn btn-ce tl-btn" onclick="openEqLeadModal()">Обсудить задачу с технологом</button><a class="tl-link" href="production-calculators.html">Калькуляторы режимов →</a></div></div><aside class="tl-brief"><div class="tl-brief-label">Что прислать для подбора</div><ol class="tl-brief-list"><li>Чертёж или 3D-модель детали<span>PDF, DWG, STEP</span></li><li>Материал и твёрдость</li><li>Станок, стойка ЧПУ и конус шпинделя</li><li>Партия и нужная стойкость</li><li>Текущий инструмент и режимы<span>если операция уже идёт</span></li></ol><p class="tl-brief-note">Технолог ответит в течение рабочего дня.</p></aside></div></div></section>
-<section class="eq-section"><div class="wrap"><h2 class="eq-h2">Что определяет результат</h2><div class="tl-factors"><div class="tl-factor"><small>01</small><h3>Глубина в диаметрах</h3><p>До 3×D работают обычные свёрла, от 5×D нужен внутренний подвод СОЖ и вывод стружки, от 10×D — специальные решения.</p></div><div class="tl-factor"><small>02</small><h3>Отвод стружки</h3><p>Забитая канавка — главная причина поломки. Давление и расход СОЖ важнее марки сплава.</p></div><div class="tl-factor"><small>03</small><h3>Биение и центрирование</h3><p>Биение сверла на вылете уводит отверстие и разбивает диаметр на входе.</p></div><div class="tl-factor"><small>04</small><h3>Тип сверла</h3><p>Цельнотвердосплавное — точность и малые диаметры, со сменными пластинами — производительность на больших диаметрах.</p></div></div></div></section>
-<section class="eq-section" id="regimes"><div class="wrap"><h2 class="eq-h2">Стартовые режимы по материалам</h2><p class="eq-lede">Диапазоны — стартовые ориентиры для твердосплавного инструмента с покрытием. Рабочие значения берутся из каталога конкретного инструмента, окончательные — после пробной детали на вашем станке.</p><div class="op-table-wrap"><table class="op-table"><thead><tr><th>Материал</th><th>Скорость резания Vc</th><th>Подача</th><th>Глубина и примечания</th></tr></thead><tbody><tr><td>Стали</td><td>80–160 м/мин</td><td>0,10–0,30 мм/об</td><td>внутренний подвод СОЖ от 3×D</td></tr><tr><td>Нержавеющие стали</td><td>60–120 м/мин</td><td>0,08–0,25 мм/об</td><td>без выхаживания, без остановки подачи</td></tr><tr><td>Чугун</td><td>80–150 м/мин</td><td>0,12–0,35 мм/об</td><td>следить за выходом стружки</td></tr><tr><td>Алюминий</td><td>150–400 м/мин</td><td>0,10–0,40 мм/об</td><td>свёрла с полированными канавками</td></tr><tr><td>Титан и жаропрочные</td><td>20–50 м/мин</td><td>0,05–0,20 мм/об</td><td>СОЖ обязательна</td></tr><tr><td>Закалённые стали</td><td>20–60 м/мин</td><td>0,03–0,12 мм/об</td><td>только после отпуска или твердосплав с покрытием</td></tr></tbody></table></div><a class="tl-more" href="production-calculators.html">Посчитать обороты, подачу и мощность →</a></div></section>
-<section class="eq-section"><div class="wrap"><h2 class="eq-h2">Как подбираем инструмент</h2><ol class="op-steps"><li><small>01</small><h3>Разбор отверстия</h3><p>Диаметр, глубина в диаметрах, допуск, материал, доступ для СОЖ.</p></li><li><small>02</small><h3>Тип и геометрия</h3><p>Сверло под глубину и материал, угол при вершине, форма подточки.</p></li><li><small>03</small><h3>Подвод СОЖ</h3><p>Внутренний подвод, давление и расход под глубину.</p></li><li><small>04</small><h3>Закрепление</h3><p>Оправка с минимальным биением, проверка на вылете.</p></li><li><small>05</small><h3>Проверка на детали</h3><p>Контроль диаметра, увода и стойкости.</p></li></ol></div></section>
-<section class="eq-section"><div class="wrap"><h2 class="eq-h2">Типовые проблемы и причины</h2><div class="op-table-wrap"><table class="op-table op-table-problems"><thead><tr><th>Что видим</th><th>Вероятная причина</th><th>Что менять</th></tr></thead><tbody><tr><td>Увод отверстия</td><td>Биение сверла, отсутствие центровки, неровная поверхность входа</td><td>Проверить биение, зацентровать или подрезать площадку, снизить подачу на входе</td></tr><tr><td>Поломка сверла на глубине</td><td>Забитая стружкой канавка, нехватка СОЖ</td><td>Увеличить давление и расход СОЖ, ввести выводы стружки, снизить подачу</td></tr><tr><td>Разбитый диаметр</td><td>Биение, износ уголков, слишком высокая подача на входе</td><td>Свежая кромка, снижение подачи на входе, проверка оправки</td></tr><tr><td>Плохая шероховатость стенки</td><td>Износ, нестабильная подача, вибрация на вылете</td><td>Сменить сверло, стабилизировать подачу, уменьшить вылет</td></tr><tr><td>Наволакивание на кромке (нержавеющая сталь)</td><td>Низкая скорость, прерывание подачи</td><td>Не останавливать подачу в отверстии, повысить Vc, применить покрытие под вязкие материалы</td></tr></tbody></table></div></div></section>
-<section class="eq-section"><div class="wrap"><h2 class="eq-h2">Бренды под эту операцию</h2><p class="eq-lede">Конкретную позицию подбирает технолог под материал и станок.</p><div class="op-chips op-chips-links"><a href="brand-ilix.html">ILIX</a><a href="brand-vergnano.html">Vergnano</a><a href="brand-gabriel-mauvais.html">Gabriel Mauvais</a><a href="brand-telcon.html">Telcon</a><a href="brand-derek.html">Derek</a><a href="brand-macro-tools.html">MACRO TOOLS</a></div><a class="tl-more" href="production-cutting-tools.html">Все бренды по направлениям →</a></div></section>
-<section class="eq-section"><div class="wrap"><h2 class="eq-h2">Обработка по материалам</h2><div class="op-links"><a href="obrabotka-stali.html"><b>Конструкционные и легированные стали</b><span>Режимы, сложности, что выбирать</span></a><a href="obrabotka-nerzhaveyushchey-stali.html"><b>Нержавеющие и жаропрочные аустенитные стали</b><span>Режимы, сложности, что выбирать</span></a><a href="obrabotka-chuguna.html"><b>Серый и высокопрочный чугун</b><span>Режимы, сложности, что выбирать</span></a><a href="obrabotka-alyuminiya.html"><b>Алюминиевые и медные сплавы</b><span>Режимы, сложности, что выбирать</span></a><a href="obrabotka-titana.html"><b>Титановые и никелевые жаропрочные сплавы</b><span>Режимы, сложности, что выбирать</span></a><a href="obrabotka-zakalennoy-stali.html"><b>Закалённые стали 45–62 HRC</b><span>Режимы, сложности, что выбирать</span></a></div></div></section>
-<section class="eq-section"><div class="wrap"><h2 class="eq-h2">Разборы технологов</h2><div class="op-links"><a href="press-kak-podobrat-oborudovanie-po-chertezhu.html"><b>Как подобрать оборудование по чертежу детали</b><span>Пресс-центр</span></a><a href="press-kak-sokratit-kolichestvo-ustanovov.html"><b>Как сократить количество установов</b><span>Пресс-центр</span></a><a href="equipment-drilling.html"><b>Сверлильные станки</b><span>Каталог оборудования</span></a></div></div></section>
-<section class="eq-section" id="faq"><div class="wrap"><h2 class="eq-h2">Частые вопросы</h2><div class="faq-list"><div class="faqi"><button class="faqq" onclick="toggleFaq(this)">С какой глубины нужен внутренний подвод СОЖ?<span class="ic">+</span></button><div class="faqa"><p>Практическая граница — около 3×D. Глубже стружка перестаёт выходить сама, и без внутреннего подвода растёт риск поломки.</p></div></div><div class="faqi"><button class="faqq" onclick="toggleFaq(this)">Цельнотвердосплавное сверло или со сменными пластинами?<span class="ic">+</span></button><div class="faqa"><p>До 16–20 мм обычно выгоднее цельнотвердосплавное: выше точность и качество отверстия. На больших диаметрах и глубинах сменные пластины дешевле в пересчёте на отверстие.</p></div></div><div class="faqi"><button class="faqq" onclick="toggleFaq(this)">Нужно ли центровать перед сверлением?<span class="ic">+</span></button><div class="faqa"><p>Современные свёрла с самоцентрирующейся подточкой чаще всего не требуют центровки на ровной поверхности. Центровка нужна на наклонных и криволинейных входах.</p></div></div></div></div></section>
-<section class="eq-section"><div class="wrap"><div class="eq-final-cta"><div><h2>Нужен инструмент под вашу деталь?</h2><p>Пришлите чертёж, материал, станок и партию — технолог подберёт инструмент и посчитает стоимость обработки детали.</p></div><button type="button" class="btn btn-ce eq-final-cta-btn" onclick="openEqLeadModal()">Обсудить задачу с технологом</button></div></div></section>
+<section class="ib-hero">
+  <div class="ib-hero-media"><img src="instrument-assets/op-drilling-wide.jpg" alt="Сверло со сменными пластинами выходит из отверстия, подача СОЖ через инструмент" fetchpriority="high"/></div>
+  <div class="wrap ib-hero-inner">
+    <nav class="ind-crumbs" aria-label="Хлебные крошки"><div class="wrap"><ol><li><a href="index.html">Главная</a></li><li><a href="production-equipment.html">Инструмент и оснастка</a></li><li aria-current="page">Сверление</li></ol></div></nav>
+    <h1>Инструмент и режимы для сверления на станках с ЧПУ</h1>
+    <p class="ib-sub">Сверление — операция, где ошибка обходится дороже всего: поломка сверла в отверстии часто означает брак детали. Ключевые факторы — отвод стружки и жёсткость на глубине.</p>
+    <div class="ib-actions">
+      <button type="button" class="btn btn-ce" onclick="openEqLeadModal()">Обсудить задачу с технологом</button>
+      <a class="ib-textlink" href="#regimes">Стартовые режимы</a>
+    </div>
+  </div>
+</section>
+
+<section class="ib-section">
+<div class="wrap">
+<h2 class="eq-h2">Что определяет результат</h2>
+<div class="ib-factors">
+  <div class="ib-factor"><small>01</small><h3>Глубина в диаметрах</h3><p>До 3×D работают обычные свёрла, от 5×D нужен внутренний подвод СОЖ и вывод стружки, от 10×D — специальные решения.</p></div>
+  <div class="ib-factor"><small>02</small><h3>Отвод стружки</h3><p>Забитая канавка — главная причина поломки. Давление и расход СОЖ важнее марки сплава.</p></div>
+  <div class="ib-factor"><small>03</small><h3>Биение и центрирование</h3><p>Биение сверла на вылете уводит отверстие и разбивает диаметр на входе.</p></div>
+  <div class="ib-factor"><small>04</small><h3>Тип сверла</h3><p>Цельнотвердосплавное — точность и малые диаметры, со сменными пластинами — производительность на больших диаметрах.</p></div>
+</div>
+</div>
+</section>
+
+<section class="ib-section tight" id="regimes">
+<div class="wrap">
+<h2 class="eq-h2">Стартовые режимы по материалам</h2>
+<p class="eq-lede">Диапазоны — стартовые ориентиры для твердосплавного инструмента с покрытием. Рабочие значения берутся из каталога конкретного инструмента, окончательные — после пробной детали на вашем станке.</p>
+<div class="ib-modes"><table><thead><tr><th>Материал</th><th>Скорость резания Vc</th><th>Подача</th><th>Глубина и примечания</th></tr></thead><tbody>
+<tr><td><b class="iso-p">P</b>Стали</td><td>80–160 м/мин</td><td>0,10–0,30 мм/об</td><td>внутренний подвод СОЖ от 3×D</td></tr>
+<tr><td><b class="iso-m">M</b>Нержавеющие стали</td><td>60–120 м/мин</td><td>0,08–0,25 мм/об</td><td>без выхаживания, без остановки подачи</td></tr>
+<tr><td><b class="iso-k">K</b>Чугун</td><td>80–150 м/мин</td><td>0,12–0,35 мм/об</td><td>следить за выходом стружки</td></tr>
+<tr><td><b class="iso-n">N</b>Алюминий</td><td>150–400 м/мин</td><td>0,10–0,40 мм/об</td><td>свёрла с полированными канавками</td></tr>
+<tr><td><b class="iso-s">S</b>Титан и жаропрочные</td><td>20–50 м/мин</td><td>0,05–0,20 мм/об</td><td>СОЖ обязательна</td></tr>
+<tr><td><b class="iso-h">H</b>Закалённые стали</td><td>20–60 м/мин</td><td>0,03–0,12 мм/об</td><td>только после отпуска или твердосплав с покрытием</td></tr>
+</tbody></table></div>
+<div class="ib-modes-note"><a class="ib-textlink" href="production-calculators.html">Посчитать обороты, подачу и мощность</a></div>
+<div class="ib-iso" style="margin-top:18px"><span class="ib-iso-label">Подробнее по материалу</span><a href="obrabotka-stali.html"><b class="iso-p">P</b>Стали</a><a href="obrabotka-nerzhaveyushchey-stali.html"><b class="iso-m">M</b>Нержавеющие</a><a href="obrabotka-chuguna.html"><b class="iso-k">K</b>Чугун</a><a href="obrabotka-alyuminiya.html"><b class="iso-n">N</b>Алюминий и медь</a><a href="obrabotka-titana.html"><b class="iso-s">S</b>Титан и жаропрочные</a><a href="obrabotka-zakalennoy-stali.html"><b class="iso-h">H</b>Закалённые</a></div>
+</div>
+</section>
+
+<section class="ib-section tight" id="problems">
+<div class="wrap">
+<h2 class="eq-h2">Типовые проблемы и причины</h2>
+<p class="eq-lede">Выберите, что видите на детали или на кромке, — причина и что менять.</p>
+<div class="ib-sym">
+<div class="ib-sym-list" role="tablist" aria-label="Типовые проблемы">
+  <button class="ib-sym-tab" type="button" role="tab" id="p-tab-0" aria-controls="p-0" aria-selected="true"><small>01</small>Увод отверстия</button>
+  <button class="ib-sym-tab" type="button" role="tab" id="p-tab-1" aria-controls="p-1" aria-selected="false" tabindex="-1"><small>02</small>Поломка сверла на глубине</button>
+  <button class="ib-sym-tab" type="button" role="tab" id="p-tab-2" aria-controls="p-2" aria-selected="false" tabindex="-1"><small>03</small>Разбитый диаметр</button>
+  <button class="ib-sym-tab" type="button" role="tab" id="p-tab-3" aria-controls="p-3" aria-selected="false" tabindex="-1"><small>04</small>Плохая шероховатость стенки</button>
+  <button class="ib-sym-tab" type="button" role="tab" id="p-tab-4" aria-controls="p-4" aria-selected="false" tabindex="-1"><small>05</small>Наволакивание на кромке (нержавеющая сталь)</button>
+</div>
+<div>
+  <div class="ib-sym-panel" id="p-0" role="tabpanel" aria-labelledby="p-tab-0">
+    <div class="ib-sym-img"><img src="instrument-assets/op-drilling.jpg" alt="Увод отверстия" loading="lazy"/></div>
+    <div class="ib-sym-text"><h3>Увод отверстия</h3><div class="ib-sym-kicker">Вероятная причина</div><ul><li>Биение сверла</li><li>отсутствие центровки</li><li>неровная поверхность входа</li></ul><div class="ib-sym-fix"><b>Что менять</b>Проверить биение, зацентровать или подрезать площадку, снизить подачу на входе</div></div>
+  </div>
+  <div class="ib-sym-panel" id="p-1" role="tabpanel" aria-labelledby="p-tab-1" hidden>
+    <div class="ib-sym-img"><img src="instrument-assets/op-drilling.jpg" alt="Поломка сверла на глубине" loading="lazy"/></div>
+    <div class="ib-sym-text"><h3>Поломка сверла на глубине</h3><div class="ib-sym-kicker">Вероятная причина</div><ul><li>Забитая стружкой канавка</li><li>нехватка СОЖ</li></ul><div class="ib-sym-fix"><b>Что менять</b>Увеличить давление и расход СОЖ, ввести выводы стружки, снизить подачу</div></div>
+  </div>
+  <div class="ib-sym-panel" id="p-2" role="tabpanel" aria-labelledby="p-tab-2" hidden>
+    <div class="ib-sym-img"><img src="instrument-assets/op-drilling.jpg" alt="Разбитый диаметр" loading="lazy"/></div>
+    <div class="ib-sym-text"><h3>Разбитый диаметр</h3><div class="ib-sym-kicker">Вероятная причина</div><ul><li>Биение</li><li>износ уголков</li><li>слишком высокая подача на входе</li></ul><div class="ib-sym-fix"><b>Что менять</b>Свежая кромка, снижение подачи на входе, проверка оправки</div></div>
+  </div>
+  <div class="ib-sym-panel" id="p-3" role="tabpanel" aria-labelledby="p-tab-3" hidden>
+    <div class="ib-sym-img"><img src="instrument-assets/op-drilling.jpg" alt="Плохая шероховатость стенки" loading="lazy"/></div>
+    <div class="ib-sym-text"><h3>Плохая шероховатость стенки</h3><div class="ib-sym-kicker">Вероятная причина</div><ul><li>Износ</li><li>нестабильная подача</li><li>вибрация на вылете</li></ul><div class="ib-sym-fix"><b>Что менять</b>Сменить сверло, стабилизировать подачу, уменьшить вылет</div></div>
+  </div>
+  <div class="ib-sym-panel" id="p-4" role="tabpanel" aria-labelledby="p-tab-4" hidden>
+    <div class="ib-sym-img"><img src="instrument-assets/defect-bue.jpg" alt="Наволакивание на кромке (нержавеющая сталь)" loading="lazy"/></div>
+    <div class="ib-sym-text"><h3>Наволакивание на кромке (нержавеющая сталь)</h3><div class="ib-sym-kicker">Вероятная причина</div><ul><li>Низкая скорость</li><li>прерывание подачи</li></ul><div class="ib-sym-fix"><b>Что менять</b>Не останавливать подачу в отверстии, повысить Vc, применить покрытие под вязкие материалы</div></div>
+  </div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="ib-section tight">
+<div class="wrap">
+<div class="ib-head"><div><h2 class="eq-h2">Бренды под эту операцию</h2><p class="eq-lede">Конкретную позицию подбирает технолог под материал и станок.</p></div><a class="ib-more" href="production-cutting-tools.html">Все бренды по направлениям →</a></div>
+<div class="ib-logos-row"><a href="brand-ilix.html" title="ILIX"><img src="tool-logos/ilix.png" alt="ILIX" loading="lazy"/></a><a href="brand-vergnano.html" title="Vergnano"><img src="tool-logos/vergnano.png" alt="Vergnano" loading="lazy"/></a><a href="brand-gabriel-mauvais.html" title="Gabriel Mauvais"><img src="tool-logos/gabriel-mauvais.png" alt="Gabriel Mauvais" loading="lazy"/></a><a href="brand-telcon.html" title="Telcon"><img src="tool-logos/telcon.png" alt="Telcon" loading="lazy"/></a><a href="brand-derek.html" title="Derek"><img src="tool-logos/derek.png" alt="Derek" loading="lazy"/></a><a href="brand-macro-tools.html" title="MACRO TOOLS"><img src="tool-logos/macro-tools.png" alt="MACRO TOOLS" loading="lazy"/></a></div>
+</div>
+</section>
+
+<section class="ib-section tight">
+<div class="wrap">
+<h2 class="eq-h2">Разборы технологов</h2>
+<div class="ib-articles"><a href="press-kak-podobrat-oborudovanie-po-chertezhu.html"><small>Пресс-центр</small><b>Как подобрать оборудование по чертежу детали</b></a><a href="press-kak-sokratit-kolichestvo-ustanovov.html"><small>Пресс-центр</small><b>Как сократить количество установов</b></a><a href="equipment-drilling.html"><small>Каталог оборудования</small><b>Сверлильные станки</b></a></div>
+</div>
+</section>
+
+<section class="ib-section tight" id="faq">
+<div class="wrap ib-faq">
+<h2 class="eq-h2">Частые вопросы</h2>
+<div class="faq-list"><div class="faqi"><button class="faqq" onclick="toggleFaq(this)">С какой глубины нужен внутренний подвод СОЖ?<span class="ic">+</span></button><div class="faqa"><p>Практическая граница — около 3×D. Глубже стружка перестаёт выходить сама, и без внутреннего подвода растёт риск поломки.</p></div></div><div class="faqi"><button class="faqq" onclick="toggleFaq(this)">Цельнотвердосплавное сверло или со сменными пластинами?<span class="ic">+</span></button><div class="faqa"><p>До 16–20 мм обычно выгоднее цельнотвердосплавное: выше точность и качество отверстия. На больших диаметрах и глубинах сменные пластины дешевле в пересчёте на отверстие.</p></div></div><div class="faqi"><button class="faqq" onclick="toggleFaq(this)">Нужно ли центровать перед сверлением?<span class="ic">+</span></button><div class="faqa"><p>Современные свёрла с самоцентрирующейся подточкой чаще всего не требуют центровки на ровной поверхности. Центровка нужна на наклонных и криволинейных входах.</p></div></div></div>
+</div>
+</section>
+
+<section class="eq-section" id="final-cta"><div class="wrap"><div class="eq-final-cta"><div><h2>Нужен инструмент под вашу деталь?</h2><p>Пришлите чертёж, материал, станок и партию — технолог подберёт инструмент и посчитает стоимость обработки детали.</p></div><button type="button" class="btn btn-ce eq-final-cta-btn" onclick="openEqLeadModal()">Обсудить задачу с технологом</button></div></div></section>
+
 </main>
 
 <div class="eq-modal" id="eqLeadModal" aria-hidden="true">
@@ -348,6 +441,13 @@ document.getElementById('eqLeadModal').addEventListener('click',function(e){
 document.addEventListener('keydown',function(e){
   if(e.key==='Escape'){closeEqLeadModal();}
 });
+</script>
+<script>
+(function(){
+  var tabs=[].slice.call(document.querySelectorAll('.ib-sym-tab'));
+  function sel(t){tabs.forEach(function(x){var on=x===t;x.setAttribute('aria-selected',on?'true':'false');x.tabIndex=on?0:-1;document.getElementById(x.getAttribute('aria-controls')).hidden=!on;});}
+  tabs.forEach(function(t,i){t.addEventListener('click',function(){sel(t)});t.addEventListener('keydown',function(e){var k=e.key==='ArrowDown'||e.key==='ArrowRight'?1:e.key==='ArrowUp'||e.key==='ArrowLeft'?-1:0;if(k){e.preventDefault();var n=tabs[(i+k+tabs.length)%tabs.length];n.focus();sel(n);}});});
+})();
 </script>
 </body>
 </html>

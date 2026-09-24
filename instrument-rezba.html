@@ -12,7 +12,7 @@
 <meta property="og:title" content="Резьбообработка на ЧПУ: метчик, резьбофреза или пластина | Механит"/>
 <meta property="og:description" content="Чем нарезать резьбу на станке с ЧПУ: метчик, резьбовая фреза или резьбовая пластина. Стартовые режимы по материалам и причины брака резьбы."/>
 <meta property="og:url" content="https://mehanit.ru/instrument-rezba.html"/>
-<meta property="og:image" content="https://mehanit.ru/module-banners/complex.jpeg"/>
+<meta property="og:image" content="https://mehanit.ru/instrument-assets/op-threading.jpg"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <script type="application/ld+json">
@@ -233,6 +233,7 @@ button.eq-scenario{border:1px solid var(--line);text-align:left;width:100%;font:
 </style>
 <link rel="stylesheet" href="site-shell.css"/>
 <link rel="stylesheet" href="industry-solutions.css"/>
+<link rel="stylesheet" href="instrument-block.css"/>
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -269,17 +270,109 @@ button.eq-scenario{border:1px solid var(--line);text-align:left;width:100%;font:
 <body>
 <header></header>
 <main>
-<nav class="ind-crumbs" aria-label="Хлебные крошки"><div class="wrap"><ol><li><a href="index.html">Главная</a></li><li><a href="production-equipment.html">Инструмент и оснастка</a></li><li aria-current="page">Резьбообработка</li></ol></div></nav>
-<section class="sol-hero tl-hero"><div class="wrap"><div class="eq-hero-top tl-hero-grid"><div class="tl-hero-copy"><div class="tl-eyebrow">Резьбообработка</div><h1 class="sol-title"><span class="title-row"><span class="title-dash"></span><span class="title-text">Резьбообработка: метчики, резьбовые фрезы и пластины</span></span></h1><p class="tl-lead">Резьба — последняя операция на детали, в которую уже вложены часы обработки. Поэтому способ выбирают по риску: сломанный метчик в глухом отверстии обычно означает потерю детали.</p><div class="tl-actions"><button type="button" class="btn btn-ce tl-btn" onclick="openEqLeadModal()">Обсудить задачу с технологом</button><a class="tl-link" href="production-calculators.html">Калькуляторы режимов →</a></div></div><aside class="tl-brief"><div class="tl-brief-label">Что прислать для подбора</div><ol class="tl-brief-list"><li>Чертёж или 3D-модель детали<span>PDF, DWG, STEP</span></li><li>Материал и твёрдость</li><li>Станок, стойка ЧПУ и конус шпинделя</li><li>Партия и нужная стойкость</li><li>Текущий инструмент и режимы<span>если операция уже идёт</span></li></ol><p class="tl-brief-note">Технолог ответит в течение рабочего дня.</p></aside></div></div></section>
-<section class="eq-section"><div class="wrap"><h2 class="eq-h2">Что определяет результат</h2><div class="tl-factors"><div class="tl-factor"><small>01</small><h3>Способ обработки</h3><p>Метчик — быстро и дёшево на сквозных отверстиях и мягких материалах. Резьбофреза — безопаснее, управляет размером и работает в глухих отверстиях и твёрдых материалах.</p></div><div class="tl-factor"><small>02</small><h3>Подготовка отверстия</h3><p>Диаметр под резьбу определяет высоту профиля и нагрузку на инструмент: заниженный диаметр ломает метчики.</p></div><div class="tl-factor"><small>03</small><h3>Жёсткость и синхронизация</h3><p>Жёсткое нарезание требует синхронизации подачи и оборотов; при её отсутствии нужен компенсирующий патрон.</p></div><div class="tl-factor"><small>04</small><h3>Отвод стружки</h3><p>Для глухих отверстий — метчик со спиральной канавкой, для сквозных — с подточкой, выталкивающей стружку вперёд.</p></div></div></div></section>
-<section class="eq-section" id="regimes"><div class="wrap"><h2 class="eq-h2">Стартовые режимы по материалам</h2><p class="eq-lede">Диапазоны — стартовые ориентиры для твердосплавного инструмента с покрытием. Рабочие значения берутся из каталога конкретного инструмента, окончательные — после пробной детали на вашем станке.</p><div class="op-table-wrap"><table class="op-table"><thead><tr><th>Материал</th><th>Скорость резания Vc</th><th>Подача</th><th>Глубина и примечания</th></tr></thead><tbody><tr><td>Стали</td><td>метчик 8–30 м/мин · фреза 80–180 м/мин</td><td>шаг резьбы</td><td>резьбофреза при глубине от 2,5×D</td></tr><tr><td>Нержавеющие стали</td><td>метчик 5–15 м/мин · фреза 60–130 м/мин</td><td>шаг резьбы</td><td>метчик с покрытием, СОЖ обязательна</td></tr><tr><td>Чугун</td><td>метчик 10–30 м/мин · фреза 80–160 м/мин</td><td>шаг резьбы</td><td>сухая обработка допустима</td></tr><tr><td>Алюминий</td><td>метчик 20–60 м/мин · фреза 150–400 м/мин</td><td>шаг резьбы</td><td>спиральная канавка, риск налипания</td></tr><tr><td>Титан и жаропрочные</td><td>метчик 4–10 м/мин · фреза 30–70 м/мин</td><td>шаг резьбы</td><td>только резьбофреза на глубоких отверстиях</td></tr><tr><td>Закалённые стали</td><td>фреза 40–90 м/мин</td><td>шаг резьбы</td><td>метчик не применяется</td></tr></tbody></table></div><a class="tl-more" href="production-calculators.html">Посчитать обороты, подачу и мощность →</a></div></section>
-<section class="eq-section"><div class="wrap"><h2 class="eq-h2">Как подбираем инструмент</h2><ol class="op-steps"><li><small>01</small><h3>Разбор резьбы</h3><p>Тип, шаг, класс точности, глухая или сквозная, глубина в диаметрах, материал.</p></li><li><small>02</small><h3>Выбор способа</h3><p>Метчик, резьбофреза или резьбовая пластина — по риску, партии и оборудованию.</p></li><li><small>03</small><h3>Отверстие под резьбу</h3><p>Диаметр, фаска, глубина сверления с запасом.</p></li><li><small>04</small><h3>Инструмент и патрон</h3><p>Геометрия и покрытие под материал, патрон под способ нарезания.</p></li><li><small>05</small><h3>Проверка на детали</h3><p>Калибр-пробка, контроль момента и стойкости.</p></li></ol></div></section>
-<section class="eq-section"><div class="wrap"><h2 class="eq-h2">Типовые проблемы и причины</h2><div class="op-table-wrap"><table class="op-table op-table-problems"><thead><tr><th>Что видим</th><th>Вероятная причина</th><th>Что менять</th></tr></thead><tbody><tr><td>Метчик ломается в глухом отверстии</td><td>Стружка в отверстии, малая глубина сверления, занижен диаметр</td><td>Спиральная канавка, увеличить глубину и диаметр отверстия, перейти на резьбофрезу</td></tr><tr><td>Резьба «широкая», калибр проходит свободно</td><td>Изношенный метчик, увод, вибрация</td><td>Сменить инструмент, проверить соосность и патрон</td></tr><tr><td>Резьба не проходит калибром</td><td>Занижен диаметр отверстия, наволакивание материала</td><td>Пересчитать диаметр, применить покрытие и СОЖ под материал</td></tr><tr><td>Рваный профиль</td><td>Низкая скорость на вязком материале, тупая кромка</td><td>Поднять Vc, сменить кромку, проверить подвод СОЖ</td></tr><tr><td>Не выдерживается глубина резьбы</td><td>Ошибка в цикле, компенсирующий патрон на жёстком нарезании</td><td>Проверить цикл и синхронизацию, выбрать патрон под способ</td></tr></tbody></table></div></div></section>
-<section class="eq-section"><div class="wrap"><h2 class="eq-h2">Бренды под эту операцию</h2><p class="eq-lede">Конкретную позицию подбирает технолог под материал и станок.</p><div class="op-chips op-chips-links"><a href="brand-vargus.html">Vargus</a><a href="brand-vergnano.html">Vergnano</a><a href="brand-ilix.html">ILIX</a><a href="brand-palbit.html">Palbit</a><a href="brand-macro-tools.html">MACRO TOOLS</a></div><a class="tl-more" href="production-cutting-tools.html">Все бренды по направлениям →</a></div></section>
-<section class="eq-section"><div class="wrap"><h2 class="eq-h2">Обработка по материалам</h2><div class="op-links"><a href="obrabotka-stali.html"><b>Конструкционные и легированные стали</b><span>Режимы, сложности, что выбирать</span></a><a href="obrabotka-nerzhaveyushchey-stali.html"><b>Нержавеющие и жаропрочные аустенитные стали</b><span>Режимы, сложности, что выбирать</span></a><a href="obrabotka-chuguna.html"><b>Серый и высокопрочный чугун</b><span>Режимы, сложности, что выбирать</span></a><a href="obrabotka-alyuminiya.html"><b>Алюминиевые и медные сплавы</b><span>Режимы, сложности, что выбирать</span></a><a href="obrabotka-titana.html"><b>Титановые и никелевые жаропрочные сплавы</b><span>Режимы, сложности, что выбирать</span></a><a href="obrabotka-zakalennoy-stali.html"><b>Закалённые стали 45–62 HRC</b><span>Режимы, сложности, что выбирать</span></a></div></div></section>
-<section class="eq-section"><div class="wrap"><h2 class="eq-h2">Разборы технологов</h2><div class="op-links"><a href="press-kak-podobrat-oborudovanie-po-chertezhu.html"><b>Как подобрать оборудование по чертежу детали</b><span>Пресс-центр</span></a><a href="equipment-milling.html"><b>Фрезерные станки</b><span>Каталог оборудования</span></a></div></div></section>
-<section class="eq-section" id="faq"><div class="wrap"><h2 class="eq-h2">Частые вопросы</h2><div class="faq-list"><div class="faqi"><button class="faqq" onclick="toggleFaq(this)">Метчик или резьбофреза?<span class="ic">+</span></button><div class="faqa"><p>Метчик дешевле и быстрее на сквозных отверстиях и мягких материалах. Резьбофреза безопаснее в глухих отверстиях, на твёрдых материалах и на дорогих деталях: при поломке она не остаётся в отверстии и позволяет корректировать размер.</p></div></div><div class="faqi"><button class="faqq" onclick="toggleFaq(this)">Какой диаметр отверстия под резьбу?<span class="ic">+</span></button><div class="faqa"><p>Обычно 60–75 % высоты профиля. Чем выше процент, тем прочнее резьба и тем выше нагрузка на инструмент; для вязких материалов берут ближе к нижней границе.</p></div></div><div class="faqi"><button class="faqq" onclick="toggleFaq(this)">Нужен ли компенсирующий патрон?<span class="ic">+</span></button><div class="faqa"><p>Если станок не обеспечивает жёсткое нарезание с синхронизацией, компенсирующий патрон обязателен — иначе метчик ломается или резьба уходит по шагу.</p></div></div></div></div></section>
-<section class="eq-section"><div class="wrap"><div class="eq-final-cta"><div><h2>Нужен инструмент под вашу деталь?</h2><p>Пришлите чертёж, материал, станок и партию — технолог подберёт инструмент и посчитает стоимость обработки детали.</p></div><button type="button" class="btn btn-ce eq-final-cta-btn" onclick="openEqLeadModal()">Обсудить задачу с технологом</button></div></div></section>
+<section class="ib-hero">
+  <div class="ib-hero-media"><img src="instrument-assets/op-threading-wide.jpg" alt="Внутренняя резьба в разрезе детали, резьбовая фреза и метчик" fetchpriority="high"/></div>
+  <div class="wrap ib-hero-inner">
+    <nav class="ind-crumbs" aria-label="Хлебные крошки"><div class="wrap"><ol><li><a href="index.html">Главная</a></li><li><a href="production-equipment.html">Инструмент и оснастка</a></li><li aria-current="page">Резьбообработка</li></ol></div></nav>
+    <h1>Резьбообработка: метчики, резьбовые фрезы и пластины</h1>
+    <p class="ib-sub">Резьба — последняя операция на детали, в которую уже вложены часы обработки. Поэтому способ выбирают по риску: сломанный метчик в глухом отверстии обычно означает потерю детали.</p>
+    <div class="ib-actions">
+      <button type="button" class="btn btn-ce" onclick="openEqLeadModal()">Обсудить задачу с технологом</button>
+      <a class="ib-textlink" href="#regimes">Стартовые режимы</a>
+    </div>
+  </div>
+</section>
+
+<section class="ib-section">
+<div class="wrap">
+<h2 class="eq-h2">Что определяет результат</h2>
+<div class="ib-factors">
+  <div class="ib-factor"><small>01</small><h3>Способ обработки</h3><p>Метчик — быстро и дёшево на сквозных отверстиях и мягких материалах. Резьбофреза — безопаснее, управляет размером и работает в глухих отверстиях и твёрдых материалах.</p></div>
+  <div class="ib-factor"><small>02</small><h3>Подготовка отверстия</h3><p>Диаметр под резьбу определяет высоту профиля и нагрузку на инструмент: заниженный диаметр ломает метчики.</p></div>
+  <div class="ib-factor"><small>03</small><h3>Жёсткость и синхронизация</h3><p>Жёсткое нарезание требует синхронизации подачи и оборотов; при её отсутствии нужен компенсирующий патрон.</p></div>
+  <div class="ib-factor"><small>04</small><h3>Отвод стружки</h3><p>Для глухих отверстий — метчик со спиральной канавкой, для сквозных — с подточкой, выталкивающей стружку вперёд.</p></div>
+</div>
+</div>
+</section>
+
+<section class="ib-section tight" id="regimes">
+<div class="wrap">
+<h2 class="eq-h2">Стартовые режимы по материалам</h2>
+<p class="eq-lede">Диапазоны — стартовые ориентиры для твердосплавного инструмента с покрытием. Рабочие значения берутся из каталога конкретного инструмента, окончательные — после пробной детали на вашем станке.</p>
+<div class="ib-modes"><table><thead><tr><th>Материал</th><th>Скорость резания Vc</th><th>Подача</th><th>Глубина и примечания</th></tr></thead><tbody>
+<tr><td><b class="iso-p">P</b>Стали</td><td>метчик 8–30 м/мин · фреза 80–180 м/мин</td><td>шаг резьбы</td><td>резьбофреза при глубине от 2,5×D</td></tr>
+<tr><td><b class="iso-m">M</b>Нержавеющие стали</td><td>метчик 5–15 м/мин · фреза 60–130 м/мин</td><td>шаг резьбы</td><td>метчик с покрытием, СОЖ обязательна</td></tr>
+<tr><td><b class="iso-k">K</b>Чугун</td><td>метчик 10–30 м/мин · фреза 80–160 м/мин</td><td>шаг резьбы</td><td>сухая обработка допустима</td></tr>
+<tr><td><b class="iso-n">N</b>Алюминий</td><td>метчик 20–60 м/мин · фреза 150–400 м/мин</td><td>шаг резьбы</td><td>спиральная канавка, риск налипания</td></tr>
+<tr><td><b class="iso-s">S</b>Титан и жаропрочные</td><td>метчик 4–10 м/мин · фреза 30–70 м/мин</td><td>шаг резьбы</td><td>только резьбофреза на глубоких отверстиях</td></tr>
+<tr><td><b class="iso-h">H</b>Закалённые стали</td><td>фреза 40–90 м/мин</td><td>шаг резьбы</td><td>метчик не применяется</td></tr>
+</tbody></table></div>
+<div class="ib-modes-note"><a class="ib-textlink" href="production-calculators.html">Посчитать обороты, подачу и мощность</a></div>
+<div class="ib-iso" style="margin-top:18px"><span class="ib-iso-label">Подробнее по материалу</span><a href="obrabotka-stali.html"><b class="iso-p">P</b>Стали</a><a href="obrabotka-nerzhaveyushchey-stali.html"><b class="iso-m">M</b>Нержавеющие</a><a href="obrabotka-chuguna.html"><b class="iso-k">K</b>Чугун</a><a href="obrabotka-alyuminiya.html"><b class="iso-n">N</b>Алюминий и медь</a><a href="obrabotka-titana.html"><b class="iso-s">S</b>Титан и жаропрочные</a><a href="obrabotka-zakalennoy-stali.html"><b class="iso-h">H</b>Закалённые</a></div>
+</div>
+</section>
+
+<section class="ib-section tight" id="problems">
+<div class="wrap">
+<h2 class="eq-h2">Типовые проблемы и причины</h2>
+<p class="eq-lede">Выберите, что видите на детали или на кромке, — причина и что менять.</p>
+<div class="ib-sym">
+<div class="ib-sym-list" role="tablist" aria-label="Типовые проблемы">
+  <button class="ib-sym-tab" type="button" role="tab" id="p-tab-0" aria-controls="p-0" aria-selected="true"><small>01</small>Метчик ломается в глухом отверстии</button>
+  <button class="ib-sym-tab" type="button" role="tab" id="p-tab-1" aria-controls="p-1" aria-selected="false" tabindex="-1"><small>02</small>Резьба «широкая», калибр проходит свободно</button>
+  <button class="ib-sym-tab" type="button" role="tab" id="p-tab-2" aria-controls="p-2" aria-selected="false" tabindex="-1"><small>03</small>Резьба не проходит калибром</button>
+  <button class="ib-sym-tab" type="button" role="tab" id="p-tab-3" aria-controls="p-3" aria-selected="false" tabindex="-1"><small>04</small>Рваный профиль</button>
+  <button class="ib-sym-tab" type="button" role="tab" id="p-tab-4" aria-controls="p-4" aria-selected="false" tabindex="-1"><small>05</small>Не выдерживается глубина резьбы</button>
+</div>
+<div>
+  <div class="ib-sym-panel" id="p-0" role="tabpanel" aria-labelledby="p-tab-0">
+    <div class="ib-sym-img"><img src="instrument-assets/op-threading.jpg" alt="Метчик ломается в глухом отверстии" loading="lazy"/></div>
+    <div class="ib-sym-text"><h3>Метчик ломается в глухом отверстии</h3><div class="ib-sym-kicker">Вероятная причина</div><ul><li>Стружка в отверстии</li><li>малая глубина сверления</li><li>занижен диаметр</li></ul><div class="ib-sym-fix"><b>Что менять</b>Спиральная канавка, увеличить глубину и диаметр отверстия, перейти на резьбофрезу</div></div>
+  </div>
+  <div class="ib-sym-panel" id="p-1" role="tabpanel" aria-labelledby="p-tab-1" hidden>
+    <div class="ib-sym-img"><img src="instrument-assets/op-threading.jpg" alt="Резьба «широкая», калибр проходит свободно" loading="lazy"/></div>
+    <div class="ib-sym-text"><h3>Резьба «широкая», калибр проходит свободно</h3><div class="ib-sym-kicker">Вероятная причина</div><ul><li>Изношенный метчик</li><li>увод</li><li>вибрация</li></ul><div class="ib-sym-fix"><b>Что менять</b>Сменить инструмент, проверить соосность и патрон</div></div>
+  </div>
+  <div class="ib-sym-panel" id="p-2" role="tabpanel" aria-labelledby="p-tab-2" hidden>
+    <div class="ib-sym-img"><img src="instrument-assets/op-threading.jpg" alt="Резьба не проходит калибром" loading="lazy"/></div>
+    <div class="ib-sym-text"><h3>Резьба не проходит калибром</h3><div class="ib-sym-kicker">Вероятная причина</div><ul><li>Занижен диаметр отверстия</li><li>наволакивание материала</li></ul><div class="ib-sym-fix"><b>Что менять</b>Пересчитать диаметр, применить покрытие и СОЖ под материал</div></div>
+  </div>
+  <div class="ib-sym-panel" id="p-3" role="tabpanel" aria-labelledby="p-tab-3" hidden>
+    <div class="ib-sym-img"><img src="instrument-assets/defect-bue.jpg" alt="Рваный профиль" loading="lazy"/></div>
+    <div class="ib-sym-text"><h3>Рваный профиль</h3><div class="ib-sym-kicker">Вероятная причина</div><ul><li>Низкая скорость на вязком материале</li><li>тупая кромка</li></ul><div class="ib-sym-fix"><b>Что менять</b>Поднять Vc, сменить кромку, проверить подвод СОЖ</div></div>
+  </div>
+  <div class="ib-sym-panel" id="p-4" role="tabpanel" aria-labelledby="p-tab-4" hidden>
+    <div class="ib-sym-img"><img src="instrument-assets/op-threading.jpg" alt="Не выдерживается глубина резьбы" loading="lazy"/></div>
+    <div class="ib-sym-text"><h3>Не выдерживается глубина резьбы</h3><div class="ib-sym-kicker">Вероятная причина</div><ul><li>Ошибка в цикле</li><li>компенсирующий патрон на жёстком нарезании</li></ul><div class="ib-sym-fix"><b>Что менять</b>Проверить цикл и синхронизацию, выбрать патрон под способ</div></div>
+  </div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="ib-section tight">
+<div class="wrap">
+<div class="ib-head"><div><h2 class="eq-h2">Бренды под эту операцию</h2><p class="eq-lede">Конкретную позицию подбирает технолог под материал и станок.</p></div><a class="ib-more" href="production-cutting-tools.html">Все бренды по направлениям →</a></div>
+<div class="ib-logos-row"><a href="brand-vargus.html" title="Vargus"><img src="tool-logos/vargus.png" alt="Vargus" loading="lazy"/></a><a href="brand-vergnano.html" title="Vergnano"><img src="tool-logos/vergnano.png" alt="Vergnano" loading="lazy"/></a><a href="brand-ilix.html" title="ILIX"><img src="tool-logos/ilix.png" alt="ILIX" loading="lazy"/></a><a href="brand-palbit.html" title="Palbit"><img src="tool-logos/palbit.png" alt="Palbit" loading="lazy"/></a><a href="brand-macro-tools.html" title="MACRO TOOLS"><img src="tool-logos/macro-tools.png" alt="MACRO TOOLS" loading="lazy"/></a></div>
+</div>
+</section>
+
+<section class="ib-section tight">
+<div class="wrap">
+<h2 class="eq-h2">Разборы технологов</h2>
+<div class="ib-articles"><a href="press-kak-podobrat-oborudovanie-po-chertezhu.html"><small>Пресс-центр</small><b>Как подобрать оборудование по чертежу детали</b></a><a href="equipment-milling.html"><small>Каталог оборудования</small><b>Фрезерные станки</b></a></div>
+</div>
+</section>
+
+<section class="ib-section tight" id="faq">
+<div class="wrap ib-faq">
+<h2 class="eq-h2">Частые вопросы</h2>
+<div class="faq-list"><div class="faqi"><button class="faqq" onclick="toggleFaq(this)">Метчик или резьбофреза?<span class="ic">+</span></button><div class="faqa"><p>Метчик дешевле и быстрее на сквозных отверстиях и мягких материалах. Резьбофреза безопаснее в глухих отверстиях, на твёрдых материалах и на дорогих деталях: при поломке она не остаётся в отверстии и позволяет корректировать размер.</p></div></div><div class="faqi"><button class="faqq" onclick="toggleFaq(this)">Какой диаметр отверстия под резьбу?<span class="ic">+</span></button><div class="faqa"><p>Обычно 60–75 % высоты профиля. Чем выше процент, тем прочнее резьба и тем выше нагрузка на инструмент; для вязких материалов берут ближе к нижней границе.</p></div></div><div class="faqi"><button class="faqq" onclick="toggleFaq(this)">Нужен ли компенсирующий патрон?<span class="ic">+</span></button><div class="faqa"><p>Если станок не обеспечивает жёсткое нарезание с синхронизацией, компенсирующий патрон обязателен — иначе метчик ломается или резьба уходит по шагу.</p></div></div></div>
+</div>
+</section>
+
+<section class="eq-section" id="final-cta"><div class="wrap"><div class="eq-final-cta"><div><h2>Нужен инструмент под вашу деталь?</h2><p>Пришлите чертёж, материал, станок и партию — технолог подберёт инструмент и посчитает стоимость обработки детали.</p></div><button type="button" class="btn btn-ce eq-final-cta-btn" onclick="openEqLeadModal()">Обсудить задачу с технологом</button></div></div></section>
+
 </main>
 
 <div class="eq-modal" id="eqLeadModal" aria-hidden="true">
@@ -348,6 +441,13 @@ document.getElementById('eqLeadModal').addEventListener('click',function(e){
 document.addEventListener('keydown',function(e){
   if(e.key==='Escape'){closeEqLeadModal();}
 });
+</script>
+<script>
+(function(){
+  var tabs=[].slice.call(document.querySelectorAll('.ib-sym-tab'));
+  function sel(t){tabs.forEach(function(x){var on=x===t;x.setAttribute('aria-selected',on?'true':'false');x.tabIndex=on?0:-1;document.getElementById(x.getAttribute('aria-controls')).hidden=!on;});}
+  tabs.forEach(function(t,i){t.addEventListener('click',function(){sel(t)});t.addEventListener('keydown',function(e){var k=e.key==='ArrowDown'||e.key==='ArrowRight'?1:e.key==='ArrowUp'||e.key==='ArrowLeft'?-1:0;if(k){e.preventDefault();var n=tabs[(i+k+tabs.length)%tabs.length];n.focus();sel(n);}});});
+})();
 </script>
 </body>
 </html>

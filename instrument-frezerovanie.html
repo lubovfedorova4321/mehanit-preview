@@ -12,7 +12,7 @@
 <meta property="og:title" content="Инструмент для фрезерования на ЧПУ: фрезы и режимы | Механит"/>
 <meta property="og:description" content="Подбор фрез под деталь и станок: число зубьев, вылет, стратегия врезания, стартовые режимы по материалам, причины вибраций и выкрашивания."/>
 <meta property="og:url" content="https://mehanit.ru/instrument-frezerovanie.html"/>
-<meta property="og:image" content="https://mehanit.ru/module-banners/complex.jpeg"/>
+<meta property="og:image" content="https://mehanit.ru/instrument-assets/op-milling.jpg"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <script type="application/ld+json">
@@ -233,6 +233,7 @@ button.eq-scenario{border:1px solid var(--line);text-align:left;width:100%;font:
 </style>
 <link rel="stylesheet" href="site-shell.css"/>
 <link rel="stylesheet" href="industry-solutions.css"/>
+<link rel="stylesheet" href="instrument-block.css"/>
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -269,17 +270,109 @@ button.eq-scenario{border:1px solid var(--line);text-align:left;width:100%;font:
 <body>
 <header></header>
 <main>
-<nav class="ind-crumbs" aria-label="Хлебные крошки"><div class="wrap"><ol><li><a href="index.html">Главная</a></li><li><a href="production-equipment.html">Инструмент и оснастка</a></li><li aria-current="page">Фрезерование</li></ol></div></nav>
-<section class="sol-hero tl-hero"><div class="wrap"><div class="eq-hero-top tl-hero-grid"><div class="tl-hero-copy"><div class="tl-eyebrow">Фрезерование</div><h1 class="sol-title"><span class="title-row"><span class="title-dash"></span><span class="title-text">Инструмент и режимы для фрезерования на станках с ЧПУ</span></span></h1><p class="tl-lead">Во фрезеровании результат определяет связка «станок — оправка — фреза — стратегия». Одна и та же фреза на разных вылетах и стратегиях даёт разную стойкость и разное качество поверхности.</p><div class="tl-actions"><button type="button" class="btn btn-ce tl-btn" onclick="openEqLeadModal()">Обсудить задачу с технологом</button><a class="tl-link" href="production-calculators.html">Калькуляторы режимов →</a></div></div><aside class="tl-brief"><div class="tl-brief-label">Что прислать для подбора</div><ol class="tl-brief-list"><li>Чертёж или 3D-модель детали<span>PDF, DWG, STEP</span></li><li>Материал и твёрдость</li><li>Станок, стойка ЧПУ и конус шпинделя</li><li>Партия и нужная стойкость</li><li>Текущий инструмент и режимы<span>если операция уже идёт</span></li></ol><p class="tl-brief-note">Технолог ответит в течение рабочего дня.</p></aside></div></div></section>
-<section class="eq-section"><div class="wrap"><h2 class="eq-h2">Что определяет результат</h2><div class="tl-factors"><div class="tl-factor"><small>01</small><h3>Вылет и оправка</h3><p>Жёсткость падает пропорционально кубу вылета. Термооправка и минимальный вылет часто дают больше, чем переход на дорогую фрезу.</p></div><div class="tl-factor"><small>02</small><h3>Толщина стружки</h3><p>При малом перекрытии фреза «трёт», а не режет. Подачу на зуб пересчитывают через среднюю толщину стружки.</p></div><div class="tl-factor"><small>03</small><h3>Стратегия врезания</h3><p>Врезание по спирали или рампой вместо вертикального, попутное фрезерование, трохоидальные траектории при полном пазе.</p></div><div class="tl-factor"><small>04</small><h3>Число зубьев и шаг</h3><p>Крупный шаг — для нежёстких систем и вязких материалов, мелкий — для чугуна и жёстких установок.</p></div></div></div></section>
-<section class="eq-section" id="regimes"><div class="wrap"><h2 class="eq-h2">Стартовые режимы по материалам</h2><p class="eq-lede">Диапазоны — стартовые ориентиры для твердосплавного инструмента с покрытием. Рабочие значения берутся из каталога конкретного инструмента, окончательные — после пробной детали на вашем станке.</p><div class="op-table-wrap"><table class="op-table"><thead><tr><th>Материал</th><th>Скорость резания Vc</th><th>Подача</th><th>Глубина и примечания</th></tr></thead><tbody><tr><td>Стали</td><td>150–300 м/мин</td><td>0,08–0,25 мм/зуб</td><td>ap до 1,5×D при ae 10 % D</td></tr><tr><td>Нержавеющие стали</td><td>80–180 м/мин</td><td>0,06–0,20 мм/зуб</td><td>снижать ae, держать подачу</td></tr><tr><td>Чугун</td><td>120–250 м/мин</td><td>0,10–0,30 мм/зуб</td><td>без СОЖ на чистовых</td></tr><tr><td>Алюминий</td><td>500–3000 м/мин</td><td>0,05–0,30 мм/зуб</td><td>фрезы с полированной канавкой</td></tr><tr><td>Титан и жаропрочные</td><td>30–70 м/мин</td><td>0,05–0,15 мм/зуб</td><td>СОЖ под давлением</td></tr><tr><td>Закалённые стали</td><td>60–150 м/мин</td><td>0,03–0,10 мм/зуб</td><td>малый вылет, жёсткая оправка</td></tr></tbody></table></div><a class="tl-more" href="production-calculators.html">Посчитать обороты, подачу и мощность →</a></div></section>
-<section class="eq-section"><div class="wrap"><h2 class="eq-h2">Как подбираем инструмент</h2><ol class="op-steps"><li><small>01</small><h3>Разбор детали</h3><p>Материал, припуск, геометрия карманов и стенок, требуемая точность и шероховатость.</p></li><li><small>02</small><h3>Диаметр и вылет</h3><p>Наибольший диаметр и наименьший вылет, которые допускает деталь и станок.</p></li><li><small>03</small><h3>Тип фрезы</h3><p>Сборная с пластинами на черновых, цельнотвердосплавная на чистовых и мелких элементах.</p></li><li><small>04</small><h3>Режимы и стратегия</h3><p>ae, ap, fz и траектории — вместе, а не по отдельности.</p></li><li><small>05</small><h3>Проверка на детали</h3><p>Контроль вибрации, качества поверхности и стойкости, корректировка.</p></li></ol></div></section>
-<section class="eq-section"><div class="wrap"><h2 class="eq-h2">Типовые проблемы и причины</h2><div class="op-table-wrap"><table class="op-table op-table-problems"><thead><tr><th>Что видим</th><th>Вероятная причина</th><th>Что менять</th></tr></thead><tbody><tr><td>Вибрация, «ёлочка» на стенке</td><td>Большой вылет, слабое закрепление детали, неподходящий шаг зубьев</td><td>Уменьшить вылет, взять фрезу с неравномерным шагом, снизить ae, поднять fz</td></tr><tr><td>Быстрое выкрашивание на входе</td><td>Удар при врезании, лишний припуск, изношенная кромка</td><td>Врезание по дуге или рампой, стабилизировать припуск, снизить fz на входе</td></tr><tr><td>Фреза «трёт», стойкость низкая</td><td>Слишком малая толщина стружки при малом ae</td><td>Пересчитать fz через среднюю толщину стружки, увеличить подачу</td></tr><tr><td>Заусенец на выходе</td><td>Тупая кромка, неверное направление фрезерования, отсутствие фаски</td><td>Попутное фрезерование, свежая кромка, снятие фаски отдельным проходом</td></tr><tr><td>Налипание и наросты (алюминий)</td><td>Низкая скорость, недостаточный отвод стружки</td><td>Фреза с полированной канавкой и большим передним углом, обдув или СОЖ, повышение Vc</td></tr></tbody></table></div></div></section>
-<section class="eq-section"><div class="wrap"><h2 class="eq-h2">Бренды под эту операцию</h2><p class="eq-lede">Конкретную позицию подбирает технолог под материал и станок.</p><div class="op-chips op-chips-links"><a href="brand-fresal.html">Fresal</a><a href="brand-helion.html">Helion</a><a href="brand-palbit.html">Palbit</a><a href="brand-nanoloy.html">Nanoloy</a><a href="brand-likon.html">Likon</a><a href="brand-omap.html">OMAP</a><a href="brand-derek.html">Derek</a><a href="brand-macro-tools.html">MACRO TOOLS</a></div><a class="tl-more" href="production-cutting-tools.html">Все бренды по направлениям →</a></div></section>
-<section class="eq-section"><div class="wrap"><h2 class="eq-h2">Обработка по материалам</h2><div class="op-links"><a href="obrabotka-stali.html"><b>Конструкционные и легированные стали</b><span>Режимы, сложности, что выбирать</span></a><a href="obrabotka-nerzhaveyushchey-stali.html"><b>Нержавеющие и жаропрочные аустенитные стали</b><span>Режимы, сложности, что выбирать</span></a><a href="obrabotka-chuguna.html"><b>Серый и высокопрочный чугун</b><span>Режимы, сложности, что выбирать</span></a><a href="obrabotka-alyuminiya.html"><b>Алюминиевые и медные сплавы</b><span>Режимы, сложности, что выбирать</span></a><a href="obrabotka-titana.html"><b>Титановые и никелевые жаропрочные сплавы</b><span>Режимы, сложности, что выбирать</span></a><a href="obrabotka-zakalennoy-stali.html"><b>Закалённые стали 45–62 HRC</b><span>Режимы, сложности, что выбирать</span></a></div></div></section>
-<section class="eq-section"><div class="wrap"><h2 class="eq-h2">Разборы технологов</h2><div class="op-links"><a href="press-kakie-oboroty-shpindelya-nuzhny.html"><b>Какие обороты шпинделя нужны производству</b><span>Пресс-центр</span></a><a href="press-bt40-ili-bt50-kakoy-konus-shpindelya-vybrat.html"><b>BT40 или BT50: какой конус шпинделя выбрать</b><span>Пресс-центр</span></a><a href="press-kak-sokratit-kolichestvo-ustanovov.html"><b>Как сократить количество установов</b><span>Пресс-центр</span></a><a href="equipment-milling.html"><b>Фрезерные станки</b><span>Каталог оборудования</span></a></div></div></section>
-<section class="eq-section" id="faq"><div class="wrap"><h2 class="eq-h2">Частые вопросы</h2><div class="faq-list"><div class="faqi"><button class="faqq" onclick="toggleFaq(this)">Сколько зубьев должно быть у фрезы?<span class="ic">+</span></button><div class="faqa"><p>Чем ниже жёсткость системы и вязче материал, тем меньше зубьев в резе: на нежёстких установках и в нержавеющих сталях берут крупный шаг, на чугуне и жёстких деталях — мелкий.</p></div></div><div class="faqi"><button class="faqq" onclick="toggleFaq(this)">Что важнее — скорость или подача?<span class="ic">+</span></button><div class="faqa"><p>Скорость резания влияет на износ, подача — на производительность и на то, режет ли инструмент. Низкая подача при малом перекрытии изнашивает фрезу быстрее, чем высокая скорость.</p></div></div><div class="faqi"><button class="faqq" onclick="toggleFaq(this)">Нужна ли термооправка?<span class="ic">+</span></button><div class="faqa"><p>Она даёт меньшее биение и жёсткость на вылете. Для чистовых операций и высоких оборотов это часто решающий фактор, для черновых — второстепенный.</p></div></div></div></div></section>
-<section class="eq-section"><div class="wrap"><div class="eq-final-cta"><div><h2>Нужен инструмент под вашу деталь?</h2><p>Пришлите чертёж, материал, станок и партию — технолог подберёт инструмент и посчитает стоимость обработки детали.</p></div><button type="button" class="btn btn-ce eq-final-cta-btn" onclick="openEqLeadModal()">Обсудить задачу с технологом</button></div></div></section>
+<section class="ib-hero">
+  <div class="ib-hero-media"><img src="instrument-assets/op-milling-wide.jpg" alt="Фрезерование кармана концевой фрезой" fetchpriority="high"/></div>
+  <div class="wrap ib-hero-inner">
+    <nav class="ind-crumbs" aria-label="Хлебные крошки"><div class="wrap"><ol><li><a href="index.html">Главная</a></li><li><a href="production-equipment.html">Инструмент и оснастка</a></li><li aria-current="page">Фрезерование</li></ol></div></nav>
+    <h1>Инструмент и режимы для фрезерования на станках с ЧПУ</h1>
+    <p class="ib-sub">Во фрезеровании результат определяет связка «станок — оправка — фреза — стратегия». Одна и та же фреза на разных вылетах и стратегиях даёт разную стойкость и разное качество поверхности.</p>
+    <div class="ib-actions">
+      <button type="button" class="btn btn-ce" onclick="openEqLeadModal()">Обсудить задачу с технологом</button>
+      <a class="ib-textlink" href="#regimes">Стартовые режимы</a>
+    </div>
+  </div>
+</section>
+
+<section class="ib-section">
+<div class="wrap">
+<h2 class="eq-h2">Что определяет результат</h2>
+<div class="ib-factors">
+  <div class="ib-factor"><small>01</small><h3>Вылет и оправка</h3><p>Жёсткость падает пропорционально кубу вылета. Термооправка и минимальный вылет часто дают больше, чем переход на дорогую фрезу.</p></div>
+  <div class="ib-factor"><small>02</small><h3>Толщина стружки</h3><p>При малом перекрытии фреза «трёт», а не режет. Подачу на зуб пересчитывают через среднюю толщину стружки.</p></div>
+  <div class="ib-factor"><small>03</small><h3>Стратегия врезания</h3><p>Врезание по спирали или рампой вместо вертикального, попутное фрезерование, трохоидальные траектории при полном пазе.</p></div>
+  <div class="ib-factor"><small>04</small><h3>Число зубьев и шаг</h3><p>Крупный шаг — для нежёстких систем и вязких материалов, мелкий — для чугуна и жёстких установок.</p></div>
+</div>
+</div>
+</section>
+
+<section class="ib-section tight" id="regimes">
+<div class="wrap">
+<h2 class="eq-h2">Стартовые режимы по материалам</h2>
+<p class="eq-lede">Диапазоны — стартовые ориентиры для твердосплавного инструмента с покрытием. Рабочие значения берутся из каталога конкретного инструмента, окончательные — после пробной детали на вашем станке.</p>
+<div class="ib-modes"><table><thead><tr><th>Материал</th><th>Скорость резания Vc</th><th>Подача</th><th>Глубина и примечания</th></tr></thead><tbody>
+<tr><td><b class="iso-p">P</b>Стали</td><td>150–300 м/мин</td><td>0,08–0,25 мм/зуб</td><td>ap до 1,5×D при ae 10 % D</td></tr>
+<tr><td><b class="iso-m">M</b>Нержавеющие стали</td><td>80–180 м/мин</td><td>0,06–0,20 мм/зуб</td><td>снижать ae, держать подачу</td></tr>
+<tr><td><b class="iso-k">K</b>Чугун</td><td>120–250 м/мин</td><td>0,10–0,30 мм/зуб</td><td>без СОЖ на чистовых</td></tr>
+<tr><td><b class="iso-n">N</b>Алюминий</td><td>500–3000 м/мин</td><td>0,05–0,30 мм/зуб</td><td>фрезы с полированной канавкой</td></tr>
+<tr><td><b class="iso-s">S</b>Титан и жаропрочные</td><td>30–70 м/мин</td><td>0,05–0,15 мм/зуб</td><td>СОЖ под давлением</td></tr>
+<tr><td><b class="iso-h">H</b>Закалённые стали</td><td>60–150 м/мин</td><td>0,03–0,10 мм/зуб</td><td>малый вылет, жёсткая оправка</td></tr>
+</tbody></table></div>
+<div class="ib-modes-note"><a class="ib-textlink" href="production-calculators.html">Посчитать обороты, подачу и мощность</a></div>
+<div class="ib-iso" style="margin-top:18px"><span class="ib-iso-label">Подробнее по материалу</span><a href="obrabotka-stali.html"><b class="iso-p">P</b>Стали</a><a href="obrabotka-nerzhaveyushchey-stali.html"><b class="iso-m">M</b>Нержавеющие</a><a href="obrabotka-chuguna.html"><b class="iso-k">K</b>Чугун</a><a href="obrabotka-alyuminiya.html"><b class="iso-n">N</b>Алюминий и медь</a><a href="obrabotka-titana.html"><b class="iso-s">S</b>Титан и жаропрочные</a><a href="obrabotka-zakalennoy-stali.html"><b class="iso-h">H</b>Закалённые</a></div>
+</div>
+</section>
+
+<section class="ib-section tight" id="problems">
+<div class="wrap">
+<h2 class="eq-h2">Типовые проблемы и причины</h2>
+<p class="eq-lede">Выберите, что видите на детали или на кромке, — причина и что менять.</p>
+<div class="ib-sym">
+<div class="ib-sym-list" role="tablist" aria-label="Типовые проблемы">
+  <button class="ib-sym-tab" type="button" role="tab" id="p-tab-0" aria-controls="p-0" aria-selected="true"><small>01</small>Вибрация, «ёлочка» на стенке</button>
+  <button class="ib-sym-tab" type="button" role="tab" id="p-tab-1" aria-controls="p-1" aria-selected="false" tabindex="-1"><small>02</small>Быстрое выкрашивание на входе</button>
+  <button class="ib-sym-tab" type="button" role="tab" id="p-tab-2" aria-controls="p-2" aria-selected="false" tabindex="-1"><small>03</small>Фреза «трёт», стойкость низкая</button>
+  <button class="ib-sym-tab" type="button" role="tab" id="p-tab-3" aria-controls="p-3" aria-selected="false" tabindex="-1"><small>04</small>Заусенец на выходе</button>
+  <button class="ib-sym-tab" type="button" role="tab" id="p-tab-4" aria-controls="p-4" aria-selected="false" tabindex="-1"><small>05</small>Налипание и наросты (алюминий)</button>
+</div>
+<div>
+  <div class="ib-sym-panel" id="p-0" role="tabpanel" aria-labelledby="p-tab-0">
+    <div class="ib-sym-img"><img src="instrument-assets/defect-chatter.jpg" alt="Вибрация, «ёлочка» на стенке" loading="lazy"/></div>
+    <div class="ib-sym-text"><h3>Вибрация, «ёлочка» на стенке</h3><div class="ib-sym-kicker">Вероятная причина</div><ul><li>Большой вылет</li><li>слабое закрепление детали</li><li>неподходящий шаг зубьев</li></ul><div class="ib-sym-fix"><b>Что менять</b>Уменьшить вылет, взять фрезу с неравномерным шагом, снизить ae, поднять fz</div></div>
+  </div>
+  <div class="ib-sym-panel" id="p-1" role="tabpanel" aria-labelledby="p-tab-1" hidden>
+    <div class="ib-sym-img"><img src="instrument-assets/defect-chipping.jpg" alt="Быстрое выкрашивание на входе" loading="lazy"/></div>
+    <div class="ib-sym-text"><h3>Быстрое выкрашивание на входе</h3><div class="ib-sym-kicker">Вероятная причина</div><ul><li>Удар при врезании</li><li>лишний припуск</li><li>изношенная кромка</li></ul><div class="ib-sym-fix"><b>Что менять</b>Врезание по дуге или рампой, стабилизировать припуск, снизить fz на входе</div></div>
+  </div>
+  <div class="ib-sym-panel" id="p-2" role="tabpanel" aria-labelledby="p-tab-2" hidden>
+    <div class="ib-sym-img"><img src="instrument-assets/defect-flank-wear.jpg" alt="Фреза «трёт», стойкость низкая" loading="lazy"/></div>
+    <div class="ib-sym-text"><h3>Фреза «трёт», стойкость низкая</h3><div class="ib-sym-kicker">Вероятная причина</div><ul><li>Слишком малая толщина стружки при малом ae</li></ul><div class="ib-sym-fix"><b>Что менять</b>Пересчитать fz через среднюю толщину стружки, увеличить подачу</div></div>
+  </div>
+  <div class="ib-sym-panel" id="p-3" role="tabpanel" aria-labelledby="p-tab-3" hidden>
+    <div class="ib-sym-img"><img src="instrument-assets/op-milling.jpg" alt="Заусенец на выходе" loading="lazy"/></div>
+    <div class="ib-sym-text"><h3>Заусенец на выходе</h3><div class="ib-sym-kicker">Вероятная причина</div><ul><li>Тупая кромка</li><li>неверное направление фрезерования</li><li>отсутствие фаски</li></ul><div class="ib-sym-fix"><b>Что менять</b>Попутное фрезерование, свежая кромка, снятие фаски отдельным проходом</div></div>
+  </div>
+  <div class="ib-sym-panel" id="p-4" role="tabpanel" aria-labelledby="p-tab-4" hidden>
+    <div class="ib-sym-img"><img src="instrument-assets/defect-bue.jpg" alt="Налипание и наросты (алюминий)" loading="lazy"/></div>
+    <div class="ib-sym-text"><h3>Налипание и наросты (алюминий)</h3><div class="ib-sym-kicker">Вероятная причина</div><ul><li>Низкая скорость</li><li>недостаточный отвод стружки</li></ul><div class="ib-sym-fix"><b>Что менять</b>Фреза с полированной канавкой и большим передним углом, обдув или СОЖ, повышение Vc</div></div>
+  </div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="ib-section tight">
+<div class="wrap">
+<div class="ib-head"><div><h2 class="eq-h2">Бренды под эту операцию</h2><p class="eq-lede">Конкретную позицию подбирает технолог под материал и станок.</p></div><a class="ib-more" href="production-cutting-tools.html">Все бренды по направлениям →</a></div>
+<div class="ib-logos-row"><a href="brand-fresal.html" title="Fresal"><img src="tool-logos/fresal.png" alt="Fresal" loading="lazy"/></a><a href="brand-helion.html" title="Helion"><img src="tool-logos/helion.png" alt="Helion" loading="lazy"/></a><a href="brand-palbit.html" title="Palbit"><img src="tool-logos/palbit.png" alt="Palbit" loading="lazy"/></a><a href="brand-nanoloy.html" title="Nanoloy"><img src="tool-logos/nanoloy.png" alt="Nanoloy" loading="lazy"/></a><a href="brand-likon.html" title="Likon"><img src="tool-logos/likon.png" alt="Likon" loading="lazy"/></a><a href="brand-omap.html" title="OMAP"><img src="tool-logos/omap.png" alt="OMAP" loading="lazy"/></a><a href="brand-derek.html" title="Derek"><img src="tool-logos/derek.png" alt="Derek" loading="lazy"/></a><a href="brand-macro-tools.html" title="MACRO TOOLS"><img src="tool-logos/macro-tools.png" alt="MACRO TOOLS" loading="lazy"/></a></div>
+</div>
+</section>
+
+<section class="ib-section tight">
+<div class="wrap">
+<h2 class="eq-h2">Разборы технологов</h2>
+<div class="ib-articles"><a href="press-kakie-oboroty-shpindelya-nuzhny.html"><small>Пресс-центр</small><b>Какие обороты шпинделя нужны производству</b></a><a href="press-bt40-ili-bt50-kakoy-konus-shpindelya-vybrat.html"><small>Пресс-центр</small><b>BT40 или BT50: какой конус шпинделя выбрать</b></a><a href="press-kak-sokratit-kolichestvo-ustanovov.html"><small>Пресс-центр</small><b>Как сократить количество установов</b></a></div>
+</div>
+</section>
+
+<section class="ib-section tight" id="faq">
+<div class="wrap ib-faq">
+<h2 class="eq-h2">Частые вопросы</h2>
+<div class="faq-list"><div class="faqi"><button class="faqq" onclick="toggleFaq(this)">Сколько зубьев должно быть у фрезы?<span class="ic">+</span></button><div class="faqa"><p>Чем ниже жёсткость системы и вязче материал, тем меньше зубьев в резе: на нежёстких установках и в нержавеющих сталях берут крупный шаг, на чугуне и жёстких деталях — мелкий.</p></div></div><div class="faqi"><button class="faqq" onclick="toggleFaq(this)">Что важнее — скорость или подача?<span class="ic">+</span></button><div class="faqa"><p>Скорость резания влияет на износ, подача — на производительность и на то, режет ли инструмент. Низкая подача при малом перекрытии изнашивает фрезу быстрее, чем высокая скорость.</p></div></div><div class="faqi"><button class="faqq" onclick="toggleFaq(this)">Нужна ли термооправка?<span class="ic">+</span></button><div class="faqa"><p>Она даёт меньшее биение и жёсткость на вылете. Для чистовых операций и высоких оборотов это часто решающий фактор, для черновых — второстепенный.</p></div></div></div>
+</div>
+</section>
+
+<section class="eq-section" id="final-cta"><div class="wrap"><div class="eq-final-cta"><div><h2>Нужен инструмент под вашу деталь?</h2><p>Пришлите чертёж, материал, станок и партию — технолог подберёт инструмент и посчитает стоимость обработки детали.</p></div><button type="button" class="btn btn-ce eq-final-cta-btn" onclick="openEqLeadModal()">Обсудить задачу с технологом</button></div></div></section>
+
 </main>
 
 <div class="eq-modal" id="eqLeadModal" aria-hidden="true">
@@ -348,6 +441,13 @@ document.getElementById('eqLeadModal').addEventListener('click',function(e){
 document.addEventListener('keydown',function(e){
   if(e.key==='Escape'){closeEqLeadModal();}
 });
+</script>
+<script>
+(function(){
+  var tabs=[].slice.call(document.querySelectorAll('.ib-sym-tab'));
+  function sel(t){tabs.forEach(function(x){var on=x===t;x.setAttribute('aria-selected',on?'true':'false');x.tabIndex=on?0:-1;document.getElementById(x.getAttribute('aria-controls')).hidden=!on;});}
+  tabs.forEach(function(t,i){t.addEventListener('click',function(){sel(t)});t.addEventListener('keydown',function(e){var k=e.key==='ArrowDown'||e.key==='ArrowRight'?1:e.key==='ArrowUp'||e.key==='ArrowLeft'?-1:0;if(k){e.preventDefault();var n=tabs[(i+k+tabs.length)%tabs.length];n.focus();sel(n);}});});
+})();
 </script>
 </body>
 </html>

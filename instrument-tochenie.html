@@ -12,7 +12,7 @@
 <meta property="og:title" content="Инструмент для точения на ЧПУ: подбор пластин и режимы | Механит"/>
 <meta property="og:description" content="Как подобрать токарные пластины и державки под деталь: геометрия, марка сплава, стартовые режимы по материалам, типовые проблемы точения и их причины."/>
 <meta property="og:url" content="https://mehanit.ru/instrument-tochenie.html"/>
-<meta property="og:image" content="https://mehanit.ru/module-banners/complex.jpeg"/>
+<meta property="og:image" content="https://mehanit.ru/instrument-assets/op-turning.jpg"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <script type="application/ld+json">
@@ -233,6 +233,7 @@ button.eq-scenario{border:1px solid var(--line);text-align:left;width:100%;font:
 </style>
 <link rel="stylesheet" href="site-shell.css"/>
 <link rel="stylesheet" href="industry-solutions.css"/>
+<link rel="stylesheet" href="instrument-block.css"/>
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -269,17 +270,109 @@ button.eq-scenario{border:1px solid var(--line);text-align:left;width:100%;font:
 <body>
 <header></header>
 <main>
-<nav class="ind-crumbs" aria-label="Хлебные крошки"><div class="wrap"><ol><li><a href="index.html">Главная</a></li><li><a href="production-equipment.html">Инструмент и оснастка</a></li><li aria-current="page">Точение</li></ol></div></nav>
-<section class="sol-hero tl-hero"><div class="wrap"><div class="eq-hero-top tl-hero-grid"><div class="tl-hero-copy"><div class="tl-eyebrow">Точение</div><h1 class="sol-title"><span class="title-row"><span class="title-dash"></span><span class="title-text">Инструмент и режимы для точения на станках с ЧПУ</span></span></h1><p class="tl-lead">Точение задаёт размер и шероховатость большинства деталей вращения. Инструмент подбирается не по названию пластины, а по материалу, жёсткости системы и тому, какая стружка должна получиться.</p><div class="tl-actions"><button type="button" class="btn btn-ce tl-btn" onclick="openEqLeadModal()">Обсудить задачу с технологом</button><a class="tl-link" href="production-calculators.html">Калькуляторы режимов →</a></div></div><aside class="tl-brief"><div class="tl-brief-label">Что прислать для подбора</div><ol class="tl-brief-list"><li>Чертёж или 3D-модель детали<span>PDF, DWG, STEP</span></li><li>Материал и твёрдость</li><li>Станок, стойка ЧПУ и конус шпинделя</li><li>Партия и нужная стойкость</li><li>Текущий инструмент и режимы<span>если операция уже идёт</span></li></ol><p class="tl-brief-note">Технолог ответит в течение рабочего дня.</p></aside></div></div></section>
-<section class="eq-section"><div class="wrap"><h2 class="eq-h2">Что определяет результат</h2><div class="tl-factors"><div class="tl-factor"><small>01</small><h3>Форма стружки</h3><p>Правильная стружка — короткая, ломкая, уходит из зоны резания. Её форму задают геометрия пластины, подача и глубина резания, а не только скорость.</p></div><div class="tl-factor"><small>02</small><h3>Жёсткость системы</h3><p>Вылет резца, качество закрепления и поджим задним центром решают больше, чем марка сплава: при вибрации не работает ни одна геометрия.</p></div><div class="tl-factor"><small>03</small><h3>Марка сплава и покрытие</h3><p>Подбираются под материал и характер работы: непрерывное резание, прерывистое, черновое с коркой.</p></div><div class="tl-factor"><small>04</small><h3>Подвод СОЖ</h3><p>Для вязких материалов и глубоких канавок подвод в зону резания под давлением важнее скорости.</p></div></div></div></section>
-<section class="eq-section" id="regimes"><div class="wrap"><h2 class="eq-h2">Стартовые режимы по материалам</h2><p class="eq-lede">Диапазоны — стартовые ориентиры для твердосплавного инструмента с покрытием. Рабочие значения берутся из каталога конкретного инструмента, окончательные — после пробной детали на вашем станке.</p><div class="op-table-wrap"><table class="op-table"><thead><tr><th>Материал</th><th>Скорость резания Vc</th><th>Подача</th><th>Глубина и примечания</th></tr></thead><tbody><tr><td>Стали</td><td>180–350 м/мин</td><td>0,15–0,50 мм/об</td><td>0,5–6 мм</td></tr><tr><td>Нержавеющие стали</td><td>100–200 м/мин</td><td>0,12–0,40 мм/об</td><td>0,5–4 мм</td></tr><tr><td>Чугун</td><td>150–350 м/мин</td><td>0,15–0,50 мм/об</td><td>0,5–6 мм</td></tr><tr><td>Алюминий</td><td>500–2000 м/мин</td><td>0,05–0,40 мм/об</td><td>0,5–8 мм</td></tr><tr><td>Титан и жаропрочные</td><td>30–80 м/мин</td><td>0,10–0,30 мм/об</td><td>0,5–3 мм</td></tr><tr><td>Закалённые стали</td><td>80–200 м/мин (CBN)</td><td>0,05–0,20 мм/об</td><td>0,05–0,50 мм</td></tr></tbody></table></div><a class="tl-more" href="production-calculators.html">Посчитать обороты, подачу и мощность →</a></div></section>
-<section class="eq-section"><div class="wrap"><h2 class="eq-h2">Как подбираем инструмент</h2><ol class="op-steps"><li><small>01</small><h3>Разбор детали</h3><p>Материал, твёрдость, форма заготовки, допуски и шероховатость, длина и жёсткость.</p></li><li><small>02</small><h3>Геометрия и радиус</h3><p>Радиус при вершине выбирается по подаче и требуемой шероховатости, геометрия — по глубине резания и виду стружки.</p></li><li><small>03</small><h3>Сплав и покрытие</h3><p>Под материал, непрерывность резания и наличие корки.</p></li><li><small>04</small><h3>Державка и закрепление</h3><p>Максимальное сечение и минимальный вылет, который позволяет деталь.</p></li><li><small>05</small><h3>Проверка на детали</h3><p>Стартовые режимы, замер стойкости и цикла, корректировка.</p></li></ol></div></section>
-<section class="eq-section"><div class="wrap"><h2 class="eq-h2">Типовые проблемы и причины</h2><div class="op-table-wrap"><table class="op-table op-table-problems"><thead><tr><th>Что видим</th><th>Вероятная причина</th><th>Что менять</th></tr></thead><tbody><tr><td>Вибрация и «дребезг» на поверхности</td><td>Большой вылет резца, слабое закрепление детали, слишком малая подача</td><td>Уменьшить вылет, поджать задним центром или люнетом, поднять подачу, уменьшить радиус при вершине</td></tr><tr><td>Сливная стружка, наматывается на деталь</td><td>Подача или глубина ниже диапазона геометрии</td><td>Увеличить подачу или глубину, выбрать геометрию под меньший диапазон, проверить подвод СОЖ</td></tr><tr><td>Быстрый износ по задней поверхности</td><td>Завышенная скорость резания, неподходящий сплав</td><td>Снизить Vc, выбрать более износостойкий сплав и покрытие</td></tr><tr><td>Выкрашивание кромки</td><td>Прерывистое резание, корка, слишком острая геометрия</td><td>Более прочная геометрия и сплав, уменьшить подачу на входе, проверить биение</td></tr><tr><td>Налипание материала на кромку</td><td>Низкая скорость на вязких материалах, недостаточная СОЖ</td><td>Поднять Vc, применить полированную геометрию, увеличить подачу СОЖ</td></tr></tbody></table></div></div></section>
-<section class="eq-section"><div class="wrap"><h2 class="eq-h2">Бренды под эту операцию</h2><p class="eq-lede">Конкретную позицию подбирает технолог под материал и станок.</p><div class="op-chips op-chips-links"><a href="brand-derek.html">Derek</a><a href="brand-palbit.html">Palbit</a><a href="brand-vargus.html">Vargus</a><a href="brand-likon.html">Likon</a><a href="brand-nanoloy.html">Nanoloy</a><a href="brand-omap.html">OMAP</a><a href="brand-sauter.html">Sauter</a><a href="brand-ami-hanei.html">AMI-Han’ei</a><a href="brand-macro-tools.html">MACRO TOOLS</a></div><a class="tl-more" href="production-cutting-tools.html">Все бренды по направлениям →</a></div></section>
-<section class="eq-section"><div class="wrap"><h2 class="eq-h2">Обработка по материалам</h2><div class="op-links"><a href="obrabotka-stali.html"><b>Конструкционные и легированные стали</b><span>Режимы, сложности, что выбирать</span></a><a href="obrabotka-nerzhaveyushchey-stali.html"><b>Нержавеющие и жаропрочные аустенитные стали</b><span>Режимы, сложности, что выбирать</span></a><a href="obrabotka-chuguna.html"><b>Серый и высокопрочный чугун</b><span>Режимы, сложности, что выбирать</span></a><a href="obrabotka-alyuminiya.html"><b>Алюминиевые и медные сплавы</b><span>Режимы, сложности, что выбирать</span></a><a href="obrabotka-titana.html"><b>Титановые и никелевые жаропрочные сплавы</b><span>Режимы, сложности, что выбирать</span></a><a href="obrabotka-zakalennoy-stali.html"><b>Закалённые стали 45–62 HRC</b><span>Режимы, сложности, что выбирать</span></a></div></div></section>
-<section class="eq-section"><div class="wrap"><h2 class="eq-h2">Разборы технологов</h2><div class="op-links"><a href="press-obrabotka-dlinnogo-vala-vibracii.html"><b>Как обработать длинный вал и избежать вибраций</b><span>Пресс-центр</span></a><a href="press-privodnoy-instrument-v-tokarnom-centre.html"><b>Приводной инструмент в токарном центре</b><span>Пресс-центр</span></a><a href="press-os-y-v-tokarnom-centre.html"><b>Ось Y в токарном центре</b><span>Пресс-центр</span></a><a href="equipment-turning.html"><b>Токарные станки</b><span>Каталог оборудования</span></a></div></div></section>
-<section class="eq-section" id="faq"><div class="wrap"><h2 class="eq-h2">Частые вопросы</h2><div class="faq-list"><div class="faqi"><button class="faqq" onclick="toggleFaq(this)">Как выбрать радиус при вершине?<span class="ic">+</span></button><div class="faqa"><p>Радиус выбирается по подаче и требуемой шероховатости: подача обычно не превышает половины радиуса. Больший радиус даёт лучшую поверхность и прочность кромки, но повышает радиальную силу и риск вибрации на нежёстких деталях.</p></div></div><div class="faqi"><button class="faqq" onclick="toggleFaq(this)">Почему стружка наматывается на деталь?<span class="ic">+</span></button><div class="faqa"><p>Чаще всего подача или глубина резания ниже диапазона, на который рассчитана геометрия пластины. Стружколом начинает работать только внутри своего диапазона подач.</p></div></div><div class="faqi"><button class="faqq" onclick="toggleFaq(this)">Когда нужен приводной инструмент вместо второй операции?<span class="ic">+</span></button><div class="faqa"><p>Когда сверление, фрезерование лысок или нарезание резьбы можно выполнить за тот же установ: это снимает погрешность переустановки и сокращает цикл. Подробнее — в статье о приводном инструменте.</p></div></div></div></div></section>
-<section class="eq-section"><div class="wrap"><div class="eq-final-cta"><div><h2>Нужен инструмент под вашу деталь?</h2><p>Пришлите чертёж, материал, станок и партию — технолог подберёт инструмент и посчитает стоимость обработки детали.</p></div><button type="button" class="btn btn-ce eq-final-cta-btn" onclick="openEqLeadModal()">Обсудить задачу с технологом</button></div></div></section>
+<section class="ib-hero">
+  <div class="ib-hero-media"><img src="instrument-assets/op-turning-wide.jpg" alt="Токарная обработка вала на станке с ЧПУ" fetchpriority="high"/></div>
+  <div class="wrap ib-hero-inner">
+    <nav class="ind-crumbs" aria-label="Хлебные крошки"><div class="wrap"><ol><li><a href="index.html">Главная</a></li><li><a href="production-equipment.html">Инструмент и оснастка</a></li><li aria-current="page">Точение</li></ol></div></nav>
+    <h1>Инструмент и режимы для точения на станках с ЧПУ</h1>
+    <p class="ib-sub">Точение задаёт размер и шероховатость большинства деталей вращения. Инструмент подбирается не по названию пластины, а по материалу, жёсткости системы и тому, какая стружка должна получиться.</p>
+    <div class="ib-actions">
+      <button type="button" class="btn btn-ce" onclick="openEqLeadModal()">Обсудить задачу с технологом</button>
+      <a class="ib-textlink" href="#regimes">Стартовые режимы</a>
+    </div>
+  </div>
+</section>
+
+<section class="ib-section">
+<div class="wrap">
+<h2 class="eq-h2">Что определяет результат</h2>
+<div class="ib-factors">
+  <div class="ib-factor"><small>01</small><h3>Форма стружки</h3><p>Правильная стружка — короткая, ломкая, уходит из зоны резания. Её форму задают геометрия пластины, подача и глубина резания, а не только скорость.</p></div>
+  <div class="ib-factor"><small>02</small><h3>Жёсткость системы</h3><p>Вылет резца, качество закрепления и поджим задним центром решают больше, чем марка сплава: при вибрации не работает ни одна геометрия.</p></div>
+  <div class="ib-factor"><small>03</small><h3>Марка сплава и покрытие</h3><p>Подбираются под материал и характер работы: непрерывное резание, прерывистое, черновое с коркой.</p></div>
+  <div class="ib-factor"><small>04</small><h3>Подвод СОЖ</h3><p>Для вязких материалов и глубоких канавок подвод в зону резания под давлением важнее скорости.</p></div>
+</div>
+</div>
+</section>
+
+<section class="ib-section tight" id="regimes">
+<div class="wrap">
+<h2 class="eq-h2">Стартовые режимы по материалам</h2>
+<p class="eq-lede">Диапазоны — стартовые ориентиры для твердосплавного инструмента с покрытием. Рабочие значения берутся из каталога конкретного инструмента, окончательные — после пробной детали на вашем станке.</p>
+<div class="ib-modes"><table><thead><tr><th>Материал</th><th>Скорость резания Vc</th><th>Подача</th><th>Глубина и примечания</th></tr></thead><tbody>
+<tr><td><b class="iso-p">P</b>Стали</td><td>180–350 м/мин</td><td>0,15–0,50 мм/об</td><td>0,5–6 мм</td></tr>
+<tr><td><b class="iso-m">M</b>Нержавеющие стали</td><td>100–200 м/мин</td><td>0,12–0,40 мм/об</td><td>0,5–4 мм</td></tr>
+<tr><td><b class="iso-k">K</b>Чугун</td><td>150–350 м/мин</td><td>0,15–0,50 мм/об</td><td>0,5–6 мм</td></tr>
+<tr><td><b class="iso-n">N</b>Алюминий</td><td>500–2000 м/мин</td><td>0,05–0,40 мм/об</td><td>0,5–8 мм</td></tr>
+<tr><td><b class="iso-s">S</b>Титан и жаропрочные</td><td>30–80 м/мин</td><td>0,10–0,30 мм/об</td><td>0,5–3 мм</td></tr>
+<tr><td><b class="iso-h">H</b>Закалённые стали</td><td>80–200 м/мин (CBN)</td><td>0,05–0,20 мм/об</td><td>0,05–0,50 мм</td></tr>
+</tbody></table></div>
+<div class="ib-modes-note"><a class="ib-textlink" href="production-calculators.html">Посчитать обороты, подачу и мощность</a></div>
+<div class="ib-iso" style="margin-top:18px"><span class="ib-iso-label">Подробнее по материалу</span><a href="obrabotka-stali.html"><b class="iso-p">P</b>Стали</a><a href="obrabotka-nerzhaveyushchey-stali.html"><b class="iso-m">M</b>Нержавеющие</a><a href="obrabotka-chuguna.html"><b class="iso-k">K</b>Чугун</a><a href="obrabotka-alyuminiya.html"><b class="iso-n">N</b>Алюминий и медь</a><a href="obrabotka-titana.html"><b class="iso-s">S</b>Титан и жаропрочные</a><a href="obrabotka-zakalennoy-stali.html"><b class="iso-h">H</b>Закалённые</a></div>
+</div>
+</section>
+
+<section class="ib-section tight" id="problems">
+<div class="wrap">
+<h2 class="eq-h2">Типовые проблемы и причины</h2>
+<p class="eq-lede">Выберите, что видите на детали или на кромке, — причина и что менять.</p>
+<div class="ib-sym">
+<div class="ib-sym-list" role="tablist" aria-label="Типовые проблемы">
+  <button class="ib-sym-tab" type="button" role="tab" id="p-tab-0" aria-controls="p-0" aria-selected="true"><small>01</small>Вибрация и «дребезг» на поверхности</button>
+  <button class="ib-sym-tab" type="button" role="tab" id="p-tab-1" aria-controls="p-1" aria-selected="false" tabindex="-1"><small>02</small>Сливная стружка, наматывается на деталь</button>
+  <button class="ib-sym-tab" type="button" role="tab" id="p-tab-2" aria-controls="p-2" aria-selected="false" tabindex="-1"><small>03</small>Быстрый износ по задней поверхности</button>
+  <button class="ib-sym-tab" type="button" role="tab" id="p-tab-3" aria-controls="p-3" aria-selected="false" tabindex="-1"><small>04</small>Выкрашивание кромки</button>
+  <button class="ib-sym-tab" type="button" role="tab" id="p-tab-4" aria-controls="p-4" aria-selected="false" tabindex="-1"><small>05</small>Налипание материала на кромку</button>
+</div>
+<div>
+  <div class="ib-sym-panel" id="p-0" role="tabpanel" aria-labelledby="p-tab-0">
+    <div class="ib-sym-img"><img src="instrument-assets/defect-chatter.jpg" alt="Вибрация и «дребезг» на поверхности" loading="lazy"/></div>
+    <div class="ib-sym-text"><h3>Вибрация и «дребезг» на поверхности</h3><div class="ib-sym-kicker">Вероятная причина</div><ul><li>Большой вылет резца</li><li>слабое закрепление детали</li><li>слишком малая подача</li></ul><div class="ib-sym-fix"><b>Что менять</b>Уменьшить вылет, поджать задним центром или люнетом, поднять подачу, уменьшить радиус при вершине</div></div>
+  </div>
+  <div class="ib-sym-panel" id="p-1" role="tabpanel" aria-labelledby="p-tab-1" hidden>
+    <div class="ib-sym-img"><img src="instrument-assets/defect-chip-wrap.jpg" alt="Сливная стружка, наматывается на деталь" loading="lazy"/></div>
+    <div class="ib-sym-text"><h3>Сливная стружка, наматывается на деталь</h3><div class="ib-sym-kicker">Вероятная причина</div><ul><li>Подача или глубина ниже диапазона геометрии</li></ul><div class="ib-sym-fix"><b>Что менять</b>Увеличить подачу или глубину, выбрать геометрию под меньший диапазон, проверить подвод СОЖ</div></div>
+  </div>
+  <div class="ib-sym-panel" id="p-2" role="tabpanel" aria-labelledby="p-tab-2" hidden>
+    <div class="ib-sym-img"><img src="instrument-assets/defect-flank-wear.jpg" alt="Быстрый износ по задней поверхности" loading="lazy"/></div>
+    <div class="ib-sym-text"><h3>Быстрый износ по задней поверхности</h3><div class="ib-sym-kicker">Вероятная причина</div><ul><li>Завышенная скорость резания</li><li>неподходящий сплав</li></ul><div class="ib-sym-fix"><b>Что менять</b>Снизить Vc, выбрать более износостойкий сплав и покрытие</div></div>
+  </div>
+  <div class="ib-sym-panel" id="p-3" role="tabpanel" aria-labelledby="p-tab-3" hidden>
+    <div class="ib-sym-img"><img src="instrument-assets/defect-chipping.jpg" alt="Выкрашивание кромки" loading="lazy"/></div>
+    <div class="ib-sym-text"><h3>Выкрашивание кромки</h3><div class="ib-sym-kicker">Вероятная причина</div><ul><li>Прерывистое резание</li><li>корка</li><li>слишком острая геометрия</li></ul><div class="ib-sym-fix"><b>Что менять</b>Более прочная геометрия и сплав, уменьшить подачу на входе, проверить биение</div></div>
+  </div>
+  <div class="ib-sym-panel" id="p-4" role="tabpanel" aria-labelledby="p-tab-4" hidden>
+    <div class="ib-sym-img"><img src="instrument-assets/defect-bue.jpg" alt="Налипание материала на кромку" loading="lazy"/></div>
+    <div class="ib-sym-text"><h3>Налипание материала на кромку</h3><div class="ib-sym-kicker">Вероятная причина</div><ul><li>Низкая скорость на вязких материалах</li><li>недостаточная СОЖ</li></ul><div class="ib-sym-fix"><b>Что менять</b>Поднять Vc, применить полированную геометрию, увеличить подачу СОЖ</div></div>
+  </div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="ib-section tight">
+<div class="wrap">
+<div class="ib-head"><div><h2 class="eq-h2">Бренды под эту операцию</h2><p class="eq-lede">Конкретную позицию подбирает технолог под материал и станок.</p></div><a class="ib-more" href="production-cutting-tools.html">Все бренды по направлениям →</a></div>
+<div class="ib-logos-row"><a href="brand-derek.html" title="Derek"><img src="tool-logos/derek.png" alt="Derek" loading="lazy"/></a><a href="brand-palbit.html" title="Palbit"><img src="tool-logos/palbit.png" alt="Palbit" loading="lazy"/></a><a href="brand-vargus.html" title="Vargus"><img src="tool-logos/vargus.png" alt="Vargus" loading="lazy"/></a><a href="brand-likon.html" title="Likon"><img src="tool-logos/likon.png" alt="Likon" loading="lazy"/></a><a href="brand-nanoloy.html" title="Nanoloy"><img src="tool-logos/nanoloy.png" alt="Nanoloy" loading="lazy"/></a><a href="brand-omap.html" title="OMAP"><img src="tool-logos/omap.png" alt="OMAP" loading="lazy"/></a><a href="brand-sauter.html" title="Sauter"><img src="tool-logos/sauter.png" alt="Sauter" loading="lazy"/></a><a href="brand-ami-hanei.html" title="AMI-Han’ei"><img src="tool-logos/ami-hanei.png" alt="AMI-Han’ei" loading="lazy"/></a><a href="brand-macro-tools.html" title="MACRO TOOLS"><img src="tool-logos/macro-tools.png" alt="MACRO TOOLS" loading="lazy"/></a></div>
+</div>
+</section>
+
+<section class="ib-section tight">
+<div class="wrap">
+<h2 class="eq-h2">Разборы технологов</h2>
+<div class="ib-articles"><a href="press-obrabotka-dlinnogo-vala-vibracii.html"><small>Пресс-центр</small><b>Как обработать длинный вал и избежать вибраций</b></a><a href="press-privodnoy-instrument-v-tokarnom-centre.html"><small>Пресс-центр</small><b>Приводной инструмент в токарном центре</b></a><a href="press-os-y-v-tokarnom-centre.html"><small>Пресс-центр</small><b>Ось Y в токарном центре</b></a></div>
+</div>
+</section>
+
+<section class="ib-section tight" id="faq">
+<div class="wrap ib-faq">
+<h2 class="eq-h2">Частые вопросы</h2>
+<div class="faq-list"><div class="faqi"><button class="faqq" onclick="toggleFaq(this)">Как выбрать радиус при вершине?<span class="ic">+</span></button><div class="faqa"><p>Радиус выбирается по подаче и требуемой шероховатости: подача обычно не превышает половины радиуса. Больший радиус даёт лучшую поверхность и прочность кромки, но повышает радиальную силу и риск вибрации на нежёстких деталях.</p></div></div><div class="faqi"><button class="faqq" onclick="toggleFaq(this)">Почему стружка наматывается на деталь?<span class="ic">+</span></button><div class="faqa"><p>Чаще всего подача или глубина резания ниже диапазона, на который рассчитана геометрия пластины. Стружколом начинает работать только внутри своего диапазона подач.</p></div></div><div class="faqi"><button class="faqq" onclick="toggleFaq(this)">Когда нужен приводной инструмент вместо второй операции?<span class="ic">+</span></button><div class="faqa"><p>Когда сверление, фрезерование лысок или нарезание резьбы можно выполнить за тот же установ: это снимает погрешность переустановки и сокращает цикл. Подробнее — в статье о приводном инструменте.</p></div></div></div>
+</div>
+</section>
+
+<section class="eq-section" id="final-cta"><div class="wrap"><div class="eq-final-cta"><div><h2>Нужен инструмент под вашу деталь?</h2><p>Пришлите чертёж, материал, станок и партию — технолог подберёт инструмент и посчитает стоимость обработки детали.</p></div><button type="button" class="btn btn-ce eq-final-cta-btn" onclick="openEqLeadModal()">Обсудить задачу с технологом</button></div></div></section>
+
 </main>
 
 <div class="eq-modal" id="eqLeadModal" aria-hidden="true">
@@ -348,6 +441,13 @@ document.getElementById('eqLeadModal').addEventListener('click',function(e){
 document.addEventListener('keydown',function(e){
   if(e.key==='Escape'){closeEqLeadModal();}
 });
+</script>
+<script>
+(function(){
+  var tabs=[].slice.call(document.querySelectorAll('.ib-sym-tab'));
+  function sel(t){tabs.forEach(function(x){var on=x===t;x.setAttribute('aria-selected',on?'true':'false');x.tabIndex=on?0:-1;document.getElementById(x.getAttribute('aria-controls')).hidden=!on;});}
+  tabs.forEach(function(t,i){t.addEventListener('click',function(){sel(t)});t.addEventListener('keydown',function(e){var k=e.key==='ArrowDown'||e.key==='ArrowRight'?1:e.key==='ArrowUp'||e.key==='ArrowLeft'?-1:0;if(k){e.preventDefault();var n=tabs[(i+k+tabs.length)%tabs.length];n.focus();sel(n);}});});
+})();
 </script>
 </body>
 </html>
