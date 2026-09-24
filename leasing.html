@@ -5,7 +5,7 @@
 <meta charset="utf-8"/>
 <meta name="robots" content="noindex, nofollow"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Механит — Лизинговая программа</title><link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<title>Лизинг станков с ЧПУ: расчёт платежа, партнёры, ФРП | Механит</title><link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <meta content="Лизинговая программа на оборудование Механит: расчёт ежемесячного платежа, партнёры — Сбербанк Лизинг, ВТБ Лизинг, Альфа-Лизинг, ГТЛК." name="description"/>
 
 <style>
@@ -1614,6 +1614,9 @@ footer{background:var(--bm);color:rgba(234,234,230,.55);padding:3rem 0 2rem;bord
 .step-nav .step-nav-placeholder{visibility:hidden;pointer-events:none;border-color:transparent}
 @media(max-width:900px){.step-cols{grid-template-columns:1fr}.step-nav{grid-template-columns:1fr}.step-nav .step-nav-next{text-align:left}}
 </style>
+<link rel="stylesheet" href="industry-solutions.css"/>
+<link rel="stylesheet" href="instrument-block.css"/>
+<link rel="stylesheet" href="company-pages.css"/>
 <link rel="stylesheet" href="site-shell.css"/>
 </head>
 <body class="premium-v3">
@@ -1631,82 +1634,27 @@ footer{background:var(--bm);color:rgba(234,234,230,.55);padding:3rem 0 2rem;bord
 </div>
 </div>
 </header>
-<div class="crumbbar" aria-label="Хлебные крошки">
-<div class="wrap crumbbar-in">
-<nav class="crumbs" aria-label="Путь по сайту"><a href="index.html">Главная</a><span class="crumb-sep" aria-hidden="true">/</span><a href="process.html">Как мы работаем</a><span class="crumb-sep" aria-hidden="true">/</span><span class="current" aria-current="page">Лизинговая программа</span></nav>
-<a class="crumb-top" href="index.html">На главную</a>
-</div>
-</div>
-
 <main>
-<section class="leasing" id="finance">
-<div class="wrap">
-<div class="eyebrow">Как работаем · Финансирование</div>
-<h1 class="h2" style="margin-bottom:3rem">Лизинговая <span class="lt">программа</span></h1>
-<div class="lz-layout">
-<div class="lz-controls">
-<div class="lz-row"><label>Стоимость оборудования: <span id="lzCost">9 000 000 ₽</span></label><input id="lzCostR" max="30000000" min="3000000" oninput="calcLease()" step="500000" type="range" value="9000000"/></div>
-<div class="lz-row"><label>Аванс: <span id="lzDown">20%</span></label><input id="lzDownR" max="49" min="0" oninput="calcLease()" step="1" type="range" value="20"/></div>
-<div class="lz-row"><label>Срок лизинга: <span id="lzTerm">36 мес.</span></label><input id="lzTermR" max="60" min="12" oninput="calcLease()" step="6" type="range" value="36"/></div>
-<p style="font-size:12px;color:rgba(234,234,230,.45);line-height:1.6">Расчёт ориентировочный. Точные условия зависят от банка-партнёра и финансового профиля предприятия. Механит не является финансовым консультантом — итоговые условия согласуются с лизинговой компанией.</p>
-</div>
-<div class="lz-result">
-<div class="lz-pay">Ежемесячный платёж</div>
-<div class="lz-pay-v" id="lzPay">— ₽</div>
-<div class="lz-pay-sub" id="lzSub">при авансе — ₽ и сроке — мес.</div>
-<button type="button" class="btn btn-light"  style="width:100%" onclick="openLeadModal('lease')">Получить расчёт лизинга</button>
-<div class="lz-banks"><span class="lz-bank">Сбербанк Лизинг</span><span class="lz-bank">ВТБ Лизинг</span><span class="lz-bank">Альфа-Лизинг</span><span class="lz-bank">ГТЛК</span></div>
-</div>
-</div>
-</div>
-</section>
-
-<!-- trust-deep:start -->
-<section class="eq-section">
-<div class="wrap">
-<h2 class="eq-h2">Как проходит сделка</h2>
-<ol class="op-steps op-steps-grid"><li><small>01</small><h3>Заявка и документы</h3><p>Заказчик передаёт пакет документов лизинговой компании, мы готовим спецификацию и коммерческое предложение на оборудование.</p></li><li><small>02</small><h3>Решение лизинговой компании</h3><p>Оценка финансового состояния предприятия. По рынку решение занимает от нескольких часов до 1–3 рабочих дней.</p></li><li><small>03</small><h3>Согласование договора</h3><p>Аванс, срок, график платежей и условия выкупа фиксируются в договоре.</p></li><li><small>04</small><h3>Аванс</h3><p>Заказчик вносит авансовый платёж, лизинговая компания оплачивает оборудование.</p></li><li><small>05</small><h3>Поставка и запуск</h3><p>Мы поставляем оборудование, выполняем пусконаладку и передаём его в эксплуатацию.</p></li><li><small>06</small><h3>Платежи и выкуп</h3><p>До полной выплаты собственник оборудования — лизинговая компания. После выкупа право собственности переходит заказчику.</p></li></ol>
-</div>
-</section>
-
-<section class="eq-section">
-<div class="wrap">
-<h2 class="eq-h2">Типовые параметры сделки</h2>
-<p class="eq-lede">Ориентиры по рынку лизинга промышленного оборудования на 2026 год.</p>
-<div class="op-table-wrap"><table class="op-table"><thead><tr><th>Параметр</th><th>Обычные значения</th></tr></thead><tbody><tr><td>Авансовый платёж</td><td>от 0 до 20 % стоимости; нулевой аванс — при более тщательной проверке</td></tr><tr><td>Срок договора</td><td>от 12 до 60 месяцев, в отдельных случаях дольше</td></tr><tr><td>Срок работы предприятия</td><td>как правило, от 6–12 месяцев</td></tr><tr><td>Срок рассмотрения заявки</td><td>от нескольких часов до 1–3 рабочих дней</td></tr><tr><td>Собственник оборудования</td><td>лизинговая компания — до полного выкупа</td></tr><tr><td>Предмет лизинга у нас</td><td>станки и оборудование; инструмент и оснастку поставляем отдельно</td></tr></tbody></table></div><p class="pg-note">Это ориентиры открытого рынка, а не наше предложение. Конкретные аванс, срок и ставку определяет лизинговая компания по финансовому профилю предприятия. ГК «Механит» не является финансовым консультантом.</p>
-</div>
-</section>
-
-<section class="eq-section">
-<div class="wrap">
-<h2 class="eq-h2">Что это даёт по налогам</h2>
-<p class="eq-lede">Общая механика для предприятий на общей системе налогообложения. Применимость к вашему случаю подтверждает ваша бухгалтерия.</p>
-<div class="pg-cards"><div><h3>Платежи уменьшают налог на прибыль</h3><p>Лизинговые платежи относятся на расходы, снижая базу по налогу на прибыль.</p></div><div><h3>НДС принимается к вычету</h3><p>Для плательщиков НДС на общей системе налог в составе лизинговых платежей идёт к вычету.</p></div><div><h3>Оборудование не отвлекает оборотные средства</h3><p>Вместо единовременной оплаты — график платежей, соотнесённый со сроком окупаемости оборудования.</p></div><div><h3>На ускоренную амортизацию не рассчитывайте</h3><p>После изменений 2022 года предмет лизинга учитывается на балансе лизингодателя, и прежняя схема ускоренной амортизации у лизингополучателя фактически утратила смысл.</p></div></div>
-</div>
-</section>
-
-<section class="eq-section">
-<div class="wrap">
-<h2 class="eq-h2">Господдержка: заём ФРП на аванс</h2>
-<p class="eq-lede">Фонд развития промышленности выдаёт целевой заём на авансовый платёж по лизингу. Это не наша программа — мы помогаем подготовить документы по оборудованию.</p>
-<div class="op-table-wrap"><table class="op-table"><thead><tr><th>Параметр</th><th>Условие</th></tr></thead><tbody><tr><td>Ставка</td><td>1 % годовых для российского промышленного оборудования, 5 % в остальных случаях</td></tr><tr><td>Сумма займа</td><td>от 5 до 500 млн ₽</td></tr><tr><td>Срок</td><td>до 5 лет, но не более срока договора лизинга</td></tr><tr><td>Доля финансирования</td><td>до 45 % стоимости оборудования</td></tr><tr><td>Авансовый платёж по лизингу</td><td>от 10 до 50 % стоимости оборудования</td></tr><tr><td>Бюджет проекта</td><td>от 20 млн ₽</td></tr><tr><td>Оборудование</td><td>новое, ранее не эксплуатировавшееся</td></tr></tbody></table></div><p class="pg-note">Условия программ господдержки меняются. Актуальные требования проверяются на дату подачи заявки — по вашему проекту уточним их вместе с расчётом.</p>
-</div>
-</section>
-
-<section class="eq-section">
-<div class="wrap">
-<h2 class="eq-h2">Что понадобится от предприятия</h2>
-<div class="pg-cards"><div><h3>Учредительные и регистрационные документы</h3><p>Устав, свидетельства, решения о назначении руководителя.</p></div><div><h3>Финансовая отчётность</h3><p>Бухгалтерская отчётность за требуемые периоды — по запросу лизинговой компании.</p></div><div><h3>Подтверждение полномочий</h3><p>Документы, подтверждающие право подписи договора.</p></div><div><h3>Спецификация оборудования</h3><p>Коммерческое предложение и спецификацию под сделку готовим мы.</p></div></div>
-</div>
-</section>
-
-<section class="eq-section">
-<div class="wrap">
-<h2 class="eq-h2">Куда дальше</h2>
-<div class="op-links"><a href="equipment.html"><b>Каталог оборудования</b><span>Станки по типам обработки</span></a><a href="stock.html"><b>Станки в наличии</b><span>Оборудование со склада в Нижнем Новгороде</span></a><a href="process.html"><b>Как мы ведём проекты</b><span>Где в процессе появляется финансирование</span></a><a href="faq.html"><b>Частые вопросы</b><span>Поставка, гарантия, сервис</span></a></div>
-</div>
-</section>
-<!-- trust-deep:end -->
+<section class="cp-lease"><div class="wrap">
+<nav class="ind-crumbs" aria-label="Хлебные крошки"><ol><li><a href="index.html">Главная</a></li><li><a href="process.html#step-4">Как мы работаем</a></li><li aria-current="page">Лизинг</li></ol></nav>
+<div class="cp-lease-grid"><div class="cp-lease-text"><h1>Лизинг станков с ЧПУ</h1><p class="ib-sub">Оборудование работает — платежи идут из выручки. Расчёт и сопровождение заявки через партнёрские лизинговые компании.</p>
+<div class="ib-facts"><div class="ib-fact"><b>от 0 %</b><span>аванс — обычно до 20 %</span></div><div class="ib-fact"><b>12–60</b><span>месяцев срок договора</span></div><div class="ib-fact"><b>1–3 дня</b><span>решение лизинговой компании</span></div></div>
+<div class="cp-partners"><span>Сбербанк Лизинг</span><span>ВТБ Лизинг</span><span>Альфа-Лизинг</span><span>ГТЛК</span></div>
+<div class="cp-lease-photo"><img src="site-assets/leasing-hero.jpg" alt="Обрабатывающий центр в цехе" fetchpriority="high"/></div></div>
+<div class="cp-calc"><div class="cp-calc-title">Калькулятор платежа</div>
+<div class="lz-row"><label>Стоимость оборудования <span id="lzCost">9 000 000 ₽</span></label><input id="lzCostR" max="30000000" min="3000000" oninput="calcLease()" step="500000" type="range" value="9000000" aria-label="Стоимость оборудования"/></div>
+<div class="lz-row"><label>Аванс <span id="lzDown">20%</span></label><input id="lzDownR" max="49" min="0" oninput="calcLease()" step="1" type="range" value="20" aria-label="Аванс"/></div>
+<div class="lz-row"><label>Срок лизинга <span id="lzTerm">36 мес.</span></label><input id="lzTermR" max="60" min="12" oninput="calcLease()" step="6" type="range" value="36" aria-label="Срок лизинга"/></div>
+<div class="cp-calc-res"><small>Ежемесячный платёж</small><div class="lz-pay-v" id="lzPay">— ₽</div><div class="lz-pay-sub" id="lzSub">при авансе — ₽ и сроке — мес.</div></div>
+<button type="button" class="btn btn-ce" onclick="openLeadModal('lease')">Получить расчёт лизинга</button>
+<p class="cp-calc-note">Расчёт ориентировочный. Точные условия зависят от лизинговой компании и финансового профиля предприятия. Механит не является финансовым консультантом.</p></div></div></div></section>
+<section class="ib-section"><div class="wrap"><div class="ib-head"><div><h2 class="eq-h2">Как проходит сделка</h2></div></div><div class="cp-line" style="--n:6"><div><i>01</i><b>Заявка и документы</b><span>Пакет документов — лизинговой компании; спецификацию и КП на оборудование готовим мы</span></div><div><i>02</i><b>Решение</b><span>От нескольких часов до 1–3 рабочих дней</span><em>1–3 дня</em></div><div><i>03</i><b>Договор</b><span>Аванс, срок, график платежей и условия выкупа</span></div><div><i>04</i><b>Аванс</b><span>Вы вносите аванс, лизинговая компания оплачивает оборудование</span></div><div><i>05</i><b>Поставка и запуск</b><span>Поставляем, выполняем пусконаладку, передаём в эксплуатацию</span></div><div><i>06</i><b>Платежи и выкуп</b><span>До выкупа собственник — лизинговая компания, после — вы</span></div></div></div></section>
+<section class="ib-section"><div class="wrap"><div class="ib-head"><div><h2 class="eq-h2">Параметры и господдержка</h2><p class="eq-lede">Таблицы — для финансиста. Справка по налогам свёрнута.</p></div></div><div class="cp-two"><div><h3>Типовые параметры сделки</h3><div class="cp-table"><table><tr><td>Авансовый платёж</td><td>от 0 до 20 % стоимости; нулевой аванс — при более тщательной проверке</td></tr><tr><td>Срок договора</td><td>от 12 до 60 месяцев, в отдельных случаях дольше</td></tr><tr><td>Срок работы предприятия</td><td>как правило, от 6–12 месяцев</td></tr><tr><td>Рассмотрение заявки</td><td>от нескольких часов до 1–3 рабочих дней</td></tr><tr><td>Собственник оборудования</td><td>лизинговая компания — до полного выкупа</td></tr><tr><td>Предмет лизинга у нас</td><td>станки и оборудование; инструмент и оснастку поставляем отдельно</td></tr></table></div><p class="cp-table-note">Ориентиры открытого рынка на 2026 год, а не наше предложение. Конкретные аванс, срок и ставку определяет лизинговая компания.</p></div>
+<div><h3>Господдержка: заём ФРП на аванс</h3><div class="cp-table"><table><tr><td>Ставка</td><td>1 % годовых для российского промышленного оборудования, 5 % в остальных случаях</td></tr><tr><td>Сумма займа</td><td>от 5 до 500 млн ₽</td></tr><tr><td>Срок</td><td>до 5 лет, но не более срока договора лизинга</td></tr><tr><td>Доля финансирования</td><td>до 45 % стоимости оборудования</td></tr><tr><td>Аванс по лизингу</td><td>от 10 до 50 % стоимости оборудования</td></tr><tr><td>Бюджет проекта</td><td>от 20 млн ₽</td></tr><tr><td>Оборудование</td><td>новое, ранее не эксплуатировавшееся</td></tr></table></div><p class="cp-table-note">Фонд развития промышленности выдаёт целевой заём на авансовый платёж. Это не наша программа — мы помогаем подготовить документы по оборудованию. Условия проверяются на дату подачи заявки.</p></div></div>
+<details class="cp-details"><summary>Что это даёт по налогам<span>общая механика для предприятий на ОСН; применимость подтверждает ваша бухгалтерия</span></summary>
+<div class="cp-details-in"><div><ul><li><b>Платежи уменьшают налог на прибыль</b> — относятся на расходы</li><li><b>НДС принимается к вычету</b> — для плательщиков НДС на общей системе</li></ul></div><div><ul><li><b>Не отвлекает оборотные средства</b> — график платежей соотнесён с окупаемостью</li><li><b>На ускоренную амортизацию не рассчитывайте</b> — после изменений 2022 года предмет лизинга учитывается у лизингодателя</li></ul></div></div></details>
+<div class="cp-chips" style="margin-top:22px"><span><b>От предприятия:</b>учредительные документы</span><span>финансовая отчётность по запросу</span><span>подтверждение полномочий подписанта</span><span>спецификацию и КП готовим мы</span></div></div></section>
+<section class="ib-section tight"><div class="wrap"><div class="cp-cta"><div><h2>Посчитать лизинг под ваш станок?</h2><p>Укажите модель или пришлите ТЗ — подготовим спецификацию, КП и передадим заявку в лизинговую компанию.</p></div><div class="cp-cta-actions"><button type="button" class="btn btn-ce" onclick="openLeadModal('lease')">Получить расчёт лизинга</button><a class="ib-textlink" href="stock.html">Станки в наличии на складе</a></div></div></div></section>
 </main>
 <footer>
   <div class="wrap">
