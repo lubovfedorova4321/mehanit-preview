@@ -220,20 +220,20 @@ button.eq-scenario{border:1px solid var(--line);text-align:left;width:100%;font:
     <h1>Металлообрабатывающее оборудование</h1>
     <p class="ib-sub">Станки для токарной, фрезерной, шлифовальной, электроэрозионной обработки и раскроя. Подбираем под деталь, технологию и требуемую точность — с инструментом, оснасткой и запуском.</p>
     <div class="ib-actions"><a class="btn btn-ce" href="stock.html">Станки в наличии</a><a class="ib-textlink" href="#final-cta">Передать чертёж на подбор</a></div>
-    <div class="ib-facts"><div class="ib-fact"><b>824</b><span>моделей в каталоге</span></div><div class="ib-fact"><b>8</b><span>типов обработки</span></div><div class="ib-fact"><b>13</b><span>станков на складе в Нижнем Новгороде</span></div></div>
+    <div class="ib-facts" id="catFacts"><div class="ib-fact"><b data-count="models">824</b><span>моделей в каталоге</span></div><div class="ib-fact"><b>8</b><span>типов обработки</span></div><div class="ib-fact"><b data-count="stock">13</b><span>станков на складе в Нижнем Новгороде</span></div></div>
   </div>
 </section>
 <section class="sol-grid-section">
 <div class="wrap">
 <div class="sol-grid">
-<a class="sol-tile" href="equipment-turning.html"><span class="sol-tile-media"><img src="cat-turning.png" alt="Токарные станки" loading="lazy"/></span><span class="sol-tile-panel"><span class="sol-tile-body"><h3>Токарные станки</h3><span class="sol-tile-count">265 моделей</span><span class="sol-tile-desc">Валы, фланцы, втулки — тела вращения</span></span><span class="sol-tile-arrow">→</span></span></a>
-<a class="sol-tile" href="equipment-milling.html"><span class="sol-tile-media"><img src="cat-milling.png" alt="Фрезерные станки" loading="lazy"/></span><span class="sol-tile-panel"><span class="sol-tile-body"><h3>Фрезерные станки</h3><span class="sol-tile-count">229 моделей</span><span class="sol-tile-desc">Корпусные детали и плоскостная обработка</span></span><span class="sol-tile-arrow">→</span></span></a>
-<a class="sol-tile" href="equipment-grinding.html"><span class="sol-tile-media"><img src="cat-grinding.png" alt="Шлифовальные станки" loading="lazy"/></span><span class="sol-tile-panel"><span class="sol-tile-body"><h3>Шлифовальные станки</h3><span class="sol-tile-count">59 моделей</span><span class="sol-tile-desc">Финишная точность и чистота поверхности</span></span><span class="sol-tile-arrow">→</span></span></a>
-<a class="sol-tile" href="equipment-edm.html"><span class="sol-tile-media"><img src="cat-edm.png" alt="Электроэрозионные станки" loading="lazy"/></span><span class="sol-tile-panel"><span class="sol-tile-body"><h3>Электроэрозионные станки</h3><span class="sol-tile-count">112 моделей</span><span class="sol-tile-desc">Пресс-формы, штампы, твёрдые сплавы</span></span><span class="sol-tile-arrow">→</span></span></a>
-<a class="sol-tile" href="equipment-boring.html"><span class="sol-tile-media"><img src="cat-boring.png" alt="Горизонтально-расточные станки" loading="lazy"/></span><span class="sol-tile-panel"><span class="sol-tile-body"><h3>Горизонтально-расточные станки</h3><span class="sol-tile-count">7 моделей</span><span class="sol-tile-desc">Точное растачивание корпусных деталей</span></span><span class="sol-tile-arrow">→</span></span></a>
-<a class="sol-tile" href="equipment-drilling.html"><span class="sol-tile-media"><img src="cat-drilling.png" alt="Сверлильные станки" loading="lazy"/></span><span class="sol-tile-panel"><span class="sol-tile-body"><h3>Сверлильные станки</h3><span class="sol-tile-count">37 моделей</span><span class="sol-tile-desc">Радиальное и вертикальное сверление, растачивание</span></span><span class="sol-tile-arrow">→</span></span></a>
-<a class="sol-tile" href="equipment-waterjet.html"><span class="sol-tile-media"><img src="cat-waterjet.png" alt="Гидроабразивные станки" loading="lazy"/></span><span class="sol-tile-panel"><span class="sol-tile-body"><h3>Гидроабразивные станки</h3><span class="sol-tile-count">2 модели</span><span class="sol-tile-desc">Холодный рез металла, камня и композитов</span></span><span class="sol-tile-arrow">→</span></span></a>
-<a class="sol-tile" href="equipment-laser.html"><span class="sol-tile-media"><img src="cat-sheet.png" alt="Листообработка" loading="lazy"/></span><span class="sol-tile-panel"><span class="sol-tile-body"><h3>Листообработка</h3><span class="sol-tile-count">113 моделей</span><span class="sol-tile-desc">Лазер, гильотины, листогибы, ленточные пилы</span></span><span class="sol-tile-arrow">→</span></span></a>
+<a class="sol-tile" href="equipment-turning.html"><span class="sol-tile-media"><img src="cat-turning.png" alt="Токарные станки" loading="lazy"/></span><span class="sol-tile-panel"><span class="sol-tile-body"><h3>Токарные станки</h3><span class="sol-tile-count" data-cat="turning">265 моделей</span><span class="sol-tile-desc">Валы, фланцы, втулки — тела вращения</span></span><span class="sol-tile-arrow">→</span></span></a>
+<a class="sol-tile" href="equipment-milling.html"><span class="sol-tile-media"><img src="cat-milling.png" alt="Фрезерные станки" loading="lazy"/></span><span class="sol-tile-panel"><span class="sol-tile-body"><h3>Фрезерные станки</h3><span class="sol-tile-count" data-cat="milling">229 моделей</span><span class="sol-tile-desc">Корпусные детали и плоскостная обработка</span></span><span class="sol-tile-arrow">→</span></span></a>
+<a class="sol-tile" href="equipment-grinding.html"><span class="sol-tile-media"><img src="cat-grinding.png" alt="Шлифовальные станки" loading="lazy"/></span><span class="sol-tile-panel"><span class="sol-tile-body"><h3>Шлифовальные станки</h3><span class="sol-tile-count" data-cat="grinding">59 моделей</span><span class="sol-tile-desc">Финишная точность и чистота поверхности</span></span><span class="sol-tile-arrow">→</span></span></a>
+<a class="sol-tile" href="equipment-edm.html"><span class="sol-tile-media"><img src="cat-edm.png" alt="Электроэрозионные станки" loading="lazy"/></span><span class="sol-tile-panel"><span class="sol-tile-body"><h3>Электроэрозионные станки</h3><span class="sol-tile-count" data-cat="edm">112 моделей</span><span class="sol-tile-desc">Пресс-формы, штампы, твёрдые сплавы</span></span><span class="sol-tile-arrow">→</span></span></a>
+<a class="sol-tile" href="equipment-boring.html"><span class="sol-tile-media"><img src="cat-boring.png" alt="Горизонтально-расточные станки" loading="lazy"/></span><span class="sol-tile-panel"><span class="sol-tile-body"><h3>Горизонтально-расточные станки</h3><span class="sol-tile-count" data-cat="boring">7 моделей</span><span class="sol-tile-desc">Точное растачивание корпусных деталей</span></span><span class="sol-tile-arrow">→</span></span></a>
+<a class="sol-tile" href="equipment-drilling.html"><span class="sol-tile-media"><img src="cat-drilling.png" alt="Сверлильные станки" loading="lazy"/></span><span class="sol-tile-panel"><span class="sol-tile-body"><h3>Сверлильные станки</h3><span class="sol-tile-count" data-cat="drilling">37 моделей</span><span class="sol-tile-desc">Радиальное и вертикальное сверление, растачивание</span></span><span class="sol-tile-arrow">→</span></span></a>
+<a class="sol-tile" href="equipment-waterjet.html"><span class="sol-tile-media"><img src="cat-waterjet.png" alt="Гидроабразивные станки" loading="lazy"/></span><span class="sol-tile-panel"><span class="sol-tile-body"><h3>Гидроабразивные станки</h3><span class="sol-tile-count" data-cat="waterjet">2 модели</span><span class="sol-tile-desc">Холодный рез металла, камня и композитов</span></span><span class="sol-tile-arrow">→</span></span></a>
+<a class="sol-tile" href="equipment-laser.html"><span class="sol-tile-media"><img src="cat-sheet.png" alt="Листообработка" loading="lazy"/></span><span class="sol-tile-panel"><span class="sol-tile-body"><h3>Листообработка</h3><span class="sol-tile-count" data-cat="laser,sheet,saw">113 моделей</span><span class="sol-tile-desc">Лазер, гильотины, листогибы, ленточные пилы</span></span><span class="sol-tile-arrow">→</span></span></a>
 </div>
 </div>
 </section>
@@ -344,6 +344,22 @@ document.getElementById('eqLeadModal').addEventListener('click',function(e){
 document.addEventListener('keydown',function(e){
   if(e.key==='Escape'){closeEqLeadModal();}
 });
+</script>
+<script>
+(function(){
+  function pl(n,f){var w=f.split('|'),m=n%10,h=n%100;return (h>=11&&h<=14)?w[2]:(m===1?w[0]:(m>=2&&m<=4?w[1]:w[2]))}
+  function apply(items){
+    if(!items||!items.length)return;
+    var by={},stock=0,models=0;
+    items.forEach(function(it){var u=String(it.url||'');var m=u.match(/^equipment-([a-z]+)-.+\.html$/);if(m){by[m[1]]=(by[m[1]]||0)+1;models++}else if(/^stock-.+\.html$/.test(u)){stock++}});
+    document.querySelectorAll('#catFacts [data-count]').forEach(function(b){var k=b.getAttribute('data-count');b.textContent=k==='models'?models:stock});
+    document.querySelectorAll('.sol-tile-count[data-cat]').forEach(function(el){var n=0;el.getAttribute('data-cat').split(',').forEach(function(c){n+=by[c]||0});el.textContent=n+' '+pl(n,'модель|модели|моделей')});
+  }
+  function fromScript(){var t=document.createElement('script');t.src='search-index.js';t.onload=function(){apply(window.MEHANIT_SEARCH_INDEX_DATA)};document.head.appendChild(t)}
+  if(window.MEHANIT_SEARCH_INDEX_DATA){apply(window.MEHANIT_SEARCH_INDEX_DATA);return}
+  if(location.protocol==='file:'||!window.fetch){fromScript();return}
+  fetch('search-index.json',{cache:'no-cache'}).then(function(r){return r.json()}).then(apply).catch(fromScript);
+})();
 </script>
 </body>
 </html>
