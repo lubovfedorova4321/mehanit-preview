@@ -345,21 +345,6 @@ document.addEventListener('keydown',function(e){
   if(e.key==='Escape'){closeEqLeadModal();}
 });
 </script>
-<script>
-(function(){
-  function pl(n,f){var w=f.split('|'),m=n%10,h=n%100;return (h>=11&&h<=14)?w[2]:(m===1?w[0]:(m>=2&&m<=4?w[1]:w[2]))}
-  function apply(items){
-    if(!items||!items.length)return;
-    var by={},stock=0,models=0;
-    items.forEach(function(it){var u=String(it.url||'');var m=u.match(/^equipment-([a-z]+)-.+\.html$/);if(m){by[m[1]]=(by[m[1]]||0)+1;models++}else if(/^stock-.+\.html$/.test(u)){stock++}});
-    document.querySelectorAll('#catFacts [data-count]').forEach(function(b){var k=b.getAttribute('data-count');b.textContent=k==='models'?models:stock});
-    document.querySelectorAll('.sol-tile-count[data-cat]').forEach(function(el){var n=0;el.getAttribute('data-cat').split(',').forEach(function(c){n+=by[c]||0});el.textContent=n+' '+pl(n,'модель|модели|моделей')});
-  }
-  function fromScript(){var t=document.createElement('script');t.src='search-index.js';t.onload=function(){apply(window.MEHANIT_SEARCH_INDEX_DATA)};document.head.appendChild(t)}
-  if(window.MEHANIT_SEARCH_INDEX_DATA){apply(window.MEHANIT_SEARCH_INDEX_DATA);return}
-  if(location.protocol==='file:'||!window.fetch){fromScript();return}
-  fetch('search-index.json',{cache:'no-cache'}).then(function(r){return r.json()}).then(apply).catch(fromScript);
-})();
-</script>
+<script src="site-counters.js"></script>
 </body>
 </html>
