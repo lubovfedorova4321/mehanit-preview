@@ -244,3 +244,8 @@ a.cp-contact:hover{border-color:rgba(107,45,139,.4)}
 .cp-cta p{font-size:15px;line-height:1.6;color:var(--mid);margin:10px 0 0;max-width:560px}
 .cp-cta .btn{min-height:56px;padding:0 30px;border-radius:10px;box-shadow:0 14px 34px rgba(107,45,139,.24)}
 .cp-cta-actions{display:flex;flex-wrap:wrap;align-items:center;gap:14px 24px}
+
+/* --- Условия гарантии, пристёгнутые к блоку «Гарантия 12 месяцев» --- */
+.cp-details.attached{margin-top:-1px;border-top-left-radius:0;border-top-right-radius:0;border-top:1px dashed rgba(26,26,26,.18)}
+.cp-wide.has-attached{border-bottom-left-radius:0;border-bottom-right-radius:0}
+.cp-details.attached summary{padding:18px 26px}
