@@ -176,7 +176,7 @@ const renderHero = (industry) => {
         '<div class="ib-facts">' +
           `<div class="ib-fact"><b>${parts}</b><span>${plural(parts, 'типовая деталь|типовые детали|типовых деталей')} с маршрутом обработки</span></div>` +
           `<div class="ib-fact"><b>${equipment}</b><span>${plural(equipment, 'категория|категории|категорий')} оборудования под эти задачи</span></div>` +
-          (cases ? `<div class="ib-fact"><b>${cases}</b><span>${plural(cases, 'внедрение|внедрения|внедрений')} на производствах</span></div>` : '') +
+          '<div class="ib-fact"><b>с 2006</b><span>года подбираем и запускаем станки для отрасли</span></div>' +
         '</div>' +
       '</div>' +
     '</section>'
