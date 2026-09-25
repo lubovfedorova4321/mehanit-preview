@@ -188,24 +188,22 @@ button.eq-scenario{border:1px solid var(--line);text-align:left;width:100%;font:
 </style>
 <link rel="stylesheet" href="site-shell.css"/>
 <link rel="stylesheet" href="industry-solutions.css"/>
+<link rel="stylesheet" href="instrument-block.css"/>
+<link rel="stylesheet" href="company-pages.css"/>
 </head>
 <body>
 <header></header>
 <main>
-<nav class="ind-crumbs" aria-label="Хлебные крошки"><div class="wrap"><ol>
-  <li><a href="index.html">Главная</a></li>
-  <li aria-current="page">Отраслевые решения</li>
-</ol></div></nav>
-
-<section class="sol-hero">
-<div class="wrap">
-<div class="eq-hero-top">
-  <h1 class="sol-title"><span class="title-row"><span class="title-dash"></span><span class="title-text">От детали — к технологии и оборудованию</span></span></h1>
-  <p class="sol-intro">Выберите отрасль и деталь, близкую к вашей задаче. Посмотрите маршрут обработки, ключевые операции и оборудование для каждого этапа — чтобы быстрее сформировать решение под своё производство.</p>
-</div>
-</div>
+<section class="ib-hero cp-hero-photo">
+  <div class="ib-hero-media"><img src="site-assets/solutions-hero.jpg" alt="Обработанные детали разных отраслей на столе технолога" fetchpriority="high"/></div>
+  <div class="wrap ib-hero-inner">
+    <nav class="ind-crumbs" aria-label="Хлебные крошки"><div class="wrap"><ol><li><a href="index.html">Главная</a></li><li aria-current="page">Отраслевые решения</li></ol></div></nav>
+    <h1>От детали — к технологии и оборудованию</h1>
+    <p class="ib-sub">Выберите отрасль и деталь, близкую к вашей. Для каждой — маршрут обработки, ключевые операции и станки под каждый этап.</p>
+    <div class="ib-actions"><button type="button" class="btn btn-ce" onclick="openLeadModal()">Обсудить задачу с технологом</button><a class="ib-textlink" href="#catalog">Выбрать отрасль</a></div>
+    <div class="ib-facts"><div class="ib-fact"><b>9</b><span>отраслей</span></div><div class="ib-fact"><b>54</b><span>типовых деталей с маршрутом обработки</span></div><div class="ib-fact"><b data-count="press:vnedreniya">16</b><span>внедрений на производствах</span></div></div>
+  </div>
 </section>
-
 <section class="sol-grid-section" id="catalog">
 <div class="wrap">
 <div class="sol-grid">
@@ -335,5 +333,7 @@ document.addEventListener('keydown',function(e){
   if(e.key==='Escape'){closeSolLeadModal();}
 });
 </script>
+<script src="press-data.js"></script>
+<script src="site-counters.js"></script>
 </body>
 </html>

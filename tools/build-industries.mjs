@@ -155,23 +155,36 @@ const pageTitleFor = (industry) => {
   return `${base}: детали, технологии, оборудование | Механит`
 }
 
+const FILE_SLUG = { aerospace: 'aero', 'agro-road': 'agro', automotive: 'auto', 'fuel-energy': 'fuel', instrumentation: 'instr', mining: 'mining', rail: 'rail', shipbuilding: 'ship', space: 'space' }
+const plural = (n, f) => { const w = f.split('|'), m = n % 10, h = n % 100; return (h >= 11 && h <= 14) ? w[2] : (m === 1 ? w[0] : (m >= 2 && m <= 4 ? w[1] : w[2])) }
+
 const renderHero = (industry) => {
-  const intro = industry.intro
-    ? `<p class="ind-intro">${esc(industry.intro)}</p>`
-    : '<!-- TODO: интро -->'
+  const intro = industry.intro || ''
+  const parts = industry.parts.length
+  const equipment = collectEquipment(industry).length
+  const cases = (CASES[industry.slug] || []).map((id) => loadPress().find((a) => a.id === id)).filter((a) => a && a.status === 'approved').length
+  const img = `site-assets/industry-${FILE_SLUG[industry.slug] || industry.slug}.jpg`
+  const heroImg = exists(img) ? img : 'site-assets/solutions-hero.jpg'
   return (
-    '<section class="ind-hero"><div class="wrap"><div class="ind-hero-top">' +
-      '<div>' +
-        `<h1 class="ind-title"><span class="title-row"><span class="title-dash"></span><span class="title-text">${esc(headline(industry))}</span></span></h1>` +
-        `<p class="ind-intro">${esc(industry.title)}: детали, технологии, оборудование</p>` +
+    '<section class="ib-hero cp-hero-photo">' +
+      `<div class="ib-hero-media"><img src="${heroImg}" alt="${esc(industry.title)}: детали и оборудование для их обработки" fetchpriority="high"/></div>` +
+      '<div class="wrap ib-hero-inner">' +
+        renderCrumbs(industry) +
+        `<h1>${esc(headline(industry))}</h1>` +
+        `<p class="ib-sub">${esc(intro)}</p>` +
+        '<div class="ib-actions"><button type="button" class="btn btn-ce" onclick="openLeadModal()">Обсудить задачу с технологом</button><a class="ib-textlink" href="#parts">Типовые детали отрасли</a></div>' +
+        '<div class="ib-facts">' +
+          `<div class="ib-fact"><b>${parts}</b><span>${plural(parts, 'типовая деталь|типовые детали|типовых деталей')} с маршрутом обработки</span></div>` +
+          `<div class="ib-fact"><b>${equipment}</b><span>${plural(equipment, 'категория|категории|категорий')} оборудования под эти задачи</span></div>` +
+          (cases ? `<div class="ib-fact"><b>${cases}</b><span>${plural(cases, 'внедрение|внедрения|внедрений')} на производствах</span></div>` : '') +
+        '</div>' +
       '</div>' +
-      intro +
-    '</div></div></section>'
+    '</section>'
   )
 }
 
 const renderParts = (industry) =>
-  '<section class="ind-grid-section"><div class="wrap"><div class="ind-grid">' +
+  '<section class="ind-grid-section" id="parts"><div class="wrap"><div class="ind-grid">' +
     industry.parts.map(renderCard).join('') +
   '</div></div></section>'
 
@@ -243,7 +256,6 @@ const buildIndustry = (file) => {
   if (!industry) return null
   const equipment = collectEquipment(industry)
   const inner =
-    renderCrumbs(industry) +
     renderJsonLd(industry) +
     renderHero(industry) +
     renderParts(industry) +
@@ -252,6 +264,8 @@ const buildIndustry = (file) => {
 
   let src = read(file)
   src = src.replace(/<title>[\s\S]*?<\/title>/, `<title>${esc(pageTitleFor(industry))}</title>`)
+  if (!src.includes('company-pages.css')) src = src.replace(/(<link rel="stylesheet" href="industry-solutions\.css[^"]*"\/>)/, '$1\n<link rel="stylesheet" href="instrument-block.css"/>\n<link rel="stylesheet" href="company-pages.css"/>')
+  src = src.replace(/(<meta property="og:image" content=")[^"]*(")/, `$1https://mehanit.ru/site-assets/industry-${FILE_SLUG[industry.slug] || industry.slug}.jpg$2`)
   const container = /(<div id="industryRoot">)[\s\S]*?(<\/div>\s*<\/main>)/
   if (!container.test(src)) throw new Error(`не найден контейнер #industryRoot в ${file}`)
   const out = src.replace(container, (_, open, close) => `${open}\n${inner}\n${close}`)
