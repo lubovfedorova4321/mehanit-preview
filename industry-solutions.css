@@ -120,3 +120,5 @@
 .ind-cases-note{margin-top:18px;font-size:13.5px;line-height:1.6;color:var(--mid)}
 .ind-cases-note a{color:var(--ce);font-weight:700}
 @media(max-width:900px){.ind-cases-grid{grid-template-columns:1fr}}
+
+.sol-tile-count{display:block;font-family:'Golos Text',monospace;font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin:2px 0 4px}
