@@ -724,23 +724,24 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 }
 .vmc-stock-badge{position:absolute;top:10px;left:10px;z-index:5;pointer-events:none;display:inline-flex;align-items:center;gap:5px;background:#1c8a4c;color:#fff;font-family:'Golos Text',monospace;font-size:9.5px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;padding:5px 10px 5px 8px;border-radius:20px;box-shadow:0 4px 10px rgba(28,138,76,.35)}.vmc-stock-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:#fff}</style>
 <link rel="stylesheet" href="site-shell.css"/>
+<link rel="stylesheet" href="company-pages.css"/>
+<link rel="stylesheet" href="instrument-block.css"/>
+<link rel="stylesheet" href="industry-solutions.css"/>
 </head>
 <body class="premium-v3 milling-tabs-page g2-page">
 <header></header>
 <nav class="crumbbar" aria-label="Хлебные крошки"><div class="wrap crumbs"><a href="index.html">Главная</a><span class="crumb-sep" aria-hidden="true">/</span><a href="equipment.html">Оборудование</a><span class="crumb-sep" aria-hidden="true">/</span><span class="current" aria-current="page">Шлифовальные станки</span></div></nav>
 <main class="eqcat-page">
-<section class="eqcat-hero"><div class="wrap">
-<div class="g2-hero-top">
-<div class="g2-hero-left">
-<h1 class="eqcat-title">Шлифовальные станки</h1>
-<div class="g2-feature-row"><div class="g2-feature"><span class="g2-feature-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.2"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3"/></svg></span><div class="g2-feature-body"><b>Высокая точность обработки</b><small>Точность до 0,001 мм</small></div></div><div class="g2-feature"><span class="g2-feature-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 15c2-3 4-3 6 0s4 3 6 0 4-3 6 0"/><path d="M3 9c2-3 4-3 6 0s4 3 6 0 4-3 6 0"/></svg></span><div class="g2-feature-body"><b>Идеальная шероховатость</b><small>Ra до 0,05 мкм</small></div></div><div class="g2-feature"><span class="g2-feature-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l7 3v5c0 4.5-3 7.8-7 9-4-1.2-7-4.5-7-9V6l7-3z"/><path d="M8.8 12.2l2.1 2.1 4.3-4.3"/></svg></span><div class="g2-feature-body"><b>Стабильное качество</b><small>Надёжность в серийном производстве</small></div></div></div>
-</div>
-<div class="g2-hero-right">
-<p class="eqcat-lead">Круглошлифовальные, плоскошлифовальные и бесцентровошлифовальные станки для финишной обработки — точность по размеру, форме и шероховатости поверхности.</p>
-</div>
-</div>
-</div></section>
-
+<section class="ib-hero cp-hero-photo">
+  <div class="ib-hero-media"><img src="site-assets/cat-grinding.jpg" alt="Шлифовальные станки: станки в светлом зале" fetchpriority="high"/></div>
+  <div class="wrap ib-hero-inner">
+    <nav class="ind-crumbs" aria-label="Хлебные крошки"><div class="wrap"><ol><li><a href="index.html">Главная</a></li><li><a href="equipment.html">Оборудование</a></li><li aria-current="page">Шлифовальные станки</li></ol></div></nav>
+    <h1>Шлифовальные станки</h1>
+    <p class="ib-sub">Круглошлифовальные, плоскошлифовальные и бесцентровошлифовальные станки для финишной обработки — точность по размеру, форме и шероховатости поверхности.</p>
+    <div class="ib-actions"><button type="button" class="btn btn-ce" onclick="openModal('grindingLeadModal')">Передать чертёж на подбор</button><a class="ib-textlink" href="#subcats">Выбрать тип станка</a></div>
+    <div class="ib-facts"><div class="ib-fact"><b data-count="cat:grinding">—</b><span>моделей в категории</span></div><div class="ib-fact"><b>3</b><span>подтипа оборудования</span></div><div class="ib-fact"><b>1</b><span>станок в наличии на складе</span></div></div>
+  </div>
+</section>
 <section class="eqcat-subnav-wrap" id="subcats"><div class="wrap">
 <div class="eqcat-subnav-head"><div class="eyebrow">Подкатегории</div><h2 class="h2 g2-subnav-title">Выберите тип оборудования</h2></div>
 <nav class="eqcat-subcards">
@@ -1800,4 +1801,5 @@ function submitLeadForm(modalId, consentId, errId){
 })();
 </script>
 <script src="site-shell.js?v=search-20260914"></script>
+<script src="site-counters.js"></script>
 </body></html>

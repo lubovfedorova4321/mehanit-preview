@@ -17,6 +17,7 @@
     document.querySelectorAll('[data-count]').forEach(function(el){
       var k=el.getAttribute('data-count'),v=null;
       if(k==='models')v=models;else if(k==='stock')v=stock;else if(k==='brands')v=brands;
+      else if(k.indexOf('cat:')===0){v=0;k.slice(4).split(',').forEach(function(c){v+=by[c]||0})}
       else if(k==='press'&&press)v=press.length;else if(k.indexOf('press:')===0&&press)v=pressBy[k.slice(6)]||0;
       if(v===null)return; el.textContent=v;
       var f=el.getAttribute('data-plural');if(f){var t=el.getAttribute('data-tail')||'';el.textContent=v+' '+pl(v,f)+t}

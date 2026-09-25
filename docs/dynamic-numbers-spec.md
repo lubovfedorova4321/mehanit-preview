@@ -22,11 +22,17 @@
 | `equipment.html` | `#catFacts [data-count="models"]` | моделей в каталоге | все опубликованные карточки моделей |
 | `equipment.html` | `#catFacts [data-count="stock"]` | станков на складе | складские карточки со статусом «в наличии» (проданные не считать) |
 | `equipment.html` | `.sol-tile-count[data-cat="turning"]` и др. | «265 моделей» на плитке категории | модели категории; `data-cat="laser,sheet,saw"` — сумма трёх категорий |
+| `equipment-<категория>.html` (8 страниц) | `[data-count="cat:<slug>"]` | моделей в категории на первом экране | модели категории; `cat:laser,sheet,saw` — сумма |
+| `equipment-<категория>.html` | второй и третий факт | подтипов; станков в наличии | число подкатегорий (табов); складские карточки категории со статусом «в наличии» — сейчас зашиты числом, в CMS считать |
 | `production-equipment.html`, `production-cutting-tools.html`, `about.html` | `[data-count="brands"]` | брендов инструмента и оснастки | опубликованные страницы брендов (сейчас `brand-*.html`, 17) |
 | `solution-<отрасль>.html` | `.ind-cases-grid` | три внедрения в отрасли | опубликованные статьи рубрики «Внедрения» с признаком отрасли; нужно поле «отрасль» у статьи (multi-select) |
 | `press-*.html` (статьи) | блоки «Читайте также» | связанные статьи | по полям `relatedArticles` / рубрике |
 
 Склонения: «модель / модели / моделей», «материал / материала / материалов», «репортаж / репортажа / репортажей», «разбор / разбора / разборов» — функция `pl()` в `site-counters.js`, перенести на сервер.
+
+## Редиректы
+
+`equipment-saw.html` в пилоте — страница-заглушка с `meta refresh` на `equipment-laser.html#subcats`. В CMS это должен быть серверный 301 (и любые другие удалённые адреса: `production-measurement`, `production-automation`, `production-coolant-chips`, `obrabotka-*` → `obrabotka-materialov-iso.html#<буква>`, `process-*` → `process.html#step-N`).
 
 ## Что НЕ считается автоматически (константы, правятся руками)
 
