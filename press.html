@@ -148,7 +148,7 @@ main{position:relative;z-index:1}
     <h1>Пресс-центр Механита</h1>
     <p class="ib-sub">Практика металлообработки: как выбирать станки, реальные запуски на производствах, инженерные разборы и жизнь компании.</p>
     <div class="ib-actions"><a class="btn btn-ce" href="#oborudovanie">Как выбрать станок</a><a class="ib-textlink" href="press-rubric-vnedreniya.html">Реальные внедрения</a></div>
-    <div class="ib-facts"><div class="ib-fact"><b>53</b><span>материала в пяти рубриках</span></div><div class="ib-fact"><b>16</b><span>репортажей с запусков оборудования</span></div><div class="ib-fact"><b>14</b><span>разборов, как выбрать станок</span></div></div>
+    <div class="ib-facts" id="pressFacts"><div class="ib-fact"><b data-count="all">53</b><span data-plural="материал|материала|материалов" data-tail=" в пяти рубриках">материала в пяти рубриках</span></div><div class="ib-fact"><b data-count="vnedreniya">16</b><span data-plural="репортаж|репортажа|репортажей" data-tail=" с запусков оборудования">репортажей с запусков оборудования</span></div><div class="ib-fact"><b data-count="oborudovanie">14</b><span data-plural="разбор|разбора|разборов" data-tail=", как выбрать станок">разборов, как выбрать станок</span></div></div>
   </div>
 </section>
 <section class="press-latest"><div class="wrap">
@@ -480,6 +480,24 @@ main{position:relative;z-index:1}
 
 </main>
 <script src="press-data.js"></script>
+<script>
+(function(){
+  if(typeof PRESS_ARTICLES==='undefined')return;
+  var pub=PRESS_ARTICLES.filter(function(a){return a.status==='approved'});
+  var by={};pub.forEach(function(a){by[a.categorySlug]=(by[a.categorySlug]||0)+1});
+  function pl(n,f){var w=f.split('|'),m=n%10,h=n%100;return (h>=11&&h<=14)?w[2]:(m===1?w[0]:(m>=2&&m<=4?w[1]:w[2]))}
+  var facts=document.getElementById('pressFacts');
+  if(facts){facts.querySelectorAll('.ib-fact').forEach(function(f){
+    var b=f.querySelector('[data-count]'),s=f.querySelector('[data-plural]');
+    var k=b.getAttribute('data-count'),n=k==='all'?pub.length:(by[k]||0);
+    b.textContent=n; if(s)s.textContent=pl(n,s.getAttribute('data-plural'))+(s.getAttribute('data-tail')||'');
+  });}
+  document.querySelectorAll('section.rubric-section[id] .rubric-count').forEach(function(el){
+    var n=by[el.closest('section').id]; if(n!=null)el.textContent=n+' '+pl(n,'материал|материала|материалов');
+  });
+})();
+</script>
+
 <script>
 function duplicateCarouselForLoop(trackId){
   var track=document.getElementById(trackId);
