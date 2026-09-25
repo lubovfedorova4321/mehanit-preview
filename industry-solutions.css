@@ -102,3 +102,21 @@
 .ind-equipment-list a{display:inline-flex;align-items:center;padding:9px 14px;border:1px solid rgba(107,45,139,.22);border-radius:8px;background:rgba(107,45,139,.03);font-family:'PT Root UI',sans-serif;font-size:13px;color:var(--sg);transition:background .2s ease,border-color .2s ease,color .2s ease}
 .ind-equipment-list a:hover,.ind-equipment-list a:focus-visible{background:#6B2D8B;border-color:transparent;color:#fff}
 @media(max-width:767px){.ind-equipment-list{gap:8px}.ind-equipment-list a{font-size:12.5px;padding:8px 11px}}
+
+/* ===== Внедрения в отрасли (вместо общих «преимуществ») ===== */
+.ind-cases{padding:clamp(34px,4vw,52px) 0;border-top:1px solid var(--line)}
+.ind-cases-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+.ind-cases-lede{font-size:14.5px;line-height:1.6;color:var(--mid);max-width:720px;margin:8px 0 0}
+.ind-cases-more{font-family:'PT Root UI',sans-serif;font-weight:700;font-size:14px;color:var(--ce);white-space:nowrap}
+.ind-cases-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:22px}
+.ind-case{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;color:inherit;transition:transform .35s cubic-bezier(.22,1.5,.36,1),box-shadow .35s ease}
+.ind-case:hover{transform:translateY(-4px);box-shadow:0 22px 50px rgba(26,26,26,.12)}
+.ind-case-media{display:block;aspect-ratio:3/2;overflow:hidden;background:var(--tl2)}
+.ind-case-media img{width:100%;height:100%;object-fit:cover;display:block}
+.ind-case-body{display:flex;flex-direction:column;gap:8px;padding:16px 18px 18px;flex:1}
+.ind-case-body small{font-family:'Golos Text',monospace;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.ind-case-body b{font-size:15px;line-height:1.35;color:var(--bm);font-weight:700}
+.ind-case-body>span{margin-top:auto;padding-top:6px;font-family:'PT Root UI',sans-serif;font-weight:700;font-size:12.5px;color:var(--ce)}
+.ind-cases-note{margin-top:18px;font-size:13.5px;line-height:1.6;color:var(--mid)}
+.ind-cases-note a{color:var(--ce);font-weight:700}
+@media(max-width:900px){.ind-cases-grid{grid-template-columns:1fr}}

@@ -99,3 +99,6 @@
   .det-machine-body h4{font-size:14px}
 }
 @media(prefers-reduced-motion:reduce){.det-machine-card{transition:none}}
+
+.det-equip-chip--tool{border-style:dashed;background:#fff}
+.det-equip-chip--tool b::before{content:'⌀ ';color:var(--gold)}

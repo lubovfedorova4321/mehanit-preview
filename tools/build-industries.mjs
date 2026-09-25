@@ -187,6 +187,50 @@ const renderEquipment = (equipment) => {
   )
 }
 
+
+/** Внедрения по отраслям: id материалов из press-data.js (рубрика «Внедрения»). */
+const CASES = {
+  rail: ['press-101', 'press-105', 'press-108'],
+  automotive: ['press-103', 'press-030', 'press-033'],
+  mining: ['press-104', 'press-032', 'press-027'],
+  'fuel-energy': ['press-107', 'press-034', 'press-031'],
+  instrumentation: ['press-106', 'press-029', 'press-028'],
+  'agro-road': ['press-033', 'press-027', 'press-028'],
+  aerospace: ['press-030', 'press-031', 'press-106'],
+  shipbuilding: ['press-032', 'press-031', 'press-105'],
+  space: ['press-106', 'press-030', 'press-031'],
+}
+
+let PRESS = null
+const loadPress = () => {
+  if (PRESS) return PRESS
+  const src = fs.readFileSync(path.join(ROOT, 'press-data.js'), 'utf8')
+  const fn = new Function(src + ';return PRESS_ARTICLES')
+  PRESS = fn()
+  return PRESS
+}
+const fmtDate = (d) => { const [y, m, dd] = d.split('-'); return `${dd}.${m}.${y}` }
+
+const renderCases = (industry) => {
+  const ids = CASES[industry.slug] || []
+  const all = loadPress()
+  const items = ids.map((id) => all.find((a) => a.id === id)).filter((a) => a && a.status === 'approved')
+  if (!items.length) return ''
+  return (
+    '<section class="ind-cases"><div class="wrap">' +
+      '<div class="ind-cases-head"><div><h2 class="ind-equipment-title">Внедрения в отрасли</h2>' +
+      '<p class="ind-cases-lede">Реальные запуски оборудования на производствах: что поставили, как вводили в эксплуатацию, что получил заказчик.</p></div>' +
+      '<a class="ind-cases-more" href="press-rubric-vnedreniya.html">Все внедрения →</a></div>' +
+      '<div class="ind-cases-grid">' +
+      items.map((a) =>
+        `<a class="ind-case" href="press-${esc(a.slug)}.html"><span class="ind-case-media"><img src="${esc(a.cardImage)}" alt="${esc(a.title)}" loading="lazy"/></span>` +
+        `<span class="ind-case-body"><small>Внедрения · ${fmtDate(a.datePublished)}</small><b>${esc(a.title)}</b><span>Читать →</span></span></a>`).join('') +
+      '</div>' +
+      '<p class="ind-cases-note">Как проходит проект от чертежа до серии — <a href="process.html">шесть шагов</a>. Нужен участок целиком — <a href="production-complex.html">комплексное оснащение</a>.</p>' +
+    '</div></section>'
+  )
+}
+
 const renderAdvantages = (list) =>
   '<section class="ind-advantages"><h2 class="sr-only">Как мы работаем по отрасли</h2><div class="ind-adv-grid">' +
   list.map((item, i) =>
@@ -204,7 +248,7 @@ const buildIndustry = (file) => {
     renderHero(industry) +
     renderParts(industry) +
     renderEquipment(equipment) +
-    renderAdvantages(industry.advantages || DEFAULT_ADVANTAGES)
+    renderCases(industry)
 
   let src = read(file)
   src = src.replace(/<title>[\s\S]*?<\/title>/, `<title>${esc(pageTitleFor(industry))}</title>`)
