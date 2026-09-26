@@ -301,10 +301,10 @@ a.cp-contact:hover{border-color:rgba(107,45,139,.4)}
 /* --- Главная: логотипы заказчиков в первом экране --- */
 .hero-clients{margin-top:clamp(26px,3vw,40px);display:flex;flex-direction:column;gap:12px}
 .hero-clients-label{font-family:'Golos Text',monospace;font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--mid)}
-.hero-clients-row{display:flex;flex-wrap:wrap;align-items:center;gap:10px 26px}
-.hero-clients-row img{height:26px;width:auto;max-width:110px;object-fit:contain;filter:grayscale(1);opacity:.72;transition:opacity .2s,filter .2s}
+.hero-clients-row{display:flex;flex-wrap:wrap;align-items:center;gap:12px 32px}
+.hero-clients-row img{height:38px;width:auto;max-width:150px;object-fit:contain;filter:grayscale(1) contrast(1.1);opacity:.85;transition:opacity .2s,filter .2s}
 .hero-clients-row img:hover{filter:none;opacity:1}
-@media(max-width:640px){.hero-clients-row img{height:20px;max-width:88px}.hero-clients-row{gap:8px 18px}}
+@media(max-width:640px){.hero-clients-row img{height:26px;max-width:100px}.hero-clients-row{gap:8px 18px}}
 /* --- Главная: полоса инструмента --- */
 .home-tooling{padding-top:0}
 .home-tooling .ib-band-body h2{font-size:clamp(22px,2.2vw,32px)}
