@@ -296,17 +296,18 @@ a.cp-contact:hover{border-color:rgba(107,45,139,.4)}
 .cp-cta.dark .ib-textlink{color:#fff}
 .cp-cta.dark .ib-textlink:hover{color:var(--gold)}
 
-.eq-car-count{display:block;margin-top:4px;font-family:'Golos Text',monospace;font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
 
-/* --- Главная: логотипы заказчиков в первом экране --- */
-.hero-clients{margin-top:clamp(26px,3vw,40px);display:flex;flex-direction:column;gap:12px}
-.hero-clients-label{font-family:'Golos Text',monospace;font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--mid)}
-.hero-clients-row{display:flex;flex-wrap:wrap;align-items:center;gap:12px 32px}
-.hero-clients-row img{height:38px;width:auto;max-width:150px;object-fit:contain;filter:grayscale(1) contrast(1.1);opacity:.85;transition:opacity .2s,filter .2s}
-.hero-clients-row img:hover{filter:none;opacity:1}
-@media(max-width:640px){.hero-clients-row img{height:26px;max-width:100px}.hero-clients-row{gap:8px 18px}}
-/* --- Главная: полоса инструмента --- */
-.home-tooling{padding-top:0}
-.home-tooling .ib-band-body h2{font-size:clamp(22px,2.2vw,32px)}
-.home-tooling .ib-band-links .btn{min-height:44px;padding:0 20px;border-radius:999px;font-size:12px}
-.home-tooling .ib-eyebrow{margin-bottom:4px}
+
+/* home: tooling block in equipment style */
+.home-tools.equipment{padding:5rem 0;background:var(--paper)}
+.home-tools-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.home-tool{display:flex;flex-direction:column;text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
+.home-tool:hover,.home-tool:focus-visible{transform:translateY(-4px);box-shadow:0 18px 40px rgba(26,26,26,.12);border-color:rgba(107,45,139,.35)}
+.home-tool-media{display:block;aspect-ratio:16/10;overflow:hidden;background:#f2f0f4}
+.home-tool-media img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+.home-tool:hover .home-tool-media img{transform:scale(1.04)}
+.home-tool-title{margin:16px 18px 4px;font-family:'Golos Text',sans-serif;font-size:17px;font-weight:700;color:var(--bm)}
+.home-tool:hover .home-tool-title{color:var(--ce)}
+.home-tool-desc{margin:0 18px 18px;font-size:13.5px;line-height:1.5;color:var(--mid)}
+@media(max-width:640px){.home-tools-grid{gap:12px}.home-tool-title{margin:12px 12px 2px;font-size:14.5px}.home-tool-desc{margin:0 12px 12px;font-size:12.5px}}
+@media(max-width:1080px){.home-tools-grid{margin-top:8px}}
