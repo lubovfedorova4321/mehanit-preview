@@ -1092,3 +1092,8 @@ html body .eq-h2,html body .section-h2,html body .ib-head h2,html body .ib-head>
 html body .rubric-section h2,html body .press-latest h2,html body .det-h2,html body .ib-group-head h2,html body .cp-wide-body h2,html body .cp-step h2,html body .g2-subnav-title,html body .art-body h2{font-family:'Magistral',sans-serif;font-size:var(--fs-h2s);font-weight:700;line-height:1.12;letter-spacing:-.01em}
 @media(max-width:640px){html body .eq-h2,html body .section-h2,html body .ib-head h2,html body .h2.eq-split-title,html body .cp-cta h2{font-size:clamp(24px,7vw,32px)!important;line-height:1.12!important;letter-spacing:0!important}}
 html body.premium-v4 .h2{font-size:var(--fs-h2)!important}
+
+/* показать ещё в каталоге */
+.vmc-card.is-more-hidden{display:none!important}
+.vmc-more-row{display:flex;justify-content:center;padding:20px 0 6px}
+.vmc-more-btn{min-width:260px}

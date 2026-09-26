@@ -829,5 +829,6 @@ calcLease();
 var b=document.querySelector('[data-count="stock-live"]');if(b)b.textContent=n;
 function setc(){var c=document.getElementById('stkCount');if(c)c.textContent=n+' '+(n%10===1&&n%100!==11?'позиция':(n%10>=2&&n%10<=4&&!(n%100>=12&&n%100<=14)?'позиции':'позиций'))+' в наличии'}setc();setTimeout(setc,400);window.addEventListener('load',setc);})();
 </script>
+<script src="catalog-more.js"></script>
 </body>
 </html>
