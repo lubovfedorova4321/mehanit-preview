@@ -1103,3 +1103,5 @@ html body.premium-v4 .h2{font-size:var(--fs-h2)!important}
 html body .ib-section,html body .eq-section,html body section.faq,html body .final-cta:not(.final-cta-wrap .final-cta){padding-top:var(--sec);padding-bottom:var(--sec)}
 html body .ib-section.tight,html body .rubric-section,html body .det-section,html body .sol-grid-section,html body .press-latest{padding-top:var(--sec-tight);padding-bottom:var(--sec-tight)}
 html body .ib-section.tight+.ib-section.tight,html body .det-section+.det-section{padding-top:var(--sec-tight)}
+
+.faq-all{margin:18px 0 0;font-size:14px}
