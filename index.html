@@ -2041,6 +2041,7 @@ body.hide-hdr-cta .hdr .hdr-cta{display:none}
 .eq-carousel-photo .eq-car-item{width:220px}
 </style>
 <link rel="stylesheet" href="site-shell.css"/>
+<link rel="stylesheet" href="company-pages.css"/>
 </head>
 <body class="premium-v4">
 <header class="hdr">
@@ -2132,14 +2133,14 @@ body.hide-hdr-cta .hdr .hdr-cta{display:none}
 <a class="btn-solid" href="equipment.html">Смотреть каталог</a>
 </div>
 <div class="eq-grid-static">
-<a class="eq-car-item" href="equipment-turning.html"><span class="eq-car-title">Токарные станки</span><span class="eq-car-media"><img src="cat-turning.png" alt="Токарные станки" loading="lazy"/></span></a>
-<a class="eq-car-item" href="equipment-milling.html"><span class="eq-car-title">Фрезерные станки</span><span class="eq-car-media"><img src="cat-milling.png" alt="Фрезерные станки" loading="lazy"/></span></a>
-<a class="eq-car-item" href="equipment-grinding.html"><span class="eq-car-title">Шлифовальные станки</span><span class="eq-car-media"><img src="cat-grinding.png" alt="Шлифовальные станки" loading="lazy"/></span></a>
-<a class="eq-car-item" href="equipment-edm.html"><span class="eq-car-title">Электроэрозионные станки</span><span class="eq-car-media"><img src="cat-edm.png" alt="Электроэрозионные станки" loading="lazy"/></span></a>
-<a class="eq-car-item" href="equipment-boring.html"><span class="eq-car-title">Горизонтально-расточные станки</span><span class="eq-car-media"><img src="cat-boring.png" alt="Горизонтально-расточные станки" loading="lazy"/></span></a>
-<a class="eq-car-item" href="equipment-drilling.html"><span class="eq-car-title">Сверлильные станки</span><span class="eq-car-media"><img src="cat-drilling.png" alt="Сверлильные станки" loading="lazy"/></span></a>
-<a class="eq-car-item" href="equipment-waterjet.html"><span class="eq-car-title">Гидроабразивные станки</span><span class="eq-car-media"><img src="cat-waterjet.png" alt="Гидроабразивные станки" loading="lazy"/></span></a>
-<a class="eq-car-item" href="equipment-laser.html"><span class="eq-car-title">Листообработка</span><span class="eq-car-media"><img src="cat-sheet.png" alt="Листообработка" loading="lazy"/></span></a>
+<a class="eq-car-item" href="equipment-turning.html"><span class="eq-car-title">Токарные станки</span><span class="sol-tile-count eq-car-count" data-cat="turning">—</span><span class="eq-car-media"><img src="cat-turning.png" alt="Токарные станки" loading="lazy"/></span></a>
+<a class="eq-car-item" href="equipment-milling.html"><span class="eq-car-title">Фрезерные станки</span><span class="sol-tile-count eq-car-count" data-cat="milling">—</span><span class="eq-car-media"><img src="cat-milling.png" alt="Фрезерные станки" loading="lazy"/></span></a>
+<a class="eq-car-item" href="equipment-grinding.html"><span class="eq-car-title">Шлифовальные станки</span><span class="sol-tile-count eq-car-count" data-cat="grinding">—</span><span class="eq-car-media"><img src="cat-grinding.png" alt="Шлифовальные станки" loading="lazy"/></span></a>
+<a class="eq-car-item" href="equipment-edm.html"><span class="eq-car-title">Электроэрозионные станки</span><span class="sol-tile-count eq-car-count" data-cat="edm">—</span><span class="eq-car-media"><img src="cat-edm.png" alt="Электроэрозионные станки" loading="lazy"/></span></a>
+<a class="eq-car-item" href="equipment-boring.html"><span class="eq-car-title">Горизонтально-расточные станки</span><span class="sol-tile-count eq-car-count" data-cat="boring">—</span><span class="eq-car-media"><img src="cat-boring.png" alt="Горизонтально-расточные станки" loading="lazy"/></span></a>
+<a class="eq-car-item" href="equipment-drilling.html"><span class="eq-car-title">Сверлильные станки</span><span class="sol-tile-count eq-car-count" data-cat="drilling">—</span><span class="eq-car-media"><img src="cat-drilling.png" alt="Сверлильные станки" loading="lazy"/></span></a>
+<a class="eq-car-item" href="equipment-waterjet.html"><span class="eq-car-title">Гидроабразивные станки</span><span class="sol-tile-count eq-car-count" data-cat="waterjet">—</span><span class="eq-car-media"><img src="cat-waterjet.png" alt="Гидроабразивные станки" loading="lazy"/></span></a>
+<a class="eq-car-item" href="equipment-laser.html"><span class="eq-car-title">Листообработка</span><span class="sol-tile-count eq-car-count" data-cat="laser,sheet,saw">—</span><span class="eq-car-media"><img src="cat-sheet.png" alt="Листообработка" loading="lazy"/></span></a>
 </div>
 </div>
 </section>
@@ -2424,7 +2425,7 @@ body.hide-hdr-cta .hdr .hdr-cta{display:none}
 <div class="wrap">
 <div class="eyebrow">Экспертиза</div>
 <h2 class="h2">Экспертиза и новости</h2>
-<div class="expertise-grid">
+<div class="expertise-grid" id="homeNews" data-limit="4">
 <a class="article-feature" href="press-kak-vybrat-vertikalnyy-obrabatyvayushchiy-centr.html">
 <span class="article-feature-media"><img src="mehanit-milling-machine.jpg" alt="Вертикальный обрабатывающий центр" loading="lazy"/></span>
 <span class="article-feature-body">
@@ -4004,6 +4005,17 @@ document.addEventListener('keydown', function(e){
 })();
 /* Кнопку «Обсудить задачу» в шапке обрабатывает site-shell.js.
    Прежний общий перехват по .site-cta ловил и «Заказать звонок» — открывались два окна. */
+</script>
+<script src="press-data.js"></script>
+<script src="site-counters.js"></script>
+<script>
+(function(){
+  var g=document.getElementById('homeNews'); if(!g||!window.PRESS_ARTICLES)return;
+  var n=+g.getAttribute('data-limit')||4;
+  var items=PRESS_ARTICLES.filter(function(a){return a.status==='approved'}).sort(function(a,b){return b.datePublished<a.datePublished?-1:1}).slice(0,n);
+  function esc(t){return String(t).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+  g.innerHTML=items.map(function(a){return '<a class="article-feature" href="press-'+esc(a.slug)+'.html"><span class="article-feature-media"><img src="'+esc(a.cardImage||a.heroImage)+'" alt="'+esc(a.title)+'" loading="lazy"/></span><span class="article-feature-body"><span class="article-feature-meta"><span>'+esc(a.category)+'</span></span><h3>'+esc(a.title)+'</h3><p>'+esc(a.teaser||'')+'</p><span class="sol-link">Читать материал <i aria-hidden="true">→</i></span></span></a>'}).join('');
+})();
 </script>
 <script src="site-shell.js?v=search-20260914"></script>
 </body>

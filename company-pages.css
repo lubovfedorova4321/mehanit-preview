@@ -295,3 +295,5 @@ a.cp-contact:hover{border-color:rgba(107,45,139,.4)}
 .cp-cta.dark p{color:rgba(234,234,230,.72)}
 .cp-cta.dark .ib-textlink{color:#fff}
 .cp-cta.dark .ib-textlink:hover{color:var(--gold)}
+
+.eq-car-count{display:block;margin-top:4px;font-family:'Golos Text',monospace;font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
