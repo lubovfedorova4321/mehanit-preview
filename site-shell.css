@@ -1105,3 +1105,12 @@ html body .ib-section.tight,html body .rubric-section,html body .det-section,htm
 html body .ib-section.tight+.ib-section.tight,html body .det-section+.det-section{padding-top:var(--sec-tight)}
 
 .faq-all{margin:18px 0 0;font-size:14px}
+
+/* ==== FAQ: единый компонент (details) ==== */
+.cp-faq{max-width:860px;margin-top:clamp(18px,2vw,28px)}
+.cp-faq .faq-item{background:#fff;border:1px solid var(--line);border-radius:14px;margin-bottom:10px;padding:0}
+.cp-faq .faq-item summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 22px;font-family:'Golos Text',sans-serif;font-size:15px;font-weight:700;color:var(--bm)}
+.cp-faq .faq-item summary::-webkit-details-marker{display:none}
+.cp-faq .faq-item summary::after{content:'+';font-size:20px;line-height:1;color:var(--ce);flex:0 0 auto}
+.cp-faq .faq-item[open] summary::after{content:'–'}
+.cp-faq .faq-item p{margin:0;padding:0 22px 18px;font-family:'Golos Text',sans-serif;font-size:14px;line-height:1.65;color:var(--mid)}
