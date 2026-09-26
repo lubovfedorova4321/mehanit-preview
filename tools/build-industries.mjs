@@ -105,10 +105,10 @@ const renderCard = (part) => {
     ? `<img src="${esc(part.image)}" alt="${esc(part.title)}" loading="lazy">`
     : '<span class="ind-card-placeholder"><span>Изображение детали</span><small>появится после подготовки визуала</small></span>'
   const solutionBtn = hasSolution
-    ? `<a class="btn ind-btn-solution" href="${esc(part.solutionUrl)}" data-role="solution">Технологическое решение →</a>`
-    : '<a class="btn ind-btn-solution" href="index.html#quiz" data-role="task">Обсудить задачу с технологом</a>'
+    ? `<a class="ind-card-link" href="${esc(part.solutionUrl)}" data-role="solution">Технологическое решение <i aria-hidden="true">→</i></a>`
+    : '<a class="ind-card-link" href="index.html#quiz" data-role="task">Обсудить задачу с технологом <i aria-hidden="true">→</i></a>'
   const equipmentBtn = part.equipmentUrl
-    ? `<a class="btn ind-btn-equipment" href="${esc(part.equipmentUrl)}" data-role="equipment">Смотреть оборудование →</a>`
+    ? `<a class="ind-card-link ind-card-link--muted" href="${esc(part.equipmentUrl)}" data-role="equipment">Оборудование</a>`
     : ''
   return (
     `<article class="ind-card" id="${esc(part.id)}">` +
@@ -116,7 +116,7 @@ const renderCard = (part) => {
       '<div class="ind-card-panel">' +
         `<h2 class="ind-card-title2">${titleHtml}</h2>` +
         `<div class="ind-card-task"><span class="ind-card-label ind-card-label--task">Технологическая задача</span><p>${esc(part.task)}</p></div>` +
-        `<div class="ind-card-actions">${solutionBtn}${equipmentBtn}</div>` +
+        `<div class="ind-card-links">${solutionBtn}${equipmentBtn}</div>` +
       '</div>' +
     '</article>'
   )
