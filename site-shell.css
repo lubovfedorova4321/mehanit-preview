@@ -1117,3 +1117,6 @@ html body .ib-section.tight+.ib-section.tight,html body .det-section+.det-sectio
 
 /* заголовки блоков главной — обычный регистр, как на остальных страницах */
 html body.premium-v4 .h2,html body.premium-v4 .trust .h2{text-transform:none!important;letter-spacing:-.015em!important}
+
+html body .cookie-banner-accept{background:#6B2D8B!important;border-color:#6B2D8B!important;color:#fff!important}
+html body .cookie-banner-accept:hover{background:#7D3AA0!important;border-color:#7D3AA0!important}
