@@ -1090,8 +1090,8 @@ html body .card .copy .sku+.sku{margin-top:4px}
 html body .ib-hero h1,html body .cp-lease-text h1,html body .ind-title,html body .sol-title,html body main.page .copy h1,html body .legal h1,html body .art-head h1{font-family:'Magistral',sans-serif;font-size:var(--fs-h1);font-weight:700;line-height:1.05;letter-spacing:-.02em}
 html body .eq-h2,html body .section-h2,html body .ib-head h2,html body .ib-head>div>h2,html body .h2.eq-split-title,html body .about-page .eq-h2,html body .ib-cost h2,html body .cp-cta h2,html body .eqcat-catalog-title,html body .ind-equipment-title,html body .cp-form h2,html body .cp-lease-calc h2,html body .faq h2,html body .final-cta h2,html body .eq-final-cta h2{font-family:'Magistral',sans-serif;font-size:var(--fs-h2);font-weight:700;line-height:1.1;letter-spacing:-.015em;text-transform:none;color:var(--bm)}
 html body .rubric-section h2,html body .press-latest h2,html body .det-h2,html body .ib-group-head h2,html body .cp-wide-body h2,html body .cp-step h2,html body .g2-subnav-title,html body .art-body h2{font-family:'Magistral',sans-serif;font-size:var(--fs-h2s);font-weight:700;line-height:1.12;letter-spacing:-.01em}
-@media(max-width:640px){html body .eq-h2,html body .section-h2,html body .ib-head h2,html body .h2.eq-split-title,html body .cp-cta h2{font-size:clamp(24px,7vw,32px)!important;line-height:1.12!important;letter-spacing:0!important}}
-html body.premium-v4 .h2{font-size:var(--fs-h2)!important}
+@media(max-width:640px){html body .eq-h2,html body .section-h2,html body .ib-head h2,html body .h2.eq-split-title,html body .cp-cta h2,html body.premium-v4 .h2{font-size:clamp(24px,7vw,32px)!important;line-height:1.12!important;letter-spacing:0!important}}
+html body.premium-v4 .h2{font-size:clamp(28px,3.4vw,46px)!important}
 
 /* показать ещё в каталоге */
 .vmc-card.is-more-hidden{display:none!important}
