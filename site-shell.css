@@ -1134,3 +1134,18 @@ html body .ib-fact.logo img{height:30px;width:auto;max-width:150px;object-fit:co
 html body .ib-facts{display:flex;flex-wrap:wrap;gap:12px 0}
 @media(max-width:640px){html body .ib-facts{flex-direction:column;gap:14px}}
 html body .ib-hero .ib-eyebrow{margin-top:4px}
+
+/* ==== Юридические страницы ==== */
+html body main.legal .wrap{max-width:860px}
+html body main.legal{padding:clamp(24px,3vw,40px) 0 var(--sec)}
+html body main.legal h1{margin:0 0 8px}
+html body main.legal .updated{font-size:13px;color:var(--mid);margin-bottom:22px}
+html body main.legal h3{font-family:'Magistral',sans-serif;font-weight:700;font-size:clamp(19px,1.8vw,24px);line-height:1.2;margin:36px 0 12px;scroll-margin-top:96px}
+html body main.legal p{font-size:15px;line-height:1.65;color:#3d3d3d;margin:0 0 12px}
+.legal-toc{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 22px;margin:0 0 28px}
+.legal-toc b{display:block;font-family:'Golos Text',sans-serif;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--mid);margin-bottom:10px}
+.legal-toc ol{margin:0;padding-left:20px;columns:2;column-gap:28px;font-size:14px;line-height:1.5}
+.legal-toc li{break-inside:avoid;margin:0 0 6px}
+.legal-toc a{color:var(--ce);text-decoration:none}
+.legal-toc a:hover{text-decoration:underline}
+@media(max-width:640px){.legal-toc ol{columns:1}}
