@@ -1175,3 +1175,7 @@ html body .site-footer-req{margin:0}
 @media(max-width:620px){html body .site-footer-grid{grid-template-columns:1fr!important}}
 html body .site-footer-bottom span[data-year]{display:inline!important;margin:0!important}
 @media(max-width:620px){html body .site-footer-grid{grid-template-columns:1fr 1fr!important;gap:18px 20px!important}html body .site-footer-brand{grid-column:1/-1}}
+
+/* тёмные CTA: заголовок и текст белые (поверх токенов типографики) */
+html body .eq-final-cta h2,html body .final-cta h2,html body .cp-cta.dark h2,html body .final-cta-wrap .final-cta h2,html body .final-cta-copy h2,html body .final-cta-copy h3{color:#fff!important}
+html body .eq-final-cta p,html body .final-cta p,html body .cp-cta.dark p,html body .final-cta-copy p{color:rgba(255,255,255,.78)}
