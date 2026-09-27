@@ -1149,3 +1149,7 @@ html body main.legal p{font-size:15px;line-height:1.65;color:#3d3d3d;margin:0 0 
 .legal-toc a{color:var(--ce);text-decoration:none}
 .legal-toc a:hover{text-decoration:underline}
 @media(max-width:640px){.legal-toc ol{columns:1}}
+
+/* главная на телефоне: фото вместо скрытого видео */
+.hero-mobile-photo{display:none}
+@media(max-width:760px){html body .hero-premium{min-height:0!important;height:auto!important}html body .hero-premium-copy .hero-mobile-photo{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:center;border-radius:14px;margin-top:22px;box-shadow:0 18px 40px rgba(26,26,26,.14)}}
