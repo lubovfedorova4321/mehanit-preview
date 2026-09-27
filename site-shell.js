@@ -1158,3 +1158,12 @@
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',initMobileCatalogFilters)}
   else{initMobileCatalogFilters()}
 })();
+
+/* Плавающие кнопки прячутся, когда в кадре подвал */
+(function(){
+  function init(){
+    var f=document.querySelector('footer.site-footer'); if(!f||!('IntersectionObserver' in window)) return;
+    new IntersectionObserver(function(en){document.body.classList.toggle('is-footer-visible',en[0].isIntersecting)},{threshold:0.05}).observe(f);
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init); else init();
+})();
