@@ -1120,3 +1120,17 @@ html body.premium-v4 .h2,html body.premium-v4 .trust .h2{text-transform:none!imp
 
 html body .cookie-banner-accept{background:#6B2D8B!important;border-color:#6B2D8B!important;color:#fff!important}
 html body .cookie-banner-accept:hover{background:#7D3AA0!important;border-color:#7D3AA0!important}
+
+/* ==== Первый экран: единая высота на всех разделах ==== */
+html body .ib-hero{min-height:clamp(420px,34vw,520px);padding-top:0;padding-bottom:0}
+html body .ib-hero .ind-crumbs{padding-bottom:clamp(16px,2vw,28px)}
+html body .ib-hero-inner{padding-block:clamp(14px,1.6vw,20px) clamp(24px,3vw,40px)}
+html body .ib-hero h1{margin-bottom:14px}
+html body .ib-sub{margin-top:0}
+html body .ib-facts{margin-top:clamp(18px,2vw,26px)}
+html body .ib-fact.logo{padding-top:0;padding-bottom:0;display:flex;align-items:center}
+html body .ib-fact.logo img{height:30px;width:auto;max-width:150px;object-fit:contain;object-position:left center}
+@media(max-width:980px){html body .ib-hero{min-height:0}}
+html body .ib-facts{display:flex;flex-wrap:wrap;gap:12px 0}
+@media(max-width:640px){html body .ib-facts{flex-direction:column;gap:14px}}
+html body .ib-hero .ib-eyebrow{margin-top:4px}
