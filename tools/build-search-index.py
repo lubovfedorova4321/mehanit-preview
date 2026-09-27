@@ -82,7 +82,8 @@ def main():
     cats = {r['url']: r['category'] for r in old}
     order = [r['url'] for r in old]
 
-    on_disk = sorted(f for f in os.listdir('.') if f.endswith('.html'))
+    EXCLUDE = {'404.html'}  # служебные страницы, которых не должно быть в поиске
+    on_disk = sorted(f for f in os.listdir('.') if f.endswith('.html') and f not in EXCLUDE)
     present = set(on_disk)
     urls = [u for u in order if u in present] + [u for u in on_disk if u not in cats]
 
