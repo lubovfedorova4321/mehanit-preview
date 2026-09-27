@@ -289,11 +289,38 @@
     });
   }
   function allSearchItems(){
-    return dedupeSearchItems([].concat(
+    /* Три источника на одну и ту же страницу: короткие курируемые подписи
+       (siteSearchItems, HEADER_SEARCH_ITEMS) и полнотекстовая запись из
+       search-index.json. Просто отбросить дубль нельзя: если оставить первый,
+       у 600+ страниц потеряется текст и поиск будет знать только подпись;
+       если оставить последний — пропадут выверенные названия в выдаче.
+       Поэтому показываем подпись из первого источника, а искать позволяем
+       по самому полному keywords из всех. */
+    var byUrl={};
+    var order=[];
+    [].concat(
       window.siteSearchItems||[],
       HEADER_SEARCH_ITEMS||[],
       SEARCH_INDEX_ITEMS||[]
-    ));
+    ).forEach(function(item){
+      if(!item||!item.url||!item.title)return;
+      var key=String(item.url).split('#')[0]||String(item.url);
+      var prev=byUrl[key];
+      if(!prev){
+        byUrl[key]={
+          title:item.title,
+          category:item.category,
+          url:item.url,
+          text:item.text,
+          keywords:item.keywords||''
+        };
+        order.push(key);
+        return;
+      }
+      var extra=item.keywords||'';
+      if(extra.length>(prev.keywords||'').length)prev.keywords=extra;
+    });
+    return order.map(function(key){return byUrl[key]});
   }
   function scoreSearchItem(item,q,tokens){
     var title=normalizeSearch(item.title);
