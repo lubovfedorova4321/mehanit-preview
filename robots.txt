@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /_legacy/
+Disallow: /tools/
+Disallow: /docs/
+Sitemap: https://mehanit.ru/sitemap.xml

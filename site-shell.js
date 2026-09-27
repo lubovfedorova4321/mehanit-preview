@@ -1001,7 +1001,7 @@
     bar.id='cookieBanner';
     bar.setAttribute('role','region');
     bar.setAttribute('aria-label','Уведомление об использовании файлов cookie');
-    bar.innerHTML='<div class="cookie-banner-text">Мы используем cookie-файлы для улучшения пользовательского опыта и сбора статистики. Для получения дополнительной информации вы можете ознакомиться с нашей <a href="cookie-policy.html" data-legal="cookie">Политикой в отношении файлов Cookie</a>.</div><button class="btn btn-dark cookie-banner-accept" id="cookieBannerAccept" type="button">Принять</button>';
+    bar.innerHTML='<div class="cookie-banner-text">Мы используем cookie-файлы для улучшения пользовательского опыта и сбора статистики. Для получения дополнительной информации вы можете ознакомиться с нашей <a href="cookie-policy.html" data-legal="cookie">Политикой в отношении файлов Cookie</a>.</div><button class="btn btn-ce cookie-banner-accept" id="cookieBannerAccept" type="button">Принять</button>';
     document.body.appendChild(bar);
     window.setTimeout(function(){bar.classList.add('is-visible')},5000);
     document.getElementById('cookieBannerAccept').addEventListener('click',function(){

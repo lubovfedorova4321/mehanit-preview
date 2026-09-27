@@ -1114,3 +1114,6 @@ html body .ib-section.tight+.ib-section.tight,html body .det-section+.det-sectio
 .cp-faq .faq-item summary::after{content:'+';font-size:20px;line-height:1;color:var(--ce);flex:0 0 auto}
 .cp-faq .faq-item[open] summary::after{content:'–'}
 .cp-faq .faq-item p{margin:0;padding:0 22px 18px;font-family:'Golos Text',sans-serif;font-size:14px;line-height:1.65;color:var(--mid)}
+
+/* заголовки блоков главной — обычный регистр, как на остальных страницах */
+html body.premium-v4 .h2,html body.premium-v4 .trust .h2{text-transform:none!important;letter-spacing:-.015em!important}
