@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
 <meta charset="utf-8"/>
+<meta name="robots" content="noindex, nofollow"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Контакты ГК «Механит»: телефоны, адрес склада в Нижнем Новгороде, реквизиты | Механит</title>
 <meta name="description" content="Телефоны, почта отделов, адрес офиса и склада ГК «Механит» — Нижний Новгород, Южное шоссе, 16В. Реквизиты и форма обращения в нужный отдел."/>
@@ -178,9 +179,6 @@ a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}
 <link rel="stylesheet" href="instrument-block.css"/>
 <link rel="stylesheet" href="company-pages.css"/>
 <link rel="stylesheet" href="site-shell.css"/>
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png"/>
-<link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png"/>
-<link rel="apple-touch-icon" href="apple-touch-icon.png"/>
 </head>
 <body>
 <header></header>
@@ -281,6 +279,8 @@ f.addEventListener('submit',function(e){e.preventDefault();err.textContent='';
  if(p.replace(/\D/g,'').length<10&&p.indexOf('@')<0){err.textContent='Проверьте телефон или email';return}
  if(!c){err.textContent='Нужно принять условия обработки данных';return}
  var b=f.querySelector('button[type=submit]');b.disabled=true;
+ var sel=document.getElementById('ccTopic');var topic=sel.options[sel.selectedIndex].text;
+ if(window.mehanitSendLead)window.mehanitSendLead({type:'contacts-'+sel.value,subject:'Контакты: '+topic,name:n,phone:p,comment:document.getElementById('ccMsg').value.trim(),page:location.pathname,page_title:document.title,url:location.href,ts:new Date().toISOString()});
  setTimeout(function(){document.getElementById('ccFormWrap').classList.add('sent')},500);});})();
 </script>
 </body>

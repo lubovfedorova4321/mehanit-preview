@@ -618,7 +618,7 @@
     taskModal.setAttribute('aria-modal','true');
     taskModal.setAttribute('aria-labelledby','mhTaskTitle');
     taskModal.setAttribute('aria-hidden','true');
-    taskModal.innerHTML='<div class="header-modal-dialog"><button aria-label="Закрыть окно" class="header-modal-close" id="mhTaskClose" type="button">×</button><h3 id="mhTaskTitle">Обсудить задачу с технологом</h3><p>Опишите деталь и задачу — технолог ответит в течение рабочего дня.</p><form id="mhTaskForm" novalidate=""><div class="hcm-field"><label for="mhTaskName">Имя</label><input autocomplete="name" class="hcm-input" id="mhTaskName" name="name" placeholder="Введите ваше имя" type="text"/></div><div class="hcm-field"><label for="mhTaskPhone">Телефон</label><input autocomplete="tel" class="hcm-input" id="mhTaskPhone" inputmode="tel" name="phone" placeholder="Введите ваш телефон" required="" type="tel"/><div class="hcm-err" id="mhTaskPhoneErr" role="alert"></div></div><div class="hcm-field"><label for="mhTaskText">Задача</label><textarea class="hcm-input" id="mhTaskText" name="task" rows="3" placeholder="Деталь, материал, партия, станок — что уже известно"></textarea></div><label class="hcm-consent" for="mhTaskConsent"><input id="mhTaskConsent" name="consent" required="" type="checkbox"/><span>Принимаю условия <a href="privacy.html" rel="noopener" target="_blank">Политики конфиденциальности</a> и даю согласие на обработку персональных данных</span></label><div class="hcm-err" id="mhTaskConsentErr" role="alert"></div><button class="site-cta hcm-submit" type="submit">Отправить</button><div class="hcm-status" id="mhTaskStatus" role="status"></div></form></div>';
+    taskModal.innerHTML='<div class="header-modal-dialog"><button aria-label="Закрыть окно" class="header-modal-close" id="mhTaskClose" type="button">×</button><h3 id="mhTaskTitle">Обсудить задачу с технологом</h3><p>Оставьте имя и телефон — технолог свяжется с вами в рабочее время.</p><div class="hcm-subject" id="mhTaskSubject" hidden></div><form id="mhTaskForm" novalidate=""><div class="hcm-field"><label for="mhTaskName">Имя</label><input autocomplete="name" class="hcm-input" id="mhTaskName" name="name" placeholder="Как к вам обращаться" type="text"/></div><div class="hcm-field"><label for="mhTaskPhone">Телефон</label><input autocomplete="tel" class="hcm-input" id="mhTaskPhone" inputmode="tel" name="phone" placeholder="+7" required="" type="tel"/><div class="hcm-err" id="mhTaskPhoneErr" role="alert"></div></div><div class="hcm-field" id="mhTaskTextWrap"><label for="mhTaskText">Задача <small>(не обязательно)</small></label><textarea class="hcm-input" id="mhTaskText" name="task" rows="3" placeholder="Деталь, материал, партия, станок — что уже известно"></textarea></div><label class="hcm-consent" for="mhTaskConsent"><input id="mhTaskConsent" name="consent" required="" type="checkbox"/><span>Принимаю условия <a href="privacy.html" rel="noopener" target="_blank">Политики конфиденциальности</a> и даю согласие на обработку персональных данных</span></label><div class="hcm-err" id="mhTaskConsentErr" role="alert"></div><button class="site-cta hcm-submit" type="submit">Отправить</button><div class="hcm-status" id="mhTaskStatus" role="status"></div></form></div>';
     document.body.appendChild(taskModal);
     var tmOpen=false,tmReturn=null;
     function onTaskKeydown(e){
@@ -632,34 +632,57 @@
       }
     }
     var MH_CTX={
-      task:['Обсудить задачу','Обсудить задачу с технологом','Опишите деталь и задачу — технолог ответит в течение рабочего дня.','Задача','Деталь, материал, партия, станок — что уже известно','Отправить задачу'],
-      lease:['Финансирование','Рассчитать лизинг','Оставьте контакты — подготовим расчёт лизинга под выбранное оборудование и ваш финансовый профиль.','Что нужно рассчитать','Оборудование, ориентировочная стоимость, желаемый аванс и срок','Получить расчёт'],
-      stock:['Станки в наличии','Запросить КП на станок','Оставьте контакты — пришлём коммерческое предложение с ценой, сроком и комплектацией.','Какой станок интересует','Модель или тип станка, ваша деталь','Запросить КП'],
-      service:['Сервис','Заявка в сервисную службу','Опишите оборудование и неисправность — сервисный инженер свяжется с вами в рабочее время.','Оборудование и что произошло','Модель станка, год ввода, характер неисправности','Отправить заявку'],
-      catalog:['Каталоги','Запросить каталог','Укажите операцию и материал — пришлём подходящие разделы каталога.','Что интересует','Бренд, операция, материал','Запросить каталог'],
-      tool:['Инструмент и оснастка','Подобрать инструмент','Пришлите чертёж, материал, станок и партию — технолог подберёт инструмент и посчитает режимы.','Деталь и операция','Материал, станок, партия, текущий инструмент','Отправить на подбор']
+      task:['Обсудить задачу','Обсудить задачу с технологом','Оставьте имя и телефон — технолог свяжется в рабочее время. Если есть чертёж или ТЗ, коротко опишите задачу.',true,'Отправить'],
+      kp:['Коммерческое предложение','Запросить КП','Оставьте имя и телефон — пришлём КП с ценой, сроком поставки и комплектацией.',false,'Запросить КП'],
+      lease:['Финансирование','Рассчитать лизинг','Оставьте имя и телефон — подготовим расчёт лизинга под выбранное оборудование.',false,'Получить расчёт'],
+      stock:['Станки в наличии','Записаться на демонстрацию','Оставьте имя и телефон — согласуем дату показа станка на складе в Нижнем Новгороде.',false,'Записаться'],
+      service:['Сервис','Заявка в сервисную службу','Оставьте имя и телефон — сервисный инженер перезвонит в рабочее время. Модель станка и что произошло можно указать ниже.',true,'Отправить заявку'],
+      catalog:['Каталоги','Запросить каталог','Оставьте имя и телефон — пришлём каталог и подберём позиции под вашу деталь.',false,'Запросить каталог'],
+      tool:['Инструмент и оснастка','Подобрать инструмент','Оставьте имя и телефон — технолог подберёт инструмент и посчитает режимы. Материал и операцию можно указать ниже.',true,'Отправить на подбор'],
+      callback:['Обратный звонок','Заказать звонок','Оставьте имя и телефон — перезвоним в рабочее время.',false,'Заказать звонок']
     };
-    function mhApplyCtx(src){
+    var mhCurrent={src:'task',subject:''};
+    function mhPageSubject(){
+      var h=document.querySelector('.hero-title-main')||document.querySelector('main h1,h1');
+      var t=h?h.textContent.replace(/\s+/g,' ').trim():'';
+      if(!t||location.pathname.replace(/.*\//,'')==='index.html'||location.pathname==='/')t='Главная';
+      return t.slice(0,120);
+    }
+    function mhCtxFromTitle(t){
+      t=(t||'').toLowerCase();
+      if(/кп|коммерческ/.test(t))return 'kp';
+      if(/лизинг/.test(t))return 'lease';
+      if(/демонстр/.test(t))return 'stock';
+      if(/сервис|гарант|ремонт/.test(t))return 'service';
+      if(/каталог/.test(t))return 'catalog';
+      if(/инструмент|оснастк/.test(t))return 'tool';
+      if(/звон/.test(t))return 'callback';
+      return 'task';
+    }
+    function mhApplyCtx(src,subject,title){
       var c=MH_CTX[src]||MH_CTX.task;
       var t=taskModal.querySelector('#mhTaskTitle');
-      var p=taskModal.querySelector('#mhTaskTitle').nextElementSibling;
-      var lbl=taskModal.querySelector('label[for="mhTaskText"]');
+      var p=t.nextElementSibling;
+      var subj=taskModal.querySelector('#mhTaskSubject');
+      var wrap=taskModal.querySelector('#mhTaskTextWrap');
       var ta=taskModal.querySelector('#mhTaskText');
       var sub=taskModal.querySelector('.hcm-submit');
-      if(t)t.textContent=c[1];
+      var pageSubj=mhPageSubject();
+      var full=(subject||'').trim();
+      if(!full){full=(title||c[1])+' — '+pageSubj}
+      mhCurrent={src:src,subject:full};
+      if(t)t.textContent=title||c[1];
       if(p&&p.tagName==='P')p.textContent=c[2];
-      if(lbl)lbl.textContent=c[3];
-      if(ta)ta.setAttribute('placeholder',c[4]);
-      if(sub)sub.textContent=c[5];
-      if(src==='lease'){
+      if(subj){subj.textContent='Тема обращения: '+full;subj.hidden=false}
+      if(wrap)wrap.style.display=c[3]?'':'none';
+      if(sub)sub.textContent=c[4];
+      if(src==='lease'&&ta){
         var cost=document.getElementById('lzCost'),down=document.getElementById('lzDown'),term=document.getElementById('lzTerm');
-        if(ta&&cost&&down&&term&&!ta.value){
-          ta.value='Стоимость оборудования: '+cost.textContent+', аванс: '+down.textContent+', срок: '+term.textContent;
-        }
+        if(cost&&down&&term){mhCurrent.subject+=' (стоимость '+cost.textContent+', аванс '+down.textContent+', срок '+term.textContent+')';subj.textContent='Тема обращения: '+mhCurrent.subject}
       }
     }
-    function openTaskModal(src){
-      mhApplyCtx(src);
+    function openTaskModal(src,subject,title){
+      mhApplyCtx(src||'task',subject,title);
       if(tmOpen)return;
       tmOpen=true;tmReturn=document.activeElement;
       taskModal.classList.add('is-open');
@@ -692,14 +715,49 @@
       if(!phone.value.trim()){phoneErr.textContent='Укажите телефон';ok=false}
       if(!consent.checked){consentErr.textContent='Нужно принять условия обработки данных';ok=false}
       if(!ok)return;
-      status.textContent='Заявка отправлена. Технолог свяжется с вами в рабочее время.';
-      trackEvent('task_modal_submit',{page_path:location.pathname,device_type:deviceType()});
+      var payload={type:mhCurrent.src,subject:mhCurrent.subject,name:taskModal.querySelector('#mhTaskName').value.trim(),phone:phone.value.trim(),comment:(taskModal.querySelector('#mhTaskText').value||'').trim(),page:location.pathname,page_title:document.title,url:location.href,ts:new Date().toISOString()};
+      window.mehanitSendLead(payload);
+      status.className='hcm-status is-shown';
+      status.textContent='Заявка отправлена. Свяжемся с вами в рабочее время.';
+      trackEvent('task_modal_submit',{page_path:location.pathname,device_type:deviceType(),lead_type:mhCurrent.src});
       window.setTimeout(function(){closeTaskModal(false)},1800);
     });
-    /* если у страницы есть своя модалка заявки — не перекрываем её */
-    if(typeof window.openLeadModal!=='function'){window.openLeadModal=function(src){openTaskModal(src)}}
-    /* страницы со своей модалкой подбора инструмента продолжают её использовать */
-    if(typeof window.openEqLeadModal!=='function'){window.openEqLeadModal=function(){openTaskModal('eq')}}
+    /* ===== Единая заявка: все кнопки сайта ведут в эту модалку ===== */
+    window.mehanitSendLead=window.mehanitSendLead||function(p){
+      try{
+        var utm={};(location.search||'').replace(/^\?/,'').split('&').forEach(function(kv){var a=kv.split('=');if(/^utm_/.test(a[0]))utm[a[0]]=decodeURIComponent(a[1]||'')});
+        p.utm=utm;
+        if(window.MEHANIT_LEAD_ENDPOINT){return fetch(window.MEHANIT_LEAD_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(p),keepalive:true})}
+      }catch(e){}
+      (window.__mehanitLeads=window.__mehanitLeads||[]).push(p);
+      if(window.console&&console.info)console.info('[lead]',p);
+      return Promise.resolve();
+    };
+    function mhIsLeadModal(el){
+      if(!el)return false;
+      if(/search|legal|catalogModal|callModal|stockDetailModal|filter/i.test(el.id||''))return false;
+      return !!el.querySelector('.lead-consent,.hcm-consent,input[type="tel"],.lead-form,.eq-modal-form');
+    }
+    function mhOpenFromEl(el){
+      var h=el.querySelector('h3,h2');
+      var title=h?h.textContent.replace(/\s+/g,' ').trim():'';
+      var src=mhCtxFromTitle(title);
+      openTaskModal(src,'',title||undefined);
+    }
+    window.openLeadModal=function(src,subject){openTaskModal(typeof src==='string'&&MH_CTX[src]?src:'task',subject)};
+    window.openEqLeadModal=function(kind,subject){openTaskModal(kind==='tool'||kind==='catalog'?kind:'tool',subject?('Подобрать инструмент '+subject+' — '+mhPageSubject()):'')};
+    window.openLeaseModal=function(){openTaskModal('lease')};
+    window.openStockModal=function(machine){openTaskModal('kp',machine?('Запросить КП — '+machine+' (станок в наличии)'):'')};
+    window.openToolRequestModal=function(){openTaskModal('tool')};
+    window.openTaskModal=openTaskModal;
+    (function(){
+      var prev=window.openModal;
+      window.openModal=function(id){
+        var el=typeof id==='string'?document.getElementById(id):null;
+        if(el&&mhIsLeadModal(el)){mhOpenFromEl(el);return}
+        if(typeof prev==='function')return prev.apply(this,arguments);
+      };
+    })();
 
     var taskBtn=header.querySelector('#headerTaskBtn');
     if(taskBtn){taskBtn.addEventListener('click',function(){
@@ -727,6 +785,7 @@
       btn.disabled=true;
       status.className='hcm-status is-shown';
       status.textContent='Отправляем заявку…';
+      if(window.mehanitSendLead)window.mehanitSendLead({type:'callback',subject:'Обратный звонок — '+(typeof mhPageSubject==='function'?mhPageSubject():document.title),name:(cbForm.querySelector('#headerCbName')||{}).value||'',phone:phone.value.trim(),comment:'',page:location.pathname,page_title:document.title,url:location.href,ts:new Date().toISOString()});
       trackEvent('header_callback_submit',{page_path:location.pathname,device_type:deviceType(),source:'header'});
       window.setTimeout(function(){
         btn.disabled=false;
