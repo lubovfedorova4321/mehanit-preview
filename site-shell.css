@@ -1173,3 +1173,5 @@ html body .site-footer-grid{grid-template-columns:1.6fr 1fr 1fr 1fr .9fr!importa
 html body .site-footer-req{margin:0}
 @media(max-width:900px){html body .site-footer-grid{grid-template-columns:1fr 1fr!important}}
 @media(max-width:620px){html body .site-footer-grid{grid-template-columns:1fr!important}}
+html body .site-footer-bottom span[data-year]{display:inline!important;margin:0!important}
+@media(max-width:620px){html body .site-footer-grid{grid-template-columns:1fr 1fr!important;gap:18px 20px!important}html body .site-footer-brand{grid-column:1/-1}}
