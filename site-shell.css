@@ -1167,3 +1167,9 @@ html body .site-footer-legal{padding-top:0;margin-top:0;gap:4px 18px;flex:1 1 10
 html body .site-footer-legal a{font-size:12px!important;padding:0!important}
 @media(max-width:620px){html body .site-footer{padding:26px 0 16px!important}html body .site-footer-grid{gap:20px!important}}
 html body.is-footer-visible .stock-tab,html body.is-footer-visible .contact-widget{opacity:0;pointer-events:none;transition:opacity .25s ease}
+
+/* подвал: пять колонок, реквизиты отдельно */
+html body .site-footer-grid{grid-template-columns:1.6fr 1fr 1fr 1fr .9fr!important;gap:32px!important}
+html body .site-footer-req{margin:0}
+@media(max-width:900px){html body .site-footer-grid{grid-template-columns:1fr 1fr!important}}
+@media(max-width:620px){html body .site-footer-grid{grid-template-columns:1fr!important}}
