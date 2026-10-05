@@ -1183,12 +1183,6 @@ html body .eq-final-cta p,html body .final-cta p,html body .cp-cta.dark p,html b
 .hcm-subject{margin:-6px 0 16px;padding:10px 14px;border-radius:10px;background:rgba(107,45,139,.06);font-family:"Golos Text",sans-serif;font-size:13px;line-height:1.45;color:#3d3d3d}
 .hcm-field label small{font-weight:400;color:#8a8d96}
 
-/* Карточка станка в каталоге: «Подробнее» всегда у нижнего края.
-   Заголовки занимают от двух до четырёх строк, из-за чего прежний
-   margin-top:auto на блоке характеристик не прижимал кнопку к низу. */
-html body .vmc-body{display:flex;flex-direction:column}
-html body .vmc-specs{margin-top:14px}
-html body .vmc-body>.vmc-offer-btn.vmc-more{margin-top:auto;padding-top:12px}
 
 /* Цена на карточке станка в наличии. Правила жили только внутри stock.html,
    но такие же карточки выводятся в каталогах оборудования — переносим в общий файл. */
@@ -1197,3 +1191,88 @@ html body .vmc-body>.vmc-offer-btn.vmc-more{margin-top:auto;padding-top:12px}
 .stk-vmc-price span{font-family:'Golos Text',monospace;font-size:9.5px;color:var(--muted);letter-spacing:.3px}
 .stk-vmc-price.is-sold b{color:var(--muted);background:none;padding:0}
 .stk-price-note{font-family:'Golos Text',sans-serif;font-size:10.5px;color:var(--muted);line-height:1.4;margin-bottom:10px}
+
+
+/* ===================================================================
+   Карточка станка. Раньше эти правила лежали копиями в 14 страницах
+   (449 правил) и успели разойтись между складом и каталогом.
+   Базовый вид — для хабов категорий и склада; .vmc-cards-wide —
+   крупная карточка подкатегорий фрезерных.
+   =================================================================== */
+/* Базовая карточка */
+body:not(.vmc-cards-wide) .vmc-body{display:flex;flex-direction:column;height:calc(100% - 210px)}
+body:not(.vmc-cards-wide) .vmc-specs{margin-top:auto}
+body:not(.vmc-cards-wide) .vmc-card{position:relative; display:flex; flex-direction:column; min-height:auto; background:#fff; border:1px solid rgba(26,26,26,.09); border-radius:14px; box-shadow:0 12px 30px rgba(26,26,26,.06); overflow:hidden; transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;}
+body:not(.vmc-cards-wide) .vmc-card-link{position:absolute;inset:0;z-index:3}
+body:not(.vmc-cards-wide) .vmc-card:hover{transform:translateY(-4px); border-color:rgba(143,98,200,.3); box-shadow:0 22px 48px rgba(143,98,200,.15),0 14px 34px rgba(26,26,26,.08);}
+body:not(.vmc-cards-wide) .vmc-card::before{content:""; position:absolute; top:0; left:50%; z-index:3; width:52px; height:2px; transform:translateX(-50%); background:linear-gradient(90deg,var(--ce),var(--gold));}
+body:not(.vmc-cards-wide) .vmc-photo{height:196px; display:flex; align-items:center; justify-content:center; background:var(--tl2); border-bottom:1px solid rgba(26,26,26,.06); color:rgba(82,86,90,.46); font-family:'Golos Text',monospace; font-size:11px; font-weight:800; letter-spacing:2px; text-transform:uppercase; position:relative; overflow:hidden;}
+body:not(.vmc-cards-wide) .vmc-photo img{transition:transform .3s ease}
+body:not(.vmc-cards-wide) .vmc-card:hover .vmc-photo img{transform:scale(1.05)}
+body:not(.vmc-cards-wide) .vmc-photo-cta{position:absolute; inset:0; z-index:2; display:flex; align-items:center; justify-content:center; background:rgba(20,18,26,.36); opacity:0; transition:opacity .2s ease; pointer-events:none;}
+body:not(.vmc-cards-wide) .vmc-card:hover .vmc-photo-cta{opacity:1}
+body:not(.vmc-cards-wide) .vmc-photo-cta span{display:inline-flex; align-items:center; gap:6px; padding:9px 20px; background:#fff; color:var(--bm); border-radius:999px; font-family:'Golos Text',monospace; font-size:10px; font-weight:800; letter-spacing:1.1px; text-transform:uppercase; box-shadow:0 12px 26px rgba(26,26,26,.28); transform:translateY(6px); transition:transform .2s ease;}
+body:not(.vmc-cards-wide) .vmc-card:hover .vmc-photo-cta span{transform:translateY(0)}
+body:not(.vmc-cards-wide) .vmc-body{display:flex; flex-direction:column; flex:1; height:auto; padding:14px 16px 16px;}
+body:not(.vmc-cards-wide) .vmc-body small{display:block; margin-bottom:6px; color:var(--ce); font-family:'Golos Text',monospace; font-size:8.5px; font-weight:900; letter-spacing:1.4px; text-transform:uppercase;}
+body:not(.vmc-cards-wide) .vmc-body h3{margin:0 0 10px; color:var(--bm); font-size:15.5px; line-height:1.22; letter-spacing:-.012em;}
+body:not(.vmc-cards-wide) .vmc-body p{margin:0 0 22px; color:rgba(82,86,90,.78); font-size:16px; line-height:1.58;}
+body:not(.vmc-cards-wide) .vmc-offer-btn{position:relative; z-index:4; margin-top:auto; width:100%; min-height:42px; border:1.5px solid var(--ce); background:transparent; color:var(--ce); font-family:'Golos Text',monospace; font-size:10px; font-weight:800; letter-spacing:1px; text-transform:uppercase; cursor:pointer; transition:background .18s ease,color .18s ease;}
+body:not(.vmc-cards-wide) .vmc-offer-btn:hover{background:var(--ce);color:#fff}
+body:not(.vmc-cards-wide) .vmc-specs{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1px; margin-top:0; background:rgba(26,26,26,.06); border:1px solid rgba(26,26,26,.06);}
+body:not(.vmc-cards-wide) .vmc-specs div{min-height:auto; display:flex; flex-direction:column; justify-content:center; background:#fff; border:0; padding:7px 9px;}
+body:not(.vmc-cards-wide) .vmc-specs span{margin-bottom:2px; color:rgba(82,86,90,.48); font-family:'Golos Text',monospace; font-size:7.5px; font-weight:800; letter-spacing:.9px; text-transform:uppercase;}
+body:not(.vmc-cards-wide) .vmc-specs b{color:rgba(32,36,44,.92); font-size:12px; line-height:1.2;}
+body:not(.vmc-cards-wide) .vmc-card.is-hidden{display:none!important}
+body:not(.vmc-cards-wide) .vmc-photo img{max-width:84%;max-height:82%;width:auto;height:auto;object-fit:contain;filter:drop-shadow(0 8px 14px rgba(26,26,26,.14))}
+body:not(.vmc-cards-wide) .vmc-stock-badge{position:absolute;top:10px;left:10px;z-index:5;pointer-events:none;display:inline-flex;align-items:center;gap:5px;background:#1c8a4c;color:#fff;font-family:'Golos Text',monospace;font-size:9.5px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;padding:5px 10px 5px 8px;border-radius:20px;box-shadow:0 4px 10px rgba(28,138,76,.35)}
+body:not(.vmc-cards-wide) .vmc-stock-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:#fff}
+body:not(.vmc-cards-wide) .vmc-stock-badge.is-sold{background:#5B6166;box-shadow:0 4px 10px rgba(26,26,26,.25)}
+@media(max-width:560px){
+body:not(.vmc-cards-wide) .vmc-card{min-height:auto}
+body:not(.vmc-cards-wide) .vmc-specs, body:not(.vmc-cards-wide) .vmc-actions{grid-template-columns:1fr}
+}
+
+/* Крупная карточка: подкатегории фрезерных */
+.vmc-cards-wide \n .vmc-photo{padding:10px}
+.vmc-cards-wide .vmc-photo img{position:relative;z-index:1;max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;filter:drop-shadow(0 10px 16px rgba(26,26,26,.16))}
+.vmc-cards-wide .vmc-card-link{position:absolute;inset:0;z-index:3}
+.vmc-cards-wide .vmc-photo-cta{position:absolute;inset:0;z-index:2;display:flex;align-items:center;justify-content:center;background:rgba(20,18,26,.36);opacity:0;transition:opacity .2s ease;pointer-events:none}
+.vmc-cards-wide .vmc-card:hover .vmc-photo-cta{opacity:1}
+.vmc-cards-wide .vmc-photo-cta span{display:inline-flex;align-items:center;gap:6px;padding:9px 20px;background:#fff;color:var(--bm);border-radius:999px;font-family:'Golos Text',monospace;font-size:10px;font-weight:800;letter-spacing:1.1px;text-transform:uppercase;box-shadow:0 12px 26px rgba(26,26,26,.28);transform:translateY(6px);transition:transform .2s ease}
+.vmc-cards-wide .vmc-card:hover .vmc-photo-cta span{transform:translateY(0)}
+.vmc-cards-wide .vmc-body{padding:20px}
+.vmc-cards-wide .vmc-card{position:relative;overflow:hidden;background:rgba(255,255,255,.80);border:1px solid rgba(26,26,26,.08);box-shadow:0 22px 58px rgba(26,26,26,.08);transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease,background .22s ease}
+.vmc-cards-wide .vmc-card:hover{transform:translateY(-5px);border-color:rgba(107,45,139,.30);box-shadow:0 28px 72px rgba(107,45,139,.13),0 18px 44px rgba(26,26,26,.10);background:rgba(255,255,255,.88)}
+.vmc-cards-wide .vmc-card.is-hidden{display:none}
+.vmc-cards-wide .vmc-photo{height:210px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(91,96,104,.18),rgba(255,255,255,.34));border-bottom:1px solid rgba(26,26,26,.06);position:relative}
+.vmc-cards-wide .vmc-photo::before{content:'';position:absolute;left:50%;top:0;width:54px;height:1px;transform:translateX(-50%);background:linear-gradient(90deg,rgba(107,45,139,.66),rgba(201,162,39,.45))}
+.vmc-cards-wide .vmc-photo span{font-family:'Golos Text',monospace;font-size:10px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:rgba(82,86,90,.55)}
+.vmc-cards-wide .vmc-body{padding:20px}
+.vmc-cards-wide .vmc-body small{display:block;margin-bottom:10px;font-family:'Golos Text',monospace;font-size:9px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:var(--ce)}
+.vmc-cards-wide .vmc-body h3{font-size:19px;line-height:1.25;margin-bottom:10px;letter-spacing:-.018em}
+.vmc-cards-wide .vmc-body p{min-height:84px;color:var(--mid);font-size:13px;line-height:1.55;margin-bottom:16px}
+.vmc-cards-wide .vmc-specs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.vmc-cards-wide .vmc-specs div{background:rgba(237,238,240,.72);border:1px solid rgba(26,26,26,.06);padding:10px;min-height:64px}
+.vmc-cards-wide .vmc-specs span{display:block;margin-bottom:5px;font-family:'Golos Text',monospace;font-size:8px;letter-spacing:.9px;text-transform:uppercase;color:rgba(82,86,90,.66)}
+.vmc-cards-wide .vmc-specs b{display:block;font-size:12px;line-height:1.25;color:rgba(32,35,39,.92)}
+.vmc-cards-wide .vmc-body{display:flex;flex-direction:column;height:calc(100% - 210px)}
+.vmc-cards-wide .vmc-specs{margin-top:auto}
+.vmc-cards-wide .vmc-photo{padding:10px}
+.vmc-cards-wide .vmc-photo img{position:relative;z-index:1;max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;filter:drop-shadow(0 10px 16px rgba(26,26,26,.16))}
+.vmc-cards-wide .vmc-card-link{position:absolute;inset:0;z-index:3}
+.vmc-cards-wide .vmc-photo-cta{position:absolute;inset:0;z-index:2;display:flex;align-items:center;justify-content:center;background:rgba(20,18,26,.36);opacity:0;transition:opacity .2s ease;pointer-events:none}
+.vmc-cards-wide .vmc-card:hover .vmc-photo-cta{opacity:1}
+.vmc-cards-wide .vmc-photo-cta span{display:inline-flex;align-items:center;gap:6px;padding:9px 20px;background:#fff;color:var(--bm);border-radius:999px;font-family:'Golos Text',monospace;font-size:10px;font-weight:800;letter-spacing:1.1px;text-transform:uppercase;box-shadow:0 12px 26px rgba(26,26,26,.28);transform:translateY(6px);transition:transform .2s ease}
+.vmc-cards-wide .vmc-card:hover .vmc-photo-cta span{transform:translateY(0)}
+.vmc-cards-wide .vmc-body{padding:20px}
+.vmc-cards-wide .vmc-stock-badge{position:absolute;top:10px;left:10px;z-index:5;pointer-events:none;display:inline-flex;align-items:center;gap:5px;background:#1c8a4c;color:#fff;font-family:'Golos Text',monospace;font-size:9.5px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;padding:5px 10px 5px 8px;border-radius:20px;box-shadow:0 4px 10px rgba(28,138,76,.35)}
+@media(max-width:720px){
+  .vmc-cards-wide .vmc-photo{height:180px}
+  .vmc-cards-wide .vmc-body p{min-height:auto}
+}
+
+/* Подкатегория «Фрезерные обрабатывающие центры»: фото меньше и с более
+   мягкой тенью, чем у остальных подкатегорий фрезерных. Так было и раньше —
+   сохраняем, чтобы вид страницы не поменялся. */
+.vmc-cards-contain .vmc-photo img{max-width:84%;max-height:82%;filter:drop-shadow(0 8px 14px rgba(26,26,26,.14))}
