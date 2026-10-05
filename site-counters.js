@@ -9,7 +9,8 @@
     if(!items||!items.length)return;
     var by={},stock=0,models=0,brands=0;
     items.forEach(function(it){var u=String(it.url||'');var m=u.match(/^equipment-([a-z]+)-.+\.html$/);
-      if(m){by[m[1]]=(by[m[1]]||0)+1;models++}
+      /* станки гидроабразивной резки хранятся в equipment-sheet-*, но в каталоге это своя категория */
+      if(m){var c=m[1];if(c==='sheet'&&/гидроабразивной резки/i.test(it.title||''))c='waterjet';by[c]=(by[c]||0)+1;models++}
       else if(/^stock-.+\.html$/.test(u)){stock++}
       else if(/^brand-.+\.html$/.test(u)){brands++}});
     var press=null,pressBy={};
@@ -17,6 +18,7 @@
     document.querySelectorAll('[data-count]').forEach(function(el){
       var k=el.getAttribute('data-count'),v=null;
       if(k==='models')v=models;else if(k==='stock')v=stock;else if(k==='brands')v=brands;
+      else if(k==='cats')v=document.querySelectorAll('.sol-grid .sol-tile').length;
       else if(k.indexOf('cat:')===0){v=0;k.slice(4).split(',').forEach(function(c){v+=by[c]||0})}
       else if(k==='press'&&press)v=press.length;else if(k.indexOf('press:')===0&&press)v=pressBy[k.slice(6)]||0;
       if(v===null)return; el.textContent=v;

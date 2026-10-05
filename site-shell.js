@@ -665,6 +665,7 @@
       stock:['Станки в наличии','Записаться на демонстрацию','Оставьте имя и телефон — согласуем дату показа станка на складе в Нижнем Новгороде.',false,'Записаться'],
       service:['Сервис','Заявка в сервисную службу','Оставьте имя и телефон — сервисный инженер перезвонит в рабочее время. Модель станка и что произошло можно указать ниже.',true,'Отправить заявку'],
       catalog:['Каталоги','Запросить каталог','Оставьте имя и телефон — пришлём каталог и подберём позиции под вашу деталь.',false,'Запросить каталог'],
+      equipment:['Подбор оборудования','Передать чертёж на подбор','Оставьте имя и телефон — технолог подберёт станок и конфигурацию под вашу деталь. Деталь, материал и партию можно указать ниже.',true,'Отправить на подбор'],
       tool:['Инструмент и оснастка','Подобрать инструмент','Оставьте имя и телефон — технолог подберёт инструмент и посчитает режимы. Материал и операцию можно указать ниже.',true,'Отправить на подбор'],
       callback:['Обратный звонок','Заказать звонок','Оставьте имя и телефон — перезвоним в рабочее время.',false,'Заказать звонок']
     };
@@ -772,7 +773,7 @@
       openTaskModal(src,'',title||undefined);
     }
     window.openLeadModal=function(src,subject){openTaskModal(typeof src==='string'&&MH_CTX[src]?src:'task',subject)};
-    window.openEqLeadModal=function(kind,subject){openTaskModal(kind==='tool'||kind==='catalog'?kind:'tool',subject?('Подобрать инструмент '+subject+' — '+mhPageSubject()):'')};
+    window.openEqLeadModal=function(kind,subject){openTaskModal(kind&&MH_CTX[kind]?kind:'tool',subject?('Подобрать инструмент '+subject+' — '+mhPageSubject()):'')};
     window.openLeaseModal=function(){openTaskModal('lease')};
     window.openStockModal=function(machine){openTaskModal('kp',machine?('Запросить КП — '+machine+' (станок в наличии)'):'')};
     window.openToolRequestModal=function(){openTaskModal('tool')};
