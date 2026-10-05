@@ -1182,3 +1182,10 @@ html body .eq-final-cta p,html body .final-cta p,html body .cp-cta.dark p,html b
 
 .hcm-subject{margin:-6px 0 16px;padding:10px 14px;border-radius:10px;background:rgba(107,45,139,.06);font-family:"Golos Text",sans-serif;font-size:13px;line-height:1.45;color:#3d3d3d}
 .hcm-field label small{font-weight:400;color:#8a8d96}
+
+/* Карточка станка в каталоге: «Подробнее» всегда у нижнего края.
+   Заголовки занимают от двух до четырёх строк, из-за чего прежний
+   margin-top:auto на блоке характеристик не прижимал кнопку к низу. */
+html body .vmc-body{display:flex;flex-direction:column}
+html body .vmc-specs{margin-top:14px}
+html body .vmc-body>.vmc-offer-btn.vmc-more{margin-top:auto;padding-top:12px}
