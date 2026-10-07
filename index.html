@@ -1961,10 +1961,11 @@ body.hide-hdr-cta .hdr .hdr-cta{display:none}
 .stk-home-title{font-family:'Golos Text',sans-serif;font-size:13.5px;font-weight:700;line-height:1.28;color:var(--bm);margin-bottom:10px;min-height:35px}
 .stk-home-specs{list-style:none;display:flex;flex-direction:column;gap:3px;font-size:11px;color:var(--mid);margin-bottom:12px}
 .stk-home-specs b{color:var(--sg);font-weight:600}
-.stk-home-price{display:flex;flex-wrap:wrap;align-items:baseline;gap:5px 6px;padding-top:10px;border-top:1px solid var(--line);margin-top:auto}
-.stk-home-price b{flex:0 0 auto}
-.stk-home-price b{font-family:'Magistral',sans-serif;font-size:15px;font-weight:700;letter-spacing:-.02em;color:var(--gold);background:rgba(201,162,39,.12);padding:2px 8px;border-radius:4px}
-.stk-home-price span{flex:1 0 100%;font-family:'Golos Text',sans-serif;font-size:8px;font-weight:400;letter-spacing:.1px;color:var(--mid);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.stk-home-price{display:flex;flex-wrap:wrap;align-items:baseline;gap:0 6px;padding-top:10px;border-top:1px solid var(--line);margin-top:auto}
+.stk-home-price b{flex:0 0 auto;font-family:'Magistral',sans-serif;font-size:15px;font-weight:700;letter-spacing:-.02em;color:var(--gold);background:rgba(201,162,39,.12);padding:2px 8px;border-radius:4px}
+.stk-home-price span{font-family:'Golos Text',sans-serif;font-size:8px;font-weight:400;letter-spacing:.1px;color:var(--mid);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.stk-home-price .stk-incl{flex:0 1 auto}
+.stk-home-price .stk-novat{flex:1 0 100%;margin-top:1px;padding-left:8px}
 .stk-home-price+.stk-home-cta{margin-top:10px}
 .stk-home-cta{position:relative;z-index:3;display:block;width:100%;margin-top:auto;padding:11px;text-align:center;font-family:'Golos Text',sans-serif;font-size:10.5px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:#fff;background:var(--ce);border:0;border-radius:8px;cursor:pointer;transition:background .18s ease}
 .stk-home-cta:hover{background:var(--ceHover)}
@@ -2173,7 +2174,7 @@ body.hide-hdr-cta .hdr .hdr-cta{display:none}
 <div class="stk-home-cat">Токарные с ЧПУ</div>
 <span class="stk-home-title">Токарный станок с ЧПУ Ø450×500 мм</span>
 <div class="stk-home-specs"><span>Пруток <b>Ø52 мм</b></span><span>Патрон <b>Ø200 мм</b></span></div>
-<div class="stk-home-price"><b>от 435 668 ¥</b><span>без НДС · доставка и ПНР</span></div>
+<div class="stk-home-price"><b>от 435 668 ¥</b><span class="stk-incl">доставка и ПНР вкл.</span><span class="stk-novat">без НДС</span></div>
 <span class="stk-home-cta stk-home-more" aria-hidden="true">Подробнее →</span>
 </div>
 </div>
@@ -2184,7 +2185,7 @@ body.hide-hdr-cta .hdr .hdr-cta{display:none}
 <div class="stk-home-cat">Токарные с ЧПУ</div>
 <span class="stk-home-title">Токарный станок с ЧПУ Ø600×1100 мм</span>
 <div class="stk-home-specs"><span>Длина обработки <b>1100 мм</b></span><span>Патрон <b>Ø250 мм</b></span></div>
-<div class="stk-home-price"><b>от 535 624 ¥</b><span>без НДС · доставка и ПНР</span></div>
+<div class="stk-home-price"><b>от 535 624 ¥</b><span class="stk-incl">доставка и ПНР вкл.</span><span class="stk-novat">без НДС</span></div>
 <span class="stk-home-cta stk-home-more" aria-hidden="true">Подробнее →</span>
 </div>
 </div>
@@ -2195,7 +2196,7 @@ body.hide-hdr-cta .hdr .hdr-cta{display:none}
 <div class="stk-home-cat">С приводным инструментом</div>
 <span class="stk-home-title">Токарный обрабатывающий центр Ø680×950 мм</span>
 <div class="stk-home-specs"><span>Диаметр над станиной <b>680 мм</b></span><span>Длина обработки <b>950 мм</b></span></div>
-<div class="stk-home-price"><b>от 579 494 ¥</b><span>без НДС · доставка и ПНР</span></div>
+<div class="stk-home-price"><b>от 579 494 ¥</b><span class="stk-incl">доставка и ПНР вкл.</span><span class="stk-novat">без НДС</span></div>
 <span class="stk-home-cta stk-home-more" aria-hidden="true">Подробнее →</span>
 </div>
 </div>
@@ -2206,7 +2207,7 @@ body.hide-hdr-cta .hdr .hdr-cta{display:none}
 <div class="stk-home-cat">С приводным инструментом</div>
 <span class="stk-home-title">Токарный центр с приводным инструментом</span>
 <div class="stk-home-specs"><span>Диаметр над станиной <b>800 мм</b></span><span>Макс. обработка <b>650 мм</b></span></div>
-<div class="stk-home-price"><b>от 1 000 400 ¥</b><span>без НДС · доставка и ПНР</span></div>
+<div class="stk-home-price"><b>от 1 000 400 ¥</b><span class="stk-incl">доставка и ПНР вкл.</span><span class="stk-novat">без НДС</span></div>
 <span class="stk-home-cta stk-home-more" aria-hidden="true">Подробнее →</span>
 </div>
 </div>
@@ -2217,7 +2218,7 @@ body.hide-hdr-cta .hdr .hdr-cta{display:none}
 <div class="stk-home-cat">С приводным инструментом</div>
 <span class="stk-home-title">Токарный обрабатывающий центр TN500</span>
 <div class="stk-home-specs"><span>Макс. длина <b>450 мм</b></span><span>Пруток <b>Ø51 мм</b></span></div>
-<div class="stk-home-price"><b>от 709 300 ¥</b><span>без НДС · доставка и ПНР</span></div>
+<div class="stk-home-price"><b>от 709 300 ¥</b><span class="stk-incl">доставка и ПНР вкл.</span><span class="stk-novat">без НДС</span></div>
 <span class="stk-home-cta stk-home-more" aria-hidden="true">Подробнее →</span>
 </div>
 </div>
@@ -2228,7 +2229,7 @@ body.hide-hdr-cta .hdr .hdr-cta{display:none}
 <div class="stk-home-cat">Токарно-винторезные</div>
 <span class="stk-home-title">Токарный станок Macro Line LB-B500x1500</span>
 <div class="stk-home-specs"><span>Диаметр над станиной <b>500 мм</b></span><span>Длина обработки <b>1500 мм</b></span></div>
-<div class="stk-home-price"><b>от 140 220 ¥</b><span>без НДС · доставка и ПНР</span></div>
+<div class="stk-home-price"><b>от 140 220 ¥</b><span class="stk-incl">доставка и ПНР вкл.</span><span class="stk-novat">без НДС</span></div>
 <span class="stk-home-cta stk-home-more" aria-hidden="true">Подробнее →</span>
 </div>
 </div>
@@ -2239,7 +2240,7 @@ body.hide-hdr-cta .hdr .hdr-cta{display:none}
 <div class="stk-home-cat">Токарно-винторезные</div>
 <span class="stk-home-title">Токарный станок CS6250Bx1500</span>
 <div class="stk-home-specs"><span>Диаметр над станиной <b>500 мм</b></span><span>Диаметр над Гапом <b>710 мм</b></span></div>
-<div class="stk-home-price"><b>от 141 368 ¥</b><span>без НДС · доставка и ПНР</span></div>
+<div class="stk-home-price"><b>от 141 368 ¥</b><span class="stk-incl">доставка и ПНР вкл.</span><span class="stk-novat">без НДС</span></div>
 <span class="stk-home-cta stk-home-more" aria-hidden="true">Подробнее →</span>
 </div>
 </div>
@@ -2250,7 +2251,7 @@ body.hide-hdr-cta .hdr .hdr-cta{display:none}
 <div class="stk-home-cat">Токарно-винторезные</div>
 <span class="stk-home-title">Токарный станок Macro Line LB-B500x1500 с ГАПом</span>
 <div class="stk-home-specs"><span>Диаметр над станиной <b>500 мм</b></span><span>Длина обработки <b>1500 мм</b></span></div>
-<div class="stk-home-price"><b>от 143 500 ¥</b><span>без НДС · доставка и ПНР</span></div>
+<div class="stk-home-price"><b>от 143 500 ¥</b><span class="stk-incl">доставка и ПНР вкл.</span><span class="stk-novat">без НДС</span></div>
 <span class="stk-home-cta stk-home-more" aria-hidden="true">Подробнее →</span>
 </div>
 </div>
@@ -2261,7 +2262,7 @@ body.hide-hdr-cta .hdr .hdr-cta{display:none}
 <div class="stk-home-cat">Токарно-винторезные</div>
 <span class="stk-home-title">Токарный станок Macro Line LB-C660x2000</span>
 <div class="stk-home-specs"><span>Диаметр над станиной <b>660 мм</b></span><span>Диаметр над Гапом <b>870 мм</b></span></div>
-<div class="stk-home-price"><b>от 164 820 ¥</b><span>без НДС · доставка и ПНР</span></div>
+<div class="stk-home-price"><b>от 164 820 ¥</b><span class="stk-incl">доставка и ПНР вкл.</span><span class="stk-novat">без НДС</span></div>
 <span class="stk-home-cta stk-home-more" aria-hidden="true">Подробнее →</span>
 </div>
 </div>
@@ -2272,7 +2273,7 @@ body.hide-hdr-cta .hdr .hdr-cta{display:none}
 <div class="stk-home-cat">Вертикально-фрезерные</div>
 <span class="stk-home-title">Вертикально-фрезерный центр, 3 оси</span>
 <div class="stk-home-specs"><span>Оси X/Y/Z <b>800х450х510 мм</b></span><span>Стол <b>1000х450 мм</b></span></div>
-<div class="stk-home-price"><b>от 678 140 ¥</b><span>без НДС · доставка и ПНР</span></div>
+<div class="stk-home-price"><b>от 678 140 ¥</b><span class="stk-incl">доставка и ПНР вкл.</span><span class="stk-novat">без НДС</span></div>
 <span class="stk-home-cta stk-home-more" aria-hidden="true">Подробнее →</span>
 </div>
 </div>
@@ -2283,7 +2284,7 @@ body.hide-hdr-cta .hdr .hdr-cta{display:none}
 <div class="stk-home-cat">Вертикально-фрезерные</div>
 <span class="stk-home-title">Вертикально-фрезерный центр, 3+1 оси</span>
 <div class="stk-home-specs"><span>Оси X/Y/Z <b>850/500/570 мм</b></span><span>Стол <b>1200/520 мм</b></span></div>
-<div class="stk-home-price"><b>от 529 720 ¥</b><span>без НДС · доставка и ПНР</span></div>
+<div class="stk-home-price"><b>от 529 720 ¥</b><span class="stk-incl">доставка и ПНР вкл.</span><span class="stk-novat">без НДС</span></div>
 <span class="stk-home-cta stk-home-more" aria-hidden="true">Подробнее →</span>
 </div>
 </div>
@@ -2294,7 +2295,7 @@ body.hide-hdr-cta .hdr .hdr-cta{display:none}
 <div class="stk-home-cat">Плоскошлифовальные</div>
 <span class="stk-home-title">Плоскошлифовальный станок Macro Line GS-AHD4080</span>
 <div class="stk-home-specs"><span>Размер стола <b>813х406 мм</b></span><span>Макс. вес заготовки <b>500 кг</b></span></div>
-<div class="stk-home-price"><b>от 219 760 ¥</b><span>без НДС · доставка и ПНР</span></div>
+<div class="stk-home-price"><b>от 219 760 ¥</b><span class="stk-incl">доставка и ПНР вкл.</span><span class="stk-novat">без НДС</span></div>
 <span class="stk-home-cta stk-home-more" aria-hidden="true">Подробнее →</span>
 </div>
 </div>

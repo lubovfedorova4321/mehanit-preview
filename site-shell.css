@@ -1186,7 +1186,8 @@ html body .eq-final-cta p,html body .final-cta p,html body .cp-cta.dark p,html b
 
 /* Цена на карточке станка в наличии. Правила жили только внутри stock.html,
    но такие же карточки выводятся в каталогах оборудования — переносим в общий файл. */
-.stk-vmc-price{display:flex;align-items:baseline;justify-content:space-between;gap:8px;flex-wrap:wrap;padding:10px 0 6px;border-top:1px solid rgba(26,26,26,.08)}
+.stk-vmc-price{display:flex;align-items:baseline;justify-content:space-between;gap:0 8px;flex-wrap:wrap;padding:10px 0 6px;border-top:1px solid rgba(26,26,26,.08)}
+.stk-vmc-price .stk-novat{flex:1 0 100%;margin-top:2px;padding-left:8px}
 .stk-vmc-price b{font-family:'Magistral',sans-serif;font-size:16px;color:var(--gold);letter-spacing:-.02em;background:rgba(201,162,39,.12);padding:2px 8px;border-radius:4px}
 .stk-vmc-price span{font-family:'Golos Text',monospace;font-size:9.5px;color:var(--muted);letter-spacing:.3px}
 .stk-vmc-price.is-sold b{color:var(--muted);background:none;padding:0}
