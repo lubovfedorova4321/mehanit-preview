@@ -13,20 +13,32 @@
 .art-byline{display:flex;align-items:center;gap:10px;padding:14px 0;border-top:1px solid var(--line,rgba(36,39,43,.11));border-bottom:1px solid var(--line,rgba(36,39,43,.11));margin-bottom:30px;font-size:13px;color:var(--mid,#6f7479)}
 .art-byline b{color:var(--ink,#24272b);font-weight:600}
 
-/* Hero-изображение — показываем целиком, без обрезки, компактнее */
-.art-hero-media{width:100%;max-width:820px;margin:0 auto 10px;border-radius:6px;overflow:hidden;background:#eef0f0;display:flex;align-items:center;justify-content:center}
-.art-hero-media img{width:100%;height:auto;max-height:520px;object-fit:contain;display:block}
-.art-hero-caption{max-width:820px;margin:0 auto 34px;font-size:12.5px;color:var(--mid,#6f7479);line-height:1.5}
-@media(max-width:900px){.art-hero-media{max-width:100%}.art-hero-caption{max-width:100%}}
+/* ===== Изображения в статье: единая система =====
+   Обложка (.art-hero-media) — всегда 16:9, выровнена по левому краю колонки, шире текста (до 1100 px).
+   Фото в тексте (figure.art-photo) — три варианта: обычное (ширина колонки), .is-wide (до 1100 px), .is-side (справа, текст обтекает).
+   Пара фото — figure.art-photo.is-pair с двумя img. Подпись — figcaption, одна фраза о том, что на снимке. */
+.art-hero-media{width:100%;max-width:var(--max,1600px);margin:0 auto 12px;padding-inline:clamp(24px,4.4vw,84px);box-sizing:border-box}
+.art-hero-media img{display:block;width:100%;max-width:1100px;aspect-ratio:16/9;object-fit:cover;border-radius:8px;background:#eef0f0}
+.art-hero-caption{max-width:820px;margin:0 0 34px;padding-left:14px;border-left:2px solid var(--gold,#c9a227);font-size:13px;color:var(--mid,#6f7479);line-height:1.5}
 
-/* Одиночное фото в теле статьи — можно ставить слева/справа, не только по центру */
-.art-figure-photo{max-width:600px;margin:8px 0 30px}
-.art-figure-photo.is-right{margin-left:auto}
-.art-figure-photo.is-left{margin-right:auto}
-.art-figure-photo.is-center{margin-left:auto;margin-right:auto}
-.art-figure-photo img{width:100%;height:auto;display:block;border-radius:5px;background:#eef0f0}
-.art-figure-photo figcaption{margin-top:9px;font-size:12.5px;color:var(--mid,#6f7479);line-height:1.5}
-@media(max-width:820px){.art-figure-photo{max-width:100%;margin-left:0;margin-right:0}}
+.art-body .art-photo,.art-photo{margin:28px 0 30px;max-width:820px}
+.art-photo img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;border-radius:6px;background:#eef0f0}
+.art-photo figcaption{margin-top:10px;padding-left:14px;border-left:2px solid var(--gold,#c9a227);font-size:13px;line-height:1.5;color:var(--mid,#6f7479)}
+.art-photo.is-wide{max-width:none;width:min(1100px,calc(100vw - 2*clamp(24px,4.4vw,84px)))}
+.art-photo.is-wide img{aspect-ratio:16/9}
+.art-photo.is-side{float:right;width:46%;max-width:380px;margin:6px 0 18px 36px}
+.art-photo.is-side img{aspect-ratio:4/5}
+.art-photo.is-side.is-landscape img{aspect-ratio:4/3}
+.art-photo.is-pair{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.art-photo.is-pair img{aspect-ratio:4/3}
+.art-photo.is-pair figcaption{grid-column:1/-1}
+.art-body h2,.art-body h3{clear:both}
+@media(max-width:820px){.art-photo.is-side{float:none;width:100%;max-width:100%;margin:24px 0}.art-photo.is-side img{aspect-ratio:3/2}.art-photo.is-pair{grid-template-columns:1fr}}
+
+/* Старое одиночное фото — оставлено для совместимости, новым статьям использовать .art-photo */
+.art-figure-photo{max-width:820px;margin:28px 0 30px}
+.art-figure-photo img{width:100%;height:auto;display:block;border-radius:6px;background:#eef0f0;aspect-ratio:3/2;object-fit:cover}
+.art-figure-photo figcaption{margin-top:10px;padding-left:14px;border-left:2px solid var(--gold,#c9a227);font-size:13px;color:var(--mid,#6f7479);line-height:1.5}
 
 /* TOC */
 .art-toc{background:#fff;border:1px solid var(--line,rgba(36,39,43,.11));padding:20px 24px;margin-bottom:38px;max-width:820px}
@@ -63,7 +75,7 @@
 .art-table td{color:#3b3f43}
 .art-table tr:nth-child(even) td{background:rgba(36,39,43,.015)}
 
-/* Инлайн-фигуры (реальные фото станков) */
+/* Карточки-вырезки моделей (каталожные PNG без фона), не для фотографий */
 .art-figure{max-width:1100px;margin:28px 0}
 .art-figure-media{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
 .art-figure-item{background:#fff;border:1px solid var(--line,rgba(36,39,43,.11));padding:18px;text-align:center}
