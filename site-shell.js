@@ -1261,3 +1261,17 @@
   function y(){var n=String(new Date().getFullYear());document.querySelectorAll('[data-year]').forEach(function(e){e.textContent=n})}
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',y); else y();
 })();
+
+/* Ссылки на подкатегории внутри текста категории: переключают вкладку и скроллят к ней */
+(function(){
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a[data-goto-tab]');
+    if(!a)return;
+    var btn=document.querySelector('[data-milling-tab="'+a.getAttribute('data-goto-tab')+'"]');
+    if(!btn)return;
+    e.preventDefault();
+    btn.click();
+    var sub=document.getElementById('subcats');
+    if(sub)sub.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+})();
