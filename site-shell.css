@@ -1057,9 +1057,9 @@ html body .mh-more{display:none!important}
   html body .site-footer-brand{grid-column:1/-1!important}
   html body .site-footer-brand img{height:24px!important;margin-bottom:8px!important}
   html body .site-footer-brand p{display:none!important}
-  html body .site-footer h4{margin:0 0 7px!important;font-size:9.5px!important;letter-spacing:1.1px!important}
+  html body .site-footer h4{margin:0 0 7px!important;font-size:10.5px!important;letter-spacing:1.1px!important}
   html body .site-footer a{min-height:26px!important;padding:1px 0!important;font-size:12px!important;line-height:1.32!important}
-  html body .site-footer-req{display:none!important}
+  html body .site-footer-req{font-size:11px!important;line-height:1.45!important;margin:0!important;color:rgba(234,234,230,.5)!important}
   html body .site-footer-legal{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:6px 14px!important;margin-top:0!important;padding-top:10px!important}
   html body .site-footer-legal a{display:block!important;min-height:0!important;font-size:11px!important;line-height:1.3!important}
   html body .site-footer-bottom{display:block!important;padding-top:10px!important;font-size:10.5px!important;line-height:1.4!important;letter-spacing:0!important}
@@ -1368,3 +1368,12 @@ html body .ib-facts-txt .ib-fact+.ib-fact{padding-left:22px;border-left:1px soli
 html body .ib-facts-txt .ib-fact b{display:block;font-family:'Golos Text',sans-serif;font-weight:700;font-size:16px;line-height:1.35;letter-spacing:0;color:var(--bm);min-height:2.7em}
 html body .ib-facts-txt .ib-fact span{display:block;margin-top:6px;font-size:12px;line-height:1.4;letter-spacing:.04em;text-transform:uppercase;color:var(--mid);max-width:none}
 @media(max-width:640px){html body .ib-facts.ib-facts-txt{grid-template-columns:1fr;gap:14px}html body .ib-facts-txt .ib-fact+.ib-fact{padding-left:0;border-left:0}html body .ib-facts-txt .ib-fact b{min-height:0}}
+
+/* Мобильный аудит 07.10: читаемость мелких подписей, заголовок юридических страниц */
+@media(max-width:640px){
+  html body main.legal h1,html body .legal h1{font-size:clamp(26px,7.4vw,32px)!important;line-height:1.12!important;overflow-wrap:anywhere;hyphens:auto}
+  html body .det-role{font-size:10px!important}
+  html body .stk-home-price .stk-incl,html body .stk-incl{font-size:10px!important}
+  html body .stk-home-badge,html body .stk-home-cat{font-size:10px!important}
+  html body .site-footer-bottom{font-size:11px!important}
+}
