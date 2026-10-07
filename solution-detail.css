@@ -102,3 +102,13 @@
 
 .det-equip-chip--tool{border-style:dashed;background:#fff}
 .det-equip-chip--tool b::before{content:'⌀ ';color:var(--gold)}
+
+/* Стрелки прокрутки подборки станков — как в ленте «Станки в наличии» на главной */
+.det-car-wrap{position:relative;display:flex;align-items:center;gap:14px;min-width:0}
+.det-car-wrap .det-machines{flex:1 1 auto;min-width:0;scrollbar-width:none}
+.det-car-wrap .det-machines::-webkit-scrollbar{display:none}
+.det-car-nav{flex:0 0 auto;width:44px;height:44px;border-radius:50%;border:1px solid var(--line,rgba(26,26,26,.14));background:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--bm,#1a1a1a);transition:border-color .2s ease,color .2s ease,opacity .2s ease;padding:0}
+.det-car-nav:hover{border-color:var(--ce,#6B2D8B);color:var(--ce,#6B2D8B)}
+.det-car-nav[disabled]{opacity:.35;cursor:default}
+.det-car-nav svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.8}
+@media(max-width:760px){.det-car-nav{display:none}.det-car-wrap .det-machines{scrollbar-width:thin}}

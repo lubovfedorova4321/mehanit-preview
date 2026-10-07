@@ -1275,3 +1275,25 @@
     if(sub)sub.scrollIntoView({behavior:'smooth',block:'start'});
   });
 })();
+
+/* Подборка станков на страницах деталей: стрелки прокрутки */
+(function(){
+  function step(track){var c=track.children[0];return c?c.getBoundingClientRect().width+16:320}
+  function sync(wrap){
+    var t=wrap.querySelector('.det-machines'),p=wrap.querySelector('.det-car-prev'),n=wrap.querySelector('.det-car-next');
+    if(!t||!p||!n)return;
+    var max=t.scrollWidth-t.clientWidth-1;
+    p.disabled=t.scrollLeft<=0; n.disabled=t.scrollLeft>=max;
+    if(max<=0){p.hidden=true;n.hidden=true}
+  }
+  document.addEventListener('click',function(e){
+    var b=e.target.closest&&e.target.closest('.det-car-nav'); if(!b)return;
+    var wrap=b.closest('.det-car-wrap'),t=wrap&&wrap.querySelector('.det-machines'); if(!t)return;
+    t.scrollBy({left:(b.classList.contains('det-car-next')?1:-1)*step(t)*2,behavior:'smooth'});
+  });
+  function boot(){document.querySelectorAll('.det-car-wrap').forEach(function(w){
+    var t=w.querySelector('.det-machines'); if(!t)return;
+    sync(w); t.addEventListener('scroll',function(){sync(w)},{passive:true}); window.addEventListener('resize',function(){sync(w)});
+  })}
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);else boot();
+})();
