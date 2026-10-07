@@ -1360,3 +1360,11 @@ html body .mh-cta .ib-textlink:hover{color:#C9A227!important}
 .eqcat-text .eyebrow{display:flex;align-items:center;gap:10px;font-family:'Golos Text',monospace;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold,#C9A227);margin:0}
 .eqcat-text .eyebrow::before{content:'';width:24px;height:1px;background:var(--gold,#C9A227)}
 .eqcat-text .h2{font-family:'Magistral','Golos Text',sans-serif;font-weight:700;font-size:var(--fs-h2,clamp(28px,3vw,40px));line-height:1.1;letter-spacing:-.01em;color:var(--bm,#1a1a1a);text-transform:none;margin:10px 0 0}
+
+/* Факты в первом экране страниц деталей: три равные колонки, значение + подпись */
+html body .ib-facts.ib-facts-txt{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;max-width:900px;margin-top:clamp(22px,2.6vw,34px)}
+html body .ib-facts-txt .ib-fact{padding:2px 22px 2px 0;border-left:0;margin:0}
+html body .ib-facts-txt .ib-fact+.ib-fact{padding-left:22px;border-left:1px solid rgba(26,26,26,.14)}
+html body .ib-facts-txt .ib-fact b{display:block;font-family:'Golos Text',sans-serif;font-weight:700;font-size:16px;line-height:1.35;letter-spacing:0;color:var(--bm);min-height:2.7em}
+html body .ib-facts-txt .ib-fact span{display:block;margin-top:6px;font-size:12px;line-height:1.4;letter-spacing:.04em;text-transform:uppercase;color:var(--mid);max-width:none}
+@media(max-width:640px){html body .ib-facts.ib-facts-txt{grid-template-columns:1fr;gap:14px}html body .ib-facts-txt .ib-fact+.ib-fact{padding-left:0;border-left:0}html body .ib-facts-txt .ib-fact b{min-height:0}}
