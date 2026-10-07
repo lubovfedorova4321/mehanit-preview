@@ -1276,3 +1276,21 @@ body:not(.vmc-cards-wide) .vmc-specs, body:not(.vmc-cards-wide) .vmc-actions{gri
    мягкой тенью, чем у остальных подкатегорий фрезерных. Так было и раньше —
    сохраняем, чтобы вид страницы не поменялся. */
 .vmc-cards-contain .vmc-photo img{max-width:84%;max-height:82%;filter:drop-shadow(0 8px 14px rgba(26,26,26,.14))}
+
+/* Скачивание материала в статье (чек-лист, PDF).
+   Имена переменных на страницах статей и в каталоге разные (--purple против --ce),
+   поэтому у каждого цвета указано запасное значение. */
+.art-download{display:flex;gap:18px;align-items:flex-start;margin:28px 0;padding:20px 22px;
+  background:var(--tl2,#f5f5f3);border:1px solid var(--line,rgba(36,39,43,.11));border-radius:14px}
+.art-download-icon{flex:0 0 auto;width:46px;height:46px;display:flex;align-items:center;
+  justify-content:center;border-radius:10px;background:var(--ce,var(--purple,#6b2d8b));color:#fff;
+  font-family:'Golos Text',monospace;font-size:11px;font-weight:800;letter-spacing:.6px}
+.art-download-title{font-family:'Magistral','Golos Text',sans-serif;font-size:17px;
+  font-weight:600;letter-spacing:-.01em;margin-bottom:6px;color:var(--bm,var(--ink,#24272b))}
+.art-download-body p{margin:0 0 14px;font-size:14.5px;line-height:1.6;color:var(--mid,#6f7479)}
+.art-download .btn{display:inline-flex;align-items:center;justify-content:center;min-height:42px;
+  padding:0 20px;border-radius:8px;background:var(--ce,var(--purple,#6b2d8b));color:#fff;
+  font-family:'PT Root UI','Golos Text',sans-serif;font-size:13px;font-weight:700;
+  text-decoration:none;border:0;cursor:pointer}
+.art-download .btn:hover{background:var(--ceHover,#7d3aa0)}
+@media(max-width:560px){.art-download{flex-direction:column;gap:12px;padding:16px}}
